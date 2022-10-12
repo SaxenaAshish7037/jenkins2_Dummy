@@ -1,0 +1,632 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GtkPlotCSurface</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="GtkExtra Reference Manual">
+<link rel="up" href="ch03.html" title="Widgets">
+<link rel="prev" href="GtkPlotCandle.html" title="GtkPlotCandle">
+<link rel="next" href="GtkPlotCanvas.html" title="GtkPlotCanvas">
+<meta name="generator" content="GTK-Doc V1.11 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="part" href="gtkextra.html" title="Part I. GtkExtra Overview">
+<link rel="part" href="gtkextrabase.html" title="Part II. GtkExtra Widgets and Objects">
+<link rel="chapter" href="ch01.html" title="Object Hierarchy">
+<link rel="chapter" href="ch02.html" title="Widget Gallery">
+<link rel="chapter" href="ch03.html" title="Widgets">
+<link rel="chapter" href="ch04.html" title="Data Formatter">
+<link rel="chapter" href="ch05.html" title="GtkExtra Versioning">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="GtkPlotCandle.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch03.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">GtkExtra Reference Manual</th>
+<td><a accesskey="n" href="GtkPlotCanvas.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#GtkPlotCSurface.synopsis" class="shortcut">Top</a>
+                 | 
+                <a href="#GtkPlotCSurface.description" class="shortcut">Description</a>
+                 | 
+                <a href="#GtkPlotCSurface.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                 | 
+                <a href="#GtkPlotCSurface.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+                 | 
+                <a href="#GtkPlotCSurface.properties" class="shortcut">Properties</a>
+</td></tr>
+</table>
+<div class="refentry" title="GtkPlotCSurface">
+<a name="GtkPlotCSurface"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GtkPlotCSurface.top_of_page"></a>GtkPlotCSurface</span></h2>
+<p>GtkPlotCSurface</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv" title="Synopsis">
+<a name="GtkPlotCSurface.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">
+
+#include &lt;gtkextra.h&gt;
+
+                    <a class="link" href="GtkPlotCSurface.html#GtkPlotCSurface-struct" title="GtkPlotCSurface">GtkPlotCSurface</a>;
+enum                <a class="link" href="GtkPlotCSurface.html#GtkPlotProjection" title="enum GtkPlotProjection">GtkPlotProjection</a>;
+<a
+href="http://library.gnome.org/devel/gtk3/GtkWidget.html"
+>GtkWidget</a>*          <a class="link" href="GtkPlotCSurface.html#gtk-plot-csurface-new" title="gtk_plot_csurface_new ()">gtk_plot_csurface_new</a>               (void);
+<a
+href="http://library.gnome.org/devel/gtk3/GtkWidget.html"
+>GtkWidget</a>*          <a class="link" href="GtkPlotCSurface.html#gtk-plot-csurface-new-function" title="gtk_plot_csurface_new_function ()">gtk_plot_csurface_new_function</a>      (<a class="link" href="GtkPlot.html#GtkPlotFunc3D" title="GtkPlotFunc3D ()">GtkPlotFunc3D</a> function);
+void                <a class="link" href="GtkPlotCSurface.html#gtk-plot-csurface-construct-function" title="gtk_plot_csurface_construct_function ()">gtk_plot_csurface_construct_function</a>
+                                                        (<a class="link" href="GtkPlotCSurface.html" title="GtkPlotCSurface">GtkPlotCSurface</a> *csurface,
+                                                         <a class="link" href="GtkPlot.html#GtkPlotFunc3D" title="GtkPlotFunc3D ()">GtkPlotFunc3D</a> function);
+void                <a class="link" href="GtkPlotCSurface.html#gtk-plot-csurface-set-lines-visible" title="gtk_plot_csurface_set_lines_visible ()">gtk_plot_csurface_set_lines_visible</a> (<a class="link" href="GtkPlotCSurface.html" title="GtkPlotCSurface">GtkPlotCSurface</a> *csurface,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> visible);
+<a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>            <a class="link" href="GtkPlotCSurface.html#gtk-plot-csurface-get-lines-visible" title="gtk_plot_csurface_get_lines_visible ()">gtk_plot_csurface_get_lines_visible</a> (<a class="link" href="GtkPlotCSurface.html" title="GtkPlotCSurface">GtkPlotCSurface</a> *csurface);
+void                <a class="link" href="GtkPlotCSurface.html#gtk-plot-csurface-set-projection" title="gtk_plot_csurface_set_projection ()">gtk_plot_csurface_set_projection</a>    (<a class="link" href="GtkPlotCSurface.html" title="GtkPlotCSurface">GtkPlotCSurface</a> *csurface,
+                                                         <a class="link" href="GtkPlotCSurface.html#GtkPlotProjection" title="enum GtkPlotProjection">GtkPlotProjection</a> proj);
+<a class="link" href="GtkPlotCSurface.html#GtkPlotProjection" title="enum GtkPlotProjection">GtkPlotProjection</a>   <a class="link" href="GtkPlotCSurface.html#gtk-plot-csurface-projection" title="gtk_plot_csurface_projection ()">gtk_plot_csurface_projection</a>        (<a class="link" href="GtkPlotCSurface.html" title="GtkPlotCSurface">GtkPlotCSurface</a> *csurface);
+void                <a class="link" href="GtkPlotCSurface.html#gtk-plot-csurface-set-levels-attributes" title="gtk_plot_csurface_set_levels_attributes ()">gtk_plot_csurface_set_levels_attributes</a>
+                                                        (<a class="link" href="GtkPlotCSurface.html" title="GtkPlotCSurface">GtkPlotCSurface</a> *dataset,
+                                                         <a class="link" href="GtkPlot.html#GtkPlotLineStyle" title="enum GtkPlotLineStyle">GtkPlotLineStyle</a> style,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gfloat"
+>gfloat</a> width,
+                                                         const <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Colormaps-and-Colors.html#GdkColor"
+>GdkColor</a> *color);
+void                <a class="link" href="GtkPlotCSurface.html#gtk-plot-csurface-set-sublevels-attributes" title="gtk_plot_csurface_set_sublevels_attributes ()">gtk_plot_csurface_set_sublevels_attributes</a>
+                                                        (<a class="link" href="GtkPlotCSurface.html" title="GtkPlotCSurface">GtkPlotCSurface</a> *dataset,
+                                                         <a class="link" href="GtkPlot.html#GtkPlotLineStyle" title="enum GtkPlotLineStyle">GtkPlotLineStyle</a> style,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gfloat"
+>gfloat</a> width,
+                                                         const <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Colormaps-and-Colors.html#GdkColor"
+>GdkColor</a> *color);
+void                <a class="link" href="GtkPlotCSurface.html#gtk-plot-csurface-get-levels-attributes" title="gtk_plot_csurface_get_levels_attributes ()">gtk_plot_csurface_get_levels_attributes</a>
+                                                        (<a class="link" href="GtkPlotCSurface.html" title="GtkPlotCSurface">GtkPlotCSurface</a> *dataset,
+                                                         <a class="link" href="GtkPlot.html#GtkPlotLineStyle" title="enum GtkPlotLineStyle">GtkPlotLineStyle</a> *style,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gfloat"
+>gfloat</a> *width,
+                                                         <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Colormaps-and-Colors.html#GdkColor"
+>GdkColor</a> *color);
+void                <a class="link" href="GtkPlotCSurface.html#gtk-plot-csurface-get-sublevels-attributes" title="gtk_plot_csurface_get_sublevels_attributes ()">gtk_plot_csurface_get_sublevels_attributes</a>
+                                                        (<a class="link" href="GtkPlotCSurface.html" title="GtkPlotCSurface">GtkPlotCSurface</a> *dataset,
+                                                         <a class="link" href="GtkPlot.html#GtkPlotLineStyle" title="enum GtkPlotLineStyle">GtkPlotLineStyle</a> *style,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gfloat"
+>gfloat</a> *width,
+                                                         <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Colormaps-and-Colors.html#GdkColor"
+>GdkColor</a> *color);
+</pre>
+</div>
+<div class="refsect1" title="Object Hierarchy">
+<a name="GtkPlotCSurface.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a
+href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject"
+>GObject</a>
+   +----<a
+href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned"
+>GInitiallyUnowned</a>
+         +----<a
+href="http://library.gnome.org/devel/gtk3/GtkObject.html"
+>GtkObject</a>
+               +----<a
+href="http://library.gnome.org/devel/gtk3/GtkWidget.html"
+>GtkWidget</a>
+                     +----<a class="link" href="GtkPlotData.html" title="GtkPlotData">GtkPlotData</a>
+                           +----<a class="link" href="GtkPlotSurface.html" title="GtkPlotSurface">GtkPlotSurface</a>
+                                 +----GtkPlotCSurface
+</pre>
+</div>
+<div class="refsect1" title="Implemented Interfaces">
+<a name="GtkPlotCSurface.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+GtkPlotCSurface implements
+ AtkImplementorIface and  <a
+href="http://library.gnome.org/devel/gtk3/GtkBuildable.html"
+>GtkBuildable</a>.</p>
+</div>
+<div class="refsect1" title="Properties">
+<a name="GtkPlotCSurface.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="GtkPlotCSurface.html#GtkPlotCSurface--levels-color" title='The "levels-color" property'>levels-color</a>"             <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"
+>gpointer</a>              : Read / Write
+  "<a class="link" href="GtkPlotCSurface.html#GtkPlotCSurface--levels-style" title='The "levels-style" property'>levels-style</a>"             <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write
+  "<a class="link" href="GtkPlotCSurface.html#GtkPlotCSurface--levels-width" title='The "levels-width" property'>levels-width</a>"             <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a>               : Read / Write
+  "<a class="link" href="GtkPlotCSurface.html#GtkPlotCSurface--lines-visible" title='The "lines-visible" property'>lines-visible</a>"            <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write
+  "<a class="link" href="GtkPlotCSurface.html#GtkPlotCSurface--projection" title='The "projection" property'>projection</a>"               <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write
+  "<a class="link" href="GtkPlotCSurface.html#GtkPlotCSurface--sublevels-color" title='The "sublevels-color" property'>sublevels-color</a>"          <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"
+>gpointer</a>              : Read / Write
+  "<a class="link" href="GtkPlotCSurface.html#GtkPlotCSurface--sublevels-style" title='The "sublevels-style" property'>sublevels-style</a>"          <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write
+  "<a class="link" href="GtkPlotCSurface.html#GtkPlotCSurface--sublevels-width" title='The "sublevels-width" property'>sublevels-width</a>"          <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a>               : Read / Write
+</pre>
+</div>
+<div class="refsect1" title="Description">
+<a name="GtkPlotCSurface.description"></a><h2>Description</h2>
+<p>
+FIXME:: need long description</p>
+<p>
+</p>
+</div>
+<div class="refsect1" title="Details">
+<a name="GtkPlotCSurface.details"></a><h2>Details</h2>
+<div class="refsect2" title="GtkPlotCSurface">
+<a name="GtkPlotCSurface-struct"></a><h3>GtkPlotCSurface</h3>
+<pre class="programlisting">typedef struct _GtkPlotCSurface GtkPlotCSurface;</pre>
+<p>
+The GtkPlotCSurface struct contains only private data.
+It should only be accessed through the functions described below.</p>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2" title="enum GtkPlotProjection">
+<a name="GtkPlotProjection"></a><h3>enum GtkPlotProjection</h3>
+<pre class="programlisting">typedef enum
+{
+  GTK_PLOT_PROJECT_NONE,  /* draw surface with no projections */
+  GTK_PLOT_PROJECT_EMPTY, /* draw empty contours -- lines only.
+                             Notice that the style of the lines is given by
+                             levels/sublevels_line. You should set to 
+                             GTK_PLOT_LINE_NONE if you don't want the lines
+                             drawn */
+  GTK_PLOT_PROJECT_FULL,  /* draw filled contours */
+} GtkPlotProjection;      
+</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_csurface_new ()">
+<a name="gtk-plot-csurface-new"></a><h3>gtk_plot_csurface_new ()</h3>
+<pre class="programlisting"><a
+href="http://library.gnome.org/devel/gtk3/GtkWidget.html"
+>GtkWidget</a>*          gtk_plot_csurface_new               (void);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_csurface_new_function ()">
+<a name="gtk-plot-csurface-new-function"></a><h3>gtk_plot_csurface_new_function ()</h3>
+<pre class="programlisting"><a
+href="http://library.gnome.org/devel/gtk3/GtkWidget.html"
+>GtkWidget</a>*          gtk_plot_csurface_new_function      (<a class="link" href="GtkPlot.html#GtkPlotFunc3D" title="GtkPlotFunc3D ()">GtkPlotFunc3D</a> function);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>function</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlot.html#GtkPlotFunc3D" title="GtkPlotFunc3D ()"><span class="type">GtkPlotFunc3D</span></a>. <a href="http://foldoc.doc.ic.ac.uk/foldoc/foldoc.cgi?query=scope"><span class="acronym">scope</span></a> async. </td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_csurface_construct_function ()">
+<a name="gtk-plot-csurface-construct-function"></a><h3>gtk_plot_csurface_construct_function ()</h3>
+<pre class="programlisting">void                gtk_plot_csurface_construct_function
+                                                        (<a class="link" href="GtkPlotCSurface.html" title="GtkPlotCSurface">GtkPlotCSurface</a> *csurface,
+                                                         <a class="link" href="GtkPlot.html#GtkPlotFunc3D" title="GtkPlotFunc3D ()">GtkPlotFunc3D</a> function);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>csurface</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>function</code></em> :</span></p></td>
+<td> a  <a class="link" href="GtkPlot.html#GtkPlotFunc3D" title="GtkPlotFunc3D ()"><span class="type">GtkPlotFunc3D</span></a>. <a href="http://foldoc.doc.ic.ac.uk/foldoc/foldoc.cgi?query=scope"><span class="acronym">scope</span></a> async. </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_csurface_set_lines_visible ()">
+<a name="gtk-plot-csurface-set-lines-visible"></a><h3>gtk_plot_csurface_set_lines_visible ()</h3>
+<pre class="programlisting">void                gtk_plot_csurface_set_lines_visible (<a class="link" href="GtkPlotCSurface.html" title="GtkPlotCSurface">GtkPlotCSurface</a> *csurface,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> visible);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>csurface</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlotCSurface.html" title="GtkPlotCSurface"><span class="type">GtkPlotCSurface</span></a>/
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>visible</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_csurface_get_lines_visible ()">
+<a name="gtk-plot-csurface-get-lines-visible"></a><h3>gtk_plot_csurface_get_lines_visible ()</h3>
+<pre class="programlisting"><a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>            gtk_plot_csurface_get_lines_visible (<a class="link" href="GtkPlotCSurface.html" title="GtkPlotCSurface">GtkPlotCSurface</a> *csurface);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>csurface</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlotCSurface.html" title="GtkPlotCSurface"><span class="type">GtkPlotCSurface</span></a>.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_csurface_set_projection ()">
+<a name="gtk-plot-csurface-set-projection"></a><h3>gtk_plot_csurface_set_projection ()</h3>
+<pre class="programlisting">void                gtk_plot_csurface_set_projection    (<a class="link" href="GtkPlotCSurface.html" title="GtkPlotCSurface">GtkPlotCSurface</a> *csurface,
+                                                         <a class="link" href="GtkPlotCSurface.html#GtkPlotProjection" title="enum GtkPlotProjection">GtkPlotProjection</a> proj);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>csurface</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlotCSurface.html" title="GtkPlotCSurface"><span class="type">GtkPlotCSurface</span></a>.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>proj</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_csurface_projection ()">
+<a name="gtk-plot-csurface-projection"></a><h3>gtk_plot_csurface_projection ()</h3>
+<pre class="programlisting"><a class="link" href="GtkPlotCSurface.html#GtkPlotProjection" title="enum GtkPlotProjection">GtkPlotProjection</a>   gtk_plot_csurface_projection        (<a class="link" href="GtkPlotCSurface.html" title="GtkPlotCSurface">GtkPlotCSurface</a> *csurface);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>csurface</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlotCSurface.html" title="GtkPlotCSurface"><span class="type">GtkPlotCSurface</span></a>.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_csurface_set_levels_attributes ()">
+<a name="gtk-plot-csurface-set-levels-attributes"></a><h3>gtk_plot_csurface_set_levels_attributes ()</h3>
+<pre class="programlisting">void                gtk_plot_csurface_set_levels_attributes
+                                                        (<a class="link" href="GtkPlotCSurface.html" title="GtkPlotCSurface">GtkPlotCSurface</a> *dataset,
+                                                         <a class="link" href="GtkPlot.html#GtkPlotLineStyle" title="enum GtkPlotLineStyle">GtkPlotLineStyle</a> style,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gfloat"
+>gfloat</a> width,
+                                                         const <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Colormaps-and-Colors.html#GdkColor"
+>GdkColor</a> *color);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>dataset</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlotCSurface.html" title="GtkPlotCSurface"><span class="type">GtkPlotCSurface</span></a>.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>style</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>width</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>color</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_csurface_set_sublevels_attributes ()">
+<a name="gtk-plot-csurface-set-sublevels-attributes"></a><h3>gtk_plot_csurface_set_sublevels_attributes ()</h3>
+<pre class="programlisting">void                gtk_plot_csurface_set_sublevels_attributes
+                                                        (<a class="link" href="GtkPlotCSurface.html" title="GtkPlotCSurface">GtkPlotCSurface</a> *dataset,
+                                                         <a class="link" href="GtkPlot.html#GtkPlotLineStyle" title="enum GtkPlotLineStyle">GtkPlotLineStyle</a> style,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gfloat"
+>gfloat</a> width,
+                                                         const <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Colormaps-and-Colors.html#GdkColor"
+>GdkColor</a> *color);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>dataset</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlotCSurface.html" title="GtkPlotCSurface"><span class="type">GtkPlotCSurface</span></a>.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>style</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>width</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>color</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_csurface_get_levels_attributes ()">
+<a name="gtk-plot-csurface-get-levels-attributes"></a><h3>gtk_plot_csurface_get_levels_attributes ()</h3>
+<pre class="programlisting">void                gtk_plot_csurface_get_levels_attributes
+                                                        (<a class="link" href="GtkPlotCSurface.html" title="GtkPlotCSurface">GtkPlotCSurface</a> *dataset,
+                                                         <a class="link" href="GtkPlot.html#GtkPlotLineStyle" title="enum GtkPlotLineStyle">GtkPlotLineStyle</a> *style,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gfloat"
+>gfloat</a> *width,
+                                                         <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Colormaps-and-Colors.html#GdkColor"
+>GdkColor</a> *color);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>dataset</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlotCSurface.html" title="GtkPlotCSurface"><span class="type">GtkPlotCSurface</span></a>.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>style</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>width</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>color</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_csurface_get_sublevels_attributes ()">
+<a name="gtk-plot-csurface-get-sublevels-attributes"></a><h3>gtk_plot_csurface_get_sublevels_attributes ()</h3>
+<pre class="programlisting">void                gtk_plot_csurface_get_sublevels_attributes
+                                                        (<a class="link" href="GtkPlotCSurface.html" title="GtkPlotCSurface">GtkPlotCSurface</a> *dataset,
+                                                         <a class="link" href="GtkPlot.html#GtkPlotLineStyle" title="enum GtkPlotLineStyle">GtkPlotLineStyle</a> *style,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gfloat"
+>gfloat</a> *width,
+                                                         <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Colormaps-and-Colors.html#GdkColor"
+>GdkColor</a> *color);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>dataset</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlotCSurface.html" title="GtkPlotCSurface"><span class="type">GtkPlotCSurface</span></a>.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>style</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>width</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>color</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1" title="Property Details">
+<a name="GtkPlotCSurface.property-details"></a><h2>Property Details</h2>
+<div class="refsect2" title='The "levels-color" property'>
+<a name="GtkPlotCSurface--levels-color"></a><h3>The <code class="literal">"levels-color"</code> property</h3>
+<pre class="programlisting">  "levels-color"             <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"
+>gpointer</a>              : Read / Write</pre>
+<p></p>
+</div>
+<hr>
+<div class="refsect2" title='The "levels-style" property'>
+<a name="GtkPlotCSurface--levels-style"></a><h3>The <code class="literal">"levels-style"</code> property</h3>
+<pre class="programlisting">  "levels-style"             <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write</pre>
+<p></p>
+<p>Allowed values: &gt;= 0</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2" title='The "levels-width" property'>
+<a name="GtkPlotCSurface--levels-width"></a><h3>The <code class="literal">"levels-width"</code> property</h3>
+<pre class="programlisting">  "levels-width"             <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a>               : Read / Write</pre>
+<p></p>
+<p>Allowed values: &gt;= 0</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2" title='The "lines-visible" property'>
+<a name="GtkPlotCSurface--lines-visible"></a><h3>The <code class="literal">"lines-visible"</code> property</h3>
+<pre class="programlisting">  "lines-visible"            <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write</pre>
+<p></p>
+<p>Allowed values: &gt;= 0</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2" title='The "projection" property'>
+<a name="GtkPlotCSurface--projection"></a><h3>The <code class="literal">"projection"</code> property</h3>
+<pre class="programlisting">  "projection"               <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write</pre>
+<p>
+</p>
+<p>
+</p>
+<p>Allowed values: &gt;= 0</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2" title='The "sublevels-color" property'>
+<a name="GtkPlotCSurface--sublevels-color"></a><h3>The <code class="literal">"sublevels-color"</code> property</h3>
+<pre class="programlisting">  "sublevels-color"          <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"
+>gpointer</a>              : Read / Write</pre>
+<p></p>
+</div>
+<hr>
+<div class="refsect2" title='The "sublevels-style" property'>
+<a name="GtkPlotCSurface--sublevels-style"></a><h3>The <code class="literal">"sublevels-style"</code> property</h3>
+<pre class="programlisting">  "sublevels-style"          <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write</pre>
+<p></p>
+<p>Allowed values: &gt;= 0</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2" title='The "sublevels-width" property'>
+<a name="GtkPlotCSurface--sublevels-width"></a><h3>The <code class="literal">"sublevels-width"</code> property</h3>
+<pre class="programlisting">  "sublevels-width"          <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a>               : Read / Write</pre>
+<p></p>
+<p>Allowed values: &gt;= 0</p>
+<p>Default value: 0</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.11</div>
+</body>
+</html>

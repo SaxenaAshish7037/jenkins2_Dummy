@@ -1,0 +1,51 @@
+<!-- ##### SECTION Title ##### -->
+GtkCheckItem
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### STRUCT GtkCheckItem ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### FUNCTION gtk_check_item_new ##### -->
+<para>
+
+</para>
+
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_check_item_new_with_label ##### -->
+<para>
+
+</para>
+
+@label: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_check_item_construct_with_label ##### -->
+<para>
+
+</para>
+
+@check_item: 
+@label: 
+
+

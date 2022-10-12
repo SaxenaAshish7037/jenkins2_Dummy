@@ -1,0 +1,88 @@
+<!-- ##### SECTION Title ##### -->
+GtkPlotPolar
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### STRUCT GtkPlotPolar ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### ARG GtkPlotPolar:rotation ##### -->
+<para>
+
+</para>
+
+<!-- ##### FUNCTION gtk_plot_polar_new ##### -->
+<para>
+
+</para>
+
+@drawable: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_polar_new_with_size ##### -->
+<para>
+
+</para>
+
+@drawable: 
+@width: 
+@height: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_polar_construct ##### -->
+<para>
+
+</para>
+
+@plot: 
+@drawable: 
+
+
+<!-- ##### FUNCTION gtk_plot_polar_construct_with_size ##### -->
+<para>
+
+</para>
+
+@plot: 
+@drawable: 
+@width: 
+@height: 
+
+
+<!-- ##### FUNCTION gtk_plot_polar_rotate ##### -->
+<para>
+
+</para>
+
+@plot: 
+@angle: 
+
+
+<!-- ##### FUNCTION gtk_plot_polar_get_angle ##### -->
+<para>
+
+</para>
+
+@plot: 
+@Returns: 
+
+

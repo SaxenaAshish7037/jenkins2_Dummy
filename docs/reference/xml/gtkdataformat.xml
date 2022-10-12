@@ -1,0 +1,136 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+<!ENTITY version SYSTEM "version.xml">
+]>
+<!--ENTITY index-Objects-Grouped SYSTEM "objects_grouped.sgml"-->
+<refentry id="gtkextra-GtkDataFormat">
+<refmeta>
+<refentrytitle role="top_of_page" id="gtkextra-GtkDataFormat.top_of_page">GtkDataFormat</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GTKEXTRA Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>GtkDataFormat</refname>
+<refpurpose>a data formatting library</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="gtkextra-GtkDataFormat.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>
+
+#include &lt;gtkextra.h&gt;
+
+<link linkend="gchar">gchar</link> *             <link linkend="gtk-data-format">gtk_data_format</link>                     (const <link linkend="gchar">gchar</link> *str,
+                                                         const <link linkend="gchar">gchar</link> *dataformat);
+<link linkend="gchar">gchar</link> *             <link linkend="gtk-data-format-remove">gtk_data_format_remove</link>              (const <link linkend="gchar">gchar</link> *str,
+                                                         const <link linkend="gchar">gchar</link> *dataformat);
+</synopsis>
+</refsynopsisdiv>
+
+
+
+
+
+
+
+
+
+<refsect1 id="gtkextra-GtkDataFormat.description" role="desc">
+<title role="desc.title">Description</title>
+<para>
+the widget property 'dataformat' may contain formatting 
+instructions for the field contents. Any unrecognized 
+formatting instruction is silently skipped. 
+</para>
+<para>
+The formatting process should always be reversible. Thus 
+formatting can be applied when input focus leaves a field and
+removed again when the focus enters a field, without the need
+of an additional content buffer. 
+</para>
+<para>
+the library can be easily extended by adding more 
+instructions to the list above.</para>
+<para>
+</para>
+</refsect1>
+
+<refsect1 id="gtkextra-GtkDataFormat.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="gtk-data-format" role="function">
+<title>gtk_data_format ()</title>
+<indexterm zone="gtk-data-format"><primary sortas="gtk_data_format">gtk_data_format</primary></indexterm><programlisting><link linkend="gchar">gchar</link> *             gtk_data_format                     (const <link linkend="gchar">gchar</link> *str,
+                                                         const <link linkend="gchar">gchar</link> *dataformat);</programlisting>
+<para>
+format <parameter>str</parameter> according to <parameter>dataformat</parameter>. 
+</para>
+<para>
+formatting instructions: 
+</para>
+<para>
+'' (the empty string) does no formatting at all.
+</para>
+<para>
+'int8' is formatted as a singed 8-bit integer value with 
+optional '-' sign. 
+</para>
+<para>
+'int16' is formatted as a signed 16-bit integer with optional
+'-' sign. 
+</para>
+<para>
+'int32' is formatted as a signed 32-bit integer with optional
+'-' sign.
+</para>
+<para>
+'money' is formatted as a double float value with 2 decimal 
+digits and 1000s-separators 
+</para>
+<para>
+'float,N' is formatted as a double float value with N decimal
+digits and 1000s-separators 
+</para>
+<para>
+'bit' is formatted as a boolean value [0,1].</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>str</parameter>&#160;:</term>
+<listitem><simpara>        the string to be formatted
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>dataformat</parameter>&#160;:</term>
+<listitem><simpara> formatting instructions
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara> a pointer to an internal static buffer, with the 
+formatted data 
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-data-format-remove" role="function">
+<title>gtk_data_format_remove ()</title>
+<indexterm zone="gtk-data-format-remove"><primary sortas="gtk_data_format_remove">gtk_data_format_remove</primary></indexterm><programlisting><link linkend="gchar">gchar</link> *             gtk_data_format_remove              (const <link linkend="gchar">gchar</link> *str,
+                                                         const <link linkend="gchar">gchar</link> *dataformat);</programlisting>
+<para>
+reverse the effect of <link linkend="gtk-data-format"><type>gtk_data_format</type></link>, i.e. remove all 
+formatting characters, apply trailing dash</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>str</parameter>&#160;:</term>
+<listitem><simpara>        the string to be unformatted
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>dataformat</parameter>&#160;:</term>
+<listitem><simpara> formatting instructions
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara> a pointer to an internal static buffer, with the 
+unformatted data 
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+
+
+
+
+</refentry>

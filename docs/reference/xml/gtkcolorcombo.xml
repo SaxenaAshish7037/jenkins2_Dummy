@@ -1,0 +1,250 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+<!ENTITY version SYSTEM "version.xml">
+]>
+<!--ENTITY index-Objects-Grouped SYSTEM "objects_grouped.sgml"-->
+<refentry id="GtkColorCombo">
+<refmeta>
+<refentrytitle role="top_of_page" id="GtkColorCombo.top_of_page">GtkColorCombo</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GTKEXTRA Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>GtkColorCombo</refname>
+<refpurpose>A color combo widget for GTK.</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="GtkColorCombo.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>
+
+#include &lt;gtkextra.h&gt;
+
+                    <link linkend="GtkColorCombo-struct">GtkColorCombo</link>;
+<link linkend="GtkWidget">GtkWidget</link> *         <link linkend="gtk-color-combo-new">gtk_color_combo_new</link>                 (void);
+<link linkend="GtkWidget">GtkWidget</link> *         <link linkend="gtk-color-combo-new-with-values">gtk_color_combo_new_with_values</link>     (<link linkend="gint">gint</link> nrows,
+                                                         <link linkend="gint">gint</link> ncols,
+                                                         <link linkend="GdkColor">GdkColor</link> *colors);
+<link linkend="void">void</link>                <link linkend="gtk-color-combo-construct">gtk_color_combo_construct</link>           (<link linkend="GtkColorCombo">GtkColorCombo</link> *color_combo);
+<link linkend="void">void</link>                <link linkend="gtk-color-combo-construct-with-values">gtk_color_combo_construct_with_values</link>
+                                                        (<link linkend="GtkColorCombo">GtkColorCombo</link> *color_combo,
+                                                         <link linkend="gint">gint</link> nrows,
+                                                         <link linkend="gint">gint</link> ncols,
+                                                         <link linkend="GdkColor">GdkColor</link> *colors);
+<link linkend="GdkColor">GdkColor</link>            <link linkend="gtk-color-combo-get-color-at">gtk_color_combo_get_color_at</link>        (<link linkend="GtkColorCombo">GtkColorCombo</link> *color_combo,
+                                                         <link linkend="gint">gint</link> row,
+                                                         <link linkend="gint">gint</link> col);
+<link linkend="void">void</link>                <link linkend="gtk-color-combo-find-color">gtk_color_combo_find_color</link>          (<link linkend="GtkColorCombo">GtkColorCombo</link> *color_combo,
+                                                         <link linkend="GdkColor">GdkColor</link> *color,
+                                                         <link linkend="gint">gint</link> *row,
+                                                         <link linkend="gint">gint</link> *col);
+<link linkend="GdkColor">GdkColor</link>            <link linkend="gtk-color-combo-get-selection">gtk_color_combo_get_selection</link>       (<link linkend="GtkColorCombo">GtkColorCombo</link> *combo);
+</synopsis>
+</refsynopsisdiv>
+
+<refsect1 id="GtkColorCombo.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+  <link linkend="GObject">GObject</link>
+   +----<link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+         +----<link linkend="GtkObject">GtkObject</link>
+               +----<link linkend="GtkWidget">GtkWidget</link>
+                     +----<link linkend="GtkContainer">GtkContainer</link>
+                           +----<link linkend="GtkBox">GtkBox</link>
+                                 +----<link linkend="GtkHBox">GtkHBox</link>
+                                       +----<link linkend="GtkComboButton">GtkComboButton</link>
+                                             +----GtkColorCombo
+</synopsis>
+</refsect1>
+
+
+
+<refsect1 id="GtkColorCombo.implemented-interfaces" role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+GtkColorCombo implements
+ <link linkend="AtkImplementorIface">AtkImplementorIface</link>,  <link linkend="GtkBuildable">GtkBuildable</link> and  <link linkend="GtkOrientable">GtkOrientable</link>.</para>
+</refsect1>
+
+
+
+<refsect1 id="GtkColorCombo.signals" role="signal_proto">
+<title role="signal_proto.title">Signals</title>
+<synopsis>
+  &quot;<link linkend="GtkColorCombo-changed">changed</link>&quot;                                        : Run First
+</synopsis>
+</refsect1>
+
+
+<refsect1 id="GtkColorCombo.description" role="desc">
+<title role="desc.title">Description</title>
+<para>
+A GtkColorCombo is a GtkCOmbo which contains all kinds of colors.</para>
+<para>
+</para>
+</refsect1>
+
+<refsect1 id="GtkColorCombo.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="GtkColorCombo-struct" role="struct">
+<title>GtkColorCombo</title>
+<indexterm zone="GtkColorCombo-struct"><primary sortas="GtkColorCombo">GtkColorCombo</primary></indexterm><programlisting>typedef struct _GtkColorCombo GtkColorCombo;</programlisting>
+<para>
+The GtkColorCombo struct contains only private data.
+It should only be accessed through the functions described below.</para>
+<para>
+</para></refsect2>
+<refsect2 id="gtk-color-combo-new" role="function">
+<title>gtk_color_combo_new ()</title>
+<indexterm zone="gtk-color-combo-new"><primary sortas="gtk_color_combo_new">gtk_color_combo_new</primary></indexterm><programlisting><link linkend="GtkWidget">GtkWidget</link> *         gtk_color_combo_new                 (void);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-color-combo-new-with-values" role="function">
+<title>gtk_color_combo_new_with_values ()</title>
+<indexterm zone="gtk-color-combo-new-with-values"><primary sortas="gtk_color_combo_new_with_values">gtk_color_combo_new_with_values</primary></indexterm><programlisting><link linkend="GtkWidget">GtkWidget</link> *         gtk_color_combo_new_with_values     (<link linkend="gint">gint</link> nrows,
+                                                         <link linkend="gint">gint</link> ncols,
+                                                         <link linkend="GdkColor">GdkColor</link> *colors);</programlisting>
+<para>
+Creates a new <link linkend="GtkColorCombo"><type>GtkColorCombo</type></link> widget having <parameter>nrows</parameter> rows and <parameter>ncols</parameter> columns with <link linkend="GdkColor"><type>GdkColor</type></link> color.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>nrows</parameter>&#160;:</term>
+<listitem><simpara> number of rows in <link linkend="GtkColorCombo"><type>GtkColorCombo</type></link>.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>ncols</parameter>&#160;:</term>
+<listitem><simpara> number of columns in <link linkend="GtkColorCombo"><type>GtkColorCombo</type></link>.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>colors</parameter>&#160;:</term>
+<listitem><simpara> <link linkend="GdkColor"><type>GdkColor</type></link> color.
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara> the newly-created <link linkend="GtkColorCombo"><type>GtkColorCombo</type></link> widget.
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-color-combo-construct" role="function">
+<title>gtk_color_combo_construct ()</title>
+<indexterm zone="gtk-color-combo-construct"><primary sortas="gtk_color_combo_construct">gtk_color_combo_construct</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_color_combo_construct           (<link linkend="GtkColorCombo">GtkColorCombo</link> *color_combo);</programlisting>
+<para>
+Initialize a <link linkend="GtkColorCombo"><type>GtkColorCombo</type></link> object.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>color_combo</parameter>&#160;:</term>
+<listitem><simpara> the <link linkend="GtkColorCombo"><type>GtkColorCombo</type></link> widget.
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-color-combo-construct-with-values" role="function">
+<title>gtk_color_combo_construct_with_values ()</title>
+<indexterm zone="gtk-color-combo-construct-with-values"><primary sortas="gtk_color_combo_construct_with_values">gtk_color_combo_construct_with_values</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_color_combo_construct_with_values
+                                                        (<link linkend="GtkColorCombo">GtkColorCombo</link> *color_combo,
+                                                         <link linkend="gint">gint</link> nrows,
+                                                         <link linkend="gint">gint</link> ncols,
+                                                         <link linkend="GdkColor">GdkColor</link> *colors);</programlisting>
+<para>
+Initialize a <link linkend="GtkColorCombo"><type>GtkColorCombo</type></link> object with specified values.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>color_combo</parameter>&#160;:</term>
+<listitem><simpara> the <link linkend="GtkColorCombo"><type>GtkColorCombo</type></link> widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>nrows</parameter>&#160;:</term>
+<listitem><simpara> number of rows in <link linkend="GtkColorCombo"><type>GtkColorCombo</type></link>.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>ncols</parameter>&#160;:</term>
+<listitem><simpara> number of columns in <link linkend="GtkColorCombo"><type>GtkColorCombo</type></link>.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>colors</parameter>&#160;:</term>
+<listitem><simpara> <link linkend="GdkColor"><type>GdkColor</type></link> color.
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-color-combo-get-color-at" role="function">
+<title>gtk_color_combo_get_color_at ()</title>
+<indexterm zone="gtk-color-combo-get-color-at"><primary sortas="gtk_color_combo_get_color_at">gtk_color_combo_get_color_at</primary></indexterm><programlisting><link linkend="GdkColor">GdkColor</link>            gtk_color_combo_get_color_at        (<link linkend="GtkColorCombo">GtkColorCombo</link> *color_combo,
+                                                         <link linkend="gint">gint</link> row,
+                                                         <link linkend="gint">gint</link> col);</programlisting>
+<para>
+Get the color in the combo at the specified row,column.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>color_combo</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkColorCombo"><type>GtkColorCombo</type></link> widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>row</parameter>&#160;:</term>
+<listitem><simpara> row number  in <link linkend="GtkColorCombo"><type>GtkColorCombo</type></link>.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>col</parameter>&#160;:</term>
+<listitem><simpara> column number in <link linkend="GtkColorCombo"><type>GtkColorCombo</type></link>.
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara> a <link linkend="GdkColor"><type>GdkColor</type></link> at <parameter>row</parameter>,<parameter>col</parameter> in <parameter>color_combo</parameter>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-color-combo-find-color" role="function">
+<title>gtk_color_combo_find_color ()</title>
+<indexterm zone="gtk-color-combo-find-color"><primary sortas="gtk_color_combo_find_color">gtk_color_combo_find_color</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_color_combo_find_color          (<link linkend="GtkColorCombo">GtkColorCombo</link> *color_combo,
+                                                         <link linkend="GdkColor">GdkColor</link> *color,
+                                                         <link linkend="gint">gint</link> *row,
+                                                         <link linkend="gint">gint</link> *col);</programlisting>
+<para>
+Find the best match for a given color.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>color_combo</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkColorCombo"><type>GtkColorCombo</type></link> widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>color</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GdkColor"><type>GdkColor</type></link> object.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>row</parameter>&#160;:</term>
+<listitem><simpara> row number in <link linkend="GtkColorCombo"><type>GtkColorCombo</type></link>.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>col</parameter>&#160;:</term>
+<listitem><simpara> column number in <link linkend="GtkColorCombo"><type>GtkColorCombo</type></link>.
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-color-combo-get-selection" role="function">
+<title>gtk_color_combo_get_selection ()</title>
+<indexterm zone="gtk-color-combo-get-selection"><primary sortas="gtk_color_combo_get_selection">gtk_color_combo_get_selection</primary></indexterm><programlisting><link linkend="GdkColor">GdkColor</link>            gtk_color_combo_get_selection       (<link linkend="GtkColorCombo">GtkColorCombo</link> *combo);</programlisting>
+<para>
+Get the color in the combo at selection .</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>combo</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkColorCombo"><type>GtkColorCombo</type></link> widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara> a <link linkend="GdkColor"><type>GdkColor</type></link> of the selection. 
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+
+<refsect1 id="GtkColorCombo.signal-details" role="signals">
+<title role="signals.title">Signal Details</title>
+<refsect2 id="GtkColorCombo-changed" role="signal"><title>The <literal>&quot;changed&quot;</literal> signal</title>
+<indexterm zone="GtkColorCombo-changed"><primary sortas="GtkColorCombo::changed">GtkColorCombo::changed</primary></indexterm><programlisting><link linkend="void">void</link>                user_function                      (<link linkend="GtkColorCombo">GtkColorCombo</link> *colorcombo,
+                                                        <link linkend="gint">gint</link>           arg1,
+                                                        <link linkend="GdkColor">GdkColor</link>      *arg2,
+                                                        <link linkend="gpointer">gpointer</link>       user_data)       : Run First</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>colorcombo</parameter>&#160;:</term>
+<listitem><simpara>the object which received the signal.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>arg1</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>arg2</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>user_data</parameter>&#160;:</term>
+<listitem><simpara>user data set when the signal handler was connected.</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+</refsect1>
+
+
+
+</refentry>

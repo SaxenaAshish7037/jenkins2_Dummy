@@ -1,0 +1,48 @@
+<!-- ##### SECTION Title ##### -->
+GtkPlotBox
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### STRUCT GtkPlotBox ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### ARG GtkPlotBox:orientation ##### -->
+<para>
+
+</para>
+
+<!-- ##### FUNCTION gtk_plot_box_new ##### -->
+<para>
+
+</para>
+
+@orientation: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_box_construct ##### -->
+<para>
+
+</para>
+
+@box: 
+@orientation: 
+
+

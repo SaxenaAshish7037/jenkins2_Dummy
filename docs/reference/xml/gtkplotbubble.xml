@@ -1,0 +1,257 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+<!ENTITY version SYSTEM "version.xml">
+]>
+<!--ENTITY index-Objects-Grouped SYSTEM "objects_grouped.sgml"-->
+<refentry id="GtkPlotBubble">
+<refmeta>
+<refentrytitle role="top_of_page" id="GtkPlotBubble.top_of_page">GtkPlotBubble</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GTKEXTRA Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>GtkPlotBubble</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="GtkPlotBubble.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>
+
+#include &lt;gtkextra.h&gt;
+
+                    <link linkend="GtkPlotBubble-struct">GtkPlotBubble</link>;
+<link linkend="GtkWidget">GtkWidget</link>*          <link linkend="gtk-plot-bubble-new">gtk_plot_bubble_new</link>                 (void);
+<link linkend="void">void</link>                <link linkend="gtk-plot-bubble-show-scale">gtk_plot_bubble_show_scale</link>          (<link linkend="GtkPlotBubble">GtkPlotBubble</link> *bubble,
+                                                         <link linkend="gboolean">gboolean</link> show);
+<link linkend="void">void</link>                <link linkend="gtk-plot-bubble-set-scale-max">gtk_plot_bubble_set_scale_max</link>       (<link linkend="GtkPlotBubble">GtkPlotBubble</link> *bubble,
+                                                         <link linkend="gdouble">gdouble</link> scale_max);
+<link linkend="void">void</link>                <link linkend="gtk-plot-bubble-set-size-max">gtk_plot_bubble_set_size_max</link>        (<link linkend="GtkPlotBubble">GtkPlotBubble</link> *bubble,
+                                                         <link linkend="guint">guint</link> size_max);
+<link linkend="void">void</link>                <link linkend="gtk-plot-bubble-set-labels-precision">gtk_plot_bubble_set_labels_precision</link>
+                                                        (<link linkend="GtkPlotBubble">GtkPlotBubble</link> *bubble,
+                                                         <link linkend="gint">gint</link> precision);
+<link linkend="void">void</link>                <link linkend="gtk-plot-bubble-set-labels-style">gtk_plot_bubble_set_labels_style</link>    (<link linkend="GtkPlotBubble">GtkPlotBubble</link> *bubble,
+                                                         <link linkend="GtkPlotLabelStyle">GtkPlotLabelStyle</link> style);
+<link linkend="void">void</link>                <link linkend="gtk-plot-bubble-set-labels-prefix">gtk_plot_bubble_set_labels_prefix</link>   (<link linkend="GtkPlotBubble">GtkPlotBubble</link> *bubble,
+                                                         const <link linkend="gchar">gchar</link> *prefix);
+<link linkend="void">void</link>                <link linkend="gtk-plot-bubble-set-labels-suffix">gtk_plot_bubble_set_labels_suffix</link>   (<link linkend="GtkPlotBubble">GtkPlotBubble</link> *bubble,
+                                                         const <link linkend="gchar">gchar</link> *suffix);
+</synopsis>
+</refsynopsisdiv>
+
+<refsect1 id="GtkPlotBubble.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+  <link linkend="GObject">GObject</link>
+   +----<link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+         +----<link linkend="GtkObject">GtkObject</link>
+               +----<link linkend="GtkWidget">GtkWidget</link>
+                     +----<link linkend="GtkPlotData">GtkPlotData</link>
+                           +----GtkPlotBubble
+</synopsis>
+</refsect1>
+
+
+
+<refsect1 id="GtkPlotBubble.implemented-interfaces" role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+GtkPlotBubble implements
+ <link linkend="AtkImplementorIface">AtkImplementorIface</link> and  <link linkend="GtkBuildable">GtkBuildable</link>.</para>
+</refsect1>
+
+
+<refsect1 id="GtkPlotBubble.properties" role="properties">
+<title role="properties.title">Properties</title>
+<synopsis>
+  &quot;<link linkend="GtkPlotBubble--labels-precision">labels-precision</link>&quot;         <link linkend="gint">gint</link>                  : Read / Write
+  &quot;<link linkend="GtkPlotBubble--labels-prefix">labels-prefix</link>&quot;            <link linkend="gchar">gchar</link>*                : Read / Write
+  &quot;<link linkend="GtkPlotBubble--labels-style">labels-style</link>&quot;             <link linkend="gint">gint</link>                  : Read / Write
+  &quot;<link linkend="GtkPlotBubble--labels-suffix">labels-suffix</link>&quot;            <link linkend="gchar">gchar</link>*                : Read / Write
+  &quot;<link linkend="GtkPlotBubble--scale-max">scale-max</link>&quot;                <link linkend="gdouble">gdouble</link>               : Read / Write
+  &quot;<link linkend="GtkPlotBubble--show-scale">show-scale</link>&quot;               <link linkend="gboolean">gboolean</link>              : Read / Write
+  &quot;<link linkend="GtkPlotBubble--size-max">size-max</link>&quot;                 <link linkend="gint">gint</link>                  : Read / Write
+</synopsis>
+</refsect1>
+
+
+
+<refsect1 id="GtkPlotBubble.description" role="desc">
+<title role="desc.title">Description</title>
+<para>
+FIXME:: Need long description.</para>
+<para>
+</para>
+</refsect1>
+
+<refsect1 id="GtkPlotBubble.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="GtkPlotBubble-struct" role="struct">
+<title>GtkPlotBubble</title>
+<indexterm zone="GtkPlotBubble-struct"><primary sortas="GtkPlotBubble">GtkPlotBubble</primary></indexterm><programlisting>typedef struct _GtkPlotBubble GtkPlotBubble;</programlisting>
+<para>
+The GtkPlotBubble struct contains only private data.
+It should only be accessed through the functions described below.</para>
+<para>
+</para></refsect2>
+<refsect2 id="gtk-plot-bubble-new" role="function">
+<title>gtk_plot_bubble_new ()</title>
+<indexterm zone="gtk-plot-bubble-new"><primary sortas="gtk_plot_bubble_new">gtk_plot_bubble_new</primary></indexterm><programlisting><link linkend="GtkWidget">GtkWidget</link>*          gtk_plot_bubble_new                 (void);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-bubble-show-scale" role="function">
+<title>gtk_plot_bubble_show_scale ()</title>
+<indexterm zone="gtk-plot-bubble-show-scale"><primary sortas="gtk_plot_bubble_show_scale">gtk_plot_bubble_show_scale</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_bubble_show_scale          (<link linkend="GtkPlotBubble">GtkPlotBubble</link> *bubble,
+                                                         <link linkend="gboolean">gboolean</link> show);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>bubble</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlotBubble"><type>GtkPlotBubble</type></link>.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>show</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-bubble-set-scale-max" role="function">
+<title>gtk_plot_bubble_set_scale_max ()</title>
+<indexterm zone="gtk-plot-bubble-set-scale-max"><primary sortas="gtk_plot_bubble_set_scale_max">gtk_plot_bubble_set_scale_max</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_bubble_set_scale_max       (<link linkend="GtkPlotBubble">GtkPlotBubble</link> *bubble,
+                                                         <link linkend="gdouble">gdouble</link> scale_max);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>bubble</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlotBubble"><type>GtkPlotBubble</type></link>.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>scale_max</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-bubble-set-size-max" role="function">
+<title>gtk_plot_bubble_set_size_max ()</title>
+<indexterm zone="gtk-plot-bubble-set-size-max"><primary sortas="gtk_plot_bubble_set_size_max">gtk_plot_bubble_set_size_max</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_bubble_set_size_max        (<link linkend="GtkPlotBubble">GtkPlotBubble</link> *bubble,
+                                                         <link linkend="guint">guint</link> size_max);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>bubble</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlotBubble"><type>GtkPlotBubble</type></link>.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>size_max</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-bubble-set-labels-precision" role="function">
+<title>gtk_plot_bubble_set_labels_precision ()</title>
+<indexterm zone="gtk-plot-bubble-set-labels-precision"><primary sortas="gtk_plot_bubble_set_labels_precision">gtk_plot_bubble_set_labels_precision</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_bubble_set_labels_precision
+                                                        (<link linkend="GtkPlotBubble">GtkPlotBubble</link> *bubble,
+                                                         <link linkend="gint">gint</link> precision);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>bubble</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlotBubble"><type>GtkPlotBubble</type></link>.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>precision</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-bubble-set-labels-style" role="function">
+<title>gtk_plot_bubble_set_labels_style ()</title>
+<indexterm zone="gtk-plot-bubble-set-labels-style"><primary sortas="gtk_plot_bubble_set_labels_style">gtk_plot_bubble_set_labels_style</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_bubble_set_labels_style    (<link linkend="GtkPlotBubble">GtkPlotBubble</link> *bubble,
+                                                         <link linkend="GtkPlotLabelStyle">GtkPlotLabelStyle</link> style);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>bubble</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlotBubble"><type>GtkPlotBubble</type></link>.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>style</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-bubble-set-labels-prefix" role="function">
+<title>gtk_plot_bubble_set_labels_prefix ()</title>
+<indexterm zone="gtk-plot-bubble-set-labels-prefix"><primary sortas="gtk_plot_bubble_set_labels_prefix">gtk_plot_bubble_set_labels_prefix</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_bubble_set_labels_prefix   (<link linkend="GtkPlotBubble">GtkPlotBubble</link> *bubble,
+                                                         const <link linkend="gchar">gchar</link> *prefix);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>bubble</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlotBubble"><type>GtkPlotBubble</type></link>.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>prefix</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-bubble-set-labels-suffix" role="function">
+<title>gtk_plot_bubble_set_labels_suffix ()</title>
+<indexterm zone="gtk-plot-bubble-set-labels-suffix"><primary sortas="gtk_plot_bubble_set_labels_suffix">gtk_plot_bubble_set_labels_suffix</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_bubble_set_labels_suffix   (<link linkend="GtkPlotBubble">GtkPlotBubble</link> *bubble,
+                                                         const <link linkend="gchar">gchar</link> *suffix);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>bubble</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlotBubble"><type>GtkPlotBubble</type></link>.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>suffix</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+<refsect1 id="GtkPlotBubble.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GtkPlotBubble--labels-precision" role="property"><title>The <literal>&quot;labels-precision&quot;</literal> property</title>
+<indexterm zone="GtkPlotBubble--labels-precision"><primary sortas="GtkPlotBubble:labels-precision">GtkPlotBubble:labels-precision</primary></indexterm><programlisting>  &quot;labels-precision&quot;         <link linkend="gint">gint</link>                  : Read / Write</programlisting>
+<para>Labels Precision.</para><para>Allowed values: &gt;= 0</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GtkPlotBubble--labels-prefix" role="property"><title>The <literal>&quot;labels-prefix&quot;</literal> property</title>
+<indexterm zone="GtkPlotBubble--labels-prefix"><primary sortas="GtkPlotBubble:labels-prefix">GtkPlotBubble:labels-prefix</primary></indexterm><programlisting>  &quot;labels-prefix&quot;            <link linkend="gchar">gchar</link>*                : Read / Write</programlisting>
+<para>Labels Prefix.</para><para>Default value: NULL</para>
+</refsect2>
+<refsect2 id="GtkPlotBubble--labels-style" role="property"><title>The <literal>&quot;labels-style&quot;</literal> property</title>
+<indexterm zone="GtkPlotBubble--labels-style"><primary sortas="GtkPlotBubble:labels-style">GtkPlotBubble:labels-style</primary></indexterm><programlisting>  &quot;labels-style&quot;             <link linkend="gint">gint</link>                  : Read / Write</programlisting>
+<para>Labels Style.</para><para>Allowed values: &gt;= 0</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GtkPlotBubble--labels-suffix" role="property"><title>The <literal>&quot;labels-suffix&quot;</literal> property</title>
+<indexterm zone="GtkPlotBubble--labels-suffix"><primary sortas="GtkPlotBubble:labels-suffix">GtkPlotBubble:labels-suffix</primary></indexterm><programlisting>  &quot;labels-suffix&quot;            <link linkend="gchar">gchar</link>*                : Read / Write</programlisting>
+<para>Labels Suffix.</para><para>Default value: NULL</para>
+</refsect2>
+<refsect2 id="GtkPlotBubble--scale-max" role="property"><title>The <literal>&quot;scale-max&quot;</literal> property</title>
+<indexterm zone="GtkPlotBubble--scale-max"><primary sortas="GtkPlotBubble:scale-max">GtkPlotBubble:scale-max</primary></indexterm><programlisting>  &quot;scale-max&quot;                <link linkend="gdouble">gdouble</link>               : Read / Write</programlisting>
+<para>Scale Max.</para><para>Allowed values: &gt;= 0</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GtkPlotBubble--show-scale" role="property"><title>The <literal>&quot;show-scale&quot;</literal> property</title>
+<indexterm zone="GtkPlotBubble--show-scale"><primary sortas="GtkPlotBubble:show-scale">GtkPlotBubble:show-scale</primary></indexterm><programlisting>  &quot;show-scale&quot;               <link linkend="gboolean">gboolean</link>              : Read / Write</programlisting>
+<para>Show scale in gradient legend.</para><para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="GtkPlotBubble--size-max" role="property"><title>The <literal>&quot;size-max&quot;</literal> property</title>
+<indexterm zone="GtkPlotBubble--size-max"><primary sortas="GtkPlotBubble:size-max">GtkPlotBubble:size-max</primary></indexterm><programlisting>  &quot;size-max&quot;                 <link linkend="gint">gint</link>                  : Read / Write</programlisting>
+<para>Size Max.</para><para>Allowed values: &gt;= 0</para>
+<para>Default value: 0</para>
+</refsect2>
+</refsect1>
+
+
+
+
+</refentry>

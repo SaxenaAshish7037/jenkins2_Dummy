@@ -1,0 +1,102 @@
+<!-- ##### SECTION Title ##### -->
+GtkDataTextView
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### STRUCT GtkDataTextView ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### ARG GtkDataTextView:description ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkDataTextView:max-length ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkDataTextView:max-length-bytes ##### -->
+<para>
+
+</para>
+
+<!-- ##### FUNCTION gtk_data_text_view_new ##### -->
+<para>
+
+</para>
+
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_data_text_view_get_description ##### -->
+<para>
+
+</para>
+
+@data_text_view: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_data_text_view_get_max_length ##### -->
+<para>
+
+</para>
+
+@data_text_view: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_data_text_view_get_max_length_bytes ##### -->
+<para>
+
+</para>
+
+@data_text_view: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_data_text_view_set_description ##### -->
+<para>
+
+</para>
+
+@data_text_view: 
+@description: 
+
+
+<!-- ##### FUNCTION gtk_data_text_view_set_max_length ##### -->
+<para>
+
+</para>
+
+@data_text_view: 
+@max_length: 
+
+
+<!-- ##### FUNCTION gtk_data_text_view_set_max_length_bytes ##### -->
+<para>
+
+</para>
+
+@data_text_view: 
+@max_length_bytes: 
+
+

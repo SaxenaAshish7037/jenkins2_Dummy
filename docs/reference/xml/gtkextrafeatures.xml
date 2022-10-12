@@ -1,0 +1,146 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+<!ENTITY version SYSTEM "version.xml">
+]>
+<!--ENTITY index-Objects-Grouped SYSTEM "objects_grouped.sgml"-->
+<refentry id="gtkextra-GtkExtra-Versioning">
+<refmeta>
+<refentrytitle role="top_of_page" id="gtkextra-GtkExtra-Versioning.top_of_page">GtkExtra Versioning</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GTKEXTRA Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>GtkExtra Versioning</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="gtkextra-GtkExtra-Versioning.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>
+
+#include &lt;gtkextra.h&gt;
+
+#define             <link linkend="GTKEXTRA-MAJOR-VERSION--CAPS">GTKEXTRA_MAJOR_VERSION</link>
+#define             <link linkend="GTKEXTRA-MINOR-VERSION--CAPS">GTKEXTRA_MINOR_VERSION</link>
+#define             <link linkend="GTKEXTRA-MICRO-VERSION--CAPS">GTKEXTRA_MICRO_VERSION</link>
+#define             <link linkend="GTKEXTRA-CHECK-VERSION--CAPS">GTKEXTRA_CHECK_VERSION</link>              (major,minor,micro)
+extern              const guint <link linkend="gtkextra-major-version">gtkextra_major_version</link>;
+extern              const guint <link linkend="gtkextra-minor-version">gtkextra_minor_version</link>;
+extern              const guint <link linkend="gtkextra-micro-version">gtkextra_micro_version</link>;
+extern              const guint <link linkend="gtkextra-binary-age">gtkextra_binary_age</link>;
+extern              const guint <link linkend="gtkextra-interface-age">gtkextra_interface_age</link>;
+<link linkend="gchar">gchar</link>*              <link linkend="gtkextra-check-version">gtkextra_check_version</link>              (<link linkend="guint">guint</link> required_major,
+                                                         <link linkend="guint">guint</link> required_minor,
+                                                         <link linkend="guint">guint</link> required_micro);
+</synopsis>
+</refsynopsisdiv>
+
+
+
+
+
+
+
+
+
+<refsect1 id="gtkextra-GtkExtra-Versioning.description" role="desc">
+<title role="desc.title">Description</title>
+<para>
+</para>
+</refsect1>
+
+<refsect1 id="gtkextra-GtkExtra-Versioning.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="GTKEXTRA-MAJOR-VERSION--CAPS" role="macro">
+<title>GTKEXTRA_MAJOR_VERSION</title>
+<indexterm zone="GTKEXTRA-MAJOR-VERSION--CAPS"><primary sortas="GTKEXTRA_MAJOR_VERSION">GTKEXTRA_MAJOR_VERSION</primary></indexterm><programlisting>#define GTKEXTRA_MAJOR_VERSION			(3)
+</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="GTKEXTRA-MINOR-VERSION--CAPS" role="macro">
+<title>GTKEXTRA_MINOR_VERSION</title>
+<indexterm zone="GTKEXTRA-MINOR-VERSION--CAPS"><primary sortas="GTKEXTRA_MINOR_VERSION">GTKEXTRA_MINOR_VERSION</primary></indexterm><programlisting>#define GTKEXTRA_MINOR_VERSION			(2)
+</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="GTKEXTRA-MICRO-VERSION--CAPS" role="macro">
+<title>GTKEXTRA_MICRO_VERSION</title>
+<indexterm zone="GTKEXTRA-MICRO-VERSION--CAPS"><primary sortas="GTKEXTRA_MICRO_VERSION">GTKEXTRA_MICRO_VERSION</primary></indexterm><programlisting>#define GTKEXTRA_MICRO_VERSION			(0)
+</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="GTKEXTRA-CHECK-VERSION--CAPS" role="macro">
+<title>GTKEXTRA_CHECK_VERSION()</title>
+<indexterm zone="GTKEXTRA-CHECK-VERSION--CAPS"><primary sortas="GTKEXTRA_CHECK_VERSION">GTKEXTRA_CHECK_VERSION</primary></indexterm><programlisting>#define             GTKEXTRA_CHECK_VERSION(major,minor,micro)</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>major</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>minor</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>micro</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtkextra-major-version" role="variable">
+<title>gtkextra_major_version</title>
+<indexterm zone="gtkextra-major-version"><primary sortas="gtkextra_major_version">gtkextra_major_version</primary></indexterm><programlisting>extern const guint gtkextra_major_version;
+</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="gtkextra-minor-version" role="variable">
+<title>gtkextra_minor_version</title>
+<indexterm zone="gtkextra-minor-version"><primary sortas="gtkextra_minor_version">gtkextra_minor_version</primary></indexterm><programlisting>extern const guint gtkextra_minor_version;
+</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="gtkextra-micro-version" role="variable">
+<title>gtkextra_micro_version</title>
+<indexterm zone="gtkextra-micro-version"><primary sortas="gtkextra_micro_version">gtkextra_micro_version</primary></indexterm><programlisting>extern const guint gtkextra_micro_version;
+</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="gtkextra-binary-age" role="variable">
+<title>gtkextra_binary_age</title>
+<indexterm zone="gtkextra-binary-age"><primary sortas="gtkextra_binary_age">gtkextra_binary_age</primary></indexterm><programlisting>extern const guint gtkextra_binary_age;
+</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="gtkextra-interface-age" role="variable">
+<title>gtkextra_interface_age</title>
+<indexterm zone="gtkextra-interface-age"><primary sortas="gtkextra_interface_age">gtkextra_interface_age</primary></indexterm><programlisting>extern const guint gtkextra_interface_age;
+</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="gtkextra-check-version" role="function">
+<title>gtkextra_check_version ()</title>
+<indexterm zone="gtkextra-check-version"><primary sortas="gtkextra_check_version">gtkextra_check_version</primary></indexterm><programlisting><link linkend="gchar">gchar</link>*              gtkextra_check_version              (<link linkend="guint">guint</link> required_major,
+                                                         <link linkend="guint">guint</link> required_minor,
+                                                         <link linkend="guint">guint</link> required_micro);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>required_major</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>required_minor</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>required_micro</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+
+
+
+
+</refentry>

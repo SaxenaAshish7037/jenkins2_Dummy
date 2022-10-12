@@ -1,0 +1,163 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+<!ENTITY version SYSTEM "version.xml">
+]>
+<!--ENTITY index-Objects-Grouped SYSTEM "objects_grouped.sgml"-->
+<refentry id="gtkextra-GtkPlotCanvasLine">
+<refmeta>
+<refentrytitle role="top_of_page" id="gtkextra-GtkPlotCanvasLine.top_of_page">GtkPlotCanvasLine</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GTKEXTRA Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>GtkPlotCanvasLine</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="gtkextra-GtkPlotCanvasLine.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>
+
+#include &lt;gtkextra.h&gt;
+
+                    <link linkend="GtkPlotCanvasLine">GtkPlotCanvasLine</link>;
+enum                <link linkend="GtkPlotCanvasArrow">GtkPlotCanvasArrow</link>;
+<link linkend="GtkPlotCanvasChild">GtkPlotCanvasChild</link> * <link linkend="gtk-plot-canvas-line-new">gtk_plot_canvas_line_new</link>           (<link linkend="GtkPlotLineStyle">GtkPlotLineStyle</link> style,
+                                                         <link linkend="gfloat">gfloat</link> width,
+                                                         const <link linkend="GdkColor">GdkColor</link> *color,
+                                                         <link linkend="GtkPlotCanvasArrow">GtkPlotCanvasArrow</link> arrow_mask);
+<link linkend="void">void</link>                <link linkend="gtk-plot-canvas-line-set-attributes">gtk_plot_canvas_line_set_attributes</link> (<link linkend="GtkPlotCanvasLine">GtkPlotCanvasLine</link> *line,
+                                                         <link linkend="GtkPlotLineStyle">GtkPlotLineStyle</link> style,
+                                                         <link linkend="gfloat">gfloat</link> width,
+                                                         const <link linkend="GdkColor">GdkColor</link> *color);
+<link linkend="void">void</link>                <link linkend="gtk-plot-canvas-line-set-arrow">gtk_plot_canvas_line_set_arrow</link>      (<link linkend="GtkPlotCanvasLine">GtkPlotCanvasLine</link> *line,
+                                                         <link linkend="GtkPlotSymbolStyle">GtkPlotSymbolStyle</link> style,
+                                                         <link linkend="gfloat">gfloat</link> width,
+                                                         <link linkend="gfloat">gfloat</link> length,
+                                                         <link linkend="GtkPlotCanvasArrow">GtkPlotCanvasArrow</link> mask);
+</synopsis>
+</refsynopsisdiv>
+
+
+
+
+
+
+
+
+
+<refsect1 id="gtkextra-GtkPlotCanvasLine.description" role="desc">
+<title role="desc.title">Description</title>
+<para>
+FIXME:: need long description</para>
+<para>
+</para>
+</refsect1>
+
+<refsect1 id="gtkextra-GtkPlotCanvasLine.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="GtkPlotCanvasLine" role="struct">
+<title>GtkPlotCanvasLine</title>
+<indexterm zone="GtkPlotCanvasLine"><primary sortas="GtkPlotCanvasLine">GtkPlotCanvasLine</primary></indexterm><programlisting>typedef struct {
+} GtkPlotCanvasLine;
+</programlisting>
+<para>
+The GtkPlotCanvasLine struct contains only private data.
+It should only be accessed through the functions described below.</para>
+<para>
+</para></refsect2>
+<refsect2 id="GtkPlotCanvasArrow" role="enum">
+<title>enum GtkPlotCanvasArrow</title>
+<indexterm zone="GtkPlotCanvasArrow"><primary sortas="GtkPlotCanvasArrow">GtkPlotCanvasArrow</primary></indexterm><programlisting>typedef enum
+{
+      GTK_PLOT_CANVAS_ARROW_NONE            = 0,
+      GTK_PLOT_CANVAS_ARROW_ORIGIN          = 1 &lt;&lt; 0,
+      GTK_PLOT_CANVAS_ARROW_END             = 1 &lt;&lt; 1
+} GtkPlotCanvasArrow;
+</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="gtk-plot-canvas-line-new" role="function">
+<title>gtk_plot_canvas_line_new ()</title>
+<indexterm zone="gtk-plot-canvas-line-new"><primary sortas="gtk_plot_canvas_line_new">gtk_plot_canvas_line_new</primary></indexterm><programlisting><link linkend="GtkPlotCanvasChild">GtkPlotCanvasChild</link> * gtk_plot_canvas_line_new           (<link linkend="GtkPlotLineStyle">GtkPlotLineStyle</link> style,
+                                                         <link linkend="gfloat">gfloat</link> width,
+                                                         const <link linkend="GdkColor">GdkColor</link> *color,
+                                                         <link linkend="GtkPlotCanvasArrow">GtkPlotCanvasArrow</link> arrow_mask);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>style</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>width</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>color</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>arrow_mask</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-canvas-line-set-attributes" role="function">
+<title>gtk_plot_canvas_line_set_attributes ()</title>
+<indexterm zone="gtk-plot-canvas-line-set-attributes"><primary sortas="gtk_plot_canvas_line_set_attributes">gtk_plot_canvas_line_set_attributes</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_canvas_line_set_attributes (<link linkend="GtkPlotCanvasLine">GtkPlotCanvasLine</link> *line,
+                                                         <link linkend="GtkPlotLineStyle">GtkPlotLineStyle</link> style,
+                                                         <link linkend="gfloat">gfloat</link> width,
+                                                         const <link linkend="GdkColor">GdkColor</link> *color);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>line</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlotCanvasLine"><type>GtkPlotCanvasLine</type></link> widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>style</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>width</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>color</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-canvas-line-set-arrow" role="function">
+<title>gtk_plot_canvas_line_set_arrow ()</title>
+<indexterm zone="gtk-plot-canvas-line-set-arrow"><primary sortas="gtk_plot_canvas_line_set_arrow">gtk_plot_canvas_line_set_arrow</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_canvas_line_set_arrow      (<link linkend="GtkPlotCanvasLine">GtkPlotCanvasLine</link> *line,
+                                                         <link linkend="GtkPlotSymbolStyle">GtkPlotSymbolStyle</link> style,
+                                                         <link linkend="gfloat">gfloat</link> width,
+                                                         <link linkend="gfloat">gfloat</link> length,
+                                                         <link linkend="GtkPlotCanvasArrow">GtkPlotCanvasArrow</link> mask);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>line</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlotCanvasLine"><type>GtkPlotCanvasLine</type></link> widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>style</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>width</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>length</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>mask</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+
+
+
+
+</refentry>

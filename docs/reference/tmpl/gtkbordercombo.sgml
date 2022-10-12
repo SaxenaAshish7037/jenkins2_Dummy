@@ -1,0 +1,41 @@
+<!-- ##### SECTION Title ##### -->
+GtkBorderCombo
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### STRUCT GtkBorderCombo ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SIGNAL GtkBorderCombo::changed ##### -->
+<para>
+
+</para>
+
+@bordercombo: the object which received the signal.
+@arg1: 
+
+<!-- ##### FUNCTION gtk_border_combo_new ##### -->
+<para>
+
+</para>
+
+@Returns: 
+
+

@@ -1,0 +1,196 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+<!ENTITY version SYSTEM "version.xml">
+]>
+<!--ENTITY index-Objects-Grouped SYSTEM "objects_grouped.sgml"-->
+<refentry id="GtkPlotCanvasRectangle">
+<refmeta>
+<refentrytitle role="top_of_page" id="GtkPlotCanvasRectangle.top_of_page">GtkPlotCanvasRectangle</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GTKEXTRA Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>GtkPlotCanvasRectangle</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="GtkPlotCanvasRectangle.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>
+
+#include &lt;gtkextra.h&gt;
+
+                    <link linkend="GtkPlotCanvasRectangle-struct">GtkPlotCanvasRectangle</link>;
+<link linkend="GtkPlotCanvasChild">GtkPlotCanvasChild</link> * <link linkend="gtk-plot-canvas-rectangle-new">gtk_plot_canvas_rectangle_new</link>      (<link linkend="GtkPlotLineStyle">GtkPlotLineStyle</link> style,
+                                                         <link linkend="gfloat">gfloat</link> width,
+                                                         const <link linkend="GdkColor">GdkColor</link> *fg,
+                                                         const <link linkend="GdkColor">GdkColor</link> *bg,
+                                                         <link linkend="GtkPlotBorderStyle">GtkPlotBorderStyle</link> border,
+                                                         <link linkend="gboolean">gboolean</link> fill);
+<link linkend="void">void</link>                <link linkend="gtk-plot-canvas-rectangle-set-attributes">gtk_plot_canvas_rectangle_set_attributes</link>
+                                                        (<link linkend="GtkPlotCanvasRectangle">GtkPlotCanvasRectangle</link> *rectangle,
+                                                         <link linkend="GtkPlotLineStyle">GtkPlotLineStyle</link> style,
+                                                         <link linkend="gfloat">gfloat</link> width,
+                                                         const <link linkend="GdkColor">GdkColor</link> *fg,
+                                                         const <link linkend="GdkColor">GdkColor</link> *bg,
+                                                         <link linkend="GtkPlotBorderStyle">GtkPlotBorderStyle</link> border,
+                                                         <link linkend="gboolean">gboolean</link> fill);
+</synopsis>
+</refsynopsisdiv>
+
+<refsect1 id="GtkPlotCanvasRectangle.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+  <link linkend="GObject">GObject</link>
+   +----<link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+         +----<link linkend="GtkObject">GtkObject</link>
+               +----<link linkend="GtkPlotCanvasChild">GtkPlotCanvasChild</link>
+                     +----GtkPlotCanvasRectangle
+</synopsis>
+</refsect1>
+
+
+
+
+
+<refsect1 id="GtkPlotCanvasRectangle.properties" role="properties">
+<title role="properties.title">Properties</title>
+<synopsis>
+  &quot;<link linkend="GtkPlotCanvasRectangle--border">border</link>&quot;                   <link linkend="gint">gint</link>                  : Read / Write
+  &quot;<link linkend="GtkPlotCanvasRectangle--color-bg">color-bg</link>&quot;                 <link linkend="gpointer">gpointer</link>              : Read / Write
+  &quot;<link linkend="GtkPlotCanvasRectangle--filled">filled</link>&quot;                   <link linkend="gboolean">gboolean</link>              : Read / Write
+  &quot;<link linkend="GtkPlotCanvasRectangle--line">line</link>&quot;                     <link linkend="gpointer">gpointer</link>              : Read / Write
+  &quot;<link linkend="GtkPlotCanvasRectangle--shadow-width">shadow-width</link>&quot;             <link linkend="gint">gint</link>                  : Read / Write
+</synopsis>
+</refsect1>
+
+
+
+<refsect1 id="GtkPlotCanvasRectangle.description" role="desc">
+<title role="desc.title">Description</title>
+<para>
+FIXME:: need long description</para>
+<para>
+</para>
+</refsect1>
+
+<refsect1 id="GtkPlotCanvasRectangle.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="GtkPlotCanvasRectangle-struct" role="struct">
+<title>GtkPlotCanvasRectangle</title>
+<indexterm zone="GtkPlotCanvasRectangle-struct"><primary sortas="GtkPlotCanvasRectangle">GtkPlotCanvasRectangle</primary></indexterm><programlisting>typedef struct _GtkPlotCanvasRectangle GtkPlotCanvasRectangle;</programlisting>
+<para>
+The GtkPlotCanvasRectangle struct contains only private data.
+It should only be accessed through the functions described below.</para>
+<para>
+</para></refsect2>
+<refsect2 id="gtk-plot-canvas-rectangle-new" role="function">
+<title>gtk_plot_canvas_rectangle_new ()</title>
+<indexterm zone="gtk-plot-canvas-rectangle-new"><primary sortas="gtk_plot_canvas_rectangle_new">gtk_plot_canvas_rectangle_new</primary></indexterm><programlisting><link linkend="GtkPlotCanvasChild">GtkPlotCanvasChild</link> * gtk_plot_canvas_rectangle_new      (<link linkend="GtkPlotLineStyle">GtkPlotLineStyle</link> style,
+                                                         <link linkend="gfloat">gfloat</link> width,
+                                                         const <link linkend="GdkColor">GdkColor</link> *fg,
+                                                         const <link linkend="GdkColor">GdkColor</link> *bg,
+                                                         <link linkend="GtkPlotBorderStyle">GtkPlotBorderStyle</link> border,
+                                                         <link linkend="gboolean">gboolean</link> fill);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>style</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>width</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>fg</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>bg</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>border</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>fill</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-canvas-rectangle-set-attributes" role="function">
+<title>gtk_plot_canvas_rectangle_set_attributes ()</title>
+<indexterm zone="gtk-plot-canvas-rectangle-set-attributes"><primary sortas="gtk_plot_canvas_rectangle_set_attributes">gtk_plot_canvas_rectangle_set_attributes</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_canvas_rectangle_set_attributes
+                                                        (<link linkend="GtkPlotCanvasRectangle">GtkPlotCanvasRectangle</link> *rectangle,
+                                                         <link linkend="GtkPlotLineStyle">GtkPlotLineStyle</link> style,
+                                                         <link linkend="gfloat">gfloat</link> width,
+                                                         const <link linkend="GdkColor">GdkColor</link> *fg,
+                                                         const <link linkend="GdkColor">GdkColor</link> *bg,
+                                                         <link linkend="GtkPlotBorderStyle">GtkPlotBorderStyle</link> border,
+                                                         <link linkend="gboolean">gboolean</link> fill);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>rectangle</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlotCanvasRectangle"><type>GtkPlotCanvasRectangle</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>style</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>width</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>fg</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>bg</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>border</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>fill</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+<refsect1 id="GtkPlotCanvasRectangle.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GtkPlotCanvasRectangle--border" role="property"><title>The <literal>&quot;border&quot;</literal> property</title>
+<indexterm zone="GtkPlotCanvasRectangle--border"><primary sortas="GtkPlotCanvasRectangle:border">GtkPlotCanvasRectangle:border</primary></indexterm><programlisting>  &quot;border&quot;                   <link linkend="gint">gint</link>                  : Read / Write</programlisting>
+<para>
+</para>
+<para>
+</para><para>Allowed values: &gt;= 0</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GtkPlotCanvasRectangle--color-bg" role="property"><title>The <literal>&quot;color-bg&quot;</literal> property</title>
+<indexterm zone="GtkPlotCanvasRectangle--color-bg"><primary sortas="GtkPlotCanvasRectangle:color-bg">GtkPlotCanvasRectangle:color-bg</primary></indexterm><programlisting>  &quot;color-bg&quot;                 <link linkend="gpointer">gpointer</link>              : Read / Write</programlisting>
+<para>Filling Color.</para></refsect2>
+<refsect2 id="GtkPlotCanvasRectangle--filled" role="property"><title>The <literal>&quot;filled&quot;</literal> property</title>
+<indexterm zone="GtkPlotCanvasRectangle--filled"><primary sortas="GtkPlotCanvasRectangle:filled">GtkPlotCanvasRectangle:filled</primary></indexterm><programlisting>  &quot;filled&quot;                   <link linkend="gboolean">gboolean</link>              : Read / Write</programlisting>
+<para>
+</para>
+<para>
+</para><para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="GtkPlotCanvasRectangle--line" role="property"><title>The <literal>&quot;line&quot;</literal> property</title>
+<indexterm zone="GtkPlotCanvasRectangle--line"><primary sortas="GtkPlotCanvasRectangle:line">GtkPlotCanvasRectangle:line</primary></indexterm><programlisting>  &quot;line&quot;                     <link linkend="gpointer">gpointer</link>              : Read / Write</programlisting>
+<para>
+</para>
+<para>
+</para></refsect2>
+<refsect2 id="GtkPlotCanvasRectangle--shadow-width" role="property"><title>The <literal>&quot;shadow-width&quot;</literal> property</title>
+<indexterm zone="GtkPlotCanvasRectangle--shadow-width"><primary sortas="GtkPlotCanvasRectangle:shadow-width">GtkPlotCanvasRectangle:shadow-width</primary></indexterm><programlisting>  &quot;shadow-width&quot;             <link linkend="gint">gint</link>                  : Read / Write</programlisting>
+<para>Shadow Width.</para><para>Allowed values: &gt;= 0</para>
+<para>Default value: 0</para>
+</refsect2>
+</refsect1>
+
+
+
+
+</refentry>

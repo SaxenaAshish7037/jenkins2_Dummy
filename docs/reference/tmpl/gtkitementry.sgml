@@ -1,0 +1,97 @@
+<!-- ##### SECTION Title ##### -->
+GtkItemEntry
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### STRUCT GtkItemEntry ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### FUNCTION gtk_item_entry_new ##### -->
+<para>
+
+</para>
+
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_item_entry_new_with_max_length ##### -->
+<para>
+
+</para>
+
+@max: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_item_entry_set_text ##### -->
+<para>
+
+</para>
+
+@entry: 
+@text: 
+@justification: 
+
+
+<!-- ##### FUNCTION gtk_item_entry_set_justification ##### -->
+<para>
+
+</para>
+
+@entry: 
+@just: 
+
+
+<!-- ##### FUNCTION gtk_item_entry_get_max_length_bytes ##### -->
+<para>
+
+</para>
+
+@item_entry: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_item_entry_set_max_length_bytes ##### -->
+<para>
+
+</para>
+
+@item_entry: 
+@max_length_bytes: 
+
+
+<!-- ##### FUNCTION gtk_item_entry_get_cursor_visible ##### -->
+<para>
+
+</para>
+
+@entry: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_item_entry_set_cursor_visible ##### -->
+<para>
+
+</para>
+
+@entry: 
+@visible: 
+
+

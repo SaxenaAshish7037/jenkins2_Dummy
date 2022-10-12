@@ -1,0 +1,1175 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+<!ENTITY version SYSTEM "version.xml">
+]>
+<!--ENTITY index-Objects-Grouped SYSTEM "objects_grouped.sgml"-->
+<refentry id="GtkSheetColumn">
+<refmeta>
+<refentrytitle role="top_of_page" id="GtkSheetColumn.top_of_page">GtkSheetColumn</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GTKEXTRA Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>GtkSheetColumn</refname>
+<refpurpose>A spreadsheet column widget for <link linkend="GtkSheet"><type>GtkSheet</type></link></refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="GtkSheetColumn.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>
+
+#include &lt;gtkextra.h&gt;
+
+                    <link linkend="GtkSheetColumn-struct">GtkSheetColumn</link>;
+<link linkend="void">void</link>                <link linkend="gtk-sheet-add-column">gtk_sheet_add_column</link>                (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         <link linkend="guint">guint</link> ncols);
+<link linkend="void">void</link>                <link linkend="gtk-sheet-insert-columns">gtk_sheet_insert_columns</link>            (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         <link linkend="guint">guint</link> col,
+                                                         <link linkend="guint">guint</link> ncols);
+<link linkend="void">void</link>                <link linkend="gtk-sheet-delete-columns">gtk_sheet_delete_columns</link>            (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         <link linkend="guint">guint</link> col,
+                                                         <link linkend="guint">guint</link> ncols);
+<link linkend="guint">guint</link>               <link linkend="gtk-sheet-get-columns-count">gtk_sheet_get_columns_count</link>         (<link linkend="GtkSheet">GtkSheet</link> *sheet);
+<link linkend="GtkSheetColumn">GtkSheetColumn</link> *    <link linkend="gtk-sheet-column-get">gtk_sheet_column_get</link>                (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         <link linkend="gint">gint</link> col);
+<link linkend="gint">gint</link>                <link linkend="gtk-sheet-column-get-index">gtk_sheet_column_get_index</link>          (<link linkend="GtkSheetColumn">GtkSheetColumn</link> *colobj);
+<link linkend="void">void</link>                <link linkend="gtk-sheet-select-column">gtk_sheet_select_column</link>             (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         <link linkend="gint">gint</link> column);
+<link linkend="gboolean">gboolean</link>            <link linkend="gtk-sheet-column-titles-visible">gtk_sheet_column_titles_visible</link>     (<link linkend="GtkSheet">GtkSheet</link> *sheet);
+<link linkend="void">void</link>                <link linkend="gtk-sheet-show-column-titles">gtk_sheet_show_column_titles</link>        (<link linkend="GtkSheet">GtkSheet</link> *sheet);
+<link linkend="void">void</link>                <link linkend="gtk-sheet-hide-column-titles">gtk_sheet_hide_column_titles</link>        (<link linkend="GtkSheet">GtkSheet</link> *sheet);
+const <link linkend="gchar">gchar</link> *       <link linkend="gtk-sheet-get-column-title">gtk_sheet_get_column_title</link>          (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         <link linkend="gint">gint</link> column);
+<link linkend="void">void</link>                <link linkend="gtk-sheet-set-column-title">gtk_sheet_set_column_title</link>          (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         <link linkend="gint">gint</link> column,
+                                                         const <link linkend="gchar">gchar</link> *title);
+<link linkend="void">void</link>                <link linkend="gtk-sheet-set-column-titles-height">gtk_sheet_set_column_titles_height</link>  (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         <link linkend="guint">guint</link> height);
+<link linkend="gboolean">gboolean</link>            <link linkend="gtk-sheet-column-sensitive">gtk_sheet_column_sensitive</link>          (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         <link linkend="gint">gint</link> column);
+<link linkend="void">void</link>                <link linkend="gtk-sheet-column-set-sensitivity">gtk_sheet_column_set_sensitivity</link>    (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         <link linkend="gint">gint</link> column,
+                                                         <link linkend="gboolean">gboolean</link> sensitive);
+<link linkend="void">void</link>                <link linkend="gtk-sheet-columns-set-sensitivity">gtk_sheet_columns_set_sensitivity</link>   (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         <link linkend="gboolean">gboolean</link> sensitive);
+<link linkend="gboolean">gboolean</link>            <link linkend="gtk-sheet-columns-resizable">gtk_sheet_columns_resizable</link>         (<link linkend="GtkSheet">GtkSheet</link> *sheet);
+<link linkend="void">void</link>                <link linkend="gtk-sheet-columns-set-resizable">gtk_sheet_columns_set_resizable</link>     (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         <link linkend="gboolean">gboolean</link> resizable);
+<link linkend="gboolean">gboolean</link>            <link linkend="gtk-sheet-column-visible">gtk_sheet_column_visible</link>            (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         <link linkend="gint">gint</link> column);
+<link linkend="void">void</link>                <link linkend="gtk-sheet-column-set-visibility">gtk_sheet_column_set_visibility</link>     (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         <link linkend="gint">gint</link> column,
+                                                         <link linkend="gboolean">gboolean</link> visible);
+<link linkend="void">void</link>                <link linkend="gtk-sheet-column-label-set-visibility">gtk_sheet_column_label_set_visibility</link>
+                                                        (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         <link linkend="gint">gint</link> col,
+                                                         <link linkend="gboolean">gboolean</link> visible);
+<link linkend="void">void</link>                <link linkend="gtk-sheet-columns-labels-set-visibility">gtk_sheet_columns_labels_set_visibility</link>
+                                                        (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         <link linkend="gboolean">gboolean</link> visible);
+const <link linkend="gint">gint</link>          <link linkend="gtk-sheet-get-column-width">gtk_sheet_get_column_width</link>          (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         <link linkend="gint">gint</link> column);
+<link linkend="void">void</link>                <link linkend="gtk-sheet-set-column-width">gtk_sheet_set_column_width</link>          (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         <link linkend="gint">gint</link> column,
+                                                         <link linkend="guint">guint</link> width);
+<link linkend="GtkJustification">GtkJustification</link>    <link linkend="gtk-sheet-column-get-justification">gtk_sheet_column_get_justification</link>  (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         <link linkend="gint">gint</link> col);
+<link linkend="void">void</link>                <link linkend="gtk-sheet-column-set-justification">gtk_sheet_column_set_justification</link>  (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         <link linkend="gint">gint</link> col,
+                                                         <link linkend="GtkJustification">GtkJustification</link> just);
+<link linkend="GtkSheetVerticalJustification">GtkSheetVerticalJustification</link>  <link linkend="gtk-sheet-column-get-vjustification">gtk_sheet_column_get_vjustification</link>
+                                                        (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         <link linkend="gint">gint</link> col);
+<link linkend="void">void</link>                <link linkend="gtk-sheet-column-set-vjustification">gtk_sheet_column_set_vjustification</link> (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         <link linkend="gint">gint</link> col,
+                                                         <link linkend="GtkSheetVerticalJustification">GtkSheetVerticalJustification</link> vjust);
+const <link linkend="gchar">gchar</link> *       <link linkend="gtk-sheet-column-button-get-label">gtk_sheet_column_button_get_label</link>   (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         <link linkend="gint">gint</link> col);
+<link linkend="void">void</link>                <link linkend="gtk-sheet-column-button-add-label">gtk_sheet_column_button_add_label</link>   (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         <link linkend="gint">gint</link> col,
+                                                         const <link linkend="gchar">gchar</link> *label);
+<link linkend="void">void</link>                <link linkend="gtk-sheet-column-button-justify">gtk_sheet_column_button_justify</link>     (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         <link linkend="gint">gint</link> col,
+                                                         <link linkend="GtkJustification">GtkJustification</link> justification);
+<link linkend="gchar">gchar</link> *             <link linkend="gtk-sheet-column-get-tooltip-markup">gtk_sheet_column_get_tooltip_markup</link> (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         const <link linkend="gint">gint</link> col);
+<link linkend="void">void</link>                <link linkend="gtk-sheet-column-set-tooltip-markup">gtk_sheet_column_set_tooltip_markup</link> (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         const <link linkend="gint">gint</link> col,
+                                                         const <link linkend="gchar">gchar</link> *markup);
+<link linkend="gchar">gchar</link> *             <link linkend="gtk-sheet-column-get-tooltip-text">gtk_sheet_column_get_tooltip_text</link>   (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         const <link linkend="gint">gint</link> col);
+<link linkend="void">void</link>                <link linkend="gtk-sheet-column-set-tooltip-text">gtk_sheet_column_set_tooltip_text</link>   (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         const <link linkend="gint">gint</link> col,
+                                                         const <link linkend="gchar">gchar</link> *text);
+<link linkend="gchar">gchar</link> *             <link linkend="gtk-sheet-column-get-datatype">gtk_sheet_column_get_datatype</link>       (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         const <link linkend="gint">gint</link> col);
+<link linkend="void">void</link>                <link linkend="gtk-sheet-column-set-datatype">gtk_sheet_column_set_datatype</link>       (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         const <link linkend="gint">gint</link> col,
+                                                         const <link linkend="gchar">gchar</link> *data_type);
+<link linkend="gchar">gchar</link> *             <link linkend="gtk-sheet-column-get-description">gtk_sheet_column_get_description</link>    (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         const <link linkend="gint">gint</link> col);
+<link linkend="void">void</link>                <link linkend="gtk-sheet-column-set-description">gtk_sheet_column_set_description</link>    (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         const <link linkend="gint">gint</link> col,
+                                                         const <link linkend="gchar">gchar</link> *description);
+<link linkend="gchar">gchar</link> *             <link linkend="gtk-sheet-column-get-format">gtk_sheet_column_get_format</link>         (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         const <link linkend="gint">gint</link> col);
+<link linkend="void">void</link>                <link linkend="gtk-sheet-column-set-format">gtk_sheet_column_set_format</link>         (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         const <link linkend="gint">gint</link> col,
+                                                         const <link linkend="gchar">gchar</link> *format);
+<link linkend="gboolean">gboolean</link>            <link linkend="gtk-sheet-column-get-iskey">gtk_sheet_column_get_iskey</link>          (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         const <link linkend="gint">gint</link> col);
+<link linkend="void">void</link>                <link linkend="gtk-sheet-column-set-iskey">gtk_sheet_column_set_iskey</link>          (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         const <link linkend="gint">gint</link> col,
+                                                         const <link linkend="gboolean">gboolean</link> is_key);
+<link linkend="GType">GType</link>               <link linkend="gtk-sheet-column-get-entry-type">gtk_sheet_column_get_entry_type</link>     (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         const <link linkend="gint">gint</link> col);
+<link linkend="void">void</link>                <link linkend="gtk-sheet-column-set-entry-type">gtk_sheet_column_set_entry_type</link>     (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         const <link linkend="gint">gint</link> col,
+                                                         const <link linkend="GType">GType</link> entry_type);
+<link linkend="gboolean">gboolean</link>            <link linkend="gtk-sheet-column-get-readonly">gtk_sheet_column_get_readonly</link>       (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         const <link linkend="gint">gint</link> col);
+<link linkend="void">void</link>                <link linkend="gtk-sheet-column-set-readonly">gtk_sheet_column_set_readonly</link>       (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         const <link linkend="gint">gint</link> col,
+                                                         const <link linkend="gboolean">gboolean</link> is_readonly);
+</synopsis>
+</refsynopsisdiv>
+
+<refsect1 id="GtkSheetColumn.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+  <link linkend="GObject">GObject</link>
+   +----<link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+         +----<link linkend="GtkObject">GtkObject</link>
+               +----<link linkend="GtkWidget">GtkWidget</link>
+                     +----GtkSheetColumn
+</synopsis>
+</refsect1>
+
+
+
+<refsect1 id="GtkSheetColumn.implemented-interfaces" role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+GtkSheetColumn implements
+ <link linkend="AtkImplementorIface">AtkImplementorIface</link> and  <link linkend="GtkBuildable">GtkBuildable</link>.</para>
+</refsect1>
+
+
+<refsect1 id="GtkSheetColumn.properties" role="properties">
+<title role="properties.title">Properties</title>
+<synopsis>
+  &quot;<link linkend="GtkSheetColumn--dataformat">dataformat</link>&quot;               <link linkend="gchar">gchar</link>*                : Read / Write
+  &quot;<link linkend="GtkSheetColumn--datatype">datatype</link>&quot;                 <link linkend="gchar">gchar</link>*                : Read / Write
+  &quot;<link linkend="GtkSheetColumn--description">description</link>&quot;              <link linkend="gchar">gchar</link>*                : Read / Write
+  &quot;<link linkend="GtkSheetColumn--entry-type">entry-type</link>&quot;               <link linkend="GtkSheetEntryType">GtkSheetEntryType</link>     : Read / Write
+  &quot;<link linkend="GtkSheetColumn--iskey">iskey</link>&quot;                    <link linkend="gboolean">gboolean</link>              : Read / Write
+  &quot;<link linkend="GtkSheetColumn--justification">justification</link>&quot;            <link linkend="GtkJustification">GtkJustification</link>      : Read / Write
+  &quot;<link linkend="GtkSheetColumn--label">label</link>&quot;                    <link linkend="gchar">gchar</link>*                : Read / Write
+  &quot;<link linkend="GtkSheetColumn--max-length">max-length</link>&quot;               <link linkend="gint">gint</link>                  : Read / Write
+  &quot;<link linkend="GtkSheetColumn--max-length-bytes">max-length-bytes</link>&quot;         <link linkend="gint">gint</link>                  : Read / Write
+  &quot;<link linkend="GtkSheetColumn--position">position</link>&quot;                 <link linkend="gint">gint</link>                  : Read / Write
+  &quot;<link linkend="GtkSheetColumn--readonly">readonly</link>&quot;                 <link linkend="gboolean">gboolean</link>              : Read / Write
+  &quot;<link linkend="GtkSheetColumn--visible">visible</link>&quot;                  <link linkend="gboolean">gboolean</link>              : Read / Write
+  &quot;<link linkend="GtkSheetColumn--vjust">vjust</link>&quot;                    <link linkend="GtkSheetVerticalJustification">GtkSheetVerticalJustification</link>  : Read / Write
+  &quot;<link linkend="GtkSheetColumn--width">width</link>&quot;                    <link linkend="gint">gint</link>                  : Read / Write
+  &quot;<link linkend="GtkSheetColumn--wrap-mode">wrap-mode</link>&quot;                <link linkend="GtkWrapMode">GtkWrapMode</link>           : Read / Write
+</synopsis>
+</refsect1>
+
+
+
+<refsect1 id="GtkSheetColumn.description" role="desc">
+<title role="desc.title">Description</title>
+<para>
+The <link linkend="GtkSheetColumn"><type>GtkSheetColumn</type></link> provides properties for sheet columns.</para>
+<para>
+</para>
+</refsect1>
+
+<refsect1 id="GtkSheetColumn.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="GtkSheetColumn-struct" role="struct">
+<title>GtkSheetColumn</title>
+<indexterm zone="GtkSheetColumn-struct"><primary sortas="GtkSheetColumn">GtkSheetColumn</primary></indexterm><programlisting>typedef struct _GtkSheetColumn GtkSheetColumn;</programlisting>
+<para>
+The GtkSheetColumn struct contains only private data.
+It should only be accessed through the functions described below.</para>
+<para>
+</para></refsect2>
+<refsect2 id="gtk-sheet-add-column" role="function">
+<title>gtk_sheet_add_column ()</title>
+<indexterm zone="gtk-sheet-add-column"><primary sortas="gtk_sheet_add_column">gtk_sheet_add_column</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_sheet_add_column                (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         <link linkend="guint">guint</link> ncols);</programlisting>
+<para>
+Append <parameter>ncols</parameter> columns to the right of the sheet.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>sheet</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkSheet"><type>GtkSheet</type></link>.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>ncols</parameter>&#160;:</term>
+<listitem><simpara> number of columns to be appended.
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-sheet-insert-columns" role="function">
+<title>gtk_sheet_insert_columns ()</title>
+<indexterm zone="gtk-sheet-insert-columns"><primary sortas="gtk_sheet_insert_columns">gtk_sheet_insert_columns</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_sheet_insert_columns            (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         <link linkend="guint">guint</link> col,
+                                                         <link linkend="guint">guint</link> ncols);</programlisting>
+<para>
+Insert <parameter>ncols</parameter> columns before the given row and pull right.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>sheet</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkSheet"><type>GtkSheet</type></link>.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>col</parameter>&#160;:</term>
+<listitem><simpara> column number.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>ncols</parameter>&#160;:</term>
+<listitem><simpara> number of columns to be inserted.
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-sheet-delete-columns" role="function">
+<title>gtk_sheet_delete_columns ()</title>
+<indexterm zone="gtk-sheet-delete-columns"><primary sortas="gtk_sheet_delete_columns">gtk_sheet_delete_columns</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_sheet_delete_columns            (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         <link linkend="guint">guint</link> col,
+                                                         <link linkend="guint">guint</link> ncols);</programlisting>
+<para>
+Delete <parameter>ncols</parameter> columns starting from <parameter>col</parameter>.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>sheet</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkSheet"><type>GtkSheet</type></link>.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>col</parameter>&#160;:</term>
+<listitem><simpara> column number.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>ncols</parameter>&#160;:</term>
+<listitem><simpara> number of columns to be deleted.
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-sheet-get-columns-count" role="function">
+<title>gtk_sheet_get_columns_count ()</title>
+<indexterm zone="gtk-sheet-get-columns-count"><primary sortas="gtk_sheet_get_columns_count">gtk_sheet_get_columns_count</primary></indexterm><programlisting><link linkend="guint">guint</link>               gtk_sheet_get_columns_count         (<link linkend="GtkSheet">GtkSheet</link> *sheet);</programlisting>
+<para>
+Get the number of the columns of the <link linkend="GtkSheet"><type>GtkSheet</type></link>.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>sheet</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkSheet"><type>GtkSheet</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara> number of columns.
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-sheet-column-get" role="function">
+<title>gtk_sheet_column_get ()</title>
+<indexterm zone="gtk-sheet-column-get"><primary sortas="gtk_sheet_column_get">gtk_sheet_column_get</primary></indexterm><programlisting><link linkend="GtkSheetColumn">GtkSheetColumn</link> *    gtk_sheet_column_get                (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         <link linkend="gint">gint</link> col);</programlisting>
+<para>
+Get a <link linkend="GtkSheetColumn"><type>GtkSheetColumn</type></link></para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>sheet</parameter>&#160;:</term>
+<listitem><simpara>  a <link linkend="GtkSheet"><type>GtkSheet</type></link>. 
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>col</parameter>&#160;:</term>
+<listitem><simpara> column index 
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>	(transfer none) the requested <link linkend="GtkSheetColumn"><type>GtkSheetColumn</type></link> or 
+NULL 
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-sheet-column-get-index" role="function">
+<title>gtk_sheet_column_get_index ()</title>
+<indexterm zone="gtk-sheet-column-get-index"><primary sortas="gtk_sheet_column_get_index">gtk_sheet_column_get_index</primary></indexterm><programlisting><link linkend="gint">gint</link>                gtk_sheet_column_get_index          (<link linkend="GtkSheetColumn">GtkSheetColumn</link> *colobj);</programlisting>
+<para>
+find index of <parameter>colobj</parameter> in GtkSheet</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>colobj</parameter>&#160;:</term>
+<listitem><simpara> <link linkend="GtkSheetColumn"><type>GtkSheetColumn</type></link> to find
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara> column index or -1
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-sheet-select-column" role="function">
+<title>gtk_sheet_select_column ()</title>
+<indexterm zone="gtk-sheet-select-column"><primary sortas="gtk_sheet_select_column">gtk_sheet_select_column</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_sheet_select_column             (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         <link linkend="gint">gint</link> column);</programlisting>
+<para>
+Select the column. The range is then highlighted, and the bounds are stored in sheet->range.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>sheet</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkSheet"><type>GtkSheet</type></link>.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>column</parameter>&#160;:</term>
+<listitem><simpara> column number
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-sheet-column-titles-visible" role="function">
+<title>gtk_sheet_column_titles_visible ()</title>
+<indexterm zone="gtk-sheet-column-titles-visible"><primary sortas="gtk_sheet_column_titles_visible">gtk_sheet_column_titles_visible</primary></indexterm><programlisting><link linkend="gboolean">gboolean</link>            gtk_sheet_column_titles_visible     (<link linkend="GtkSheet">GtkSheet</link> *sheet);</programlisting>
+<para>
+Get the visibility of sheet column titles .</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>sheet</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkSheet"><type>GtkSheet</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara> TRUE or FALSE
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-sheet-show-column-titles" role="function">
+<title>gtk_sheet_show_column_titles ()</title>
+<indexterm zone="gtk-sheet-show-column-titles"><primary sortas="gtk_sheet_show_column_titles">gtk_sheet_show_column_titles</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_sheet_show_column_titles        (<link linkend="GtkSheet">GtkSheet</link> *sheet);</programlisting>
+<para>
+Show column titles .</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>sheet</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkSheet"><type>GtkSheet</type></link>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-sheet-hide-column-titles" role="function">
+<title>gtk_sheet_hide_column_titles ()</title>
+<indexterm zone="gtk-sheet-hide-column-titles"><primary sortas="gtk_sheet_hide_column_titles">gtk_sheet_hide_column_titles</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_sheet_hide_column_titles        (<link linkend="GtkSheet">GtkSheet</link> *sheet);</programlisting>
+<para>
+Hide column titles .</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>sheet</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkSheet"><type>GtkSheet</type></link>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-sheet-get-column-title" role="function">
+<title>gtk_sheet_get_column_title ()</title>
+<indexterm zone="gtk-sheet-get-column-title"><primary sortas="gtk_sheet_get_column_title">gtk_sheet_get_column_title</primary></indexterm><programlisting>const <link linkend="gchar">gchar</link> *       gtk_sheet_get_column_title          (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         <link linkend="gint">gint</link> column);</programlisting>
+<para>
+Get column title.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>sheet</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkSheet"><type>GtkSheet</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>column</parameter>&#160;:</term>
+<listitem><simpara> column number
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara> column title, do not modify or free it.
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-sheet-set-column-title" role="function">
+<title>gtk_sheet_set_column_title ()</title>
+<indexterm zone="gtk-sheet-set-column-title"><primary sortas="gtk_sheet_set_column_title">gtk_sheet_set_column_title</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_sheet_set_column_title          (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         <link linkend="gint">gint</link> column,
+                                                         const <link linkend="gchar">gchar</link> *title);</programlisting>
+<para>
+Set column title.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>sheet</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkSheet"><type>GtkSheet</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>column</parameter>&#160;:</term>
+<listitem><simpara> column number
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>title</parameter>&#160;:</term>
+<listitem><simpara> column title
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-sheet-set-column-titles-height" role="function">
+<title>gtk_sheet_set_column_titles_height ()</title>
+<indexterm zone="gtk-sheet-set-column-titles-height"><primary sortas="gtk_sheet_set_column_titles_height">gtk_sheet_set_column_titles_height</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_sheet_set_column_titles_height  (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         <link linkend="guint">guint</link> height);</programlisting>
+<para>
+Resize column titles area .</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>sheet</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkSheet"><type>GtkSheet</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>height</parameter>&#160;:</term>
+<listitem><simpara> column title height.
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-sheet-column-sensitive" role="function">
+<title>gtk_sheet_column_sensitive ()</title>
+<indexterm zone="gtk-sheet-column-sensitive"><primary sortas="gtk_sheet_column_sensitive">gtk_sheet_column_sensitive</primary></indexterm><programlisting><link linkend="gboolean">gboolean</link>            gtk_sheet_column_sensitive          (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         <link linkend="gint">gint</link> column);</programlisting>
+<para>
+Get column button sensitivity.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>sheet</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkSheet"><type>GtkSheet</type></link>.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>column</parameter>&#160;:</term>
+<listitem><simpara> column number
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara> 
+TRUE - the column is sensitive, FALSE - insensitive or not 
+existant 
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-sheet-column-set-sensitivity" role="function">
+<title>gtk_sheet_column_set_sensitivity ()</title>
+<indexterm zone="gtk-sheet-column-set-sensitivity"><primary sortas="gtk_sheet_column_set_sensitivity">gtk_sheet_column_set_sensitivity</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_sheet_column_set_sensitivity    (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         <link linkend="gint">gint</link> column,
+                                                         <link linkend="gboolean">gboolean</link> sensitive);</programlisting>
+<para>
+Set column button sensitivity. If sensitivity is TRUE it can be toggled, otherwise it acts as a title.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>sheet</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkSheet"><type>GtkSheet</type></link>.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>column</parameter>&#160;:</term>
+<listitem><simpara> column number
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>sensitive</parameter>&#160;:</term>
+<listitem><simpara> TRUE or FALSE
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-sheet-columns-set-sensitivity" role="function">
+<title>gtk_sheet_columns_set_sensitivity ()</title>
+<indexterm zone="gtk-sheet-columns-set-sensitivity"><primary sortas="gtk_sheet_columns_set_sensitivity">gtk_sheet_columns_set_sensitivity</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_sheet_columns_set_sensitivity   (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         <link linkend="gboolean">gboolean</link> sensitive);</programlisting>
+<para>
+Set all columns buttons sensitivity. If sensitivity is TRUE
+button can be toggled, otherwise  act as titles. The sheet itself
+has no such property, it is a convenience function to set the
+property for all existing columns.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>sheet</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkSheet"><type>GtkSheet</type></link>.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>sensitive</parameter>&#160;:</term>
+<listitem><simpara> TRUE or FALSE
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-sheet-columns-resizable" role="function">
+<title>gtk_sheet_columns_resizable ()</title>
+<indexterm zone="gtk-sheet-columns-resizable"><primary sortas="gtk_sheet_columns_resizable">gtk_sheet_columns_resizable</primary></indexterm><programlisting><link linkend="gboolean">gboolean</link>            gtk_sheet_columns_resizable         (<link linkend="GtkSheet">GtkSheet</link> *sheet);</programlisting>
+<para>
+Get columns resizable status.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>sheet</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkSheet"><type>GtkSheet</type></link>.
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara> TRUE or FALSE
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-sheet-columns-set-resizable" role="function">
+<title>gtk_sheet_columns_set_resizable ()</title>
+<indexterm zone="gtk-sheet-columns-set-resizable"><primary sortas="gtk_sheet_columns_set_resizable">gtk_sheet_columns_set_resizable</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_sheet_columns_set_resizable     (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         <link linkend="gboolean">gboolean</link> resizable);</programlisting>
+<para>
+Set columns resizable status.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>sheet</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkSheet"><type>GtkSheet</type></link>.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>resizable</parameter>&#160;:</term>
+<listitem><simpara> TRUE or FALSE
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-sheet-column-visible" role="function">
+<title>gtk_sheet_column_visible ()</title>
+<indexterm zone="gtk-sheet-column-visible"><primary sortas="gtk_sheet_column_visible">gtk_sheet_column_visible</primary></indexterm><programlisting><link linkend="gboolean">gboolean</link>            gtk_sheet_column_visible            (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         <link linkend="gint">gint</link> column);</programlisting>
+<para>
+Get column visible property.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>sheet</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkSheet"><type>GtkSheet</type></link>.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>column</parameter>&#160;:</term>
+<listitem><simpara> column number
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara> TRUE - visible, FALSE - hidden or not existant 
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-sheet-column-set-visibility" role="function">
+<title>gtk_sheet_column_set_visibility ()</title>
+<indexterm zone="gtk-sheet-column-set-visibility"><primary sortas="gtk_sheet_column_set_visibility">gtk_sheet_column_set_visibility</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_sheet_column_set_visibility     (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         <link linkend="gint">gint</link> column,
+                                                         <link linkend="gboolean">gboolean</link> visible);</programlisting>
+<para>
+Set column visible property. 
+</para>
+<para>
+Default value is TRUE. When set to FALSE, the column is 
+hidden.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>sheet</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkSheet"><type>GtkSheet</type></link>.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>column</parameter>&#160;:</term>
+<listitem><simpara> column number
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>visible</parameter>&#160;:</term>
+<listitem><simpara> TRUE or FALSE
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-sheet-column-label-set-visibility" role="function">
+<title>gtk_sheet_column_label_set_visibility ()</title>
+<indexterm zone="gtk-sheet-column-label-set-visibility"><primary sortas="gtk_sheet_column_label_set_visibility">gtk_sheet_column_label_set_visibility</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_sheet_column_label_set_visibility
+                                                        (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         <link linkend="gint">gint</link> col,
+                                                         <link linkend="gboolean">gboolean</link> visible);</programlisting>
+<para>
+Set column label visibility. The default value is TRUE. If FALSE, the column label is hidden.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>sheet</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkSheet"><type>GtkSheet</type></link>.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>col</parameter>&#160;:</term>
+<listitem><simpara> column number.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>visible</parameter>&#160;:</term>
+<listitem><simpara> TRUE or FALSE
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-sheet-columns-labels-set-visibility" role="function">
+<title>gtk_sheet_columns_labels_set_visibility ()</title>
+<indexterm zone="gtk-sheet-columns-labels-set-visibility"><primary sortas="gtk_sheet_columns_labels_set_visibility">gtk_sheet_columns_labels_set_visibility</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_sheet_columns_labels_set_visibility
+                                                        (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         <link linkend="gboolean">gboolean</link> visible);</programlisting>
+<para>
+Set all columns labels visibility. The default value is TRUE.
+If FALSE, the columns labels are hidden. The sheet itself
+has no such property, it is a convenience function to set the
+property for all existing columns.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>sheet</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkSheet"><type>GtkSheet</type></link>.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>visible</parameter>&#160;:</term>
+<listitem><simpara> TRUE or FALSE
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-sheet-get-column-width" role="function">
+<title>gtk_sheet_get_column_width ()</title>
+<indexterm zone="gtk-sheet-get-column-width"><primary sortas="gtk_sheet_get_column_width">gtk_sheet_get_column_width</primary></indexterm><programlisting>const <link linkend="gint">gint</link>          gtk_sheet_get_column_width          (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         <link linkend="gint">gint</link> column);</programlisting>
+<para>
+Get column width.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>sheet</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkSheet"><type>GtkSheet</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>column</parameter>&#160;:</term>
+<listitem><simpara> column number
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara> column width
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-sheet-set-column-width" role="function">
+<title>gtk_sheet_set_column_width ()</title>
+<indexterm zone="gtk-sheet-set-column-width"><primary sortas="gtk_sheet_set_column_width">gtk_sheet_set_column_width</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_sheet_set_column_width          (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         <link linkend="gint">gint</link> column,
+                                                         <link linkend="guint">guint</link> width);</programlisting>
+<para>
+Set column width.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>sheet</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkSheet"><type>GtkSheet</type></link>.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>column</parameter>&#160;:</term>
+<listitem><simpara> column number.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>width</parameter>&#160;:</term>
+<listitem><simpara> the width of the column.
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-sheet-column-get-justification" role="function">
+<title>gtk_sheet_column_get_justification ()</title>
+<indexterm zone="gtk-sheet-column-get-justification"><primary sortas="gtk_sheet_column_get_justification">gtk_sheet_column_get_justification</primary></indexterm><programlisting><link linkend="GtkJustification">GtkJustification</link>    gtk_sheet_column_get_justification  (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         <link linkend="gint">gint</link> col);</programlisting>
+<para>
+Get the column justification.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>sheet</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkSheet"><type>GtkSheet</type></link>.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>col</parameter>&#160;:</term>
+<listitem><simpara> column number
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara> a <link linkend="GtkJustification"><type>GtkJustification</type></link>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-sheet-column-set-justification" role="function">
+<title>gtk_sheet_column_set_justification ()</title>
+<indexterm zone="gtk-sheet-column-set-justification"><primary sortas="gtk_sheet_column_set_justification">gtk_sheet_column_set_justification</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_sheet_column_set_justification  (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         <link linkend="gint">gint</link> col,
+                                                         <link linkend="GtkJustification">GtkJustification</link> just);</programlisting>
+<para>
+Set column justification (GTK_JUSTIFY_LEFT, RIGHT, CENTER).
+The default value is GTK_JUSTIFY_LEFT. 
+If autoformat is on, the default justification for numbers is 
+GTK_JUSTIFY_RIGHT.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>sheet</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkSheet"><type>GtkSheet</type></link>.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>col</parameter>&#160;:</term>
+<listitem><simpara> column number
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>just</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkJustification"><type>GtkJustification</type></link> : GTK_JUSTIFY_LEFT, RIGHT, CENTER
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-sheet-column-get-vjustification" role="function">
+<title>gtk_sheet_column_get_vjustification ()</title>
+<indexterm zone="gtk-sheet-column-get-vjustification"><primary sortas="gtk_sheet_column_get_vjustification">gtk_sheet_column_get_vjustification</primary></indexterm><programlisting><link linkend="GtkSheetVerticalJustification">GtkSheetVerticalJustification</link>  gtk_sheet_column_get_vjustification
+                                                        (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         <link linkend="gint">gint</link> col);</programlisting>
+<para>
+Get the vertical cell text justification. This overrides the 
+default vertical cell text justification of the <link linkend="GtkSheet"><type>GtkSheet</type></link>.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>sheet</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkSheet"><type>GtkSheet</type></link>.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>col</parameter>&#160;:</term>
+<listitem><simpara> column number
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara> a <link linkend="GtkSheetVerticalJustification"><type>GtkSheetVerticalJustification</type></link>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-sheet-column-set-vjustification" role="function">
+<title>gtk_sheet_column_set_vjustification ()</title>
+<indexterm zone="gtk-sheet-column-set-vjustification"><primary sortas="gtk_sheet_column_set_vjustification">gtk_sheet_column_set_vjustification</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_sheet_column_set_vjustification (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         <link linkend="gint">gint</link> col,
+                                                         <link linkend="GtkSheetVerticalJustification">GtkSheetVerticalJustification</link> vjust);</programlisting>
+<para>
+Set vertical cell text jjustification</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>sheet</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkSheet"><type>GtkSheet</type></link>.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>col</parameter>&#160;:</term>
+<listitem><simpara> column number
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>vjust</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkSheetVerticalJustification"><type>GtkSheetVerticalJustification</type></link>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-sheet-column-button-get-label" role="function">
+<title>gtk_sheet_column_button_get_label ()</title>
+<indexterm zone="gtk-sheet-column-button-get-label"><primary sortas="gtk_sheet_column_button_get_label">gtk_sheet_column_button_get_label</primary></indexterm><programlisting>const <link linkend="gchar">gchar</link> *       gtk_sheet_column_button_get_label   (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         <link linkend="gint">gint</link> col);</programlisting>
+<para>
+Get column button label.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>sheet</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkSheet"><type>GtkSheet</type></link>.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>col</parameter>&#160;:</term>
+<listitem><simpara> column number.
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara> Column button label.
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-sheet-column-button-add-label" role="function">
+<title>gtk_sheet_column_button_add_label ()</title>
+<indexterm zone="gtk-sheet-column-button-add-label"><primary sortas="gtk_sheet_column_button_add_label">gtk_sheet_column_button_add_label</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_sheet_column_button_add_label   (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         <link linkend="gint">gint</link> col,
+                                                         const <link linkend="gchar">gchar</link> *label);</programlisting>
+<para>
+Set button label.It is used to set a column title.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>sheet</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkSheet"><type>GtkSheet</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>col</parameter>&#160;:</term>
+<listitem><simpara> column number
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>label</parameter>&#160;:</term>
+<listitem><simpara> text label
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-sheet-column-button-justify" role="function">
+<title>gtk_sheet_column_button_justify ()</title>
+<indexterm zone="gtk-sheet-column-button-justify"><primary sortas="gtk_sheet_column_button_justify">gtk_sheet_column_button_justify</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_sheet_column_button_justify     (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         <link linkend="gint">gint</link> col,
+                                                         <link linkend="GtkJustification">GtkJustification</link> justification);</programlisting>
+<para>
+Set the justification(alignment) of the column buttons.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>sheet</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkSheet"><type>GtkSheet</type></link>.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>col</parameter>&#160;:</term>
+<listitem><simpara> column number
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>justification</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkJustification"><type>GtkJustification</type></link> :GTK_JUSTIFY_LEFT, RIGHT, 
+ 			 CENTER
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-sheet-column-get-tooltip-markup" role="function">
+<title>gtk_sheet_column_get_tooltip_markup ()</title>
+<indexterm zone="gtk-sheet-column-get-tooltip-markup"><primary sortas="gtk_sheet_column_get_tooltip_markup">gtk_sheet_column_get_tooltip_markup</primary></indexterm><programlisting><link linkend="gchar">gchar</link> *             gtk_sheet_column_get_tooltip_markup (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         const <link linkend="gint">gint</link> col);</programlisting>
+<para>
+Gets the contents of the tooltip (markup) for the column</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>sheet</parameter>&#160;:</term>
+<listitem><simpara>  a <link linkend="GtkSheet"><type>GtkSheet</type></link>. 
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>col</parameter>&#160;:</term>
+<listitem><simpara> column index 
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>	the tooltip text, or NULL. You should free the 
+         returned string with <link linkend="g-free"><function>g_free()</function></link> when done.
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-sheet-column-set-tooltip-markup" role="function">
+<title>gtk_sheet_column_set_tooltip_markup ()</title>
+<indexterm zone="gtk-sheet-column-set-tooltip-markup"><primary sortas="gtk_sheet_column_set_tooltip_markup">gtk_sheet_column_set_tooltip_markup</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_sheet_column_set_tooltip_markup (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         const <link linkend="gint">gint</link> col,
+                                                         const <link linkend="gchar">gchar</link> *markup);</programlisting>
+<para>
+Sets markup as the contents of the tooltip, which is marked 
+up with the Pango text markup language.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>sheet</parameter>&#160;:</term>
+<listitem><simpara>  a <link linkend="GtkSheet"><type>GtkSheet</type></link>.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>col</parameter>&#160;:</term>
+<listitem><simpara> column index 
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>markup</parameter>&#160;:</term>
+<listitem><simpara>  	the contents of the tooltip for widget, or NULL. 
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-sheet-column-get-tooltip-text" role="function">
+<title>gtk_sheet_column_get_tooltip_text ()</title>
+<indexterm zone="gtk-sheet-column-get-tooltip-text"><primary sortas="gtk_sheet_column_get_tooltip_text">gtk_sheet_column_get_tooltip_text</primary></indexterm><programlisting><link linkend="gchar">gchar</link> *             gtk_sheet_column_get_tooltip_text   (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         const <link linkend="gint">gint</link> col);</programlisting>
+<para>
+Gets the contents of the tooltip for the column</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>sheet</parameter>&#160;:</term>
+<listitem><simpara>  a <link linkend="GtkSheet"><type>GtkSheet</type></link>. 
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>col</parameter>&#160;:</term>
+<listitem><simpara> column index 
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>	the tooltip text, or NULL. You should free the 
+         returned string with <link linkend="g-free"><function>g_free()</function></link> when done.
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-sheet-column-set-tooltip-text" role="function">
+<title>gtk_sheet_column_set_tooltip_text ()</title>
+<indexterm zone="gtk-sheet-column-set-tooltip-text"><primary sortas="gtk_sheet_column_set_tooltip_text">gtk_sheet_column_set_tooltip_text</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_sheet_column_set_tooltip_text   (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         const <link linkend="gint">gint</link> col,
+                                                         const <link linkend="gchar">gchar</link> *text);</programlisting>
+<para>
+Sets text as the contents of the tooltip.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>sheet</parameter>&#160;:</term>
+<listitem><simpara>  a <link linkend="GtkSheet"><type>GtkSheet</type></link>.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>col</parameter>&#160;:</term>
+<listitem><simpara> column index 
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>text</parameter>&#160;:</term>
+<listitem><simpara>  the contents of the tooltip for widget 
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-sheet-column-get-datatype" role="function">
+<title>gtk_sheet_column_get_datatype ()</title>
+<indexterm zone="gtk-sheet-column-get-datatype"><primary sortas="gtk_sheet_column_get_datatype">gtk_sheet_column_get_datatype</primary></indexterm><programlisting><link linkend="gchar">gchar</link> *             gtk_sheet_column_get_datatype       (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         const <link linkend="gint">gint</link> col);</programlisting>
+<para>
+Gets the column data_type for application use</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>sheet</parameter>&#160;:</term>
+<listitem><simpara>  a <link linkend="GtkSheet"><type>GtkSheet</type></link>. 
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>col</parameter>&#160;:</term>
+<listitem><simpara> column index 
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>	the datatype or NULL
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-sheet-column-set-datatype" role="function">
+<title>gtk_sheet_column_set_datatype ()</title>
+<indexterm zone="gtk-sheet-column-set-datatype"><primary sortas="gtk_sheet_column_set_datatype">gtk_sheet_column_set_datatype</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_sheet_column_set_datatype       (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         const <link linkend="gint">gint</link> col,
+                                                         const <link linkend="gchar">gchar</link> *data_type);</programlisting>
+<para>
+Sets the column data data_type for application use</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>sheet</parameter>&#160;:</term>
+<listitem><simpara>  a <link linkend="GtkSheet"><type>GtkSheet</type></link>.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>col</parameter>&#160;:</term>
+<listitem><simpara> column index 
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>data_type</parameter>&#160;:</term>
+<listitem><simpara>  the datatype 
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-sheet-column-get-description" role="function">
+<title>gtk_sheet_column_get_description ()</title>
+<indexterm zone="gtk-sheet-column-get-description"><primary sortas="gtk_sheet_column_get_description">gtk_sheet_column_get_description</primary></indexterm><programlisting><link linkend="gchar">gchar</link> *             gtk_sheet_column_get_description    (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         const <link linkend="gint">gint</link> col);</programlisting>
+<para>
+Gets the column description</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>sheet</parameter>&#160;:</term>
+<listitem><simpara>  a <link linkend="GtkSheet"><type>GtkSheet</type></link>. 
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>col</parameter>&#160;:</term>
+<listitem><simpara> column index 
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>	the description or NULL, You should free the
+         returned string with <link linkend="g-free"><function>g_free()</function></link> when done.
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-sheet-column-set-description" role="function">
+<title>gtk_sheet_column_set_description ()</title>
+<indexterm zone="gtk-sheet-column-set-description"><primary sortas="gtk_sheet_column_set_description">gtk_sheet_column_set_description</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_sheet_column_set_description    (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         const <link linkend="gint">gint</link> col,
+                                                         const <link linkend="gchar">gchar</link> *description);</programlisting>
+<para>
+Sets the column description.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>sheet</parameter>&#160;:</term>
+<listitem><simpara>  a <link linkend="GtkSheet"><type>GtkSheet</type></link>.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>col</parameter>&#160;:</term>
+<listitem><simpara> column index 
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>description</parameter>&#160;:</term>
+<listitem><simpara>  the description or NULL 
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-sheet-column-get-format" role="function">
+<title>gtk_sheet_column_get_format ()</title>
+<indexterm zone="gtk-sheet-column-get-format"><primary sortas="gtk_sheet_column_get_format">gtk_sheet_column_get_format</primary></indexterm><programlisting><link linkend="gchar">gchar</link> *             gtk_sheet_column_get_format         (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         const <link linkend="gint">gint</link> col);</programlisting>
+<para>
+Gets the column data formatting pattern</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>sheet</parameter>&#160;:</term>
+<listitem><simpara>  a <link linkend="GtkSheet"><type>GtkSheet</type></link>. 
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>col</parameter>&#160;:</term>
+<listitem><simpara> column index 
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>	the formatting pattern or NULL, You should free the 
+         returned string with <link linkend="g-free"><function>g_free()</function></link> when done.
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-sheet-column-set-format" role="function">
+<title>gtk_sheet_column_set_format ()</title>
+<indexterm zone="gtk-sheet-column-set-format"><primary sortas="gtk_sheet_column_set_format">gtk_sheet_column_set_format</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_sheet_column_set_format         (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         const <link linkend="gint">gint</link> col,
+                                                         const <link linkend="gchar">gchar</link> *format);</programlisting>
+<para>
+Sets the column data formatting pattern.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>sheet</parameter>&#160;:</term>
+<listitem><simpara>  a <link linkend="GtkSheet"><type>GtkSheet</type></link>.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>col</parameter>&#160;:</term>
+<listitem><simpara> column index 
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>format</parameter>&#160;:</term>
+<listitem><simpara>  the data_format pattern or NULL 
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-sheet-column-get-iskey" role="function">
+<title>gtk_sheet_column_get_iskey ()</title>
+<indexterm zone="gtk-sheet-column-get-iskey"><primary sortas="gtk_sheet_column_get_iskey">gtk_sheet_column_get_iskey</primary></indexterm><programlisting><link linkend="gboolean">gboolean</link>            gtk_sheet_column_get_iskey          (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         const <link linkend="gint">gint</link> col);</programlisting>
+<para>
+Gets the column is_key flag</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>sheet</parameter>&#160;:</term>
+<listitem><simpara>  a <link linkend="GtkSheet"><type>GtkSheet</type></link>. 
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>col</parameter>&#160;:</term>
+<listitem><simpara> column index 
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>	the is_key flag
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-sheet-column-set-iskey" role="function">
+<title>gtk_sheet_column_set_iskey ()</title>
+<indexterm zone="gtk-sheet-column-set-iskey"><primary sortas="gtk_sheet_column_set_iskey">gtk_sheet_column_set_iskey</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_sheet_column_set_iskey          (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         const <link linkend="gint">gint</link> col,
+                                                         const <link linkend="gboolean">gboolean</link> is_key);</programlisting>
+<para>
+Sets the column is_key flag. This flag has no effect on 
+calculation or presentation, it is reserved for application 
+usage.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>sheet</parameter>&#160;:</term>
+<listitem><simpara>  a <link linkend="GtkSheet"><type>GtkSheet</type></link>.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>col</parameter>&#160;:</term>
+<listitem><simpara> column index 
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>is_key</parameter>&#160;:</term>
+<listitem><simpara>  the column is_key flag 
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-sheet-column-get-entry-type" role="function">
+<title>gtk_sheet_column_get_entry_type ()</title>
+<indexterm zone="gtk-sheet-column-get-entry-type"><primary sortas="gtk_sheet_column_get_entry_type">gtk_sheet_column_get_entry_type</primary></indexterm><programlisting><link linkend="GType">GType</link>               gtk_sheet_column_get_entry_type     (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         const <link linkend="gint">gint</link> col);</programlisting>
+<para>
+Gets the column entry type if known</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>sheet</parameter>&#160;:</term>
+<listitem><simpara>  a <link linkend="GtkSheet"><type>GtkSheet</type></link>. 
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>col</parameter>&#160;:</term>
+<listitem><simpara> column index 
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>	the entry type or GTK_SHEET_ENTRY_TYPE_DEFAULT
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-sheet-column-set-entry-type" role="function">
+<title>gtk_sheet_column_set_entry_type ()</title>
+<indexterm zone="gtk-sheet-column-set-entry-type"><primary sortas="gtk_sheet_column_set_entry_type">gtk_sheet_column_set_entry_type</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_sheet_column_set_entry_type     (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         const <link linkend="gint">gint</link> col,
+                                                         const <link linkend="GType">GType</link> entry_type);</programlisting>
+<para>
+Supersedes the sheet entry type for this column. Pass 
+G_TYPE_NONE to reset the column to the sheet entry type.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>sheet</parameter>&#160;:</term>
+<listitem><simpara>  a <link linkend="GtkSheet"><type>GtkSheet</type></link>.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>col</parameter>&#160;:</term>
+<listitem><simpara> column index 
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>entry_type</parameter>&#160;:</term>
+<listitem><simpara>  the entry type or G_TYPE_NONE 
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-sheet-column-get-readonly" role="function">
+<title>gtk_sheet_column_get_readonly ()</title>
+<indexterm zone="gtk-sheet-column-get-readonly"><primary sortas="gtk_sheet_column_get_readonly">gtk_sheet_column_get_readonly</primary></indexterm><programlisting><link linkend="gboolean">gboolean</link>            gtk_sheet_column_get_readonly       (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         const <link linkend="gint">gint</link> col);</programlisting>
+<para>
+Gets the column readonly flag</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>sheet</parameter>&#160;:</term>
+<listitem><simpara>  a <link linkend="GtkSheet"><type>GtkSheet</type></link>. 
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>col</parameter>&#160;:</term>
+<listitem><simpara> column index 
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>	the readonly flag
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-sheet-column-set-readonly" role="function">
+<title>gtk_sheet_column_set_readonly ()</title>
+<indexterm zone="gtk-sheet-column-set-readonly"><primary sortas="gtk_sheet_column_set_readonly">gtk_sheet_column_set_readonly</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_sheet_column_set_readonly       (<link linkend="GtkSheet">GtkSheet</link> *sheet,
+                                                         const <link linkend="gint">gint</link> col,
+                                                         const <link linkend="gboolean">gboolean</link> is_readonly);</programlisting>
+<para>
+Sets the column readonly flag. 
+A cell is editable if the sheet is not locked, the column is 
+not readonly and the cell (-range) was set to editable.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>sheet</parameter>&#160;:</term>
+<listitem><simpara>  a <link linkend="GtkSheet"><type>GtkSheet</type></link>.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>col</parameter>&#160;:</term>
+<listitem><simpara> column index 
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>is_readonly</parameter>&#160;:</term>
+<listitem><simpara>  the column is_readonly flag 
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+<refsect1 id="GtkSheetColumn.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GtkSheetColumn--dataformat" role="property"><title>The <literal>&quot;dataformat&quot;</literal> property</title>
+<indexterm zone="GtkSheetColumn--dataformat"><primary sortas="GtkSheetColumn:dataformat">GtkSheetColumn:dataformat</primary></indexterm><programlisting>  &quot;dataformat&quot;               <link linkend="gchar">gchar</link>*                : Read / Write</programlisting>
+<para>
+a formatting string that controls what you see when the
+widget doesn't contain input focus</para>
+<para>
+</para><para>Default value: ""</para>
+</refsect2>
+<refsect2 id="GtkSheetColumn--datatype" role="property"><title>The <literal>&quot;datatype&quot;</literal> property</title>
+<indexterm zone="GtkSheetColumn--datatype"><primary sortas="GtkSheetColumn:datatype">GtkSheetColumn:datatype</primary></indexterm><programlisting>  &quot;datatype&quot;                 <link linkend="gchar">gchar</link>*                : Read / Write</programlisting>
+<para>
+no functionality, a datatype hint for the application because 
+any widget content is text</para>
+<para>
+</para><para>Default value: ""</para>
+</refsect2>
+<refsect2 id="GtkSheetColumn--description" role="property"><title>The <literal>&quot;description&quot;</literal> property</title>
+<indexterm zone="GtkSheetColumn--description"><primary sortas="GtkSheetColumn:description">GtkSheetColumn:description</primary></indexterm><programlisting>  &quot;description&quot;              <link linkend="gchar">gchar</link>*                : Read / Write</programlisting>
+<para>
+Description of column contents</para>
+<para>
+</para><para>Default value: ""</para>
+</refsect2>
+<refsect2 id="GtkSheetColumn--entry-type" role="property"><title>The <literal>&quot;entry-type&quot;</literal> property</title>
+<indexterm zone="GtkSheetColumn--entry-type"><primary sortas="GtkSheetColumn:entry-type">GtkSheetColumn:entry-type</primary></indexterm><programlisting>  &quot;entry-type&quot;               <link linkend="GtkSheetEntryType">GtkSheetEntryType</link>     : Read / Write</programlisting>
+<para>
+Column cell entry widget type</para>
+<para>
+</para><para>Default value: GTK_SHEET_ENTRY_TYPE_DEFAULT</para>
+</refsect2>
+<refsect2 id="GtkSheetColumn--iskey" role="property"><title>The <literal>&quot;iskey&quot;</literal> property</title>
+<indexterm zone="GtkSheetColumn--iskey"><primary sortas="GtkSheetColumn:iskey">GtkSheetColumn:iskey</primary></indexterm><programlisting>  &quot;iskey&quot;                    <link linkend="gboolean">gboolean</link>              : Read / Write</programlisting>
+<para>
+Flag for key columns</para>
+<para>
+</para><para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="GtkSheetColumn--justification" role="property"><title>The <literal>&quot;justification&quot;</literal> property</title>
+<indexterm zone="GtkSheetColumn--justification"><primary sortas="GtkSheetColumn:justification">GtkSheetColumn:justification</primary></indexterm><programlisting>  &quot;justification&quot;            <link linkend="GtkJustification">GtkJustification</link>      : Read / Write</programlisting>
+<para>
+Justification of the column</para>
+<para>
+</para><para>Default value: GTK_JUSTIFY_LEFT</para>
+</refsect2>
+<refsect2 id="GtkSheetColumn--label" role="property"><title>The <literal>&quot;label&quot;</literal> property</title>
+<indexterm zone="GtkSheetColumn--label"><primary sortas="GtkSheetColumn:label">GtkSheetColumn:label</primary></indexterm><programlisting>  &quot;label&quot;                    <link linkend="gchar">gchar</link>*                : Read / Write</programlisting>
+<para>
+Label of the column button</para>
+<para>
+</para><para>Default value: ""</para>
+</refsect2>
+<refsect2 id="GtkSheetColumn--max-length" role="property"><title>The <literal>&quot;max-length&quot;</literal> property</title>
+<indexterm zone="GtkSheetColumn--max-length" role="3.0.6"><primary sortas="GtkSheetColumn:max-length">GtkSheetColumn:max-length</primary></indexterm><programlisting>  &quot;max-length&quot;               <link linkend="gint">gint</link>                  : Read / Write</programlisting>
+<para>
+Maximum number orf characters in this column, Zero if no 
+ maximum.
+</para>
+<para>
+ This property is passed to the sheet entry editor. It is
+ supported for  the following editors: <link linkend="GtkItemEntry"><type>GtkItemEntry</type></link>,
+ <link linkend="GtkEntry"><type>GtkEntry</type></link>, <link linkend="GtkDataTextView"><type>GtkDataTextView</type></link></para>
+<para>
+</para><para>Allowed values: [0,1073741823]</para>
+<para>Default value: 0</para>
+<para>Since 3.0.6</para>
+</refsect2>
+<refsect2 id="GtkSheetColumn--max-length-bytes" role="property"><title>The <literal>&quot;max-length-bytes&quot;</literal> property</title>
+<indexterm zone="GtkSheetColumn--max-length-bytes" role="3.0.6"><primary sortas="GtkSheetColumn:max-length-bytes">GtkSheetColumn:max-length-bytes</primary></indexterm><programlisting>  &quot;max-length-bytes&quot;         <link linkend="gint">gint</link>                  : Read / Write</programlisting>
+<para>
+Set the maximum length in bytes for the GtkDataEntry. For 
+details see <link linkend="gtk-data-entry-set-max-length-bytes"><type>gtk_data_entry_set_max_length_bytes</type></link>. 
+</para>
+<para>
+ This property is passed to the sheet entry editor. It is
+ supported for  the following editors: <link linkend="GtkItemEntry"><type>GtkItemEntry</type></link>,
+ <link linkend="GtkDataTextView"><type>GtkDataTextView</type></link>.
+</para>
+<para>
+Sometimes, systems cannot handle UTF-8 string length
+correctly, to overcome this problem, you can use the maximum 
+string length in bytes. When setting both limits, max-length 
+ and max-length-bytes, both must be fulfilled.</para>
+<para>
+</para><para>Allowed values: [0,1073741823]</para>
+<para>Default value: 0</para>
+<para>Since 3.0.6</para>
+</refsect2>
+<refsect2 id="GtkSheetColumn--position" role="property"><title>The <literal>&quot;position&quot;</literal> property</title>
+<indexterm zone="GtkSheetColumn--position"><primary sortas="GtkSheetColumn:position">GtkSheetColumn:position</primary></indexterm><programlisting>  &quot;position&quot;                 <link linkend="gint">gint</link>                  : Read / Write</programlisting>
+<para>
+The packing position of the column</para>
+<para>
+</para><para>Allowed values: [0,1024]</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GtkSheetColumn--readonly" role="property"><title>The <literal>&quot;readonly&quot;</literal> property</title>
+<indexterm zone="GtkSheetColumn--readonly"><primary sortas="GtkSheetColumn:readonly">GtkSheetColumn:readonly</primary></indexterm><programlisting>  &quot;readonly&quot;                 <link linkend="gboolean">gboolean</link>              : Read / Write</programlisting>
+<para>
+Lock column contents for editing.</para>
+<para>
+</para><para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="GtkSheetColumn--visible" role="property"><title>The <literal>&quot;visible&quot;</literal> property</title>
+<indexterm zone="GtkSheetColumn--visible"><primary sortas="GtkSheetColumn:visible">GtkSheetColumn:visible</primary></indexterm><programlisting>  &quot;visible&quot;                  <link linkend="gboolean">gboolean</link>              : Read / Write</programlisting>
+<para>
+Visible property for columns</para>
+<para>
+</para><para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="GtkSheetColumn--vjust" role="property"><title>The <literal>&quot;vjust&quot;</literal> property</title>
+<indexterm zone="GtkSheetColumn--vjust"><primary sortas="GtkSheetColumn:vjust">GtkSheetColumn:vjust</primary></indexterm><programlisting>  &quot;vjust&quot;                    <link linkend="GtkSheetVerticalJustification">GtkSheetVerticalJustification</link>  : Read / Write</programlisting>
+<para>
+Column vertical cell text justification</para>
+<para>
+</para><para>Default value: GTK_SHEET_VERTICAL_JUSTIFICATION_DEFAULT</para>
+</refsect2>
+<refsect2 id="GtkSheetColumn--width" role="property"><title>The <literal>&quot;width&quot;</literal> property</title>
+<indexterm zone="GtkSheetColumn--width"><primary sortas="GtkSheetColumn:width">GtkSheetColumn:width</primary></indexterm><programlisting>  &quot;width&quot;                    <link linkend="gint">gint</link>                  : Read / Write</programlisting>
+<para>
+Width of the column</para>
+<para>
+</para><para>Allowed values: [G_MAXULONG,8192]</para>
+<para>Default value: -1</para>
+</refsect2>
+<refsect2 id="GtkSheetColumn--wrap-mode" role="property"><title>The <literal>&quot;wrap-mode&quot;</literal> property</title>
+<indexterm zone="GtkSheetColumn--wrap-mode" role="3.0.6"><primary sortas="GtkSheetColumn:wrap-mode">GtkSheetColumn:wrap-mode</primary></indexterm><programlisting>  &quot;wrap-mode&quot;                <link linkend="GtkWrapMode">GtkWrapMode</link>           : Read / Write</programlisting>
+<para>
+This property is passed to the sheet entry editor. It is
+ supported for  the following editors: <link linkend="GtkTextView"><type>GtkTextView</type></link>,
+ <link linkend="GtkDataTextView"><type>GtkDataTextView</type></link>.</para>
+<para>
+</para><para>Default value: GTK_WRAP_NONE</para>
+<para>Since 3.0.6</para>
+</refsect2>
+
+</refsect1>
+
+
+
+
+</refentry>

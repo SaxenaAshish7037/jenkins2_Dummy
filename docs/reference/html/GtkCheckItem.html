@@ -1,0 +1,206 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GtkCheckItem</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="GtkExtra Reference Manual">
+<link rel="up" href="ch03.html" title="Widgets">
+<link rel="prev" href="GtkCharSelection.html" title="GtkCharSelection">
+<link rel="next" href="GtkColorCombo.html" title="GtkColorCombo">
+<meta name="generator" content="GTK-Doc V1.11 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="part" href="gtkextra.html" title="Part I. GtkExtra Overview">
+<link rel="part" href="gtkextrabase.html" title="Part II. GtkExtra Widgets and Objects">
+<link rel="chapter" href="ch01.html" title="Object Hierarchy">
+<link rel="chapter" href="ch02.html" title="Widget Gallery">
+<link rel="chapter" href="ch03.html" title="Widgets">
+<link rel="chapter" href="ch04.html" title="Data Formatter">
+<link rel="chapter" href="ch05.html" title="GtkExtra Versioning">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="GtkCharSelection.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch03.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">GtkExtra Reference Manual</th>
+<td><a accesskey="n" href="GtkColorCombo.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#GtkCheckItem.synopsis" class="shortcut">Top</a>
+                 | 
+                <a href="#GtkCheckItem.description" class="shortcut">Description</a>
+                 | 
+                <a href="#GtkCheckItem.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                 | 
+                <a href="#GtkCheckItem.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+</td></tr>
+</table>
+<div class="refentry" title="GtkCheckItem">
+<a name="GtkCheckItem"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GtkCheckItem.top_of_page"></a>GtkCheckItem</span></h2>
+<p>GtkCheckItem — Check item widget for Gtk</p>
+</td>
+<td valign="top" align="right"><img src=""></td>
+</tr></table></div>
+<div class="refsynopsisdiv" title="Synopsis">
+<a name="GtkCheckItem.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">
+
+#include &lt;gtkextra.h&gt;
+
+                    <a class="link" href="GtkCheckItem.html#GtkCheckItem-struct" title="GtkCheckItem">GtkCheckItem</a>;
+<a
+href="http://library.gnome.org/devel/gtk3/GtkWidget.html"
+>GtkWidget</a>*          <a class="link" href="GtkCheckItem.html#gtk-check-item-new" title="gtk_check_item_new ()">gtk_check_item_new</a>                  (void);
+<a
+href="http://library.gnome.org/devel/gtk3/GtkWidget.html"
+>GtkWidget</a>*          <a class="link" href="GtkCheckItem.html#gtk-check-item-new-with-label" title="gtk_check_item_new_with_label ()">gtk_check_item_new_with_label</a>       (const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *label);
+void                <a class="link" href="GtkCheckItem.html#gtk-check-item-construct-with-label" title="gtk_check_item_construct_with_label ()">gtk_check_item_construct_with_label</a> (<a class="link" href="GtkCheckItem.html" title="GtkCheckItem">GtkCheckItem</a> *check_item,
+                                                         const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *label);
+</pre>
+</div>
+<div class="refsect1" title="Object Hierarchy">
+<a name="GtkCheckItem.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a
+href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject"
+>GObject</a>
+   +----<a
+href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned"
+>GInitiallyUnowned</a>
+         +----<a
+href="http://library.gnome.org/devel/gtk3/GtkObject.html"
+>GtkObject</a>
+               +----<a
+href="http://library.gnome.org/devel/gtk3/GtkWidget.html"
+>GtkWidget</a>
+                     +----<a
+href="http://library.gnome.org/devel/gtk3/GtkContainer.html"
+>GtkContainer</a>
+                           +----<a
+href="http://library.gnome.org/devel/gtk3/GtkBin.html"
+>GtkBin</a>
+                                 +----<a
+href="http://library.gnome.org/devel/gtk3/GtkButton.html"
+>GtkButton</a>
+                                       +----<a
+href="http://library.gnome.org/devel/gtk3/GtkToggleButton.html"
+>GtkToggleButton</a>
+                                             +----GtkCheckItem
+</pre>
+</div>
+<div class="refsect1" title="Implemented Interfaces">
+<a name="GtkCheckItem.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+GtkCheckItem implements
+ AtkImplementorIface,  <a
+href="http://library.gnome.org/devel/gtk3/GtkBuildable.html"
+>GtkBuildable</a> and  <a
+href="http://library.gnome.org/devel/gtk3/GtkActivatable.html"
+>GtkActivatable</a>.</p>
+</div>
+<div class="refsect1" title="Description">
+<a name="GtkCheckItem.description"></a><h2>Description</h2>
+<p>
+It is a GtkCheckButton hack with the look and feel of the Redmond95 theme.</p>
+<p>
+</p>
+</div>
+<div class="refsect1" title="Details">
+<a name="GtkCheckItem.details"></a><h2>Details</h2>
+<div class="refsect2" title="GtkCheckItem">
+<a name="GtkCheckItem-struct"></a><h3>GtkCheckItem</h3>
+<pre class="programlisting">typedef struct _GtkCheckItem GtkCheckItem;</pre>
+<p>
+The GtkCheckItem struct contains only private data.
+It should only be accessed through the functions described below.</p>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2" title="gtk_check_item_new ()">
+<a name="gtk-check-item-new"></a><h3>gtk_check_item_new ()</h3>
+<pre class="programlisting"><a
+href="http://library.gnome.org/devel/gtk3/GtkWidget.html"
+>GtkWidget</a>*          gtk_check_item_new                  (void);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_check_item_new_with_label ()">
+<a name="gtk-check-item-new-with-label"></a><h3>gtk_check_item_new_with_label ()</h3>
+<pre class="programlisting"><a
+href="http://library.gnome.org/devel/gtk3/GtkWidget.html"
+>GtkWidget</a>*          gtk_check_item_new_with_label       (const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *label);</pre>
+<p>
+Create a <a class="link" href="GtkCheckItem.html" title="GtkCheckItem"><span class="type">GtkCheckItem</span></a> widget with a specified label.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>label</code></em> :</span></p></td>
+<td> text near the check item
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> the newly-created <a class="link" href="GtkCheckItem.html" title="GtkCheckItem"><span class="type">GtkCheckItem</span></a>.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_check_item_construct_with_label ()">
+<a name="gtk-check-item-construct-with-label"></a><h3>gtk_check_item_construct_with_label ()</h3>
+<pre class="programlisting">void                gtk_check_item_construct_with_label (<a class="link" href="GtkCheckItem.html" title="GtkCheckItem">GtkCheckItem</a> *check_item,
+                                                         const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *label);</pre>
+<p>
+Initialize a <a class="link" href="GtkCheckItem.html" title="GtkCheckItem"><span class="type">GtkCheckItem</span></a> widget with a specified label.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>check_item</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkCheckItem.html" title="GtkCheckItem"><span class="type">GtkCheckItem</span></a> widget
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>label</code></em> :</span></p></td>
+<td> text near the check item
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.11</div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!-- ##### SECTION Title ##### -->
+GtkIconFileSel
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### STRUCT GtkIconFileSel ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### FUNCTION gtk_icon_file_selection_new ##### -->
+<para>
+
+</para>
+
+@title: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_icon_file_selection_construct ##### -->
+<para>
+
+</para>
+
+@filesel: 
+@title: 
+
+
+<!-- ##### FUNCTION gtk_icon_file_selection_show_tree ##### -->
+<para>
+
+</para>
+
+@filesel: 
+@show: 
+
+
+<!-- ##### FUNCTION gtk_icon_file_selection_open_dir ##### -->
+<para>
+
+</para>
+
+@filesel: 
+@path: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_icon_file_selection_show_hidden ##### -->
+<para>
+
+</para>
+
+@filesel: 
+@visible: 
+
+
+<!-- ##### FUNCTION gtk_icon_file_selection_set_filter ##### -->
+<para>
+
+</para>
+
+@filesel: 
+@filter: 
+
+
+<!-- ##### FUNCTION gtk_icon_file_selection_get_selection ##### -->
+<para>
+
+</para>
+
+@filesel: 
+@Returns: 
+
+

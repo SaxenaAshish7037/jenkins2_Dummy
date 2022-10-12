@@ -1,0 +1,294 @@
+<!-- ##### SECTION Title ##### -->
+GtkPlotPC
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### STRUCT GtkPlotPC ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### ENUM GtkPlotPageSize ##### -->
+<para>
+
+</para>
+
+@GTK_PLOT_LETTER: 
+@GTK_PLOT_LEGAL: 
+@GTK_PLOT_A4: 
+@GTK_PLOT_EXECUTIVE: 
+@GTK_PLOT_CUSTOM: 
+
+<!-- ##### ENUM GtkPlotPageOrientation ##### -->
+<para>
+
+</para>
+
+@GTK_PLOT_PORTRAIT: 
+@GTK_PLOT_LANDSCAPE: 
+
+<!-- ##### ENUM GtkPlotUnits ##### -->
+<para>
+
+</para>
+
+@GTK_PLOT_PSPOINTS: 
+@GTK_PLOT_MM: 
+@GTK_PLOT_CM: 
+@GTK_PLOT_INCHES: 
+
+<!-- ##### STRUCT GtkPlotPoint ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### FUNCTION gtk_plot_pc_new ##### -->
+<para>
+
+</para>
+
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_pc_init ##### -->
+<para>
+
+</para>
+
+@pc: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_pc_leave ##### -->
+<para>
+
+</para>
+
+@pc: 
+
+
+<!-- ##### FUNCTION gtk_plot_pc_set_viewport ##### -->
+<para>
+
+</para>
+
+@pc: 
+@w: 
+@h: 
+
+
+<!-- ##### FUNCTION gtk_plot_pc_gsave ##### -->
+<para>
+
+</para>
+
+@pc: 
+
+
+<!-- ##### FUNCTION gtk_plot_pc_grestore ##### -->
+<para>
+
+</para>
+
+@pc: 
+
+
+<!-- ##### FUNCTION gtk_plot_pc_clip ##### -->
+<para>
+
+</para>
+
+@pc: 
+@area: 
+
+
+<!-- ##### FUNCTION gtk_plot_pc_clip_mask ##### -->
+<para>
+
+</para>
+
+@pc: 
+@x: 
+@y: 
+@mask: 
+
+
+<!-- ##### FUNCTION gtk_plot_pc_set_color ##### -->
+<para>
+
+</para>
+
+@pc: 
+@color: 
+
+
+<!-- ##### FUNCTION gtk_plot_pc_set_lineattr ##### -->
+<para>
+
+</para>
+
+@pc: 
+@line_width: 
+@line_style: 
+@cap_style: 
+@join_style: 
+
+
+<!-- ##### FUNCTION gtk_plot_pc_set_dash ##### -->
+<para>
+
+</para>
+
+@pc: 
+@offset_: 
+@values: 
+@num_values: 
+
+
+<!-- ##### FUNCTION gtk_plot_pc_draw_point ##### -->
+<para>
+
+</para>
+
+@pc: 
+@x: 
+@y: 
+
+
+<!-- ##### FUNCTION gtk_plot_pc_draw_line ##### -->
+<para>
+
+</para>
+
+@pc: 
+@x1: 
+@y1: 
+@x2: 
+@y2: 
+
+
+<!-- ##### FUNCTION gtk_plot_pc_draw_lines ##### -->
+<para>
+
+</para>
+
+@pc: 
+@points: 
+@numpoints: 
+
+
+<!-- ##### FUNCTION gtk_plot_pc_draw_rectangle ##### -->
+<para>
+
+</para>
+
+@pc: 
+@filled: 
+@x: 
+@y: 
+@width: 
+@height: 
+
+
+<!-- ##### FUNCTION gtk_plot_pc_draw_polygon ##### -->
+<para>
+
+</para>
+
+@pc: 
+@filled: 
+@points: 
+@numpoints: 
+
+
+<!-- ##### FUNCTION gtk_plot_pc_draw_ellipse ##### -->
+<para>
+
+</para>
+
+@pc: 
+@filled: 
+@x: 
+@y: 
+@width: 
+@height: 
+
+
+<!-- ##### FUNCTION gtk_plot_pc_draw_circle ##### -->
+<para>
+
+</para>
+
+@pc: 
+@filled: 
+@x: 
+@y: 
+@size: 
+
+
+<!-- ##### FUNCTION gtk_plot_pc_set_font ##### -->
+<para>
+
+</para>
+
+@pc: 
+@psfont: 
+@height: 
+
+
+<!-- ##### FUNCTION gtk_plot_pc_draw_string ##### -->
+<para>
+
+</para>
+
+@pc: 
+@x: 
+@y: 
+@angle: 
+@fg: 
+@bg: 
+@transparent: 
+@border: 
+@border_space: 
+@border_width: 
+@shadow_width: 
+@font: 
+@height: 
+@just: 
+@text: 
+
+
+<!-- ##### FUNCTION gtk_plot_pc_draw_pixmap ##### -->
+<para>
+
+</para>
+
+@pc: 
+@pixmap: 
+@mask: 
+@xsrc: 
+@ysrc: 
+@xdest: 
+@ydest: 
+@width: 
+@height: 
+@scale_x: 
+@scale_y: 
+
+

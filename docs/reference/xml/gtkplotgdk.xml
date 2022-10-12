@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+<!ENTITY version SYSTEM "version.xml">
+]>
+<!--ENTITY index-Objects-Grouped SYSTEM "objects_grouped.sgml"-->
+<refentry id="GtkPlotGdk">
+<refmeta>
+<refentrytitle role="top_of_page" id="GtkPlotGdk.top_of_page">GtkPlotGdk</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GTKEXTRA Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>GtkPlotGdk</refname>
+<refpurpose>GDK drawing backend (mapped to Cairo)</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="GtkPlotGdk.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>
+
+#include &lt;gtkextra.h&gt;
+
+                    <link linkend="GtkPlotGdk-struct">GtkPlotGdk</link>;
+<link linkend="GtkObject">GtkObject</link> *         <link linkend="gtk-plot-gdk-new">gtk_plot_gdk_new</link>                    (<link linkend="GtkWidget">GtkWidget</link> *widget);
+<link linkend="void">void</link>                <link linkend="gtk-plot-gdk-construct">gtk_plot_gdk_construct</link>              (<link linkend="GtkPlotGdk">GtkPlotGdk</link> *pc,
+                                                         <link linkend="GtkWidget">GtkWidget</link> *widget);
+<link linkend="void">void</link>                <link linkend="gtk-plot-gdk-set-drawable">gtk_plot_gdk_set_drawable</link>           (<link linkend="GtkPlotGdk">GtkPlotGdk</link> *gdk,
+                                                         <link linkend="GdkDrawable">GdkDrawable</link> *drawable);
+</synopsis>
+</refsynopsisdiv>
+
+<refsect1 id="GtkPlotGdk.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+  <link linkend="GObject">GObject</link>
+   +----<link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+         +----<link linkend="GtkObject">GtkObject</link>
+               +----<link linkend="GtkPlotPC">GtkPlotPC</link>
+                     +----GtkPlotGdk
+</synopsis>
+</refsect1>
+
+
+
+
+
+
+
+
+<refsect1 id="GtkPlotGdk.description" role="desc">
+<title role="desc.title">Description</title>
+<para>
+This Subclass of <link linkend="GtkPlotPC"><type>GtkPlotPC</type></link> has been rewritten to use Cairo 
+drawing routines.</para>
+<para>
+</para>
+</refsect1>
+
+<refsect1 id="GtkPlotGdk.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="GtkPlotGdk-struct" role="struct">
+<title>GtkPlotGdk</title>
+<indexterm zone="GtkPlotGdk-struct"><primary sortas="GtkPlotGdk">GtkPlotGdk</primary></indexterm><programlisting>typedef struct _GtkPlotGdk GtkPlotGdk;</programlisting>
+<para>
+The GtkPlotGdk struct contains only private data.
+It should only be accessed through the functions described below.</para>
+<para>
+</para></refsect2>
+<refsect2 id="gtk-plot-gdk-new" role="function">
+<title>gtk_plot_gdk_new ()</title>
+<indexterm zone="gtk-plot-gdk-new"><primary sortas="gtk_plot_gdk_new">gtk_plot_gdk_new</primary></indexterm><programlisting><link linkend="GtkObject">GtkObject</link> *         gtk_plot_gdk_new                    (<link linkend="GtkWidget">GtkWidget</link> *widget);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>widget</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-gdk-construct" role="function">
+<title>gtk_plot_gdk_construct ()</title>
+<indexterm zone="gtk-plot-gdk-construct"><primary sortas="gtk_plot_gdk_construct">gtk_plot_gdk_construct</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_gdk_construct              (<link linkend="GtkPlotGdk">GtkPlotGdk</link> *pc,
+                                                         <link linkend="GtkWidget">GtkWidget</link> *widget);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>pc</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>widget</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-gdk-set-drawable" role="function">
+<title>gtk_plot_gdk_set_drawable ()</title>
+<indexterm zone="gtk-plot-gdk-set-drawable"><primary sortas="gtk_plot_gdk_set_drawable">gtk_plot_gdk_set_drawable</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_gdk_set_drawable           (<link linkend="GtkPlotGdk">GtkPlotGdk</link> *gdk,
+                                                         <link linkend="GdkDrawable">GdkDrawable</link> *drawable);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>gdk</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>drawable</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+
+
+
+
+</refentry>

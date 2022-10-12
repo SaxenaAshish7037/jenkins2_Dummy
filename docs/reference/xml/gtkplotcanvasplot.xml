@@ -1,0 +1,172 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+<!ENTITY version SYSTEM "version.xml">
+]>
+<!--ENTITY index-Objects-Grouped SYSTEM "objects_grouped.sgml"-->
+<refentry id="GtkPlotCanvasPlot">
+<refmeta>
+<refentrytitle role="top_of_page" id="GtkPlotCanvasPlot.top_of_page">GtkPlotCanvasPlot</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GTKEXTRA Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>GtkPlotCanvasPlot</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="GtkPlotCanvasPlot.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>
+
+#include &lt;gtkextra.h&gt;
+
+                    <link linkend="GtkPlotCanvasPlot-struct">GtkPlotCanvasPlot</link>;
+enum                <link linkend="GtkPlotCanvasPlotFlags">GtkPlotCanvasPlotFlags</link>;
+enum                <link linkend="GtkPlotCanvasPlotPos">GtkPlotCanvasPlotPos</link>;
+<link linkend="GtkPlotCanvasChild">GtkPlotCanvasChild</link> * <link linkend="gtk-plot-canvas-plot-new">gtk_plot_canvas_plot_new</link>           (<link linkend="GtkPlot">GtkPlot</link> *plot);
+<link linkend="GtkPlotCanvasPlotFlags">GtkPlotCanvasPlotFlags</link>  <link linkend="gtk-plot-canvas-plot-flags">gtk_plot_canvas_plot_flags</link>      (<link linkend="GtkPlotCanvasPlot">GtkPlotCanvasPlot</link> *plot);
+<link linkend="void">void</link>                <link linkend="gtk-plot-canvas-plot-set-flags">gtk_plot_canvas_plot_set_flags</link>      (<link linkend="GtkPlotCanvasPlot">GtkPlotCanvasPlot</link> *plot,
+                                                         <link linkend="GtkPlotCanvasPlotFlags">GtkPlotCanvasPlotFlags</link> flags);
+<link linkend="void">void</link>                <link linkend="gtk-plot-canvas-plot-unset-flags">gtk_plot_canvas_plot_unset_flags</link>    (<link linkend="GtkPlotCanvasPlot">GtkPlotCanvasPlot</link> *plot,
+                                                         <link linkend="GtkPlotCanvasPlotFlags">GtkPlotCanvasPlotFlags</link> flags);
+</synopsis>
+</refsynopsisdiv>
+
+<refsect1 id="GtkPlotCanvasPlot.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+  <link linkend="GObject">GObject</link>
+   +----<link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+         +----<link linkend="GtkObject">GtkObject</link>
+               +----<link linkend="GtkPlotCanvasChild">GtkPlotCanvasChild</link>
+                     +----GtkPlotCanvasPlot
+</synopsis>
+</refsect1>
+
+
+
+
+
+
+
+
+<refsect1 id="GtkPlotCanvasPlot.description" role="desc">
+<title role="desc.title">Description</title>
+<para>
+A <link linkend="GtkPlotCanvas"><type>GtkPlotCanvas</type></link> object is an interactive container for
+GtkPlots and some graphic primitives that can be used to
+illustrate the plots (see <link linkend="GtkCanvasChild"><type>GtkCanvasChild</type></link>).</para>
+<para>
+</para>
+</refsect1>
+
+<refsect1 id="GtkPlotCanvasPlot.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="GtkPlotCanvasPlot-struct" role="struct">
+<title>GtkPlotCanvasPlot</title>
+<indexterm zone="GtkPlotCanvasPlot-struct"><primary sortas="GtkPlotCanvasPlot">GtkPlotCanvasPlot</primary></indexterm><programlisting>typedef struct _GtkPlotCanvasPlot GtkPlotCanvasPlot;</programlisting>
+<para>
+The GtkPlotBar struct contains only private data.
+It should only be accessed through the functions described below.</para>
+<para>
+</para></refsect2>
+<refsect2 id="GtkPlotCanvasPlotFlags" role="enum">
+<title>enum GtkPlotCanvasPlotFlags</title>
+<indexterm zone="GtkPlotCanvasPlotFlags"><primary sortas="GtkPlotCanvasPlotFlags">GtkPlotCanvasPlotFlags</primary></indexterm><programlisting>typedef enum
+{
+      GTK_PLOT_CANVAS_PLOT_SELECT_POINT  =       1 &lt;&lt; 0, /* Select point */
+      GTK_PLOT_CANVAS_PLOT_DND_POINT     =       1 &lt;&lt; 1, /* DnD point */
+} GtkPlotCanvasPlotFlags;
+</programlisting>
+<para>
+Selection and DND mode of <link linkend="GtkPlotCanvas"><type>GtkPlotCanvas</type></link></para>
+<para>
+</para><variablelist role="enum">
+<varlistentry id="GTK-PLOT-CANVAS-PLOT-SELECT-POINT--CAPS" role="constant">
+<term><literal>GTK_PLOT_CANVAS_PLOT_SELECT_POINT</literal></term>
+<listitem><simpara> Select point
+</simpara></listitem>
+</varlistentry>
+<varlistentry id="GTK-PLOT-CANVAS-PLOT-DND-POINT--CAPS" role="constant">
+<term><literal>GTK_PLOT_CANVAS_PLOT_DND_POINT</literal></term>
+<listitem><simpara> DnD point
+</simpara></listitem>
+</varlistentry>
+</variablelist></refsect2>
+<refsect2 id="GtkPlotCanvasPlotPos" role="enum">
+<title>enum GtkPlotCanvasPlotPos</title>
+<indexterm zone="GtkPlotCanvasPlotPos"><primary sortas="GtkPlotCanvasPlotPos">GtkPlotCanvasPlotPos</primary></indexterm><programlisting>typedef enum
+{
+  GTK_PLOT_CANVAS_PLOT_OUT,
+  GTK_PLOT_CANVAS_PLOT_IN_PLOT,
+  GTK_PLOT_CANVAS_PLOT_IN_LEGENDS,
+  GTK_PLOT_CANVAS_PLOT_IN_TITLE,
+  GTK_PLOT_CANVAS_PLOT_IN_AXIS,
+  GTK_PLOT_CANVAS_PLOT_IN_DATA,
+  GTK_PLOT_CANVAS_PLOT_IN_GRADIENT,
+  GTK_PLOT_CANVAS_PLOT_IN_MARKER,
+} GtkPlotCanvasPlotPos;
+</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="gtk-plot-canvas-plot-new" role="function">
+<title>gtk_plot_canvas_plot_new ()</title>
+<indexterm zone="gtk-plot-canvas-plot-new"><primary sortas="gtk_plot_canvas_plot_new">gtk_plot_canvas_plot_new</primary></indexterm><programlisting><link linkend="GtkPlotCanvasChild">GtkPlotCanvasChild</link> * gtk_plot_canvas_plot_new           (<link linkend="GtkPlot">GtkPlot</link> *plot);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>plot</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlot"><type>GtkPlot</type></link>.
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-canvas-plot-flags" role="function">
+<title>gtk_plot_canvas_plot_flags ()</title>
+<indexterm zone="gtk-plot-canvas-plot-flags"><primary sortas="gtk_plot_canvas_plot_flags">gtk_plot_canvas_plot_flags</primary></indexterm><programlisting><link linkend="GtkPlotCanvasPlotFlags">GtkPlotCanvasPlotFlags</link>  gtk_plot_canvas_plot_flags      (<link linkend="GtkPlotCanvasPlot">GtkPlotCanvasPlot</link> *plot);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>plot</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-canvas-plot-set-flags" role="function">
+<title>gtk_plot_canvas_plot_set_flags ()</title>
+<indexterm zone="gtk-plot-canvas-plot-set-flags"><primary sortas="gtk_plot_canvas_plot_set_flags">gtk_plot_canvas_plot_set_flags</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_canvas_plot_set_flags      (<link linkend="GtkPlotCanvasPlot">GtkPlotCanvasPlot</link> *plot,
+                                                         <link linkend="GtkPlotCanvasPlotFlags">GtkPlotCanvasPlotFlags</link> flags);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>plot</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>flags</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-canvas-plot-unset-flags" role="function">
+<title>gtk_plot_canvas_plot_unset_flags ()</title>
+<indexterm zone="gtk-plot-canvas-plot-unset-flags"><primary sortas="gtk_plot_canvas_plot_unset_flags">gtk_plot_canvas_plot_unset_flags</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_canvas_plot_unset_flags    (<link linkend="GtkPlotCanvasPlot">GtkPlotCanvasPlot</link> *plot,
+                                                         <link linkend="GtkPlotCanvasPlotFlags">GtkPlotCanvasPlotFlags</link> flags);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>plot</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>flags</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+
+
+
+
+</refentry>

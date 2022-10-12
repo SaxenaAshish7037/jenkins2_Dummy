@@ -1,0 +1,191 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Part II. GtkExtra Widgets and Objects</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="GtkExtra Reference Manual">
+<link rel="up" href="index.html" title="GtkExtra Reference Manual">
+<link rel="prev" href="resources.html" title="Mailing lists and bug reports">
+<link rel="next" href="ch01.html" title="Object Hierarchy">
+<meta name="generator" content="GTK-Doc V1.11 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="part" href="gtkextra.html" title="Part I. GtkExtra Overview">
+<link rel="part" href="gtkextrabase.html" title="Part II. GtkExtra Widgets and Objects">
+<link rel="chapter" href="ch01.html" title="Object Hierarchy">
+<link rel="chapter" href="ch02.html" title="Widget Gallery">
+<link rel="chapter" href="ch03.html" title="Widgets">
+<link rel="chapter" href="ch04.html" title="Data Formatter">
+<link rel="chapter" href="ch05.html" title="GtkExtra Versioning">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2"><tr valign="middle">
+<td><a accesskey="p" href="resources.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td> </td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">GtkExtra Reference Manual</th>
+<td><a accesskey="n" href="ch01.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="part" title="Part II. GtkExtra Widgets and Objects">
+<div class="titlepage"><div><div><h1 class="title">
+<a name="gtkextrabase"></a>Part II. GtkExtra Widgets and Objects</h1></div></div></div>
+<div class="toc">
+<p><b>Table of Contents</b></p>
+<dl>
+<dt><span class="chapter"><a href="ch01.html">Object Hierarchy</a></span></dt>
+<dt><span class="chapter"><a href="ch02.html">Widget Gallery</a></span></dt>
+<dt><span class="chapter"><a href="ch03.html">Widgets</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="GtkBorderCombo.html">GtkBorderCombo</a></span><span class="refpurpose"> — A border combo widget</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkCharSelection.html">GtkCharSelection</a></span><span class="refpurpose"> — Character selection dialog</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkCheckItem.html">GtkCheckItem</a></span><span class="refpurpose"> — Check item widget for Gtk</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkColorCombo.html">GtkColorCombo</a></span><span class="refpurpose"> — A color combo widget for GTK.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkComboButton.html">GtkComboButton</a></span><span class="refpurpose"> — A combo button widget for GTK</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkDataEntry.html">GtkDataEntry</a></span><span class="refpurpose"> — a data entry widget, based on GtkEntry</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkDataTextView.html">GtkDataTextView</a></span><span class="refpurpose"> — a data textview widget, based on 
+     	     GtkTextView</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkDirTree.html">GtkDirTree</a></span><span class="refpurpose"> — A directory tree widget for GTK.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkFileList.html">GtkFileList</a></span><span class="refpurpose"> — A file list widget fot GTK</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkFontCombo.html">GtkFontCombo</a></span><span class="refpurpose"> — A font combo widget for GTK.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkIconFileSel.html">GtkIconFileSel</a></span><span class="refpurpose"> — A file selection dialog widget for GTK.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkIconList.html">GtkIconList</a></span><span class="refpurpose"> — A file icon list widget for GTK.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkItemEntry.html">GtkItemEntry</a></span><span class="refpurpose"> — An item entry widget.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkPlot.html">GtkPlot</a></span><span class="refpurpose"> — 2d scientific plots widget</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkPlot3D.html">GtkPlot3D</a></span><span class="refpurpose"> — 3d scientific plots widget</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkPlotArray.html">GtkPlotArray</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkPlotBar.html">GtkPlotBar</a></span><span class="refpurpose"> — 3d scientific plots widget for GTK.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkPlotBox.html">GtkPlotBox</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkPlotBubble.html">GtkPlotBubble</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkPlotCairo.html">GtkPlotCairo</a></span><span class="refpurpose"> — Cairo drawing backend.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkPlotCandle.html">GtkPlotCandle</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkPlotCSurface.html">GtkPlotCSurface</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkPlotCanvas.html">GtkPlotCanvas</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkPlotCanvasEllipse.html">GtkPlotCanvasEllipse</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="gtkextra-GtkPlotCanvasLine.html">GtkPlotCanvasLine</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkPlotCanvasRectangle.html">GtkPlotCanvasRectangle</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkPlotCanvasPixmap.html">GtkPlotCanvasPixmap</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkPlotCanvasText.html">GtkPlotCanvasText</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkPlotCanvasPlot.html">GtkPlotCanvasPlot</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkPlotData.html">GtkPlotData</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkPlotDT.html">GtkPlotDT</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="gtkextra-GtkPlotDTriangle.html">GtkPlotDTriangle</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkPlotFlux.html">GtkPlotFlux</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkPlotGdk.html">GtkPlotGdk</a></span><span class="refpurpose"> — GDK drawing backend (mapped to Cairo)</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkPlotPC.html">GtkPlotPC</a></span><span class="refpurpose"> — Plot Context</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkPlotPixmap.html">GtkPlotPixmap</a></span><span class="refpurpose"> — Pixmap plots widget.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkPlotPolar.html">GtkPlotPolar</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="gtkextra-GtkPlotPrint.html">GtkPlotPrint</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkPlotPS.html">GtkPlotPS</a></span><span class="refpurpose"> — postscript driver</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkPlotSegment.html">GtkPlotSegment</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkPlotSurface.html">GtkPlotSurface</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="gtkextra-GtkPSFont.html">GtkPSFont</a></span><span class="refpurpose"> — PostScript Fonts handling.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkSheet.html">GtkSheet</a></span><span class="refpurpose"> — A spreadsheet widget for Gtk+</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkSheetColumn.html">GtkSheetColumn</a></span><span class="refpurpose"> — A spreadsheet column widget for <a class="link" href="GtkSheet.html" title="GtkSheet"><span class="type">GtkSheet</span></a></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkToggleCombo.html">GtkToggleCombo</a></span><span class="refpurpose"> — A toggle combo widget for GTK.</span>
+</dt>
+</dl></dd>
+<dt><span class="chapter"><a href="ch04.html">Data Formatter</a></span></dt>
+<dd><dl><dt>
+<span class="refentrytitle"><a href="gtkextra-GtkDataFormat.html">GtkDataFormat</a></span><span class="refpurpose"> — a data formatting library</span>
+</dt></dl></dd>
+<dt><span class="chapter"><a href="ch05.html">GtkExtra Versioning</a></span></dt>
+<dd><dl><dt>
+<span class="refentrytitle"><a href="gtkextra-GtkExtra-Versioning.html">GtkExtra Versioning</a></span><span class="refpurpose"></span>
+</dt></dl></dd>
+</dl>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.11</div>
+</body>
+</html>

@@ -1,0 +1,301 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+<!ENTITY version SYSTEM "version.xml">
+]>
+<!--ENTITY index-Objects-Grouped SYSTEM "objects_grouped.sgml"-->
+<refentry id="GtkPlotPS">
+<refmeta>
+<refentrytitle role="top_of_page" id="GtkPlotPS.top_of_page">GtkPlotPS</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GTKEXTRA Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>GtkPlotPS</refname>
+<refpurpose>postscript driver</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="GtkPlotPS.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>
+
+#include &lt;gtkextra.h&gt;
+
+                    <link linkend="GtkPlotPS-struct">GtkPlotPS</link>;
+<link linkend="GtkObject">GtkObject</link> *         <link linkend="gtk-plot-ps-new">gtk_plot_ps_new</link>                     (const <link linkend="gchar">gchar</link> *psname,
+                                                         <link linkend="gint">gint</link> orientation,
+                                                         <link linkend="gint">gint</link> epsflag,
+                                                         <link linkend="gint">gint</link> page_size,
+                                                         <link linkend="gdouble">gdouble</link> scalex,
+                                                         <link linkend="gdouble">gdouble</link> scaley);
+<link linkend="GtkObject">GtkObject</link> *         <link linkend="gtk-plot-ps-new-with-size">gtk_plot_ps_new_with_size</link>           (const <link linkend="gchar">gchar</link> *psname,
+                                                         <link linkend="gint">gint</link> orientation,
+                                                         <link linkend="gint">gint</link> epsflag,
+                                                         <link linkend="gint">gint</link> units,
+                                                         <link linkend="gdouble">gdouble</link> width,
+                                                         <link linkend="gdouble">gdouble</link> height,
+                                                         <link linkend="gdouble">gdouble</link> scalex,
+                                                         <link linkend="gdouble">gdouble</link> scaley);
+<link linkend="void">void</link>                <link linkend="gtk-plot-ps-construct">gtk_plot_ps_construct</link>               (<link linkend="GtkPlotPS">GtkPlotPS</link> *ps,
+                                                         const <link linkend="gchar">gchar</link> *psname,
+                                                         <link linkend="gint">gint</link> orientation,
+                                                         <link linkend="gint">gint</link> epsflag,
+                                                         <link linkend="gint">gint</link> page_size,
+                                                         <link linkend="gdouble">gdouble</link> scalex,
+                                                         <link linkend="gdouble">gdouble</link> scaley);
+<link linkend="void">void</link>                <link linkend="gtk-plot-ps-construct-with-size">gtk_plot_ps_construct_with_size</link>     (<link linkend="GtkPlotPS">GtkPlotPS</link> *ps,
+                                                         const <link linkend="gchar">gchar</link> *psname,
+                                                         <link linkend="gint">gint</link> orientation,
+                                                         <link linkend="gint">gint</link> epsflag,
+                                                         <link linkend="gint">gint</link> units,
+                                                         <link linkend="gdouble">gdouble</link> width,
+                                                         <link linkend="gdouble">gdouble</link> height,
+                                                         <link linkend="gdouble">gdouble</link> scalex,
+                                                         <link linkend="gdouble">gdouble</link> scaley);
+<link linkend="void">void</link>                <link linkend="gtk-plot-ps-set-size">gtk_plot_ps_set_size</link>                (<link linkend="GtkPlotPS">GtkPlotPS</link> *ps,
+                                                         <link linkend="gint">gint</link> units,
+                                                         <link linkend="gdouble">gdouble</link> width,
+                                                         <link linkend="gdouble">gdouble</link> height);
+<link linkend="void">void</link>                <link linkend="gtk-plot-ps-set-scale">gtk_plot_ps_set_scale</link>               (<link linkend="GtkPlotPS">GtkPlotPS</link> *ps,
+                                                         <link linkend="gdouble">gdouble</link> scalex,
+                                                         <link linkend="gdouble">gdouble</link> scaley);
+</synopsis>
+</refsynopsisdiv>
+
+<refsect1 id="GtkPlotPS.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+  <link linkend="GObject">GObject</link>
+   +----<link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+         +----<link linkend="GtkObject">GtkObject</link>
+               +----<link linkend="GtkPlotPC">GtkPlotPC</link>
+                     +----GtkPlotPS
+</synopsis>
+</refsect1>
+
+
+
+
+
+
+
+
+<refsect1 id="GtkPlotPS.description" role="desc">
+<title role="desc.title">Description</title>
+<para>
+Subclass of <link linkend="GtkPlotPC"><type>GtkPlotPC</type></link> used to generate PostScript output.</para>
+<para>
+</para>
+</refsect1>
+
+<refsect1 id="GtkPlotPS.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="GtkPlotPS-struct" role="struct">
+<title>GtkPlotPS</title>
+<indexterm zone="GtkPlotPS-struct"><primary sortas="GtkPlotPS">GtkPlotPS</primary></indexterm><programlisting>typedef struct _GtkPlotPS GtkPlotPS;</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="gtk-plot-ps-new" role="function">
+<title>gtk_plot_ps_new ()</title>
+<indexterm zone="gtk-plot-ps-new"><primary sortas="gtk_plot_ps_new">gtk_plot_ps_new</primary></indexterm><programlisting><link linkend="GtkObject">GtkObject</link> *         gtk_plot_ps_new                     (const <link linkend="gchar">gchar</link> *psname,
+                                                         <link linkend="gint">gint</link> orientation,
+                                                         <link linkend="gint">gint</link> epsflag,
+                                                         <link linkend="gint">gint</link> page_size,
+                                                         <link linkend="gdouble">gdouble</link> scalex,
+                                                         <link linkend="gdouble">gdouble</link> scaley);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>psname</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>orientation</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>epsflag</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>page_size</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>scalex</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>scaley</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara> a new GtkObject.
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-ps-new-with-size" role="function">
+<title>gtk_plot_ps_new_with_size ()</title>
+<indexterm zone="gtk-plot-ps-new-with-size"><primary sortas="gtk_plot_ps_new_with_size">gtk_plot_ps_new_with_size</primary></indexterm><programlisting><link linkend="GtkObject">GtkObject</link> *         gtk_plot_ps_new_with_size           (const <link linkend="gchar">gchar</link> *psname,
+                                                         <link linkend="gint">gint</link> orientation,
+                                                         <link linkend="gint">gint</link> epsflag,
+                                                         <link linkend="gint">gint</link> units,
+                                                         <link linkend="gdouble">gdouble</link> width,
+                                                         <link linkend="gdouble">gdouble</link> height,
+                                                         <link linkend="gdouble">gdouble</link> scalex,
+                                                         <link linkend="gdouble">gdouble</link> scaley);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>psname</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>orientation</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>epsflag</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>units</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>width</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>height</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>scalex</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>scaley</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara> a new GtkObject.
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-ps-construct" role="function">
+<title>gtk_plot_ps_construct ()</title>
+<indexterm zone="gtk-plot-ps-construct"><primary sortas="gtk_plot_ps_construct">gtk_plot_ps_construct</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_ps_construct               (<link linkend="GtkPlotPS">GtkPlotPS</link> *ps,
+                                                         const <link linkend="gchar">gchar</link> *psname,
+                                                         <link linkend="gint">gint</link> orientation,
+                                                         <link linkend="gint">gint</link> epsflag,
+                                                         <link linkend="gint">gint</link> page_size,
+                                                         <link linkend="gdouble">gdouble</link> scalex,
+                                                         <link linkend="gdouble">gdouble</link> scaley);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>ps</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlotPS"><type>GtkPlotPS</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>psname</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>orientation</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>epsflag</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>page_size</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>scalex</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>scaley</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-ps-construct-with-size" role="function">
+<title>gtk_plot_ps_construct_with_size ()</title>
+<indexterm zone="gtk-plot-ps-construct-with-size"><primary sortas="gtk_plot_ps_construct_with_size">gtk_plot_ps_construct_with_size</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_ps_construct_with_size     (<link linkend="GtkPlotPS">GtkPlotPS</link> *ps,
+                                                         const <link linkend="gchar">gchar</link> *psname,
+                                                         <link linkend="gint">gint</link> orientation,
+                                                         <link linkend="gint">gint</link> epsflag,
+                                                         <link linkend="gint">gint</link> units,
+                                                         <link linkend="gdouble">gdouble</link> width,
+                                                         <link linkend="gdouble">gdouble</link> height,
+                                                         <link linkend="gdouble">gdouble</link> scalex,
+                                                         <link linkend="gdouble">gdouble</link> scaley);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>ps</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlotPS"><type>GtkPlotPS</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>psname</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>orientation</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>epsflag</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>units</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>width</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>height</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>scalex</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>scaley</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-ps-set-size" role="function">
+<title>gtk_plot_ps_set_size ()</title>
+<indexterm zone="gtk-plot-ps-set-size"><primary sortas="gtk_plot_ps_set_size">gtk_plot_ps_set_size</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_ps_set_size                (<link linkend="GtkPlotPS">GtkPlotPS</link> *ps,
+                                                         <link linkend="gint">gint</link> units,
+                                                         <link linkend="gdouble">gdouble</link> width,
+                                                         <link linkend="gdouble">gdouble</link> height);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>ps</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlotPS"><type>GtkPlotPS</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>units</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>width</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>height</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-ps-set-scale" role="function">
+<title>gtk_plot_ps_set_scale ()</title>
+<indexterm zone="gtk-plot-ps-set-scale"><primary sortas="gtk_plot_ps_set_scale">gtk_plot_ps_set_scale</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_ps_set_scale               (<link linkend="GtkPlotPS">GtkPlotPS</link> *ps,
+                                                         <link linkend="gdouble">gdouble</link> scalex,
+                                                         <link linkend="gdouble">gdouble</link> scaley);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>ps</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlotPS"><type>GtkPlotPS</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>scalex</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>scaley</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+
+
+
+
+</refentry>

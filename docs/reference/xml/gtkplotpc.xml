@@ -1,0 +1,694 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+<!ENTITY version SYSTEM "version.xml">
+]>
+<!--ENTITY index-Objects-Grouped SYSTEM "objects_grouped.sgml"-->
+<refentry id="GtkPlotPC">
+<refmeta>
+<refentrytitle role="top_of_page" id="GtkPlotPC.top_of_page">GtkPlotPC</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GTKEXTRA Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>GtkPlotPC</refname>
+<refpurpose>Plot Context</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="GtkPlotPC.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>
+
+#include &lt;gtkextra.h&gt;
+
+                    <link linkend="GtkPlotPC-struct">GtkPlotPC</link>;
+enum                <link linkend="GtkPlotPageSize">GtkPlotPageSize</link>;
+enum                <link linkend="GtkPlotPageOrientation">GtkPlotPageOrientation</link>;
+enum                <link linkend="GtkPlotUnits">GtkPlotUnits</link>;
+                    <link linkend="GtkPlotPoint">GtkPlotPoint</link>;
+<link linkend="GtkObject">GtkObject</link> *         <link linkend="gtk-plot-pc-new">gtk_plot_pc_new</link>                     (void);
+<link linkend="gboolean">gboolean</link>            <link linkend="gtk-plot-pc-init">gtk_plot_pc_init</link>                    (<link linkend="GtkPlotPC">GtkPlotPC</link> *pc);
+<link linkend="void">void</link>                <link linkend="gtk-plot-pc-leave">gtk_plot_pc_leave</link>                   (<link linkend="GtkPlotPC">GtkPlotPC</link> *pc);
+<link linkend="void">void</link>                <link linkend="gtk-plot-pc-set-viewport">gtk_plot_pc_set_viewport</link>            (<link linkend="GtkPlotPC">GtkPlotPC</link> *pc,
+                                                         <link linkend="gdouble">gdouble</link> w,
+                                                         <link linkend="gdouble">gdouble</link> h);
+<link linkend="void">void</link>                <link linkend="gtk-plot-pc-gsave">gtk_plot_pc_gsave</link>                   (<link linkend="GtkPlotPC">GtkPlotPC</link> *pc);
+<link linkend="void">void</link>                <link linkend="gtk-plot-pc-grestore">gtk_plot_pc_grestore</link>                (<link linkend="GtkPlotPC">GtkPlotPC</link> *pc);
+<link linkend="void">void</link>                <link linkend="gtk-plot-pc-clip">gtk_plot_pc_clip</link>                    (<link linkend="GtkPlotPC">GtkPlotPC</link> *pc,
+                                                         <link linkend="GdkRectangle">GdkRectangle</link> *area);
+<link linkend="void">void</link>                <link linkend="gtk-plot-pc-clip-mask">gtk_plot_pc_clip_mask</link>               (<link linkend="GtkPlotPC">GtkPlotPC</link> *pc,
+                                                         <link linkend="gdouble">gdouble</link> x,
+                                                         <link linkend="gdouble">gdouble</link> y,
+                                                         <link linkend="GdkBitmap">GdkBitmap</link> *mask);
+<link linkend="void">void</link>                <link linkend="gtk-plot-pc-set-color">gtk_plot_pc_set_color</link>               (<link linkend="GtkPlotPC">GtkPlotPC</link> *pc,
+                                                         <link linkend="GdkColor">GdkColor</link> *color);
+<link linkend="void">void</link>                <link linkend="gtk-plot-pc-set-lineattr">gtk_plot_pc_set_lineattr</link>            (<link linkend="GtkPlotPC">GtkPlotPC</link> *pc,
+                                                         <link linkend="gfloat">gfloat</link> line_width,
+                                                         <link linkend="GdkLineStyle">GdkLineStyle</link> line_style,
+                                                         <link linkend="GdkCapStyle">GdkCapStyle</link> cap_style,
+                                                         <link linkend="GdkJoinStyle">GdkJoinStyle</link> join_style);
+<link linkend="void">void</link>                <link linkend="gtk-plot-pc-set-dash">gtk_plot_pc_set_dash</link>                (<link linkend="GtkPlotPC">GtkPlotPC</link> *pc,
+                                                         <link linkend="gdouble">gdouble</link> offset_,
+                                                         <link linkend="gdouble">gdouble</link> *values,
+                                                         <link linkend="gint">gint</link> num_values);
+<link linkend="void">void</link>                <link linkend="gtk-plot-pc-draw-point">gtk_plot_pc_draw_point</link>              (<link linkend="GtkPlotPC">GtkPlotPC</link> *pc,
+                                                         <link linkend="gdouble">gdouble</link> x,
+                                                         <link linkend="gdouble">gdouble</link> y);
+<link linkend="void">void</link>                <link linkend="gtk-plot-pc-draw-line">gtk_plot_pc_draw_line</link>               (<link linkend="GtkPlotPC">GtkPlotPC</link> *pc,
+                                                         <link linkend="gdouble">gdouble</link> x1,
+                                                         <link linkend="gdouble">gdouble</link> y1,
+                                                         <link linkend="gdouble">gdouble</link> x2,
+                                                         <link linkend="gdouble">gdouble</link> y2);
+<link linkend="void">void</link>                <link linkend="gtk-plot-pc-draw-lines">gtk_plot_pc_draw_lines</link>              (<link linkend="GtkPlotPC">GtkPlotPC</link> *pc,
+                                                         <link linkend="GtkPlotPoint">GtkPlotPoint</link> *points,
+                                                         <link linkend="gint">gint</link> numpoints);
+<link linkend="void">void</link>                <link linkend="gtk-plot-pc-draw-rectangle">gtk_plot_pc_draw_rectangle</link>          (<link linkend="GtkPlotPC">GtkPlotPC</link> *pc,
+                                                         <link linkend="gboolean">gboolean</link> filled,
+                                                         <link linkend="gdouble">gdouble</link> x,
+                                                         <link linkend="gdouble">gdouble</link> y,
+                                                         <link linkend="gdouble">gdouble</link> width,
+                                                         <link linkend="gdouble">gdouble</link> height);
+<link linkend="void">void</link>                <link linkend="gtk-plot-pc-draw-polygon">gtk_plot_pc_draw_polygon</link>            (<link linkend="GtkPlotPC">GtkPlotPC</link> *pc,
+                                                         <link linkend="gint">gint</link> filled,
+                                                         <link linkend="GtkPlotPoint">GtkPlotPoint</link> *points,
+                                                         <link linkend="gint">gint</link> numpoints);
+<link linkend="void">void</link>                <link linkend="gtk-plot-pc-draw-ellipse">gtk_plot_pc_draw_ellipse</link>            (<link linkend="GtkPlotPC">GtkPlotPC</link> *pc,
+                                                         <link linkend="gboolean">gboolean</link> filled,
+                                                         <link linkend="gdouble">gdouble</link> x,
+                                                         <link linkend="gdouble">gdouble</link> y,
+                                                         <link linkend="gdouble">gdouble</link> width,
+                                                         <link linkend="gdouble">gdouble</link> height);
+<link linkend="void">void</link>                <link linkend="gtk-plot-pc-draw-circle">gtk_plot_pc_draw_circle</link>             (<link linkend="GtkPlotPC">GtkPlotPC</link> *pc,
+                                                         <link linkend="gint">gint</link> filled,
+                                                         <link linkend="gdouble">gdouble</link> x,
+                                                         <link linkend="gdouble">gdouble</link> y,
+                                                         <link linkend="gdouble">gdouble</link> size);
+<link linkend="void">void</link>                <link linkend="gtk-plot-pc-set-font">gtk_plot_pc_set_font</link>                (<link linkend="GtkPlotPC">GtkPlotPC</link> *pc,
+                                                         <link linkend="GtkPSFont">GtkPSFont</link> *psfont,
+                                                         <link linkend="gint">gint</link> height);
+<link linkend="void">void</link>                <link linkend="gtk-plot-pc-draw-string">gtk_plot_pc_draw_string</link>             (<link linkend="GtkPlotPC">GtkPlotPC</link> *pc,
+                                                         <link linkend="gint">gint</link> x,
+                                                         <link linkend="gint">gint</link> y,
+                                                         <link linkend="gint">gint</link> angle,
+                                                         const <link linkend="GdkColor">GdkColor</link> *fg,
+                                                         const <link linkend="GdkColor">GdkColor</link> *bg,
+                                                         <link linkend="gboolean">gboolean</link> transparent,
+                                                         <link linkend="gint">gint</link> border,
+                                                         <link linkend="gint">gint</link> border_space,
+                                                         <link linkend="gint">gint</link> border_width,
+                                                         <link linkend="gint">gint</link> shadow_width,
+                                                         const <link linkend="gchar">gchar</link> *font,
+                                                         <link linkend="gint">gint</link> height,
+                                                         <link linkend="GtkJustification">GtkJustification</link> just,
+                                                         const <link linkend="gchar">gchar</link> *text);
+<link linkend="void">void</link>                <link linkend="gtk-plot-pc-draw-pixmap">gtk_plot_pc_draw_pixmap</link>             (<link linkend="GtkPlotPC">GtkPlotPC</link> *pc,
+                                                         <link linkend="GdkPixmap">GdkPixmap</link> *pixmap,
+                                                         <link linkend="GdkBitmap">GdkBitmap</link> *mask,
+                                                         <link linkend="gint">gint</link> xsrc,
+                                                         <link linkend="gint">gint</link> ysrc,
+                                                         <link linkend="gint">gint</link> xdest,
+                                                         <link linkend="gint">gint</link> ydest,
+                                                         <link linkend="gint">gint</link> width,
+                                                         <link linkend="gint">gint</link> height,
+                                                         <link linkend="gdouble">gdouble</link> scale_x,
+                                                         <link linkend="gdouble">gdouble</link> scale_y);
+</synopsis>
+</refsynopsisdiv>
+
+<refsect1 id="GtkPlotPC.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+  <link linkend="GObject">GObject</link>
+   +----<link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+         +----<link linkend="GtkObject">GtkObject</link>
+               +----GtkPlotPC
+                     +----<link linkend="GtkPlotCairo">GtkPlotCairo</link>
+                     +----<link linkend="GtkPlotGdk">GtkPlotGdk</link>
+                     +----<link linkend="GtkPlotPS">GtkPlotPS</link>
+</synopsis>
+</refsect1>
+
+
+
+
+
+
+
+
+<refsect1 id="GtkPlotPC.description" role="desc">
+<title role="desc.title">Description</title>
+<para>
+Base Class for <link linkend="GtkPlotCairo"><type>GtkPlotCairo</type></link>, <link linkend="GtkPlotGdk"><type>GtkPlotGdk</type></link> and <link linkend="GtkPlotPS"><type>GtkPlotPS</type></link>.</para>
+<para>
+</para>
+</refsect1>
+
+<refsect1 id="GtkPlotPC.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="GtkPlotPC-struct" role="struct">
+<title>GtkPlotPC</title>
+<indexterm zone="GtkPlotPC-struct"><primary sortas="GtkPlotPC">GtkPlotPC</primary></indexterm><programlisting>typedef struct _GtkPlotPC GtkPlotPC;</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="GtkPlotPageSize" role="enum">
+<title>enum GtkPlotPageSize</title>
+<indexterm zone="GtkPlotPageSize"><primary sortas="GtkPlotPageSize">GtkPlotPageSize</primary></indexterm><programlisting>typedef enum{
+     GTK_PLOT_LETTER	,
+     GTK_PLOT_LEGAL	,
+     GTK_PLOT_A4	,
+     GTK_PLOT_EXECUTIVE	,
+     GTK_PLOT_CUSTOM	
+} GtkPlotPageSize;
+</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="GtkPlotPageOrientation" role="enum">
+<title>enum GtkPlotPageOrientation</title>
+<indexterm zone="GtkPlotPageOrientation"><primary sortas="GtkPlotPageOrientation">GtkPlotPageOrientation</primary></indexterm><programlisting>typedef enum{
+     GTK_PLOT_PORTRAIT	,
+     GTK_PLOT_LANDSCAPE	
+} GtkPlotPageOrientation;
+</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="GtkPlotUnits" role="enum">
+<title>enum GtkPlotUnits</title>
+<indexterm zone="GtkPlotUnits"><primary sortas="GtkPlotUnits">GtkPlotUnits</primary></indexterm><programlisting>typedef enum{
+     GTK_PLOT_PSPOINTS	,
+     GTK_PLOT_MM	,
+     GTK_PLOT_CM	,
+     GTK_PLOT_INCHES	
+} GtkPlotUnits;
+</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="GtkPlotPoint" role="struct">
+<title>GtkPlotPoint</title>
+<indexterm zone="GtkPlotPoint"><primary sortas="GtkPlotPoint">GtkPlotPoint</primary></indexterm><programlisting>typedef struct {
+} GtkPlotPoint;
+</programlisting>
+<para>
+The GtkPlotPoint struct contains only private data.
+It should only be accessed through the functions described below.</para>
+<para>
+</para></refsect2>
+<refsect2 id="gtk-plot-pc-new" role="function">
+<title>gtk_plot_pc_new ()</title>
+<indexterm zone="gtk-plot-pc-new"><primary sortas="gtk_plot_pc_new">gtk_plot_pc_new</primary></indexterm><programlisting><link linkend="GtkObject">GtkObject</link> *         gtk_plot_pc_new                     (void);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-pc-init" role="function">
+<title>gtk_plot_pc_init ()</title>
+<indexterm zone="gtk-plot-pc-init"><primary sortas="gtk_plot_pc_init">gtk_plot_pc_init</primary></indexterm><programlisting><link linkend="gboolean">gboolean</link>            gtk_plot_pc_init                    (<link linkend="GtkPlotPC">GtkPlotPC</link> *pc);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>pc</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-pc-leave" role="function">
+<title>gtk_plot_pc_leave ()</title>
+<indexterm zone="gtk-plot-pc-leave"><primary sortas="gtk_plot_pc_leave">gtk_plot_pc_leave</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_pc_leave                   (<link linkend="GtkPlotPC">GtkPlotPC</link> *pc);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>pc</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-pc-set-viewport" role="function">
+<title>gtk_plot_pc_set_viewport ()</title>
+<indexterm zone="gtk-plot-pc-set-viewport"><primary sortas="gtk_plot_pc_set_viewport">gtk_plot_pc_set_viewport</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_pc_set_viewport            (<link linkend="GtkPlotPC">GtkPlotPC</link> *pc,
+                                                         <link linkend="gdouble">gdouble</link> w,
+                                                         <link linkend="gdouble">gdouble</link> h);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>pc</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>w</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>h</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-pc-gsave" role="function">
+<title>gtk_plot_pc_gsave ()</title>
+<indexterm zone="gtk-plot-pc-gsave"><primary sortas="gtk_plot_pc_gsave">gtk_plot_pc_gsave</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_pc_gsave                   (<link linkend="GtkPlotPC">GtkPlotPC</link> *pc);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>pc</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-pc-grestore" role="function">
+<title>gtk_plot_pc_grestore ()</title>
+<indexterm zone="gtk-plot-pc-grestore"><primary sortas="gtk_plot_pc_grestore">gtk_plot_pc_grestore</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_pc_grestore                (<link linkend="GtkPlotPC">GtkPlotPC</link> *pc);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>pc</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-pc-clip" role="function">
+<title>gtk_plot_pc_clip ()</title>
+<indexterm zone="gtk-plot-pc-clip"><primary sortas="gtk_plot_pc_clip">gtk_plot_pc_clip</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_pc_clip                    (<link linkend="GtkPlotPC">GtkPlotPC</link> *pc,
+                                                         <link linkend="GdkRectangle">GdkRectangle</link> *area);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>pc</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>area</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-pc-clip-mask" role="function">
+<title>gtk_plot_pc_clip_mask ()</title>
+<indexterm zone="gtk-plot-pc-clip-mask"><primary sortas="gtk_plot_pc_clip_mask">gtk_plot_pc_clip_mask</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_pc_clip_mask               (<link linkend="GtkPlotPC">GtkPlotPC</link> *pc,
+                                                         <link linkend="gdouble">gdouble</link> x,
+                                                         <link linkend="gdouble">gdouble</link> y,
+                                                         <link linkend="GdkBitmap">GdkBitmap</link> *mask);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>pc</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>x</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>y</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>mask</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-pc-set-color" role="function">
+<title>gtk_plot_pc_set_color ()</title>
+<indexterm zone="gtk-plot-pc-set-color"><primary sortas="gtk_plot_pc_set_color">gtk_plot_pc_set_color</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_pc_set_color               (<link linkend="GtkPlotPC">GtkPlotPC</link> *pc,
+                                                         <link linkend="GdkColor">GdkColor</link> *color);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>pc</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>color</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-pc-set-lineattr" role="function">
+<title>gtk_plot_pc_set_lineattr ()</title>
+<indexterm zone="gtk-plot-pc-set-lineattr"><primary sortas="gtk_plot_pc_set_lineattr">gtk_plot_pc_set_lineattr</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_pc_set_lineattr            (<link linkend="GtkPlotPC">GtkPlotPC</link> *pc,
+                                                         <link linkend="gfloat">gfloat</link> line_width,
+                                                         <link linkend="GdkLineStyle">GdkLineStyle</link> line_style,
+                                                         <link linkend="GdkCapStyle">GdkCapStyle</link> cap_style,
+                                                         <link linkend="GdkJoinStyle">GdkJoinStyle</link> join_style);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>pc</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>line_width</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>line_style</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>cap_style</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>join_style</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-pc-set-dash" role="function">
+<title>gtk_plot_pc_set_dash ()</title>
+<indexterm zone="gtk-plot-pc-set-dash"><primary sortas="gtk_plot_pc_set_dash">gtk_plot_pc_set_dash</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_pc_set_dash                (<link linkend="GtkPlotPC">GtkPlotPC</link> *pc,
+                                                         <link linkend="gdouble">gdouble</link> offset_,
+                                                         <link linkend="gdouble">gdouble</link> *values,
+                                                         <link linkend="gint">gint</link> num_values);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>pc</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>offset_</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>values</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>num_values</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-pc-draw-point" role="function">
+<title>gtk_plot_pc_draw_point ()</title>
+<indexterm zone="gtk-plot-pc-draw-point"><primary sortas="gtk_plot_pc_draw_point">gtk_plot_pc_draw_point</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_pc_draw_point              (<link linkend="GtkPlotPC">GtkPlotPC</link> *pc,
+                                                         <link linkend="gdouble">gdouble</link> x,
+                                                         <link linkend="gdouble">gdouble</link> y);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>pc</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>x</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>y</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-pc-draw-line" role="function">
+<title>gtk_plot_pc_draw_line ()</title>
+<indexterm zone="gtk-plot-pc-draw-line"><primary sortas="gtk_plot_pc_draw_line">gtk_plot_pc_draw_line</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_pc_draw_line               (<link linkend="GtkPlotPC">GtkPlotPC</link> *pc,
+                                                         <link linkend="gdouble">gdouble</link> x1,
+                                                         <link linkend="gdouble">gdouble</link> y1,
+                                                         <link linkend="gdouble">gdouble</link> x2,
+                                                         <link linkend="gdouble">gdouble</link> y2);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>pc</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>x1</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>y1</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>x2</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>y2</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-pc-draw-lines" role="function">
+<title>gtk_plot_pc_draw_lines ()</title>
+<indexterm zone="gtk-plot-pc-draw-lines"><primary sortas="gtk_plot_pc_draw_lines">gtk_plot_pc_draw_lines</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_pc_draw_lines              (<link linkend="GtkPlotPC">GtkPlotPC</link> *pc,
+                                                         <link linkend="GtkPlotPoint">GtkPlotPoint</link> *points,
+                                                         <link linkend="gint">gint</link> numpoints);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>pc</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>points</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>numpoints</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-pc-draw-rectangle" role="function">
+<title>gtk_plot_pc_draw_rectangle ()</title>
+<indexterm zone="gtk-plot-pc-draw-rectangle"><primary sortas="gtk_plot_pc_draw_rectangle">gtk_plot_pc_draw_rectangle</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_pc_draw_rectangle          (<link linkend="GtkPlotPC">GtkPlotPC</link> *pc,
+                                                         <link linkend="gboolean">gboolean</link> filled,
+                                                         <link linkend="gdouble">gdouble</link> x,
+                                                         <link linkend="gdouble">gdouble</link> y,
+                                                         <link linkend="gdouble">gdouble</link> width,
+                                                         <link linkend="gdouble">gdouble</link> height);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>pc</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>filled</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>x</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>y</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>width</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>height</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-pc-draw-polygon" role="function">
+<title>gtk_plot_pc_draw_polygon ()</title>
+<indexterm zone="gtk-plot-pc-draw-polygon"><primary sortas="gtk_plot_pc_draw_polygon">gtk_plot_pc_draw_polygon</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_pc_draw_polygon            (<link linkend="GtkPlotPC">GtkPlotPC</link> *pc,
+                                                         <link linkend="gint">gint</link> filled,
+                                                         <link linkend="GtkPlotPoint">GtkPlotPoint</link> *points,
+                                                         <link linkend="gint">gint</link> numpoints);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>pc</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>filled</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>points</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>numpoints</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-pc-draw-ellipse" role="function">
+<title>gtk_plot_pc_draw_ellipse ()</title>
+<indexterm zone="gtk-plot-pc-draw-ellipse"><primary sortas="gtk_plot_pc_draw_ellipse">gtk_plot_pc_draw_ellipse</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_pc_draw_ellipse            (<link linkend="GtkPlotPC">GtkPlotPC</link> *pc,
+                                                         <link linkend="gboolean">gboolean</link> filled,
+                                                         <link linkend="gdouble">gdouble</link> x,
+                                                         <link linkend="gdouble">gdouble</link> y,
+                                                         <link linkend="gdouble">gdouble</link> width,
+                                                         <link linkend="gdouble">gdouble</link> height);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>pc</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>filled</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>x</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>y</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>width</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>height</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-pc-draw-circle" role="function">
+<title>gtk_plot_pc_draw_circle ()</title>
+<indexterm zone="gtk-plot-pc-draw-circle"><primary sortas="gtk_plot_pc_draw_circle">gtk_plot_pc_draw_circle</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_pc_draw_circle             (<link linkend="GtkPlotPC">GtkPlotPC</link> *pc,
+                                                         <link linkend="gint">gint</link> filled,
+                                                         <link linkend="gdouble">gdouble</link> x,
+                                                         <link linkend="gdouble">gdouble</link> y,
+                                                         <link linkend="gdouble">gdouble</link> size);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>pc</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>filled</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>x</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>y</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>size</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-pc-set-font" role="function">
+<title>gtk_plot_pc_set_font ()</title>
+<indexterm zone="gtk-plot-pc-set-font"><primary sortas="gtk_plot_pc_set_font">gtk_plot_pc_set_font</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_pc_set_font                (<link linkend="GtkPlotPC">GtkPlotPC</link> *pc,
+                                                         <link linkend="GtkPSFont">GtkPSFont</link> *psfont,
+                                                         <link linkend="gint">gint</link> height);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>pc</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>psfont</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>height</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-pc-draw-string" role="function">
+<title>gtk_plot_pc_draw_string ()</title>
+<indexterm zone="gtk-plot-pc-draw-string"><primary sortas="gtk_plot_pc_draw_string">gtk_plot_pc_draw_string</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_pc_draw_string             (<link linkend="GtkPlotPC">GtkPlotPC</link> *pc,
+                                                         <link linkend="gint">gint</link> x,
+                                                         <link linkend="gint">gint</link> y,
+                                                         <link linkend="gint">gint</link> angle,
+                                                         const <link linkend="GdkColor">GdkColor</link> *fg,
+                                                         const <link linkend="GdkColor">GdkColor</link> *bg,
+                                                         <link linkend="gboolean">gboolean</link> transparent,
+                                                         <link linkend="gint">gint</link> border,
+                                                         <link linkend="gint">gint</link> border_space,
+                                                         <link linkend="gint">gint</link> border_width,
+                                                         <link linkend="gint">gint</link> shadow_width,
+                                                         const <link linkend="gchar">gchar</link> *font,
+                                                         <link linkend="gint">gint</link> height,
+                                                         <link linkend="GtkJustification">GtkJustification</link> just,
+                                                         const <link linkend="gchar">gchar</link> *text);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>pc</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>x</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>y</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>angle</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>fg</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>bg</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>transparent</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>border</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>border_space</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>border_width</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>shadow_width</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>font</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>height</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>just</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>text</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-pc-draw-pixmap" role="function">
+<title>gtk_plot_pc_draw_pixmap ()</title>
+<indexterm zone="gtk-plot-pc-draw-pixmap"><primary sortas="gtk_plot_pc_draw_pixmap">gtk_plot_pc_draw_pixmap</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_pc_draw_pixmap             (<link linkend="GtkPlotPC">GtkPlotPC</link> *pc,
+                                                         <link linkend="GdkPixmap">GdkPixmap</link> *pixmap,
+                                                         <link linkend="GdkBitmap">GdkBitmap</link> *mask,
+                                                         <link linkend="gint">gint</link> xsrc,
+                                                         <link linkend="gint">gint</link> ysrc,
+                                                         <link linkend="gint">gint</link> xdest,
+                                                         <link linkend="gint">gint</link> ydest,
+                                                         <link linkend="gint">gint</link> width,
+                                                         <link linkend="gint">gint</link> height,
+                                                         <link linkend="gdouble">gdouble</link> scale_x,
+                                                         <link linkend="gdouble">gdouble</link> scale_y);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>pc</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>pixmap</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>mask</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>xsrc</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>ysrc</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>xdest</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>ydest</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>width</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>height</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>scale_x</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>scale_y</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+
+
+
+
+</refentry>

@@ -1,0 +1,73 @@
+<!-- ##### SECTION Title ##### -->
+GtkPlotPixmap
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### STRUCT GtkPlotPixmap ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### ARG GtkPlotPixmap:mask-bitmap ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotPixmap:pixmap ##### -->
+<para>
+
+</para>
+
+<!-- ##### FUNCTION gtk_plot_pixmap_new ##### -->
+<para>
+
+</para>
+
+@pixmap: 
+@mask: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_pixmap_construct ##### -->
+<para>
+
+</para>
+
+@data: 
+@pixmap: 
+@mask: 
+
+
+<!-- ##### FUNCTION gtk_plot_pixmap_get_pixmap ##### -->
+<para>
+
+</para>
+
+@pixmap: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_pixmap_get_mask ##### -->
+<para>
+
+</para>
+
+@pixmap: 
+@Returns: 
+
+

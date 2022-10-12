@@ -1,0 +1,131 @@
+<!-- ##### SECTION Title ##### -->
+GtkPlotBubble
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### STRUCT GtkPlotBubble ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### ARG GtkPlotBubble:labels-precision ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotBubble:labels-prefix ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotBubble:labels-style ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotBubble:labels-suffix ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotBubble:scale-max ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotBubble:show-scale ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotBubble:size-max ##### -->
+<para>
+
+</para>
+
+<!-- ##### FUNCTION gtk_plot_bubble_new ##### -->
+<para>
+
+</para>
+
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_bubble_show_scale ##### -->
+<para>
+
+</para>
+
+@bubble: 
+@show: 
+
+
+<!-- ##### FUNCTION gtk_plot_bubble_set_scale_max ##### -->
+<para>
+
+</para>
+
+@bubble: 
+@scale_max: 
+
+
+<!-- ##### FUNCTION gtk_plot_bubble_set_size_max ##### -->
+<para>
+
+</para>
+
+@bubble: 
+@size_max: 
+
+
+<!-- ##### FUNCTION gtk_plot_bubble_set_labels_precision ##### -->
+<para>
+
+</para>
+
+@bubble: 
+@precision: 
+
+
+<!-- ##### FUNCTION gtk_plot_bubble_set_labels_style ##### -->
+<para>
+
+</para>
+
+@bubble: 
+@style: 
+
+
+<!-- ##### FUNCTION gtk_plot_bubble_set_labels_prefix ##### -->
+<para>
+
+</para>
+
+@bubble: 
+@prefix: 
+
+
+<!-- ##### FUNCTION gtk_plot_bubble_set_labels_suffix ##### -->
+<para>
+
+</para>
+
+@bubble: 
+@suffix: 
+
+

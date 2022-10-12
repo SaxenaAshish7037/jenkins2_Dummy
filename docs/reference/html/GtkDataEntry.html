@@ -1,0 +1,602 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GtkDataEntry</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="GtkExtra Reference Manual">
+<link rel="up" href="ch03.html" title="Widgets">
+<link rel="prev" href="GtkComboButton.html" title="GtkComboButton">
+<link rel="next" href="GtkDataTextView.html" title="GtkDataTextView">
+<meta name="generator" content="GTK-Doc V1.11 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="part" href="gtkextra.html" title="Part I. GtkExtra Overview">
+<link rel="part" href="gtkextrabase.html" title="Part II. GtkExtra Widgets and Objects">
+<link rel="chapter" href="ch01.html" title="Object Hierarchy">
+<link rel="chapter" href="ch02.html" title="Widget Gallery">
+<link rel="chapter" href="ch03.html" title="Widgets">
+<link rel="chapter" href="ch04.html" title="Data Formatter">
+<link rel="chapter" href="ch05.html" title="GtkExtra Versioning">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="GtkComboButton.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch03.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">GtkExtra Reference Manual</th>
+<td><a accesskey="n" href="GtkDataTextView.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#GtkDataEntry.synopsis" class="shortcut">Top</a>
+                 | 
+                <a href="#GtkDataEntry.description" class="shortcut">Description</a>
+                 | 
+                <a href="#GtkDataEntry.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                 | 
+                <a href="#GtkDataEntry.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+                 | 
+                <a href="#GtkDataEntry.properties" class="shortcut">Properties</a>
+</td></tr>
+</table>
+<div class="refentry" title="GtkDataEntry">
+<a name="GtkDataEntry"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GtkDataEntry.top_of_page"></a>GtkDataEntry</span></h2>
+<p>GtkDataEntry — a data entry widget, based on GtkEntry</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv" title="Synopsis">
+<a name="GtkDataEntry.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">
+
+#include &lt;gtkextra.h&gt;
+
+                    <a class="link" href="GtkDataEntry.html#GtkDataEntry-struct" title="GtkDataEntry">GtkDataEntry</a>;
+<a class="link" href="GtkDataEntry.html" title="GtkDataEntry">GtkDataEntry</a> *      <a class="link" href="GtkDataEntry.html#gtk-data-entry-new" title="gtk_data_entry_new ()">gtk_data_entry_new</a>                  (void);
+const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *       <a class="link" href="GtkDataEntry.html#gtk-data-entry-get-description" title="gtk_data_entry_get_description ()">gtk_data_entry_get_description</a>      (<a class="link" href="GtkDataEntry.html" title="GtkDataEntry">GtkDataEntry</a> *data_entry);
+void                <a class="link" href="GtkDataEntry.html#gtk-data-entry-set-description" title="gtk_data_entry_set_description ()">gtk_data_entry_set_description</a>      (<a class="link" href="GtkDataEntry.html" title="GtkDataEntry">GtkDataEntry</a> *data_entry,
+                                                         const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *description);
+const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *       <a class="link" href="GtkDataEntry.html#gtk-data-entry-get-data-type" title="gtk_data_entry_get_data_type ()">gtk_data_entry_get_data_type</a>        (<a class="link" href="GtkDataEntry.html" title="GtkDataEntry">GtkDataEntry</a> *data_entry);
+void                <a class="link" href="GtkDataEntry.html#gtk-data-entry-set-data-type" title="gtk_data_entry_set_data_type ()">gtk_data_entry_set_data_type</a>        (<a class="link" href="GtkDataEntry.html" title="GtkDataEntry">GtkDataEntry</a> *data_entry,
+                                                         const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *data_type);
+const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *       <a class="link" href="GtkDataEntry.html#gtk-data-entry-get-data-format" title="gtk_data_entry_get_data_format ()">gtk_data_entry_get_data_format</a>      (<a class="link" href="GtkDataEntry.html" title="GtkDataEntry">GtkDataEntry</a> *data_entry);
+void                <a class="link" href="GtkDataEntry.html#gtk-data-entry-set-data-format" title="gtk_data_entry_set_data_format ()">gtk_data_entry_set_data_format</a>      (<a class="link" href="GtkDataEntry.html" title="GtkDataEntry">GtkDataEntry</a> *data_entry,
+                                                         const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *data_format);
+const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *       <a class="link" href="GtkDataEntry.html#gtk-data-entry-get-text" title="gtk_data_entry_get_text ()">gtk_data_entry_get_text</a>             (<a class="link" href="GtkDataEntry.html" title="GtkDataEntry">GtkDataEntry</a> *data_entry);
+void                <a class="link" href="GtkDataEntry.html#gtk-data-entry-set-text" title="gtk_data_entry_set_text ()">gtk_data_entry_set_text</a>             (<a class="link" href="GtkDataEntry.html" title="GtkDataEntry">GtkDataEntry</a> *data_entry,
+                                                         const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *text);
+<a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                <a class="link" href="GtkDataEntry.html#gtk-data-entry-get-max-length-bytes" title="gtk_data_entry_get_max_length_bytes ()">gtk_data_entry_get_max_length_bytes</a> (<a class="link" href="GtkDataEntry.html" title="GtkDataEntry">GtkDataEntry</a> *data_entry);
+void                <a class="link" href="GtkDataEntry.html#gtk-data-entry-set-max-length-bytes" title="gtk_data_entry_set_max_length_bytes ()">gtk_data_entry_set_max_length_bytes</a> (<a class="link" href="GtkDataEntry.html" title="GtkDataEntry">GtkDataEntry</a> *data_entry,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> max_length_bytes);
+</pre>
+</div>
+<div class="refsect1" title="Object Hierarchy">
+<a name="GtkDataEntry.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a
+href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject"
+>GObject</a>
+   +----<a
+href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned"
+>GInitiallyUnowned</a>
+         +----<a
+href="http://library.gnome.org/devel/gtk3/GtkObject.html"
+>GtkObject</a>
+               +----<a
+href="http://library.gnome.org/devel/gtk3/GtkWidget.html"
+>GtkWidget</a>
+                     +----<a
+href="http://library.gnome.org/devel/gtk3/GtkEntry.html"
+>GtkEntry</a>
+                           +----GtkDataEntry
+</pre>
+</div>
+<div class="refsect1" title="Implemented Interfaces">
+<a name="GtkDataEntry.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+GtkDataEntry implements
+ AtkImplementorIface,  <a
+href="http://library.gnome.org/devel/gtk3/GtkBuildable.html"
+>GtkBuildable</a>,  <a
+href="http://library.gnome.org/devel/gtk3/GtkEditable.html"
+>GtkEditable</a> and  <a
+href="http://library.gnome.org/devel/gtk3/GtkCellEditable.html"
+>GtkCellEditable</a>.</p>
+</div>
+<div class="refsect1" title="Properties">
+<a name="GtkDataEntry.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="GtkDataEntry.html#GtkDataEntry--dataformat" title='The "dataformat" property'>dataformat</a>"               <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a>*                : Read / Write
+  "<a class="link" href="GtkDataEntry.html#GtkDataEntry--datatype" title='The "datatype" property'>datatype</a>"                 <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a>*                : Read / Write
+  "<a class="link" href="GtkDataEntry.html#GtkDataEntry--description" title='The "description" property'>description</a>"              <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a>*                : Read / Write
+  "<a class="link" href="GtkDataEntry.html#GtkDataEntry--max-length-bytes" title='The "max-length-bytes" property'>max-length-bytes</a>"         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write
+  "<a class="link" href="GtkDataEntry.html#GtkDataEntry--text" title='The "text" property'>text</a>"                     <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a>*                : Read / Write
+</pre>
+</div>
+<div class="refsect1" title="Description">
+<a name="GtkDataEntry.description"></a><h2>Description</h2>
+<p>
+GtkDataEntry provides additional properties: 
+</p>
+<p>
+- <a class="link" href="GtkDataEntry.html#GtkDataEntry--description" title='The "description" property'><span class="type">"description"</span></a> - no functionality, a place for 
+  private information that cannot be put anywhere else
+</p>
+<p>
+- <a class="link" href="GtkDataEntry.html#GtkDataEntry--datatype" title='The "datatype" property'><span class="type">"datatype"</span></a> - no functionality, a datatype hint
+  for the application because any widget content is text
+</p>
+<p>
+- <a class="link" href="GtkDataEntry.html#GtkDataEntry--dataformat" title='The "dataformat" property'><span class="type">"dataformat"</span></a> - a formatting instruction that 
+  controls what you see when the widget doesn't have input
+  focus
+</p>
+<p>
+- <a class="link" href="GtkDataEntry.html#GtkDataEntry--text" title='The "text" property'><span class="type">"text"</span></a> - set the contents of the widget. if the
+  widget doesn't have input focus text will be formatted
+  according to the data_format
+</p>
+<p>
+- <a class="link" href="GtkDataEntry.html#GtkDataEntry--max-length-bytes" title='The "max-length-bytes" property'><span class="type">"max-length-bytes"</span></a> - set the maximum byte 
+  length for the contents of the widget.
+</p>
+<p>
+The main reason for this widget is to provide a formatting  
+entry widget for numeric data like integer, float, money 
+which also supports NULL values (GtkSpinButton is nice but 
+doesn't support empty field values). Handling of Null values 
+is supported by all SQL database systems. The Null values are
+represented by empty field contents. 
+</p>
+<p>
+When editing field contents, all data formatting is removed 
+before the focus enters the widget. As soon as the focus 
+leaves the widget, data will be nicely formatted again. 
+</p>
+<p>
+As an additional feature, the minus sign (negative numbers) 
+can be entered at the end of the data. As soon as you leave 
+the field it will be placed properly in front of the number. 
+</p>
+<p>
+See also: <a class="link" href="gtkextra-GtkDataFormat.html#gtk-data-format" title="gtk_data_format ()"><code class="function">gtk_data_format()</code></a></p>
+<p>
+</p>
+</div>
+<div class="refsect1" title="Details">
+<a name="GtkDataEntry.details"></a><h2>Details</h2>
+<div class="refsect2" title="GtkDataEntry">
+<a name="GtkDataEntry-struct"></a><h3>GtkDataEntry</h3>
+<pre class="programlisting">typedef struct _GtkDataEntry GtkDataEntry;</pre>
+<p>
+The GtkDataEntry struct contains only private data. It should
+only be accessed through the functions described below.</p>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2" title="gtk_data_entry_new ()">
+<a name="gtk-data-entry-new"></a><h3>gtk_data_entry_new ()</h3>
+<pre class="programlisting"><a class="link" href="GtkDataEntry.html" title="GtkDataEntry">GtkDataEntry</a> *      gtk_data_entry_new                  (void);</pre>
+<p>
+Creates a new GtkDataEntry Widget.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> the new GtkDataEntry Widget 
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_data_entry_get_description ()">
+<a name="gtk-data-entry-get-description"></a><h3>gtk_data_entry_get_description ()</h3>
+<pre class="programlisting">const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *       gtk_data_entry_get_description      (<a class="link" href="GtkDataEntry.html" title="GtkDataEntry">GtkDataEntry</a> *data_entry);</pre>
+<p>
+Retrieves the <a class="link" href="GtkDataEntry.html" title="GtkDataEntry"><span class="type">GtkDataEntry</span></a> description.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>data_entry</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkDataEntry.html" title="GtkDataEntry"><span class="type">GtkDataEntry</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> a pointer to the contents of the widget as a
+     string. This string points to internally allocated
+     storage in the widget and must not be freed, modified or
+     stored.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_data_entry_set_description ()">
+<a name="gtk-data-entry-set-description"></a><h3>gtk_data_entry_set_description ()</h3>
+<pre class="programlisting">void                gtk_data_entry_set_description      (<a class="link" href="GtkDataEntry.html" title="GtkDataEntry">GtkDataEntry</a> *data_entry,
+                                                         const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *description);</pre>
+<p>
+Sets the GtkDataEntry description.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>data_entry</code></em> :</span></p></td>
+<td>  a <a class="link" href="GtkDataEntry.html" title="GtkDataEntry"><span class="type">GtkDataEntry</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>description</code></em> :</span></p></td>
+<td>  the description or NULL 
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_data_entry_get_data_type ()">
+<a name="gtk-data-entry-get-data-type"></a><h3>gtk_data_entry_get_data_type ()</h3>
+<pre class="programlisting">const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *       gtk_data_entry_get_data_type        (<a class="link" href="GtkDataEntry.html" title="GtkDataEntry">GtkDataEntry</a> *data_entry);</pre>
+<p>
+Retrieves the <a class="link" href="GtkDataEntry.html" title="GtkDataEntry"><span class="type">GtkDataEntry</span></a> data_type.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>data_entry</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkDataEntry.html" title="GtkDataEntry"><span class="type">GtkDataEntry</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> a pointer to the contents of the widget as a
+     string. This string points to internally allocated
+     storage in the widget and must not be freed, modified or
+     stored.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_data_entry_set_data_type ()">
+<a name="gtk-data-entry-set-data-type"></a><h3>gtk_data_entry_set_data_type ()</h3>
+<pre class="programlisting">void                gtk_data_entry_set_data_type        (<a class="link" href="GtkDataEntry.html" title="GtkDataEntry">GtkDataEntry</a> *data_entry,
+                                                         const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *data_type);</pre>
+<p>
+Sets the GtkDataEntry data type for application use.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>data_entry</code></em> :</span></p></td>
+<td>  a <a class="link" href="GtkDataEntry.html" title="GtkDataEntry"><span class="type">GtkDataEntry</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>data_type</code></em> :</span></p></td>
+<td>  the data type or NULL 
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_data_entry_get_data_format ()">
+<a name="gtk-data-entry-get-data-format"></a><h3>gtk_data_entry_get_data_format ()</h3>
+<pre class="programlisting">const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *       gtk_data_entry_get_data_format      (<a class="link" href="GtkDataEntry.html" title="GtkDataEntry">GtkDataEntry</a> *data_entry);</pre>
+<p>
+Retrieves the <a class="link" href="GtkDataEntry.html" title="GtkDataEntry"><span class="type">GtkDataEntry</span></a> data_format. 
+</p>
+<p>
+See <a class="link" href="gtkextra-GtkDataFormat.html#gtk-data-format" title="gtk_data_format ()"><code class="function">gtk_data_format()</code></a> for details.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>data_entry</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkDataEntry.html" title="GtkDataEntry"><span class="type">GtkDataEntry</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> a pointer to the contents of the widget as a
+     string. This string points to internally allocated
+     storage in the widget and must not be freed, modified or
+     stored.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_data_entry_set_data_format ()">
+<a name="gtk-data-entry-set-data-format"></a><h3>gtk_data_entry_set_data_format ()</h3>
+<pre class="programlisting">void                gtk_data_entry_set_data_format      (<a class="link" href="GtkDataEntry.html" title="GtkDataEntry">GtkDataEntry</a> *data_entry,
+                                                         const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *data_format);</pre>
+<p>
+Sets the GtkDataEntry data type for application use. The 
+display will not be refreshed upon change. 
+</p>
+<p>
+See <a class="link" href="gtkextra-GtkDataFormat.html#gtk-data-format" title="gtk_data_format ()"><code class="function">gtk_data_format()</code></a> for details.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>data_entry</code></em> :</span></p></td>
+<td>  a <a class="link" href="GtkDataEntry.html" title="GtkDataEntry"><span class="type">GtkDataEntry</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>data_format</code></em> :</span></p></td>
+<td>  the data type or NULL 
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_data_entry_get_text ()">
+<a name="gtk-data-entry-get-text"></a><h3>gtk_data_entry_get_text ()</h3>
+<pre class="programlisting">const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *       gtk_data_entry_get_text             (<a class="link" href="GtkDataEntry.html" title="GtkDataEntry">GtkDataEntry</a> *data_entry);</pre>
+<p>
+Retrieves the <a class="link" href="GtkDataEntry.html" title="GtkDataEntry"><span class="type">GtkDataEntry</span></a> contents. All formatting will be 
+removed.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>data_entry</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkDataEntry.html" title="GtkDataEntry"><span class="type">GtkDataEntry</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> a pointer to the contents of the widget as a
+     string. This string points to internally allocated
+     storage in the widget and must not be freed, modified or
+     stored.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_data_entry_set_text ()">
+<a name="gtk-data-entry-set-text"></a><h3>gtk_data_entry_set_text ()</h3>
+<pre class="programlisting">void                gtk_data_entry_set_text             (<a class="link" href="GtkDataEntry.html" title="GtkDataEntry">GtkDataEntry</a> *data_entry,
+                                                         const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *text);</pre>
+<p>
+Sets the GtkDataEntry contents. The contents will be 
+formatted due to the current data_format.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>data_entry</code></em> :</span></p></td>
+<td>  a <a class="link" href="GtkDataEntry.html" title="GtkDataEntry"><span class="type">GtkDataEntry</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>text</code></em> :</span></p></td>
+<td>  the contents to be set
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_data_entry_get_max_length_bytes ()">
+<a name="gtk-data-entry-get-max-length-bytes"></a><h3>gtk_data_entry_get_max_length_bytes ()</h3>
+<pre class="programlisting"><a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                gtk_data_entry_get_max_length_bytes (<a class="link" href="GtkDataEntry.html" title="GtkDataEntry">GtkDataEntry</a> *data_entry);</pre>
+<p>
+Retrieves the maximum byte length for the contents of  
+<a class="link" href="GtkDataEntry.html" title="GtkDataEntry"><span class="type">GtkDataEntry</span></a>.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>data_entry</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkDataEntry.html" title="GtkDataEntry"><span class="type">GtkDataEntry</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> maximum byte length or 0. 
+ 
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 3.0.6</p>
+</div>
+<hr>
+<div class="refsect2" title="gtk_data_entry_set_max_length_bytes ()">
+<a name="gtk-data-entry-set-max-length-bytes"></a><h3>gtk_data_entry_set_max_length_bytes ()</h3>
+<pre class="programlisting">void                gtk_data_entry_set_max_length_bytes (<a class="link" href="GtkDataEntry.html" title="GtkDataEntry">GtkDataEntry</a> *data_entry,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> max_length_bytes);</pre>
+<p>
+Sets the maximum byte length for the contents of the 
+<a class="link" href="GtkDataEntry.html" title="GtkDataEntry"><span class="type">GtkDataEntry</span></a>. Existing content will not be truncted.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>data_entry</code></em> :</span></p></td>
+<td>  a <a class="link" href="GtkDataEntry.html" title="GtkDataEntry"><span class="type">GtkDataEntry</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>max_length_bytes</code></em> :</span></p></td>
+<td>  maximum byte length or 0
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 3.0.6</p>
+</div>
+</div>
+<div class="refsect1" title="Property Details">
+<a name="GtkDataEntry.property-details"></a><h2>Property Details</h2>
+<div class="refsect2" title='The "dataformat" property'>
+<a name="GtkDataEntry--dataformat"></a><h3>The <code class="literal">"dataformat"</code> property</h3>
+<pre class="programlisting">  "dataformat"               <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a>*                : Read / Write</pre>
+<p>
+a formatting string that controls what you see when the
+widget doesn't contain input focus. 
+</p>
+<p>
+See <a class="link" href="gtkextra-GtkDataFormat.html#gtk-data-format" title="gtk_data_format ()"><code class="function">gtk_data_format()</code></a> for details.</p>
+<p>
+</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2" title='The "datatype" property'>
+<a name="GtkDataEntry--datatype"></a><h3>The <code class="literal">"datatype"</code> property</h3>
+<pre class="programlisting">  "datatype"                 <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a>*                : Read / Write</pre>
+<p>
+no functionality, a datatype hint for the application because 
+any widget content is text.</p>
+<p>
+</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2" title='The "description" property'>
+<a name="GtkDataEntry--description"></a><h3>The <code class="literal">"description"</code> property</h3>
+<pre class="programlisting">  "description"              <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a>*                : Read / Write</pre>
+<p>
+Description of the GtkDataEntry, no functionality, a place 
+for private information that cannot be put anywhere else.</p>
+<p>
+</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2" title='The "max-length-bytes" property'>
+<a name="GtkDataEntry--max-length-bytes"></a><h3>The <code class="literal">"max-length-bytes"</code> property</h3>
+<pre class="programlisting">  "max-length-bytes"         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write</pre>
+<p>
+Set the maximum length in bytes for the GtkDataEntry. For 
+details see <a class="link" href="GtkDataEntry.html#gtk-data-entry-set-max-length-bytes" title="gtk_data_entry_set_max_length_bytes ()"><span class="type">gtk_data_entry_set_max_length_bytes</span></a>. 
+</p>
+<p>
+Sometimes, systems cannot handle UTF-8 string length
+correctly, to overcome this problem, you can use the maximum 
+string length in bytes. When setting both limits, max-length 
+ and max-length-bytes, both must be fulfilled.</p>
+<p>
+</p>
+<p>Allowed values: [0,65535]</p>
+<p>Default value: 0</p>
+<p>Since 3.0.6</p>
+</div>
+<hr>
+<div class="refsect2" title='The "text" property'>
+<a name="GtkDataEntry--text"></a><h3>The <code class="literal">"text"</code> property</h3>
+<pre class="programlisting">  "text"                     <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a>*                : Read / Write</pre>
+<p>
+Set the contents of the GtkDataEntry. For details see 
+<a class="link" href="GtkDataEntry.html#gtk-data-entry-set-text" title="gtk_data_entry_set_text ()"><span class="type">gtk_data_entry_set_text</span></a>.</p>
+<p>
+</p>
+<p>Default value: ""</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.11</div>
+</body>
+</html>

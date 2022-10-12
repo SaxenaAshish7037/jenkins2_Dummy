@@ -1,0 +1,66 @@
+<!-- ##### SECTION Title ##### -->
+GtkPlotCanvasEllipse
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### STRUCT GtkPlotCanvasEllipse ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### ARG GtkPlotCanvasEllipse:color-bg ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotCanvasEllipse:filled ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotCanvasEllipse:line ##### -->
+<para>
+
+</para>
+
+<!-- ##### FUNCTION gtk_plot_canvas_ellipse_new ##### -->
+<para>
+
+</para>
+
+@style: 
+@width: 
+@fg: 
+@bg: 
+@fill: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_canvas_ellipse_set_attributes ##### -->
+<para>
+
+</para>
+
+@ellipse: 
+@style: 
+@width: 
+@fg: 
+@bg: 
+@fill: 
+
+

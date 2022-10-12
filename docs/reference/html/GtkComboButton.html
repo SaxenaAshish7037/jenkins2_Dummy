@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GtkComboButton</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="GtkExtra Reference Manual">
+<link rel="up" href="ch03.html" title="Widgets">
+<link rel="prev" href="GtkColorCombo.html" title="GtkColorCombo">
+<link rel="next" href="GtkDataEntry.html" title="GtkDataEntry">
+<meta name="generator" content="GTK-Doc V1.11 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="part" href="gtkextra.html" title="Part I. GtkExtra Overview">
+<link rel="part" href="gtkextrabase.html" title="Part II. GtkExtra Widgets and Objects">
+<link rel="chapter" href="ch01.html" title="Object Hierarchy">
+<link rel="chapter" href="ch02.html" title="Widget Gallery">
+<link rel="chapter" href="ch03.html" title="Widgets">
+<link rel="chapter" href="ch04.html" title="Data Formatter">
+<link rel="chapter" href="ch05.html" title="GtkExtra Versioning">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="GtkColorCombo.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch03.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">GtkExtra Reference Manual</th>
+<td><a accesskey="n" href="GtkDataEntry.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#GtkComboButton.synopsis" class="shortcut">Top</a>
+                 | 
+                <a href="#GtkComboButton.description" class="shortcut">Description</a>
+                 | 
+                <a href="#GtkComboButton.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                 | 
+                <a href="#GtkComboButton.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+</td></tr>
+</table>
+<div class="refentry" title="GtkComboButton">
+<a name="GtkComboButton"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GtkComboButton.top_of_page"></a>GtkComboButton</span></h2>
+<p>GtkComboButton — A combo button widget for GTK</p>
+</td>
+<td valign="top" align="right"><img src=""></td>
+</tr></table></div>
+<div class="refsynopsisdiv" title="Synopsis">
+<a name="GtkComboButton.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">
+
+#include &lt;gtkextra.h&gt;
+
+                    <a class="link" href="GtkComboButton.html#GtkComboButton-struct" title="GtkComboButton">GtkComboButton</a>;
+<a
+href="http://library.gnome.org/devel/gtk3/GtkWidget.html"
+>GtkWidget</a> *         <a class="link" href="GtkComboButton.html#gtk-combo-button-new" title="gtk_combo_button_new ()">gtk_combo_button_new</a>                (void);
+void                <a class="link" href="GtkComboButton.html#gtk-combo-button-hide-popdown-window" title="gtk_combo_button_hide_popdown_window ()">gtk_combo_button_hide_popdown_window</a>
+                                                        (<a class="link" href="GtkComboButton.html" title="GtkComboButton">GtkComboButton</a> *combo_button);
+</pre>
+</div>
+<div class="refsect1" title="Object Hierarchy">
+<a name="GtkComboButton.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a
+href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject"
+>GObject</a>
+   +----<a
+href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned"
+>GInitiallyUnowned</a>
+         +----<a
+href="http://library.gnome.org/devel/gtk3/GtkObject.html"
+>GtkObject</a>
+               +----<a
+href="http://library.gnome.org/devel/gtk3/GtkWidget.html"
+>GtkWidget</a>
+                     +----<a
+href="http://library.gnome.org/devel/gtk3/GtkContainer.html"
+>GtkContainer</a>
+                           +----<a
+href="http://library.gnome.org/devel/gtk3/GtkBox.html"
+>GtkBox</a>
+                                 +----<a
+href="http://library.gnome.org/devel/gtk3/GtkHBox.html"
+>GtkHBox</a>
+                                       +----GtkComboButton
+                                             +----<a class="link" href="GtkBorderCombo.html" title="GtkBorderCombo">GtkBorderCombo</a>
+                                             +----<a class="link" href="GtkColorCombo.html" title="GtkColorCombo">GtkColorCombo</a>
+                                             +----<a class="link" href="GtkToggleCombo.html" title="GtkToggleCombo">GtkToggleCombo</a>
+</pre>
+</div>
+<div class="refsect1" title="Implemented Interfaces">
+<a name="GtkComboButton.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+GtkComboButton implements
+ AtkImplementorIface,  <a
+href="http://library.gnome.org/devel/gtk3/GtkBuildable.html"
+>GtkBuildable</a> and  <a
+href="http://library.gnome.org/devel/gtk3/gtk2-Orientable.html#GtkOrientable"
+>GtkOrientable</a>.</p>
+</div>
+<div class="refsect1" title="Description">
+<a name="GtkComboButton.description"></a><h2>Description</h2>
+<p>
+</p>
+<p>
+</p>
+</div>
+<div class="refsect1" title="Details">
+<a name="GtkComboButton.details"></a><h2>Details</h2>
+<div class="refsect2" title="GtkComboButton">
+<a name="GtkComboButton-struct"></a><h3>GtkComboButton</h3>
+<pre class="programlisting">typedef struct _GtkComboButton GtkComboButton;</pre>
+<p>
+The GtkComboButton struct contains only private data.
+It should only be accessed through the functions described below.</p>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2" title="gtk_combo_button_new ()">
+<a name="gtk-combo-button-new"></a><h3>gtk_combo_button_new ()</h3>
+<pre class="programlisting"><a
+href="http://library.gnome.org/devel/gtk3/GtkWidget.html"
+>GtkWidget</a> *         gtk_combo_button_new                (void);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_combo_button_hide_popdown_window ()">
+<a name="gtk-combo-button-hide-popdown-window"></a><h3>gtk_combo_button_hide_popdown_window ()</h3>
+<pre class="programlisting">void                gtk_combo_button_hide_popdown_window
+                                                        (<a class="link" href="GtkComboButton.html" title="GtkComboButton">GtkComboButton</a> *combo_button);</pre>
+<p>
+Hides the popdown window of pressed <a class="link" href="GtkComboButton.html" title="GtkComboButton"><span class="type">GtkComboButton</span></a>.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>combo_button</code></em> :</span></p></td>
+<td> the <a class="link" href="GtkComboButton.html" title="GtkComboButton"><span class="type">GtkComboButton</span></a> widget.
+</td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.11</div>
+</body>
+</html>

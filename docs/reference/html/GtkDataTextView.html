@@ -1,0 +1,439 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GtkDataTextView</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="GtkExtra Reference Manual">
+<link rel="up" href="ch03.html" title="Widgets">
+<link rel="prev" href="GtkDataEntry.html" title="GtkDataEntry">
+<link rel="next" href="GtkDirTree.html" title="GtkDirTree">
+<meta name="generator" content="GTK-Doc V1.11 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="part" href="gtkextra.html" title="Part I. GtkExtra Overview">
+<link rel="part" href="gtkextrabase.html" title="Part II. GtkExtra Widgets and Objects">
+<link rel="chapter" href="ch01.html" title="Object Hierarchy">
+<link rel="chapter" href="ch02.html" title="Widget Gallery">
+<link rel="chapter" href="ch03.html" title="Widgets">
+<link rel="chapter" href="ch04.html" title="Data Formatter">
+<link rel="chapter" href="ch05.html" title="GtkExtra Versioning">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="GtkDataEntry.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch03.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">GtkExtra Reference Manual</th>
+<td><a accesskey="n" href="GtkDirTree.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#GtkDataTextView.synopsis" class="shortcut">Top</a>
+                 | 
+                <a href="#GtkDataTextView.description" class="shortcut">Description</a>
+                 | 
+                <a href="#GtkDataTextView.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                 | 
+                <a href="#GtkDataTextView.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+                 | 
+                <a href="#GtkDataTextView.properties" class="shortcut">Properties</a>
+</td></tr>
+</table>
+<div class="refentry" title="GtkDataTextView">
+<a name="GtkDataTextView"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GtkDataTextView.top_of_page"></a>GtkDataTextView</span></h2>
+<p>GtkDataTextView — a data textview widget, based on 
+     	     GtkTextView</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv" title="Synopsis">
+<a name="GtkDataTextView.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">
+
+#include &lt;gtkextra.h&gt;
+
+                    <a class="link" href="GtkDataTextView.html#GtkDataTextView-struct" title="GtkDataTextView">GtkDataTextView</a>;
+<a class="link" href="GtkDataTextView.html" title="GtkDataTextView">GtkDataTextView</a> *   <a class="link" href="GtkDataTextView.html#gtk-data-text-view-new" title="gtk_data_text_view_new ()">gtk_data_text_view_new</a>              (void);
+const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *       <a class="link" href="GtkDataTextView.html#gtk-data-text-view-get-description" title="gtk_data_text_view_get_description ()">gtk_data_text_view_get_description</a>  (<a class="link" href="GtkDataTextView.html" title="GtkDataTextView">GtkDataTextView</a> *data_text_view);
+<a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                <a class="link" href="GtkDataTextView.html#gtk-data-text-view-get-max-length" title="gtk_data_text_view_get_max_length ()">gtk_data_text_view_get_max_length</a>   (<a class="link" href="GtkDataTextView.html" title="GtkDataTextView">GtkDataTextView</a> *data_text_view);
+<a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                <a class="link" href="GtkDataTextView.html#gtk-data-text-view-get-max-length-bytes" title="gtk_data_text_view_get_max_length_bytes ()">gtk_data_text_view_get_max_length_bytes</a>
+                                                        (<a class="link" href="GtkDataTextView.html" title="GtkDataTextView">GtkDataTextView</a> *data_text_view);
+void                <a class="link" href="GtkDataTextView.html#gtk-data-text-view-set-description" title="gtk_data_text_view_set_description ()">gtk_data_text_view_set_description</a>  (<a class="link" href="GtkDataTextView.html" title="GtkDataTextView">GtkDataTextView</a> *data_text_view,
+                                                         const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *description);
+void                <a class="link" href="GtkDataTextView.html#gtk-data-text-view-set-max-length" title="gtk_data_text_view_set_max_length ()">gtk_data_text_view_set_max_length</a>   (<a class="link" href="GtkDataTextView.html" title="GtkDataTextView">GtkDataTextView</a> *data_text_view,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> max_length);
+void                <a class="link" href="GtkDataTextView.html#gtk-data-text-view-set-max-length-bytes" title="gtk_data_text_view_set_max_length_bytes ()">gtk_data_text_view_set_max_length_bytes</a>
+                                                        (<a class="link" href="GtkDataTextView.html" title="GtkDataTextView">GtkDataTextView</a> *data_text_view,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> max_length_bytes);
+</pre>
+</div>
+<div class="refsect1" title="Object Hierarchy">
+<a name="GtkDataTextView.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a
+href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject"
+>GObject</a>
+   +----<a
+href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned"
+>GInitiallyUnowned</a>
+         +----<a
+href="http://library.gnome.org/devel/gtk3/GtkObject.html"
+>GtkObject</a>
+               +----<a
+href="http://library.gnome.org/devel/gtk3/GtkWidget.html"
+>GtkWidget</a>
+                     +----<a
+href="http://library.gnome.org/devel/gtk3/GtkContainer.html"
+>GtkContainer</a>
+                           +----<a
+href="http://library.gnome.org/devel/gtk3/GtkTextView.html"
+>GtkTextView</a>
+                                 +----GtkDataTextView
+</pre>
+</div>
+<div class="refsect1" title="Implemented Interfaces">
+<a name="GtkDataTextView.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+GtkDataTextView implements
+ AtkImplementorIface and  <a
+href="http://library.gnome.org/devel/gtk3/GtkBuildable.html"
+>GtkBuildable</a>.</p>
+</div>
+<div class="refsect1" title="Properties">
+<a name="GtkDataTextView.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="GtkDataTextView.html#GtkDataTextView--description" title='The "description" property'>description</a>"              <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a>*                : Read / Write
+  "<a class="link" href="GtkDataTextView.html#GtkDataTextView--max-length" title='The "max-length" property'>max-length</a>"               <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write
+  "<a class="link" href="GtkDataTextView.html#GtkDataTextView--max-length-bytes" title='The "max-length-bytes" property'>max-length-bytes</a>"         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write
+</pre>
+</div>
+<div class="refsect1" title="Description">
+<a name="GtkDataTextView.description"></a><h2>Description</h2>
+<p>
+GtkDataTextView provides additional properties: 
+</p>
+<p>
+- <a class="link" href="GtkDataTextView.html#GtkDataTextView--description" title='The "description" property'><span class="type">"description"</span></a> - no functionality, a place for 
+  private information that cannot be put anywhere else
+</p>
+<p>
+- <a class="link" href="GtkDataTextView.html#GtkDataTextView--max-length" title='The "max-length" property'><span class="type">"max-length"</span></a> - set the maximum character 
+  length for the contents of the widget.
+</p>
+<p>
+- <a class="link" href="GtkDataTextView.html#GtkDataTextView--max-length-bytes" title='The "max-length-bytes" property'><span class="type">"max-length-bytes"</span></a> - set the maximum byte 
+  length for the contents of the widget.
+</p>
+<p>
+The main reason for this widget is to provide a length limit 
+for text contents, required by SQL database systems. There 
+is always a limit, no matter what you do. 
+ 
+Some database systems may handle character length of UTF-8 
+strings correctly, others may not. Choose the appropriate 
+limit for your system, characters or bytes.
+ 
+Note that setting a byte length limit &gt; 0 on a datatextview 
+may slow down text insertions. The  byte length limit is 
+imposed upon <a
+href="http://library.gnome.org/devel/gtk3/GtkTextBuffer.html#gtk-text-buffer-get-text"
+><code class="function">gtk_text_buffer_get_text()</code></a> including invisible 
+content. See <a
+href="http://library.gnome.org/devel/gtk3/GtkTextBuffer.html#gtk-text-buffer-get-text"
+><code class="function">gtk_text_buffer_get_text()</code></a> for details.</p>
+<p>
+</p>
+</div>
+<div class="refsect1" title="Details">
+<a name="GtkDataTextView.details"></a><h2>Details</h2>
+<div class="refsect2" title="GtkDataTextView">
+<a name="GtkDataTextView-struct"></a><h3>GtkDataTextView</h3>
+<pre class="programlisting">typedef struct _GtkDataTextView GtkDataTextView;</pre>
+<p>
+The GtkDataTextView struct contains only private data. It should
+only be accessed through the functions described below.</p>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2" title="gtk_data_text_view_new ()">
+<a name="gtk-data-text-view-new"></a><h3>gtk_data_text_view_new ()</h3>
+<pre class="programlisting"><a class="link" href="GtkDataTextView.html" title="GtkDataTextView">GtkDataTextView</a> *   gtk_data_text_view_new              (void);</pre>
+<p>
+Creates a new GtkDataTextView Widget.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> the new GtkDataTextView Widget 
+
+</td>
+</tr></tbody>
+</table></div>
+<p class="since">Since 3.0.6</p>
+</div>
+<hr>
+<div class="refsect2" title="gtk_data_text_view_get_description ()">
+<a name="gtk-data-text-view-get-description"></a><h3>gtk_data_text_view_get_description ()</h3>
+<pre class="programlisting">const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *       gtk_data_text_view_get_description  (<a class="link" href="GtkDataTextView.html" title="GtkDataTextView">GtkDataTextView</a> *data_text_view);</pre>
+<p>
+Retrieves the <a class="link" href="GtkDataTextView.html" title="GtkDataTextView"><span class="type">GtkDataTextView</span></a> description.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>data_text_view</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkDataTextView.html" title="GtkDataTextView"><span class="type">GtkDataTextView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> a pointer to the contents of the widget as a
+     string. This string points to internally allocated
+     storage in the widget and must not be freed, modified or
+     stored.
+ 
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 3.0.6</p>
+</div>
+<hr>
+<div class="refsect2" title="gtk_data_text_view_get_max_length ()">
+<a name="gtk-data-text-view-get-max-length"></a><h3>gtk_data_text_view_get_max_length ()</h3>
+<pre class="programlisting"><a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                gtk_data_text_view_get_max_length   (<a class="link" href="GtkDataTextView.html" title="GtkDataTextView">GtkDataTextView</a> *data_text_view);</pre>
+<p>
+Retrieves the maximum character length for the contents of  
+<a class="link" href="GtkDataTextView.html" title="GtkDataTextView"><span class="type">GtkDataTextView</span></a>.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>data_text_view</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkDataTextView.html" title="GtkDataTextView"><span class="type">GtkDataTextView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> maximum byte length or 0. 
+ 
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 3.0.6</p>
+</div>
+<hr>
+<div class="refsect2" title="gtk_data_text_view_get_max_length_bytes ()">
+<a name="gtk-data-text-view-get-max-length-bytes"></a><h3>gtk_data_text_view_get_max_length_bytes ()</h3>
+<pre class="programlisting"><a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                gtk_data_text_view_get_max_length_bytes
+                                                        (<a class="link" href="GtkDataTextView.html" title="GtkDataTextView">GtkDataTextView</a> *data_text_view);</pre>
+<p>
+Retrieves the maximum byte length for the contents of  
+<a class="link" href="GtkDataTextView.html" title="GtkDataTextView"><span class="type">GtkDataTextView</span></a> data_format.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>data_text_view</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkDataTextView.html" title="GtkDataTextView"><span class="type">GtkDataTextView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> maximum byte length or 0. 
+ 
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 3.0.6</p>
+</div>
+<hr>
+<div class="refsect2" title="gtk_data_text_view_set_description ()">
+<a name="gtk-data-text-view-set-description"></a><h3>gtk_data_text_view_set_description ()</h3>
+<pre class="programlisting">void                gtk_data_text_view_set_description  (<a class="link" href="GtkDataTextView.html" title="GtkDataTextView">GtkDataTextView</a> *data_text_view,
+                                                         const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *description);</pre>
+<p>
+Sets the GtkDataTextView description.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>data_text_view</code></em> :</span></p></td>
+<td>  a <a class="link" href="GtkDataTextView.html" title="GtkDataTextView"><span class="type">GtkDataTextView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>description</code></em> :</span></p></td>
+<td>  the description or NULL 
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 3.0.6</p>
+</div>
+<hr>
+<div class="refsect2" title="gtk_data_text_view_set_max_length ()">
+<a name="gtk-data-text-view-set-max-length"></a><h3>gtk_data_text_view_set_max_length ()</h3>
+<pre class="programlisting">void                gtk_data_text_view_set_max_length   (<a class="link" href="GtkDataTextView.html" title="GtkDataTextView">GtkDataTextView</a> *data_text_view,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> max_length);</pre>
+<p>
+Sets the maximum character length for the contents of the 
+<a class="link" href="GtkDataTextView.html" title="GtkDataTextView"><span class="type">GtkDataTextView</span></a>. Existing content will not be truncted.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>data_text_view</code></em> :</span></p></td>
+<td>  a <a class="link" href="GtkDataTextView.html" title="GtkDataTextView"><span class="type">GtkDataTextView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>max_length</code></em> :</span></p></td>
+<td>  maximum character length or 0
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 3.0.6</p>
+</div>
+<hr>
+<div class="refsect2" title="gtk_data_text_view_set_max_length_bytes ()">
+<a name="gtk-data-text-view-set-max-length-bytes"></a><h3>gtk_data_text_view_set_max_length_bytes ()</h3>
+<pre class="programlisting">void                gtk_data_text_view_set_max_length_bytes
+                                                        (<a class="link" href="GtkDataTextView.html" title="GtkDataTextView">GtkDataTextView</a> *data_text_view,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> max_length_bytes);</pre>
+<p>
+Sets the maximum byte length for the contents of the 
+GtkDataTextView. Existing content will not be truncted.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>data_text_view</code></em> :</span></p></td>
+<td>  a <a class="link" href="GtkDataTextView.html" title="GtkDataTextView"><span class="type">GtkDataTextView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>max_length_bytes</code></em> :</span></p></td>
+<td>  maximum byte length or 0
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 3.0.6</p>
+</div>
+</div>
+<div class="refsect1" title="Property Details">
+<a name="GtkDataTextView.property-details"></a><h2>Property Details</h2>
+<div class="refsect2" title='The "description" property'>
+<a name="GtkDataTextView--description"></a><h3>The <code class="literal">"description"</code> property</h3>
+<pre class="programlisting">  "description"              <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a>*                : Read / Write</pre>
+<p>
+Description of the GtkDataTextView, no functionality, a place
+for private information that cannot be put anywhere else.</p>
+<p>
+</p>
+<p>Default value: ""</p>
+<p>Since 3.0.6</p>
+</div>
+<hr>
+<div class="refsect2" title='The "max-length" property'>
+<a name="GtkDataTextView--max-length"></a><h3>The <code class="literal">"max-length"</code> property</h3>
+<pre class="programlisting">  "max-length"               <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write</pre>
+<p>
+Set the maximum length in characters for the GtkDataTextView.
+For details see <a class="link" href="GtkDataTextView.html#gtk-data-text-view-set-max-length" title="gtk_data_text_view_set_max_length ()"><span class="type">gtk_data_text_view_set_max_length</span></a>. 
+</p>
+<p>
+Sometimes, systems cannot handle UTF-8 string length
+correctly, to overcome this problem, you can use the maximum 
+string length in bytes. When setting both limits, max-length 
+ and max-length-bytes, both must be fulfilled.</p>
+<p>
+</p>
+<p>Allowed values: [0,1073741823]</p>
+<p>Default value: 0</p>
+<p>Since 3.0.6</p>
+</div>
+<hr>
+<div class="refsect2" title='The "max-length-bytes" property'>
+<a name="GtkDataTextView--max-length-bytes"></a><h3>The <code class="literal">"max-length-bytes"</code> property</h3>
+<pre class="programlisting">  "max-length-bytes"         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write</pre>
+<p>
+Set the maximum length in bytes for the GtkDataTextView. For 
+details see <a class="link" href="GtkDataTextView.html#gtk-data-text-view-set-max-length-bytes" title="gtk_data_text_view_set_max_length_bytes ()"><span class="type">gtk_data_text_view_set_max_length_bytes</span></a>. 
+</p>
+<p>
+Sometimes, systems cannot handle UTF-8 string length
+correctly, to overcome this problem, you can use the maximum 
+string length in bytes. When setting both limits, max-length 
+ and max-length-bytes, both must be fulfilled.</p>
+<p>
+</p>
+<p>Allowed values: [0,1073741823]</p>
+<p>Default value: 0</p>
+<p>Since 3.0.6</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.11</div>
+</body>
+</html>

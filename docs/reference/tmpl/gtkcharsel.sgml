@@ -1,0 +1,51 @@
+<!-- ##### SECTION Title ##### -->
+GtkCharSelection
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### STRUCT GtkCharSelection ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### FUNCTION gtk_char_selection_new ##### -->
+<para>
+
+</para>
+
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_char_selection_set_selection ##### -->
+<para>
+
+</para>
+
+@charsel: 
+@selection: 
+
+
+<!-- ##### FUNCTION gtk_char_selection_get_selection ##### -->
+<para>
+
+</para>
+
+@charsel: 
+@Returns: 
+
+

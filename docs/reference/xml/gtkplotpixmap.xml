@@ -1,0 +1,165 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+<!ENTITY version SYSTEM "version.xml">
+]>
+<!--ENTITY index-Objects-Grouped SYSTEM "objects_grouped.sgml"-->
+<refentry id="GtkPlotPixmap">
+<refmeta>
+<refentrytitle role="top_of_page" id="GtkPlotPixmap.top_of_page">GtkPlotPixmap</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GTKEXTRA Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>GtkPlotPixmap</refname>
+<refpurpose>Pixmap plots widget.</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="GtkPlotPixmap.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>
+
+#include &lt;gtkextra.h&gt;
+
+                    <link linkend="GtkPlotPixmap-struct">GtkPlotPixmap</link>;
+<link linkend="GtkWidget">GtkWidget</link>*          <link linkend="gtk-plot-pixmap-new">gtk_plot_pixmap_new</link>                 (<link linkend="GdkPixmap">GdkPixmap</link> *pixmap,
+                                                         <link linkend="GdkBitmap">GdkBitmap</link> *mask);
+<link linkend="void">void</link>                <link linkend="gtk-plot-pixmap-construct">gtk_plot_pixmap_construct</link>           (<link linkend="GtkPlotPixmap">GtkPlotPixmap</link> *data,
+                                                         <link linkend="GdkPixmap">GdkPixmap</link> *pixmap,
+                                                         <link linkend="GdkBitmap">GdkBitmap</link> *mask);
+<link linkend="GdkPixmap">GdkPixmap</link>*          <link linkend="gtk-plot-pixmap-get-pixmap">gtk_plot_pixmap_get_pixmap</link>          (<link linkend="GtkPlotPixmap">GtkPlotPixmap</link> *pixmap);
+<link linkend="GdkBitmap">GdkBitmap</link>*          <link linkend="gtk-plot-pixmap-get-mask">gtk_plot_pixmap_get_mask</link>            (<link linkend="GtkPlotPixmap">GtkPlotPixmap</link> *pixmap);
+</synopsis>
+</refsynopsisdiv>
+
+<refsect1 id="GtkPlotPixmap.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+  <link linkend="GObject">GObject</link>
+   +----<link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+         +----<link linkend="GtkObject">GtkObject</link>
+               +----<link linkend="GtkWidget">GtkWidget</link>
+                     +----<link linkend="GtkPlotData">GtkPlotData</link>
+                           +----GtkPlotPixmap
+</synopsis>
+</refsect1>
+
+
+
+<refsect1 id="GtkPlotPixmap.implemented-interfaces" role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+GtkPlotPixmap implements
+ <link linkend="AtkImplementorIface">AtkImplementorIface</link> and  <link linkend="GtkBuildable">GtkBuildable</link>.</para>
+</refsect1>
+
+
+<refsect1 id="GtkPlotPixmap.properties" role="properties">
+<title role="properties.title">Properties</title>
+<synopsis>
+  &quot;<link linkend="GtkPlotPixmap--mask-bitmap">mask-bitmap</link>&quot;              <link linkend="gpointer">gpointer</link>              : Read / Write
+  &quot;<link linkend="GtkPlotPixmap--pixmap">pixmap</link>&quot;                   <link linkend="gpointer">gpointer</link>              : Read / Write
+</synopsis>
+</refsect1>
+
+
+
+<refsect1 id="GtkPlotPixmap.description" role="desc">
+<title role="desc.title">Description</title>
+<para>
+FIXME:: Need long description.</para>
+<para>
+</para>
+</refsect1>
+
+<refsect1 id="GtkPlotPixmap.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="GtkPlotPixmap-struct" role="struct">
+<title>GtkPlotPixmap</title>
+<indexterm zone="GtkPlotPixmap-struct"><primary sortas="GtkPlotPixmap">GtkPlotPixmap</primary></indexterm><programlisting>typedef struct _GtkPlotPixmap GtkPlotPixmap;</programlisting>
+<para>
+The GtkPlotPixmap struct contains only private data.
+It should only be accessed through the functions described below.</para>
+<para>
+</para></refsect2>
+<refsect2 id="gtk-plot-pixmap-new" role="function">
+<title>gtk_plot_pixmap_new ()</title>
+<indexterm zone="gtk-plot-pixmap-new"><primary sortas="gtk_plot_pixmap_new">gtk_plot_pixmap_new</primary></indexterm><programlisting><link linkend="GtkWidget">GtkWidget</link>*          gtk_plot_pixmap_new                 (<link linkend="GdkPixmap">GdkPixmap</link> *pixmap,
+                                                         <link linkend="GdkBitmap">GdkBitmap</link> *mask);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>pixmap</parameter>&#160;:</term>
+<listitem><simpara> a GdkPixmap.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>mask</parameter>&#160;:</term>
+<listitem><simpara> 
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara> a new GtkWidget.
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-pixmap-construct" role="function">
+<title>gtk_plot_pixmap_construct ()</title>
+<indexterm zone="gtk-plot-pixmap-construct"><primary sortas="gtk_plot_pixmap_construct">gtk_plot_pixmap_construct</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_pixmap_construct           (<link linkend="GtkPlotPixmap">GtkPlotPixmap</link> *data,
+                                                         <link linkend="GdkPixmap">GdkPixmap</link> *pixmap,
+                                                         <link linkend="GdkBitmap">GdkBitmap</link> *mask);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>data</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>pixmap</parameter>&#160;:</term>
+<listitem><simpara> a GdkPixmap
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>mask</parameter>&#160;:</term>
+<listitem><simpara> 
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-pixmap-get-pixmap" role="function">
+<title>gtk_plot_pixmap_get_pixmap ()</title>
+<indexterm zone="gtk-plot-pixmap-get-pixmap"><primary sortas="gtk_plot_pixmap_get_pixmap">gtk_plot_pixmap_get_pixmap</primary></indexterm><programlisting><link linkend="GdkPixmap">GdkPixmap</link>*          gtk_plot_pixmap_get_pixmap          (<link linkend="GtkPlotPixmap">GtkPlotPixmap</link> *pixmap);</programlisting>
+<para>
+Get pixmap from <link linkend="GtkPlotPixmap"><type>GtkPlotPixmap</type></link>.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>pixmap</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GdkPlotPixmap"><type>GdkPlotPixmap</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara> (transfer none) the <link linkend="GdkPixmap"><type>GdkPixmap</type></link>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-pixmap-get-mask" role="function">
+<title>gtk_plot_pixmap_get_mask ()</title>
+<indexterm zone="gtk-plot-pixmap-get-mask"><primary sortas="gtk_plot_pixmap_get_mask">gtk_plot_pixmap_get_mask</primary></indexterm><programlisting><link linkend="GdkBitmap">GdkBitmap</link>*          gtk_plot_pixmap_get_mask            (<link linkend="GtkPlotPixmap">GtkPlotPixmap</link> *pixmap);</programlisting>
+<para>
+Get mask bitmap from <link linkend="GtkPlotPixmap"><type>GtkPlotPixmap</type></link>.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>pixmap</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GdkPlotPixmap"><type>GdkPlotPixmap</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara> (transfer none) the <link linkend="GdkBitmap"><type>GdkBitmap</type></link>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+<refsect1 id="GtkPlotPixmap.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GtkPlotPixmap--mask-bitmap" role="property"><title>The <literal>&quot;mask-bitmap&quot;</literal> property</title>
+<indexterm zone="GtkPlotPixmap--mask-bitmap"><primary sortas="GtkPlotPixmap:mask-bitmap">GtkPlotPixmap:mask-bitmap</primary></indexterm><programlisting>  &quot;mask-bitmap&quot;              <link linkend="gpointer">gpointer</link>              : Read / Write</programlisting>
+<para>Mask.</para></refsect2>
+<refsect2 id="GtkPlotPixmap--pixmap" role="property"><title>The <literal>&quot;pixmap&quot;</literal> property</title>
+<indexterm zone="GtkPlotPixmap--pixmap"><primary sortas="GtkPlotPixmap:pixmap">GtkPlotPixmap:pixmap</primary></indexterm><programlisting>  &quot;pixmap&quot;                   <link linkend="gpointer">gpointer</link>              : Read / Write</programlisting>
+<para>Pixmap.</para></refsect2>
+</refsect1>
+
+
+
+
+</refentry>

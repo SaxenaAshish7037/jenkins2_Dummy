@@ -1,0 +1,1870 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GtkPlotCanvas</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="GtkExtra Reference Manual">
+<link rel="up" href="ch03.html" title="Widgets">
+<link rel="prev" href="GtkPlotCSurface.html" title="GtkPlotCSurface">
+<link rel="next" href="GtkPlotCanvasEllipse.html" title="GtkPlotCanvasEllipse">
+<meta name="generator" content="GTK-Doc V1.11 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="part" href="gtkextra.html" title="Part I. GtkExtra Overview">
+<link rel="part" href="gtkextrabase.html" title="Part II. GtkExtra Widgets and Objects">
+<link rel="chapter" href="ch01.html" title="Object Hierarchy">
+<link rel="chapter" href="ch02.html" title="Widget Gallery">
+<link rel="chapter" href="ch03.html" title="Widgets">
+<link rel="chapter" href="ch04.html" title="Data Formatter">
+<link rel="chapter" href="ch05.html" title="GtkExtra Versioning">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="GtkPlotCSurface.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch03.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">GtkExtra Reference Manual</th>
+<td><a accesskey="n" href="GtkPlotCanvasEllipse.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#GtkPlotCanvas.synopsis" class="shortcut">Top</a>
+                 | 
+                <a href="#GtkPlotCanvas.description" class="shortcut">Description</a>
+                 | 
+                <a href="#GtkPlotCanvas.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                 | 
+                <a href="#GtkPlotCanvas.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+                 | 
+                <a href="#GtkPlotCanvas.properties" class="shortcut">Properties</a>
+                 | 
+                <a href="#GtkPlotCanvas.signals" class="shortcut">Signals</a>
+</td></tr>
+</table>
+<div class="refentry" title="GtkPlotCanvas">
+<a name="GtkPlotCanvas"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GtkPlotCanvas.top_of_page"></a>GtkPlotCanvas</span></h2>
+<p>GtkPlotCanvas</p>
+</td>
+<td valign="top" align="right"><img src=""></td>
+</tr></table></div>
+<div class="refsynopsisdiv" title="Synopsis">
+<a name="GtkPlotCanvas.synopsis"></a><h2>Synopsis</h2>
+<a name="GtkPlotCanvasChild"></a><pre class="synopsis">
+
+#include &lt;gtkextra.h&gt;
+
+                    <a class="link" href="GtkPlotCanvas.html#GtkPlotCanvas-struct" title="GtkPlotCanvas">GtkPlotCanvas</a>;
+enum                <a class="link" href="GtkPlotCanvas.html#GtkPlotCanvasFlags" title="enum GtkPlotCanvasFlags">GtkPlotCanvasFlags</a>;
+enum                <a class="link" href="GtkPlotCanvas.html#GtkPlotCanvasAction" title="enum GtkPlotCanvasAction">GtkPlotCanvasAction</a>;
+enum                <a class="link" href="GtkPlotCanvas.html#GtkPlotCanvasFlag" title="enum GtkPlotCanvasFlag">GtkPlotCanvasFlag</a>;
+enum                <a class="link" href="GtkPlotCanvas.html#GtkPlotCanvasSelection" title="enum GtkPlotCanvasSelection">GtkPlotCanvasSelection</a>;
+enum                <a class="link" href="GtkPlotCanvas.html#GtkPlotCanvasSelectionMode" title="enum GtkPlotCanvasSelectionMode">GtkPlotCanvasSelectionMode</a>;
+enum                <a class="link" href="GtkPlotCanvas.html#GtkPlotCanvasPos" title="enum GtkPlotCanvasPos">GtkPlotCanvasPos</a>;
+                    <a class="link" href="GtkPlotCanvas.html#GtkPlotCanvasChild-struct" title="GtkPlotCanvasChild">GtkPlotCanvasChild</a>;
+enum                <a class="link" href="GtkPlotCanvas.html#GtkPlotCanvasChildFlags" title="enum GtkPlotCanvasChildFlags">GtkPlotCanvasChildFlags</a>;
+<a
+href="http://library.gnome.org/devel/gtk3/GtkWidget.html"
+>GtkWidget</a>*          <a class="link" href="GtkPlotCanvas.html#gtk-plot-canvas-new" title="gtk_plot_canvas_new ()">gtk_plot_canvas_new</a>                 (<a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> width,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> height,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> magnification);
+void                <a class="link" href="GtkPlotCanvas.html#gtk-plot-canvas-construct" title="gtk_plot_canvas_construct ()">gtk_plot_canvas_construct</a>           (<a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas">GtkPlotCanvas</a> *canvas,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> width,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> height,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> magnification);
+<a class="link" href="GtkPlotCanvas.html#GtkPlotCanvasFlags" title="enum GtkPlotCanvasFlags">GtkPlotCanvasFlags</a>  <a class="link" href="GtkPlotCanvas.html#gtk-plot-canvas-flags" title="gtk_plot_canvas_flags ()">gtk_plot_canvas_flags</a>               (<a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas">GtkPlotCanvas</a> *canvas);
+void                <a class="link" href="GtkPlotCanvas.html#gtk-plot-canvas-set-flags" title="gtk_plot_canvas_set_flags ()">gtk_plot_canvas_set_flags</a>           (<a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas">GtkPlotCanvas</a> *canvas,
+                                                         <a class="link" href="GtkPlotCanvas.html#GtkPlotCanvasFlags" title="enum GtkPlotCanvasFlags">GtkPlotCanvasFlags</a> flags);
+void                <a class="link" href="GtkPlotCanvas.html#gtk-plot-canvas-unset-flags" title="gtk_plot_canvas_unset_flags ()">gtk_plot_canvas_unset_flags</a>         (<a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas">GtkPlotCanvas</a> *canvas,
+                                                         <a class="link" href="GtkPlotCanvas.html#GtkPlotCanvasFlags" title="enum GtkPlotCanvasFlags">GtkPlotCanvasFlags</a> flags);
+void                <a class="link" href="GtkPlotCanvas.html#gtk-plot-canvas-set-pc" title="gtk_plot_canvas_set_pc ()">gtk_plot_canvas_set_pc</a>              (<a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas">GtkPlotCanvas</a> *canvas,
+                                                         <a class="link" href="GtkPlotPC.html" title="GtkPlotPC">GtkPlotPC</a> *pc);
+void                <a class="link" href="GtkPlotCanvas.html#gtk-plot-canvas-paint" title="gtk_plot_canvas_paint ()">gtk_plot_canvas_paint</a>               (<a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas">GtkPlotCanvas</a> *canvas);
+void                <a class="link" href="GtkPlotCanvas.html#gtk-plot-canvas-refresh" title="gtk_plot_canvas_refresh ()">gtk_plot_canvas_refresh</a>             (<a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas">GtkPlotCanvas</a> *canvas);
+void                <a class="link" href="GtkPlotCanvas.html#gtk-plot-canvas-freeze" title="gtk_plot_canvas_freeze ()">gtk_plot_canvas_freeze</a>              (<a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas">GtkPlotCanvas</a> *canvas);
+void                <a class="link" href="GtkPlotCanvas.html#gtk-plot-canvas-thaw" title="gtk_plot_canvas_thaw ()">gtk_plot_canvas_thaw</a>                (<a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas">GtkPlotCanvas</a> *canvas);
+void                <a class="link" href="GtkPlotCanvas.html#gtk-plot-canvas-grid-set-visible" title="gtk_plot_canvas_grid_set_visible ()">gtk_plot_canvas_grid_set_visible</a>    (<a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas">GtkPlotCanvas</a> *canvas,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> visible);
+void                <a class="link" href="GtkPlotCanvas.html#gtk-plot-canvas-grid-set-step" title="gtk_plot_canvas_grid_set_step ()">gtk_plot_canvas_grid_set_step</a>       (<a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas">GtkPlotCanvas</a> *canvas,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> step);
+void                <a class="link" href="GtkPlotCanvas.html#gtk-plot-canvas-grid-set-attributes" title="gtk_plot_canvas_grid_set_attributes ()">gtk_plot_canvas_grid_set_attributes</a> (<a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas">GtkPlotCanvas</a> *canvas,
+                                                         <a class="link" href="GtkPlot.html#GtkPlotLineStyle" title="enum GtkPlotLineStyle">GtkPlotLineStyle</a> style,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> width,
+                                                         const <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Colormaps-and-Colors.html#GdkColor"
+>GdkColor</a> *color);
+void                <a class="link" href="GtkPlotCanvas.html#gtk-plot-canvas-cancel-action" title="gtk_plot_canvas_cancel_action ()">gtk_plot_canvas_cancel_action</a>       (<a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas">GtkPlotCanvas</a> *plot_canvas);
+void                <a class="link" href="GtkPlotCanvas.html#gtk-plot-canvas-unselect" title="gtk_plot_canvas_unselect ()">gtk_plot_canvas_unselect</a>            (<a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas">GtkPlotCanvas</a> *plot_canvas);
+<a class="link" href="GtkPlotCanvas.html#GtkPlotCanvasChild">GtkPlotCanvasChild</a> * <a class="link" href="GtkPlotCanvas.html#gtk-plot-canvas-get-active-item" title="gtk_plot_canvas_get_active_item ()">gtk_plot_canvas_get_active_item</a>    (<a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas">GtkPlotCanvas</a> *canvas);
+void                <a class="link" href="GtkPlotCanvas.html#gtk-plot-canvas-set-size" title="gtk_plot_canvas_set_size ()">gtk_plot_canvas_set_size</a>            (<a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas">GtkPlotCanvas</a> *canvas,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> width,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> height);
+void                <a class="link" href="GtkPlotCanvas.html#gtk-plot-canvas-set-magnification" title="gtk_plot_canvas_set_magnification ()">gtk_plot_canvas_set_magnification</a>   (<a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas">GtkPlotCanvas</a> *canvas,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> magnification);
+void                <a class="link" href="GtkPlotCanvas.html#gtk-plot-canvas-set-transparent" title="gtk_plot_canvas_set_transparent ()">gtk_plot_canvas_set_transparent</a>     (<a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas">GtkPlotCanvas</a> *canvas,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> transparent);
+<a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>            <a class="link" href="GtkPlotCanvas.html#gtk-plot-canvas-transparent" title="gtk_plot_canvas_transparent ()">gtk_plot_canvas_transparent</a>         (<a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas">GtkPlotCanvas</a> *canvas);
+void                <a class="link" href="GtkPlotCanvas.html#gtk-plot-canvas-set-background" title="gtk_plot_canvas_set_background ()">gtk_plot_canvas_set_background</a>      (<a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas">GtkPlotCanvas</a> *canvas,
+                                                         const <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Colormaps-and-Colors.html#GdkColor"
+>GdkColor</a> *bg_color);
+void                <a class="link" href="GtkPlotCanvas.html#gtk-plot-canvas-get-pixel" title="gtk_plot_canvas_get_pixel ()">gtk_plot_canvas_get_pixel</a>           (<a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas">GtkPlotCanvas</a> *canvas,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> px,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> py,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> *x,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> *y);
+void                <a class="link" href="GtkPlotCanvas.html#gtk-plot-canvas-get-position" title="gtk_plot_canvas_get_position ()">gtk_plot_canvas_get_position</a>        (<a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas">GtkPlotCanvas</a> *plot_canvas,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> x,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> y,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> *px,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> *py);
+void                <a class="link" href="GtkPlotCanvas.html#gtk-plot-canvas-put-child" title="gtk_plot_canvas_put_child ()">gtk_plot_canvas_put_child</a>           (<a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas">GtkPlotCanvas</a> *canvas,
+                                                         <a class="link" href="GtkPlotCanvas.html#GtkPlotCanvasChild">GtkPlotCanvasChild</a> *child,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> x1,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> y1,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> x2,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> y2);
+void                <a class="link" href="GtkPlotCanvas.html#gtk-plot-canvas-remove-child" title="gtk_plot_canvas_remove_child ()">gtk_plot_canvas_remove_child</a>        (<a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas">GtkPlotCanvas</a> *canvas,
+                                                         <a class="link" href="GtkPlotCanvas.html#GtkPlotCanvasChild">GtkPlotCanvasChild</a> *child);
+void                <a class="link" href="GtkPlotCanvas.html#gtk-plot-canvas-child-move" title="gtk_plot_canvas_child_move ()">gtk_plot_canvas_child_move</a>          (<a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas">GtkPlotCanvas</a> *canvas,
+                                                         <a class="link" href="GtkPlotCanvas.html#GtkPlotCanvasChild">GtkPlotCanvasChild</a> *child,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> x1,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> y1);
+void                <a class="link" href="GtkPlotCanvas.html#gtk-plot-canvas-child-move-resize" title="gtk_plot_canvas_child_move_resize ()">gtk_plot_canvas_child_move_resize</a>   (<a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas">GtkPlotCanvas</a> *canvas,
+                                                         <a class="link" href="GtkPlotCanvas.html#GtkPlotCanvasChild">GtkPlotCanvasChild</a> *child,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> x1,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> y1,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> x2,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> y2);
+void                <a class="link" href="GtkPlotCanvas.html#gtk-plot-canvas-child-set-selection" title="gtk_plot_canvas_child_set_selection ()">gtk_plot_canvas_child_set_selection</a> (<a class="link" href="GtkPlotCanvas.html#GtkPlotCanvasChild">GtkPlotCanvasChild</a> *child,
+                                                         <a class="link" href="GtkPlotCanvas.html#GtkPlotCanvasSelection" title="enum GtkPlotCanvasSelection">GtkPlotCanvasSelection</a> selection);
+void                <a class="link" href="GtkPlotCanvas.html#gtk-plot-canvas-child-set-selection-mode" title="gtk_plot_canvas_child_set_selection_mode ()">gtk_plot_canvas_child_set_selection_mode</a>
+                                                        (<a class="link" href="GtkPlotCanvas.html#GtkPlotCanvasChild">GtkPlotCanvasChild</a> *child,
+                                                         <a class="link" href="GtkPlotCanvas.html#GtkPlotCanvasSelectionMode" title="enum GtkPlotCanvasSelectionMode">GtkPlotCanvasSelectionMode</a> mode);
+<a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>            <a class="link" href="GtkPlotCanvas.html#gtk-plot-canvas-child-get-position" title="gtk_plot_canvas_child_get_position ()">gtk_plot_canvas_child_get_position</a>  (<a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas">GtkPlotCanvas</a> *canvas,
+                                                         <a class="link" href="GtkPlotCanvas.html#GtkPlotCanvasChild">GtkPlotCanvasChild</a> *child,
+                                                         double *x1,
+                                                         double *y1,
+                                                         double *x2,
+                                                         double *y2);
+void                <a class="link" href="GtkPlotCanvas.html#gtk-plot-canvas-set-line-attributes" title="gtk_plot_canvas_set_line_attributes ()">gtk_plot_canvas_set_line_attributes</a> (<a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas">GtkPlotCanvas</a> *canvas,
+                                                         <a class="link" href="GtkPlot.html#GtkPlotLine" title="GtkPlotLine">GtkPlotLine</a> line);
+</pre>
+</div>
+<div class="refsect1" title="Object Hierarchy">
+<a name="GtkPlotCanvas.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a
+href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject"
+>GObject</a>
+   +----<a
+href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned"
+>GInitiallyUnowned</a>
+         +----<a
+href="http://library.gnome.org/devel/gtk3/GtkObject.html"
+>GtkObject</a>
+               +----<a
+href="http://library.gnome.org/devel/gtk3/GtkWidget.html"
+>GtkWidget</a>
+                     +----<a
+href="http://library.gnome.org/devel/gtk3/GtkContainer.html"
+>GtkContainer</a>
+                           +----<a
+href="http://library.gnome.org/devel/gtk3/GtkFixed.html"
+>GtkFixed</a>
+                                 +----GtkPlotCanvas
+</pre>
+<pre class="synopsis">
+  <a
+href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject"
+>GObject</a>
+   +----<a
+href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned"
+>GInitiallyUnowned</a>
+         +----<a
+href="http://library.gnome.org/devel/gtk3/GtkObject.html"
+>GtkObject</a>
+               +----GtkPlotCanvasChild
+                     +----<a class="link" href="GtkPlotCanvasEllipse.html" title="GtkPlotCanvasEllipse">GtkPlotCanvasEllipse</a>
+                     +----<a class="link" href="GtkPlotCanvasPixmap.html" title="GtkPlotCanvasPixmap">GtkPlotCanvasPixmap</a>
+                     +----<a class="link" href="GtkPlotCanvasPlot.html" title="GtkPlotCanvasPlot">GtkPlotCanvasPlot</a>
+                     +----<a class="link" href="GtkPlotCanvasRectangle.html" title="GtkPlotCanvasRectangle">GtkPlotCanvasRectangle</a>
+                     +----<a class="link" href="GtkPlotCanvasText.html" title="GtkPlotCanvasText">GtkPlotCanvasText</a>
+</pre>
+</div>
+<div class="refsect1" title="Implemented Interfaces">
+<a name="GtkPlotCanvas.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+GtkPlotCanvas implements
+ AtkImplementorIface and  <a
+href="http://library.gnome.org/devel/gtk3/GtkBuildable.html"
+>GtkBuildable</a>.</p>
+</div>
+<div class="refsect1" title="Properties">
+<a name="GtkPlotCanvas.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="GtkPlotCanvas.html#GtkPlotCanvas--color-bg" title='The "color-bg" property'>color-bg</a>"                 <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"
+>gpointer</a>              : Read / Write
+  "<a class="link" href="GtkPlotCanvas.html#GtkPlotCanvas--flags" title='The "flags" property'>flags</a>"                    <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write
+  "<a class="link" href="GtkPlotCanvas.html#GtkPlotCanvas--grid-step" title='The "grid-step" property'>grid-step</a>"                <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a>               : Read / Write
+  "<a class="link" href="GtkPlotCanvas.html#GtkPlotCanvas--height" title='The "height" property'>height</a>"                   <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write
+  "<a class="link" href="GtkPlotCanvas.html#GtkPlotCanvas--line-grid" title='The "line-grid" property'>line-grid</a>"                <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"
+>gpointer</a>              : Read / Write
+  "<a class="link" href="GtkPlotCanvas.html#GtkPlotCanvas--magnification" title='The "magnification" property'>magnification</a>"            <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a>               : Read / Write
+  "<a class="link" href="GtkPlotCanvas.html#GtkPlotCanvas--show-grid" title='The "show-grid" property'>show-grid</a>"                <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write
+  "<a class="link" href="GtkPlotCanvas.html#GtkPlotCanvas--transparent" title='The "transparent" property'>transparent</a>"              <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write
+  "<a class="link" href="GtkPlotCanvas.html#GtkPlotCanvas--width" title='The "width" property'>width</a>"                    <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write
+</pre>
+</div>
+<div class="refsect1" title="Signals">
+<a name="GtkPlotCanvas.signals"></a><h2>Signals</h2>
+<pre class="synopsis">
+  "<a class="link" href="GtkPlotCanvas.html#GtkPlotCanvas-add-item" title='The "add-item" signal'>add-item</a>"                                       : Run Last
+  "<a class="link" href="GtkPlotCanvas.html#GtkPlotCanvas-changed" title='The "changed" signal'>changed</a>"                                        : Run Last
+  "<a class="link" href="GtkPlotCanvas.html#GtkPlotCanvas-delete-item" title='The "delete-item" signal'>delete-item</a>"                                    : Run Last
+  "<a class="link" href="GtkPlotCanvas.html#GtkPlotCanvas-move-item" title='The "move-item" signal'>move-item</a>"                                      : Run Last
+  "<a class="link" href="GtkPlotCanvas.html#GtkPlotCanvas-resize-item" title='The "resize-item" signal'>resize-item</a>"                                    : Run Last
+  "<a class="link" href="GtkPlotCanvas.html#GtkPlotCanvas-select-item" title='The "select-item" signal'>select-item</a>"                                    : Run Last
+  "<a class="link" href="GtkPlotCanvas.html#GtkPlotCanvas-select-region" title='The "select-region" signal'>select-region</a>"                                  : Run Last
+</pre>
+</div>
+<div class="refsect1" title="Description">
+<a name="GtkPlotCanvas.description"></a><h2>Description</h2>
+<p>
+FIXME:: need long description.</p>
+<p>
+</p>
+</div>
+<div class="refsect1" title="Details">
+<a name="GtkPlotCanvas.details"></a><h2>Details</h2>
+<div class="refsect2" title="GtkPlotCanvas">
+<a name="GtkPlotCanvas-struct"></a><h3>GtkPlotCanvas</h3>
+<pre class="programlisting">typedef struct _GtkPlotCanvas GtkPlotCanvas;</pre>
+<p>
+The GtkPlotCanvas struct contains only private data.
+It should only be accessed through the functions described below.</p>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2" title="enum GtkPlotCanvasFlags">
+<a name="GtkPlotCanvasFlags"></a><h3>enum GtkPlotCanvasFlags</h3>
+<pre class="programlisting">typedef enum
+{
+      GTK_PLOT_CANVAS_CAN_SELECT	=	1 &lt;&lt; 0,
+      GTK_PLOT_CANVAS_CAN_SELECT_ITEM	=	1 &lt;&lt; 1,
+      GTK_PLOT_CANVAS_CAN_DND		=	1 &lt;&lt; 2,
+} GtkPlotCanvasFlags;
+</pre>
+<p>
+Selection and DND mode of <a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas"><span class="type">GtkPlotCanvas</span></a></p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><a name="GTK-PLOT-CANVAS-CAN-SELECT--CAPS"></a><span class="term"><code class="literal">GTK_PLOT_CANVAS_CAN_SELECT</code></span></p></td>
+<td> Select region
+</td>
+</tr>
+<tr>
+<td><p><a name="GTK-PLOT-CANVAS-CAN-SELECT-ITEM--CAPS"></a><span class="term"><code class="literal">GTK_PLOT_CANVAS_CAN_SELECT_ITEM</code></span></p></td>
+<td> Select items
+</td>
+</tr>
+<tr>
+<td><p><a name="GTK-PLOT-CANVAS-CAN-DND--CAPS"></a><span class="term"><code class="literal">GTK_PLOT_CANVAS_CAN_DND</code></span></p></td>
+<td> DnD items
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="enum GtkPlotCanvasAction">
+<a name="GtkPlotCanvasAction"></a><h3>enum GtkPlotCanvasAction</h3>
+<pre class="programlisting">typedef enum
+{
+      GTK_PLOT_CANVAS_ACTION_INACTIVE,
+      GTK_PLOT_CANVAS_ACTION_SELECTION,
+      GTK_PLOT_CANVAS_ACTION_DRAG,
+      GTK_PLOT_CANVAS_ACTION_RESIZE,
+} GtkPlotCanvasAction;
+</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2" title="enum GtkPlotCanvasFlag">
+<a name="GtkPlotCanvasFlag"></a><h3>enum GtkPlotCanvasFlag</h3>
+<pre class="programlisting">typedef enum
+{
+      GTK_PLOT_CANVAS_FROZEN            = 0,
+      GTK_PLOT_CANVAS_CAN_MOVE          = 1 &lt;&lt; 0,
+      GTK_PLOT_CANVAS_CAN_RESIZE	= 1 &lt;&lt; 1,
+} GtkPlotCanvasFlag;
+</pre>
+<div class="warning" title="Warning" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Warning</h3>
+<p><code class="literal">GtkPlotCanvasFlag</code> has been deprecated since version 3.1.6 and should not be used in newly-written code. use <a class="link" href="GtkPlotCanvas.html#GtkPlotCanvasChildFlags" title="enum GtkPlotCanvasChildFlags"><span class="type">GtkPlotCanvasChildFlags</span></a></p>
+</div>
+<p>
+Deprecated, Used for GtkPlotCanvasChild. Use 
+<a class="link" href="GtkPlotCanvas.html#GtkPlotCanvasChildFlags" title="enum GtkPlotCanvasChildFlags"><span class="type">GtkPlotCanvasChildFlags</span></a> instead.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><a name="GTK-PLOT-CANVAS-FROZEN--CAPS"></a><span class="term"><code class="literal">GTK_PLOT_CANVAS_FROZEN</code></span></p></td>
+<td> Child is frozen
+</td>
+</tr>
+<tr>
+<td><p><a name="GTK-PLOT-CANVAS-CAN-MOVE--CAPS"></a><span class="term"><code class="literal">GTK_PLOT_CANVAS_CAN_MOVE</code></span></p></td>
+<td> Child can be moved
+</td>
+</tr>
+<tr>
+<td><p><a name="GTK-PLOT-CANVAS-CAN-RESIZE--CAPS"></a><span class="term"><code class="literal">GTK_PLOT_CANVAS_CAN_RESIZE</code></span></p></td>
+<td> Child can be resized
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="enum GtkPlotCanvasSelection">
+<a name="GtkPlotCanvasSelection"></a><h3>enum GtkPlotCanvasSelection</h3>
+<pre class="programlisting">typedef enum
+{
+      GTK_PLOT_CANVAS_SELECT_NONE,    
+      GTK_PLOT_CANVAS_SELECT_MARKERS,
+      GTK_PLOT_CANVAS_SELECT_TARGET,
+} GtkPlotCanvasSelection;
+</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2" title="enum GtkPlotCanvasSelectionMode">
+<a name="GtkPlotCanvasSelectionMode"></a><h3>enum GtkPlotCanvasSelectionMode</h3>
+<pre class="programlisting">typedef enum
+{
+      GTK_PLOT_CANVAS_SELECT_CLICK_1,    
+      GTK_PLOT_CANVAS_SELECT_CLICK_2,
+} GtkPlotCanvasSelectionMode;
+</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2" title="enum GtkPlotCanvasPos">
+<a name="GtkPlotCanvasPos"></a><h3>enum GtkPlotCanvasPos</h3>
+<pre class="programlisting">typedef enum
+{
+      GTK_PLOT_CANVAS_OUT,
+      GTK_PLOT_CANVAS_IN,
+      GTK_PLOT_CANVAS_LEFT,
+      GTK_PLOT_CANVAS_RIGHT,
+      GTK_PLOT_CANVAS_TOP,
+      GTK_PLOT_CANVAS_BOTTOM,
+      GTK_PLOT_CANVAS_TOP_LEFT,
+      GTK_PLOT_CANVAS_TOP_RIGHT,
+      GTK_PLOT_CANVAS_BOTTOM_LEFT,
+      GTK_PLOT_CANVAS_BOTTOM_RIGHT,
+} GtkPlotCanvasPos;
+</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2" title="GtkPlotCanvasChild">
+<a name="GtkPlotCanvasChild-struct"></a><h3>GtkPlotCanvasChild</h3>
+<pre class="programlisting">typedef struct _GtkPlotCanvasChild GtkPlotCanvasChild;</pre>
+<p>
+The GtkPlotCanvasChild struct contains only private data.
+It should only be accessed through the functions described below.</p>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2" title="enum GtkPlotCanvasChildFlags">
+<a name="GtkPlotCanvasChildFlags"></a><h3>enum GtkPlotCanvasChildFlags</h3>
+<pre class="programlisting">typedef enum
+{
+      GTK_PLOT_CANVAS_CHILD_FROZEN            = 0,
+      GTK_PLOT_CANVAS_CHILD_CAN_MOVE          = 1 &lt;&lt; 0,
+      GTK_PLOT_CANVAS_CHILD_CAN_RESIZE	= 1 &lt;&lt; 1,
+} GtkPlotCanvasChildFlags;
+</pre>
+<p>
+move/resize-mode of <a class="link" href="GtkPlotCanvas.html#GtkPlotCanvasChild"><span class="type">GtkPlotCanvasChild</span></a></p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><a name="GTK-PLOT-CANVAS-CHILD-FROZEN--CAPS"></a><span class="term"><code class="literal">GTK_PLOT_CANVAS_CHILD_FROZEN</code></span></p></td>
+<td> Child is frozen
+</td>
+</tr>
+<tr>
+<td><p><a name="GTK-PLOT-CANVAS-CHILD-CAN-MOVE--CAPS"></a><span class="term"><code class="literal">GTK_PLOT_CANVAS_CHILD_CAN_MOVE</code></span></p></td>
+<td> Child can be moved
+</td>
+</tr>
+<tr>
+<td><p><a name="GTK-PLOT-CANVAS-CHILD-CAN-RESIZE--CAPS"></a><span class="term"><code class="literal">GTK_PLOT_CANVAS_CHILD_CAN_RESIZE</code></span></p></td>
+<td> Child can be resized
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_canvas_new ()">
+<a name="gtk-plot-canvas-new"></a><h3>gtk_plot_canvas_new ()</h3>
+<pre class="programlisting"><a
+href="http://library.gnome.org/devel/gtk3/GtkWidget.html"
+>GtkWidget</a>*          gtk_plot_canvas_new                 (<a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> width,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> height,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> magnification);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>width</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>height</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>magnification</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_canvas_construct ()">
+<a name="gtk-plot-canvas-construct"></a><h3>gtk_plot_canvas_construct ()</h3>
+<pre class="programlisting">void                gtk_plot_canvas_construct           (<a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas">GtkPlotCanvas</a> *canvas,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> width,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> height,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> magnification);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>canvas</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas"><span class="type">GtkPlotCanvas</span></a>.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>width</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>height</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>magnification</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_canvas_flags ()">
+<a name="gtk-plot-canvas-flags"></a><h3>gtk_plot_canvas_flags ()</h3>
+<pre class="programlisting"><a class="link" href="GtkPlotCanvas.html#GtkPlotCanvasFlags" title="enum GtkPlotCanvasFlags">GtkPlotCanvasFlags</a>  gtk_plot_canvas_flags               (<a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas">GtkPlotCanvas</a> *canvas);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>canvas</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_canvas_set_flags ()">
+<a name="gtk-plot-canvas-set-flags"></a><h3>gtk_plot_canvas_set_flags ()</h3>
+<pre class="programlisting">void                gtk_plot_canvas_set_flags           (<a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas">GtkPlotCanvas</a> *canvas,
+                                                         <a class="link" href="GtkPlotCanvas.html#GtkPlotCanvasFlags" title="enum GtkPlotCanvasFlags">GtkPlotCanvasFlags</a> flags);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>canvas</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>flags</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_canvas_unset_flags ()">
+<a name="gtk-plot-canvas-unset-flags"></a><h3>gtk_plot_canvas_unset_flags ()</h3>
+<pre class="programlisting">void                gtk_plot_canvas_unset_flags         (<a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas">GtkPlotCanvas</a> *canvas,
+                                                         <a class="link" href="GtkPlotCanvas.html#GtkPlotCanvasFlags" title="enum GtkPlotCanvasFlags">GtkPlotCanvasFlags</a> flags);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>canvas</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>flags</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_canvas_set_pc ()">
+<a name="gtk-plot-canvas-set-pc"></a><h3>gtk_plot_canvas_set_pc ()</h3>
+<pre class="programlisting">void                gtk_plot_canvas_set_pc              (<a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas">GtkPlotCanvas</a> *canvas,
+                                                         <a class="link" href="GtkPlotPC.html" title="GtkPlotPC">GtkPlotPC</a> *pc);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>canvas</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>pc</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_canvas_paint ()">
+<a name="gtk-plot-canvas-paint"></a><h3>gtk_plot_canvas_paint ()</h3>
+<pre class="programlisting">void                gtk_plot_canvas_paint               (<a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas">GtkPlotCanvas</a> *canvas);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>canvas</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas"><span class="type">GtkPlotCanvas</span></a>.
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_canvas_refresh ()">
+<a name="gtk-plot-canvas-refresh"></a><h3>gtk_plot_canvas_refresh ()</h3>
+<pre class="programlisting">void                gtk_plot_canvas_refresh             (<a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas">GtkPlotCanvas</a> *canvas);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>canvas</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas"><span class="type">GtkPlotCanvas</span></a>.
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_canvas_freeze ()">
+<a name="gtk-plot-canvas-freeze"></a><h3>gtk_plot_canvas_freeze ()</h3>
+<pre class="programlisting">void                gtk_plot_canvas_freeze              (<a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas">GtkPlotCanvas</a> *canvas);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>canvas</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas"><span class="type">GtkPlotCanvas</span></a>.
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_canvas_thaw ()">
+<a name="gtk-plot-canvas-thaw"></a><h3>gtk_plot_canvas_thaw ()</h3>
+<pre class="programlisting">void                gtk_plot_canvas_thaw                (<a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas">GtkPlotCanvas</a> *canvas);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>canvas</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas"><span class="type">GtkPlotCanvas</span></a>.
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_canvas_grid_set_visible ()">
+<a name="gtk-plot-canvas-grid-set-visible"></a><h3>gtk_plot_canvas_grid_set_visible ()</h3>
+<pre class="programlisting">void                gtk_plot_canvas_grid_set_visible    (<a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas">GtkPlotCanvas</a> *canvas,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> visible);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>canvas</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas"><span class="type">GtkPlotCanvas</span></a>.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>visible</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_canvas_grid_set_step ()">
+<a name="gtk-plot-canvas-grid-set-step"></a><h3>gtk_plot_canvas_grid_set_step ()</h3>
+<pre class="programlisting">void                gtk_plot_canvas_grid_set_step       (<a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas">GtkPlotCanvas</a> *canvas,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> step);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>canvas</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas"><span class="type">GtkPlotCanvas</span></a>.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>step</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_canvas_grid_set_attributes ()">
+<a name="gtk-plot-canvas-grid-set-attributes"></a><h3>gtk_plot_canvas_grid_set_attributes ()</h3>
+<pre class="programlisting">void                gtk_plot_canvas_grid_set_attributes (<a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas">GtkPlotCanvas</a> *canvas,
+                                                         <a class="link" href="GtkPlot.html#GtkPlotLineStyle" title="enum GtkPlotLineStyle">GtkPlotLineStyle</a> style,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> width,
+                                                         const <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Colormaps-and-Colors.html#GdkColor"
+>GdkColor</a> *color);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>canvas</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas"><span class="type">GtkPlotCanvas</span></a>.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>style</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>width</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>color</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_canvas_cancel_action ()">
+<a name="gtk-plot-canvas-cancel-action"></a><h3>gtk_plot_canvas_cancel_action ()</h3>
+<pre class="programlisting">void                gtk_plot_canvas_cancel_action       (<a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas">GtkPlotCanvas</a> *plot_canvas);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>plot_canvas</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas"><span class="type">GtkPlotCanvas</span></a>.
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_canvas_unselect ()">
+<a name="gtk-plot-canvas-unselect"></a><h3>gtk_plot_canvas_unselect ()</h3>
+<pre class="programlisting">void                gtk_plot_canvas_unselect            (<a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas">GtkPlotCanvas</a> *plot_canvas);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>plot_canvas</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas"><span class="type">GtkPlotCanvas</span></a>.
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_canvas_get_active_item ()">
+<a name="gtk-plot-canvas-get-active-item"></a><h3>gtk_plot_canvas_get_active_item ()</h3>
+<pre class="programlisting"><a class="link" href="GtkPlotCanvas.html#GtkPlotCanvasChild">GtkPlotCanvasChild</a> * gtk_plot_canvas_get_active_item    (<a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas">GtkPlotCanvas</a> *canvas);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>canvas</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas"><span class="type">GtkPlotCanvas</span></a>. 
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> the active <a class="link" href="GtkPlotCanvas.html#GtkPlotCanvasChild"><span class="type">GtkPlotCanvasChild</span></a>. <a href="http://foldoc.doc.ic.ac.uk/foldoc/foldoc.cgi?query=transfer"><span class="acronym">transfer</span></a> none. </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_canvas_set_size ()">
+<a name="gtk-plot-canvas-set-size"></a><h3>gtk_plot_canvas_set_size ()</h3>
+<pre class="programlisting">void                gtk_plot_canvas_set_size            (<a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas">GtkPlotCanvas</a> *canvas,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> width,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> height);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>canvas</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>width</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>height</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_canvas_set_magnification ()">
+<a name="gtk-plot-canvas-set-magnification"></a><h3>gtk_plot_canvas_set_magnification ()</h3>
+<pre class="programlisting">void                gtk_plot_canvas_set_magnification   (<a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas">GtkPlotCanvas</a> *canvas,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> magnification);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>canvas</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas"><span class="type">GtkPlotCanvas</span></a>.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>magnification</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_canvas_set_transparent ()">
+<a name="gtk-plot-canvas-set-transparent"></a><h3>gtk_plot_canvas_set_transparent ()</h3>
+<pre class="programlisting">void                gtk_plot_canvas_set_transparent     (<a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas">GtkPlotCanvas</a> *canvas,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> transparent);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>canvas</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas"><span class="type">GtkPlotCanvas</span></a>.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>transparent</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_canvas_transparent ()">
+<a name="gtk-plot-canvas-transparent"></a><h3>gtk_plot_canvas_transparent ()</h3>
+<pre class="programlisting"><a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>            gtk_plot_canvas_transparent         (<a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas">GtkPlotCanvas</a> *canvas);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>canvas</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_canvas_set_background ()">
+<a name="gtk-plot-canvas-set-background"></a><h3>gtk_plot_canvas_set_background ()</h3>
+<pre class="programlisting">void                gtk_plot_canvas_set_background      (<a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas">GtkPlotCanvas</a> *canvas,
+                                                         const <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Colormaps-and-Colors.html#GdkColor"
+>GdkColor</a> *bg_color);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>canvas</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas"><span class="type">GtkPlotCanvas</span></a>.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>bg_color</code></em> :</span></p></td>
+<td> a GdkColor.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_canvas_get_pixel ()">
+<a name="gtk-plot-canvas-get-pixel"></a><h3>gtk_plot_canvas_get_pixel ()</h3>
+<pre class="programlisting">void                gtk_plot_canvas_get_pixel           (<a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas">GtkPlotCanvas</a> *canvas,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> px,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> py,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> *x,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> *y);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>canvas</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas"><span class="type">GtkPlotCanvas</span></a>.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>px</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>py</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>x</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>y</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_canvas_get_position ()">
+<a name="gtk-plot-canvas-get-position"></a><h3>gtk_plot_canvas_get_position ()</h3>
+<pre class="programlisting">void                gtk_plot_canvas_get_position        (<a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas">GtkPlotCanvas</a> *plot_canvas,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> x,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> y,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> *px,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> *py);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>plot_canvas</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas"><span class="type">GtkPlotCanvas</span></a>.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>x</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>y</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>px</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>py</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_canvas_put_child ()">
+<a name="gtk-plot-canvas-put-child"></a><h3>gtk_plot_canvas_put_child ()</h3>
+<pre class="programlisting">void                gtk_plot_canvas_put_child           (<a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas">GtkPlotCanvas</a> *canvas,
+                                                         <a class="link" href="GtkPlotCanvas.html#GtkPlotCanvasChild">GtkPlotCanvasChild</a> *child,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> x1,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> y1,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> x2,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> y2);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>canvas</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas"><span class="type">GtkPlotCanvas</span></a>.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>child</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>x1</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>y1</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>x2</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>y2</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_canvas_remove_child ()">
+<a name="gtk-plot-canvas-remove-child"></a><h3>gtk_plot_canvas_remove_child ()</h3>
+<pre class="programlisting">void                gtk_plot_canvas_remove_child        (<a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas">GtkPlotCanvas</a> *canvas,
+                                                         <a class="link" href="GtkPlotCanvas.html#GtkPlotCanvasChild">GtkPlotCanvasChild</a> *child);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>canvas</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas"><span class="type">GtkPlotCanvas</span></a>.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>child</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlotCanvas.html#GtkPlotCanvasChild"><span class="type">GtkPlotCanvasChild</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_canvas_child_move ()">
+<a name="gtk-plot-canvas-child-move"></a><h3>gtk_plot_canvas_child_move ()</h3>
+<pre class="programlisting">void                gtk_plot_canvas_child_move          (<a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas">GtkPlotCanvas</a> *canvas,
+                                                         <a class="link" href="GtkPlotCanvas.html#GtkPlotCanvasChild">GtkPlotCanvasChild</a> *child,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> x1,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> y1);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>canvas</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas"><span class="type">GtkPlotCanvas</span></a>.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>child</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlotCanvas.html#GtkPlotCanvasChild"><span class="type">GtkPlotCanvasChild</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>x1</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>y1</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_canvas_child_move_resize ()">
+<a name="gtk-plot-canvas-child-move-resize"></a><h3>gtk_plot_canvas_child_move_resize ()</h3>
+<pre class="programlisting">void                gtk_plot_canvas_child_move_resize   (<a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas">GtkPlotCanvas</a> *canvas,
+                                                         <a class="link" href="GtkPlotCanvas.html#GtkPlotCanvasChild">GtkPlotCanvasChild</a> *child,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> x1,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> y1,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> x2,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> y2);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>canvas</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas"><span class="type">GtkPlotCanvas</span></a>.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>child</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>x1</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>y1</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>x2</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>y2</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_canvas_child_set_selection ()">
+<a name="gtk-plot-canvas-child-set-selection"></a><h3>gtk_plot_canvas_child_set_selection ()</h3>
+<pre class="programlisting">void                gtk_plot_canvas_child_set_selection (<a class="link" href="GtkPlotCanvas.html#GtkPlotCanvasChild">GtkPlotCanvasChild</a> *child,
+                                                         <a class="link" href="GtkPlotCanvas.html#GtkPlotCanvasSelection" title="enum GtkPlotCanvasSelection">GtkPlotCanvasSelection</a> selection);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>child</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>selection</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_canvas_child_set_selection_mode ()">
+<a name="gtk-plot-canvas-child-set-selection-mode"></a><h3>gtk_plot_canvas_child_set_selection_mode ()</h3>
+<pre class="programlisting">void                gtk_plot_canvas_child_set_selection_mode
+                                                        (<a class="link" href="GtkPlotCanvas.html#GtkPlotCanvasChild">GtkPlotCanvasChild</a> *child,
+                                                         <a class="link" href="GtkPlotCanvas.html#GtkPlotCanvasSelectionMode" title="enum GtkPlotCanvasSelectionMode">GtkPlotCanvasSelectionMode</a> mode);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>child</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlotCanvas.html#GtkPlotCanvasChild"><span class="type">GtkPlotCanvasChild</span></a>.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>mode</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_canvas_child_get_position ()">
+<a name="gtk-plot-canvas-child-get-position"></a><h3>gtk_plot_canvas_child_get_position ()</h3>
+<pre class="programlisting"><a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>            gtk_plot_canvas_child_get_position  (<a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas">GtkPlotCanvas</a> *canvas,
+                                                         <a class="link" href="GtkPlotCanvas.html#GtkPlotCanvasChild">GtkPlotCanvasChild</a> *child,
+                                                         double *x1,
+                                                         double *y1,
+                                                         double *x2,
+                                                         double *y2);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>canvas</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas"><span class="type">GtkPlotCanvas</span></a>.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>child</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlotCanvas.html#GtkPlotCanvasChild"><span class="type">GtkPlotCanvasChild</span></a>.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>x1</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>y1</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>x2</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>y2</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_canvas_set_line_attributes ()">
+<a name="gtk-plot-canvas-set-line-attributes"></a><h3>gtk_plot_canvas_set_line_attributes ()</h3>
+<pre class="programlisting">void                gtk_plot_canvas_set_line_attributes (<a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas">GtkPlotCanvas</a> *canvas,
+                                                         <a class="link" href="GtkPlot.html#GtkPlotLine" title="GtkPlotLine">GtkPlotLine</a> line);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>canvas</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas"><span class="type">GtkPlotCanvas</span></a>.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>line</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1" title="Property Details">
+<a name="GtkPlotCanvas.property-details"></a><h2>Property Details</h2>
+<div class="refsect2" title='The "color-bg" property'>
+<a name="GtkPlotCanvas--color-bg"></a><h3>The <code class="literal">"color-bg"</code> property</h3>
+<pre class="programlisting">  "color-bg"                 <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"
+>gpointer</a>              : Read / Write</pre>
+<p>Background color.</p>
+</div>
+<hr>
+<div class="refsect2" title='The "flags" property'>
+<a name="GtkPlotCanvas--flags"></a><h3>The <code class="literal">"flags"</code> property</h3>
+<pre class="programlisting">  "flags"                    <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write</pre>
+<p>
+PlotCanvas flags control selection and DND,
+see <a class="link" href="GtkPlotCanvas.html#GtkPlotCanvasFlags" title="enum GtkPlotCanvasFlags"><span class="type">GtkPlotCanvasFlags</span></a>.</p>
+<p>
+</p>
+<p>Allowed values: &gt;= 0</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2" title='The "grid-step" property'>
+<a name="GtkPlotCanvas--grid-step"></a><h3>The <code class="literal">"grid-step"</code> property</h3>
+<pre class="programlisting">  "grid-step"                <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a>               : Read / Write</pre>
+<p>Distance between grid lines.</p>
+<p>Allowed values: &gt;= 0</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2" title='The "height" property'>
+<a name="GtkPlotCanvas--height"></a><h3>The <code class="literal">"height"</code> property</h3>
+<pre class="programlisting">  "height"                   <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write</pre>
+<p>
+PlotCanvas height in pixels.</p>
+<p>
+</p>
+<p>Allowed values: &gt;= 0</p>
+<p>Default value: 1</p>
+</div>
+<hr>
+<div class="refsect2" title='The "line-grid" property'>
+<a name="GtkPlotCanvas--line-grid"></a><h3>The <code class="literal">"line-grid"</code> property</h3>
+<pre class="programlisting">  "line-grid"                <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"
+>gpointer</a>              : Read / Write</pre>
+<p>Canvas line grid.</p>
+</div>
+<hr>
+<div class="refsect2" title='The "magnification" property'>
+<a name="GtkPlotCanvas--magnification"></a><h3>The <code class="literal">"magnification"</code> property</h3>
+<pre class="programlisting">  "magnification"            <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a>               : Read / Write</pre>
+<p>
+PlotCanvas magnification factor</p>
+<p>
+</p>
+<p>Allowed values: &gt;= 0</p>
+<p>Default value: 1</p>
+</div>
+<hr>
+<div class="refsect2" title='The "show-grid" property'>
+<a name="GtkPlotCanvas--show-grid"></a><h3>The <code class="literal">"show-grid"</code> property</h3>
+<pre class="programlisting">  "show-grid"                <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write</pre>
+<p>Show grid.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2" title='The "transparent" property'>
+<a name="GtkPlotCanvas--transparent"></a><h3>The <code class="literal">"transparent"</code> property</h3>
+<pre class="programlisting">  "transparent"              <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write</pre>
+<p>
+Canvas transparency</p>
+<p>
+</p>
+<p>Default value: TRUE</p>
+</div>
+<hr>
+<div class="refsect2" title='The "width" property'>
+<a name="GtkPlotCanvas--width"></a><h3>The <code class="literal">"width"</code> property</h3>
+<pre class="programlisting">  "width"                    <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write</pre>
+<p>
+PlotCanvas width in pixels.</p>
+<p>
+</p>
+<p>Allowed values: &gt;= 0</p>
+<p>Default value: 1</p>
+</div>
+</div>
+<div class="refsect1" title="Signal Details">
+<a name="GtkPlotCanvas.signal-details"></a><h2>Signal Details</h2>
+<div class="refsect2" title='The "add-item" signal'>
+<a name="GtkPlotCanvas-add-item"></a><h3>The <code class="literal">"add-item"</code> signal</h3>
+<pre class="programlisting">void                user_function                      (<a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas">GtkPlotCanvas</a>      *plotcanvas,
+                                                        <a class="link" href="GtkPlotCanvas.html#GtkPlotCanvasChild">GtkPlotCanvasChild</a> *arg1,
+                                                        <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"
+>gpointer</a>            user_data)       : Run Last</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>plotcanvas</code></em> :</span></p></td>
+<td>the object which received the signal.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>arg1</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title='The "changed" signal'>
+<a name="GtkPlotCanvas-changed"></a><h3>The <code class="literal">"changed"</code> signal</h3>
+<pre class="programlisting">void                user_function                      (<a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas">GtkPlotCanvas</a> *canvas,
+                                                        <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"
+>gpointer</a>       user_data)      : Run Last</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>canvas</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title='The "delete-item" signal'>
+<a name="GtkPlotCanvas-delete-item"></a><h3>The <code class="literal">"delete-item"</code> signal</h3>
+<pre class="programlisting"><a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>            user_function                      (<a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas">GtkPlotCanvas</a>      *plotcanvas,
+                                                        <a class="link" href="GtkPlotCanvas.html#GtkPlotCanvasChild">GtkPlotCanvasChild</a> *arg1,
+                                                        <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"
+>gpointer</a>            user_data)       : Run Last</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>plotcanvas</code></em> :</span></p></td>
+<td>the object which received the signal.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>arg1</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title='The "move-item" signal'>
+<a name="GtkPlotCanvas-move-item"></a><h3>The <code class="literal">"move-item"</code> signal</h3>
+<pre class="programlisting"><a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>            user_function                      (<a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas">GtkPlotCanvas</a>      *plotcanvas,
+                                                        <a class="link" href="GtkPlotCanvas.html#GtkPlotCanvasChild">GtkPlotCanvasChild</a> *arg1,
+                                                        <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a>             arg2,
+                                                        <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a>             arg3,
+                                                        <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"
+>gpointer</a>            user_data)       : Run Last</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>plotcanvas</code></em> :</span></p></td>
+<td>the object which received the signal.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>arg1</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>arg2</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>arg3</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title='The "resize-item" signal'>
+<a name="GtkPlotCanvas-resize-item"></a><h3>The <code class="literal">"resize-item"</code> signal</h3>
+<pre class="programlisting"><a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>            user_function                      (<a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas">GtkPlotCanvas</a>      *plotcanvas,
+                                                        <a class="link" href="GtkPlotCanvas.html#GtkPlotCanvasChild">GtkPlotCanvasChild</a> *arg1,
+                                                        <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a>             arg2,
+                                                        <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a>             arg3,
+                                                        <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"
+>gpointer</a>            user_data)       : Run Last</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>plotcanvas</code></em> :</span></p></td>
+<td>the object which received the signal.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>arg1</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>arg2</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>arg3</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title='The "select-item" signal'>
+<a name="GtkPlotCanvas-select-item"></a><h3>The <code class="literal">"select-item"</code> signal</h3>
+<pre class="programlisting"><a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>            user_function                      (<a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas">GtkPlotCanvas</a>      *plotcanvas,
+                                                        <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Event-Structures.html#GdkEvent"
+>GdkEvent</a>           *event,
+                                                        <a class="link" href="GtkPlotCanvas.html#GtkPlotCanvasChild">GtkPlotCanvasChild</a> *arg1,
+                                                        <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"
+>gpointer</a>            user_data)       : Run Last</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>plotcanvas</code></em> :</span></p></td>
+<td>the object which received the signal.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>event</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>arg1</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title='The "select-region" signal'>
+<a name="GtkPlotCanvas-select-region"></a><h3>The <code class="literal">"select-region"</code> signal</h3>
+<pre class="programlisting">void                user_function                      (<a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas">GtkPlotCanvas</a> *plotcanvas,
+                                                        <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a>        arg1,
+                                                        <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a>        arg2,
+                                                        <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a>        arg3,
+                                                        <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a>        arg4,
+                                                        <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"
+>gpointer</a>       user_data)       : Run Last</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>plotcanvas</code></em> :</span></p></td>
+<td>the object which received the signal.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>arg1</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>arg2</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>arg3</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>arg4</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.11</div>
+</body>
+</html>

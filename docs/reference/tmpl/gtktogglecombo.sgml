@@ -1,0 +1,92 @@
+<!-- ##### SECTION Title ##### -->
+GtkToggleCombo
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### STRUCT GtkToggleCombo ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SIGNAL GtkToggleCombo::changed ##### -->
+<para>
+
+</para>
+
+@togglecombo: the object which received the signal.
+@arg1: 
+@arg2: 
+
+<!-- ##### FUNCTION gtk_toggle_combo_new ##### -->
+<para>
+
+</para>
+
+@nrows: 
+@ncols: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_toggle_combo_construct ##### -->
+<para>
+
+</para>
+
+@toggle_combo: 
+@nrows: 
+@ncols: 
+
+
+<!-- ##### FUNCTION gtk_toggle_combo_get_nrows ##### -->
+<para>
+
+</para>
+
+@combo: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_toggle_combo_get_ncols ##### -->
+<para>
+
+</para>
+
+@combo: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_toggle_combo_select ##### -->
+<para>
+
+</para>
+
+@toggle_combo: 
+@new_row: 
+@new_col: 
+
+
+<!-- ##### FUNCTION gtk_toggle_combo_get_selection ##### -->
+<para>
+
+</para>
+
+@combo: 
+@row: 
+@col: 
+
+

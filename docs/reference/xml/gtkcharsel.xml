@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+<!ENTITY version SYSTEM "version.xml">
+]>
+<!--ENTITY index-Objects-Grouped SYSTEM "objects_grouped.sgml"-->
+<refentry id="GtkCharSelection">
+<refmeta>
+<refentrytitle role="top_of_page" id="GtkCharSelection.top_of_page">GtkCharSelection</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GTKEXTRA Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>GtkCharSelection</refname>
+<refpurpose>Character selection dialog</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="GtkCharSelection.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>
+
+#include &lt;gtkextra.h&gt;
+
+                    <link linkend="GtkCharSelection-struct">GtkCharSelection</link>;
+<link linkend="GtkWidget">GtkWidget</link>*          <link linkend="gtk-char-selection-new">gtk_char_selection_new</link>              (void);
+<link linkend="void">void</link>                <link linkend="gtk-char-selection-set-selection">gtk_char_selection_set_selection</link>    (<link linkend="GtkCharSelection">GtkCharSelection</link> *charsel,
+                                                         <link linkend="gint">gint</link> selection);
+<link linkend="gint">gint</link>                <link linkend="gtk-char-selection-get-selection">gtk_char_selection_get_selection</link>    (<link linkend="GtkCharSelection">GtkCharSelection</link> *charsel);
+</synopsis>
+</refsynopsisdiv>
+
+<refsect1 id="GtkCharSelection.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+  <link linkend="GObject">GObject</link>
+   +----<link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+         +----<link linkend="GtkObject">GtkObject</link>
+               +----<link linkend="GtkWidget">GtkWidget</link>
+                     +----<link linkend="GtkContainer">GtkContainer</link>
+                           +----<link linkend="GtkBin">GtkBin</link>
+                                 +----<link linkend="GtkWindow">GtkWindow</link>
+                                       +----GtkCharSelection
+</synopsis>
+</refsect1>
+
+
+
+<refsect1 id="GtkCharSelection.implemented-interfaces" role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+GtkCharSelection implements
+ <link linkend="AtkImplementorIface">AtkImplementorIface</link> and  <link linkend="GtkBuildable">GtkBuildable</link>.</para>
+</refsect1>
+
+
+
+
+
+<refsect1 id="GtkCharSelection.description" role="desc">
+<title role="desc.title">Description</title>
+<para>
+Char selection is a widget which contains all the characters in a font.
+Connecting a callback to the ok button of the widget you get the selected char.</para>
+<para>
+</para>
+</refsect1>
+
+<refsect1 id="GtkCharSelection.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="GtkCharSelection-struct" role="struct">
+<title>GtkCharSelection</title>
+<indexterm zone="GtkCharSelection-struct"><primary sortas="GtkCharSelection">GtkCharSelection</primary></indexterm><programlisting>typedef struct _GtkCharSelection GtkCharSelection;</programlisting>
+<para>
+The GtkCharSelection struct contains only private data.
+It should only be accessed through the functions described below.</para>
+<para>
+</para></refsect2>
+<refsect2 id="gtk-char-selection-new" role="function">
+<title>gtk_char_selection_new ()</title>
+<indexterm zone="gtk-char-selection-new"><primary sortas="gtk_char_selection_new">gtk_char_selection_new</primary></indexterm><programlisting><link linkend="GtkWidget">GtkWidget</link>*          gtk_char_selection_new              (void);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-char-selection-set-selection" role="function">
+<title>gtk_char_selection_set_selection ()</title>
+<indexterm zone="gtk-char-selection-set-selection"><primary sortas="gtk_char_selection_set_selection">gtk_char_selection_set_selection</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_char_selection_set_selection    (<link linkend="GtkCharSelection">GtkCharSelection</link> *charsel,
+                                                         <link linkend="gint">gint</link> selection);</programlisting>
+<para>
+Sets the selection for the <link linkend="GtkCharSelection"><type>GtkCharSelection</type></link> widget.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>charsel</parameter>&#160;:</term>
+<listitem><simpara> Char Selection widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>selection</parameter>&#160;:</term>
+<listitem><simpara> a character index from the list. 0 is left,upper
+          corner;256 is right, down corner.
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-char-selection-get-selection" role="function">
+<title>gtk_char_selection_get_selection ()</title>
+<indexterm zone="gtk-char-selection-get-selection"><primary sortas="gtk_char_selection_get_selection">gtk_char_selection_get_selection</primary></indexterm><programlisting><link linkend="gint">gint</link>                gtk_char_selection_get_selection    (<link linkend="GtkCharSelection">GtkCharSelection</link> *charsel);</programlisting>
+<para>
+Gets the current selection</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>charsel</parameter>&#160;:</term>
+<listitem><simpara> Char Selection widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara> The current selection(a character from the list).0 
+is left,upper corner;256 is right, down corner. 
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+
+
+
+
+</refentry>

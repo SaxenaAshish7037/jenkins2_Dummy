@@ -1,0 +1,1756 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GtkPlotSurface</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="GtkExtra Reference Manual">
+<link rel="up" href="ch03.html" title="Widgets">
+<link rel="prev" href="GtkPlotSegment.html" title="GtkPlotSegment">
+<link rel="next" href="gtkextra-GtkPSFont.html" title="GtkPSFont">
+<meta name="generator" content="GTK-Doc V1.11 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="part" href="gtkextra.html" title="Part I. GtkExtra Overview">
+<link rel="part" href="gtkextrabase.html" title="Part II. GtkExtra Widgets and Objects">
+<link rel="chapter" href="ch01.html" title="Object Hierarchy">
+<link rel="chapter" href="ch02.html" title="Widget Gallery">
+<link rel="chapter" href="ch03.html" title="Widgets">
+<link rel="chapter" href="ch04.html" title="Data Formatter">
+<link rel="chapter" href="ch05.html" title="GtkExtra Versioning">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="GtkPlotSegment.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch03.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">GtkExtra Reference Manual</th>
+<td><a accesskey="n" href="gtkextra-GtkPSFont.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#GtkPlotSurface.synopsis" class="shortcut">Top</a>
+                 | 
+                <a href="#GtkPlotSurface.description" class="shortcut">Description</a>
+                 | 
+                <a href="#GtkPlotSurface.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                 | 
+                <a href="#GtkPlotSurface.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+                 | 
+                <a href="#GtkPlotSurface.properties" class="shortcut">Properties</a>
+</td></tr>
+</table>
+<div class="refentry" title="GtkPlotSurface">
+<a name="GtkPlotSurface"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GtkPlotSurface.top_of_page"></a>GtkPlotSurface</span></h2>
+<p>GtkPlotSurface</p>
+</td>
+<td valign="top" align="right"><img src=""></td>
+</tr></table></div>
+<div class="refsynopsisdiv" title="Synopsis">
+<a name="GtkPlotSurface.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">
+
+#include &lt;gtkextra.h&gt;
+
+                    <a class="link" href="GtkPlotSurface.html#GtkPlotSurface-struct" title="GtkPlotSurface">GtkPlotSurface</a>;
+                    <a class="link" href="GtkPlotSurface.html#GtkPlotPolygon" title="GtkPlotPolygon">GtkPlotPolygon</a>;
+<a
+href="http://library.gnome.org/devel/gtk3/GtkWidget.html"
+>GtkWidget</a>*          <a class="link" href="GtkPlotSurface.html#gtk-plot-surface-new" title="gtk_plot_surface_new ()">gtk_plot_surface_new</a>                (void);
+<a
+href="http://library.gnome.org/devel/gtk3/GtkWidget.html"
+>GtkWidget</a>*          <a class="link" href="GtkPlotSurface.html#gtk-plot-surface-new-function" title="gtk_plot_surface_new_function ()">gtk_plot_surface_new_function</a>       (<a class="link" href="GtkPlot.html#GtkPlotFunc3D" title="GtkPlotFunc3D ()">GtkPlotFunc3D</a> function);
+void                <a class="link" href="GtkPlotSurface.html#gtk-plot-surface-construct-function" title="gtk_plot_surface_construct_function ()">gtk_plot_surface_construct_function</a> (<a class="link" href="GtkPlotSurface.html" title="GtkPlotSurface">GtkPlotSurface</a> *surface,
+                                                         <a class="link" href="GtkPlot.html#GtkPlotFunc3D" title="GtkPlotFunc3D ()">GtkPlotFunc3D</a> function);
+void                <a class="link" href="GtkPlotSurface.html#gtk-plot-surface-set-color" title="gtk_plot_surface_set_color ()">gtk_plot_surface_set_color</a>          (<a class="link" href="GtkPlotSurface.html" title="GtkPlotSurface">GtkPlotSurface</a> *data,
+                                                         <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Colormaps-and-Colors.html#GdkColor"
+>GdkColor</a> *color);
+void                <a class="link" href="GtkPlotSurface.html#gtk-plot-surface-set-shadow" title="gtk_plot_surface_set_shadow ()">gtk_plot_surface_set_shadow</a>         (<a class="link" href="GtkPlotSurface.html" title="GtkPlotSurface">GtkPlotSurface</a> *data,
+                                                         <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Colormaps-and-Colors.html#GdkColor"
+>GdkColor</a> *color);
+void                <a class="link" href="GtkPlotSurface.html#gtk-plot-surface-set-grid-foreground" title="gtk_plot_surface_set_grid_foreground ()">gtk_plot_surface_set_grid_foreground</a>
+                                                        (<a class="link" href="GtkPlotSurface.html" title="GtkPlotSurface">GtkPlotSurface</a> *data,
+                                                         <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Colormaps-and-Colors.html#GdkColor"
+>GdkColor</a> *foreground);
+void                <a class="link" href="GtkPlotSurface.html#gtk-plot-surface-set-grid-background" title="gtk_plot_surface_set_grid_background ()">gtk_plot_surface_set_grid_background</a>
+                                                        (<a class="link" href="GtkPlotSurface.html" title="GtkPlotSurface">GtkPlotSurface</a> *data,
+                                                         <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Colormaps-and-Colors.html#GdkColor"
+>GdkColor</a> *background);
+void                <a class="link" href="GtkPlotSurface.html#gtk-plot-surface-set-grid-visible" title="gtk_plot_surface_set_grid_visible ()">gtk_plot_surface_set_grid_visible</a>   (<a class="link" href="GtkPlotSurface.html" title="GtkPlotSurface">GtkPlotSurface</a> *data,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> visible);
+<a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>            <a class="link" href="GtkPlotSurface.html#gtk-plot-surface-get-grid-visible" title="gtk_plot_surface_get_grid_visible ()">gtk_plot_surface_get_grid_visible</a>   (<a class="link" href="GtkPlotSurface.html" title="GtkPlotSurface">GtkPlotSurface</a> *data);
+void                <a class="link" href="GtkPlotSurface.html#gtk-plot-surface-set-mesh-visible" title="gtk_plot_surface_set_mesh_visible ()">gtk_plot_surface_set_mesh_visible</a>   (<a class="link" href="GtkPlotSurface.html" title="GtkPlotSurface">GtkPlotSurface</a> *data,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> visible);
+<a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>            <a class="link" href="GtkPlotSurface.html#gtk-plot-surface-get-mesh-visible" title="gtk_plot_surface_get_mesh_visible ()">gtk_plot_surface_get_mesh_visible</a>   (<a class="link" href="GtkPlotSurface.html" title="GtkPlotSurface">GtkPlotSurface</a> *data);
+void                <a class="link" href="GtkPlotSurface.html#gtk-plot-surface-set-light" title="gtk_plot_surface_set_light ()">gtk_plot_surface_set_light</a>          (<a class="link" href="GtkPlotSurface.html" title="GtkPlotSurface">GtkPlotSurface</a> *data,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> x,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> y,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> z);
+void                <a class="link" href="GtkPlotSurface.html#gtk-plot-surface-set-ambient" title="gtk_plot_surface_set_ambient ()">gtk_plot_surface_set_ambient</a>        (<a class="link" href="GtkPlotSurface.html" title="GtkPlotSurface">GtkPlotSurface</a> *data,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> ambient);
+void                <a class="link" href="GtkPlotSurface.html#gtk-plot-surface-use-height-gradient" title="gtk_plot_surface_use_height_gradient ()">gtk_plot_surface_use_height_gradient</a>
+                                                        (<a class="link" href="GtkPlotSurface.html" title="GtkPlotSurface">GtkPlotSurface</a> *data,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> use_gradient);
+void                <a class="link" href="GtkPlotSurface.html#gtk-plot-surface-use-amplitud" title="gtk_plot_surface_use_amplitud ()">gtk_plot_surface_use_amplitud</a>       (<a class="link" href="GtkPlotSurface.html" title="GtkPlotSurface">GtkPlotSurface</a> *data,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> use_amplitud);
+void                <a class="link" href="GtkPlotSurface.html#gtk-plot-surface-set-transparent" title="gtk_plot_surface_set_transparent ()">gtk_plot_surface_set_transparent</a>    (<a class="link" href="GtkPlotSurface.html" title="GtkPlotSurface">GtkPlotSurface</a> *data,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> transparent);
+void                <a class="link" href="GtkPlotSurface.html#gtk-plot-surface-set-points" title="gtk_plot_surface_set_points ()">gtk_plot_surface_set_points</a>         (<a class="link" href="GtkPlotSurface.html" title="GtkPlotSurface">GtkPlotSurface</a> *data,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> *x,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> *y,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> *z,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> *dx,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> *dy,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> *dz,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> nx,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> ny);
+void                <a class="link" href="GtkPlotSurface.html#gtk-plot-surface-get-points" title="gtk_plot_surface_get_points ()">gtk_plot_surface_get_points</a>         (<a class="link" href="GtkPlotSurface.html" title="GtkPlotSurface">GtkPlotSurface</a> *data,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> **x,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> **y,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> **z,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> **dx,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> **dy,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> **dz,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> *nx,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> *ny);
+<a class="link" href="GtkPlotArray.html" title="GtkPlotArray">GtkPlotArray</a> *      <a class="link" href="GtkPlotSurface.html#gtk-plot-surface-set-x" title="gtk_plot_surface_set_x ()">gtk_plot_surface_set_x</a>              (<a class="link" href="GtkPlotSurface.html" title="GtkPlotSurface">GtkPlotSurface</a> *data,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> *x);
+<a class="link" href="GtkPlotArray.html" title="GtkPlotArray">GtkPlotArray</a> *      <a class="link" href="GtkPlotSurface.html#gtk-plot-surface-set-y" title="gtk_plot_surface_set_y ()">gtk_plot_surface_set_y</a>              (<a class="link" href="GtkPlotSurface.html" title="GtkPlotSurface">GtkPlotSurface</a> *data,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> *y);
+<a class="link" href="GtkPlotArray.html" title="GtkPlotArray">GtkPlotArray</a> *      <a class="link" href="GtkPlotSurface.html#gtk-plot-surface-set-z" title="gtk_plot_surface_set_z ()">gtk_plot_surface_set_z</a>              (<a class="link" href="GtkPlotSurface.html" title="GtkPlotSurface">GtkPlotSurface</a> *data,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> *z);
+<a class="link" href="GtkPlotArray.html" title="GtkPlotArray">GtkPlotArray</a> *      <a class="link" href="GtkPlotSurface.html#gtk-plot-surface-set-dx" title="gtk_plot_surface_set_dx ()">gtk_plot_surface_set_dx</a>             (<a class="link" href="GtkPlotSurface.html" title="GtkPlotSurface">GtkPlotSurface</a> *data,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> *dx);
+<a class="link" href="GtkPlotArray.html" title="GtkPlotArray">GtkPlotArray</a> *      <a class="link" href="GtkPlotSurface.html#gtk-plot-surface-set-dy" title="gtk_plot_surface_set_dy ()">gtk_plot_surface_set_dy</a>             (<a class="link" href="GtkPlotSurface.html" title="GtkPlotSurface">GtkPlotSurface</a> *data,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> *dy);
+<a class="link" href="GtkPlotArray.html" title="GtkPlotArray">GtkPlotArray</a> *      <a class="link" href="GtkPlotSurface.html#gtk-plot-surface-set-dz" title="gtk_plot_surface_set_dz ()">gtk_plot_surface_set_dz</a>             (<a class="link" href="GtkPlotSurface.html" title="GtkPlotSurface">GtkPlotSurface</a> *data,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> *dz);
+<a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> *           <a class="link" href="GtkPlotSurface.html#gtk-plot-surface-get-x" title="gtk_plot_surface_get_x ()">gtk_plot_surface_get_x</a>              (<a class="link" href="GtkPlotSurface.html" title="GtkPlotSurface">GtkPlotSurface</a> *dataset,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> *nx);
+<a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> *           <a class="link" href="GtkPlotSurface.html#gtk-plot-surface-get-y" title="gtk_plot_surface_get_y ()">gtk_plot_surface_get_y</a>              (<a class="link" href="GtkPlotSurface.html" title="GtkPlotSurface">GtkPlotSurface</a> *dataset,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> *ny);
+<a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> *           <a class="link" href="GtkPlotSurface.html#gtk-plot-surface-get-z" title="gtk_plot_surface_get_z ()">gtk_plot_surface_get_z</a>              (<a class="link" href="GtkPlotSurface.html" title="GtkPlotSurface">GtkPlotSurface</a> *dataset,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> *nx,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> *ny);
+<a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> *           <a class="link" href="GtkPlotSurface.html#gtk-plot-surface-get-dx" title="gtk_plot_surface_get_dx ()">gtk_plot_surface_get_dx</a>             (<a class="link" href="GtkPlotSurface.html" title="GtkPlotSurface">GtkPlotSurface</a> *dataset);
+<a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> *           <a class="link" href="GtkPlotSurface.html#gtk-plot-surface-get-dy" title="gtk_plot_surface_get_dy ()">gtk_plot_surface_get_dy</a>             (<a class="link" href="GtkPlotSurface.html" title="GtkPlotSurface">GtkPlotSurface</a> *dataset);
+<a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> *           <a class="link" href="GtkPlotSurface.html#gtk-plot-surface-get-dz" title="gtk_plot_surface_get_dz ()">gtk_plot_surface_get_dz</a>             (<a class="link" href="GtkPlotSurface.html" title="GtkPlotSurface">GtkPlotSurface</a> *dataset);
+void                <a class="link" href="GtkPlotSurface.html#gtk-plot-surface-set-nx" title="gtk_plot_surface_set_nx ()">gtk_plot_surface_set_nx</a>             (<a class="link" href="GtkPlotSurface.html" title="GtkPlotSurface">GtkPlotSurface</a> *dataset,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> nx);
+void                <a class="link" href="GtkPlotSurface.html#gtk-plot-surface-set-ny" title="gtk_plot_surface_set_ny ()">gtk_plot_surface_set_ny</a>             (<a class="link" href="GtkPlotSurface.html" title="GtkPlotSurface">GtkPlotSurface</a> *dataset,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> ny);
+<a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                <a class="link" href="GtkPlotSurface.html#gtk-plot-surface-get-nx" title="gtk_plot_surface_get_nx ()">gtk_plot_surface_get_nx</a>             (<a class="link" href="GtkPlotSurface.html" title="GtkPlotSurface">GtkPlotSurface</a> *dataset);
+<a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                <a class="link" href="GtkPlotSurface.html#gtk-plot-surface-get-ny" title="gtk_plot_surface_get_ny ()">gtk_plot_surface_get_ny</a>             (<a class="link" href="GtkPlotSurface.html" title="GtkPlotSurface">GtkPlotSurface</a> *dataset);
+void                <a class="link" href="GtkPlotSurface.html#gtk-plot-surface-set-xstep" title="gtk_plot_surface_set_xstep ()">gtk_plot_surface_set_xstep</a>          (<a class="link" href="GtkPlotSurface.html" title="GtkPlotSurface">GtkPlotSurface</a> *dataset,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> xstep);
+void                <a class="link" href="GtkPlotSurface.html#gtk-plot-surface-set-ystep" title="gtk_plot_surface_set_ystep ()">gtk_plot_surface_set_ystep</a>          (<a class="link" href="GtkPlotSurface.html" title="GtkPlotSurface">GtkPlotSurface</a> *dataset,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> ystep);
+<a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a>             <a class="link" href="GtkPlotSurface.html#gtk-plot-surface-get-xstep" title="gtk_plot_surface_get_xstep ()">gtk_plot_surface_get_xstep</a>          (<a class="link" href="GtkPlotSurface.html" title="GtkPlotSurface">GtkPlotSurface</a> *dataset);
+<a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a>             <a class="link" href="GtkPlotSurface.html#gtk-plot-surface-get-ystep" title="gtk_plot_surface_get_ystep ()">gtk_plot_surface_get_ystep</a>          (<a class="link" href="GtkPlotSurface.html" title="GtkPlotSurface">GtkPlotSurface</a> *dataset);
+void                <a class="link" href="GtkPlotSurface.html#gtk-plot-surface-build-mesh" title="gtk_plot_surface_build_mesh ()">gtk_plot_surface_build_mesh</a>         (<a class="link" href="GtkPlotSurface.html" title="GtkPlotSurface">GtkPlotSurface</a> *surface);
+void                <a class="link" href="GtkPlotSurface.html#gtk-plot-surface-recalc-nodes" title="gtk_plot_surface_recalc_nodes ()">gtk_plot_surface_recalc_nodes</a>       (<a class="link" href="GtkPlotSurface.html" title="GtkPlotSurface">GtkPlotSurface</a> *surface);
+</pre>
+</div>
+<div class="refsect1" title="Object Hierarchy">
+<a name="GtkPlotSurface.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a
+href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject"
+>GObject</a>
+   +----<a
+href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned"
+>GInitiallyUnowned</a>
+         +----<a
+href="http://library.gnome.org/devel/gtk3/GtkObject.html"
+>GtkObject</a>
+               +----<a
+href="http://library.gnome.org/devel/gtk3/GtkWidget.html"
+>GtkWidget</a>
+                     +----<a class="link" href="GtkPlotData.html" title="GtkPlotData">GtkPlotData</a>
+                           +----GtkPlotSurface
+                                 +----<a class="link" href="GtkPlotCSurface.html" title="GtkPlotCSurface">GtkPlotCSurface</a>
+</pre>
+</div>
+<div class="refsect1" title="Implemented Interfaces">
+<a name="GtkPlotSurface.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+GtkPlotSurface implements
+ AtkImplementorIface and  <a
+href="http://library.gnome.org/devel/gtk3/GtkBuildable.html"
+>GtkBuildable</a>.</p>
+</div>
+<div class="refsect1" title="Properties">
+<a name="GtkPlotSurface.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="GtkPlotSurface.html#GtkPlotSurface--ambient" title='The "ambient" property'>ambient</a>"                  <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a>               : Read / Write
+  "<a class="link" href="GtkPlotSurface.html#GtkPlotSurface--mesh-color" title='The "mesh-color" property'>mesh-color</a>"               <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"
+>gpointer</a>              : Read / Write
+  "<a class="link" href="GtkPlotSurface.html#GtkPlotSurface--mesh-style" title='The "mesh-style" property'>mesh-style</a>"               <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write
+  "<a class="link" href="GtkPlotSurface.html#GtkPlotSurface--mesh-width" title='The "mesh-width" property'>mesh-width</a>"               <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a>               : Read / Write
+  "<a class="link" href="GtkPlotSurface.html#GtkPlotSurface--nx" title='The "nx" property'>nx</a>"                       <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write
+  "<a class="link" href="GtkPlotSurface.html#GtkPlotSurface--ny" title='The "ny" property'>ny</a>"                       <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write
+  "<a class="link" href="GtkPlotSurface.html#GtkPlotSurface--show-grid" title='The "show-grid" property'>show-grid</a>"                <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write
+  "<a class="link" href="GtkPlotSurface.html#GtkPlotSurface--show-mesh" title='The "show-mesh" property'>show-mesh</a>"                <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write
+  "<a class="link" href="GtkPlotSurface.html#GtkPlotSurface--transparent" title='The "transparent" property'>transparent</a>"              <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write
+  "<a class="link" href="GtkPlotSurface.html#GtkPlotSurface--use-amplitud" title='The "use-amplitud" property'>use-amplitud</a>"             <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write
+  "<a class="link" href="GtkPlotSurface.html#GtkPlotSurface--use-height" title='The "use-height" property'>use-height</a>"               <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write
+  "<a class="link" href="GtkPlotSurface.html#GtkPlotSurface--vector-light" title='The "vector-light" property'>vector-light</a>"             <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"
+>gpointer</a>              : Read / Write
+  "<a class="link" href="GtkPlotSurface.html#GtkPlotSurface--xstep" title='The "xstep" property'>xstep</a>"                    <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a>               : Read / Write
+  "<a class="link" href="GtkPlotSurface.html#GtkPlotSurface--ystep" title='The "ystep" property'>ystep</a>"                    <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a>               : Read / Write
+</pre>
+</div>
+<div class="refsect1" title="Description">
+<a name="GtkPlotSurface.description"></a><h2>Description</h2>
+<p>
+FIXME:: need long description</p>
+<p>
+</p>
+</div>
+<div class="refsect1" title="Details">
+<a name="GtkPlotSurface.details"></a><h2>Details</h2>
+<div class="refsect2" title="GtkPlotSurface">
+<a name="GtkPlotSurface-struct"></a><h3>GtkPlotSurface</h3>
+<pre class="programlisting">typedef struct _GtkPlotSurface GtkPlotSurface;</pre>
+<p>
+The GtkPlotSurface struct contains only private data.
+It should only be accessed through the functions described below.</p>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2" title="GtkPlotPolygon">
+<a name="GtkPlotPolygon"></a><h3>GtkPlotPolygon</h3>
+<pre class="programlisting">typedef struct {
+  GtkPlotDTtriangle *t;  		/* parent triangle */
+  GtkPlotVector xyz[4]; 		/* points */
+  GtkPlotVector p[4];			/* pixels */
+  gint n;				/* number of points */
+  gdouble level;
+  gboolean cut_level;	
+  gboolean sublevel;
+} GtkPlotPolygon;
+</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_surface_new ()">
+<a name="gtk-plot-surface-new"></a><h3>gtk_plot_surface_new ()</h3>
+<pre class="programlisting"><a
+href="http://library.gnome.org/devel/gtk3/GtkWidget.html"
+>GtkWidget</a>*          gtk_plot_surface_new                (void);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_surface_new_function ()">
+<a name="gtk-plot-surface-new-function"></a><h3>gtk_plot_surface_new_function ()</h3>
+<pre class="programlisting"><a
+href="http://library.gnome.org/devel/gtk3/GtkWidget.html"
+>GtkWidget</a>*          gtk_plot_surface_new_function       (<a class="link" href="GtkPlot.html#GtkPlotFunc3D" title="GtkPlotFunc3D ()">GtkPlotFunc3D</a> function);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>function</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlot.html#GtkPlotFunc3D" title="GtkPlotFunc3D ()"><span class="type">GtkPlotFunc3D</span></a>. <a href="http://foldoc.doc.ic.ac.uk/foldoc/foldoc.cgi?query=scope"><span class="acronym">scope</span></a> async. </td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> (transfer full) the constructed <a
+href="http://library.gnome.org/devel/gtk3/GtkWidget.html"
+><span class="type">GtkWidget</span></a> 
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_surface_construct_function ()">
+<a name="gtk-plot-surface-construct-function"></a><h3>gtk_plot_surface_construct_function ()</h3>
+<pre class="programlisting">void                gtk_plot_surface_construct_function (<a class="link" href="GtkPlotSurface.html" title="GtkPlotSurface">GtkPlotSurface</a> *surface,
+                                                         <a class="link" href="GtkPlot.html#GtkPlotFunc3D" title="GtkPlotFunc3D ()">GtkPlotFunc3D</a> function);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>surface</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>function</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlot.html#GtkPlotFunc3D" title="GtkPlotFunc3D ()"><span class="type">GtkPlotFunc3D</span></a>. <a href="http://foldoc.doc.ic.ac.uk/foldoc/foldoc.cgi?query=scope"><span class="acronym">scope</span></a> async. </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_surface_set_color ()">
+<a name="gtk-plot-surface-set-color"></a><h3>gtk_plot_surface_set_color ()</h3>
+<pre class="programlisting">void                gtk_plot_surface_set_color          (<a class="link" href="GtkPlotSurface.html" title="GtkPlotSurface">GtkPlotSurface</a> *data,
+                                                         <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Colormaps-and-Colors.html#GdkColor"
+>GdkColor</a> *color);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>data</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>color</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_surface_set_shadow ()">
+<a name="gtk-plot-surface-set-shadow"></a><h3>gtk_plot_surface_set_shadow ()</h3>
+<pre class="programlisting">void                gtk_plot_surface_set_shadow         (<a class="link" href="GtkPlotSurface.html" title="GtkPlotSurface">GtkPlotSurface</a> *data,
+                                                         <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Colormaps-and-Colors.html#GdkColor"
+>GdkColor</a> *color);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>data</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>color</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_surface_set_grid_foreground ()">
+<a name="gtk-plot-surface-set-grid-foreground"></a><h3>gtk_plot_surface_set_grid_foreground ()</h3>
+<pre class="programlisting">void                gtk_plot_surface_set_grid_foreground
+                                                        (<a class="link" href="GtkPlotSurface.html" title="GtkPlotSurface">GtkPlotSurface</a> *data,
+                                                         <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Colormaps-and-Colors.html#GdkColor"
+>GdkColor</a> *foreground);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>data</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>foreground</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_surface_set_grid_background ()">
+<a name="gtk-plot-surface-set-grid-background"></a><h3>gtk_plot_surface_set_grid_background ()</h3>
+<pre class="programlisting">void                gtk_plot_surface_set_grid_background
+                                                        (<a class="link" href="GtkPlotSurface.html" title="GtkPlotSurface">GtkPlotSurface</a> *data,
+                                                         <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Colormaps-and-Colors.html#GdkColor"
+>GdkColor</a> *background);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>data</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>background</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_surface_set_grid_visible ()">
+<a name="gtk-plot-surface-set-grid-visible"></a><h3>gtk_plot_surface_set_grid_visible ()</h3>
+<pre class="programlisting">void                gtk_plot_surface_set_grid_visible   (<a class="link" href="GtkPlotSurface.html" title="GtkPlotSurface">GtkPlotSurface</a> *data,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> visible);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>data</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>visible</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_surface_get_grid_visible ()">
+<a name="gtk-plot-surface-get-grid-visible"></a><h3>gtk_plot_surface_get_grid_visible ()</h3>
+<pre class="programlisting"><a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>            gtk_plot_surface_get_grid_visible   (<a class="link" href="GtkPlotSurface.html" title="GtkPlotSurface">GtkPlotSurface</a> *data);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>data</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_surface_set_mesh_visible ()">
+<a name="gtk-plot-surface-set-mesh-visible"></a><h3>gtk_plot_surface_set_mesh_visible ()</h3>
+<pre class="programlisting">void                gtk_plot_surface_set_mesh_visible   (<a class="link" href="GtkPlotSurface.html" title="GtkPlotSurface">GtkPlotSurface</a> *data,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> visible);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>data</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>visible</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_surface_get_mesh_visible ()">
+<a name="gtk-plot-surface-get-mesh-visible"></a><h3>gtk_plot_surface_get_mesh_visible ()</h3>
+<pre class="programlisting"><a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>            gtk_plot_surface_get_mesh_visible   (<a class="link" href="GtkPlotSurface.html" title="GtkPlotSurface">GtkPlotSurface</a> *data);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>data</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_surface_set_light ()">
+<a name="gtk-plot-surface-set-light"></a><h3>gtk_plot_surface_set_light ()</h3>
+<pre class="programlisting">void                gtk_plot_surface_set_light          (<a class="link" href="GtkPlotSurface.html" title="GtkPlotSurface">GtkPlotSurface</a> *data,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> x,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> y,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> z);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>data</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>x</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>y</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>z</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_surface_set_ambient ()">
+<a name="gtk-plot-surface-set-ambient"></a><h3>gtk_plot_surface_set_ambient ()</h3>
+<pre class="programlisting">void                gtk_plot_surface_set_ambient        (<a class="link" href="GtkPlotSurface.html" title="GtkPlotSurface">GtkPlotSurface</a> *data,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> ambient);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>data</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>ambient</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_surface_use_height_gradient ()">
+<a name="gtk-plot-surface-use-height-gradient"></a><h3>gtk_plot_surface_use_height_gradient ()</h3>
+<pre class="programlisting">void                gtk_plot_surface_use_height_gradient
+                                                        (<a class="link" href="GtkPlotSurface.html" title="GtkPlotSurface">GtkPlotSurface</a> *data,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> use_gradient);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>data</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>use_gradient</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_surface_use_amplitud ()">
+<a name="gtk-plot-surface-use-amplitud"></a><h3>gtk_plot_surface_use_amplitud ()</h3>
+<pre class="programlisting">void                gtk_plot_surface_use_amplitud       (<a class="link" href="GtkPlotSurface.html" title="GtkPlotSurface">GtkPlotSurface</a> *data,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> use_amplitud);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>data</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>use_amplitud</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_surface_set_transparent ()">
+<a name="gtk-plot-surface-set-transparent"></a><h3>gtk_plot_surface_set_transparent ()</h3>
+<pre class="programlisting">void                gtk_plot_surface_set_transparent    (<a class="link" href="GtkPlotSurface.html" title="GtkPlotSurface">GtkPlotSurface</a> *data,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> transparent);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>data</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>transparent</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_surface_set_points ()">
+<a name="gtk-plot-surface-set-points"></a><h3>gtk_plot_surface_set_points ()</h3>
+<pre class="programlisting">void                gtk_plot_surface_set_points         (<a class="link" href="GtkPlotSurface.html" title="GtkPlotSurface">GtkPlotSurface</a> *data,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> *x,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> *y,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> *z,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> *dx,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> *dy,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> *dz,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> nx,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> ny);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>data</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>x</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>y</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>z</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>dx</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>dy</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>dz</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>nx</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>ny</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_surface_get_points ()">
+<a name="gtk-plot-surface-get-points"></a><h3>gtk_plot_surface_get_points ()</h3>
+<pre class="programlisting">void                gtk_plot_surface_get_points         (<a class="link" href="GtkPlotSurface.html" title="GtkPlotSurface">GtkPlotSurface</a> *data,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> **x,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> **y,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> **z,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> **dx,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> **dy,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> **dz,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> *nx,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> *ny);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>data</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>x</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>y</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>z</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>dx</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>dy</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>dz</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>nx</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>ny</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_surface_set_x ()">
+<a name="gtk-plot-surface-set-x"></a><h3>gtk_plot_surface_set_x ()</h3>
+<pre class="programlisting"><a class="link" href="GtkPlotArray.html" title="GtkPlotArray">GtkPlotArray</a> *      gtk_plot_surface_set_x              (<a class="link" href="GtkPlotSurface.html" title="GtkPlotSurface">GtkPlotSurface</a> *data,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> *x);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>data</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>x</code></em> :</span></p></td>
+<td> the value to be set
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> (transfer none)  the affected <a class="link" href="GtkPlotArray.html" title="GtkPlotArray"><span class="type">GtkPlotArray</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_surface_set_y ()">
+<a name="gtk-plot-surface-set-y"></a><h3>gtk_plot_surface_set_y ()</h3>
+<pre class="programlisting"><a class="link" href="GtkPlotArray.html" title="GtkPlotArray">GtkPlotArray</a> *      gtk_plot_surface_set_y              (<a class="link" href="GtkPlotSurface.html" title="GtkPlotSurface">GtkPlotSurface</a> *data,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> *y);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>data</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>y</code></em> :</span></p></td>
+<td> the value to be set 
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> (transfer none)  the affected <a class="link" href="GtkPlotArray.html" title="GtkPlotArray"><span class="type">GtkPlotArray</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_surface_set_z ()">
+<a name="gtk-plot-surface-set-z"></a><h3>gtk_plot_surface_set_z ()</h3>
+<pre class="programlisting"><a class="link" href="GtkPlotArray.html" title="GtkPlotArray">GtkPlotArray</a> *      gtk_plot_surface_set_z              (<a class="link" href="GtkPlotSurface.html" title="GtkPlotSurface">GtkPlotSurface</a> *data,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> *z);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>data</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>z</code></em> :</span></p></td>
+<td> the value to be set 
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> (transfer none)  the affected <a class="link" href="GtkPlotArray.html" title="GtkPlotArray"><span class="type">GtkPlotArray</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_surface_set_dx ()">
+<a name="gtk-plot-surface-set-dx"></a><h3>gtk_plot_surface_set_dx ()</h3>
+<pre class="programlisting"><a class="link" href="GtkPlotArray.html" title="GtkPlotArray">GtkPlotArray</a> *      gtk_plot_surface_set_dx             (<a class="link" href="GtkPlotSurface.html" title="GtkPlotSurface">GtkPlotSurface</a> *data,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> *dx);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>data</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>dx</code></em> :</span></p></td>
+<td> the value to be set 
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> (transfer none)  the affected <a class="link" href="GtkPlotArray.html" title="GtkPlotArray"><span class="type">GtkPlotArray</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_surface_set_dy ()">
+<a name="gtk-plot-surface-set-dy"></a><h3>gtk_plot_surface_set_dy ()</h3>
+<pre class="programlisting"><a class="link" href="GtkPlotArray.html" title="GtkPlotArray">GtkPlotArray</a> *      gtk_plot_surface_set_dy             (<a class="link" href="GtkPlotSurface.html" title="GtkPlotSurface">GtkPlotSurface</a> *data,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> *dy);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>data</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>dy</code></em> :</span></p></td>
+<td> the value to be set 
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> (transfer none)  the affected <a class="link" href="GtkPlotArray.html" title="GtkPlotArray"><span class="type">GtkPlotArray</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_surface_set_dz ()">
+<a name="gtk-plot-surface-set-dz"></a><h3>gtk_plot_surface_set_dz ()</h3>
+<pre class="programlisting"><a class="link" href="GtkPlotArray.html" title="GtkPlotArray">GtkPlotArray</a> *      gtk_plot_surface_set_dz             (<a class="link" href="GtkPlotSurface.html" title="GtkPlotSurface">GtkPlotSurface</a> *data,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> *dz);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>data</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>dz</code></em> :</span></p></td>
+<td> the value to be set 
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> (transfer none)  the affected <a class="link" href="GtkPlotArray.html" title="GtkPlotArray"><span class="type">GtkPlotArray</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_surface_get_x ()">
+<a name="gtk-plot-surface-get-x"></a><h3>gtk_plot_surface_get_x ()</h3>
+<pre class="programlisting"><a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> *           gtk_plot_surface_get_x              (<a class="link" href="GtkPlotSurface.html" title="GtkPlotSurface">GtkPlotSurface</a> *dataset,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> *nx);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>dataset</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>nx</code></em> :</span></p></td>
+<td> the value to be set 
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_surface_get_y ()">
+<a name="gtk-plot-surface-get-y"></a><h3>gtk_plot_surface_get_y ()</h3>
+<pre class="programlisting"><a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> *           gtk_plot_surface_get_y              (<a class="link" href="GtkPlotSurface.html" title="GtkPlotSurface">GtkPlotSurface</a> *dataset,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> *ny);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>dataset</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>ny</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_surface_get_z ()">
+<a name="gtk-plot-surface-get-z"></a><h3>gtk_plot_surface_get_z ()</h3>
+<pre class="programlisting"><a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> *           gtk_plot_surface_get_z              (<a class="link" href="GtkPlotSurface.html" title="GtkPlotSurface">GtkPlotSurface</a> *dataset,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> *nx,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> *ny);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>dataset</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>nx</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>ny</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_surface_get_dx ()">
+<a name="gtk-plot-surface-get-dx"></a><h3>gtk_plot_surface_get_dx ()</h3>
+<pre class="programlisting"><a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> *           gtk_plot_surface_get_dx             (<a class="link" href="GtkPlotSurface.html" title="GtkPlotSurface">GtkPlotSurface</a> *dataset);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>dataset</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_surface_get_dy ()">
+<a name="gtk-plot-surface-get-dy"></a><h3>gtk_plot_surface_get_dy ()</h3>
+<pre class="programlisting"><a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> *           gtk_plot_surface_get_dy             (<a class="link" href="GtkPlotSurface.html" title="GtkPlotSurface">GtkPlotSurface</a> *dataset);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>dataset</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_surface_get_dz ()">
+<a name="gtk-plot-surface-get-dz"></a><h3>gtk_plot_surface_get_dz ()</h3>
+<pre class="programlisting"><a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> *           gtk_plot_surface_get_dz             (<a class="link" href="GtkPlotSurface.html" title="GtkPlotSurface">GtkPlotSurface</a> *dataset);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>dataset</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_surface_set_nx ()">
+<a name="gtk-plot-surface-set-nx"></a><h3>gtk_plot_surface_set_nx ()</h3>
+<pre class="programlisting">void                gtk_plot_surface_set_nx             (<a class="link" href="GtkPlotSurface.html" title="GtkPlotSurface">GtkPlotSurface</a> *dataset,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> nx);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>dataset</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>nx</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_surface_set_ny ()">
+<a name="gtk-plot-surface-set-ny"></a><h3>gtk_plot_surface_set_ny ()</h3>
+<pre class="programlisting">void                gtk_plot_surface_set_ny             (<a class="link" href="GtkPlotSurface.html" title="GtkPlotSurface">GtkPlotSurface</a> *dataset,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> ny);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>dataset</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>ny</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_surface_get_nx ()">
+<a name="gtk-plot-surface-get-nx"></a><h3>gtk_plot_surface_get_nx ()</h3>
+<pre class="programlisting"><a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                gtk_plot_surface_get_nx             (<a class="link" href="GtkPlotSurface.html" title="GtkPlotSurface">GtkPlotSurface</a> *dataset);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>dataset</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_surface_get_ny ()">
+<a name="gtk-plot-surface-get-ny"></a><h3>gtk_plot_surface_get_ny ()</h3>
+<pre class="programlisting"><a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                gtk_plot_surface_get_ny             (<a class="link" href="GtkPlotSurface.html" title="GtkPlotSurface">GtkPlotSurface</a> *dataset);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>dataset</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_surface_set_xstep ()">
+<a name="gtk-plot-surface-set-xstep"></a><h3>gtk_plot_surface_set_xstep ()</h3>
+<pre class="programlisting">void                gtk_plot_surface_set_xstep          (<a class="link" href="GtkPlotSurface.html" title="GtkPlotSurface">GtkPlotSurface</a> *dataset,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> xstep);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>dataset</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>xstep</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_surface_set_ystep ()">
+<a name="gtk-plot-surface-set-ystep"></a><h3>gtk_plot_surface_set_ystep ()</h3>
+<pre class="programlisting">void                gtk_plot_surface_set_ystep          (<a class="link" href="GtkPlotSurface.html" title="GtkPlotSurface">GtkPlotSurface</a> *dataset,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> ystep);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>dataset</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>ystep</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_surface_get_xstep ()">
+<a name="gtk-plot-surface-get-xstep"></a><h3>gtk_plot_surface_get_xstep ()</h3>
+<pre class="programlisting"><a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a>             gtk_plot_surface_get_xstep          (<a class="link" href="GtkPlotSurface.html" title="GtkPlotSurface">GtkPlotSurface</a> *dataset);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>dataset</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_surface_get_ystep ()">
+<a name="gtk-plot-surface-get-ystep"></a><h3>gtk_plot_surface_get_ystep ()</h3>
+<pre class="programlisting"><a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a>             gtk_plot_surface_get_ystep          (<a class="link" href="GtkPlotSurface.html" title="GtkPlotSurface">GtkPlotSurface</a> *dataset);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>dataset</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_surface_build_mesh ()">
+<a name="gtk-plot-surface-build-mesh"></a><h3>gtk_plot_surface_build_mesh ()</h3>
+<pre class="programlisting">void                gtk_plot_surface_build_mesh         (<a class="link" href="GtkPlotSurface.html" title="GtkPlotSurface">GtkPlotSurface</a> *surface);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>surface</code></em> :</span></p></td>
+<td>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_surface_recalc_nodes ()">
+<a name="gtk-plot-surface-recalc-nodes"></a><h3>gtk_plot_surface_recalc_nodes ()</h3>
+<pre class="programlisting">void                gtk_plot_surface_recalc_nodes       (<a class="link" href="GtkPlotSurface.html" title="GtkPlotSurface">GtkPlotSurface</a> *surface);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>surface</code></em> :</span></p></td>
+<td>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1" title="Property Details">
+<a name="GtkPlotSurface.property-details"></a><h2>Property Details</h2>
+<div class="refsect2" title='The "ambient" property'>
+<a name="GtkPlotSurface--ambient"></a><h3>The <code class="literal">"ambient"</code> property</h3>
+<pre class="programlisting">  "ambient"                  <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a>               : Read / Write</pre>
+<p>
+</p>
+<p>
+</p>
+<p>Allowed values: &gt;= 0</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2" title='The "mesh-color" property'>
+<a name="GtkPlotSurface--mesh-color"></a><h3>The <code class="literal">"mesh-color"</code> property</h3>
+<pre class="programlisting">  "mesh-color"               <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"
+>gpointer</a>              : Read / Write</pre>
+<p></p>
+</div>
+<hr>
+<div class="refsect2" title='The "mesh-style" property'>
+<a name="GtkPlotSurface--mesh-style"></a><h3>The <code class="literal">"mesh-style"</code> property</h3>
+<pre class="programlisting">  "mesh-style"               <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write</pre>
+<p></p>
+<p>Allowed values: &gt;= 0</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2" title='The "mesh-width" property'>
+<a name="GtkPlotSurface--mesh-width"></a><h3>The <code class="literal">"mesh-width"</code> property</h3>
+<pre class="programlisting">  "mesh-width"               <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a>               : Read / Write</pre>
+<p></p>
+<p>Allowed values: &gt;= 0</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2" title='The "nx" property'>
+<a name="GtkPlotSurface--nx"></a><h3>The <code class="literal">"nx"</code> property</h3>
+<pre class="programlisting">  "nx"                       <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write</pre>
+<p>
+</p>
+<p>
+</p>
+<p>Allowed values: &gt;= 0</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2" title='The "ny" property'>
+<a name="GtkPlotSurface--ny"></a><h3>The <code class="literal">"ny"</code> property</h3>
+<pre class="programlisting">  "ny"                       <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write</pre>
+<p>
+</p>
+<p>
+</p>
+<p>Allowed values: &gt;= 0</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2" title='The "show-grid" property'>
+<a name="GtkPlotSurface--show-grid"></a><h3>The <code class="literal">"show-grid"</code> property</h3>
+<pre class="programlisting">  "show-grid"                <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write</pre>
+<p></p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2" title='The "show-mesh" property'>
+<a name="GtkPlotSurface--show-mesh"></a><h3>The <code class="literal">"show-mesh"</code> property</h3>
+<pre class="programlisting">  "show-mesh"                <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write</pre>
+<p></p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2" title='The "transparent" property'>
+<a name="GtkPlotSurface--transparent"></a><h3>The <code class="literal">"transparent"</code> property</h3>
+<pre class="programlisting">  "transparent"              <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write</pre>
+<p>
+</p>
+<p>
+</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2" title='The "use-amplitud" property'>
+<a name="GtkPlotSurface--use-amplitud"></a><h3>The <code class="literal">"use-amplitud"</code> property</h3>
+<pre class="programlisting">  "use-amplitud"             <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write</pre>
+<p></p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2" title='The "use-height" property'>
+<a name="GtkPlotSurface--use-height"></a><h3>The <code class="literal">"use-height"</code> property</h3>
+<pre class="programlisting">  "use-height"               <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write</pre>
+<p></p>
+<p>Default value: TRUE</p>
+</div>
+<hr>
+<div class="refsect2" title='The "vector-light" property'>
+<a name="GtkPlotSurface--vector-light"></a><h3>The <code class="literal">"vector-light"</code> property</h3>
+<pre class="programlisting">  "vector-light"             <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"
+>gpointer</a>              : Read / Write</pre>
+<p></p>
+</div>
+<hr>
+<div class="refsect2" title='The "xstep" property'>
+<a name="GtkPlotSurface--xstep"></a><h3>The <code class="literal">"xstep"</code> property</h3>
+<pre class="programlisting">  "xstep"                    <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a>               : Read / Write</pre>
+<p>
+</p>
+<p>
+</p>
+<p>Allowed values: &gt;= 0</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2" title='The "ystep" property'>
+<a name="GtkPlotSurface--ystep"></a><h3>The <code class="literal">"ystep"</code> property</h3>
+<pre class="programlisting">  "ystep"                    <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a>               : Read / Write</pre>
+<p>
+</p>
+<p>
+</p>
+<p>Allowed values: &gt;= 0</p>
+<p>Default value: 0</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.11</div>
+</body>
+</html>

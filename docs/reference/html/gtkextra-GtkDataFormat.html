@@ -1,0 +1,199 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GtkDataFormat</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="GtkExtra Reference Manual">
+<link rel="up" href="ch04.html" title="Data Formatter">
+<link rel="prev" href="ch04.html" title="Data Formatter">
+<link rel="next" href="ch05.html" title="GtkExtra Versioning">
+<meta name="generator" content="GTK-Doc V1.11 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="part" href="gtkextra.html" title="Part I. GtkExtra Overview">
+<link rel="part" href="gtkextrabase.html" title="Part II. GtkExtra Widgets and Objects">
+<link rel="chapter" href="ch01.html" title="Object Hierarchy">
+<link rel="chapter" href="ch02.html" title="Widget Gallery">
+<link rel="chapter" href="ch03.html" title="Widgets">
+<link rel="chapter" href="ch04.html" title="Data Formatter">
+<link rel="chapter" href="ch05.html" title="GtkExtra Versioning">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="ch04.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch04.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">GtkExtra Reference Manual</th>
+<td><a accesskey="n" href="ch05.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#gtkextra-GtkDataFormat.synopsis" class="shortcut">Top</a>
+                 | 
+                <a href="#gtkextra-GtkDataFormat.description" class="shortcut">Description</a>
+</td></tr>
+</table>
+<div class="refentry" title="GtkDataFormat">
+<a name="gtkextra-GtkDataFormat"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="gtkextra-GtkDataFormat.top_of_page"></a>GtkDataFormat</span></h2>
+<p>GtkDataFormat — a data formatting library</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv" title="Synopsis">
+<a name="gtkextra-GtkDataFormat.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">
+
+#include &lt;gtkextra.h&gt;
+
+<a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *             <a class="link" href="gtkextra-GtkDataFormat.html#gtk-data-format" title="gtk_data_format ()">gtk_data_format</a>                     (const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *str,
+                                                         const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *dataformat);
+<a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *             <a class="link" href="gtkextra-GtkDataFormat.html#gtk-data-format-remove" title="gtk_data_format_remove ()">gtk_data_format_remove</a>              (const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *str,
+                                                         const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *dataformat);
+</pre>
+</div>
+<div class="refsect1" title="Description">
+<a name="gtkextra-GtkDataFormat.description"></a><h2>Description</h2>
+<p>
+the widget property 'dataformat' may contain formatting 
+instructions for the field contents. Any unrecognized 
+formatting instruction is silently skipped. 
+</p>
+<p>
+The formatting process should always be reversible. Thus 
+formatting can be applied when input focus leaves a field and
+removed again when the focus enters a field, without the need
+of an additional content buffer. 
+</p>
+<p>
+the library can be easily extended by adding more 
+instructions to the list above.</p>
+<p>
+</p>
+</div>
+<div class="refsect1" title="Details">
+<a name="gtkextra-GtkDataFormat.details"></a><h2>Details</h2>
+<div class="refsect2" title="gtk_data_format ()">
+<a name="gtk-data-format"></a><h3>gtk_data_format ()</h3>
+<pre class="programlisting"><a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *             gtk_data_format                     (const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *str,
+                                                         const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *dataformat);</pre>
+<p>
+format <em class="parameter"><code>str</code></em> according to <em class="parameter"><code>dataformat</code></em>. 
+</p>
+<p>
+formatting instructions: 
+</p>
+<p>
+'' (the empty string) does no formatting at all.
+</p>
+<p>
+'int8' is formatted as a singed 8-bit integer value with 
+optional '-' sign. 
+</p>
+<p>
+'int16' is formatted as a signed 16-bit integer with optional
+'-' sign. 
+</p>
+<p>
+'int32' is formatted as a signed 32-bit integer with optional
+'-' sign.
+</p>
+<p>
+'money' is formatted as a double float value with 2 decimal 
+digits and 1000s-separators 
+</p>
+<p>
+'float,N' is formatted as a double float value with N decimal
+digits and 1000s-separators 
+</p>
+<p>
+'bit' is formatted as a boolean value [0,1].</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>str</code></em> :</span></p></td>
+<td>        the string to be formatted
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>dataformat</code></em> :</span></p></td>
+<td> formatting instructions
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> a pointer to an internal static buffer, with the 
+formatted data 
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_data_format_remove ()">
+<a name="gtk-data-format-remove"></a><h3>gtk_data_format_remove ()</h3>
+<pre class="programlisting"><a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *             gtk_data_format_remove              (const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *str,
+                                                         const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *dataformat);</pre>
+<p>
+reverse the effect of <a class="link" href="gtkextra-GtkDataFormat.html#gtk-data-format" title="gtk_data_format ()"><span class="type">gtk_data_format</span></a>, i.e. remove all 
+formatting characters, apply trailing dash</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>str</code></em> :</span></p></td>
+<td>        the string to be unformatted
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>dataformat</code></em> :</span></p></td>
+<td> formatting instructions
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> a pointer to an internal static buffer, with the 
+unformatted data 
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.11</div>
+</body>
+</html>

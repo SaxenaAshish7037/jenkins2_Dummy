@@ -1,0 +1,196 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+<!ENTITY version SYSTEM "version.xml">
+]>
+<!--ENTITY index-Objects-Grouped SYSTEM "objects_grouped.sgml"-->
+<refentry id="GtkIconFileSel">
+<refmeta>
+<refentrytitle role="top_of_page" id="GtkIconFileSel.top_of_page">GtkIconFileSel</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GTKEXTRA Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>GtkIconFileSel</refname>
+<refpurpose>A file selection dialog widget for GTK.</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="GtkIconFileSel.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>
+
+#include &lt;gtkextra.h&gt;
+
+                    <link linkend="GtkIconFileSel-struct">GtkIconFileSel</link>;
+<link linkend="GtkWidget">GtkWidget</link>*          <link linkend="gtk-icon-file-selection-new">gtk_icon_file_selection_new</link>         (const <link linkend="gchar">gchar</link> *title);
+<link linkend="void">void</link>                <link linkend="gtk-icon-file-selection-construct">gtk_icon_file_selection_construct</link>   (<link linkend="GtkIconFileSel">GtkIconFileSel</link> *filesel,
+                                                         const <link linkend="gchar">gchar</link> *title);
+<link linkend="void">void</link>                <link linkend="gtk-icon-file-selection-show-tree">gtk_icon_file_selection_show_tree</link>   (<link linkend="GtkIconFileSel">GtkIconFileSel</link> *filesel,
+                                                         <link linkend="gboolean">gboolean</link> show);
+<link linkend="gint">gint</link>                <link linkend="gtk-icon-file-selection-open-dir">gtk_icon_file_selection_open_dir</link>    (<link linkend="GtkIconFileSel">GtkIconFileSel</link> *filesel,
+                                                         const <link linkend="gchar">gchar</link> *path);
+<link linkend="void">void</link>                <link linkend="gtk-icon-file-selection-show-hidden">gtk_icon_file_selection_show_hidden</link> (<link linkend="GtkIconFileSel">GtkIconFileSel</link> *filesel,
+                                                         <link linkend="gboolean">gboolean</link> visible);
+<link linkend="void">void</link>                <link linkend="gtk-icon-file-selection-set-filter">gtk_icon_file_selection_set_filter</link>  (<link linkend="GtkIconFileSel">GtkIconFileSel</link> *filesel,
+                                                         const <link linkend="gchar">gchar</link> *filter);
+const <link linkend="gchar">gchar</link> *       <link linkend="gtk-icon-file-selection-get-selection">gtk_icon_file_selection_get_selection</link>
+                                                        (<link linkend="GtkIconFileSel">GtkIconFileSel</link> *filesel);
+</synopsis>
+</refsynopsisdiv>
+
+<refsect1 id="GtkIconFileSel.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+  <link linkend="GObject">GObject</link>
+   +----<link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+         +----<link linkend="GtkObject">GtkObject</link>
+               +----<link linkend="GtkWidget">GtkWidget</link>
+                     +----<link linkend="GtkContainer">GtkContainer</link>
+                           +----<link linkend="GtkBin">GtkBin</link>
+                                 +----<link linkend="GtkWindow">GtkWindow</link>
+                                       +----GtkIconFileSel
+</synopsis>
+</refsect1>
+
+
+
+<refsect1 id="GtkIconFileSel.implemented-interfaces" role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+GtkIconFileSel implements
+ <link linkend="AtkImplementorIface">AtkImplementorIface</link> and  <link linkend="GtkBuildable">GtkBuildable</link>.</para>
+</refsect1>
+
+
+
+
+
+<refsect1 id="GtkIconFileSel.description" role="desc">
+<title role="desc.title">Description</title>
+<para>
+It is a nice looking file selection dialog using icons.
+It combines GtkDirTree and GtkFileList to navigate the file system and select files. 
+It has also two entries to select the file and filter.</para>
+<para>
+</para>
+</refsect1>
+
+<refsect1 id="GtkIconFileSel.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="GtkIconFileSel-struct" role="struct">
+<title>GtkIconFileSel</title>
+<indexterm zone="GtkIconFileSel-struct"><primary sortas="GtkIconFileSel">GtkIconFileSel</primary></indexterm><programlisting>typedef struct _GtkIconFileSel GtkIconFileSel;</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="gtk-icon-file-selection-new" role="function">
+<title>gtk_icon_file_selection_new ()</title>
+<indexterm zone="gtk-icon-file-selection-new"><primary sortas="gtk_icon_file_selection_new">gtk_icon_file_selection_new</primary></indexterm><programlisting><link linkend="GtkWidget">GtkWidget</link>*          gtk_icon_file_selection_new         (const <link linkend="gchar">gchar</link> *title);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>title</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-icon-file-selection-construct" role="function">
+<title>gtk_icon_file_selection_construct ()</title>
+<indexterm zone="gtk-icon-file-selection-construct"><primary sortas="gtk_icon_file_selection_construct">gtk_icon_file_selection_construct</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_icon_file_selection_construct   (<link linkend="GtkIconFileSel">GtkIconFileSel</link> *filesel,
+                                                         const <link linkend="gchar">gchar</link> *title);</programlisting>
+<para>
+Sets the window title for <link linkend="GtkIconFileSelection"><type>GtkIconFileSelection</type></link> widget.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>filesel</parameter>&#160;:</term>
+<listitem><simpara> the <link linkend="GtkIconFileSelection"><type>GtkIconFileSelection</type></link> widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>title</parameter>&#160;:</term>
+<listitem><simpara> window title.
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-icon-file-selection-show-tree" role="function">
+<title>gtk_icon_file_selection_show_tree ()</title>
+<indexterm zone="gtk-icon-file-selection-show-tree"><primary sortas="gtk_icon_file_selection_show_tree">gtk_icon_file_selection_show_tree</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_icon_file_selection_show_tree   (<link linkend="GtkIconFileSel">GtkIconFileSel</link> *filesel,
+                                                         <link linkend="gboolean">gboolean</link> show);</programlisting>
+<para>
+Show icon file selection tree in filesel widget.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>filesel</parameter>&#160;:</term>
+<listitem><simpara> the <link linkend="GtkIconFileSelection"><type>GtkIconFileSelection</type></link> widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>show</parameter>&#160;:</term>
+<listitem><simpara> TRUE(show) or FALSE(don't show).
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-icon-file-selection-open-dir" role="function">
+<title>gtk_icon_file_selection_open_dir ()</title>
+<indexterm zone="gtk-icon-file-selection-open-dir"><primary sortas="gtk_icon_file_selection_open_dir">gtk_icon_file_selection_open_dir</primary></indexterm><programlisting><link linkend="gint">gint</link>                gtk_icon_file_selection_open_dir    (<link linkend="GtkIconFileSel">GtkIconFileSel</link> *filesel,
+                                                         const <link linkend="gchar">gchar</link> *path);</programlisting>
+<para>
+Show the file from path directory in filesel widget.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>filesel</parameter>&#160;:</term>
+<listitem><simpara> the <link linkend="GtkIconFileSelection"><type>GtkIconFileSelection</type></link> widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>path</parameter>&#160;:</term>
+<listitem><simpara> directory path.
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara> TRUE or FALSE depending on success 
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-icon-file-selection-show-hidden" role="function">
+<title>gtk_icon_file_selection_show_hidden ()</title>
+<indexterm zone="gtk-icon-file-selection-show-hidden"><primary sortas="gtk_icon_file_selection_show_hidden">gtk_icon_file_selection_show_hidden</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_icon_file_selection_show_hidden (<link linkend="GtkIconFileSel">GtkIconFileSel</link> *filesel,
+                                                         <link linkend="gboolean">gboolean</link> visible);</programlisting>
+<para>
+Set the visibility of hidden files.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>filesel</parameter>&#160;:</term>
+<listitem><simpara> the <link linkend="GtkIconFileSelection"><type>GtkIconFileSelection</type></link> widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>visible</parameter>&#160;:</term>
+<listitem><simpara> TRUE(show hidden files) or FALSE(don't show hidden files).
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-icon-file-selection-set-filter" role="function">
+<title>gtk_icon_file_selection_set_filter ()</title>
+<indexterm zone="gtk-icon-file-selection-set-filter"><primary sortas="gtk_icon_file_selection_set_filter">gtk_icon_file_selection_set_filter</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_icon_file_selection_set_filter  (<link linkend="GtkIconFileSel">GtkIconFileSel</link> *filesel,
+                                                         const <link linkend="gchar">gchar</link> *filter);</programlisting>
+<para>
+Set a filter for the files show in filelist.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>filesel</parameter>&#160;:</term>
+<listitem><simpara> the <link linkend="GtkIconFileSelection"><type>GtkIconFileSelection</type></link> widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>filter</parameter>&#160;:</term>
+<listitem><simpara> filter to be applied on files.
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-icon-file-selection-get-selection" role="function">
+<title>gtk_icon_file_selection_get_selection ()</title>
+<indexterm zone="gtk-icon-file-selection-get-selection"><primary sortas="gtk_icon_file_selection_get_selection">gtk_icon_file_selection_get_selection</primary></indexterm><programlisting>const <link linkend="gchar">gchar</link> *       gtk_icon_file_selection_get_selection
+                                                        (<link linkend="GtkIconFileSel">GtkIconFileSel</link> *filesel);</programlisting>
+<para>
+Gets the current selection applied on <link linkend="GtkIconFileSelection"><type>GtkIconFileSelection</type></link>.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>filesel</parameter>&#160;:</term>
+<listitem><simpara> the <link linkend="GtkIconFileSelection"><type>GtkIconFileSelection</type></link> widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara> the current selection.
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+
+
+
+
+</refentry>

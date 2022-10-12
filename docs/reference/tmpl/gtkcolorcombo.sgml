@@ -1,0 +1,103 @@
+<!-- ##### SECTION Title ##### -->
+GtkColorCombo
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### STRUCT GtkColorCombo ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SIGNAL GtkColorCombo::changed ##### -->
+<para>
+
+</para>
+
+@colorcombo: the object which received the signal.
+@arg1: 
+@arg2: 
+
+<!-- ##### FUNCTION gtk_color_combo_new ##### -->
+<para>
+
+</para>
+
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_color_combo_new_with_values ##### -->
+<para>
+
+</para>
+
+@nrows: 
+@ncols: 
+@colors: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_color_combo_construct ##### -->
+<para>
+
+</para>
+
+@color_combo: 
+
+
+<!-- ##### FUNCTION gtk_color_combo_construct_with_values ##### -->
+<para>
+
+</para>
+
+@color_combo: 
+@nrows: 
+@ncols: 
+@colors: 
+
+
+<!-- ##### FUNCTION gtk_color_combo_get_color_at ##### -->
+<para>
+
+</para>
+
+@color_combo: 
+@row: 
+@col: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_color_combo_find_color ##### -->
+<para>
+
+</para>
+
+@color_combo: 
+@color: 
+@row: 
+@col: 
+
+
+<!-- ##### FUNCTION gtk_color_combo_get_selection ##### -->
+<para>
+
+</para>
+
+@combo: 
+@Returns: 
+
+

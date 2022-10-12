@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GtkCharSelection</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="GtkExtra Reference Manual">
+<link rel="up" href="ch03.html" title="Widgets">
+<link rel="prev" href="GtkBorderCombo.html" title="GtkBorderCombo">
+<link rel="next" href="GtkCheckItem.html" title="GtkCheckItem">
+<meta name="generator" content="GTK-Doc V1.11 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="part" href="gtkextra.html" title="Part I. GtkExtra Overview">
+<link rel="part" href="gtkextrabase.html" title="Part II. GtkExtra Widgets and Objects">
+<link rel="chapter" href="ch01.html" title="Object Hierarchy">
+<link rel="chapter" href="ch02.html" title="Widget Gallery">
+<link rel="chapter" href="ch03.html" title="Widgets">
+<link rel="chapter" href="ch04.html" title="Data Formatter">
+<link rel="chapter" href="ch05.html" title="GtkExtra Versioning">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="GtkBorderCombo.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch03.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">GtkExtra Reference Manual</th>
+<td><a accesskey="n" href="GtkCheckItem.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#GtkCharSelection.synopsis" class="shortcut">Top</a>
+                 | 
+                <a href="#GtkCharSelection.description" class="shortcut">Description</a>
+                 | 
+                <a href="#GtkCharSelection.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                 | 
+                <a href="#GtkCharSelection.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+</td></tr>
+</table>
+<div class="refentry" title="GtkCharSelection">
+<a name="GtkCharSelection"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GtkCharSelection.top_of_page"></a>GtkCharSelection</span></h2>
+<p>GtkCharSelection — Character selection dialog</p>
+</td>
+<td valign="top" align="right"><img src="gtkcharsel.jpg"></td>
+</tr></table></div>
+<div class="refsynopsisdiv" title="Synopsis">
+<a name="GtkCharSelection.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">
+
+#include &lt;gtkextra.h&gt;
+
+                    <a class="link" href="GtkCharSelection.html#GtkCharSelection-struct" title="GtkCharSelection">GtkCharSelection</a>;
+<a
+href="http://library.gnome.org/devel/gtk3/GtkWidget.html"
+>GtkWidget</a>*          <a class="link" href="GtkCharSelection.html#gtk-char-selection-new" title="gtk_char_selection_new ()">gtk_char_selection_new</a>              (void);
+void                <a class="link" href="GtkCharSelection.html#gtk-char-selection-set-selection" title="gtk_char_selection_set_selection ()">gtk_char_selection_set_selection</a>    (<a class="link" href="GtkCharSelection.html" title="GtkCharSelection">GtkCharSelection</a> *charsel,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> selection);
+<a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                <a class="link" href="GtkCharSelection.html#gtk-char-selection-get-selection" title="gtk_char_selection_get_selection ()">gtk_char_selection_get_selection</a>    (<a class="link" href="GtkCharSelection.html" title="GtkCharSelection">GtkCharSelection</a> *charsel);
+</pre>
+</div>
+<div class="refsect1" title="Object Hierarchy">
+<a name="GtkCharSelection.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a
+href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject"
+>GObject</a>
+   +----<a
+href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned"
+>GInitiallyUnowned</a>
+         +----<a
+href="http://library.gnome.org/devel/gtk3/GtkObject.html"
+>GtkObject</a>
+               +----<a
+href="http://library.gnome.org/devel/gtk3/GtkWidget.html"
+>GtkWidget</a>
+                     +----<a
+href="http://library.gnome.org/devel/gtk3/GtkContainer.html"
+>GtkContainer</a>
+                           +----<a
+href="http://library.gnome.org/devel/gtk3/GtkBin.html"
+>GtkBin</a>
+                                 +----<a
+href="http://library.gnome.org/devel/gtk3/GtkWindow.html"
+>GtkWindow</a>
+                                       +----GtkCharSelection
+</pre>
+</div>
+<div class="refsect1" title="Implemented Interfaces">
+<a name="GtkCharSelection.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+GtkCharSelection implements
+ AtkImplementorIface and  <a
+href="http://library.gnome.org/devel/gtk3/GtkBuildable.html"
+>GtkBuildable</a>.</p>
+</div>
+<div class="refsect1" title="Description">
+<a name="GtkCharSelection.description"></a><h2>Description</h2>
+<p>
+Char selection is a widget which contains all the characters in a font.
+Connecting a callback to the ok button of the widget you get the selected char.</p>
+<p>
+</p>
+</div>
+<div class="refsect1" title="Details">
+<a name="GtkCharSelection.details"></a><h2>Details</h2>
+<div class="refsect2" title="GtkCharSelection">
+<a name="GtkCharSelection-struct"></a><h3>GtkCharSelection</h3>
+<pre class="programlisting">typedef struct _GtkCharSelection GtkCharSelection;</pre>
+<p>
+The GtkCharSelection struct contains only private data.
+It should only be accessed through the functions described below.</p>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2" title="gtk_char_selection_new ()">
+<a name="gtk-char-selection-new"></a><h3>gtk_char_selection_new ()</h3>
+<pre class="programlisting"><a
+href="http://library.gnome.org/devel/gtk3/GtkWidget.html"
+>GtkWidget</a>*          gtk_char_selection_new              (void);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_char_selection_set_selection ()">
+<a name="gtk-char-selection-set-selection"></a><h3>gtk_char_selection_set_selection ()</h3>
+<pre class="programlisting">void                gtk_char_selection_set_selection    (<a class="link" href="GtkCharSelection.html" title="GtkCharSelection">GtkCharSelection</a> *charsel,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> selection);</pre>
+<p>
+Sets the selection for the <a class="link" href="GtkCharSelection.html" title="GtkCharSelection"><span class="type">GtkCharSelection</span></a> widget.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>charsel</code></em> :</span></p></td>
+<td> Char Selection widget.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>selection</code></em> :</span></p></td>
+<td> a character index from the list. 0 is left,upper
+          corner;256 is right, down corner.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_char_selection_get_selection ()">
+<a name="gtk-char-selection-get-selection"></a><h3>gtk_char_selection_get_selection ()</h3>
+<pre class="programlisting"><a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                gtk_char_selection_get_selection    (<a class="link" href="GtkCharSelection.html" title="GtkCharSelection">GtkCharSelection</a> *charsel);</pre>
+<p>
+Gets the current selection</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>charsel</code></em> :</span></p></td>
+<td> Char Selection widget.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> The current selection(a character from the list).0 
+is left,upper corner;256 is right, down corner. 
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.11</div>
+</body>
+</html>

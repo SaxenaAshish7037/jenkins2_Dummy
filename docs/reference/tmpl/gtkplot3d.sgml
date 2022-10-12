@@ -1,0 +1,841 @@
+<!-- ##### SECTION Title ##### -->
+GtkPlot3D
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### STRUCT GtkPlot3D ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### ARG GtkPlot3D:a1 ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot3D:a2 ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot3D:a3 ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot3D:center-vector ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot3D:color-xy ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot3D:color-yz ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot3D:color-zx ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot3D:corner-line ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot3D:corner-visible ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot3D:e1-vector ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot3D:e2-vector ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot3D:e3-vector ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot3D:frame-line ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot3D:origin-vector ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot3D:titles-offset ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot3D:xfactor ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot3D:xy-label-mask ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot3D:xy-major-mask ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot3D:xy-minor-mask ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot3D:xy-title-visible ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot3D:xy-visible ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot3D:xz-label-mask ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot3D:xz-major-mask ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot3D:xz-minor-mask ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot3D:xz-title-visible ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot3D:yfactor ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot3D:yx-label-mask ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot3D:yx-major-mask ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot3D:yx-minor-mask ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot3D:yx-title-visible ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot3D:yz-label-mask ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot3D:yz-major-mask ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot3D:yz-minor-mask ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot3D:yz-title-visible ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot3D:yz-visible ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot3D:zfactor ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot3D:zmax ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot3D:zmin ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot3D:zscale ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot3D:zx-label-mask ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot3D:zx-major-mask ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot3D:zx-minor-mask ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot3D:zx-title-visible ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot3D:zx-visible ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot3D:zy-label-mask ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot3D:zy-major-mask ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot3D:zy-minor-mask ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot3D:zy-title-visible ##### -->
+<para>
+
+</para>
+
+<!-- ##### ENUM GtkPlotPlane ##### -->
+<para>
+
+</para>
+
+@GTK_PLOT_PLANE_XY: 
+@GTK_PLOT_PLANE_YX: 
+@GTK_PLOT_PLANE_XZ: 
+@GTK_PLOT_PLANE_ZX: 
+@GTK_PLOT_PLANE_YZ: 
+@GTK_PLOT_PLANE_ZY: 
+
+<!-- ##### ENUM GtkPlotSide ##### -->
+<para>
+
+</para>
+
+@GTK_PLOT_SIDE_XY: 
+@GTK_PLOT_SIDE_XZ: 
+@GTK_PLOT_SIDE_YX: 
+@GTK_PLOT_SIDE_YZ: 
+@GTK_PLOT_SIDE_ZX: 
+@GTK_PLOT_SIDE_ZY: 
+
+<!-- ##### FUNCTION gtk_plot3d_new ##### -->
+<para>
+
+</para>
+
+@drawable: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot3d_new_with_size ##### -->
+<para>
+
+</para>
+
+@drawable: 
+@width: 
+@height: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot3d_construct ##### -->
+<para>
+
+</para>
+
+@plot: 
+@drawable: 
+
+
+<!-- ##### FUNCTION gtk_plot3d_construct_with_size ##### -->
+<para>
+
+</para>
+
+@plot: 
+@drawable: 
+@width: 
+@height: 
+
+
+<!-- ##### FUNCTION gtk_plot3d_autoscale ##### -->
+<para>
+
+</para>
+
+@plot: 
+
+
+<!-- ##### FUNCTION gtk_plot3d_rotate ##### -->
+<para>
+
+</para>
+
+@plot: 
+@angle_x: 
+@angle_y: 
+@angle_z: 
+
+
+<!-- ##### FUNCTION gtk_plot3d_rotate_vector ##### -->
+<para>
+
+</para>
+
+@plot: 
+@vector: 
+@a1: 
+@a2: 
+@a3: 
+
+
+<!-- ##### FUNCTION gtk_plot3d_reset_angles ##### -->
+<para>
+
+</para>
+
+@plot: 
+
+
+<!-- ##### FUNCTION gtk_plot3d_rotate_x ##### -->
+<para>
+
+</para>
+
+@plot: 
+@angle: 
+
+
+<!-- ##### FUNCTION gtk_plot3d_rotate_y ##### -->
+<para>
+
+</para>
+
+@plot: 
+@angle: 
+
+
+<!-- ##### FUNCTION gtk_plot3d_rotate_z ##### -->
+<para>
+
+</para>
+
+@plot: 
+@angle: 
+
+
+<!-- ##### FUNCTION gtk_plot3d_get_pixel ##### -->
+<para>
+
+</para>
+
+@plot: 
+@x: 
+@y: 
+@z: 
+@px: 
+@py: 
+@pz: 
+
+
+<!-- ##### FUNCTION gtk_plot3d_set_xrange ##### -->
+<para>
+
+</para>
+
+@plot: 
+@min: 
+@max: 
+
+
+<!-- ##### FUNCTION gtk_plot3d_set_yrange ##### -->
+<para>
+
+</para>
+
+@plot: 
+@min: 
+@max: 
+
+
+<!-- ##### FUNCTION gtk_plot3d_set_zrange ##### -->
+<para>
+
+</para>
+
+@plot: 
+@min: 
+@max: 
+
+
+<!-- ##### FUNCTION gtk_plot3d_set_xfactor ##### -->
+<para>
+
+</para>
+
+@plot: 
+@xfactor: 
+
+
+<!-- ##### FUNCTION gtk_plot3d_set_yfactor ##### -->
+<para>
+
+</para>
+
+@plot: 
+@yfactor: 
+
+
+<!-- ##### FUNCTION gtk_plot3d_set_zfactor ##### -->
+<para>
+
+</para>
+
+@plot: 
+@zfactor: 
+
+
+<!-- ##### FUNCTION gtk_plot3d_get_xfactor ##### -->
+<para>
+
+</para>
+
+@plot: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot3d_get_yfactor ##### -->
+<para>
+
+</para>
+
+@plot: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot3d_get_zfactor ##### -->
+<para>
+
+</para>
+
+@plot: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot3d_plane_set_color ##### -->
+<para>
+
+</para>
+
+@plot: 
+@plane: 
+@color: 
+
+
+<!-- ##### FUNCTION gtk_plot3d_plane_set_visible ##### -->
+<para>
+
+</para>
+
+@plot: 
+@plane: 
+@visible: 
+
+
+<!-- ##### FUNCTION gtk_plot3d_plane_visible ##### -->
+<para>
+
+</para>
+
+@plot: 
+@plane: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot3d_corner_set_visible ##### -->
+<para>
+
+</para>
+
+@plot: 
+@visible: 
+
+
+<!-- ##### FUNCTION gtk_plot3d_corner_visible ##### -->
+<para>
+
+</para>
+
+@plot: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot3d_corner_set_attributes ##### -->
+<para>
+
+</para>
+
+@plot: 
+@style: 
+@width: 
+@color: 
+
+
+<!-- ##### FUNCTION gtk_plot3d_corner_get_attributes ##### -->
+<para>
+
+</para>
+
+@plot: 
+@style: 
+@width: 
+@color: 
+
+
+<!-- ##### FUNCTION gtk_plot3d_frame_set_attributes ##### -->
+<para>
+
+</para>
+
+@plot: 
+@style: 
+@width: 
+@color: 
+
+
+<!-- ##### FUNCTION gtk_plot3d_frame_get_attributes ##### -->
+<para>
+
+</para>
+
+@plot: 
+@style: 
+@width: 
+@color: 
+
+
+<!-- ##### FUNCTION gtk_plot3d_get_axis ##### -->
+<para>
+
+</para>
+
+@plot: 
+@orientation: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot3d_get_side ##### -->
+<para>
+
+</para>
+
+@plot: 
+@side: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot3d_show_major_ticks ##### -->
+<para>
+
+</para>
+
+@plot: 
+@side: 
+@ticks_mask: 
+
+
+<!-- ##### FUNCTION gtk_plot3d_show_minor_ticks ##### -->
+<para>
+
+</para>
+
+@plot: 
+@side: 
+@ticks_mask: 
+
+
+<!-- ##### FUNCTION gtk_plot3d_show_labels ##### -->
+<para>
+
+</para>
+
+@plot: 
+@side: 
+@label_mask: 
+
+
+<!-- ##### FUNCTION gtk_plot3d_show_title ##### -->
+<para>
+
+</para>
+
+@plot: 
+@side: 
+
+
+<!-- ##### FUNCTION gtk_plot3d_hide_title ##### -->
+<para>
+
+</para>
+
+@plot: 
+@side: 
+
+
+<!-- ##### FUNCTION gtk_plot3d_set_ticks ##### -->
+<para>
+
+</para>
+
+@plot: 
+@direction: 
+@major_step: 
+@nminor: 
+
+
+<!-- ##### FUNCTION gtk_plot3d_set_major_ticks ##### -->
+<para>
+
+</para>
+
+@plot: 
+@direction: 
+@major_step: 
+
+
+<!-- ##### FUNCTION gtk_plot3d_set_minor_ticks ##### -->
+<para>
+
+</para>
+
+@plot: 
+@direction: 
+@nminor: 
+
+
+<!-- ##### FUNCTION gtk_plot3d_set_ticks_length ##### -->
+<para>
+
+</para>
+
+@plot: 
+@direction: 
+@length: 
+
+
+<!-- ##### FUNCTION gtk_plot3d_set_ticks_width ##### -->
+<para>
+
+</para>
+
+@plot: 
+@direction: 
+@width: 
+
+
+<!-- ##### FUNCTION gtk_plot3d_show_ticks ##### -->
+<para>
+
+</para>
+
+@plot: 
+@side: 
+@major_mask: 
+@minor_mask: 
+
+
+<!-- ##### FUNCTION gtk_plot3d_set_titles_offset ##### -->
+<para>
+
+</para>
+
+@plot: 
+@offset: 
+
+
+<!-- ##### FUNCTION gtk_plot3d_get_titles_offset ##### -->
+<para>
+
+</para>
+
+@plot: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot3d_set_scale ##### -->
+<para>
+
+</para>
+
+@plot: 
+@axis: 
+@scale: 
+
+
+<!-- ##### FUNCTION gtk_plot3d_get_scale ##### -->
+<para>
+
+</para>
+
+@plot: 
+@axis: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot3d_major_grids_set_visible ##### -->
+<para>
+
+</para>
+
+@plot: 
+@x: 
+@y: 
+@z: 
+
+
+<!-- ##### FUNCTION gtk_plot3d_minor_grids_set_visible ##### -->
+<para>
+
+</para>
+
+@plot: 
+@x: 
+@y: 
+@z: 
+
+
+<!-- ##### FUNCTION gtk_plot3d_major_grids_visible ##### -->
+<para>
+
+</para>
+
+@plot: 
+@x: 
+@y: 
+@z: 
+
+
+<!-- ##### FUNCTION gtk_plot3d_minor_grids_visible ##### -->
+<para>
+
+</para>
+
+@plot: 
+@x: 
+@y: 
+@z: 
+
+
+<!-- ##### FUNCTION gtk_plot3d_major_zgrid_set_attributes ##### -->
+<para>
+
+</para>
+
+@plot: 
+@style: 
+@width: 
+@color: 
+
+
+<!-- ##### FUNCTION gtk_plot3d_major_zgrid_get_attributes ##### -->
+<para>
+
+</para>
+
+@plot: 
+@style: 
+@width: 
+@color: 
+
+
+<!-- ##### FUNCTION gtk_plot3d_minor_zgrid_set_attributes ##### -->
+<para>
+
+</para>
+
+@plot: 
+@style: 
+@width: 
+@color: 
+
+
+<!-- ##### FUNCTION gtk_plot3d_minor_zgrid_get_attributes ##### -->
+<para>
+
+</para>
+
+@plot: 
+@style: 
+@width: 
+@color: 
+
+

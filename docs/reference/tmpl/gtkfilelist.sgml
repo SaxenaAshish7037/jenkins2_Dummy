@@ -1,0 +1,136 @@
+<!-- ##### SECTION Title ##### -->
+GtkFileList
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### STRUCT GtkFileList ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### STRUCT GtkFileListItem ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### STRUCT GtkFileListType ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### FUNCTION gtk_file_list_new ##### -->
+<para>
+
+</para>
+
+@icon_width: 
+@mode: 
+@path: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_file_list_construct ##### -->
+<para>
+
+</para>
+
+@file_list: 
+@icon_width: 
+@mode: 
+@path: 
+
+
+<!-- ##### FUNCTION gtk_file_list_set_filter ##### -->
+<para>
+
+</para>
+
+@file_list: 
+@filter: 
+
+
+<!-- ##### FUNCTION gtk_file_list_open_dir ##### -->
+<para>
+
+</para>
+
+@file_list: 
+@dir_path: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_file_list_get_path ##### -->
+<para>
+
+</para>
+
+@file_list: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_file_list_get_filename ##### -->
+<para>
+
+</para>
+
+@file_list: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_file_list_get_filetype ##### -->
+<para>
+
+</para>
+
+@file_list: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_file_list_add_type ##### -->
+<para>
+
+</para>
+
+@file_list: 
+@pixmap_data: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_file_list_add_type_with_pixmap ##### -->
+<para>
+
+</para>
+
+@file_list: 
+@pixmap: 
+@mask: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_file_list_add_type_filter ##### -->
+<para>
+
+</para>
+
+@file_list: 
+@type: 
+@filter: 
+
+

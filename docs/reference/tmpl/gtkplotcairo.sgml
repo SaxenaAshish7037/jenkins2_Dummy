@@ -1,0 +1,62 @@
+<!-- ##### SECTION Title ##### -->
+GtkPlotCairo
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### STRUCT GtkPlotCairo ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### FUNCTION gtk_plot_cairo_new ##### -->
+<para>
+
+</para>
+
+@cairo: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_cairo_new_with_drawable ##### -->
+<para>
+
+</para>
+
+@drawable: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_cairo_construct ##### -->
+<para>
+
+</para>
+
+@pc: 
+@cairo: 
+@context: 
+
+
+<!-- ##### FUNCTION gtk_plot_cairo_set_cairo ##### -->
+<para>
+
+</para>
+
+@pc: 
+@cairo: 
+
+

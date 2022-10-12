@@ -1,0 +1,1505 @@
+<!-- ##### SECTION Title ##### -->
+GtkPlotData
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### STRUCT GtkPlotData ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SIGNAL GtkPlotData::add-to-plot ##### -->
+<para>
+
+</para>
+
+@plotdata: the object which received the signal.
+@arg1: 
+@Returns: 
+
+<!-- ##### SIGNAL GtkPlotData::draw-data ##### -->
+<para>
+
+</para>
+
+@plotdata: the object which received the signal.
+
+<!-- ##### SIGNAL GtkPlotData::gradient-changed ##### -->
+<para>
+
+</para>
+
+@plotdata: the object which received the signal.
+
+<!-- ##### SIGNAL GtkPlotData::gradient-colors-changed ##### -->
+<para>
+
+</para>
+
+@plotdata: the object which received the signal.
+
+<!-- ##### SIGNAL GtkPlotData::update ##### -->
+<para>
+
+</para>
+
+@plotdata: the object which received the signal.
+@arg1: 
+
+<!-- ##### ARG GtkPlotData:bottom-axis ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:color-gt-max ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:color-lt-min ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:color-max ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:color-min ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:fill-area ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:gradient-break ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:gradient-break-max ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:gradient-break-min ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:gradient-break-nminor ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:gradient-break-position ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:gradient-break-scale ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:gradient-break-step ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:gradient-custom ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:gradient-mask ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:gradient-max ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:gradient-min ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:gradient-nmajor ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:gradient-nminor ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:gradient-scale ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:gradient-show-lt-gt ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:gradient-step ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:is-function ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:is-iterator ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:iterator-mask ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:labels-angle ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:labels-bg-color ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:labels-border ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:labels-border-shadow ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:labels-border-space ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:labels-border-width ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:labels-fg-color ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:labels-font ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:labels-offset ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:labels-size ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:labels-text ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:labels-transparent ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:legend ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:legends-precision ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:legends-style ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:line-cap ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:line-color ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:line-connector ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:line-join ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:line-style ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:line-width ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:name ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:num-points ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:show-gradient ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:show-labels ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:show-legends ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:show-xerrbars ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:show-yerrbars ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:show-zerrbars ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:symbol-border-color ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:symbol-border-width ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:symbol-color ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:symbol-size ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:symbol-style ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:symbol-type ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:xerrbar-caps ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:xerrbar-width ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:xline-cap ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:xline-color ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:xline-join ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:xline-style ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:xline-width ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:xstep ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:yerrbar-caps ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:yerrbar-width ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:yline-cap ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:yline-color ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:yline-join ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:yline-style ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:yline-width ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:ystep ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:zerrbar-caps ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:zerrbar-width ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:zline-cap ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:zline-color ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:zline-join ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:zline-style ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:zline-width ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotData:zstep ##### -->
+<para>
+
+</para>
+
+<!-- ##### FUNCTION gtk_plot_data_new ##### -->
+<para>
+
+</para>
+
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_new_function ##### -->
+<para>
+
+</para>
+
+@function: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_construct_function ##### -->
+<para>
+
+</para>
+
+@data: 
+@function: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_new_iterator ##### -->
+<para>
+
+</para>
+
+@iterator: 
+@npoints: 
+@mask: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_construct_iterator ##### -->
+<para>
+
+</para>
+
+@data: 
+@iterator: 
+@npoints: 
+@mask: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_clone ##### -->
+<para>
+
+</para>
+
+@data: 
+@copy: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_add_dimension ##### -->
+<para>
+
+</para>
+
+@data: 
+@name: 
+@label: 
+@desc: 
+@value_type: 
+@required: 
+@independent: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_remove_dimension ##### -->
+<para>
+
+</para>
+
+@data: 
+@name: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_find_dimension ##### -->
+<para>
+
+</para>
+
+@data: 
+@name: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_required_dimensions ##### -->
+<para>
+
+</para>
+
+@data: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_independent_dimensions ##### -->
+<para>
+
+</para>
+
+@data: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_paint ##### -->
+<para>
+
+</para>
+
+@data: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_update ##### -->
+<para>
+
+</para>
+
+@data: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_draw_points ##### -->
+<para>
+
+</para>
+
+@data: 
+@npoints: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_draw_symbol ##### -->
+<para>
+
+</para>
+
+@data: 
+@px: 
+@py: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_dimension_set_points ##### -->
+<para>
+
+</para>
+
+@data: 
+@name: 
+@points: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_dimension_set_array ##### -->
+<para>
+
+</para>
+
+@data: 
+@name: 
+@array: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_dimension_get_array ##### -->
+<para>
+
+</para>
+
+@data: 
+@name: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_dimension_set_scale ##### -->
+<para>
+
+</para>
+
+@data: 
+@name: 
+@scale: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_dimension_get_scale ##### -->
+<para>
+
+</para>
+
+@data: 
+@name: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_set_points ##### -->
+<para>
+
+</para>
+
+@data: 
+@x: 
+@y: 
+@dx: 
+@dy: 
+@num_points: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_get_points ##### -->
+<para>
+
+</para>
+
+@dataset: 
+@x: 
+@y: 
+@dx: 
+@dy: 
+@num_points: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_get_point ##### -->
+<para>
+
+</para>
+
+@dataset: 
+@n: 
+@x: 
+@y: 
+@z: 
+@a: 
+@dx: 
+@dy: 
+@dz: 
+@da: 
+@label: 
+@error: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_set_x ##### -->
+<para>
+
+</para>
+
+@data: 
+@x: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_set_y ##### -->
+<para>
+
+</para>
+
+@data: 
+@y: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_set_z ##### -->
+<para>
+
+</para>
+
+@data: 
+@z: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_set_a ##### -->
+<para>
+
+</para>
+
+@data: 
+@a: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_set_dx ##### -->
+<para>
+
+</para>
+
+@data: 
+@dx: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_set_dy ##### -->
+<para>
+
+</para>
+
+@data: 
+@dy: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_set_dz ##### -->
+<para>
+
+</para>
+
+@data: 
+@dz: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_set_da ##### -->
+<para>
+
+</para>
+
+@data: 
+@da: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_set_a_scale ##### -->
+<para>
+
+</para>
+
+@data: 
+@a_scale: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_set_labels ##### -->
+<para>
+
+</para>
+
+@data: 
+@labels: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_get_x ##### -->
+<para>
+
+</para>
+
+@dataset: 
+@num_points: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_get_y ##### -->
+<para>
+
+</para>
+
+@dataset: 
+@num_points: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_get_z ##### -->
+<para>
+
+</para>
+
+@dataset: 
+@num_points: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_get_a ##### -->
+<para>
+
+</para>
+
+@dataset: 
+@num_points: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_get_dx ##### -->
+<para>
+
+</para>
+
+@dataset: 
+@num_points: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_get_dy ##### -->
+<para>
+
+</para>
+
+@dataset: 
+@num_points: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_get_dz ##### -->
+<para>
+
+</para>
+
+@dataset: 
+@num_points: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_get_da ##### -->
+<para>
+
+</para>
+
+@dataset: 
+@num_points: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_get_a_scale ##### -->
+<para>
+
+</para>
+
+@dataset: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_get_labels ##### -->
+<para>
+
+</para>
+
+@dataset: 
+@show_labels: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_show_labels ##### -->
+<para>
+
+</para>
+
+@dataset: 
+@show_labels: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_labels_set_attributes ##### -->
+<para>
+
+</para>
+
+@data: 
+@font: 
+@height: 
+@angle: 
+@fg: 
+@bg: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_set_numpoints ##### -->
+<para>
+
+</para>
+
+@dataset: 
+@num_points: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_get_numpoints ##### -->
+<para>
+
+</para>
+
+@data: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_set_symbol ##### -->
+<para>
+
+</para>
+
+@dataset: 
+@type: 
+@style: 
+@size: 
+@line_width: 
+@color: 
+@border_color: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_get_symbol ##### -->
+<para>
+
+</para>
+
+@dataset: 
+@type: 
+@style: 
+@size: 
+@line_width: 
+@color: 
+@border_color: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_set_connector ##### -->
+<para>
+
+</para>
+
+@dataset: 
+@connector: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_get_connector ##### -->
+<para>
+
+</para>
+
+@dataset: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_set_line_attributes ##### -->
+<para>
+
+</para>
+
+@dataset: 
+@style: 
+@cap_style: 
+@join_style: 
+@width: 
+@color: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_get_line_attributes ##### -->
+<para>
+
+</para>
+
+@dataset: 
+@style: 
+@cap_style: 
+@join_style: 
+@width: 
+@color: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_set_x_attributes ##### -->
+<para>
+
+</para>
+
+@dataset: 
+@style: 
+@cap_style: 
+@join_style: 
+@width: 
+@color: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_set_y_attributes ##### -->
+<para>
+
+</para>
+
+@dataset: 
+@style: 
+@cap_style: 
+@join_style: 
+@width: 
+@color: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_set_z_attributes ##### -->
+<para>
+
+</para>
+
+@dataset: 
+@style: 
+@cap_style: 
+@join_style: 
+@width: 
+@color: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_show_xerrbars ##### -->
+<para>
+
+</para>
+
+@dataset: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_show_yerrbars ##### -->
+<para>
+
+</para>
+
+@dataset: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_show_zerrbars ##### -->
+<para>
+
+</para>
+
+@dataset: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_hide_xerrbars ##### -->
+<para>
+
+</para>
+
+@dataset: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_hide_yerrbars ##### -->
+<para>
+
+</para>
+
+@dataset: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_hide_zerrbars ##### -->
+<para>
+
+</para>
+
+@dataset: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_fill_area ##### -->
+<para>
+
+</para>
+
+@dataset: 
+@fill: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_area_is_filled ##### -->
+<para>
+
+</para>
+
+@dataset: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_show_legend ##### -->
+<para>
+
+</para>
+
+@data: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_hide_legend ##### -->
+<para>
+
+</para>
+
+@dataset: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_set_legend ##### -->
+<para>
+
+</para>
+
+@dataset: 
+@legend: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_set_legend_precision ##### -->
+<para>
+
+</para>
+
+@dataset: 
+@precision: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_get_legend_precision ##### -->
+<para>
+
+</para>
+
+@data: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_set_name ##### -->
+<para>
+
+</para>
+
+@dataset: 
+@name: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_gradient ##### -->
+<para>
+
+</para>
+
+@data: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_get_gradient_allocation ##### -->
+<para>
+
+</para>
+
+@data: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_move_gradient ##### -->
+<para>
+
+</para>
+
+@data: 
+@x: 
+@y: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_set_gradient_size ##### -->
+<para>
+
+</para>
+
+@data: 
+@size: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_reset_gradient ##### -->
+<para>
+
+</para>
+
+@data: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_reset_gradient_colors ##### -->
+<para>
+
+</para>
+
+@data: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_gradient_use_custom_colors ##### -->
+<para>
+
+</para>
+
+@data: 
+@custom: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_gradient_custom_colors ##### -->
+<para>
+
+</para>
+
+@data: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_set_gradient_mask ##### -->
+<para>
+
+</para>
+
+@data: 
+@mask: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_get_gradient_mask ##### -->
+<para>
+
+</para>
+
+@data: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_gradient_set_visible ##### -->
+<para>
+
+</para>
+
+@data: 
+@visible: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_gradient_visible ##### -->
+<para>
+
+</para>
+
+@data: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_gradient_autoscale_a ##### -->
+<para>
+
+</para>
+
+@data: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_gradient_autoscale_da ##### -->
+<para>
+
+</para>
+
+@data: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_gradient_autoscale_z ##### -->
+<para>
+
+</para>
+
+@data: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_set_gradient_colors ##### -->
+<para>
+
+</para>
+
+@data: 
+@min: 
+@max: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_get_gradient_colors ##### -->
+<para>
+
+</para>
+
+@data: 
+@min: 
+@max: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_set_gradient_nth_color ##### -->
+<para>
+
+</para>
+
+@data: 
+@level: 
+@color: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_get_gradient_nth_color ##### -->
+<para>
+
+</para>
+
+@data: 
+@level: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_set_gradient_outer_colors ##### -->
+<para>
+
+</para>
+
+@data: 
+@min: 
+@max: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_get_gradient_outer_colors ##### -->
+<para>
+
+</para>
+
+@data: 
+@min: 
+@max: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_set_gradient ##### -->
+<para>
+
+</para>
+
+@data: 
+@min: 
+@max: 
+@nlevels: 
+@nsublevels: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_get_gradient ##### -->
+<para>
+
+</para>
+
+@data: 
+@min: 
+@max: 
+@nlevels: 
+@nsublevels: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_get_gradient_level ##### -->
+<para>
+
+</para>
+
+@data: 
+@level: 
+@color: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_gradient_set_style ##### -->
+<para>
+
+</para>
+
+@data: 
+@style: 
+@precision: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_gradient_set_scale ##### -->
+<para>
+
+</para>
+
+@data: 
+@scale: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_set_link ##### -->
+<para>
+
+</para>
+
+@dataset: 
+@link: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_get_link ##### -->
+<para>
+
+</para>
+
+@dataset: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_remove_link ##### -->
+<para>
+
+</para>
+
+@dataset: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_add_marker ##### -->
+<para>
+
+</para>
+
+@data: 
+@point: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_remove_marker ##### -->
+<para>
+
+</para>
+
+@data: 
+@marker: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_remove_markers ##### -->
+<para>
+
+</para>
+
+@data: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_show_markers ##### -->
+<para>
+
+</para>
+
+@data: 
+@show: 
+
+
+<!-- ##### FUNCTION gtk_plot_data_markers_visible ##### -->
+<para>
+
+</para>
+
+@data: 
+@Returns: 
+
+

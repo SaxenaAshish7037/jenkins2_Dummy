@@ -1,0 +1,556 @@
+<!-- ##### SECTION Title ##### -->
+GtkSheetColumn
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### STRUCT GtkSheetColumn ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### ARG GtkSheetColumn:dataformat ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkSheetColumn:datatype ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkSheetColumn:description ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkSheetColumn:entry-type ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkSheetColumn:iskey ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkSheetColumn:justification ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkSheetColumn:label ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkSheetColumn:max-length ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkSheetColumn:max-length-bytes ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkSheetColumn:position ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkSheetColumn:readonly ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkSheetColumn:visible ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkSheetColumn:vjust ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkSheetColumn:width ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkSheetColumn:wrap-mode ##### -->
+<para>
+
+</para>
+
+<!-- ##### FUNCTION gtk_sheet_add_column ##### -->
+<para>
+
+</para>
+
+@sheet: 
+@ncols: 
+
+
+<!-- ##### FUNCTION gtk_sheet_insert_columns ##### -->
+<para>
+
+</para>
+
+@sheet: 
+@col: 
+@ncols: 
+
+
+<!-- ##### FUNCTION gtk_sheet_delete_columns ##### -->
+<para>
+
+</para>
+
+@sheet: 
+@col: 
+@ncols: 
+
+
+<!-- ##### FUNCTION gtk_sheet_get_columns_count ##### -->
+<para>
+
+</para>
+
+@sheet: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_sheet_column_get ##### -->
+<para>
+
+</para>
+
+@sheet: 
+@col: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_sheet_column_get_index ##### -->
+<para>
+
+</para>
+
+@colobj: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_sheet_select_column ##### -->
+<para>
+
+</para>
+
+@sheet: 
+@column: 
+
+
+<!-- ##### FUNCTION gtk_sheet_column_titles_visible ##### -->
+<para>
+
+</para>
+
+@sheet: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_sheet_show_column_titles ##### -->
+<para>
+
+</para>
+
+@sheet: 
+
+
+<!-- ##### FUNCTION gtk_sheet_hide_column_titles ##### -->
+<para>
+
+</para>
+
+@sheet: 
+
+
+<!-- ##### FUNCTION gtk_sheet_get_column_title ##### -->
+<para>
+
+</para>
+
+@sheet: 
+@column: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_sheet_set_column_title ##### -->
+<para>
+
+</para>
+
+@sheet: 
+@column: 
+@title: 
+
+
+<!-- ##### FUNCTION gtk_sheet_set_column_titles_height ##### -->
+<para>
+
+</para>
+
+@sheet: 
+@height: 
+
+
+<!-- ##### FUNCTION gtk_sheet_column_sensitive ##### -->
+<para>
+
+</para>
+
+@sheet: 
+@column: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_sheet_column_set_sensitivity ##### -->
+<para>
+
+</para>
+
+@sheet: 
+@column: 
+@sensitive: 
+
+
+<!-- ##### FUNCTION gtk_sheet_columns_set_sensitivity ##### -->
+<para>
+
+</para>
+
+@sheet: 
+@sensitive: 
+
+
+<!-- ##### FUNCTION gtk_sheet_columns_resizable ##### -->
+<para>
+
+</para>
+
+@sheet: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_sheet_columns_set_resizable ##### -->
+<para>
+
+</para>
+
+@sheet: 
+@resizable: 
+
+
+<!-- ##### FUNCTION gtk_sheet_column_visible ##### -->
+<para>
+
+</para>
+
+@sheet: 
+@column: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_sheet_column_set_visibility ##### -->
+<para>
+
+</para>
+
+@sheet: 
+@column: 
+@visible: 
+
+
+<!-- ##### FUNCTION gtk_sheet_column_label_set_visibility ##### -->
+<para>
+
+</para>
+
+@sheet: 
+@col: 
+@visible: 
+
+
+<!-- ##### FUNCTION gtk_sheet_columns_labels_set_visibility ##### -->
+<para>
+
+</para>
+
+@sheet: 
+@visible: 
+
+
+<!-- ##### FUNCTION gtk_sheet_get_column_width ##### -->
+<para>
+
+</para>
+
+@sheet: 
+@column: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_sheet_set_column_width ##### -->
+<para>
+
+</para>
+
+@sheet: 
+@column: 
+@width: 
+
+
+<!-- ##### FUNCTION gtk_sheet_column_get_justification ##### -->
+<para>
+
+</para>
+
+@sheet: 
+@col: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_sheet_column_set_justification ##### -->
+<para>
+
+</para>
+
+@sheet: 
+@col: 
+@just: 
+
+
+<!-- ##### FUNCTION gtk_sheet_column_get_vjustification ##### -->
+<para>
+
+</para>
+
+@sheet: 
+@col: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_sheet_column_set_vjustification ##### -->
+<para>
+
+</para>
+
+@sheet: 
+@col: 
+@vjust: 
+
+
+<!-- ##### FUNCTION gtk_sheet_column_button_get_label ##### -->
+<para>
+
+</para>
+
+@sheet: 
+@col: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_sheet_column_button_add_label ##### -->
+<para>
+
+</para>
+
+@sheet: 
+@col: 
+@label: 
+
+
+<!-- ##### FUNCTION gtk_sheet_column_button_justify ##### -->
+<para>
+
+</para>
+
+@sheet: 
+@col: 
+@justification: 
+
+
+<!-- ##### FUNCTION gtk_sheet_column_get_tooltip_markup ##### -->
+<para>
+
+</para>
+
+@sheet: 
+@col: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_sheet_column_set_tooltip_markup ##### -->
+<para>
+
+</para>
+
+@sheet: 
+@col: 
+@markup: 
+
+
+<!-- ##### FUNCTION gtk_sheet_column_get_tooltip_text ##### -->
+<para>
+
+</para>
+
+@sheet: 
+@col: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_sheet_column_set_tooltip_text ##### -->
+<para>
+
+</para>
+
+@sheet: 
+@col: 
+@text: 
+
+
+<!-- ##### FUNCTION gtk_sheet_column_get_datatype ##### -->
+<para>
+
+</para>
+
+@sheet: 
+@col: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_sheet_column_set_datatype ##### -->
+<para>
+
+</para>
+
+@sheet: 
+@col: 
+@data_type: 
+
+
+<!-- ##### FUNCTION gtk_sheet_column_get_description ##### -->
+<para>
+
+</para>
+
+@sheet: 
+@col: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_sheet_column_set_description ##### -->
+<para>
+
+</para>
+
+@sheet: 
+@col: 
+@description: 
+
+
+<!-- ##### FUNCTION gtk_sheet_column_get_format ##### -->
+<para>
+
+</para>
+
+@sheet: 
+@col: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_sheet_column_set_format ##### -->
+<para>
+
+</para>
+
+@sheet: 
+@col: 
+@format: 
+
+
+<!-- ##### FUNCTION gtk_sheet_column_get_iskey ##### -->
+<para>
+
+</para>
+
+@sheet: 
+@col: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_sheet_column_set_iskey ##### -->
+<para>
+
+</para>
+
+@sheet: 
+@col: 
+@is_key: 
+
+
+<!-- ##### FUNCTION gtk_sheet_column_get_entry_type ##### -->
+<para>
+
+</para>
+
+@sheet: 
+@col: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_sheet_column_set_entry_type ##### -->
+<para>
+
+</para>
+
+@sheet: 
+@col: 
+@entry_type: 
+
+
+<!-- ##### FUNCTION gtk_sheet_column_get_readonly ##### -->
+<para>
+
+</para>
+
+@sheet: 
+@col: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_sheet_column_set_readonly ##### -->
+<para>
+
+</para>
+
+@sheet: 
+@col: 
+@is_readonly: 
+
+

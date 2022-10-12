@@ -1,0 +1,171 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+<!ENTITY version SYSTEM "version.xml">
+]>
+<!--ENTITY index-Objects-Grouped SYSTEM "objects_grouped.sgml"-->
+<refentry id="GtkPlotCanvasEllipse">
+<refmeta>
+<refentrytitle role="top_of_page" id="GtkPlotCanvasEllipse.top_of_page">GtkPlotCanvasEllipse</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GTKEXTRA Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>GtkPlotCanvasEllipse</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="GtkPlotCanvasEllipse.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>
+
+#include &lt;gtkextra.h&gt;
+
+                    <link linkend="GtkPlotCanvasEllipse-struct">GtkPlotCanvasEllipse</link>;
+<link linkend="GtkPlotCanvasChild">GtkPlotCanvasChild</link> * <link linkend="gtk-plot-canvas-ellipse-new">gtk_plot_canvas_ellipse_new</link>        (<link linkend="GtkPlotLineStyle">GtkPlotLineStyle</link> style,
+                                                         <link linkend="gfloat">gfloat</link> width,
+                                                         const <link linkend="GdkColor">GdkColor</link> *fg,
+                                                         const <link linkend="GdkColor">GdkColor</link> *bg,
+                                                         <link linkend="gboolean">gboolean</link> fill);
+<link linkend="void">void</link>                <link linkend="gtk-plot-canvas-ellipse-set-attributes">gtk_plot_canvas_ellipse_set_attributes</link>
+                                                        (<link linkend="GtkPlotCanvasEllipse">GtkPlotCanvasEllipse</link> *ellipse,
+                                                         <link linkend="GtkPlotLineStyle">GtkPlotLineStyle</link> style,
+                                                         <link linkend="gdouble">gdouble</link> width,
+                                                         const <link linkend="GdkColor">GdkColor</link> *fg,
+                                                         const <link linkend="GdkColor">GdkColor</link> *bg,
+                                                         <link linkend="gboolean">gboolean</link> fill);
+</synopsis>
+</refsynopsisdiv>
+
+<refsect1 id="GtkPlotCanvasEllipse.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+  <link linkend="GObject">GObject</link>
+   +----<link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+         +----<link linkend="GtkObject">GtkObject</link>
+               +----<link linkend="GtkPlotCanvasChild">GtkPlotCanvasChild</link>
+                     +----GtkPlotCanvasEllipse
+</synopsis>
+</refsect1>
+
+
+
+
+
+<refsect1 id="GtkPlotCanvasEllipse.properties" role="properties">
+<title role="properties.title">Properties</title>
+<synopsis>
+  &quot;<link linkend="GtkPlotCanvasEllipse--color-bg">color-bg</link>&quot;                 <link linkend="gpointer">gpointer</link>              : Read / Write
+  &quot;<link linkend="GtkPlotCanvasEllipse--filled">filled</link>&quot;                   <link linkend="gboolean">gboolean</link>              : Read / Write
+  &quot;<link linkend="GtkPlotCanvasEllipse--line">line</link>&quot;                     <link linkend="gpointer">gpointer</link>              : Read / Write
+</synopsis>
+</refsect1>
+
+
+
+<refsect1 id="GtkPlotCanvasEllipse.description" role="desc">
+<title role="desc.title">Description</title>
+<para>
+FIXME:: need long description</para>
+<para>
+</para>
+</refsect1>
+
+<refsect1 id="GtkPlotCanvasEllipse.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="GtkPlotCanvasEllipse-struct" role="struct">
+<title>GtkPlotCanvasEllipse</title>
+<indexterm zone="GtkPlotCanvasEllipse-struct"><primary sortas="GtkPlotCanvasEllipse">GtkPlotCanvasEllipse</primary></indexterm><programlisting>typedef struct _GtkPlotCanvasEllipse GtkPlotCanvasEllipse;</programlisting>
+<para>
+The GtkPlotCanvasEllipse struct contains only private data.
+It should only be accessed through the functions described below.</para>
+<para>
+</para></refsect2>
+<refsect2 id="gtk-plot-canvas-ellipse-new" role="function">
+<title>gtk_plot_canvas_ellipse_new ()</title>
+<indexterm zone="gtk-plot-canvas-ellipse-new"><primary sortas="gtk_plot_canvas_ellipse_new">gtk_plot_canvas_ellipse_new</primary></indexterm><programlisting><link linkend="GtkPlotCanvasChild">GtkPlotCanvasChild</link> * gtk_plot_canvas_ellipse_new        (<link linkend="GtkPlotLineStyle">GtkPlotLineStyle</link> style,
+                                                         <link linkend="gfloat">gfloat</link> width,
+                                                         const <link linkend="GdkColor">GdkColor</link> *fg,
+                                                         const <link linkend="GdkColor">GdkColor</link> *bg,
+                                                         <link linkend="gboolean">gboolean</link> fill);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>style</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>width</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>fg</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>bg</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>fill</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-canvas-ellipse-set-attributes" role="function">
+<title>gtk_plot_canvas_ellipse_set_attributes ()</title>
+<indexterm zone="gtk-plot-canvas-ellipse-set-attributes"><primary sortas="gtk_plot_canvas_ellipse_set_attributes">gtk_plot_canvas_ellipse_set_attributes</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_canvas_ellipse_set_attributes
+                                                        (<link linkend="GtkPlotCanvasEllipse">GtkPlotCanvasEllipse</link> *ellipse,
+                                                         <link linkend="GtkPlotLineStyle">GtkPlotLineStyle</link> style,
+                                                         <link linkend="gdouble">gdouble</link> width,
+                                                         const <link linkend="GdkColor">GdkColor</link> *fg,
+                                                         const <link linkend="GdkColor">GdkColor</link> *bg,
+                                                         <link linkend="gboolean">gboolean</link> fill);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>ellipse</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlotCanvasEllipse"><type>GtkPlotCanvasEllipse</type></link> widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>style</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>width</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>fg</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>bg</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>fill</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+<refsect1 id="GtkPlotCanvasEllipse.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GtkPlotCanvasEllipse--color-bg" role="property"><title>The <literal>&quot;color-bg&quot;</literal> property</title>
+<indexterm zone="GtkPlotCanvasEllipse--color-bg"><primary sortas="GtkPlotCanvasEllipse:color-bg">GtkPlotCanvasEllipse:color-bg</primary></indexterm><programlisting>  &quot;color-bg&quot;                 <link linkend="gpointer">gpointer</link>              : Read / Write</programlisting>
+<para>Filling Color.</para></refsect2>
+<refsect2 id="GtkPlotCanvasEllipse--filled" role="property"><title>The <literal>&quot;filled&quot;</literal> property</title>
+<indexterm zone="GtkPlotCanvasEllipse--filled"><primary sortas="GtkPlotCanvasEllipse:filled">GtkPlotCanvasEllipse:filled</primary></indexterm><programlisting>  &quot;filled&quot;                   <link linkend="gboolean">gboolean</link>              : Read / Write</programlisting>
+<para>
+</para>
+<para>
+</para><para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="GtkPlotCanvasEllipse--line" role="property"><title>The <literal>&quot;line&quot;</literal> property</title>
+<indexterm zone="GtkPlotCanvasEllipse--line"><primary sortas="GtkPlotCanvasEllipse:line">GtkPlotCanvasEllipse:line</primary></indexterm><programlisting>  &quot;line&quot;                     <link linkend="gpointer">gpointer</link>              : Read / Write</programlisting>
+<para>
+</para>
+<para>
+</para></refsect2>
+</refsect1>
+
+
+
+
+</refentry>

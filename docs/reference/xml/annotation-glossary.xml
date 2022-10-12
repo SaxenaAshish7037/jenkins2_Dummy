@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!DOCTYPE glossary PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+<!ENTITY version SYSTEM "version.xml">
+]>
+<!--ENTITY index-Objects-Grouped SYSTEM "objects_grouped.sgml"-->
+
+<glossary id="annotation-glossary">
+  <title>Annotation Glossary</title>
+<glossdiv><title>O</title>
+    <glossentry>
+      <glossterm><anchor id="annotation-glossterm-out"/>out</glossterm>
+      <glossdef>
+        <para>Parameter for returning results. Default is <acronym>transfer-full</acronym>.</para>
+      </glossdef>
+    </glossentry>
+</glossdiv>
+<glossdiv><title>T</title>
+    <glossentry>
+      <glossterm><anchor id="annotation-glossterm-transfer"/>transfer</glossterm>
+      <glossdef>
+        <para></para>
+      </glossdef>
+    </glossentry>
+    <glossentry>
+      <glossterm><anchor id="annotation-glossterm-type"/>type</glossterm>
+      <glossdef>
+        <para></para>
+      </glossdef>
+    </glossentry>
+</glossdiv>
+<glossdiv><title>S</title>
+    <glossentry>
+      <glossterm><anchor id="annotation-glossterm-scope"/>scope</glossterm>
+      <glossdef>
+        <para></para>
+      </glossdef>
+    </glossentry>
+</glossdiv>
+</glossary>

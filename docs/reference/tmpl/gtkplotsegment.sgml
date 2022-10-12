@@ -1,0 +1,148 @@
+<!-- ##### SECTION Title ##### -->
+GtkPlotSegment
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### STRUCT GtkPlotSegment ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### ARG GtkPlotSegment:arrow-mask ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotSegment:centered ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotSegment:length ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotSegment:relative ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotSegment:style ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotSegment:width ##### -->
+<para>
+
+</para>
+
+<!-- ##### ENUM GtkPlotArrow ##### -->
+<para>
+
+</para>
+
+@GTK_PLOT_ARROW_NONE: 
+@GTK_PLOT_ARROW_ORIGIN: 
+@GTK_PLOT_ARROW_END: 
+
+<!-- ##### FUNCTION gtk_plot_segment_new ##### -->
+<para>
+
+</para>
+
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_segment_set_relative ##### -->
+<para>
+
+</para>
+
+@segment: 
+@set: 
+
+
+<!-- ##### FUNCTION gtk_plot_segment_relative ##### -->
+<para>
+
+</para>
+
+@segment: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_segment_set_arrow ##### -->
+<para>
+
+</para>
+
+@segment: 
+@arrow_length: 
+@arrow_width: 
+@arrow_style: 
+
+
+<!-- ##### FUNCTION gtk_plot_segment_get_arrow ##### -->
+<para>
+
+</para>
+
+@segment: 
+@arrow_length: 
+@arrow_width: 
+@arrow_style: 
+
+
+<!-- ##### FUNCTION gtk_plot_segment_set_arrow_mask ##### -->
+<para>
+
+</para>
+
+@segment: 
+@mask: 
+
+
+<!-- ##### FUNCTION gtk_plot_segment_get_arrow_mask ##### -->
+<para>
+
+</para>
+
+@segment: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_segment_center ##### -->
+<para>
+
+</para>
+
+@segment: 
+@center: 
+
+
+<!-- ##### FUNCTION gtk_plot_segment_is_centered ##### -->
+<para>
+
+</para>
+
+@segment: 
+@Returns: 
+
+

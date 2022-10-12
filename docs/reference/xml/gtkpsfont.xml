@@ -1,0 +1,313 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+<!ENTITY version SYSTEM "version.xml">
+]>
+<!--ENTITY index-Objects-Grouped SYSTEM "objects_grouped.sgml"-->
+<refentry id="gtkextra-GtkPSFont">
+<refmeta>
+<refentrytitle role="top_of_page" id="gtkextra-GtkPSFont.top_of_page">GtkPSFont</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GTKEXTRA Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>GtkPSFont</refname>
+<refpurpose>PostScript Fonts handling.</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="gtkextra-GtkPSFont.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>
+
+#include &lt;gtkextra.h&gt;
+
+                    <link linkend="GtkPSFont">GtkPSFont</link>;
+<link linkend="gint">gint</link>                <link linkend="gtk-psfont-init">gtk_psfont_init</link>                     ();
+<link linkend="void">void</link>                <link linkend="gtk-psfont-unref">gtk_psfont_unref</link>                    ();
+<link linkend="GtkPSFont">GtkPSFont</link>*          <link linkend="gtk-psfont-get-by-name">gtk_psfont_get_by_name</link>              (const <link linkend="gchar">gchar</link> *name);
+<link linkend="GtkPSFont">GtkPSFont</link>*          <link linkend="gtk-psfont-get-by-family">gtk_psfont_get_by_family</link>            (const <link linkend="gchar">gchar</link> *family_name,
+                                                         <link linkend="gboolean">gboolean</link> italic,
+                                                         <link linkend="gboolean">gboolean</link> bold);
+<link linkend="GdkFont">GdkFont</link>*            <link linkend="gtk-psfont-get-gdkfont">gtk_psfont_get_gdkfont</link>              (<link linkend="GtkPSFont">GtkPSFont</link> *font,
+                                                         <link linkend="gint">gint</link> height);
+<link linkend="PangoFontDescription">PangoFontDescription</link>* <link linkend="gtk-psfont-get-font-description">gtk_psfont_get_font_description</link>   (<link linkend="GtkPSFont">GtkPSFont</link> *font,
+                                                         <link linkend="gint">gint</link> height);
+const <link linkend="gchar">gchar</link> *       <link linkend="gtk-psfont-get-psfontname">gtk_psfont_get_psfontname</link>           (<link linkend="GtkPSFont">GtkPSFont</link> *psfont);
+<link linkend="void">void</link>                <link linkend="gtk-psfont-add-font">gtk_psfont_add_font</link>                 (const <link linkend="char">char</link> *fontname,
+                                                         const <link linkend="gchar">gchar</link> *psname,
+                                                         const <link linkend="gchar">gchar</link> *family,
+                                                         const <link linkend="gchar">gchar</link> *pango_description,
+                                                         <link linkend="gboolean">gboolean</link> italic,
+                                                         <link linkend="gboolean">gboolean</link> bold);
+<link linkend="void">void</link>                <link linkend="gtk-psfont-add-i18n-font">gtk_psfont_add_i18n_font</link>            (const <link linkend="char">char</link> *fontname,
+                                                         const <link linkend="gchar">gchar</link> *psname,
+                                                         const <link linkend="gchar">gchar</link> *family,
+                                                         const <link linkend="gchar">gchar</link> *i18n_latinfamily,
+                                                         const <link linkend="gchar">gchar</link> *pango_description,
+                                                         <link linkend="gboolean">gboolean</link> italic,
+                                                         <link linkend="gboolean">gboolean</link> bold,
+                                                         <link linkend="gboolean">gboolean</link> vertical);
+<link linkend="void">void</link>                <link linkend="gtk-psfont-get-families">gtk_psfont_get_families</link>             (<link linkend="GList">GList</link> **families,
+                                                         <link linkend="gint">gint</link> *num_families);
+<link linkend="void">void</link>                <link linkend="gtk-psfont-get-char-size">gtk_psfont_get_char_size</link>            (<link linkend="GtkPSFont">GtkPSFont</link> *psfont,
+                                                         <link linkend="GdkFont">GdkFont</link> *font,
+                                                         <link linkend="GdkFont">GdkFont</link> *latin_font,
+                                                         <link linkend="GdkWChar">GdkWChar</link> wc,
+                                                         <link linkend="gint">gint</link> *width,
+                                                         <link linkend="gint">gint</link> *ascent,
+                                                         <link linkend="gint">gint</link> *descent);
+</synopsis>
+</refsynopsisdiv>
+
+
+
+
+
+
+
+
+
+<refsect1 id="gtkextra-GtkPSFont.description" role="desc">
+<title role="desc.title">Description</title>
+<para>
+Handles Postscript fonts.</para>
+<para>
+</para>
+</refsect1>
+
+<refsect1 id="gtkextra-GtkPSFont.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="GtkPSFont" role="struct">
+<title>GtkPSFont</title>
+<indexterm zone="GtkPSFont"><primary sortas="GtkPSFont">GtkPSFont</primary></indexterm><programlisting>typedef struct {
+} GtkPSFont;
+</programlisting>
+<para>
+The GtkPSFont struct contains only private data.
+It should only be accessed through the functions described below.</para>
+<para>
+</para></refsect2>
+<refsect2 id="gtk-psfont-init" role="function">
+<title>gtk_psfont_init ()</title>
+<indexterm zone="gtk-psfont-init"><primary sortas="gtk_psfont_init">gtk_psfont_init</primary></indexterm><programlisting><link linkend="gint">gint</link>                gtk_psfont_init                     ();</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-psfont-unref" role="function">
+<title>gtk_psfont_unref ()</title>
+<indexterm zone="gtk-psfont-unref"><primary sortas="gtk_psfont_unref">gtk_psfont_unref</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_psfont_unref                    ();</programlisting>
+<para>
+Unref ps fonts.</para>
+<para>
+</para></refsect2>
+<refsect2 id="gtk-psfont-get-by-name" role="function">
+<title>gtk_psfont_get_by_name ()</title>
+<indexterm zone="gtk-psfont-get-by-name"><primary sortas="gtk_psfont_get_by_name">gtk_psfont_get_by_name</primary></indexterm><programlisting><link linkend="GtkPSFont">GtkPSFont</link>*          gtk_psfont_get_by_name              (const <link linkend="gchar">gchar</link> *name);</programlisting>
+<para>
+Get PS Font by font name.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>name</parameter>&#160;:</term>
+<listitem><simpara> font name
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara> (transfer none) a <link linkend="GtkPSFont"><type>GtkPSFont</type></link> pointer.
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-psfont-get-by-family" role="function">
+<title>gtk_psfont_get_by_family ()</title>
+<indexterm zone="gtk-psfont-get-by-family"><primary sortas="gtk_psfont_get_by_family">gtk_psfont_get_by_family</primary></indexterm><programlisting><link linkend="GtkPSFont">GtkPSFont</link>*          gtk_psfont_get_by_family            (const <link linkend="gchar">gchar</link> *family_name,
+                                                         <link linkend="gboolean">gboolean</link> italic,
+                                                         <link linkend="gboolean">gboolean</link> bold);</programlisting>
+<para>
+Get <link linkend="GtkPSFont"><type>GtkPSFont</type></link> by family.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>family_name</parameter>&#160;:</term>
+<listitem><simpara> font name
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>italic</parameter>&#160;:</term>
+<listitem><simpara> TRUE or FALSE
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>bold</parameter>&#160;:</term>
+<listitem><simpara> TRUE or FALSE
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara> (transfer none) the <link linkend="GtkPSFont"><type>GtkPSFont</type></link> 
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-psfont-get-gdkfont" role="function">
+<title>gtk_psfont_get_gdkfont ()</title>
+<indexterm zone="gtk-psfont-get-gdkfont"><primary sortas="gtk_psfont_get_gdkfont">gtk_psfont_get_gdkfont</primary></indexterm><programlisting><link linkend="GdkFont">GdkFont</link>*            gtk_psfont_get_gdkfont              (<link linkend="GtkPSFont">GtkPSFont</link> *font,
+                                                         <link linkend="gint">gint</link> height);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>font</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>height</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-psfont-get-font-description" role="function">
+<title>gtk_psfont_get_font_description ()</title>
+<indexterm zone="gtk-psfont-get-font-description"><primary sortas="gtk_psfont_get_font_description">gtk_psfont_get_font_description</primary></indexterm><programlisting><link linkend="PangoFontDescription">PangoFontDescription</link>* gtk_psfont_get_font_description   (<link linkend="GtkPSFont">GtkPSFont</link> *font,
+                                                         <link linkend="gint">gint</link> height);</programlisting>
+<para>
+Get a <link linkend="PangoDescriptionFont"><type>PangoDescriptionFont</type></link> from PS Font.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>font</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPSFont"><type>GtkPSFont</type></link> 
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>height</parameter>&#160;:</term>
+<listitem><simpara> font height
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara> a <link linkend="PangoFontDescription"><type>PangoFontDescription</type></link> pointer.
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-psfont-get-psfontname" role="function">
+<title>gtk_psfont_get_psfontname ()</title>
+<indexterm zone="gtk-psfont-get-psfontname"><primary sortas="gtk_psfont_get_psfontname">gtk_psfont_get_psfontname</primary></indexterm><programlisting>const <link linkend="gchar">gchar</link> *       gtk_psfont_get_psfontname           (<link linkend="GtkPSFont">GtkPSFont</link> *psfont);</programlisting>
+<para>
+Get font name from PS Font.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>psfont</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPSFont"><type>GtkPSFont</type></link> 
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara> font name. 
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-psfont-add-font" role="function">
+<title>gtk_psfont_add_font ()</title>
+<indexterm zone="gtk-psfont-add-font"><primary sortas="gtk_psfont_add_font">gtk_psfont_add_font</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_psfont_add_font                 (const <link linkend="char">char</link> *fontname,
+                                                         const <link linkend="gchar">gchar</link> *psname,
+                                                         const <link linkend="gchar">gchar</link> *family,
+                                                         const <link linkend="gchar">gchar</link> *pango_description,
+                                                         <link linkend="gboolean">gboolean</link> italic,
+                                                         <link linkend="gboolean">gboolean</link> bold);</programlisting>
+<para>
+Add font in user font list.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>fontname</parameter>&#160;:</term>
+<listitem><simpara> font name
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>psname</parameter>&#160;:</term>
+<listitem><simpara> PS font name
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>family</parameter>&#160;:</term>
+<listitem><simpara> font family
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>pango_description</parameter>&#160;:</term>
+<listitem><simpara> font Pango description
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>italic</parameter>&#160;:</term>
+<listitem><simpara> TRUE or FALSE
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>bold</parameter>&#160;:</term>
+<listitem><simpara> TRUE or FALSE
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-psfont-add-i18n-font" role="function">
+<title>gtk_psfont_add_i18n_font ()</title>
+<indexterm zone="gtk-psfont-add-i18n-font"><primary sortas="gtk_psfont_add_i18n_font">gtk_psfont_add_i18n_font</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_psfont_add_i18n_font            (const <link linkend="char">char</link> *fontname,
+                                                         const <link linkend="gchar">gchar</link> *psname,
+                                                         const <link linkend="gchar">gchar</link> *family,
+                                                         const <link linkend="gchar">gchar</link> *i18n_latinfamily,
+                                                         const <link linkend="gchar">gchar</link> *pango_description,
+                                                         <link linkend="gboolean">gboolean</link> italic,
+                                                         <link linkend="gboolean">gboolean</link> bold,
+                                                         <link linkend="gboolean">gboolean</link> vertical);</programlisting>
+<para>
+Add international font in user font list.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>fontname</parameter>&#160;:</term>
+<listitem><simpara> font name
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>psname</parameter>&#160;:</term>
+<listitem><simpara> PS font name
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>family</parameter>&#160;:</term>
+<listitem><simpara> font family
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>i18n_latinfamily</parameter>&#160;:</term>
+<listitem><simpara> International font family
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>pango_description</parameter>&#160;:</term>
+<listitem><simpara> font Pango description
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>italic</parameter>&#160;:</term>
+<listitem><simpara> TRUE or FALSE
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>bold</parameter>&#160;:</term>
+<listitem><simpara> TRUE or FALSE
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>vertical</parameter>&#160;:</term>
+<listitem><simpara> TRUE or FALSE
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-psfont-get-families" role="function">
+<title>gtk_psfont_get_families ()</title>
+<indexterm zone="gtk-psfont-get-families"><primary sortas="gtk_psfont_get_families">gtk_psfont_get_families</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_psfont_get_families             (<link linkend="GList">GList</link> **families,
+                                                         <link linkend="gint">gint</link> *num_families);</programlisting>
+<para>
+Get <link linkend="GtkPSFont"><type>GtkPSFont</type></link> by family.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>families</parameter>&#160;:</term>
+<listitem><simpara>  (element-type gchar*) font families
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>num_families</parameter>&#160;:</term>
+<listitem><simpara> families number
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-psfont-get-char-size" role="function">
+<title>gtk_psfont_get_char_size ()</title>
+<indexterm zone="gtk-psfont-get-char-size"><primary sortas="gtk_psfont_get_char_size">gtk_psfont_get_char_size</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_psfont_get_char_size            (<link linkend="GtkPSFont">GtkPSFont</link> *psfont,
+                                                         <link linkend="GdkFont">GdkFont</link> *font,
+                                                         <link linkend="GdkFont">GdkFont</link> *latin_font,
+                                                         <link linkend="GdkWChar">GdkWChar</link> wc,
+                                                         <link linkend="gint">gint</link> *width,
+                                                         <link linkend="gint">gint</link> *ascent,
+                                                         <link linkend="gint">gint</link> *descent);</programlisting>
+<para>
+Get font character size.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>psfont</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPSFont"><type>GtkPSFont</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>font</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GdkFont"><type>GdkFont</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>latin_font</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GdkFont"><type>GdkFont</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>wc</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GdkWchar"><type>GdkWchar</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>width</parameter>&#160;:</term>
+<listitem><simpara> font width
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>ascent</parameter>&#160;:</term>
+<listitem><simpara> font ascent
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>descent</parameter>&#160;:</term>
+<listitem><simpara> font  descent
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+
+
+
+
+</refentry>

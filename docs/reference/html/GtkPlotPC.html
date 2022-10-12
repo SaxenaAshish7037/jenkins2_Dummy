@@ -1,0 +1,1275 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GtkPlotPC</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="GtkExtra Reference Manual">
+<link rel="up" href="ch03.html" title="Widgets">
+<link rel="prev" href="GtkPlotGdk.html" title="GtkPlotGdk">
+<link rel="next" href="GtkPlotPixmap.html" title="GtkPlotPixmap">
+<meta name="generator" content="GTK-Doc V1.11 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="part" href="gtkextra.html" title="Part I. GtkExtra Overview">
+<link rel="part" href="gtkextrabase.html" title="Part II. GtkExtra Widgets and Objects">
+<link rel="chapter" href="ch01.html" title="Object Hierarchy">
+<link rel="chapter" href="ch02.html" title="Widget Gallery">
+<link rel="chapter" href="ch03.html" title="Widgets">
+<link rel="chapter" href="ch04.html" title="Data Formatter">
+<link rel="chapter" href="ch05.html" title="GtkExtra Versioning">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="GtkPlotGdk.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch03.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">GtkExtra Reference Manual</th>
+<td><a accesskey="n" href="GtkPlotPixmap.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#GtkPlotPC.synopsis" class="shortcut">Top</a>
+                 | 
+                <a href="#GtkPlotPC.description" class="shortcut">Description</a>
+                 | 
+                <a href="#GtkPlotPC.object-hierarchy" class="shortcut">Object Hierarchy</a>
+</td></tr>
+</table>
+<div class="refentry" title="GtkPlotPC">
+<a name="GtkPlotPC"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GtkPlotPC.top_of_page"></a>GtkPlotPC</span></h2>
+<p>GtkPlotPC — Plot Context</p>
+</td>
+<td valign="top" align="right"><img src=""></td>
+</tr></table></div>
+<div class="refsynopsisdiv" title="Synopsis">
+<a name="GtkPlotPC.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">
+
+#include &lt;gtkextra.h&gt;
+
+                    <a class="link" href="GtkPlotPC.html#GtkPlotPC-struct" title="GtkPlotPC">GtkPlotPC</a>;
+enum                <a class="link" href="GtkPlotPC.html#GtkPlotPageSize" title="enum GtkPlotPageSize">GtkPlotPageSize</a>;
+enum                <a class="link" href="GtkPlotPC.html#GtkPlotPageOrientation" title="enum GtkPlotPageOrientation">GtkPlotPageOrientation</a>;
+enum                <a class="link" href="GtkPlotPC.html#GtkPlotUnits" title="enum GtkPlotUnits">GtkPlotUnits</a>;
+                    <a class="link" href="GtkPlotPC.html#GtkPlotPoint" title="GtkPlotPoint">GtkPlotPoint</a>;
+<a
+href="http://library.gnome.org/devel/gtk3/GtkObject.html"
+>GtkObject</a> *         <a class="link" href="GtkPlotPC.html#gtk-plot-pc-new" title="gtk_plot_pc_new ()">gtk_plot_pc_new</a>                     (void);
+<a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>            <a class="link" href="GtkPlotPC.html#gtk-plot-pc-init" title="gtk_plot_pc_init ()">gtk_plot_pc_init</a>                    (<a class="link" href="GtkPlotPC.html" title="GtkPlotPC">GtkPlotPC</a> *pc);
+void                <a class="link" href="GtkPlotPC.html#gtk-plot-pc-leave" title="gtk_plot_pc_leave ()">gtk_plot_pc_leave</a>                   (<a class="link" href="GtkPlotPC.html" title="GtkPlotPC">GtkPlotPC</a> *pc);
+void                <a class="link" href="GtkPlotPC.html#gtk-plot-pc-set-viewport" title="gtk_plot_pc_set_viewport ()">gtk_plot_pc_set_viewport</a>            (<a class="link" href="GtkPlotPC.html" title="GtkPlotPC">GtkPlotPC</a> *pc,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> w,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> h);
+void                <a class="link" href="GtkPlotPC.html#gtk-plot-pc-gsave" title="gtk_plot_pc_gsave ()">gtk_plot_pc_gsave</a>                   (<a class="link" href="GtkPlotPC.html" title="GtkPlotPC">GtkPlotPC</a> *pc);
+void                <a class="link" href="GtkPlotPC.html#gtk-plot-pc-grestore" title="gtk_plot_pc_grestore ()">gtk_plot_pc_grestore</a>                (<a class="link" href="GtkPlotPC.html" title="GtkPlotPC">GtkPlotPC</a> *pc);
+void                <a class="link" href="GtkPlotPC.html#gtk-plot-pc-clip" title="gtk_plot_pc_clip ()">gtk_plot_pc_clip</a>                    (<a class="link" href="GtkPlotPC.html" title="GtkPlotPC">GtkPlotPC</a> *pc,
+                                                         <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Points-Rectangles-and-Regions.html#GdkRectangle"
+>GdkRectangle</a> *area);
+void                <a class="link" href="GtkPlotPC.html#gtk-plot-pc-clip-mask" title="gtk_plot_pc_clip_mask ()">gtk_plot_pc_clip_mask</a>               (<a class="link" href="GtkPlotPC.html" title="GtkPlotPC">GtkPlotPC</a> *pc,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> x,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> y,
+                                                         <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Bitmaps-and-Pixmaps.html#GdkBitmap"
+>GdkBitmap</a> *mask);
+void                <a class="link" href="GtkPlotPC.html#gtk-plot-pc-set-color" title="gtk_plot_pc_set_color ()">gtk_plot_pc_set_color</a>               (<a class="link" href="GtkPlotPC.html" title="GtkPlotPC">GtkPlotPC</a> *pc,
+                                                         <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Colormaps-and-Colors.html#GdkColor"
+>GdkColor</a> *color);
+void                <a class="link" href="GtkPlotPC.html#gtk-plot-pc-set-lineattr" title="gtk_plot_pc_set_lineattr ()">gtk_plot_pc_set_lineattr</a>            (<a class="link" href="GtkPlotPC.html" title="GtkPlotPC">GtkPlotPC</a> *pc,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gfloat"
+>gfloat</a> line_width,
+                                                         <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Graphics-Contexts.html#GdkLineStyle"
+>GdkLineStyle</a> line_style,
+                                                         <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Graphics-Contexts.html#GdkCapStyle"
+>GdkCapStyle</a> cap_style,
+                                                         <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Graphics-Contexts.html#GdkJoinStyle"
+>GdkJoinStyle</a> join_style);
+void                <a class="link" href="GtkPlotPC.html#gtk-plot-pc-set-dash" title="gtk_plot_pc_set_dash ()">gtk_plot_pc_set_dash</a>                (<a class="link" href="GtkPlotPC.html" title="GtkPlotPC">GtkPlotPC</a> *pc,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> offset_,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> *values,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> num_values);
+void                <a class="link" href="GtkPlotPC.html#gtk-plot-pc-draw-point" title="gtk_plot_pc_draw_point ()">gtk_plot_pc_draw_point</a>              (<a class="link" href="GtkPlotPC.html" title="GtkPlotPC">GtkPlotPC</a> *pc,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> x,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> y);
+void                <a class="link" href="GtkPlotPC.html#gtk-plot-pc-draw-line" title="gtk_plot_pc_draw_line ()">gtk_plot_pc_draw_line</a>               (<a class="link" href="GtkPlotPC.html" title="GtkPlotPC">GtkPlotPC</a> *pc,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> x1,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> y1,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> x2,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> y2);
+void                <a class="link" href="GtkPlotPC.html#gtk-plot-pc-draw-lines" title="gtk_plot_pc_draw_lines ()">gtk_plot_pc_draw_lines</a>              (<a class="link" href="GtkPlotPC.html" title="GtkPlotPC">GtkPlotPC</a> *pc,
+                                                         <a class="link" href="GtkPlotPC.html#GtkPlotPoint" title="GtkPlotPoint">GtkPlotPoint</a> *points,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> numpoints);
+void                <a class="link" href="GtkPlotPC.html#gtk-plot-pc-draw-rectangle" title="gtk_plot_pc_draw_rectangle ()">gtk_plot_pc_draw_rectangle</a>          (<a class="link" href="GtkPlotPC.html" title="GtkPlotPC">GtkPlotPC</a> *pc,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> filled,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> x,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> y,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> width,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> height);
+void                <a class="link" href="GtkPlotPC.html#gtk-plot-pc-draw-polygon" title="gtk_plot_pc_draw_polygon ()">gtk_plot_pc_draw_polygon</a>            (<a class="link" href="GtkPlotPC.html" title="GtkPlotPC">GtkPlotPC</a> *pc,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> filled,
+                                                         <a class="link" href="GtkPlotPC.html#GtkPlotPoint" title="GtkPlotPoint">GtkPlotPoint</a> *points,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> numpoints);
+void                <a class="link" href="GtkPlotPC.html#gtk-plot-pc-draw-ellipse" title="gtk_plot_pc_draw_ellipse ()">gtk_plot_pc_draw_ellipse</a>            (<a class="link" href="GtkPlotPC.html" title="GtkPlotPC">GtkPlotPC</a> *pc,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> filled,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> x,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> y,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> width,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> height);
+void                <a class="link" href="GtkPlotPC.html#gtk-plot-pc-draw-circle" title="gtk_plot_pc_draw_circle ()">gtk_plot_pc_draw_circle</a>             (<a class="link" href="GtkPlotPC.html" title="GtkPlotPC">GtkPlotPC</a> *pc,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> filled,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> x,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> y,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> size);
+void                <a class="link" href="GtkPlotPC.html#gtk-plot-pc-set-font" title="gtk_plot_pc_set_font ()">gtk_plot_pc_set_font</a>                (<a class="link" href="GtkPlotPC.html" title="GtkPlotPC">GtkPlotPC</a> *pc,
+                                                         <a class="link" href="gtkextra-GtkPSFont.html#GtkPSFont" title="GtkPSFont">GtkPSFont</a> *psfont,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> height);
+void                <a class="link" href="GtkPlotPC.html#gtk-plot-pc-draw-string" title="gtk_plot_pc_draw_string ()">gtk_plot_pc_draw_string</a>             (<a class="link" href="GtkPlotPC.html" title="GtkPlotPC">GtkPlotPC</a> *pc,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> x,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> y,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> angle,
+                                                         const <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Colormaps-and-Colors.html#GdkColor"
+>GdkColor</a> *fg,
+                                                         const <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Colormaps-and-Colors.html#GdkColor"
+>GdkColor</a> *bg,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> transparent,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> border,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> border_space,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> border_width,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> shadow_width,
+                                                         const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *font,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> height,
+                                                         <a
+href="http://library.gnome.org/devel/gtk3/gtk2-Standard-Enumerations.html#GtkJustification"
+>GtkJustification</a> just,
+                                                         const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *text);
+void                <a class="link" href="GtkPlotPC.html#gtk-plot-pc-draw-pixmap" title="gtk_plot_pc_draw_pixmap ()">gtk_plot_pc_draw_pixmap</a>             (<a class="link" href="GtkPlotPC.html" title="GtkPlotPC">GtkPlotPC</a> *pc,
+                                                         <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Bitmaps-and-Pixmaps.html#GdkPixmap"
+>GdkPixmap</a> *pixmap,
+                                                         <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Bitmaps-and-Pixmaps.html#GdkBitmap"
+>GdkBitmap</a> *mask,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> xsrc,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> ysrc,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> xdest,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> ydest,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> width,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> height,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> scale_x,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> scale_y);
+</pre>
+</div>
+<div class="refsect1" title="Object Hierarchy">
+<a name="GtkPlotPC.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a
+href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject"
+>GObject</a>
+   +----<a
+href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned"
+>GInitiallyUnowned</a>
+         +----<a
+href="http://library.gnome.org/devel/gtk3/GtkObject.html"
+>GtkObject</a>
+               +----GtkPlotPC
+                     +----<a class="link" href="GtkPlotCairo.html" title="GtkPlotCairo">GtkPlotCairo</a>
+                     +----<a class="link" href="GtkPlotGdk.html" title="GtkPlotGdk">GtkPlotGdk</a>
+                     +----<a class="link" href="GtkPlotPS.html" title="GtkPlotPS">GtkPlotPS</a>
+</pre>
+</div>
+<div class="refsect1" title="Description">
+<a name="GtkPlotPC.description"></a><h2>Description</h2>
+<p>
+Base Class for <a class="link" href="GtkPlotCairo.html" title="GtkPlotCairo"><span class="type">GtkPlotCairo</span></a>, <a class="link" href="GtkPlotGdk.html" title="GtkPlotGdk"><span class="type">GtkPlotGdk</span></a> and <a class="link" href="GtkPlotPS.html" title="GtkPlotPS"><span class="type">GtkPlotPS</span></a>.</p>
+<p>
+</p>
+</div>
+<div class="refsect1" title="Details">
+<a name="GtkPlotPC.details"></a><h2>Details</h2>
+<div class="refsect2" title="GtkPlotPC">
+<a name="GtkPlotPC-struct"></a><h3>GtkPlotPC</h3>
+<pre class="programlisting">typedef struct _GtkPlotPC GtkPlotPC;</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2" title="enum GtkPlotPageSize">
+<a name="GtkPlotPageSize"></a><h3>enum GtkPlotPageSize</h3>
+<pre class="programlisting">typedef enum{
+     GTK_PLOT_LETTER	,
+     GTK_PLOT_LEGAL	,
+     GTK_PLOT_A4	,
+     GTK_PLOT_EXECUTIVE	,
+     GTK_PLOT_CUSTOM	
+} GtkPlotPageSize;
+</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2" title="enum GtkPlotPageOrientation">
+<a name="GtkPlotPageOrientation"></a><h3>enum GtkPlotPageOrientation</h3>
+<pre class="programlisting">typedef enum{
+     GTK_PLOT_PORTRAIT	,
+     GTK_PLOT_LANDSCAPE	
+} GtkPlotPageOrientation;
+</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2" title="enum GtkPlotUnits">
+<a name="GtkPlotUnits"></a><h3>enum GtkPlotUnits</h3>
+<pre class="programlisting">typedef enum{
+     GTK_PLOT_PSPOINTS	,
+     GTK_PLOT_MM	,
+     GTK_PLOT_CM	,
+     GTK_PLOT_INCHES	
+} GtkPlotUnits;
+</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2" title="GtkPlotPoint">
+<a name="GtkPlotPoint"></a><h3>GtkPlotPoint</h3>
+<pre class="programlisting">typedef struct {
+} GtkPlotPoint;
+</pre>
+<p>
+The GtkPlotPoint struct contains only private data.
+It should only be accessed through the functions described below.</p>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_pc_new ()">
+<a name="gtk-plot-pc-new"></a><h3>gtk_plot_pc_new ()</h3>
+<pre class="programlisting"><a
+href="http://library.gnome.org/devel/gtk3/GtkObject.html"
+>GtkObject</a> *         gtk_plot_pc_new                     (void);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_pc_init ()">
+<a name="gtk-plot-pc-init"></a><h3>gtk_plot_pc_init ()</h3>
+<pre class="programlisting"><a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>            gtk_plot_pc_init                    (<a class="link" href="GtkPlotPC.html" title="GtkPlotPC">GtkPlotPC</a> *pc);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>pc</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_pc_leave ()">
+<a name="gtk-plot-pc-leave"></a><h3>gtk_plot_pc_leave ()</h3>
+<pre class="programlisting">void                gtk_plot_pc_leave                   (<a class="link" href="GtkPlotPC.html" title="GtkPlotPC">GtkPlotPC</a> *pc);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>pc</code></em> :</span></p></td>
+<td>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_pc_set_viewport ()">
+<a name="gtk-plot-pc-set-viewport"></a><h3>gtk_plot_pc_set_viewport ()</h3>
+<pre class="programlisting">void                gtk_plot_pc_set_viewport            (<a class="link" href="GtkPlotPC.html" title="GtkPlotPC">GtkPlotPC</a> *pc,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> w,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> h);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>pc</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>w</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>h</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_pc_gsave ()">
+<a name="gtk-plot-pc-gsave"></a><h3>gtk_plot_pc_gsave ()</h3>
+<pre class="programlisting">void                gtk_plot_pc_gsave                   (<a class="link" href="GtkPlotPC.html" title="GtkPlotPC">GtkPlotPC</a> *pc);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>pc</code></em> :</span></p></td>
+<td>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_pc_grestore ()">
+<a name="gtk-plot-pc-grestore"></a><h3>gtk_plot_pc_grestore ()</h3>
+<pre class="programlisting">void                gtk_plot_pc_grestore                (<a class="link" href="GtkPlotPC.html" title="GtkPlotPC">GtkPlotPC</a> *pc);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>pc</code></em> :</span></p></td>
+<td>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_pc_clip ()">
+<a name="gtk-plot-pc-clip"></a><h3>gtk_plot_pc_clip ()</h3>
+<pre class="programlisting">void                gtk_plot_pc_clip                    (<a class="link" href="GtkPlotPC.html" title="GtkPlotPC">GtkPlotPC</a> *pc,
+                                                         <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Points-Rectangles-and-Regions.html#GdkRectangle"
+>GdkRectangle</a> *area);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>pc</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>area</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_pc_clip_mask ()">
+<a name="gtk-plot-pc-clip-mask"></a><h3>gtk_plot_pc_clip_mask ()</h3>
+<pre class="programlisting">void                gtk_plot_pc_clip_mask               (<a class="link" href="GtkPlotPC.html" title="GtkPlotPC">GtkPlotPC</a> *pc,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> x,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> y,
+                                                         <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Bitmaps-and-Pixmaps.html#GdkBitmap"
+>GdkBitmap</a> *mask);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>pc</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>x</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>y</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>mask</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_pc_set_color ()">
+<a name="gtk-plot-pc-set-color"></a><h3>gtk_plot_pc_set_color ()</h3>
+<pre class="programlisting">void                gtk_plot_pc_set_color               (<a class="link" href="GtkPlotPC.html" title="GtkPlotPC">GtkPlotPC</a> *pc,
+                                                         <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Colormaps-and-Colors.html#GdkColor"
+>GdkColor</a> *color);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>pc</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>color</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_pc_set_lineattr ()">
+<a name="gtk-plot-pc-set-lineattr"></a><h3>gtk_plot_pc_set_lineattr ()</h3>
+<pre class="programlisting">void                gtk_plot_pc_set_lineattr            (<a class="link" href="GtkPlotPC.html" title="GtkPlotPC">GtkPlotPC</a> *pc,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gfloat"
+>gfloat</a> line_width,
+                                                         <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Graphics-Contexts.html#GdkLineStyle"
+>GdkLineStyle</a> line_style,
+                                                         <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Graphics-Contexts.html#GdkCapStyle"
+>GdkCapStyle</a> cap_style,
+                                                         <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Graphics-Contexts.html#GdkJoinStyle"
+>GdkJoinStyle</a> join_style);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>pc</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>line_width</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>line_style</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>cap_style</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>join_style</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_pc_set_dash ()">
+<a name="gtk-plot-pc-set-dash"></a><h3>gtk_plot_pc_set_dash ()</h3>
+<pre class="programlisting">void                gtk_plot_pc_set_dash                (<a class="link" href="GtkPlotPC.html" title="GtkPlotPC">GtkPlotPC</a> *pc,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> offset_,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> *values,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> num_values);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>pc</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>offset_</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>values</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>num_values</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_pc_draw_point ()">
+<a name="gtk-plot-pc-draw-point"></a><h3>gtk_plot_pc_draw_point ()</h3>
+<pre class="programlisting">void                gtk_plot_pc_draw_point              (<a class="link" href="GtkPlotPC.html" title="GtkPlotPC">GtkPlotPC</a> *pc,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> x,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> y);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>pc</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>x</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>y</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_pc_draw_line ()">
+<a name="gtk-plot-pc-draw-line"></a><h3>gtk_plot_pc_draw_line ()</h3>
+<pre class="programlisting">void                gtk_plot_pc_draw_line               (<a class="link" href="GtkPlotPC.html" title="GtkPlotPC">GtkPlotPC</a> *pc,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> x1,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> y1,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> x2,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> y2);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>pc</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>x1</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>y1</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>x2</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>y2</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_pc_draw_lines ()">
+<a name="gtk-plot-pc-draw-lines"></a><h3>gtk_plot_pc_draw_lines ()</h3>
+<pre class="programlisting">void                gtk_plot_pc_draw_lines              (<a class="link" href="GtkPlotPC.html" title="GtkPlotPC">GtkPlotPC</a> *pc,
+                                                         <a class="link" href="GtkPlotPC.html#GtkPlotPoint" title="GtkPlotPoint">GtkPlotPoint</a> *points,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> numpoints);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>pc</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>points</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>numpoints</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_pc_draw_rectangle ()">
+<a name="gtk-plot-pc-draw-rectangle"></a><h3>gtk_plot_pc_draw_rectangle ()</h3>
+<pre class="programlisting">void                gtk_plot_pc_draw_rectangle          (<a class="link" href="GtkPlotPC.html" title="GtkPlotPC">GtkPlotPC</a> *pc,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> filled,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> x,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> y,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> width,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> height);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>pc</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>filled</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>x</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>y</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>width</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>height</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_pc_draw_polygon ()">
+<a name="gtk-plot-pc-draw-polygon"></a><h3>gtk_plot_pc_draw_polygon ()</h3>
+<pre class="programlisting">void                gtk_plot_pc_draw_polygon            (<a class="link" href="GtkPlotPC.html" title="GtkPlotPC">GtkPlotPC</a> *pc,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> filled,
+                                                         <a class="link" href="GtkPlotPC.html#GtkPlotPoint" title="GtkPlotPoint">GtkPlotPoint</a> *points,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> numpoints);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>pc</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>filled</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>points</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>numpoints</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_pc_draw_ellipse ()">
+<a name="gtk-plot-pc-draw-ellipse"></a><h3>gtk_plot_pc_draw_ellipse ()</h3>
+<pre class="programlisting">void                gtk_plot_pc_draw_ellipse            (<a class="link" href="GtkPlotPC.html" title="GtkPlotPC">GtkPlotPC</a> *pc,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> filled,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> x,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> y,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> width,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> height);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>pc</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>filled</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>x</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>y</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>width</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>height</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_pc_draw_circle ()">
+<a name="gtk-plot-pc-draw-circle"></a><h3>gtk_plot_pc_draw_circle ()</h3>
+<pre class="programlisting">void                gtk_plot_pc_draw_circle             (<a class="link" href="GtkPlotPC.html" title="GtkPlotPC">GtkPlotPC</a> *pc,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> filled,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> x,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> y,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> size);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>pc</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>filled</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>x</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>y</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>size</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_pc_set_font ()">
+<a name="gtk-plot-pc-set-font"></a><h3>gtk_plot_pc_set_font ()</h3>
+<pre class="programlisting">void                gtk_plot_pc_set_font                (<a class="link" href="GtkPlotPC.html" title="GtkPlotPC">GtkPlotPC</a> *pc,
+                                                         <a class="link" href="gtkextra-GtkPSFont.html#GtkPSFont" title="GtkPSFont">GtkPSFont</a> *psfont,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> height);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>pc</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>psfont</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>height</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_pc_draw_string ()">
+<a name="gtk-plot-pc-draw-string"></a><h3>gtk_plot_pc_draw_string ()</h3>
+<pre class="programlisting">void                gtk_plot_pc_draw_string             (<a class="link" href="GtkPlotPC.html" title="GtkPlotPC">GtkPlotPC</a> *pc,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> x,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> y,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> angle,
+                                                         const <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Colormaps-and-Colors.html#GdkColor"
+>GdkColor</a> *fg,
+                                                         const <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Colormaps-and-Colors.html#GdkColor"
+>GdkColor</a> *bg,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> transparent,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> border,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> border_space,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> border_width,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> shadow_width,
+                                                         const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *font,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> height,
+                                                         <a
+href="http://library.gnome.org/devel/gtk3/gtk2-Standard-Enumerations.html#GtkJustification"
+>GtkJustification</a> just,
+                                                         const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *text);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>pc</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>x</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>y</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>angle</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>fg</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>bg</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>transparent</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>border</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>border_space</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>border_width</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>shadow_width</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>font</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>height</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>just</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>text</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_pc_draw_pixmap ()">
+<a name="gtk-plot-pc-draw-pixmap"></a><h3>gtk_plot_pc_draw_pixmap ()</h3>
+<pre class="programlisting">void                gtk_plot_pc_draw_pixmap             (<a class="link" href="GtkPlotPC.html" title="GtkPlotPC">GtkPlotPC</a> *pc,
+                                                         <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Bitmaps-and-Pixmaps.html#GdkPixmap"
+>GdkPixmap</a> *pixmap,
+                                                         <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Bitmaps-and-Pixmaps.html#GdkBitmap"
+>GdkBitmap</a> *mask,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> xsrc,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> ysrc,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> xdest,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> ydest,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> width,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> height,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> scale_x,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> scale_y);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>pc</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>pixmap</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>mask</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>xsrc</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>ysrc</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>xdest</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>ydest</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>width</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>height</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>scale_x</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>scale_y</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.11</div>
+</body>
+</html>

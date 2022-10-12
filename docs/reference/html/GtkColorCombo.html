@@ -1,0 +1,463 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GtkColorCombo</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="GtkExtra Reference Manual">
+<link rel="up" href="ch03.html" title="Widgets">
+<link rel="prev" href="GtkCheckItem.html" title="GtkCheckItem">
+<link rel="next" href="GtkComboButton.html" title="GtkComboButton">
+<meta name="generator" content="GTK-Doc V1.11 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="part" href="gtkextra.html" title="Part I. GtkExtra Overview">
+<link rel="part" href="gtkextrabase.html" title="Part II. GtkExtra Widgets and Objects">
+<link rel="chapter" href="ch01.html" title="Object Hierarchy">
+<link rel="chapter" href="ch02.html" title="Widget Gallery">
+<link rel="chapter" href="ch03.html" title="Widgets">
+<link rel="chapter" href="ch04.html" title="Data Formatter">
+<link rel="chapter" href="ch05.html" title="GtkExtra Versioning">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="GtkCheckItem.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch03.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">GtkExtra Reference Manual</th>
+<td><a accesskey="n" href="GtkComboButton.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#GtkColorCombo.synopsis" class="shortcut">Top</a>
+                 | 
+                <a href="#GtkColorCombo.description" class="shortcut">Description</a>
+                 | 
+                <a href="#GtkColorCombo.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                 | 
+                <a href="#GtkColorCombo.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+                 | 
+                <a href="#GtkColorCombo.signals" class="shortcut">Signals</a>
+</td></tr>
+</table>
+<div class="refentry" title="GtkColorCombo">
+<a name="GtkColorCombo"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GtkColorCombo.top_of_page"></a>GtkColorCombo</span></h2>
+<p>GtkColorCombo — A color combo widget for GTK.</p>
+</td>
+<td valign="top" align="right"><img src="gtkcolorcombo.jpg"></td>
+</tr></table></div>
+<div class="refsynopsisdiv" title="Synopsis">
+<a name="GtkColorCombo.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">
+
+#include &lt;gtkextra.h&gt;
+
+                    <a class="link" href="GtkColorCombo.html#GtkColorCombo-struct" title="GtkColorCombo">GtkColorCombo</a>;
+<a
+href="http://library.gnome.org/devel/gtk3/GtkWidget.html"
+>GtkWidget</a> *         <a class="link" href="GtkColorCombo.html#gtk-color-combo-new" title="gtk_color_combo_new ()">gtk_color_combo_new</a>                 (void);
+<a
+href="http://library.gnome.org/devel/gtk3/GtkWidget.html"
+>GtkWidget</a> *         <a class="link" href="GtkColorCombo.html#gtk-color-combo-new-with-values" title="gtk_color_combo_new_with_values ()">gtk_color_combo_new_with_values</a>     (<a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> nrows,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> ncols,
+                                                         <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Colormaps-and-Colors.html#GdkColor"
+>GdkColor</a> *colors);
+void                <a class="link" href="GtkColorCombo.html#gtk-color-combo-construct" title="gtk_color_combo_construct ()">gtk_color_combo_construct</a>           (<a class="link" href="GtkColorCombo.html" title="GtkColorCombo">GtkColorCombo</a> *color_combo);
+void                <a class="link" href="GtkColorCombo.html#gtk-color-combo-construct-with-values" title="gtk_color_combo_construct_with_values ()">gtk_color_combo_construct_with_values</a>
+                                                        (<a class="link" href="GtkColorCombo.html" title="GtkColorCombo">GtkColorCombo</a> *color_combo,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> nrows,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> ncols,
+                                                         <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Colormaps-and-Colors.html#GdkColor"
+>GdkColor</a> *colors);
+<a
+href="http://library.gnome.org/devel/gdk3/gdk2-Colormaps-and-Colors.html#GdkColor"
+>GdkColor</a>            <a class="link" href="GtkColorCombo.html#gtk-color-combo-get-color-at" title="gtk_color_combo_get_color_at ()">gtk_color_combo_get_color_at</a>        (<a class="link" href="GtkColorCombo.html" title="GtkColorCombo">GtkColorCombo</a> *color_combo,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> row,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> col);
+void                <a class="link" href="GtkColorCombo.html#gtk-color-combo-find-color" title="gtk_color_combo_find_color ()">gtk_color_combo_find_color</a>          (<a class="link" href="GtkColorCombo.html" title="GtkColorCombo">GtkColorCombo</a> *color_combo,
+                                                         <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Colormaps-and-Colors.html#GdkColor"
+>GdkColor</a> *color,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> *row,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> *col);
+<a
+href="http://library.gnome.org/devel/gdk3/gdk2-Colormaps-and-Colors.html#GdkColor"
+>GdkColor</a>            <a class="link" href="GtkColorCombo.html#gtk-color-combo-get-selection" title="gtk_color_combo_get_selection ()">gtk_color_combo_get_selection</a>       (<a class="link" href="GtkColorCombo.html" title="GtkColorCombo">GtkColorCombo</a> *combo);
+</pre>
+</div>
+<div class="refsect1" title="Object Hierarchy">
+<a name="GtkColorCombo.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a
+href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject"
+>GObject</a>
+   +----<a
+href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned"
+>GInitiallyUnowned</a>
+         +----<a
+href="http://library.gnome.org/devel/gtk3/GtkObject.html"
+>GtkObject</a>
+               +----<a
+href="http://library.gnome.org/devel/gtk3/GtkWidget.html"
+>GtkWidget</a>
+                     +----<a
+href="http://library.gnome.org/devel/gtk3/GtkContainer.html"
+>GtkContainer</a>
+                           +----<a
+href="http://library.gnome.org/devel/gtk3/GtkBox.html"
+>GtkBox</a>
+                                 +----<a
+href="http://library.gnome.org/devel/gtk3/GtkHBox.html"
+>GtkHBox</a>
+                                       +----<a class="link" href="GtkComboButton.html" title="GtkComboButton">GtkComboButton</a>
+                                             +----GtkColorCombo
+</pre>
+</div>
+<div class="refsect1" title="Implemented Interfaces">
+<a name="GtkColorCombo.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+GtkColorCombo implements
+ AtkImplementorIface,  <a
+href="http://library.gnome.org/devel/gtk3/GtkBuildable.html"
+>GtkBuildable</a> and  <a
+href="http://library.gnome.org/devel/gtk3/gtk2-Orientable.html#GtkOrientable"
+>GtkOrientable</a>.</p>
+</div>
+<div class="refsect1" title="Signals">
+<a name="GtkColorCombo.signals"></a><h2>Signals</h2>
+<pre class="synopsis">
+  "<a class="link" href="GtkColorCombo.html#GtkColorCombo-changed" title='The "changed" signal'>changed</a>"                                        : Run First
+</pre>
+</div>
+<div class="refsect1" title="Description">
+<a name="GtkColorCombo.description"></a><h2>Description</h2>
+<p>
+A GtkColorCombo is a GtkCOmbo which contains all kinds of colors.</p>
+<p>
+</p>
+</div>
+<div class="refsect1" title="Details">
+<a name="GtkColorCombo.details"></a><h2>Details</h2>
+<div class="refsect2" title="GtkColorCombo">
+<a name="GtkColorCombo-struct"></a><h3>GtkColorCombo</h3>
+<pre class="programlisting">typedef struct _GtkColorCombo GtkColorCombo;</pre>
+<p>
+The GtkColorCombo struct contains only private data.
+It should only be accessed through the functions described below.</p>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2" title="gtk_color_combo_new ()">
+<a name="gtk-color-combo-new"></a><h3>gtk_color_combo_new ()</h3>
+<pre class="programlisting"><a
+href="http://library.gnome.org/devel/gtk3/GtkWidget.html"
+>GtkWidget</a> *         gtk_color_combo_new                 (void);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_color_combo_new_with_values ()">
+<a name="gtk-color-combo-new-with-values"></a><h3>gtk_color_combo_new_with_values ()</h3>
+<pre class="programlisting"><a
+href="http://library.gnome.org/devel/gtk3/GtkWidget.html"
+>GtkWidget</a> *         gtk_color_combo_new_with_values     (<a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> nrows,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> ncols,
+                                                         <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Colormaps-and-Colors.html#GdkColor"
+>GdkColor</a> *colors);</pre>
+<p>
+Creates a new <a class="link" href="GtkColorCombo.html" title="GtkColorCombo"><span class="type">GtkColorCombo</span></a> widget having <em class="parameter"><code>nrows</code></em> rows and <em class="parameter"><code>ncols</code></em> columns with <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Colormaps-and-Colors.html#GdkColor"
+><span class="type">GdkColor</span></a> color.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>nrows</code></em> :</span></p></td>
+<td> number of rows in <a class="link" href="GtkColorCombo.html" title="GtkColorCombo"><span class="type">GtkColorCombo</span></a>.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>ncols</code></em> :</span></p></td>
+<td> number of columns in <a class="link" href="GtkColorCombo.html" title="GtkColorCombo"><span class="type">GtkColorCombo</span></a>.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>colors</code></em> :</span></p></td>
+<td> <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Colormaps-and-Colors.html#GdkColor"
+><span class="type">GdkColor</span></a> color.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> the newly-created <a class="link" href="GtkColorCombo.html" title="GtkColorCombo"><span class="type">GtkColorCombo</span></a> widget.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_color_combo_construct ()">
+<a name="gtk-color-combo-construct"></a><h3>gtk_color_combo_construct ()</h3>
+<pre class="programlisting">void                gtk_color_combo_construct           (<a class="link" href="GtkColorCombo.html" title="GtkColorCombo">GtkColorCombo</a> *color_combo);</pre>
+<p>
+Initialize a <a class="link" href="GtkColorCombo.html" title="GtkColorCombo"><span class="type">GtkColorCombo</span></a> object.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>color_combo</code></em> :</span></p></td>
+<td> the <a class="link" href="GtkColorCombo.html" title="GtkColorCombo"><span class="type">GtkColorCombo</span></a> widget.
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_color_combo_construct_with_values ()">
+<a name="gtk-color-combo-construct-with-values"></a><h3>gtk_color_combo_construct_with_values ()</h3>
+<pre class="programlisting">void                gtk_color_combo_construct_with_values
+                                                        (<a class="link" href="GtkColorCombo.html" title="GtkColorCombo">GtkColorCombo</a> *color_combo,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> nrows,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> ncols,
+                                                         <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Colormaps-and-Colors.html#GdkColor"
+>GdkColor</a> *colors);</pre>
+<p>
+Initialize a <a class="link" href="GtkColorCombo.html" title="GtkColorCombo"><span class="type">GtkColorCombo</span></a> object with specified values.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>color_combo</code></em> :</span></p></td>
+<td> the <a class="link" href="GtkColorCombo.html" title="GtkColorCombo"><span class="type">GtkColorCombo</span></a> widget.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>nrows</code></em> :</span></p></td>
+<td> number of rows in <a class="link" href="GtkColorCombo.html" title="GtkColorCombo"><span class="type">GtkColorCombo</span></a>.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>ncols</code></em> :</span></p></td>
+<td> number of columns in <a class="link" href="GtkColorCombo.html" title="GtkColorCombo"><span class="type">GtkColorCombo</span></a>.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>colors</code></em> :</span></p></td>
+<td> <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Colormaps-and-Colors.html#GdkColor"
+><span class="type">GdkColor</span></a> color.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_color_combo_get_color_at ()">
+<a name="gtk-color-combo-get-color-at"></a><h3>gtk_color_combo_get_color_at ()</h3>
+<pre class="programlisting"><a
+href="http://library.gnome.org/devel/gdk3/gdk2-Colormaps-and-Colors.html#GdkColor"
+>GdkColor</a>            gtk_color_combo_get_color_at        (<a class="link" href="GtkColorCombo.html" title="GtkColorCombo">GtkColorCombo</a> *color_combo,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> row,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> col);</pre>
+<p>
+Get the color in the combo at the specified row,column.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>color_combo</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkColorCombo.html" title="GtkColorCombo"><span class="type">GtkColorCombo</span></a> widget.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>row</code></em> :</span></p></td>
+<td> row number  in <a class="link" href="GtkColorCombo.html" title="GtkColorCombo"><span class="type">GtkColorCombo</span></a>.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>col</code></em> :</span></p></td>
+<td> column number in <a class="link" href="GtkColorCombo.html" title="GtkColorCombo"><span class="type">GtkColorCombo</span></a>.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> a <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Colormaps-and-Colors.html#GdkColor"
+><span class="type">GdkColor</span></a> at <em class="parameter"><code>row</code></em>,<em class="parameter"><code>col</code></em> in <em class="parameter"><code>color_combo</code></em>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_color_combo_find_color ()">
+<a name="gtk-color-combo-find-color"></a><h3>gtk_color_combo_find_color ()</h3>
+<pre class="programlisting">void                gtk_color_combo_find_color          (<a class="link" href="GtkColorCombo.html" title="GtkColorCombo">GtkColorCombo</a> *color_combo,
+                                                         <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Colormaps-and-Colors.html#GdkColor"
+>GdkColor</a> *color,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> *row,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> *col);</pre>
+<p>
+Find the best match for a given color.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>color_combo</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkColorCombo.html" title="GtkColorCombo"><span class="type">GtkColorCombo</span></a> widget.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>color</code></em> :</span></p></td>
+<td> a <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Colormaps-and-Colors.html#GdkColor"
+><span class="type">GdkColor</span></a> object.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>row</code></em> :</span></p></td>
+<td> row number in <a class="link" href="GtkColorCombo.html" title="GtkColorCombo"><span class="type">GtkColorCombo</span></a>.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>col</code></em> :</span></p></td>
+<td> column number in <a class="link" href="GtkColorCombo.html" title="GtkColorCombo"><span class="type">GtkColorCombo</span></a>.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_color_combo_get_selection ()">
+<a name="gtk-color-combo-get-selection"></a><h3>gtk_color_combo_get_selection ()</h3>
+<pre class="programlisting"><a
+href="http://library.gnome.org/devel/gdk3/gdk2-Colormaps-and-Colors.html#GdkColor"
+>GdkColor</a>            gtk_color_combo_get_selection       (<a class="link" href="GtkColorCombo.html" title="GtkColorCombo">GtkColorCombo</a> *combo);</pre>
+<p>
+Get the color in the combo at selection .</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>combo</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkColorCombo.html" title="GtkColorCombo"><span class="type">GtkColorCombo</span></a> widget.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> a <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Colormaps-and-Colors.html#GdkColor"
+><span class="type">GdkColor</span></a> of the selection. 
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1" title="Signal Details">
+<a name="GtkColorCombo.signal-details"></a><h2>Signal Details</h2>
+<div class="refsect2" title='The "changed" signal'>
+<a name="GtkColorCombo-changed"></a><h3>The <code class="literal">"changed"</code> signal</h3>
+<pre class="programlisting">void                user_function                      (<a class="link" href="GtkColorCombo.html" title="GtkColorCombo">GtkColorCombo</a> *colorcombo,
+                                                        <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>           arg1,
+                                                        <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Colormaps-and-Colors.html#GdkColor"
+>GdkColor</a>      *arg2,
+                                                        <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"
+>gpointer</a>       user_data)       : Run First</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>colorcombo</code></em> :</span></p></td>
+<td>the object which received the signal.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>arg1</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>arg2</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.11</div>
+</body>
+</html>

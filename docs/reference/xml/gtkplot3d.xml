@@ -1,0 +1,1593 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+<!ENTITY version SYSTEM "version.xml">
+]>
+<!--ENTITY index-Objects-Grouped SYSTEM "objects_grouped.sgml"-->
+<refentry id="GtkPlot3D">
+<refmeta>
+<refentrytitle role="top_of_page" id="GtkPlot3D.top_of_page">GtkPlot3D</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GTKEXTRA Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>GtkPlot3D</refname>
+<refpurpose>3d scientific plots widget</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="GtkPlot3D.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>
+
+#include &lt;gtkextra.h&gt;
+
+                    <link linkend="GtkPlot3D-struct">GtkPlot3D</link>;
+enum                <link linkend="GtkPlotPlane">GtkPlotPlane</link>;
+enum                <link linkend="GtkPlotSide">GtkPlotSide</link>;
+<link linkend="GtkWidget">GtkWidget</link>*          <link linkend="gtk-plot3d-new">gtk_plot3d_new</link>                      (<link linkend="GdkDrawable">GdkDrawable</link> *drawable);
+<link linkend="GtkWidget">GtkWidget</link>*          <link linkend="gtk-plot3d-new-with-size">gtk_plot3d_new_with_size</link>            (<link linkend="GdkDrawable">GdkDrawable</link> *drawable,
+                                                         <link linkend="gdouble">gdouble</link> width,
+                                                         <link linkend="gdouble">gdouble</link> height);
+<link linkend="void">void</link>                <link linkend="gtk-plot3d-construct">gtk_plot3d_construct</link>                (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="GdkDrawable">GdkDrawable</link> *drawable);
+<link linkend="void">void</link>                <link linkend="gtk-plot3d-construct-with-size">gtk_plot3d_construct_with_size</link>      (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="GdkDrawable">GdkDrawable</link> *drawable,
+                                                         <link linkend="gdouble">gdouble</link> width,
+                                                         <link linkend="gdouble">gdouble</link> height);
+<link linkend="void">void</link>                <link linkend="gtk-plot3d-autoscale">gtk_plot3d_autoscale</link>                (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot);
+<link linkend="void">void</link>                <link linkend="gtk-plot3d-rotate">gtk_plot3d_rotate</link>                   (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="gdouble">gdouble</link> angle_x,
+                                                         <link linkend="gdouble">gdouble</link> angle_y,
+                                                         <link linkend="gdouble">gdouble</link> angle_z);
+<link linkend="void">void</link>                <link linkend="gtk-plot3d-rotate-vector">gtk_plot3d_rotate_vector</link>            (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="GtkPlotVector">GtkPlotVector</link> *vector,
+                                                         <link linkend="gdouble">gdouble</link> a1,
+                                                         <link linkend="gdouble">gdouble</link> a2,
+                                                         <link linkend="gdouble">gdouble</link> a3);
+<link linkend="void">void</link>                <link linkend="gtk-plot3d-reset-angles">gtk_plot3d_reset_angles</link>             (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot);
+<link linkend="void">void</link>                <link linkend="gtk-plot3d-rotate-x">gtk_plot3d_rotate_x</link>                 (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="gdouble">gdouble</link> angle);
+<link linkend="void">void</link>                <link linkend="gtk-plot3d-rotate-y">gtk_plot3d_rotate_y</link>                 (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="gdouble">gdouble</link> angle);
+<link linkend="void">void</link>                <link linkend="gtk-plot3d-rotate-z">gtk_plot3d_rotate_z</link>                 (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="gdouble">gdouble</link> angle);
+<link linkend="void">void</link>                <link linkend="gtk-plot3d-get-pixel">gtk_plot3d_get_pixel</link>                (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="gdouble">gdouble</link> x,
+                                                         <link linkend="gdouble">gdouble</link> y,
+                                                         <link linkend="gdouble">gdouble</link> z,
+                                                         <link linkend="gdouble">gdouble</link> *px,
+                                                         <link linkend="gdouble">gdouble</link> *py,
+                                                         <link linkend="gdouble">gdouble</link> *pz);
+<link linkend="void">void</link>                <link linkend="gtk-plot3d-set-xrange">gtk_plot3d_set_xrange</link>               (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="gdouble">gdouble</link> min,
+                                                         <link linkend="gdouble">gdouble</link> max);
+<link linkend="void">void</link>                <link linkend="gtk-plot3d-set-yrange">gtk_plot3d_set_yrange</link>               (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="gdouble">gdouble</link> min,
+                                                         <link linkend="gdouble">gdouble</link> max);
+<link linkend="void">void</link>                <link linkend="gtk-plot3d-set-zrange">gtk_plot3d_set_zrange</link>               (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="gdouble">gdouble</link> min,
+                                                         <link linkend="gdouble">gdouble</link> max);
+<link linkend="void">void</link>                <link linkend="gtk-plot3d-set-xfactor">gtk_plot3d_set_xfactor</link>              (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="gdouble">gdouble</link> xfactor);
+<link linkend="void">void</link>                <link linkend="gtk-plot3d-set-yfactor">gtk_plot3d_set_yfactor</link>              (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="gdouble">gdouble</link> yfactor);
+<link linkend="void">void</link>                <link linkend="gtk-plot3d-set-zfactor">gtk_plot3d_set_zfactor</link>              (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="gdouble">gdouble</link> zfactor);
+<link linkend="gdouble">gdouble</link>             <link linkend="gtk-plot3d-get-xfactor">gtk_plot3d_get_xfactor</link>              (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot);
+<link linkend="gdouble">gdouble</link>             <link linkend="gtk-plot3d-get-yfactor">gtk_plot3d_get_yfactor</link>              (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot);
+<link linkend="gdouble">gdouble</link>             <link linkend="gtk-plot3d-get-zfactor">gtk_plot3d_get_zfactor</link>              (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot);
+<link linkend="void">void</link>                <link linkend="gtk-plot3d-plane-set-color">gtk_plot3d_plane_set_color</link>          (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="GtkPlotPlane">GtkPlotPlane</link> plane,
+                                                         const <link linkend="GdkColor">GdkColor</link> *color);
+<link linkend="void">void</link>                <link linkend="gtk-plot3d-plane-set-visible">gtk_plot3d_plane_set_visible</link>        (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="GtkPlotPlane">GtkPlotPlane</link> plane,
+                                                         <link linkend="gboolean">gboolean</link> visible);
+<link linkend="gboolean">gboolean</link>            <link linkend="gtk-plot3d-plane-visible">gtk_plot3d_plane_visible</link>            (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="GtkPlotPlane">GtkPlotPlane</link> plane);
+<link linkend="void">void</link>                <link linkend="gtk-plot3d-corner-set-visible">gtk_plot3d_corner_set_visible</link>       (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="gboolean">gboolean</link> visible);
+<link linkend="gboolean">gboolean</link>            <link linkend="gtk-plot3d-corner-visible">gtk_plot3d_corner_visible</link>           (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot);
+<link linkend="void">void</link>                <link linkend="gtk-plot3d-corner-set-attributes">gtk_plot3d_corner_set_attributes</link>    (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="GtkPlotLineStyle">GtkPlotLineStyle</link> style,
+                                                         <link linkend="gfloat">gfloat</link> width,
+                                                         const <link linkend="GdkColor">GdkColor</link> *color);
+<link linkend="void">void</link>                <link linkend="gtk-plot3d-corner-get-attributes">gtk_plot3d_corner_get_attributes</link>    (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="GtkPlotLineStyle">GtkPlotLineStyle</link> *style,
+                                                         <link linkend="gfloat">gfloat</link> *width,
+                                                         <link linkend="GdkColor">GdkColor</link> *color);
+<link linkend="void">void</link>                <link linkend="gtk-plot3d-frame-set-attributes">gtk_plot3d_frame_set_attributes</link>     (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="GtkPlotLineStyle">GtkPlotLineStyle</link> style,
+                                                         <link linkend="gfloat">gfloat</link> width,
+                                                         const <link linkend="GdkColor">GdkColor</link> *color);
+<link linkend="void">void</link>                <link linkend="gtk-plot3d-frame-get-attributes">gtk_plot3d_frame_get_attributes</link>     (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="GtkPlotLineStyle">GtkPlotLineStyle</link> *style,
+                                                         <link linkend="gfloat">gfloat</link> *width,
+                                                         <link linkend="GdkColor">GdkColor</link> *color);
+<link linkend="GtkPlotAxis">GtkPlotAxis</link> *       <link linkend="gtk-plot3d-get-axis">gtk_plot3d_get_axis</link>                 (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="GtkPlotOrientation">GtkPlotOrientation</link> orientation);
+<link linkend="GtkPlotAxis">GtkPlotAxis</link> *       <link linkend="gtk-plot3d-get-side">gtk_plot3d_get_side</link>                 (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="GtkPlotSide">GtkPlotSide</link> side);
+<link linkend="void">void</link>                <link linkend="gtk-plot3d-show-major-ticks">gtk_plot3d_show_major_ticks</link>         (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="GtkPlotSide">GtkPlotSide</link> side,
+                                                         <link linkend="gint">gint</link> ticks_mask);
+<link linkend="void">void</link>                <link linkend="gtk-plot3d-show-minor-ticks">gtk_plot3d_show_minor_ticks</link>         (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="GtkPlotSide">GtkPlotSide</link> side,
+                                                         <link linkend="gint">gint</link> ticks_mask);
+<link linkend="void">void</link>                <link linkend="gtk-plot3d-show-labels">gtk_plot3d_show_labels</link>              (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="GtkPlotSide">GtkPlotSide</link> side,
+                                                         <link linkend="gint">gint</link> label_mask);
+<link linkend="void">void</link>                <link linkend="gtk-plot3d-show-title">gtk_plot3d_show_title</link>               (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="GtkPlotSide">GtkPlotSide</link> side);
+<link linkend="void">void</link>                <link linkend="gtk-plot3d-hide-title">gtk_plot3d_hide_title</link>               (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="GtkPlotSide">GtkPlotSide</link> side);
+<link linkend="void">void</link>                <link linkend="gtk-plot3d-set-ticks">gtk_plot3d_set_ticks</link>                (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="GtkPlotOrientation">GtkPlotOrientation</link> direction,
+                                                         <link linkend="gdouble">gdouble</link> major_step,
+                                                         <link linkend="gint">gint</link> nminor);
+<link linkend="void">void</link>                <link linkend="gtk-plot3d-set-major-ticks">gtk_plot3d_set_major_ticks</link>          (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="GtkPlotOrientation">GtkPlotOrientation</link> direction,
+                                                         <link linkend="gdouble">gdouble</link> major_step);
+<link linkend="void">void</link>                <link linkend="gtk-plot3d-set-minor-ticks">gtk_plot3d_set_minor_ticks</link>          (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="GtkPlotOrientation">GtkPlotOrientation</link> direction,
+                                                         <link linkend="gint">gint</link> nminor);
+<link linkend="void">void</link>                <link linkend="gtk-plot3d-set-ticks-length">gtk_plot3d_set_ticks_length</link>         (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="GtkPlotOrientation">GtkPlotOrientation</link> direction,
+                                                         <link linkend="gint">gint</link> length);
+<link linkend="void">void</link>                <link linkend="gtk-plot3d-set-ticks-width">gtk_plot3d_set_ticks_width</link>          (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="GtkPlotOrientation">GtkPlotOrientation</link> direction,
+                                                         <link linkend="gfloat">gfloat</link> width);
+<link linkend="void">void</link>                <link linkend="gtk-plot3d-show-ticks">gtk_plot3d_show_ticks</link>               (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="GtkPlotSide">GtkPlotSide</link> side,
+                                                         <link linkend="gint">gint</link> major_mask,
+                                                         <link linkend="gint">gint</link> minor_mask);
+<link linkend="void">void</link>                <link linkend="gtk-plot3d-set-titles-offset">gtk_plot3d_set_titles_offset</link>        (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="gint">gint</link> offset);
+<link linkend="gint">gint</link>                <link linkend="gtk-plot3d-get-titles-offset">gtk_plot3d_get_titles_offset</link>        (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot);
+<link linkend="void">void</link>                <link linkend="gtk-plot3d-set-scale">gtk_plot3d_set_scale</link>                (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="GtkPlotOrientation">GtkPlotOrientation</link> axis,
+                                                         <link linkend="GtkPlotScale">GtkPlotScale</link> scale);
+<link linkend="GtkPlotScale">GtkPlotScale</link>        <link linkend="gtk-plot3d-get-scale">gtk_plot3d_get_scale</link>                (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="GtkPlotOrientation">GtkPlotOrientation</link> axis);
+<link linkend="void">void</link>                <link linkend="gtk-plot3d-major-grids-set-visible">gtk_plot3d_major_grids_set_visible</link>  (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="gboolean">gboolean</link> x,
+                                                         <link linkend="gboolean">gboolean</link> y,
+                                                         <link linkend="gboolean">gboolean</link> z);
+<link linkend="void">void</link>                <link linkend="gtk-plot3d-minor-grids-set-visible">gtk_plot3d_minor_grids_set_visible</link>  (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="gboolean">gboolean</link> x,
+                                                         <link linkend="gboolean">gboolean</link> y,
+                                                         <link linkend="gboolean">gboolean</link> z);
+<link linkend="void">void</link>                <link linkend="gtk-plot3d-major-grids-visible">gtk_plot3d_major_grids_visible</link>      (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="gboolean">gboolean</link> *x,
+                                                         <link linkend="gboolean">gboolean</link> *y,
+                                                         <link linkend="gboolean">gboolean</link> *z);
+<link linkend="void">void</link>                <link linkend="gtk-plot3d-minor-grids-visible">gtk_plot3d_minor_grids_visible</link>      (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="gboolean">gboolean</link> *x,
+                                                         <link linkend="gboolean">gboolean</link> *y,
+                                                         <link linkend="gboolean">gboolean</link> *z);
+<link linkend="void">void</link>                <link linkend="gtk-plot3d-major-zgrid-set-attributes">gtk_plot3d_major_zgrid_set_attributes</link>
+                                                        (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="GtkPlotLineStyle">GtkPlotLineStyle</link> style,
+                                                         <link linkend="gfloat">gfloat</link> width,
+                                                         const <link linkend="GdkColor">GdkColor</link> *color);
+<link linkend="void">void</link>                <link linkend="gtk-plot3d-major-zgrid-get-attributes">gtk_plot3d_major_zgrid_get_attributes</link>
+                                                        (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="GtkPlotLineStyle">GtkPlotLineStyle</link> *style,
+                                                         <link linkend="gfloat">gfloat</link> *width,
+                                                         <link linkend="GdkColor">GdkColor</link> *color);
+<link linkend="void">void</link>                <link linkend="gtk-plot3d-minor-zgrid-set-attributes">gtk_plot3d_minor_zgrid_set_attributes</link>
+                                                        (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="GtkPlotLineStyle">GtkPlotLineStyle</link> style,
+                                                         <link linkend="gfloat">gfloat</link> width,
+                                                         const <link linkend="GdkColor">GdkColor</link> *color);
+<link linkend="void">void</link>                <link linkend="gtk-plot3d-minor-zgrid-get-attributes">gtk_plot3d_minor_zgrid_get_attributes</link>
+                                                        (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="GtkPlotLineStyle">GtkPlotLineStyle</link> *style,
+                                                         <link linkend="gfloat">gfloat</link> *width,
+                                                         <link linkend="GdkColor">GdkColor</link> *color);
+</synopsis>
+</refsynopsisdiv>
+
+<refsect1 id="GtkPlot3D.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+  <link linkend="GObject">GObject</link>
+   +----<link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+         +----<link linkend="GtkObject">GtkObject</link>
+               +----<link linkend="GtkWidget">GtkWidget</link>
+                     +----<link linkend="GtkMisc">GtkMisc</link>
+                           +----<link linkend="GtkPlot">GtkPlot</link>
+                                 +----GtkPlot3D
+</synopsis>
+</refsect1>
+
+
+
+<refsect1 id="GtkPlot3D.implemented-interfaces" role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+GtkPlot3D implements
+ <link linkend="AtkImplementorIface">AtkImplementorIface</link> and  <link linkend="GtkBuildable">GtkBuildable</link>.</para>
+</refsect1>
+
+
+<refsect1 id="GtkPlot3D.properties" role="properties">
+<title role="properties.title">Properties</title>
+<synopsis>
+  &quot;<link linkend="GtkPlot3D--a1">a1</link>&quot;                       <link linkend="gdouble">gdouble</link>               : Read / Write
+  &quot;<link linkend="GtkPlot3D--a2">a2</link>&quot;                       <link linkend="gdouble">gdouble</link>               : Read / Write
+  &quot;<link linkend="GtkPlot3D--a3">a3</link>&quot;                       <link linkend="gdouble">gdouble</link>               : Read / Write
+  &quot;<link linkend="GtkPlot3D--center-vector">center-vector</link>&quot;            <link linkend="gpointer">gpointer</link>              : Read / Write
+  &quot;<link linkend="GtkPlot3D--color-xy">color-xy</link>&quot;                 <link linkend="gpointer">gpointer</link>              : Read / Write
+  &quot;<link linkend="GtkPlot3D--color-yz">color-yz</link>&quot;                 <link linkend="gpointer">gpointer</link>              : Read / Write
+  &quot;<link linkend="GtkPlot3D--color-zx">color-zx</link>&quot;                 <link linkend="gpointer">gpointer</link>              : Read / Write
+  &quot;<link linkend="GtkPlot3D--corner-line">corner-line</link>&quot;              <link linkend="gpointer">gpointer</link>              : Read / Write
+  &quot;<link linkend="GtkPlot3D--corner-visible">corner-visible</link>&quot;           <link linkend="gboolean">gboolean</link>              : Read / Write
+  &quot;<link linkend="GtkPlot3D--e1-vector">e1-vector</link>&quot;                <link linkend="gpointer">gpointer</link>              : Read / Write
+  &quot;<link linkend="GtkPlot3D--e2-vector">e2-vector</link>&quot;                <link linkend="gpointer">gpointer</link>              : Read / Write
+  &quot;<link linkend="GtkPlot3D--e3-vector">e3-vector</link>&quot;                <link linkend="gpointer">gpointer</link>              : Read / Write
+  &quot;<link linkend="GtkPlot3D--frame-line">frame-line</link>&quot;               <link linkend="gpointer">gpointer</link>              : Read / Write
+  &quot;<link linkend="GtkPlot3D--origin-vector">origin-vector</link>&quot;            <link linkend="gpointer">gpointer</link>              : Read / Write
+  &quot;<link linkend="GtkPlot3D--titles-offset">titles-offset</link>&quot;            <link linkend="gint">gint</link>                  : Read / Write
+  &quot;<link linkend="GtkPlot3D--xfactor">xfactor</link>&quot;                  <link linkend="gdouble">gdouble</link>               : Read / Write
+  &quot;<link linkend="GtkPlot3D--xy-label-mask">xy-label-mask</link>&quot;            <link linkend="gint">gint</link>                  : Read / Write
+  &quot;<link linkend="GtkPlot3D--xy-major-mask">xy-major-mask</link>&quot;            <link linkend="gint">gint</link>                  : Read / Write
+  &quot;<link linkend="GtkPlot3D--xy-minor-mask">xy-minor-mask</link>&quot;            <link linkend="gint">gint</link>                  : Read / Write
+  &quot;<link linkend="GtkPlot3D--xy-title-visible">xy-title-visible</link>&quot;         <link linkend="gboolean">gboolean</link>              : Read / Write
+  &quot;<link linkend="GtkPlot3D--xy-visible">xy-visible</link>&quot;               <link linkend="gboolean">gboolean</link>              : Read / Write
+  &quot;<link linkend="GtkPlot3D--xz-label-mask">xz-label-mask</link>&quot;            <link linkend="gint">gint</link>                  : Read / Write
+  &quot;<link linkend="GtkPlot3D--xz-major-mask">xz-major-mask</link>&quot;            <link linkend="gint">gint</link>                  : Read / Write
+  &quot;<link linkend="GtkPlot3D--xz-minor-mask">xz-minor-mask</link>&quot;            <link linkend="gint">gint</link>                  : Read / Write
+  &quot;<link linkend="GtkPlot3D--xz-title-visible">xz-title-visible</link>&quot;         <link linkend="gboolean">gboolean</link>              : Read / Write
+  &quot;<link linkend="GtkPlot3D--yfactor">yfactor</link>&quot;                  <link linkend="gdouble">gdouble</link>               : Read / Write
+  &quot;<link linkend="GtkPlot3D--yx-label-mask">yx-label-mask</link>&quot;            <link linkend="gint">gint</link>                  : Read / Write
+  &quot;<link linkend="GtkPlot3D--yx-major-mask">yx-major-mask</link>&quot;            <link linkend="gint">gint</link>                  : Read / Write
+  &quot;<link linkend="GtkPlot3D--yx-minor-mask">yx-minor-mask</link>&quot;            <link linkend="gint">gint</link>                  : Read / Write
+  &quot;<link linkend="GtkPlot3D--yx-title-visible">yx-title-visible</link>&quot;         <link linkend="gboolean">gboolean</link>              : Read / Write
+  &quot;<link linkend="GtkPlot3D--yz-label-mask">yz-label-mask</link>&quot;            <link linkend="gint">gint</link>                  : Read / Write
+  &quot;<link linkend="GtkPlot3D--yz-major-mask">yz-major-mask</link>&quot;            <link linkend="gint">gint</link>                  : Read / Write
+  &quot;<link linkend="GtkPlot3D--yz-minor-mask">yz-minor-mask</link>&quot;            <link linkend="gint">gint</link>                  : Read / Write
+  &quot;<link linkend="GtkPlot3D--yz-title-visible">yz-title-visible</link>&quot;         <link linkend="gboolean">gboolean</link>              : Read / Write
+  &quot;<link linkend="GtkPlot3D--yz-visible">yz-visible</link>&quot;               <link linkend="gboolean">gboolean</link>              : Read / Write
+  &quot;<link linkend="GtkPlot3D--zfactor">zfactor</link>&quot;                  <link linkend="gdouble">gdouble</link>               : Read / Write
+  &quot;<link linkend="GtkPlot3D--zmax">zmax</link>&quot;                     <link linkend="gdouble">gdouble</link>               : Read / Write
+  &quot;<link linkend="GtkPlot3D--zmin">zmin</link>&quot;                     <link linkend="gdouble">gdouble</link>               : Read / Write
+  &quot;<link linkend="GtkPlot3D--zscale">zscale</link>&quot;                   <link linkend="gint">gint</link>                  : Read / Write
+  &quot;<link linkend="GtkPlot3D--zx-label-mask">zx-label-mask</link>&quot;            <link linkend="gint">gint</link>                  : Read / Write
+  &quot;<link linkend="GtkPlot3D--zx-major-mask">zx-major-mask</link>&quot;            <link linkend="gint">gint</link>                  : Read / Write
+  &quot;<link linkend="GtkPlot3D--zx-minor-mask">zx-minor-mask</link>&quot;            <link linkend="gint">gint</link>                  : Read / Write
+  &quot;<link linkend="GtkPlot3D--zx-title-visible">zx-title-visible</link>&quot;         <link linkend="gboolean">gboolean</link>              : Read / Write
+  &quot;<link linkend="GtkPlot3D--zx-visible">zx-visible</link>&quot;               <link linkend="gboolean">gboolean</link>              : Read / Write
+  &quot;<link linkend="GtkPlot3D--zy-label-mask">zy-label-mask</link>&quot;            <link linkend="gint">gint</link>                  : Read / Write
+  &quot;<link linkend="GtkPlot3D--zy-major-mask">zy-major-mask</link>&quot;            <link linkend="gint">gint</link>                  : Read / Write
+  &quot;<link linkend="GtkPlot3D--zy-minor-mask">zy-minor-mask</link>&quot;            <link linkend="gint">gint</link>                  : Read / Write
+  &quot;<link linkend="GtkPlot3D--zy-title-visible">zy-title-visible</link>&quot;         <link linkend="gboolean">gboolean</link>              : Read / Write
+</synopsis>
+</refsect1>
+
+
+
+<refsect1 id="GtkPlot3D.description" role="desc">
+<title role="desc.title">Description</title>
+<para>
+FIXME:: Need long description.</para>
+<para>
+</para>
+</refsect1>
+
+<refsect1 id="GtkPlot3D.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="GtkPlot3D-struct" role="struct">
+<title>GtkPlot3D</title>
+<indexterm zone="GtkPlot3D-struct"><primary sortas="GtkPlot3D">GtkPlot3D</primary></indexterm><programlisting>typedef struct _GtkPlot3D GtkPlot3D;</programlisting>
+<para>
+The GtkPlot3D struct contains only private data.
+It should only be accessed through the functions described below.</para>
+<para>
+</para></refsect2>
+<refsect2 id="GtkPlotPlane" role="enum">
+<title>enum GtkPlotPlane</title>
+<indexterm zone="GtkPlotPlane"><primary sortas="GtkPlotPlane">GtkPlotPlane</primary></indexterm><programlisting>typedef enum
+{
+  GTK_PLOT_PLANE_XY	= 0,
+  GTK_PLOT_PLANE_YX	= 0,
+  GTK_PLOT_PLANE_XZ	= 1,
+  GTK_PLOT_PLANE_ZX	= 1,
+  GTK_PLOT_PLANE_YZ	= 2,
+  GTK_PLOT_PLANE_ZY	= 2,
+} GtkPlotPlane;
+</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="GtkPlotSide" role="enum">
+<title>enum GtkPlotSide</title>
+<indexterm zone="GtkPlotSide"><primary sortas="GtkPlotSide">GtkPlotSide</primary></indexterm><programlisting>typedef enum
+{
+  GTK_PLOT_SIDE_XY	= 1 &lt;&lt; 0 ,
+  GTK_PLOT_SIDE_XZ	= 1 &lt;&lt; 1 ,
+  GTK_PLOT_SIDE_YX	= 1 &lt;&lt; 2 ,
+  GTK_PLOT_SIDE_YZ	= 1 &lt;&lt; 3 ,
+  GTK_PLOT_SIDE_ZX	= 1 &lt;&lt; 4 ,
+  GTK_PLOT_SIDE_ZY	= 1 &lt;&lt; 5 ,
+} GtkPlotSide;
+</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="gtk-plot3d-new" role="function">
+<title>gtk_plot3d_new ()</title>
+<indexterm zone="gtk-plot3d-new"><primary sortas="gtk_plot3d_new">gtk_plot3d_new</primary></indexterm><programlisting><link linkend="GtkWidget">GtkWidget</link>*          gtk_plot3d_new                      (<link linkend="GdkDrawable">GdkDrawable</link> *drawable);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>drawable</parameter>&#160;:</term>
+<listitem><simpara> a Gdk drawable.
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot3d-new-with-size" role="function">
+<title>gtk_plot3d_new_with_size ()</title>
+<indexterm zone="gtk-plot3d-new-with-size"><primary sortas="gtk_plot3d_new_with_size">gtk_plot3d_new_with_size</primary></indexterm><programlisting><link linkend="GtkWidget">GtkWidget</link>*          gtk_plot3d_new_with_size            (<link linkend="GdkDrawable">GdkDrawable</link> *drawable,
+                                                         <link linkend="gdouble">gdouble</link> width,
+                                                         <link linkend="gdouble">gdouble</link> height);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>drawable</parameter>&#160;:</term>
+<listitem><simpara> a Gdk drawable.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>width</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>height</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot3d-construct" role="function">
+<title>gtk_plot3d_construct ()</title>
+<indexterm zone="gtk-plot3d-construct"><primary sortas="gtk_plot3d_construct">gtk_plot3d_construct</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot3d_construct                (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="GdkDrawable">GdkDrawable</link> *drawable);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>plot</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlot3D"><type>GtkPlot3D</type></link> widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>drawable</parameter>&#160;:</term>
+<listitem><simpara> a Gdk drawable.
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot3d-construct-with-size" role="function">
+<title>gtk_plot3d_construct_with_size ()</title>
+<indexterm zone="gtk-plot3d-construct-with-size"><primary sortas="gtk_plot3d_construct_with_size">gtk_plot3d_construct_with_size</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot3d_construct_with_size      (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="GdkDrawable">GdkDrawable</link> *drawable,
+                                                         <link linkend="gdouble">gdouble</link> width,
+                                                         <link linkend="gdouble">gdouble</link> height);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>plot</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlot3D"><type>GtkPlot3D</type></link> widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>drawable</parameter>&#160;:</term>
+<listitem><simpara> a Gdk drawable.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>width</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>height</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot3d-autoscale" role="function">
+<title>gtk_plot3d_autoscale ()</title>
+<indexterm zone="gtk-plot3d-autoscale"><primary sortas="gtk_plot3d_autoscale">gtk_plot3d_autoscale</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot3d_autoscale                (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>plot</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlot3D"><type>GtkPlot3D</type></link> widget.
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot3d-rotate" role="function">
+<title>gtk_plot3d_rotate ()</title>
+<indexterm zone="gtk-plot3d-rotate"><primary sortas="gtk_plot3d_rotate">gtk_plot3d_rotate</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot3d_rotate                   (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="gdouble">gdouble</link> angle_x,
+                                                         <link linkend="gdouble">gdouble</link> angle_y,
+                                                         <link linkend="gdouble">gdouble</link> angle_z);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>plot</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlot3D"><type>GtkPlot3D</type></link> widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>angle_x</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>angle_y</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>angle_z</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot3d-rotate-vector" role="function">
+<title>gtk_plot3d_rotate_vector ()</title>
+<indexterm zone="gtk-plot3d-rotate-vector"><primary sortas="gtk_plot3d_rotate_vector">gtk_plot3d_rotate_vector</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot3d_rotate_vector            (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="GtkPlotVector">GtkPlotVector</link> *vector,
+                                                         <link linkend="gdouble">gdouble</link> a1,
+                                                         <link linkend="gdouble">gdouble</link> a2,
+                                                         <link linkend="gdouble">gdouble</link> a3);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>plot</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlot3D"><type>GtkPlot3D</type></link> widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>vector</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>a1</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>a2</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>a3</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot3d-reset-angles" role="function">
+<title>gtk_plot3d_reset_angles ()</title>
+<indexterm zone="gtk-plot3d-reset-angles"><primary sortas="gtk_plot3d_reset_angles">gtk_plot3d_reset_angles</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot3d_reset_angles             (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>plot</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlot3D"><type>GtkPlot3D</type></link> widget.
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot3d-rotate-x" role="function">
+<title>gtk_plot3d_rotate_x ()</title>
+<indexterm zone="gtk-plot3d-rotate-x"><primary sortas="gtk_plot3d_rotate_x">gtk_plot3d_rotate_x</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot3d_rotate_x                 (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="gdouble">gdouble</link> angle);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>plot</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlot3D"><type>GtkPlot3D</type></link> widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>angle</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot3d-rotate-y" role="function">
+<title>gtk_plot3d_rotate_y ()</title>
+<indexterm zone="gtk-plot3d-rotate-y"><primary sortas="gtk_plot3d_rotate_y">gtk_plot3d_rotate_y</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot3d_rotate_y                 (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="gdouble">gdouble</link> angle);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>plot</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlot3D"><type>GtkPlot3D</type></link> widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>angle</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot3d-rotate-z" role="function">
+<title>gtk_plot3d_rotate_z ()</title>
+<indexterm zone="gtk-plot3d-rotate-z"><primary sortas="gtk_plot3d_rotate_z">gtk_plot3d_rotate_z</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot3d_rotate_z                 (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="gdouble">gdouble</link> angle);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>plot</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlot3D"><type>GtkPlot3D</type></link> widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>angle</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot3d-get-pixel" role="function">
+<title>gtk_plot3d_get_pixel ()</title>
+<indexterm zone="gtk-plot3d-get-pixel"><primary sortas="gtk_plot3d_get_pixel">gtk_plot3d_get_pixel</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot3d_get_pixel                (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="gdouble">gdouble</link> x,
+                                                         <link linkend="gdouble">gdouble</link> y,
+                                                         <link linkend="gdouble">gdouble</link> z,
+                                                         <link linkend="gdouble">gdouble</link> *px,
+                                                         <link linkend="gdouble">gdouble</link> *py,
+                                                         <link linkend="gdouble">gdouble</link> *pz);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>plot</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlot3D"><type>GtkPlot3D</type></link> widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>x</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>y</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>z</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>px</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>py</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>pz</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot3d-set-xrange" role="function">
+<title>gtk_plot3d_set_xrange ()</title>
+<indexterm zone="gtk-plot3d-set-xrange"><primary sortas="gtk_plot3d_set_xrange">gtk_plot3d_set_xrange</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot3d_set_xrange               (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="gdouble">gdouble</link> min,
+                                                         <link linkend="gdouble">gdouble</link> max);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>plot</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlot3D"><type>GtkPlot3D</type></link> widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>min</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>max</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot3d-set-yrange" role="function">
+<title>gtk_plot3d_set_yrange ()</title>
+<indexterm zone="gtk-plot3d-set-yrange"><primary sortas="gtk_plot3d_set_yrange">gtk_plot3d_set_yrange</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot3d_set_yrange               (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="gdouble">gdouble</link> min,
+                                                         <link linkend="gdouble">gdouble</link> max);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>plot</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlot3D"><type>GtkPlot3D</type></link> widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>min</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>max</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot3d-set-zrange" role="function">
+<title>gtk_plot3d_set_zrange ()</title>
+<indexterm zone="gtk-plot3d-set-zrange"><primary sortas="gtk_plot3d_set_zrange">gtk_plot3d_set_zrange</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot3d_set_zrange               (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="gdouble">gdouble</link> min,
+                                                         <link linkend="gdouble">gdouble</link> max);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>plot</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlot3D"><type>GtkPlot3D</type></link> widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>min</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>max</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot3d-set-xfactor" role="function">
+<title>gtk_plot3d_set_xfactor ()</title>
+<indexterm zone="gtk-plot3d-set-xfactor"><primary sortas="gtk_plot3d_set_xfactor">gtk_plot3d_set_xfactor</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot3d_set_xfactor              (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="gdouble">gdouble</link> xfactor);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>plot</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlot3D"><type>GtkPlot3D</type></link> widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>xfactor</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot3d-set-yfactor" role="function">
+<title>gtk_plot3d_set_yfactor ()</title>
+<indexterm zone="gtk-plot3d-set-yfactor"><primary sortas="gtk_plot3d_set_yfactor">gtk_plot3d_set_yfactor</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot3d_set_yfactor              (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="gdouble">gdouble</link> yfactor);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>plot</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlot3D"><type>GtkPlot3D</type></link> widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>yfactor</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot3d-set-zfactor" role="function">
+<title>gtk_plot3d_set_zfactor ()</title>
+<indexterm zone="gtk-plot3d-set-zfactor"><primary sortas="gtk_plot3d_set_zfactor">gtk_plot3d_set_zfactor</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot3d_set_zfactor              (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="gdouble">gdouble</link> zfactor);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>plot</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlot3D"><type>GtkPlot3D</type></link> widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>zfactor</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot3d-get-xfactor" role="function">
+<title>gtk_plot3d_get_xfactor ()</title>
+<indexterm zone="gtk-plot3d-get-xfactor"><primary sortas="gtk_plot3d_get_xfactor">gtk_plot3d_get_xfactor</primary></indexterm><programlisting><link linkend="gdouble">gdouble</link>             gtk_plot3d_get_xfactor              (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>plot</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlot3D"><type>GtkPlot3D</type></link> widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot3d-get-yfactor" role="function">
+<title>gtk_plot3d_get_yfactor ()</title>
+<indexterm zone="gtk-plot3d-get-yfactor"><primary sortas="gtk_plot3d_get_yfactor">gtk_plot3d_get_yfactor</primary></indexterm><programlisting><link linkend="gdouble">gdouble</link>             gtk_plot3d_get_yfactor              (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>plot</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlot3D"><type>GtkPlot3D</type></link> widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot3d-get-zfactor" role="function">
+<title>gtk_plot3d_get_zfactor ()</title>
+<indexterm zone="gtk-plot3d-get-zfactor"><primary sortas="gtk_plot3d_get_zfactor">gtk_plot3d_get_zfactor</primary></indexterm><programlisting><link linkend="gdouble">gdouble</link>             gtk_plot3d_get_zfactor              (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>plot</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlot3D"><type>GtkPlot3D</type></link> widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot3d-plane-set-color" role="function">
+<title>gtk_plot3d_plane_set_color ()</title>
+<indexterm zone="gtk-plot3d-plane-set-color"><primary sortas="gtk_plot3d_plane_set_color">gtk_plot3d_plane_set_color</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot3d_plane_set_color          (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="GtkPlotPlane">GtkPlotPlane</link> plane,
+                                                         const <link linkend="GdkColor">GdkColor</link> *color);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>plot</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>plane</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>color</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot3d-plane-set-visible" role="function">
+<title>gtk_plot3d_plane_set_visible ()</title>
+<indexterm zone="gtk-plot3d-plane-set-visible"><primary sortas="gtk_plot3d_plane_set_visible">gtk_plot3d_plane_set_visible</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot3d_plane_set_visible        (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="GtkPlotPlane">GtkPlotPlane</link> plane,
+                                                         <link linkend="gboolean">gboolean</link> visible);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>plot</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>plane</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>visible</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot3d-plane-visible" role="function">
+<title>gtk_plot3d_plane_visible ()</title>
+<indexterm zone="gtk-plot3d-plane-visible"><primary sortas="gtk_plot3d_plane_visible">gtk_plot3d_plane_visible</primary></indexterm><programlisting><link linkend="gboolean">gboolean</link>            gtk_plot3d_plane_visible            (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="GtkPlotPlane">GtkPlotPlane</link> plane);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>plot</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlot3D"><type>GtkPlot3D</type></link> widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>plane</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot3d-corner-set-visible" role="function">
+<title>gtk_plot3d_corner_set_visible ()</title>
+<indexterm zone="gtk-plot3d-corner-set-visible"><primary sortas="gtk_plot3d_corner_set_visible">gtk_plot3d_corner_set_visible</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot3d_corner_set_visible       (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="gboolean">gboolean</link> visible);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>plot</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlot3D"><type>GtkPlot3D</type></link> widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>visible</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot3d-corner-visible" role="function">
+<title>gtk_plot3d_corner_visible ()</title>
+<indexterm zone="gtk-plot3d-corner-visible"><primary sortas="gtk_plot3d_corner_visible">gtk_plot3d_corner_visible</primary></indexterm><programlisting><link linkend="gboolean">gboolean</link>            gtk_plot3d_corner_visible           (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>plot</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlot3D"><type>GtkPlot3D</type></link> widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot3d-corner-set-attributes" role="function">
+<title>gtk_plot3d_corner_set_attributes ()</title>
+<indexterm zone="gtk-plot3d-corner-set-attributes"><primary sortas="gtk_plot3d_corner_set_attributes">gtk_plot3d_corner_set_attributes</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot3d_corner_set_attributes    (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="GtkPlotLineStyle">GtkPlotLineStyle</link> style,
+                                                         <link linkend="gfloat">gfloat</link> width,
+                                                         const <link linkend="GdkColor">GdkColor</link> *color);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>plot</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlot3D"><type>GtkPlot3D</type></link> widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>style</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>width</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>color</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot3d-corner-get-attributes" role="function">
+<title>gtk_plot3d_corner_get_attributes ()</title>
+<indexterm zone="gtk-plot3d-corner-get-attributes"><primary sortas="gtk_plot3d_corner_get_attributes">gtk_plot3d_corner_get_attributes</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot3d_corner_get_attributes    (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="GtkPlotLineStyle">GtkPlotLineStyle</link> *style,
+                                                         <link linkend="gfloat">gfloat</link> *width,
+                                                         <link linkend="GdkColor">GdkColor</link> *color);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>plot</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>style</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>width</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>color</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot3d-frame-set-attributes" role="function">
+<title>gtk_plot3d_frame_set_attributes ()</title>
+<indexterm zone="gtk-plot3d-frame-set-attributes"><primary sortas="gtk_plot3d_frame_set_attributes">gtk_plot3d_frame_set_attributes</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot3d_frame_set_attributes     (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="GtkPlotLineStyle">GtkPlotLineStyle</link> style,
+                                                         <link linkend="gfloat">gfloat</link> width,
+                                                         const <link linkend="GdkColor">GdkColor</link> *color);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>plot</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlot3D"><type>GtkPlot3D</type></link> widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>style</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>width</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>color</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot3d-frame-get-attributes" role="function">
+<title>gtk_plot3d_frame_get_attributes ()</title>
+<indexterm zone="gtk-plot3d-frame-get-attributes"><primary sortas="gtk_plot3d_frame_get_attributes">gtk_plot3d_frame_get_attributes</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot3d_frame_get_attributes     (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="GtkPlotLineStyle">GtkPlotLineStyle</link> *style,
+                                                         <link linkend="gfloat">gfloat</link> *width,
+                                                         <link linkend="GdkColor">GdkColor</link> *color);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>plot</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlot3D"><type>GtkPlot3D</type></link> widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>style</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>width</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>color</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot3d-get-axis" role="function">
+<title>gtk_plot3d_get_axis ()</title>
+<indexterm zone="gtk-plot3d-get-axis"><primary sortas="gtk_plot3d_get_axis">gtk_plot3d_get_axis</primary></indexterm><programlisting><link linkend="GtkPlotAxis">GtkPlotAxis</link> *       gtk_plot3d_get_axis                 (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="GtkPlotOrientation">GtkPlotOrientation</link> orientation);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>plot</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlot3D"><type>GtkPlot3D</type></link> widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>orientation</parameter>&#160;:</term>
+<listitem><simpara> of axis to be returned
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara> (transfer none) the <link linkend="GtkPlotAxis"><type>GtkPlotAxis</type></link> with given 
+orientation 
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot3d-get-side" role="function">
+<title>gtk_plot3d_get_side ()</title>
+<indexterm zone="gtk-plot3d-get-side"><primary sortas="gtk_plot3d_get_side">gtk_plot3d_get_side</primary></indexterm><programlisting><link linkend="GtkPlotAxis">GtkPlotAxis</link> *       gtk_plot3d_get_side                 (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="GtkPlotSide">GtkPlotSide</link> side);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>plot</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlot3D"><type>GtkPlot3D</type></link> widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>side</parameter>&#160;:</term>
+<listitem><simpara> <link linkend="GtkPlotSide"><type>GtkPlotSide</type></link> of the wanted axis
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>transfer none. <acronym>transfer</acronym> none. </simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot3d-show-major-ticks" role="function">
+<title>gtk_plot3d_show_major_ticks ()</title>
+<indexterm zone="gtk-plot3d-show-major-ticks"><primary sortas="gtk_plot3d_show_major_ticks">gtk_plot3d_show_major_ticks</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot3d_show_major_ticks         (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="GtkPlotSide">GtkPlotSide</link> side,
+                                                         <link linkend="gint">gint</link> ticks_mask);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>plot</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlot3D"><type>GtkPlot3D</type></link> widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>side</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>ticks_mask</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot3d-show-minor-ticks" role="function">
+<title>gtk_plot3d_show_minor_ticks ()</title>
+<indexterm zone="gtk-plot3d-show-minor-ticks"><primary sortas="gtk_plot3d_show_minor_ticks">gtk_plot3d_show_minor_ticks</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot3d_show_minor_ticks         (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="GtkPlotSide">GtkPlotSide</link> side,
+                                                         <link linkend="gint">gint</link> ticks_mask);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>plot</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlot3D"><type>GtkPlot3D</type></link> widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>side</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>ticks_mask</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot3d-show-labels" role="function">
+<title>gtk_plot3d_show_labels ()</title>
+<indexterm zone="gtk-plot3d-show-labels"><primary sortas="gtk_plot3d_show_labels">gtk_plot3d_show_labels</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot3d_show_labels              (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="GtkPlotSide">GtkPlotSide</link> side,
+                                                         <link linkend="gint">gint</link> label_mask);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>plot</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlot3D"><type>GtkPlot3D</type></link> widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>side</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>label_mask</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot3d-show-title" role="function">
+<title>gtk_plot3d_show_title ()</title>
+<indexterm zone="gtk-plot3d-show-title"><primary sortas="gtk_plot3d_show_title">gtk_plot3d_show_title</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot3d_show_title               (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="GtkPlotSide">GtkPlotSide</link> side);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>plot</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlot3D"><type>GtkPlot3D</type></link> widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>side</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot3d-hide-title" role="function">
+<title>gtk_plot3d_hide_title ()</title>
+<indexterm zone="gtk-plot3d-hide-title"><primary sortas="gtk_plot3d_hide_title">gtk_plot3d_hide_title</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot3d_hide_title               (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="GtkPlotSide">GtkPlotSide</link> side);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>plot</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlot3D"><type>GtkPlot3D</type></link> widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>side</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot3d-set-ticks" role="function">
+<title>gtk_plot3d_set_ticks ()</title>
+<indexterm zone="gtk-plot3d-set-ticks"><primary sortas="gtk_plot3d_set_ticks">gtk_plot3d_set_ticks</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot3d_set_ticks                (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="GtkPlotOrientation">GtkPlotOrientation</link> direction,
+                                                         <link linkend="gdouble">gdouble</link> major_step,
+                                                         <link linkend="gint">gint</link> nminor);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>plot</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlot3D"><type>GtkPlot3D</type></link> widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>direction</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>major_step</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>nminor</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot3d-set-major-ticks" role="function">
+<title>gtk_plot3d_set_major_ticks ()</title>
+<indexterm zone="gtk-plot3d-set-major-ticks"><primary sortas="gtk_plot3d_set_major_ticks">gtk_plot3d_set_major_ticks</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot3d_set_major_ticks          (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="GtkPlotOrientation">GtkPlotOrientation</link> direction,
+                                                         <link linkend="gdouble">gdouble</link> major_step);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>plot</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlot3D"><type>GtkPlot3D</type></link> widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>direction</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>major_step</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot3d-set-minor-ticks" role="function">
+<title>gtk_plot3d_set_minor_ticks ()</title>
+<indexterm zone="gtk-plot3d-set-minor-ticks"><primary sortas="gtk_plot3d_set_minor_ticks">gtk_plot3d_set_minor_ticks</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot3d_set_minor_ticks          (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="GtkPlotOrientation">GtkPlotOrientation</link> direction,
+                                                         <link linkend="gint">gint</link> nminor);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>plot</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlot3D"><type>GtkPlot3D</type></link> widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>direction</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>nminor</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot3d-set-ticks-length" role="function">
+<title>gtk_plot3d_set_ticks_length ()</title>
+<indexterm zone="gtk-plot3d-set-ticks-length"><primary sortas="gtk_plot3d_set_ticks_length">gtk_plot3d_set_ticks_length</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot3d_set_ticks_length         (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="GtkPlotOrientation">GtkPlotOrientation</link> direction,
+                                                         <link linkend="gint">gint</link> length);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>plot</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlot3D"><type>GtkPlot3D</type></link> widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>direction</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>length</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot3d-set-ticks-width" role="function">
+<title>gtk_plot3d_set_ticks_width ()</title>
+<indexterm zone="gtk-plot3d-set-ticks-width"><primary sortas="gtk_plot3d_set_ticks_width">gtk_plot3d_set_ticks_width</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot3d_set_ticks_width          (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="GtkPlotOrientation">GtkPlotOrientation</link> direction,
+                                                         <link linkend="gfloat">gfloat</link> width);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>plot</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlot3D"><type>GtkPlot3D</type></link> widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>direction</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>width</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot3d-show-ticks" role="function">
+<title>gtk_plot3d_show_ticks ()</title>
+<indexterm zone="gtk-plot3d-show-ticks"><primary sortas="gtk_plot3d_show_ticks">gtk_plot3d_show_ticks</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot3d_show_ticks               (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="GtkPlotSide">GtkPlotSide</link> side,
+                                                         <link linkend="gint">gint</link> major_mask,
+                                                         <link linkend="gint">gint</link> minor_mask);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>plot</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlot3D"><type>GtkPlot3D</type></link> widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>side</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>major_mask</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>minor_mask</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot3d-set-titles-offset" role="function">
+<title>gtk_plot3d_set_titles_offset ()</title>
+<indexterm zone="gtk-plot3d-set-titles-offset"><primary sortas="gtk_plot3d_set_titles_offset">gtk_plot3d_set_titles_offset</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot3d_set_titles_offset        (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="gint">gint</link> offset);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>plot</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlot3D"><type>GtkPlot3D</type></link> widget.
+<parameter>offset</parameter>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>offset</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot3d-get-titles-offset" role="function">
+<title>gtk_plot3d_get_titles_offset ()</title>
+<indexterm zone="gtk-plot3d-get-titles-offset"><primary sortas="gtk_plot3d_get_titles_offset">gtk_plot3d_get_titles_offset</primary></indexterm><programlisting><link linkend="gint">gint</link>                gtk_plot3d_get_titles_offset        (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>plot</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlot3D"><type>GtkPlot3D</type></link> widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot3d-set-scale" role="function">
+<title>gtk_plot3d_set_scale ()</title>
+<indexterm zone="gtk-plot3d-set-scale"><primary sortas="gtk_plot3d_set_scale">gtk_plot3d_set_scale</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot3d_set_scale                (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="GtkPlotOrientation">GtkPlotOrientation</link> axis,
+                                                         <link linkend="GtkPlotScale">GtkPlotScale</link> scale);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>plot</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlot3D"><type>GtkPlot3D</type></link> widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>axis</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>scale</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot3d-get-scale" role="function">
+<title>gtk_plot3d_get_scale ()</title>
+<indexterm zone="gtk-plot3d-get-scale"><primary sortas="gtk_plot3d_get_scale">gtk_plot3d_get_scale</primary></indexterm><programlisting><link linkend="GtkPlotScale">GtkPlotScale</link>        gtk_plot3d_get_scale                (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="GtkPlotOrientation">GtkPlotOrientation</link> axis);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>plot</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlot3D"><type>GtkPlot3D</type></link> widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>axis</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot3d-major-grids-set-visible" role="function">
+<title>gtk_plot3d_major_grids_set_visible ()</title>
+<indexterm zone="gtk-plot3d-major-grids-set-visible"><primary sortas="gtk_plot3d_major_grids_set_visible">gtk_plot3d_major_grids_set_visible</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot3d_major_grids_set_visible  (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="gboolean">gboolean</link> x,
+                                                         <link linkend="gboolean">gboolean</link> y,
+                                                         <link linkend="gboolean">gboolean</link> z);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>plot</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlot3D"><type>GtkPlot3D</type></link> widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>x</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>y</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>z</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot3d-minor-grids-set-visible" role="function">
+<title>gtk_plot3d_minor_grids_set_visible ()</title>
+<indexterm zone="gtk-plot3d-minor-grids-set-visible"><primary sortas="gtk_plot3d_minor_grids_set_visible">gtk_plot3d_minor_grids_set_visible</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot3d_minor_grids_set_visible  (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="gboolean">gboolean</link> x,
+                                                         <link linkend="gboolean">gboolean</link> y,
+                                                         <link linkend="gboolean">gboolean</link> z);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>plot</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlot3D"><type>GtkPlot3D</type></link> widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>x</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>y</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>z</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot3d-major-grids-visible" role="function">
+<title>gtk_plot3d_major_grids_visible ()</title>
+<indexterm zone="gtk-plot3d-major-grids-visible"><primary sortas="gtk_plot3d_major_grids_visible">gtk_plot3d_major_grids_visible</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot3d_major_grids_visible      (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="gboolean">gboolean</link> *x,
+                                                         <link linkend="gboolean">gboolean</link> *y,
+                                                         <link linkend="gboolean">gboolean</link> *z);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>plot</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlot3D"><type>GtkPlot3D</type></link> widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>x</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>y</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>z</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot3d-minor-grids-visible" role="function">
+<title>gtk_plot3d_minor_grids_visible ()</title>
+<indexterm zone="gtk-plot3d-minor-grids-visible"><primary sortas="gtk_plot3d_minor_grids_visible">gtk_plot3d_minor_grids_visible</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot3d_minor_grids_visible      (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="gboolean">gboolean</link> *x,
+                                                         <link linkend="gboolean">gboolean</link> *y,
+                                                         <link linkend="gboolean">gboolean</link> *z);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>plot</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlot3D"><type>GtkPlot3D</type></link> widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>x</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>y</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>z</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot3d-major-zgrid-set-attributes" role="function">
+<title>gtk_plot3d_major_zgrid_set_attributes ()</title>
+<indexterm zone="gtk-plot3d-major-zgrid-set-attributes"><primary sortas="gtk_plot3d_major_zgrid_set_attributes">gtk_plot3d_major_zgrid_set_attributes</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot3d_major_zgrid_set_attributes
+                                                        (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="GtkPlotLineStyle">GtkPlotLineStyle</link> style,
+                                                         <link linkend="gfloat">gfloat</link> width,
+                                                         const <link linkend="GdkColor">GdkColor</link> *color);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>plot</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlot3D"><type>GtkPlot3D</type></link> widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>style</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>width</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>color</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot3d-major-zgrid-get-attributes" role="function">
+<title>gtk_plot3d_major_zgrid_get_attributes ()</title>
+<indexterm zone="gtk-plot3d-major-zgrid-get-attributes"><primary sortas="gtk_plot3d_major_zgrid_get_attributes">gtk_plot3d_major_zgrid_get_attributes</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot3d_major_zgrid_get_attributes
+                                                        (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="GtkPlotLineStyle">GtkPlotLineStyle</link> *style,
+                                                         <link linkend="gfloat">gfloat</link> *width,
+                                                         <link linkend="GdkColor">GdkColor</link> *color);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>plot</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlot3D"><type>GtkPlot3D</type></link> widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>style</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>width</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>color</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot3d-minor-zgrid-set-attributes" role="function">
+<title>gtk_plot3d_minor_zgrid_set_attributes ()</title>
+<indexterm zone="gtk-plot3d-minor-zgrid-set-attributes"><primary sortas="gtk_plot3d_minor_zgrid_set_attributes">gtk_plot3d_minor_zgrid_set_attributes</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot3d_minor_zgrid_set_attributes
+                                                        (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="GtkPlotLineStyle">GtkPlotLineStyle</link> style,
+                                                         <link linkend="gfloat">gfloat</link> width,
+                                                         const <link linkend="GdkColor">GdkColor</link> *color);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>plot</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlot3D"><type>GtkPlot3D</type></link> widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>style</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>width</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>color</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot3d-minor-zgrid-get-attributes" role="function">
+<title>gtk_plot3d_minor_zgrid_get_attributes ()</title>
+<indexterm zone="gtk-plot3d-minor-zgrid-get-attributes"><primary sortas="gtk_plot3d_minor_zgrid_get_attributes">gtk_plot3d_minor_zgrid_get_attributes</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot3d_minor_zgrid_get_attributes
+                                                        (<link linkend="GtkPlot3D">GtkPlot3D</link> *plot,
+                                                         <link linkend="GtkPlotLineStyle">GtkPlotLineStyle</link> *style,
+                                                         <link linkend="gfloat">gfloat</link> *width,
+                                                         <link linkend="GdkColor">GdkColor</link> *color);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>plot</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlot3D"><type>GtkPlot3D</type></link> widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>style</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>width</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>color</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+<refsect1 id="GtkPlot3D.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GtkPlot3D--a1" role="property"><title>The <literal>&quot;a1&quot;</literal> property</title>
+<indexterm zone="GtkPlot3D--a1"><primary sortas="GtkPlot3D:a1">GtkPlot3D:a1</primary></indexterm><programlisting>  &quot;a1&quot;                       <link linkend="gdouble">gdouble</link>               : Read / Write</programlisting>
+<para>
+</para>
+<para>
+</para><para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GtkPlot3D--a2" role="property"><title>The <literal>&quot;a2&quot;</literal> property</title>
+<indexterm zone="GtkPlot3D--a2"><primary sortas="GtkPlot3D:a2">GtkPlot3D:a2</primary></indexterm><programlisting>  &quot;a2&quot;                       <link linkend="gdouble">gdouble</link>               : Read / Write</programlisting>
+<para>
+</para>
+<para>
+</para><para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GtkPlot3D--a3" role="property"><title>The <literal>&quot;a3&quot;</literal> property</title>
+<indexterm zone="GtkPlot3D--a3"><primary sortas="GtkPlot3D:a3">GtkPlot3D:a3</primary></indexterm><programlisting>  &quot;a3&quot;                       <link linkend="gdouble">gdouble</link>               : Read / Write</programlisting>
+<para>
+</para>
+<para>
+</para><para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GtkPlot3D--center-vector" role="property"><title>The <literal>&quot;center-vector&quot;</literal> property</title>
+<indexterm zone="GtkPlot3D--center-vector"><primary sortas="GtkPlot3D:center-vector">GtkPlot3D:center-vector</primary></indexterm><programlisting>  &quot;center-vector&quot;            <link linkend="gpointer">gpointer</link>              : Read / Write</programlisting>
+<para>Position of the center point.</para></refsect2>
+<refsect2 id="GtkPlot3D--color-xy" role="property"><title>The <literal>&quot;color-xy&quot;</literal> property</title>
+<indexterm zone="GtkPlot3D--color-xy"><primary sortas="GtkPlot3D:color-xy">GtkPlot3D:color-xy</primary></indexterm><programlisting>  &quot;color-xy&quot;                 <link linkend="gpointer">gpointer</link>              : Read / Write</programlisting>
+<para>Color of XY Plane.</para></refsect2>
+<refsect2 id="GtkPlot3D--color-yz" role="property"><title>The <literal>&quot;color-yz&quot;</literal> property</title>
+<indexterm zone="GtkPlot3D--color-yz"><primary sortas="GtkPlot3D:color-yz">GtkPlot3D:color-yz</primary></indexterm><programlisting>  &quot;color-yz&quot;                 <link linkend="gpointer">gpointer</link>              : Read / Write</programlisting>
+<para>Color of YZ Plane.</para></refsect2>
+<refsect2 id="GtkPlot3D--color-zx" role="property"><title>The <literal>&quot;color-zx&quot;</literal> property</title>
+<indexterm zone="GtkPlot3D--color-zx"><primary sortas="GtkPlot3D:color-zx">GtkPlot3D:color-zx</primary></indexterm><programlisting>  &quot;color-zx&quot;                 <link linkend="gpointer">gpointer</link>              : Read / Write</programlisting>
+<para>Color of ZX Plane.</para></refsect2>
+<refsect2 id="GtkPlot3D--corner-line" role="property"><title>The <literal>&quot;corner-line&quot;</literal> property</title>
+<indexterm zone="GtkPlot3D--corner-line"><primary sortas="GtkPlot3D:corner-line">GtkPlot3D:corner-line</primary></indexterm><programlisting>  &quot;corner-line&quot;              <link linkend="gpointer">gpointer</link>              : Read / Write</programlisting>
+<para>Corner Line.</para></refsect2>
+<refsect2 id="GtkPlot3D--corner-visible" role="property"><title>The <literal>&quot;corner-visible&quot;</literal> property</title>
+<indexterm zone="GtkPlot3D--corner-visible"><primary sortas="GtkPlot3D:corner-visible">GtkPlot3D:corner-visible</primary></indexterm><programlisting>  &quot;corner-visible&quot;           <link linkend="gboolean">gboolean</link>              : Read / Write</programlisting>
+<para>Draw the entire cube.</para><para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="GtkPlot3D--e1-vector" role="property"><title>The <literal>&quot;e1-vector&quot;</literal> property</title>
+<indexterm zone="GtkPlot3D--e1-vector"><primary sortas="GtkPlot3D:e1-vector">GtkPlot3D:e1-vector</primary></indexterm><programlisting>  &quot;e1-vector&quot;                <link linkend="gpointer">gpointer</link>              : Read / Write</programlisting>
+<para>Vector e1.</para></refsect2>
+<refsect2 id="GtkPlot3D--e2-vector" role="property"><title>The <literal>&quot;e2-vector&quot;</literal> property</title>
+<indexterm zone="GtkPlot3D--e2-vector"><primary sortas="GtkPlot3D:e2-vector">GtkPlot3D:e2-vector</primary></indexterm><programlisting>  &quot;e2-vector&quot;                <link linkend="gpointer">gpointer</link>              : Read / Write</programlisting>
+<para>Vector e2.</para></refsect2>
+<refsect2 id="GtkPlot3D--e3-vector" role="property"><title>The <literal>&quot;e3-vector&quot;</literal> property</title>
+<indexterm zone="GtkPlot3D--e3-vector"><primary sortas="GtkPlot3D:e3-vector">GtkPlot3D:e3-vector</primary></indexterm><programlisting>  &quot;e3-vector&quot;                <link linkend="gpointer">gpointer</link>              : Read / Write</programlisting>
+<para>Vector e3.</para></refsect2>
+<refsect2 id="GtkPlot3D--frame-line" role="property"><title>The <literal>&quot;frame-line&quot;</literal> property</title>
+<indexterm zone="GtkPlot3D--frame-line"><primary sortas="GtkPlot3D:frame-line">GtkPlot3D:frame-line</primary></indexterm><programlisting>  &quot;frame-line&quot;               <link linkend="gpointer">gpointer</link>              : Read / Write</programlisting>
+<para>Frame Line.</para></refsect2>
+<refsect2 id="GtkPlot3D--origin-vector" role="property"><title>The <literal>&quot;origin-vector&quot;</literal> property</title>
+<indexterm zone="GtkPlot3D--origin-vector"><primary sortas="GtkPlot3D:origin-vector">GtkPlot3D:origin-vector</primary></indexterm><programlisting>  &quot;origin-vector&quot;            <link linkend="gpointer">gpointer</link>              : Read / Write</programlisting>
+<para>Position of the origin.</para></refsect2>
+<refsect2 id="GtkPlot3D--titles-offset" role="property"><title>The <literal>&quot;titles-offset&quot;</literal> property</title>
+<indexterm zone="GtkPlot3D--titles-offset"><primary sortas="GtkPlot3D:titles-offset">GtkPlot3D:titles-offset</primary></indexterm><programlisting>  &quot;titles-offset&quot;            <link linkend="gint">gint</link>                  : Read / Write</programlisting>
+<para>Titles distance from the axes.</para><para>Allowed values: &gt;= -2147483647</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GtkPlot3D--xfactor" role="property"><title>The <literal>&quot;xfactor&quot;</literal> property</title>
+<indexterm zone="GtkPlot3D--xfactor"><primary sortas="GtkPlot3D:xfactor">GtkPlot3D:xfactor</primary></indexterm><programlisting>  &quot;xfactor&quot;                  <link linkend="gdouble">gdouble</link>               : Read / Write</programlisting>
+<para>
+</para>
+<para>
+</para><para>Allowed values: &gt;= 0</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GtkPlot3D--xy-label-mask" role="property"><title>The <literal>&quot;xy-label-mask&quot;</literal> property</title>
+<indexterm zone="GtkPlot3D--xy-label-mask"><primary sortas="GtkPlot3D:xy-label-mask">GtkPlot3D:xy-label-mask</primary></indexterm><programlisting>  &quot;xy-label-mask&quot;            <link linkend="gint">gint</link>                  : Read / Write</programlisting>
+<para>XY label mask.</para><para>Allowed values: [0,3]</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GtkPlot3D--xy-major-mask" role="property"><title>The <literal>&quot;xy-major-mask&quot;</literal> property</title>
+<indexterm zone="GtkPlot3D--xy-major-mask"><primary sortas="GtkPlot3D:xy-major-mask">GtkPlot3D:xy-major-mask</primary></indexterm><programlisting>  &quot;xy-major-mask&quot;            <link linkend="gint">gint</link>                  : Read / Write</programlisting>
+<para>XY major mask.</para><para>Allowed values: [0,3]</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GtkPlot3D--xy-minor-mask" role="property"><title>The <literal>&quot;xy-minor-mask&quot;</literal> property</title>
+<indexterm zone="GtkPlot3D--xy-minor-mask"><primary sortas="GtkPlot3D:xy-minor-mask">GtkPlot3D:xy-minor-mask</primary></indexterm><programlisting>  &quot;xy-minor-mask&quot;            <link linkend="gint">gint</link>                  : Read / Write</programlisting>
+<para>XY minor mask.</para><para>Allowed values: [0,3]</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GtkPlot3D--xy-title-visible" role="property"><title>The <literal>&quot;xy-title-visible&quot;</literal> property</title>
+<indexterm zone="GtkPlot3D--xy-title-visible"><primary sortas="GtkPlot3D:xy-title-visible">GtkPlot3D:xy-title-visible</primary></indexterm><programlisting>  &quot;xy-title-visible&quot;         <link linkend="gboolean">gboolean</link>              : Read / Write</programlisting>
+<para>XY title Visible.</para><para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="GtkPlot3D--xy-visible" role="property"><title>The <literal>&quot;xy-visible&quot;</literal> property</title>
+<indexterm zone="GtkPlot3D--xy-visible"><primary sortas="GtkPlot3D:xy-visible">GtkPlot3D:xy-visible</primary></indexterm><programlisting>  &quot;xy-visible&quot;               <link linkend="gboolean">gboolean</link>              : Read / Write</programlisting>
+<para>XY Plane visible.</para><para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="GtkPlot3D--xz-label-mask" role="property"><title>The <literal>&quot;xz-label-mask&quot;</literal> property</title>
+<indexterm zone="GtkPlot3D--xz-label-mask"><primary sortas="GtkPlot3D:xz-label-mask">GtkPlot3D:xz-label-mask</primary></indexterm><programlisting>  &quot;xz-label-mask&quot;            <link linkend="gint">gint</link>                  : Read / Write</programlisting>
+<para>XZ label mask.</para><para>Allowed values: [0,3]</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GtkPlot3D--xz-major-mask" role="property"><title>The <literal>&quot;xz-major-mask&quot;</literal> property</title>
+<indexterm zone="GtkPlot3D--xz-major-mask"><primary sortas="GtkPlot3D:xz-major-mask">GtkPlot3D:xz-major-mask</primary></indexterm><programlisting>  &quot;xz-major-mask&quot;            <link linkend="gint">gint</link>                  : Read / Write</programlisting>
+<para>XZ major mask.</para><para>Allowed values: [0,3]</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GtkPlot3D--xz-minor-mask" role="property"><title>The <literal>&quot;xz-minor-mask&quot;</literal> property</title>
+<indexterm zone="GtkPlot3D--xz-minor-mask"><primary sortas="GtkPlot3D:xz-minor-mask">GtkPlot3D:xz-minor-mask</primary></indexterm><programlisting>  &quot;xz-minor-mask&quot;            <link linkend="gint">gint</link>                  : Read / Write</programlisting>
+<para>XZ minor mask.</para><para>Allowed values: [0,3]</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GtkPlot3D--xz-title-visible" role="property"><title>The <literal>&quot;xz-title-visible&quot;</literal> property</title>
+<indexterm zone="GtkPlot3D--xz-title-visible"><primary sortas="GtkPlot3D:xz-title-visible">GtkPlot3D:xz-title-visible</primary></indexterm><programlisting>  &quot;xz-title-visible&quot;         <link linkend="gboolean">gboolean</link>              : Read / Write</programlisting>
+<para>XZ title Visible.</para><para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="GtkPlot3D--yfactor" role="property"><title>The <literal>&quot;yfactor&quot;</literal> property</title>
+<indexterm zone="GtkPlot3D--yfactor"><primary sortas="GtkPlot3D:yfactor">GtkPlot3D:yfactor</primary></indexterm><programlisting>  &quot;yfactor&quot;                  <link linkend="gdouble">gdouble</link>               : Read / Write</programlisting>
+<para>
+</para>
+<para>
+</para><para>Allowed values: &gt;= 0</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GtkPlot3D--yx-label-mask" role="property"><title>The <literal>&quot;yx-label-mask&quot;</literal> property</title>
+<indexterm zone="GtkPlot3D--yx-label-mask"><primary sortas="GtkPlot3D:yx-label-mask">GtkPlot3D:yx-label-mask</primary></indexterm><programlisting>  &quot;yx-label-mask&quot;            <link linkend="gint">gint</link>                  : Read / Write</programlisting>
+<para>YX label mask.</para><para>Allowed values: [0,3]</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GtkPlot3D--yx-major-mask" role="property"><title>The <literal>&quot;yx-major-mask&quot;</literal> property</title>
+<indexterm zone="GtkPlot3D--yx-major-mask"><primary sortas="GtkPlot3D:yx-major-mask">GtkPlot3D:yx-major-mask</primary></indexterm><programlisting>  &quot;yx-major-mask&quot;            <link linkend="gint">gint</link>                  : Read / Write</programlisting>
+<para>YX major mask.</para><para>Allowed values: [0,3]</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GtkPlot3D--yx-minor-mask" role="property"><title>The <literal>&quot;yx-minor-mask&quot;</literal> property</title>
+<indexterm zone="GtkPlot3D--yx-minor-mask"><primary sortas="GtkPlot3D:yx-minor-mask">GtkPlot3D:yx-minor-mask</primary></indexterm><programlisting>  &quot;yx-minor-mask&quot;            <link linkend="gint">gint</link>                  : Read / Write</programlisting>
+<para>YX minor mask.</para><para>Allowed values: [0,3]</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GtkPlot3D--yx-title-visible" role="property"><title>The <literal>&quot;yx-title-visible&quot;</literal> property</title>
+<indexterm zone="GtkPlot3D--yx-title-visible"><primary sortas="GtkPlot3D:yx-title-visible">GtkPlot3D:yx-title-visible</primary></indexterm><programlisting>  &quot;yx-title-visible&quot;         <link linkend="gboolean">gboolean</link>              : Read / Write</programlisting>
+<para>YX title Visible.</para><para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="GtkPlot3D--yz-label-mask" role="property"><title>The <literal>&quot;yz-label-mask&quot;</literal> property</title>
+<indexterm zone="GtkPlot3D--yz-label-mask"><primary sortas="GtkPlot3D:yz-label-mask">GtkPlot3D:yz-label-mask</primary></indexterm><programlisting>  &quot;yz-label-mask&quot;            <link linkend="gint">gint</link>                  : Read / Write</programlisting>
+<para>YZ label mask.</para><para>Allowed values: [0,3]</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GtkPlot3D--yz-major-mask" role="property"><title>The <literal>&quot;yz-major-mask&quot;</literal> property</title>
+<indexterm zone="GtkPlot3D--yz-major-mask"><primary sortas="GtkPlot3D:yz-major-mask">GtkPlot3D:yz-major-mask</primary></indexterm><programlisting>  &quot;yz-major-mask&quot;            <link linkend="gint">gint</link>                  : Read / Write</programlisting>
+<para>YZ major mask.</para><para>Allowed values: [0,3]</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GtkPlot3D--yz-minor-mask" role="property"><title>The <literal>&quot;yz-minor-mask&quot;</literal> property</title>
+<indexterm zone="GtkPlot3D--yz-minor-mask"><primary sortas="GtkPlot3D:yz-minor-mask">GtkPlot3D:yz-minor-mask</primary></indexterm><programlisting>  &quot;yz-minor-mask&quot;            <link linkend="gint">gint</link>                  : Read / Write</programlisting>
+<para>YZ minor mask.</para><para>Allowed values: [0,3]</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GtkPlot3D--yz-title-visible" role="property"><title>The <literal>&quot;yz-title-visible&quot;</literal> property</title>
+<indexterm zone="GtkPlot3D--yz-title-visible"><primary sortas="GtkPlot3D:yz-title-visible">GtkPlot3D:yz-title-visible</primary></indexterm><programlisting>  &quot;yz-title-visible&quot;         <link linkend="gboolean">gboolean</link>              : Read / Write</programlisting>
+<para>YZ title Visible.</para><para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="GtkPlot3D--yz-visible" role="property"><title>The <literal>&quot;yz-visible&quot;</literal> property</title>
+<indexterm zone="GtkPlot3D--yz-visible"><primary sortas="GtkPlot3D:yz-visible">GtkPlot3D:yz-visible</primary></indexterm><programlisting>  &quot;yz-visible&quot;               <link linkend="gboolean">gboolean</link>              : Read / Write</programlisting>
+<para>YZ Plane visible.</para><para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="GtkPlot3D--zfactor" role="property"><title>The <literal>&quot;zfactor&quot;</literal> property</title>
+<indexterm zone="GtkPlot3D--zfactor"><primary sortas="GtkPlot3D:zfactor">GtkPlot3D:zfactor</primary></indexterm><programlisting>  &quot;zfactor&quot;                  <link linkend="gdouble">gdouble</link>               : Read / Write</programlisting>
+<para>
+</para>
+<para>
+</para><para>Allowed values: &gt;= 0</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GtkPlot3D--zmax" role="property"><title>The <literal>&quot;zmax&quot;</literal> property</title>
+<indexterm zone="GtkPlot3D--zmax"><primary sortas="GtkPlot3D:zmax">GtkPlot3D:zmax</primary></indexterm><programlisting>  &quot;zmax&quot;                     <link linkend="gdouble">gdouble</link>               : Read / Write</programlisting>
+<para>
+</para>
+<para>
+</para><para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GtkPlot3D--zmin" role="property"><title>The <literal>&quot;zmin&quot;</literal> property</title>
+<indexterm zone="GtkPlot3D--zmin"><primary sortas="GtkPlot3D:zmin">GtkPlot3D:zmin</primary></indexterm><programlisting>  &quot;zmin&quot;                     <link linkend="gdouble">gdouble</link>               : Read / Write</programlisting>
+<para>
+</para>
+<para>
+</para><para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GtkPlot3D--zscale" role="property"><title>The <literal>&quot;zscale&quot;</literal> property</title>
+<indexterm zone="GtkPlot3D--zscale"><primary sortas="GtkPlot3D:zscale">GtkPlot3D:zscale</primary></indexterm><programlisting>  &quot;zscale&quot;                   <link linkend="gint">gint</link>                  : Read / Write</programlisting>
+<para>
+</para>
+<para>
+</para><para>Allowed values: &gt;= 0</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GtkPlot3D--zx-label-mask" role="property"><title>The <literal>&quot;zx-label-mask&quot;</literal> property</title>
+<indexterm zone="GtkPlot3D--zx-label-mask"><primary sortas="GtkPlot3D:zx-label-mask">GtkPlot3D:zx-label-mask</primary></indexterm><programlisting>  &quot;zx-label-mask&quot;            <link linkend="gint">gint</link>                  : Read / Write</programlisting>
+<para>ZX label mask.</para><para>Allowed values: [0,3]</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GtkPlot3D--zx-major-mask" role="property"><title>The <literal>&quot;zx-major-mask&quot;</literal> property</title>
+<indexterm zone="GtkPlot3D--zx-major-mask"><primary sortas="GtkPlot3D:zx-major-mask">GtkPlot3D:zx-major-mask</primary></indexterm><programlisting>  &quot;zx-major-mask&quot;            <link linkend="gint">gint</link>                  : Read / Write</programlisting>
+<para>ZX major mask.</para><para>Allowed values: [0,3]</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GtkPlot3D--zx-minor-mask" role="property"><title>The <literal>&quot;zx-minor-mask&quot;</literal> property</title>
+<indexterm zone="GtkPlot3D--zx-minor-mask"><primary sortas="GtkPlot3D:zx-minor-mask">GtkPlot3D:zx-minor-mask</primary></indexterm><programlisting>  &quot;zx-minor-mask&quot;            <link linkend="gint">gint</link>                  : Read / Write</programlisting>
+<para>ZX minor mask.</para><para>Allowed values: [0,3]</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GtkPlot3D--zx-title-visible" role="property"><title>The <literal>&quot;zx-title-visible&quot;</literal> property</title>
+<indexterm zone="GtkPlot3D--zx-title-visible"><primary sortas="GtkPlot3D:zx-title-visible">GtkPlot3D:zx-title-visible</primary></indexterm><programlisting>  &quot;zx-title-visible&quot;         <link linkend="gboolean">gboolean</link>              : Read / Write</programlisting>
+<para>ZX title Visible.</para><para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="GtkPlot3D--zx-visible" role="property"><title>The <literal>&quot;zx-visible&quot;</literal> property</title>
+<indexterm zone="GtkPlot3D--zx-visible"><primary sortas="GtkPlot3D:zx-visible">GtkPlot3D:zx-visible</primary></indexterm><programlisting>  &quot;zx-visible&quot;               <link linkend="gboolean">gboolean</link>              : Read / Write</programlisting>
+<para>ZX Plane visible.</para><para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="GtkPlot3D--zy-label-mask" role="property"><title>The <literal>&quot;zy-label-mask&quot;</literal> property</title>
+<indexterm zone="GtkPlot3D--zy-label-mask"><primary sortas="GtkPlot3D:zy-label-mask">GtkPlot3D:zy-label-mask</primary></indexterm><programlisting>  &quot;zy-label-mask&quot;            <link linkend="gint">gint</link>                  : Read / Write</programlisting>
+<para>ZY label mask.</para><para>Allowed values: [0,3]</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GtkPlot3D--zy-major-mask" role="property"><title>The <literal>&quot;zy-major-mask&quot;</literal> property</title>
+<indexterm zone="GtkPlot3D--zy-major-mask"><primary sortas="GtkPlot3D:zy-major-mask">GtkPlot3D:zy-major-mask</primary></indexterm><programlisting>  &quot;zy-major-mask&quot;            <link linkend="gint">gint</link>                  : Read / Write</programlisting>
+<para>ZY major mask.</para><para>Allowed values: [0,3]</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GtkPlot3D--zy-minor-mask" role="property"><title>The <literal>&quot;zy-minor-mask&quot;</literal> property</title>
+<indexterm zone="GtkPlot3D--zy-minor-mask"><primary sortas="GtkPlot3D:zy-minor-mask">GtkPlot3D:zy-minor-mask</primary></indexterm><programlisting>  &quot;zy-minor-mask&quot;            <link linkend="gint">gint</link>                  : Read / Write</programlisting>
+<para>ZY minor mask.</para><para>Allowed values: [0,3]</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GtkPlot3D--zy-title-visible" role="property"><title>The <literal>&quot;zy-title-visible&quot;</literal> property</title>
+<indexterm zone="GtkPlot3D--zy-title-visible"><primary sortas="GtkPlot3D:zy-title-visible">GtkPlot3D:zy-title-visible</primary></indexterm><programlisting>  &quot;zy-title-visible&quot;         <link linkend="gboolean">gboolean</link>              : Read / Write</programlisting>
+<para>ZY title Visible.</para><para>Default value: FALSE</para>
+</refsect2>
+</refsect1>
+
+
+
+
+</refentry>

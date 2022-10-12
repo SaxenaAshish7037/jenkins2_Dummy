@@ -1,0 +1,2968 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GtkPlot3D</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="GtkExtra Reference Manual">
+<link rel="up" href="ch03.html" title="Widgets">
+<link rel="prev" href="GtkPlot.html" title="GtkPlot">
+<link rel="next" href="GtkPlotArray.html" title="GtkPlotArray">
+<meta name="generator" content="GTK-Doc V1.11 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="part" href="gtkextra.html" title="Part I. GtkExtra Overview">
+<link rel="part" href="gtkextrabase.html" title="Part II. GtkExtra Widgets and Objects">
+<link rel="chapter" href="ch01.html" title="Object Hierarchy">
+<link rel="chapter" href="ch02.html" title="Widget Gallery">
+<link rel="chapter" href="ch03.html" title="Widgets">
+<link rel="chapter" href="ch04.html" title="Data Formatter">
+<link rel="chapter" href="ch05.html" title="GtkExtra Versioning">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="GtkPlot.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch03.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">GtkExtra Reference Manual</th>
+<td><a accesskey="n" href="GtkPlotArray.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#GtkPlot3D.synopsis" class="shortcut">Top</a>
+                 | 
+                <a href="#GtkPlot3D.description" class="shortcut">Description</a>
+                 | 
+                <a href="#GtkPlot3D.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                 | 
+                <a href="#GtkPlot3D.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+                 | 
+                <a href="#GtkPlot3D.properties" class="shortcut">Properties</a>
+</td></tr>
+</table>
+<div class="refentry" title="GtkPlot3D">
+<a name="GtkPlot3D"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GtkPlot3D.top_of_page"></a>GtkPlot3D</span></h2>
+<p>GtkPlot3D — 3d scientific plots widget</p>
+</td>
+<td valign="top" align="right"><img src=""></td>
+</tr></table></div>
+<div class="refsynopsisdiv" title="Synopsis">
+<a name="GtkPlot3D.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">
+
+#include &lt;gtkextra.h&gt;
+
+                    <a class="link" href="GtkPlot3D.html#GtkPlot3D-struct" title="GtkPlot3D">GtkPlot3D</a>;
+enum                <a class="link" href="GtkPlot3D.html#GtkPlotPlane" title="enum GtkPlotPlane">GtkPlotPlane</a>;
+enum                <a class="link" href="GtkPlot3D.html#GtkPlotSide" title="enum GtkPlotSide">GtkPlotSide</a>;
+<a
+href="http://library.gnome.org/devel/gtk3/GtkWidget.html"
+>GtkWidget</a>*          <a class="link" href="GtkPlot3D.html#gtk-plot3d-new" title="gtk_plot3d_new ()">gtk_plot3d_new</a>                      (<a
+href="http://library.gnome.org/devel/gdk3/gdk2-Drawing-Primitives.html#GdkDrawable"
+>GdkDrawable</a> *drawable);
+<a
+href="http://library.gnome.org/devel/gtk3/GtkWidget.html"
+>GtkWidget</a>*          <a class="link" href="GtkPlot3D.html#gtk-plot3d-new-with-size" title="gtk_plot3d_new_with_size ()">gtk_plot3d_new_with_size</a>            (<a
+href="http://library.gnome.org/devel/gdk3/gdk2-Drawing-Primitives.html#GdkDrawable"
+>GdkDrawable</a> *drawable,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> width,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> height);
+void                <a class="link" href="GtkPlot3D.html#gtk-plot3d-construct" title="gtk_plot3d_construct ()">gtk_plot3d_construct</a>                (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Drawing-Primitives.html#GdkDrawable"
+>GdkDrawable</a> *drawable);
+void                <a class="link" href="GtkPlot3D.html#gtk-plot3d-construct-with-size" title="gtk_plot3d_construct_with_size ()">gtk_plot3d_construct_with_size</a>      (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Drawing-Primitives.html#GdkDrawable"
+>GdkDrawable</a> *drawable,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> width,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> height);
+void                <a class="link" href="GtkPlot3D.html#gtk-plot3d-autoscale" title="gtk_plot3d_autoscale ()">gtk_plot3d_autoscale</a>                (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot);
+void                <a class="link" href="GtkPlot3D.html#gtk-plot3d-rotate" title="gtk_plot3d_rotate ()">gtk_plot3d_rotate</a>                   (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> angle_x,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> angle_y,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> angle_z);
+void                <a class="link" href="GtkPlot3D.html#gtk-plot3d-rotate-vector" title="gtk_plot3d_rotate_vector ()">gtk_plot3d_rotate_vector</a>            (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a class="link" href="GtkPlot.html#GtkPlotVector" title="GtkPlotVector">GtkPlotVector</a> *vector,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> a1,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> a2,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> a3);
+void                <a class="link" href="GtkPlot3D.html#gtk-plot3d-reset-angles" title="gtk_plot3d_reset_angles ()">gtk_plot3d_reset_angles</a>             (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot);
+void                <a class="link" href="GtkPlot3D.html#gtk-plot3d-rotate-x" title="gtk_plot3d_rotate_x ()">gtk_plot3d_rotate_x</a>                 (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> angle);
+void                <a class="link" href="GtkPlot3D.html#gtk-plot3d-rotate-y" title="gtk_plot3d_rotate_y ()">gtk_plot3d_rotate_y</a>                 (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> angle);
+void                <a class="link" href="GtkPlot3D.html#gtk-plot3d-rotate-z" title="gtk_plot3d_rotate_z ()">gtk_plot3d_rotate_z</a>                 (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> angle);
+void                <a class="link" href="GtkPlot3D.html#gtk-plot3d-get-pixel" title="gtk_plot3d_get_pixel ()">gtk_plot3d_get_pixel</a>                (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> x,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> y,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> z,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> *px,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> *py,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> *pz);
+void                <a class="link" href="GtkPlot3D.html#gtk-plot3d-set-xrange" title="gtk_plot3d_set_xrange ()">gtk_plot3d_set_xrange</a>               (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> min,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> max);
+void                <a class="link" href="GtkPlot3D.html#gtk-plot3d-set-yrange" title="gtk_plot3d_set_yrange ()">gtk_plot3d_set_yrange</a>               (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> min,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> max);
+void                <a class="link" href="GtkPlot3D.html#gtk-plot3d-set-zrange" title="gtk_plot3d_set_zrange ()">gtk_plot3d_set_zrange</a>               (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> min,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> max);
+void                <a class="link" href="GtkPlot3D.html#gtk-plot3d-set-xfactor" title="gtk_plot3d_set_xfactor ()">gtk_plot3d_set_xfactor</a>              (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> xfactor);
+void                <a class="link" href="GtkPlot3D.html#gtk-plot3d-set-yfactor" title="gtk_plot3d_set_yfactor ()">gtk_plot3d_set_yfactor</a>              (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> yfactor);
+void                <a class="link" href="GtkPlot3D.html#gtk-plot3d-set-zfactor" title="gtk_plot3d_set_zfactor ()">gtk_plot3d_set_zfactor</a>              (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> zfactor);
+<a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a>             <a class="link" href="GtkPlot3D.html#gtk-plot3d-get-xfactor" title="gtk_plot3d_get_xfactor ()">gtk_plot3d_get_xfactor</a>              (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot);
+<a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a>             <a class="link" href="GtkPlot3D.html#gtk-plot3d-get-yfactor" title="gtk_plot3d_get_yfactor ()">gtk_plot3d_get_yfactor</a>              (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot);
+<a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a>             <a class="link" href="GtkPlot3D.html#gtk-plot3d-get-zfactor" title="gtk_plot3d_get_zfactor ()">gtk_plot3d_get_zfactor</a>              (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot);
+void                <a class="link" href="GtkPlot3D.html#gtk-plot3d-plane-set-color" title="gtk_plot3d_plane_set_color ()">gtk_plot3d_plane_set_color</a>          (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a class="link" href="GtkPlot3D.html#GtkPlotPlane" title="enum GtkPlotPlane">GtkPlotPlane</a> plane,
+                                                         const <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Colormaps-and-Colors.html#GdkColor"
+>GdkColor</a> *color);
+void                <a class="link" href="GtkPlot3D.html#gtk-plot3d-plane-set-visible" title="gtk_plot3d_plane_set_visible ()">gtk_plot3d_plane_set_visible</a>        (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a class="link" href="GtkPlot3D.html#GtkPlotPlane" title="enum GtkPlotPlane">GtkPlotPlane</a> plane,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> visible);
+<a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>            <a class="link" href="GtkPlot3D.html#gtk-plot3d-plane-visible" title="gtk_plot3d_plane_visible ()">gtk_plot3d_plane_visible</a>            (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a class="link" href="GtkPlot3D.html#GtkPlotPlane" title="enum GtkPlotPlane">GtkPlotPlane</a> plane);
+void                <a class="link" href="GtkPlot3D.html#gtk-plot3d-corner-set-visible" title="gtk_plot3d_corner_set_visible ()">gtk_plot3d_corner_set_visible</a>       (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> visible);
+<a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>            <a class="link" href="GtkPlot3D.html#gtk-plot3d-corner-visible" title="gtk_plot3d_corner_visible ()">gtk_plot3d_corner_visible</a>           (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot);
+void                <a class="link" href="GtkPlot3D.html#gtk-plot3d-corner-set-attributes" title="gtk_plot3d_corner_set_attributes ()">gtk_plot3d_corner_set_attributes</a>    (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a class="link" href="GtkPlot.html#GtkPlotLineStyle" title="enum GtkPlotLineStyle">GtkPlotLineStyle</a> style,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gfloat"
+>gfloat</a> width,
+                                                         const <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Colormaps-and-Colors.html#GdkColor"
+>GdkColor</a> *color);
+void                <a class="link" href="GtkPlot3D.html#gtk-plot3d-corner-get-attributes" title="gtk_plot3d_corner_get_attributes ()">gtk_plot3d_corner_get_attributes</a>    (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a class="link" href="GtkPlot.html#GtkPlotLineStyle" title="enum GtkPlotLineStyle">GtkPlotLineStyle</a> *style,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gfloat"
+>gfloat</a> *width,
+                                                         <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Colormaps-and-Colors.html#GdkColor"
+>GdkColor</a> *color);
+void                <a class="link" href="GtkPlot3D.html#gtk-plot3d-frame-set-attributes" title="gtk_plot3d_frame_set_attributes ()">gtk_plot3d_frame_set_attributes</a>     (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a class="link" href="GtkPlot.html#GtkPlotLineStyle" title="enum GtkPlotLineStyle">GtkPlotLineStyle</a> style,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gfloat"
+>gfloat</a> width,
+                                                         const <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Colormaps-and-Colors.html#GdkColor"
+>GdkColor</a> *color);
+void                <a class="link" href="GtkPlot3D.html#gtk-plot3d-frame-get-attributes" title="gtk_plot3d_frame_get_attributes ()">gtk_plot3d_frame_get_attributes</a>     (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a class="link" href="GtkPlot.html#GtkPlotLineStyle" title="enum GtkPlotLineStyle">GtkPlotLineStyle</a> *style,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gfloat"
+>gfloat</a> *width,
+                                                         <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Colormaps-and-Colors.html#GdkColor"
+>GdkColor</a> *color);
+<a class="link" href="GtkPlot.html#GtkPlotAxis">GtkPlotAxis</a> *       <a class="link" href="GtkPlot3D.html#gtk-plot3d-get-axis" title="gtk_plot3d_get_axis ()">gtk_plot3d_get_axis</a>                 (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a class="link" href="GtkPlot.html#GtkPlotOrientation" title="enum GtkPlotOrientation">GtkPlotOrientation</a> orientation);
+<a class="link" href="GtkPlot.html#GtkPlotAxis">GtkPlotAxis</a> *       <a class="link" href="GtkPlot3D.html#gtk-plot3d-get-side" title="gtk_plot3d_get_side ()">gtk_plot3d_get_side</a>                 (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a class="link" href="GtkPlot3D.html#GtkPlotSide" title="enum GtkPlotSide">GtkPlotSide</a> side);
+void                <a class="link" href="GtkPlot3D.html#gtk-plot3d-show-major-ticks" title="gtk_plot3d_show_major_ticks ()">gtk_plot3d_show_major_ticks</a>         (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a class="link" href="GtkPlot3D.html#GtkPlotSide" title="enum GtkPlotSide">GtkPlotSide</a> side,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> ticks_mask);
+void                <a class="link" href="GtkPlot3D.html#gtk-plot3d-show-minor-ticks" title="gtk_plot3d_show_minor_ticks ()">gtk_plot3d_show_minor_ticks</a>         (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a class="link" href="GtkPlot3D.html#GtkPlotSide" title="enum GtkPlotSide">GtkPlotSide</a> side,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> ticks_mask);
+void                <a class="link" href="GtkPlot3D.html#gtk-plot3d-show-labels" title="gtk_plot3d_show_labels ()">gtk_plot3d_show_labels</a>              (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a class="link" href="GtkPlot3D.html#GtkPlotSide" title="enum GtkPlotSide">GtkPlotSide</a> side,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> label_mask);
+void                <a class="link" href="GtkPlot3D.html#gtk-plot3d-show-title" title="gtk_plot3d_show_title ()">gtk_plot3d_show_title</a>               (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a class="link" href="GtkPlot3D.html#GtkPlotSide" title="enum GtkPlotSide">GtkPlotSide</a> side);
+void                <a class="link" href="GtkPlot3D.html#gtk-plot3d-hide-title" title="gtk_plot3d_hide_title ()">gtk_plot3d_hide_title</a>               (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a class="link" href="GtkPlot3D.html#GtkPlotSide" title="enum GtkPlotSide">GtkPlotSide</a> side);
+void                <a class="link" href="GtkPlot3D.html#gtk-plot3d-set-ticks" title="gtk_plot3d_set_ticks ()">gtk_plot3d_set_ticks</a>                (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a class="link" href="GtkPlot.html#GtkPlotOrientation" title="enum GtkPlotOrientation">GtkPlotOrientation</a> direction,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> major_step,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> nminor);
+void                <a class="link" href="GtkPlot3D.html#gtk-plot3d-set-major-ticks" title="gtk_plot3d_set_major_ticks ()">gtk_plot3d_set_major_ticks</a>          (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a class="link" href="GtkPlot.html#GtkPlotOrientation" title="enum GtkPlotOrientation">GtkPlotOrientation</a> direction,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> major_step);
+void                <a class="link" href="GtkPlot3D.html#gtk-plot3d-set-minor-ticks" title="gtk_plot3d_set_minor_ticks ()">gtk_plot3d_set_minor_ticks</a>          (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a class="link" href="GtkPlot.html#GtkPlotOrientation" title="enum GtkPlotOrientation">GtkPlotOrientation</a> direction,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> nminor);
+void                <a class="link" href="GtkPlot3D.html#gtk-plot3d-set-ticks-length" title="gtk_plot3d_set_ticks_length ()">gtk_plot3d_set_ticks_length</a>         (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a class="link" href="GtkPlot.html#GtkPlotOrientation" title="enum GtkPlotOrientation">GtkPlotOrientation</a> direction,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> length);
+void                <a class="link" href="GtkPlot3D.html#gtk-plot3d-set-ticks-width" title="gtk_plot3d_set_ticks_width ()">gtk_plot3d_set_ticks_width</a>          (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a class="link" href="GtkPlot.html#GtkPlotOrientation" title="enum GtkPlotOrientation">GtkPlotOrientation</a> direction,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gfloat"
+>gfloat</a> width);
+void                <a class="link" href="GtkPlot3D.html#gtk-plot3d-show-ticks" title="gtk_plot3d_show_ticks ()">gtk_plot3d_show_ticks</a>               (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a class="link" href="GtkPlot3D.html#GtkPlotSide" title="enum GtkPlotSide">GtkPlotSide</a> side,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> major_mask,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> minor_mask);
+void                <a class="link" href="GtkPlot3D.html#gtk-plot3d-set-titles-offset" title="gtk_plot3d_set_titles_offset ()">gtk_plot3d_set_titles_offset</a>        (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> offset);
+<a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                <a class="link" href="GtkPlot3D.html#gtk-plot3d-get-titles-offset" title="gtk_plot3d_get_titles_offset ()">gtk_plot3d_get_titles_offset</a>        (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot);
+void                <a class="link" href="GtkPlot3D.html#gtk-plot3d-set-scale" title="gtk_plot3d_set_scale ()">gtk_plot3d_set_scale</a>                (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a class="link" href="GtkPlot.html#GtkPlotOrientation" title="enum GtkPlotOrientation">GtkPlotOrientation</a> axis,
+                                                         <a class="link" href="GtkPlot.html#GtkPlotScale" title="enum GtkPlotScale">GtkPlotScale</a> scale);
+<a class="link" href="GtkPlot.html#GtkPlotScale" title="enum GtkPlotScale">GtkPlotScale</a>        <a class="link" href="GtkPlot3D.html#gtk-plot3d-get-scale" title="gtk_plot3d_get_scale ()">gtk_plot3d_get_scale</a>                (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a class="link" href="GtkPlot.html#GtkPlotOrientation" title="enum GtkPlotOrientation">GtkPlotOrientation</a> axis);
+void                <a class="link" href="GtkPlot3D.html#gtk-plot3d-major-grids-set-visible" title="gtk_plot3d_major_grids_set_visible ()">gtk_plot3d_major_grids_set_visible</a>  (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> x,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> y,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> z);
+void                <a class="link" href="GtkPlot3D.html#gtk-plot3d-minor-grids-set-visible" title="gtk_plot3d_minor_grids_set_visible ()">gtk_plot3d_minor_grids_set_visible</a>  (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> x,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> y,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> z);
+void                <a class="link" href="GtkPlot3D.html#gtk-plot3d-major-grids-visible" title="gtk_plot3d_major_grids_visible ()">gtk_plot3d_major_grids_visible</a>      (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> *x,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> *y,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> *z);
+void                <a class="link" href="GtkPlot3D.html#gtk-plot3d-minor-grids-visible" title="gtk_plot3d_minor_grids_visible ()">gtk_plot3d_minor_grids_visible</a>      (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> *x,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> *y,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> *z);
+void                <a class="link" href="GtkPlot3D.html#gtk-plot3d-major-zgrid-set-attributes" title="gtk_plot3d_major_zgrid_set_attributes ()">gtk_plot3d_major_zgrid_set_attributes</a>
+                                                        (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a class="link" href="GtkPlot.html#GtkPlotLineStyle" title="enum GtkPlotLineStyle">GtkPlotLineStyle</a> style,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gfloat"
+>gfloat</a> width,
+                                                         const <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Colormaps-and-Colors.html#GdkColor"
+>GdkColor</a> *color);
+void                <a class="link" href="GtkPlot3D.html#gtk-plot3d-major-zgrid-get-attributes" title="gtk_plot3d_major_zgrid_get_attributes ()">gtk_plot3d_major_zgrid_get_attributes</a>
+                                                        (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a class="link" href="GtkPlot.html#GtkPlotLineStyle" title="enum GtkPlotLineStyle">GtkPlotLineStyle</a> *style,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gfloat"
+>gfloat</a> *width,
+                                                         <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Colormaps-and-Colors.html#GdkColor"
+>GdkColor</a> *color);
+void                <a class="link" href="GtkPlot3D.html#gtk-plot3d-minor-zgrid-set-attributes" title="gtk_plot3d_minor_zgrid_set_attributes ()">gtk_plot3d_minor_zgrid_set_attributes</a>
+                                                        (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a class="link" href="GtkPlot.html#GtkPlotLineStyle" title="enum GtkPlotLineStyle">GtkPlotLineStyle</a> style,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gfloat"
+>gfloat</a> width,
+                                                         const <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Colormaps-and-Colors.html#GdkColor"
+>GdkColor</a> *color);
+void                <a class="link" href="GtkPlot3D.html#gtk-plot3d-minor-zgrid-get-attributes" title="gtk_plot3d_minor_zgrid_get_attributes ()">gtk_plot3d_minor_zgrid_get_attributes</a>
+                                                        (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a class="link" href="GtkPlot.html#GtkPlotLineStyle" title="enum GtkPlotLineStyle">GtkPlotLineStyle</a> *style,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gfloat"
+>gfloat</a> *width,
+                                                         <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Colormaps-and-Colors.html#GdkColor"
+>GdkColor</a> *color);
+</pre>
+</div>
+<div class="refsect1" title="Object Hierarchy">
+<a name="GtkPlot3D.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a
+href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject"
+>GObject</a>
+   +----<a
+href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned"
+>GInitiallyUnowned</a>
+         +----<a
+href="http://library.gnome.org/devel/gtk3/GtkObject.html"
+>GtkObject</a>
+               +----<a
+href="http://library.gnome.org/devel/gtk3/GtkWidget.html"
+>GtkWidget</a>
+                     +----<a
+href="http://library.gnome.org/devel/gtk3/GtkMisc.html"
+>GtkMisc</a>
+                           +----<a class="link" href="GtkPlot.html" title="GtkPlot">GtkPlot</a>
+                                 +----GtkPlot3D
+</pre>
+</div>
+<div class="refsect1" title="Implemented Interfaces">
+<a name="GtkPlot3D.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+GtkPlot3D implements
+ AtkImplementorIface and  <a
+href="http://library.gnome.org/devel/gtk3/GtkBuildable.html"
+>GtkBuildable</a>.</p>
+</div>
+<div class="refsect1" title="Properties">
+<a name="GtkPlot3D.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="GtkPlot3D.html#GtkPlot3D--a1" title='The "a1" property'>a1</a>"                       <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a>               : Read / Write
+  "<a class="link" href="GtkPlot3D.html#GtkPlot3D--a2" title='The "a2" property'>a2</a>"                       <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a>               : Read / Write
+  "<a class="link" href="GtkPlot3D.html#GtkPlot3D--a3" title='The "a3" property'>a3</a>"                       <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a>               : Read / Write
+  "<a class="link" href="GtkPlot3D.html#GtkPlot3D--center-vector" title='The "center-vector" property'>center-vector</a>"            <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"
+>gpointer</a>              : Read / Write
+  "<a class="link" href="GtkPlot3D.html#GtkPlot3D--color-xy" title='The "color-xy" property'>color-xy</a>"                 <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"
+>gpointer</a>              : Read / Write
+  "<a class="link" href="GtkPlot3D.html#GtkPlot3D--color-yz" title='The "color-yz" property'>color-yz</a>"                 <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"
+>gpointer</a>              : Read / Write
+  "<a class="link" href="GtkPlot3D.html#GtkPlot3D--color-zx" title='The "color-zx" property'>color-zx</a>"                 <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"
+>gpointer</a>              : Read / Write
+  "<a class="link" href="GtkPlot3D.html#GtkPlot3D--corner-line" title='The "corner-line" property'>corner-line</a>"              <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"
+>gpointer</a>              : Read / Write
+  "<a class="link" href="GtkPlot3D.html#GtkPlot3D--corner-visible" title='The "corner-visible" property'>corner-visible</a>"           <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write
+  "<a class="link" href="GtkPlot3D.html#GtkPlot3D--e1-vector" title='The "e1-vector" property'>e1-vector</a>"                <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"
+>gpointer</a>              : Read / Write
+  "<a class="link" href="GtkPlot3D.html#GtkPlot3D--e2-vector" title='The "e2-vector" property'>e2-vector</a>"                <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"
+>gpointer</a>              : Read / Write
+  "<a class="link" href="GtkPlot3D.html#GtkPlot3D--e3-vector" title='The "e3-vector" property'>e3-vector</a>"                <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"
+>gpointer</a>              : Read / Write
+  "<a class="link" href="GtkPlot3D.html#GtkPlot3D--frame-line" title='The "frame-line" property'>frame-line</a>"               <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"
+>gpointer</a>              : Read / Write
+  "<a class="link" href="GtkPlot3D.html#GtkPlot3D--origin-vector" title='The "origin-vector" property'>origin-vector</a>"            <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"
+>gpointer</a>              : Read / Write
+  "<a class="link" href="GtkPlot3D.html#GtkPlot3D--titles-offset" title='The "titles-offset" property'>titles-offset</a>"            <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write
+  "<a class="link" href="GtkPlot3D.html#GtkPlot3D--xfactor" title='The "xfactor" property'>xfactor</a>"                  <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a>               : Read / Write
+  "<a class="link" href="GtkPlot3D.html#GtkPlot3D--xy-label-mask" title='The "xy-label-mask" property'>xy-label-mask</a>"            <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write
+  "<a class="link" href="GtkPlot3D.html#GtkPlot3D--xy-major-mask" title='The "xy-major-mask" property'>xy-major-mask</a>"            <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write
+  "<a class="link" href="GtkPlot3D.html#GtkPlot3D--xy-minor-mask" title='The "xy-minor-mask" property'>xy-minor-mask</a>"            <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write
+  "<a class="link" href="GtkPlot3D.html#GtkPlot3D--xy-title-visible" title='The "xy-title-visible" property'>xy-title-visible</a>"         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write
+  "<a class="link" href="GtkPlot3D.html#GtkPlot3D--xy-visible" title='The "xy-visible" property'>xy-visible</a>"               <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write
+  "<a class="link" href="GtkPlot3D.html#GtkPlot3D--xz-label-mask" title='The "xz-label-mask" property'>xz-label-mask</a>"            <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write
+  "<a class="link" href="GtkPlot3D.html#GtkPlot3D--xz-major-mask" title='The "xz-major-mask" property'>xz-major-mask</a>"            <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write
+  "<a class="link" href="GtkPlot3D.html#GtkPlot3D--xz-minor-mask" title='The "xz-minor-mask" property'>xz-minor-mask</a>"            <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write
+  "<a class="link" href="GtkPlot3D.html#GtkPlot3D--xz-title-visible" title='The "xz-title-visible" property'>xz-title-visible</a>"         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write
+  "<a class="link" href="GtkPlot3D.html#GtkPlot3D--yfactor" title='The "yfactor" property'>yfactor</a>"                  <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a>               : Read / Write
+  "<a class="link" href="GtkPlot3D.html#GtkPlot3D--yx-label-mask" title='The "yx-label-mask" property'>yx-label-mask</a>"            <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write
+  "<a class="link" href="GtkPlot3D.html#GtkPlot3D--yx-major-mask" title='The "yx-major-mask" property'>yx-major-mask</a>"            <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write
+  "<a class="link" href="GtkPlot3D.html#GtkPlot3D--yx-minor-mask" title='The "yx-minor-mask" property'>yx-minor-mask</a>"            <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write
+  "<a class="link" href="GtkPlot3D.html#GtkPlot3D--yx-title-visible" title='The "yx-title-visible" property'>yx-title-visible</a>"         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write
+  "<a class="link" href="GtkPlot3D.html#GtkPlot3D--yz-label-mask" title='The "yz-label-mask" property'>yz-label-mask</a>"            <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write
+  "<a class="link" href="GtkPlot3D.html#GtkPlot3D--yz-major-mask" title='The "yz-major-mask" property'>yz-major-mask</a>"            <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write
+  "<a class="link" href="GtkPlot3D.html#GtkPlot3D--yz-minor-mask" title='The "yz-minor-mask" property'>yz-minor-mask</a>"            <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write
+  "<a class="link" href="GtkPlot3D.html#GtkPlot3D--yz-title-visible" title='The "yz-title-visible" property'>yz-title-visible</a>"         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write
+  "<a class="link" href="GtkPlot3D.html#GtkPlot3D--yz-visible" title='The "yz-visible" property'>yz-visible</a>"               <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write
+  "<a class="link" href="GtkPlot3D.html#GtkPlot3D--zfactor" title='The "zfactor" property'>zfactor</a>"                  <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a>               : Read / Write
+  "<a class="link" href="GtkPlot3D.html#GtkPlot3D--zmax" title='The "zmax" property'>zmax</a>"                     <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a>               : Read / Write
+  "<a class="link" href="GtkPlot3D.html#GtkPlot3D--zmin" title='The "zmin" property'>zmin</a>"                     <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a>               : Read / Write
+  "<a class="link" href="GtkPlot3D.html#GtkPlot3D--zscale" title='The "zscale" property'>zscale</a>"                   <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write
+  "<a class="link" href="GtkPlot3D.html#GtkPlot3D--zx-label-mask" title='The "zx-label-mask" property'>zx-label-mask</a>"            <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write
+  "<a class="link" href="GtkPlot3D.html#GtkPlot3D--zx-major-mask" title='The "zx-major-mask" property'>zx-major-mask</a>"            <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write
+  "<a class="link" href="GtkPlot3D.html#GtkPlot3D--zx-minor-mask" title='The "zx-minor-mask" property'>zx-minor-mask</a>"            <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write
+  "<a class="link" href="GtkPlot3D.html#GtkPlot3D--zx-title-visible" title='The "zx-title-visible" property'>zx-title-visible</a>"         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write
+  "<a class="link" href="GtkPlot3D.html#GtkPlot3D--zx-visible" title='The "zx-visible" property'>zx-visible</a>"               <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write
+  "<a class="link" href="GtkPlot3D.html#GtkPlot3D--zy-label-mask" title='The "zy-label-mask" property'>zy-label-mask</a>"            <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write
+  "<a class="link" href="GtkPlot3D.html#GtkPlot3D--zy-major-mask" title='The "zy-major-mask" property'>zy-major-mask</a>"            <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write
+  "<a class="link" href="GtkPlot3D.html#GtkPlot3D--zy-minor-mask" title='The "zy-minor-mask" property'>zy-minor-mask</a>"            <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write
+  "<a class="link" href="GtkPlot3D.html#GtkPlot3D--zy-title-visible" title='The "zy-title-visible" property'>zy-title-visible</a>"         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write
+</pre>
+</div>
+<div class="refsect1" title="Description">
+<a name="GtkPlot3D.description"></a><h2>Description</h2>
+<p>
+FIXME:: Need long description.</p>
+<p>
+</p>
+</div>
+<div class="refsect1" title="Details">
+<a name="GtkPlot3D.details"></a><h2>Details</h2>
+<div class="refsect2" title="GtkPlot3D">
+<a name="GtkPlot3D-struct"></a><h3>GtkPlot3D</h3>
+<pre class="programlisting">typedef struct _GtkPlot3D GtkPlot3D;</pre>
+<p>
+The GtkPlot3D struct contains only private data.
+It should only be accessed through the functions described below.</p>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2" title="enum GtkPlotPlane">
+<a name="GtkPlotPlane"></a><h3>enum GtkPlotPlane</h3>
+<pre class="programlisting">typedef enum
+{
+  GTK_PLOT_PLANE_XY	= 0,
+  GTK_PLOT_PLANE_YX	= 0,
+  GTK_PLOT_PLANE_XZ	= 1,
+  GTK_PLOT_PLANE_ZX	= 1,
+  GTK_PLOT_PLANE_YZ	= 2,
+  GTK_PLOT_PLANE_ZY	= 2,
+} GtkPlotPlane;
+</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2" title="enum GtkPlotSide">
+<a name="GtkPlotSide"></a><h3>enum GtkPlotSide</h3>
+<pre class="programlisting">typedef enum
+{
+  GTK_PLOT_SIDE_XY	= 1 &lt;&lt; 0 ,
+  GTK_PLOT_SIDE_XZ	= 1 &lt;&lt; 1 ,
+  GTK_PLOT_SIDE_YX	= 1 &lt;&lt; 2 ,
+  GTK_PLOT_SIDE_YZ	= 1 &lt;&lt; 3 ,
+  GTK_PLOT_SIDE_ZX	= 1 &lt;&lt; 4 ,
+  GTK_PLOT_SIDE_ZY	= 1 &lt;&lt; 5 ,
+} GtkPlotSide;
+</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot3d_new ()">
+<a name="gtk-plot3d-new"></a><h3>gtk_plot3d_new ()</h3>
+<pre class="programlisting"><a
+href="http://library.gnome.org/devel/gtk3/GtkWidget.html"
+>GtkWidget</a>*          gtk_plot3d_new                      (<a
+href="http://library.gnome.org/devel/gdk3/gdk2-Drawing-Primitives.html#GdkDrawable"
+>GdkDrawable</a> *drawable);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>drawable</code></em> :</span></p></td>
+<td> a Gdk drawable.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot3d_new_with_size ()">
+<a name="gtk-plot3d-new-with-size"></a><h3>gtk_plot3d_new_with_size ()</h3>
+<pre class="programlisting"><a
+href="http://library.gnome.org/devel/gtk3/GtkWidget.html"
+>GtkWidget</a>*          gtk_plot3d_new_with_size            (<a
+href="http://library.gnome.org/devel/gdk3/gdk2-Drawing-Primitives.html#GdkDrawable"
+>GdkDrawable</a> *drawable,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> width,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> height);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>drawable</code></em> :</span></p></td>
+<td> a Gdk drawable.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>width</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>height</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot3d_construct ()">
+<a name="gtk-plot3d-construct"></a><h3>gtk_plot3d_construct ()</h3>
+<pre class="programlisting">void                gtk_plot3d_construct                (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Drawing-Primitives.html#GdkDrawable"
+>GdkDrawable</a> *drawable);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>plot</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlot3D.html" title="GtkPlot3D"><span class="type">GtkPlot3D</span></a> widget.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>drawable</code></em> :</span></p></td>
+<td> a Gdk drawable.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot3d_construct_with_size ()">
+<a name="gtk-plot3d-construct-with-size"></a><h3>gtk_plot3d_construct_with_size ()</h3>
+<pre class="programlisting">void                gtk_plot3d_construct_with_size      (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Drawing-Primitives.html#GdkDrawable"
+>GdkDrawable</a> *drawable,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> width,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> height);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>plot</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlot3D.html" title="GtkPlot3D"><span class="type">GtkPlot3D</span></a> widget.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>drawable</code></em> :</span></p></td>
+<td> a Gdk drawable.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>width</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>height</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot3d_autoscale ()">
+<a name="gtk-plot3d-autoscale"></a><h3>gtk_plot3d_autoscale ()</h3>
+<pre class="programlisting">void                gtk_plot3d_autoscale                (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>plot</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlot3D.html" title="GtkPlot3D"><span class="type">GtkPlot3D</span></a> widget.
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot3d_rotate ()">
+<a name="gtk-plot3d-rotate"></a><h3>gtk_plot3d_rotate ()</h3>
+<pre class="programlisting">void                gtk_plot3d_rotate                   (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> angle_x,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> angle_y,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> angle_z);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>plot</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlot3D.html" title="GtkPlot3D"><span class="type">GtkPlot3D</span></a> widget.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>angle_x</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>angle_y</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>angle_z</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot3d_rotate_vector ()">
+<a name="gtk-plot3d-rotate-vector"></a><h3>gtk_plot3d_rotate_vector ()</h3>
+<pre class="programlisting">void                gtk_plot3d_rotate_vector            (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a class="link" href="GtkPlot.html#GtkPlotVector" title="GtkPlotVector">GtkPlotVector</a> *vector,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> a1,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> a2,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> a3);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>plot</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlot3D.html" title="GtkPlot3D"><span class="type">GtkPlot3D</span></a> widget.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>vector</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>a1</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>a2</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>a3</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot3d_reset_angles ()">
+<a name="gtk-plot3d-reset-angles"></a><h3>gtk_plot3d_reset_angles ()</h3>
+<pre class="programlisting">void                gtk_plot3d_reset_angles             (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>plot</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlot3D.html" title="GtkPlot3D"><span class="type">GtkPlot3D</span></a> widget.
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot3d_rotate_x ()">
+<a name="gtk-plot3d-rotate-x"></a><h3>gtk_plot3d_rotate_x ()</h3>
+<pre class="programlisting">void                gtk_plot3d_rotate_x                 (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> angle);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>plot</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlot3D.html" title="GtkPlot3D"><span class="type">GtkPlot3D</span></a> widget.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>angle</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot3d_rotate_y ()">
+<a name="gtk-plot3d-rotate-y"></a><h3>gtk_plot3d_rotate_y ()</h3>
+<pre class="programlisting">void                gtk_plot3d_rotate_y                 (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> angle);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>plot</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlot3D.html" title="GtkPlot3D"><span class="type">GtkPlot3D</span></a> widget.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>angle</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot3d_rotate_z ()">
+<a name="gtk-plot3d-rotate-z"></a><h3>gtk_plot3d_rotate_z ()</h3>
+<pre class="programlisting">void                gtk_plot3d_rotate_z                 (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> angle);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>plot</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlot3D.html" title="GtkPlot3D"><span class="type">GtkPlot3D</span></a> widget.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>angle</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot3d_get_pixel ()">
+<a name="gtk-plot3d-get-pixel"></a><h3>gtk_plot3d_get_pixel ()</h3>
+<pre class="programlisting">void                gtk_plot3d_get_pixel                (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> x,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> y,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> z,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> *px,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> *py,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> *pz);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>plot</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlot3D.html" title="GtkPlot3D"><span class="type">GtkPlot3D</span></a> widget.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>x</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>y</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>z</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>px</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>py</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>pz</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot3d_set_xrange ()">
+<a name="gtk-plot3d-set-xrange"></a><h3>gtk_plot3d_set_xrange ()</h3>
+<pre class="programlisting">void                gtk_plot3d_set_xrange               (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> min,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> max);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>plot</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlot3D.html" title="GtkPlot3D"><span class="type">GtkPlot3D</span></a> widget.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>min</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>max</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot3d_set_yrange ()">
+<a name="gtk-plot3d-set-yrange"></a><h3>gtk_plot3d_set_yrange ()</h3>
+<pre class="programlisting">void                gtk_plot3d_set_yrange               (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> min,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> max);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>plot</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlot3D.html" title="GtkPlot3D"><span class="type">GtkPlot3D</span></a> widget.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>min</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>max</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot3d_set_zrange ()">
+<a name="gtk-plot3d-set-zrange"></a><h3>gtk_plot3d_set_zrange ()</h3>
+<pre class="programlisting">void                gtk_plot3d_set_zrange               (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> min,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> max);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>plot</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlot3D.html" title="GtkPlot3D"><span class="type">GtkPlot3D</span></a> widget.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>min</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>max</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot3d_set_xfactor ()">
+<a name="gtk-plot3d-set-xfactor"></a><h3>gtk_plot3d_set_xfactor ()</h3>
+<pre class="programlisting">void                gtk_plot3d_set_xfactor              (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> xfactor);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>plot</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlot3D.html" title="GtkPlot3D"><span class="type">GtkPlot3D</span></a> widget.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>xfactor</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot3d_set_yfactor ()">
+<a name="gtk-plot3d-set-yfactor"></a><h3>gtk_plot3d_set_yfactor ()</h3>
+<pre class="programlisting">void                gtk_plot3d_set_yfactor              (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> yfactor);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>plot</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlot3D.html" title="GtkPlot3D"><span class="type">GtkPlot3D</span></a> widget.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>yfactor</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot3d_set_zfactor ()">
+<a name="gtk-plot3d-set-zfactor"></a><h3>gtk_plot3d_set_zfactor ()</h3>
+<pre class="programlisting">void                gtk_plot3d_set_zfactor              (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> zfactor);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>plot</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlot3D.html" title="GtkPlot3D"><span class="type">GtkPlot3D</span></a> widget.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>zfactor</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot3d_get_xfactor ()">
+<a name="gtk-plot3d-get-xfactor"></a><h3>gtk_plot3d_get_xfactor ()</h3>
+<pre class="programlisting"><a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a>             gtk_plot3d_get_xfactor              (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>plot</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlot3D.html" title="GtkPlot3D"><span class="type">GtkPlot3D</span></a> widget.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot3d_get_yfactor ()">
+<a name="gtk-plot3d-get-yfactor"></a><h3>gtk_plot3d_get_yfactor ()</h3>
+<pre class="programlisting"><a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a>             gtk_plot3d_get_yfactor              (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>plot</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlot3D.html" title="GtkPlot3D"><span class="type">GtkPlot3D</span></a> widget.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot3d_get_zfactor ()">
+<a name="gtk-plot3d-get-zfactor"></a><h3>gtk_plot3d_get_zfactor ()</h3>
+<pre class="programlisting"><a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a>             gtk_plot3d_get_zfactor              (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>plot</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlot3D.html" title="GtkPlot3D"><span class="type">GtkPlot3D</span></a> widget.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot3d_plane_set_color ()">
+<a name="gtk-plot3d-plane-set-color"></a><h3>gtk_plot3d_plane_set_color ()</h3>
+<pre class="programlisting">void                gtk_plot3d_plane_set_color          (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a class="link" href="GtkPlot3D.html#GtkPlotPlane" title="enum GtkPlotPlane">GtkPlotPlane</a> plane,
+                                                         const <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Colormaps-and-Colors.html#GdkColor"
+>GdkColor</a> *color);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>plot</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>plane</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>color</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot3d_plane_set_visible ()">
+<a name="gtk-plot3d-plane-set-visible"></a><h3>gtk_plot3d_plane_set_visible ()</h3>
+<pre class="programlisting">void                gtk_plot3d_plane_set_visible        (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a class="link" href="GtkPlot3D.html#GtkPlotPlane" title="enum GtkPlotPlane">GtkPlotPlane</a> plane,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> visible);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>plot</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>plane</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>visible</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot3d_plane_visible ()">
+<a name="gtk-plot3d-plane-visible"></a><h3>gtk_plot3d_plane_visible ()</h3>
+<pre class="programlisting"><a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>            gtk_plot3d_plane_visible            (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a class="link" href="GtkPlot3D.html#GtkPlotPlane" title="enum GtkPlotPlane">GtkPlotPlane</a> plane);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>plot</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlot3D.html" title="GtkPlot3D"><span class="type">GtkPlot3D</span></a> widget.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>plane</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot3d_corner_set_visible ()">
+<a name="gtk-plot3d-corner-set-visible"></a><h3>gtk_plot3d_corner_set_visible ()</h3>
+<pre class="programlisting">void                gtk_plot3d_corner_set_visible       (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> visible);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>plot</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlot3D.html" title="GtkPlot3D"><span class="type">GtkPlot3D</span></a> widget.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>visible</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot3d_corner_visible ()">
+<a name="gtk-plot3d-corner-visible"></a><h3>gtk_plot3d_corner_visible ()</h3>
+<pre class="programlisting"><a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>            gtk_plot3d_corner_visible           (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>plot</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlot3D.html" title="GtkPlot3D"><span class="type">GtkPlot3D</span></a> widget.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot3d_corner_set_attributes ()">
+<a name="gtk-plot3d-corner-set-attributes"></a><h3>gtk_plot3d_corner_set_attributes ()</h3>
+<pre class="programlisting">void                gtk_plot3d_corner_set_attributes    (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a class="link" href="GtkPlot.html#GtkPlotLineStyle" title="enum GtkPlotLineStyle">GtkPlotLineStyle</a> style,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gfloat"
+>gfloat</a> width,
+                                                         const <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Colormaps-and-Colors.html#GdkColor"
+>GdkColor</a> *color);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>plot</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlot3D.html" title="GtkPlot3D"><span class="type">GtkPlot3D</span></a> widget.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>style</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>width</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>color</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot3d_corner_get_attributes ()">
+<a name="gtk-plot3d-corner-get-attributes"></a><h3>gtk_plot3d_corner_get_attributes ()</h3>
+<pre class="programlisting">void                gtk_plot3d_corner_get_attributes    (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a class="link" href="GtkPlot.html#GtkPlotLineStyle" title="enum GtkPlotLineStyle">GtkPlotLineStyle</a> *style,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gfloat"
+>gfloat</a> *width,
+                                                         <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Colormaps-and-Colors.html#GdkColor"
+>GdkColor</a> *color);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>plot</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>style</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>width</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>color</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot3d_frame_set_attributes ()">
+<a name="gtk-plot3d-frame-set-attributes"></a><h3>gtk_plot3d_frame_set_attributes ()</h3>
+<pre class="programlisting">void                gtk_plot3d_frame_set_attributes     (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a class="link" href="GtkPlot.html#GtkPlotLineStyle" title="enum GtkPlotLineStyle">GtkPlotLineStyle</a> style,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gfloat"
+>gfloat</a> width,
+                                                         const <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Colormaps-and-Colors.html#GdkColor"
+>GdkColor</a> *color);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>plot</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlot3D.html" title="GtkPlot3D"><span class="type">GtkPlot3D</span></a> widget.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>style</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>width</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>color</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot3d_frame_get_attributes ()">
+<a name="gtk-plot3d-frame-get-attributes"></a><h3>gtk_plot3d_frame_get_attributes ()</h3>
+<pre class="programlisting">void                gtk_plot3d_frame_get_attributes     (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a class="link" href="GtkPlot.html#GtkPlotLineStyle" title="enum GtkPlotLineStyle">GtkPlotLineStyle</a> *style,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gfloat"
+>gfloat</a> *width,
+                                                         <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Colormaps-and-Colors.html#GdkColor"
+>GdkColor</a> *color);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>plot</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlot3D.html" title="GtkPlot3D"><span class="type">GtkPlot3D</span></a> widget.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>style</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>width</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>color</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot3d_get_axis ()">
+<a name="gtk-plot3d-get-axis"></a><h3>gtk_plot3d_get_axis ()</h3>
+<pre class="programlisting"><a class="link" href="GtkPlot.html#GtkPlotAxis">GtkPlotAxis</a> *       gtk_plot3d_get_axis                 (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a class="link" href="GtkPlot.html#GtkPlotOrientation" title="enum GtkPlotOrientation">GtkPlotOrientation</a> orientation);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>plot</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlot3D.html" title="GtkPlot3D"><span class="type">GtkPlot3D</span></a> widget.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>orientation</code></em> :</span></p></td>
+<td> of axis to be returned
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> (transfer none) the <a class="link" href="GtkPlot.html#GtkPlotAxis"><span class="type">GtkPlotAxis</span></a> with given 
+orientation 
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot3d_get_side ()">
+<a name="gtk-plot3d-get-side"></a><h3>gtk_plot3d_get_side ()</h3>
+<pre class="programlisting"><a class="link" href="GtkPlot.html#GtkPlotAxis">GtkPlotAxis</a> *       gtk_plot3d_get_side                 (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a class="link" href="GtkPlot3D.html#GtkPlotSide" title="enum GtkPlotSide">GtkPlotSide</a> side);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>plot</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlot3D.html" title="GtkPlot3D"><span class="type">GtkPlot3D</span></a> widget.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>side</code></em> :</span></p></td>
+<td> <a class="link" href="GtkPlot3D.html#GtkPlotSide" title="enum GtkPlotSide"><span class="type">GtkPlotSide</span></a> of the wanted axis
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>transfer none. <a href="http://foldoc.doc.ic.ac.uk/foldoc/foldoc.cgi?query=transfer"><span class="acronym">transfer</span></a> none. </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot3d_show_major_ticks ()">
+<a name="gtk-plot3d-show-major-ticks"></a><h3>gtk_plot3d_show_major_ticks ()</h3>
+<pre class="programlisting">void                gtk_plot3d_show_major_ticks         (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a class="link" href="GtkPlot3D.html#GtkPlotSide" title="enum GtkPlotSide">GtkPlotSide</a> side,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> ticks_mask);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>plot</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlot3D.html" title="GtkPlot3D"><span class="type">GtkPlot3D</span></a> widget.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>side</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>ticks_mask</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot3d_show_minor_ticks ()">
+<a name="gtk-plot3d-show-minor-ticks"></a><h3>gtk_plot3d_show_minor_ticks ()</h3>
+<pre class="programlisting">void                gtk_plot3d_show_minor_ticks         (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a class="link" href="GtkPlot3D.html#GtkPlotSide" title="enum GtkPlotSide">GtkPlotSide</a> side,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> ticks_mask);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>plot</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlot3D.html" title="GtkPlot3D"><span class="type">GtkPlot3D</span></a> widget.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>side</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>ticks_mask</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot3d_show_labels ()">
+<a name="gtk-plot3d-show-labels"></a><h3>gtk_plot3d_show_labels ()</h3>
+<pre class="programlisting">void                gtk_plot3d_show_labels              (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a class="link" href="GtkPlot3D.html#GtkPlotSide" title="enum GtkPlotSide">GtkPlotSide</a> side,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> label_mask);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>plot</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlot3D.html" title="GtkPlot3D"><span class="type">GtkPlot3D</span></a> widget.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>side</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>label_mask</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot3d_show_title ()">
+<a name="gtk-plot3d-show-title"></a><h3>gtk_plot3d_show_title ()</h3>
+<pre class="programlisting">void                gtk_plot3d_show_title               (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a class="link" href="GtkPlot3D.html#GtkPlotSide" title="enum GtkPlotSide">GtkPlotSide</a> side);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>plot</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlot3D.html" title="GtkPlot3D"><span class="type">GtkPlot3D</span></a> widget.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>side</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot3d_hide_title ()">
+<a name="gtk-plot3d-hide-title"></a><h3>gtk_plot3d_hide_title ()</h3>
+<pre class="programlisting">void                gtk_plot3d_hide_title               (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a class="link" href="GtkPlot3D.html#GtkPlotSide" title="enum GtkPlotSide">GtkPlotSide</a> side);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>plot</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlot3D.html" title="GtkPlot3D"><span class="type">GtkPlot3D</span></a> widget.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>side</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot3d_set_ticks ()">
+<a name="gtk-plot3d-set-ticks"></a><h3>gtk_plot3d_set_ticks ()</h3>
+<pre class="programlisting">void                gtk_plot3d_set_ticks                (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a class="link" href="GtkPlot.html#GtkPlotOrientation" title="enum GtkPlotOrientation">GtkPlotOrientation</a> direction,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> major_step,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> nminor);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>plot</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlot3D.html" title="GtkPlot3D"><span class="type">GtkPlot3D</span></a> widget.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>direction</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>major_step</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>nminor</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot3d_set_major_ticks ()">
+<a name="gtk-plot3d-set-major-ticks"></a><h3>gtk_plot3d_set_major_ticks ()</h3>
+<pre class="programlisting">void                gtk_plot3d_set_major_ticks          (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a class="link" href="GtkPlot.html#GtkPlotOrientation" title="enum GtkPlotOrientation">GtkPlotOrientation</a> direction,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> major_step);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>plot</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlot3D.html" title="GtkPlot3D"><span class="type">GtkPlot3D</span></a> widget.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>direction</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>major_step</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot3d_set_minor_ticks ()">
+<a name="gtk-plot3d-set-minor-ticks"></a><h3>gtk_plot3d_set_minor_ticks ()</h3>
+<pre class="programlisting">void                gtk_plot3d_set_minor_ticks          (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a class="link" href="GtkPlot.html#GtkPlotOrientation" title="enum GtkPlotOrientation">GtkPlotOrientation</a> direction,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> nminor);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>plot</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlot3D.html" title="GtkPlot3D"><span class="type">GtkPlot3D</span></a> widget.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>direction</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>nminor</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot3d_set_ticks_length ()">
+<a name="gtk-plot3d-set-ticks-length"></a><h3>gtk_plot3d_set_ticks_length ()</h3>
+<pre class="programlisting">void                gtk_plot3d_set_ticks_length         (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a class="link" href="GtkPlot.html#GtkPlotOrientation" title="enum GtkPlotOrientation">GtkPlotOrientation</a> direction,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> length);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>plot</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlot3D.html" title="GtkPlot3D"><span class="type">GtkPlot3D</span></a> widget.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>direction</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>length</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot3d_set_ticks_width ()">
+<a name="gtk-plot3d-set-ticks-width"></a><h3>gtk_plot3d_set_ticks_width ()</h3>
+<pre class="programlisting">void                gtk_plot3d_set_ticks_width          (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a class="link" href="GtkPlot.html#GtkPlotOrientation" title="enum GtkPlotOrientation">GtkPlotOrientation</a> direction,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gfloat"
+>gfloat</a> width);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>plot</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlot3D.html" title="GtkPlot3D"><span class="type">GtkPlot3D</span></a> widget.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>direction</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>width</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot3d_show_ticks ()">
+<a name="gtk-plot3d-show-ticks"></a><h3>gtk_plot3d_show_ticks ()</h3>
+<pre class="programlisting">void                gtk_plot3d_show_ticks               (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a class="link" href="GtkPlot3D.html#GtkPlotSide" title="enum GtkPlotSide">GtkPlotSide</a> side,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> major_mask,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> minor_mask);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>plot</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlot3D.html" title="GtkPlot3D"><span class="type">GtkPlot3D</span></a> widget.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>side</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>major_mask</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>minor_mask</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot3d_set_titles_offset ()">
+<a name="gtk-plot3d-set-titles-offset"></a><h3>gtk_plot3d_set_titles_offset ()</h3>
+<pre class="programlisting">void                gtk_plot3d_set_titles_offset        (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> offset);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>plot</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlot3D.html" title="GtkPlot3D"><span class="type">GtkPlot3D</span></a> widget.
+<em class="parameter"><code>offset</code></em>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>offset</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot3d_get_titles_offset ()">
+<a name="gtk-plot3d-get-titles-offset"></a><h3>gtk_plot3d_get_titles_offset ()</h3>
+<pre class="programlisting"><a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                gtk_plot3d_get_titles_offset        (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>plot</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlot3D.html" title="GtkPlot3D"><span class="type">GtkPlot3D</span></a> widget.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot3d_set_scale ()">
+<a name="gtk-plot3d-set-scale"></a><h3>gtk_plot3d_set_scale ()</h3>
+<pre class="programlisting">void                gtk_plot3d_set_scale                (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a class="link" href="GtkPlot.html#GtkPlotOrientation" title="enum GtkPlotOrientation">GtkPlotOrientation</a> axis,
+                                                         <a class="link" href="GtkPlot.html#GtkPlotScale" title="enum GtkPlotScale">GtkPlotScale</a> scale);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>plot</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlot3D.html" title="GtkPlot3D"><span class="type">GtkPlot3D</span></a> widget.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>axis</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>scale</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot3d_get_scale ()">
+<a name="gtk-plot3d-get-scale"></a><h3>gtk_plot3d_get_scale ()</h3>
+<pre class="programlisting"><a class="link" href="GtkPlot.html#GtkPlotScale" title="enum GtkPlotScale">GtkPlotScale</a>        gtk_plot3d_get_scale                (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a class="link" href="GtkPlot.html#GtkPlotOrientation" title="enum GtkPlotOrientation">GtkPlotOrientation</a> axis);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>plot</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlot3D.html" title="GtkPlot3D"><span class="type">GtkPlot3D</span></a> widget.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>axis</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot3d_major_grids_set_visible ()">
+<a name="gtk-plot3d-major-grids-set-visible"></a><h3>gtk_plot3d_major_grids_set_visible ()</h3>
+<pre class="programlisting">void                gtk_plot3d_major_grids_set_visible  (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> x,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> y,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> z);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>plot</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlot3D.html" title="GtkPlot3D"><span class="type">GtkPlot3D</span></a> widget.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>x</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>y</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>z</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot3d_minor_grids_set_visible ()">
+<a name="gtk-plot3d-minor-grids-set-visible"></a><h3>gtk_plot3d_minor_grids_set_visible ()</h3>
+<pre class="programlisting">void                gtk_plot3d_minor_grids_set_visible  (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> x,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> y,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> z);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>plot</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlot3D.html" title="GtkPlot3D"><span class="type">GtkPlot3D</span></a> widget.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>x</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>y</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>z</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot3d_major_grids_visible ()">
+<a name="gtk-plot3d-major-grids-visible"></a><h3>gtk_plot3d_major_grids_visible ()</h3>
+<pre class="programlisting">void                gtk_plot3d_major_grids_visible      (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> *x,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> *y,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> *z);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>plot</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlot3D.html" title="GtkPlot3D"><span class="type">GtkPlot3D</span></a> widget.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>x</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>y</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>z</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot3d_minor_grids_visible ()">
+<a name="gtk-plot3d-minor-grids-visible"></a><h3>gtk_plot3d_minor_grids_visible ()</h3>
+<pre class="programlisting">void                gtk_plot3d_minor_grids_visible      (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> *x,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> *y,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> *z);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>plot</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlot3D.html" title="GtkPlot3D"><span class="type">GtkPlot3D</span></a> widget.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>x</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>y</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>z</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot3d_major_zgrid_set_attributes ()">
+<a name="gtk-plot3d-major-zgrid-set-attributes"></a><h3>gtk_plot3d_major_zgrid_set_attributes ()</h3>
+<pre class="programlisting">void                gtk_plot3d_major_zgrid_set_attributes
+                                                        (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a class="link" href="GtkPlot.html#GtkPlotLineStyle" title="enum GtkPlotLineStyle">GtkPlotLineStyle</a> style,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gfloat"
+>gfloat</a> width,
+                                                         const <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Colormaps-and-Colors.html#GdkColor"
+>GdkColor</a> *color);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>plot</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlot3D.html" title="GtkPlot3D"><span class="type">GtkPlot3D</span></a> widget.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>style</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>width</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>color</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot3d_major_zgrid_get_attributes ()">
+<a name="gtk-plot3d-major-zgrid-get-attributes"></a><h3>gtk_plot3d_major_zgrid_get_attributes ()</h3>
+<pre class="programlisting">void                gtk_plot3d_major_zgrid_get_attributes
+                                                        (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a class="link" href="GtkPlot.html#GtkPlotLineStyle" title="enum GtkPlotLineStyle">GtkPlotLineStyle</a> *style,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gfloat"
+>gfloat</a> *width,
+                                                         <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Colormaps-and-Colors.html#GdkColor"
+>GdkColor</a> *color);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>plot</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlot3D.html" title="GtkPlot3D"><span class="type">GtkPlot3D</span></a> widget.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>style</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>width</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>color</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot3d_minor_zgrid_set_attributes ()">
+<a name="gtk-plot3d-minor-zgrid-set-attributes"></a><h3>gtk_plot3d_minor_zgrid_set_attributes ()</h3>
+<pre class="programlisting">void                gtk_plot3d_minor_zgrid_set_attributes
+                                                        (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a class="link" href="GtkPlot.html#GtkPlotLineStyle" title="enum GtkPlotLineStyle">GtkPlotLineStyle</a> style,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gfloat"
+>gfloat</a> width,
+                                                         const <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Colormaps-and-Colors.html#GdkColor"
+>GdkColor</a> *color);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>plot</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlot3D.html" title="GtkPlot3D"><span class="type">GtkPlot3D</span></a> widget.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>style</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>width</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>color</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot3d_minor_zgrid_get_attributes ()">
+<a name="gtk-plot3d-minor-zgrid-get-attributes"></a><h3>gtk_plot3d_minor_zgrid_get_attributes ()</h3>
+<pre class="programlisting">void                gtk_plot3d_minor_zgrid_get_attributes
+                                                        (<a class="link" href="GtkPlot3D.html" title="GtkPlot3D">GtkPlot3D</a> *plot,
+                                                         <a class="link" href="GtkPlot.html#GtkPlotLineStyle" title="enum GtkPlotLineStyle">GtkPlotLineStyle</a> *style,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gfloat"
+>gfloat</a> *width,
+                                                         <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Colormaps-and-Colors.html#GdkColor"
+>GdkColor</a> *color);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>plot</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlot3D.html" title="GtkPlot3D"><span class="type">GtkPlot3D</span></a> widget.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>style</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>width</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>color</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1" title="Property Details">
+<a name="GtkPlot3D.property-details"></a><h2>Property Details</h2>
+<div class="refsect2" title='The "a1" property'>
+<a name="GtkPlot3D--a1"></a><h3>The <code class="literal">"a1"</code> property</h3>
+<pre class="programlisting">  "a1"                       <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a>               : Read / Write</pre>
+<p>
+</p>
+<p>
+</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2" title='The "a2" property'>
+<a name="GtkPlot3D--a2"></a><h3>The <code class="literal">"a2"</code> property</h3>
+<pre class="programlisting">  "a2"                       <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a>               : Read / Write</pre>
+<p>
+</p>
+<p>
+</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2" title='The "a3" property'>
+<a name="GtkPlot3D--a3"></a><h3>The <code class="literal">"a3"</code> property</h3>
+<pre class="programlisting">  "a3"                       <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a>               : Read / Write</pre>
+<p>
+</p>
+<p>
+</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2" title='The "center-vector" property'>
+<a name="GtkPlot3D--center-vector"></a><h3>The <code class="literal">"center-vector"</code> property</h3>
+<pre class="programlisting">  "center-vector"            <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"
+>gpointer</a>              : Read / Write</pre>
+<p>Position of the center point.</p>
+</div>
+<hr>
+<div class="refsect2" title='The "color-xy" property'>
+<a name="GtkPlot3D--color-xy"></a><h3>The <code class="literal">"color-xy"</code> property</h3>
+<pre class="programlisting">  "color-xy"                 <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"
+>gpointer</a>              : Read / Write</pre>
+<p>Color of XY Plane.</p>
+</div>
+<hr>
+<div class="refsect2" title='The "color-yz" property'>
+<a name="GtkPlot3D--color-yz"></a><h3>The <code class="literal">"color-yz"</code> property</h3>
+<pre class="programlisting">  "color-yz"                 <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"
+>gpointer</a>              : Read / Write</pre>
+<p>Color of YZ Plane.</p>
+</div>
+<hr>
+<div class="refsect2" title='The "color-zx" property'>
+<a name="GtkPlot3D--color-zx"></a><h3>The <code class="literal">"color-zx"</code> property</h3>
+<pre class="programlisting">  "color-zx"                 <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"
+>gpointer</a>              : Read / Write</pre>
+<p>Color of ZX Plane.</p>
+</div>
+<hr>
+<div class="refsect2" title='The "corner-line" property'>
+<a name="GtkPlot3D--corner-line"></a><h3>The <code class="literal">"corner-line"</code> property</h3>
+<pre class="programlisting">  "corner-line"              <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"
+>gpointer</a>              : Read / Write</pre>
+<p>Corner Line.</p>
+</div>
+<hr>
+<div class="refsect2" title='The "corner-visible" property'>
+<a name="GtkPlot3D--corner-visible"></a><h3>The <code class="literal">"corner-visible"</code> property</h3>
+<pre class="programlisting">  "corner-visible"           <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write</pre>
+<p>Draw the entire cube.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2" title='The "e1-vector" property'>
+<a name="GtkPlot3D--e1-vector"></a><h3>The <code class="literal">"e1-vector"</code> property</h3>
+<pre class="programlisting">  "e1-vector"                <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"
+>gpointer</a>              : Read / Write</pre>
+<p>Vector e1.</p>
+</div>
+<hr>
+<div class="refsect2" title='The "e2-vector" property'>
+<a name="GtkPlot3D--e2-vector"></a><h3>The <code class="literal">"e2-vector"</code> property</h3>
+<pre class="programlisting">  "e2-vector"                <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"
+>gpointer</a>              : Read / Write</pre>
+<p>Vector e2.</p>
+</div>
+<hr>
+<div class="refsect2" title='The "e3-vector" property'>
+<a name="GtkPlot3D--e3-vector"></a><h3>The <code class="literal">"e3-vector"</code> property</h3>
+<pre class="programlisting">  "e3-vector"                <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"
+>gpointer</a>              : Read / Write</pre>
+<p>Vector e3.</p>
+</div>
+<hr>
+<div class="refsect2" title='The "frame-line" property'>
+<a name="GtkPlot3D--frame-line"></a><h3>The <code class="literal">"frame-line"</code> property</h3>
+<pre class="programlisting">  "frame-line"               <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"
+>gpointer</a>              : Read / Write</pre>
+<p>Frame Line.</p>
+</div>
+<hr>
+<div class="refsect2" title='The "origin-vector" property'>
+<a name="GtkPlot3D--origin-vector"></a><h3>The <code class="literal">"origin-vector"</code> property</h3>
+<pre class="programlisting">  "origin-vector"            <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"
+>gpointer</a>              : Read / Write</pre>
+<p>Position of the origin.</p>
+</div>
+<hr>
+<div class="refsect2" title='The "titles-offset" property'>
+<a name="GtkPlot3D--titles-offset"></a><h3>The <code class="literal">"titles-offset"</code> property</h3>
+<pre class="programlisting">  "titles-offset"            <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write</pre>
+<p>Titles distance from the axes.</p>
+<p>Allowed values: &gt;= -2147483647</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2" title='The "xfactor" property'>
+<a name="GtkPlot3D--xfactor"></a><h3>The <code class="literal">"xfactor"</code> property</h3>
+<pre class="programlisting">  "xfactor"                  <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a>               : Read / Write</pre>
+<p>
+</p>
+<p>
+</p>
+<p>Allowed values: &gt;= 0</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2" title='The "xy-label-mask" property'>
+<a name="GtkPlot3D--xy-label-mask"></a><h3>The <code class="literal">"xy-label-mask"</code> property</h3>
+<pre class="programlisting">  "xy-label-mask"            <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write</pre>
+<p>XY label mask.</p>
+<p>Allowed values: [0,3]</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2" title='The "xy-major-mask" property'>
+<a name="GtkPlot3D--xy-major-mask"></a><h3>The <code class="literal">"xy-major-mask"</code> property</h3>
+<pre class="programlisting">  "xy-major-mask"            <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write</pre>
+<p>XY major mask.</p>
+<p>Allowed values: [0,3]</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2" title='The "xy-minor-mask" property'>
+<a name="GtkPlot3D--xy-minor-mask"></a><h3>The <code class="literal">"xy-minor-mask"</code> property</h3>
+<pre class="programlisting">  "xy-minor-mask"            <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write</pre>
+<p>XY minor mask.</p>
+<p>Allowed values: [0,3]</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2" title='The "xy-title-visible" property'>
+<a name="GtkPlot3D--xy-title-visible"></a><h3>The <code class="literal">"xy-title-visible"</code> property</h3>
+<pre class="programlisting">  "xy-title-visible"         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write</pre>
+<p>XY title Visible.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2" title='The "xy-visible" property'>
+<a name="GtkPlot3D--xy-visible"></a><h3>The <code class="literal">"xy-visible"</code> property</h3>
+<pre class="programlisting">  "xy-visible"               <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write</pre>
+<p>XY Plane visible.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2" title='The "xz-label-mask" property'>
+<a name="GtkPlot3D--xz-label-mask"></a><h3>The <code class="literal">"xz-label-mask"</code> property</h3>
+<pre class="programlisting">  "xz-label-mask"            <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write</pre>
+<p>XZ label mask.</p>
+<p>Allowed values: [0,3]</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2" title='The "xz-major-mask" property'>
+<a name="GtkPlot3D--xz-major-mask"></a><h3>The <code class="literal">"xz-major-mask"</code> property</h3>
+<pre class="programlisting">  "xz-major-mask"            <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write</pre>
+<p>XZ major mask.</p>
+<p>Allowed values: [0,3]</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2" title='The "xz-minor-mask" property'>
+<a name="GtkPlot3D--xz-minor-mask"></a><h3>The <code class="literal">"xz-minor-mask"</code> property</h3>
+<pre class="programlisting">  "xz-minor-mask"            <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write</pre>
+<p>XZ minor mask.</p>
+<p>Allowed values: [0,3]</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2" title='The "xz-title-visible" property'>
+<a name="GtkPlot3D--xz-title-visible"></a><h3>The <code class="literal">"xz-title-visible"</code> property</h3>
+<pre class="programlisting">  "xz-title-visible"         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write</pre>
+<p>XZ title Visible.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2" title='The "yfactor" property'>
+<a name="GtkPlot3D--yfactor"></a><h3>The <code class="literal">"yfactor"</code> property</h3>
+<pre class="programlisting">  "yfactor"                  <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a>               : Read / Write</pre>
+<p>
+</p>
+<p>
+</p>
+<p>Allowed values: &gt;= 0</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2" title='The "yx-label-mask" property'>
+<a name="GtkPlot3D--yx-label-mask"></a><h3>The <code class="literal">"yx-label-mask"</code> property</h3>
+<pre class="programlisting">  "yx-label-mask"            <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write</pre>
+<p>YX label mask.</p>
+<p>Allowed values: [0,3]</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2" title='The "yx-major-mask" property'>
+<a name="GtkPlot3D--yx-major-mask"></a><h3>The <code class="literal">"yx-major-mask"</code> property</h3>
+<pre class="programlisting">  "yx-major-mask"            <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write</pre>
+<p>YX major mask.</p>
+<p>Allowed values: [0,3]</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2" title='The "yx-minor-mask" property'>
+<a name="GtkPlot3D--yx-minor-mask"></a><h3>The <code class="literal">"yx-minor-mask"</code> property</h3>
+<pre class="programlisting">  "yx-minor-mask"            <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write</pre>
+<p>YX minor mask.</p>
+<p>Allowed values: [0,3]</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2" title='The "yx-title-visible" property'>
+<a name="GtkPlot3D--yx-title-visible"></a><h3>The <code class="literal">"yx-title-visible"</code> property</h3>
+<pre class="programlisting">  "yx-title-visible"         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write</pre>
+<p>YX title Visible.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2" title='The "yz-label-mask" property'>
+<a name="GtkPlot3D--yz-label-mask"></a><h3>The <code class="literal">"yz-label-mask"</code> property</h3>
+<pre class="programlisting">  "yz-label-mask"            <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write</pre>
+<p>YZ label mask.</p>
+<p>Allowed values: [0,3]</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2" title='The "yz-major-mask" property'>
+<a name="GtkPlot3D--yz-major-mask"></a><h3>The <code class="literal">"yz-major-mask"</code> property</h3>
+<pre class="programlisting">  "yz-major-mask"            <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write</pre>
+<p>YZ major mask.</p>
+<p>Allowed values: [0,3]</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2" title='The "yz-minor-mask" property'>
+<a name="GtkPlot3D--yz-minor-mask"></a><h3>The <code class="literal">"yz-minor-mask"</code> property</h3>
+<pre class="programlisting">  "yz-minor-mask"            <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write</pre>
+<p>YZ minor mask.</p>
+<p>Allowed values: [0,3]</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2" title='The "yz-title-visible" property'>
+<a name="GtkPlot3D--yz-title-visible"></a><h3>The <code class="literal">"yz-title-visible"</code> property</h3>
+<pre class="programlisting">  "yz-title-visible"         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write</pre>
+<p>YZ title Visible.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2" title='The "yz-visible" property'>
+<a name="GtkPlot3D--yz-visible"></a><h3>The <code class="literal">"yz-visible"</code> property</h3>
+<pre class="programlisting">  "yz-visible"               <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write</pre>
+<p>YZ Plane visible.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2" title='The "zfactor" property'>
+<a name="GtkPlot3D--zfactor"></a><h3>The <code class="literal">"zfactor"</code> property</h3>
+<pre class="programlisting">  "zfactor"                  <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a>               : Read / Write</pre>
+<p>
+</p>
+<p>
+</p>
+<p>Allowed values: &gt;= 0</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2" title='The "zmax" property'>
+<a name="GtkPlot3D--zmax"></a><h3>The <code class="literal">"zmax"</code> property</h3>
+<pre class="programlisting">  "zmax"                     <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a>               : Read / Write</pre>
+<p>
+</p>
+<p>
+</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2" title='The "zmin" property'>
+<a name="GtkPlot3D--zmin"></a><h3>The <code class="literal">"zmin"</code> property</h3>
+<pre class="programlisting">  "zmin"                     <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a>               : Read / Write</pre>
+<p>
+</p>
+<p>
+</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2" title='The "zscale" property'>
+<a name="GtkPlot3D--zscale"></a><h3>The <code class="literal">"zscale"</code> property</h3>
+<pre class="programlisting">  "zscale"                   <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write</pre>
+<p>
+</p>
+<p>
+</p>
+<p>Allowed values: &gt;= 0</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2" title='The "zx-label-mask" property'>
+<a name="GtkPlot3D--zx-label-mask"></a><h3>The <code class="literal">"zx-label-mask"</code> property</h3>
+<pre class="programlisting">  "zx-label-mask"            <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write</pre>
+<p>ZX label mask.</p>
+<p>Allowed values: [0,3]</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2" title='The "zx-major-mask" property'>
+<a name="GtkPlot3D--zx-major-mask"></a><h3>The <code class="literal">"zx-major-mask"</code> property</h3>
+<pre class="programlisting">  "zx-major-mask"            <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write</pre>
+<p>ZX major mask.</p>
+<p>Allowed values: [0,3]</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2" title='The "zx-minor-mask" property'>
+<a name="GtkPlot3D--zx-minor-mask"></a><h3>The <code class="literal">"zx-minor-mask"</code> property</h3>
+<pre class="programlisting">  "zx-minor-mask"            <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write</pre>
+<p>ZX minor mask.</p>
+<p>Allowed values: [0,3]</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2" title='The "zx-title-visible" property'>
+<a name="GtkPlot3D--zx-title-visible"></a><h3>The <code class="literal">"zx-title-visible"</code> property</h3>
+<pre class="programlisting">  "zx-title-visible"         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write</pre>
+<p>ZX title Visible.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2" title='The "zx-visible" property'>
+<a name="GtkPlot3D--zx-visible"></a><h3>The <code class="literal">"zx-visible"</code> property</h3>
+<pre class="programlisting">  "zx-visible"               <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write</pre>
+<p>ZX Plane visible.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2" title='The "zy-label-mask" property'>
+<a name="GtkPlot3D--zy-label-mask"></a><h3>The <code class="literal">"zy-label-mask"</code> property</h3>
+<pre class="programlisting">  "zy-label-mask"            <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write</pre>
+<p>ZY label mask.</p>
+<p>Allowed values: [0,3]</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2" title='The "zy-major-mask" property'>
+<a name="GtkPlot3D--zy-major-mask"></a><h3>The <code class="literal">"zy-major-mask"</code> property</h3>
+<pre class="programlisting">  "zy-major-mask"            <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write</pre>
+<p>ZY major mask.</p>
+<p>Allowed values: [0,3]</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2" title='The "zy-minor-mask" property'>
+<a name="GtkPlot3D--zy-minor-mask"></a><h3>The <code class="literal">"zy-minor-mask"</code> property</h3>
+<pre class="programlisting">  "zy-minor-mask"            <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write</pre>
+<p>ZY minor mask.</p>
+<p>Allowed values: [0,3]</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2" title='The "zy-title-visible" property'>
+<a name="GtkPlot3D--zy-title-visible"></a><h3>The <code class="literal">"zy-title-visible"</code> property</h3>
+<pre class="programlisting">  "zy-title-visible"         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write</pre>
+<p>ZY title Visible.</p>
+<p>Default value: FALSE</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.11</div>
+</body>
+</html>

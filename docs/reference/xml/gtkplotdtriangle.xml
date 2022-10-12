@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+<!ENTITY version SYSTEM "version.xml">
+]>
+<!--ENTITY index-Objects-Grouped SYSTEM "objects_grouped.sgml"-->
+<refentry id="gtkextra-GtkPlotDTriangle">
+<refmeta>
+<refentrytitle role="top_of_page" id="gtkextra-GtkPlotDTriangle.top_of_page">GtkPlotDTriangle</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GTKEXTRA Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>GtkPlotDTriangle</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="gtkextra-GtkPlotDTriangle.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>
+
+#include &lt;gtkextra.h&gt;
+
+<link linkend="void">void</link>                <link linkend="triangulate">triangulate</link>                         (<link linkend="char">char</link> *,
+                                                         <link linkend="struct-triangulateio">struct triangulateio</link> *,
+                                                         <link linkend="struct-triangulateio">struct triangulateio</link> *,
+                                                         <link linkend="struct-triangulateio">struct triangulateio</link> *);
+</synopsis>
+</refsynopsisdiv>
+
+
+
+
+
+
+
+
+
+<refsect1 id="gtkextra-GtkPlotDTriangle.description" role="desc">
+<title role="desc.title">Description</title>
+<para>
+</para>
+</refsect1>
+
+<refsect1 id="gtkextra-GtkPlotDTriangle.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="triangulate" role="function">
+<title>triangulate ()</title>
+<indexterm zone="triangulate"><primary sortas="triangulate">triangulate</primary></indexterm><programlisting><link linkend="void">void</link>                triangulate                         (<link linkend="char">char</link> *,
+                                                         <link linkend="struct-triangulateio">struct triangulateio</link> *,
+                                                         <link linkend="struct-triangulateio">struct triangulateio</link> *,
+                                                         <link linkend="struct-triangulateio">struct triangulateio</link> *);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>Param1</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>Param2</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>Param3</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>Param4</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+
+
+
+
+</refentry>

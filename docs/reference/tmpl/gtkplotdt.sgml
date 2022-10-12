@@ -1,0 +1,116 @@
+<!-- ##### SECTION Title ##### -->
+GtkPlotDT
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### STRUCT GtkPlotDT ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### STRUCT GtkPlotDTnode ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### STRUCT GtkPlotDTsegment ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### STRUCT GtkPlotDTtriangle ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### USER_FUNCTION GtkPlotDTprogressbarFunc ##### -->
+<para>
+
+</para>
+
+@progress: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_dt_new ##### -->
+<para>
+
+</para>
+
+@num: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_dt_set_quadrilateral ##### -->
+<para>
+
+</para>
+
+@dt: 
+@set: 
+
+
+<!-- ##### FUNCTION gtk_plot_dt_set_subsampling ##### -->
+<para>
+
+</para>
+
+@dt: 
+@set: 
+
+
+<!-- ##### FUNCTION gtk_plot_dt_add_node ##### -->
+<para>
+
+</para>
+
+@data: 
+@node: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_dt_get_node ##### -->
+<para>
+
+</para>
+
+@data: 
+@idx: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_dt_triangulate ##### -->
+<para>
+
+</para>
+
+@data: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_dt_clear ##### -->
+<para>
+
+</para>
+
+@data: 
+
+

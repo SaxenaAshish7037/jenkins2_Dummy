@@ -1,0 +1,514 @@
+<!-- ##### SECTION Title ##### -->
+GtkPlotCanvas
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### STRUCT GtkPlotCanvas ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SIGNAL GtkPlotCanvas::add-item ##### -->
+<para>
+
+</para>
+
+@plotcanvas: the object which received the signal.
+@arg1: 
+
+<!-- ##### SIGNAL GtkPlotCanvas::changed ##### -->
+<para>
+
+</para>
+
+@plotcanvas: the object which received the signal.
+
+<!-- ##### SIGNAL GtkPlotCanvas::delete-item ##### -->
+<para>
+
+</para>
+
+@plotcanvas: the object which received the signal.
+@arg1: 
+@Returns: 
+
+<!-- ##### SIGNAL GtkPlotCanvas::move-item ##### -->
+<para>
+
+</para>
+
+@plotcanvas: the object which received the signal.
+@arg1: 
+@arg2: 
+@arg3: 
+@Returns: 
+
+<!-- ##### SIGNAL GtkPlotCanvas::resize-item ##### -->
+<para>
+
+</para>
+
+@plotcanvas: the object which received the signal.
+@arg1: 
+@arg2: 
+@arg3: 
+@Returns: 
+
+<!-- ##### SIGNAL GtkPlotCanvas::select-item ##### -->
+<para>
+
+</para>
+
+@plotcanvas: the object which received the signal.
+@event: 
+@arg1: 
+@Returns: 
+
+<!-- ##### SIGNAL GtkPlotCanvas::select-region ##### -->
+<para>
+
+</para>
+
+@plotcanvas: the object which received the signal.
+@arg1: 
+@arg2: 
+@arg3: 
+@arg4: 
+
+<!-- ##### ARG GtkPlotCanvas:color-bg ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotCanvas:flags ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotCanvas:grid-step ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotCanvas:height ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotCanvas:line-grid ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotCanvas:magnification ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotCanvas:show-grid ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotCanvas:transparent ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotCanvas:width ##### -->
+<para>
+
+</para>
+
+<!-- ##### ENUM GtkPlotCanvasFlags ##### -->
+<para>
+
+</para>
+
+@GTK_PLOT_CANVAS_CAN_SELECT: 
+@GTK_PLOT_CANVAS_CAN_SELECT_ITEM: 
+@GTK_PLOT_CANVAS_CAN_DND: 
+
+<!-- ##### ENUM GtkPlotCanvasAction ##### -->
+<para>
+
+</para>
+
+@GTK_PLOT_CANVAS_ACTION_INACTIVE: 
+@GTK_PLOT_CANVAS_ACTION_SELECTION: 
+@GTK_PLOT_CANVAS_ACTION_DRAG: 
+@GTK_PLOT_CANVAS_ACTION_RESIZE: 
+
+<!-- ##### ENUM GtkPlotCanvasFlag ##### -->
+<para>
+
+</para>
+
+@GTK_PLOT_CANVAS_FROZEN: 
+@GTK_PLOT_CANVAS_CAN_MOVE: 
+@GTK_PLOT_CANVAS_CAN_RESIZE: 
+
+<!-- ##### ENUM GtkPlotCanvasSelection ##### -->
+<para>
+
+</para>
+
+@GTK_PLOT_CANVAS_SELECT_NONE: 
+@GTK_PLOT_CANVAS_SELECT_MARKERS: 
+@GTK_PLOT_CANVAS_SELECT_TARGET: 
+
+<!-- ##### ENUM GtkPlotCanvasSelectionMode ##### -->
+<para>
+
+</para>
+
+@GTK_PLOT_CANVAS_SELECT_CLICK_1: 
+@GTK_PLOT_CANVAS_SELECT_CLICK_2: 
+
+<!-- ##### ENUM GtkPlotCanvasPos ##### -->
+<para>
+
+</para>
+
+@GTK_PLOT_CANVAS_OUT: 
+@GTK_PLOT_CANVAS_IN: 
+@GTK_PLOT_CANVAS_LEFT: 
+@GTK_PLOT_CANVAS_RIGHT: 
+@GTK_PLOT_CANVAS_TOP: 
+@GTK_PLOT_CANVAS_BOTTOM: 
+@GTK_PLOT_CANVAS_TOP_LEFT: 
+@GTK_PLOT_CANVAS_TOP_RIGHT: 
+@GTK_PLOT_CANVAS_BOTTOM_LEFT: 
+@GTK_PLOT_CANVAS_BOTTOM_RIGHT: 
+
+<!-- ##### STRUCT GtkPlotCanvasChild ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### ENUM GtkPlotCanvasChildFlags ##### -->
+<para>
+
+</para>
+
+@GTK_PLOT_CANVAS_CHILD_FROZEN: 
+@GTK_PLOT_CANVAS_CHILD_CAN_MOVE: 
+@GTK_PLOT_CANVAS_CHILD_CAN_RESIZE: 
+
+<!-- ##### FUNCTION gtk_plot_canvas_new ##### -->
+<para>
+
+</para>
+
+@width: 
+@height: 
+@magnification: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_canvas_construct ##### -->
+<para>
+
+</para>
+
+@canvas: 
+@width: 
+@height: 
+@magnification: 
+
+
+<!-- ##### FUNCTION gtk_plot_canvas_flags ##### -->
+<para>
+
+</para>
+
+@canvas: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_canvas_set_flags ##### -->
+<para>
+
+</para>
+
+@canvas: 
+@flags: 
+
+
+<!-- ##### FUNCTION gtk_plot_canvas_unset_flags ##### -->
+<para>
+
+</para>
+
+@canvas: 
+@flags: 
+
+
+<!-- ##### FUNCTION gtk_plot_canvas_set_pc ##### -->
+<para>
+
+</para>
+
+@canvas: 
+@pc: 
+
+
+<!-- ##### FUNCTION gtk_plot_canvas_paint ##### -->
+<para>
+
+</para>
+
+@canvas: 
+
+
+<!-- ##### FUNCTION gtk_plot_canvas_refresh ##### -->
+<para>
+
+</para>
+
+@canvas: 
+
+
+<!-- ##### FUNCTION gtk_plot_canvas_freeze ##### -->
+<para>
+
+</para>
+
+@canvas: 
+
+
+<!-- ##### FUNCTION gtk_plot_canvas_thaw ##### -->
+<para>
+
+</para>
+
+@canvas: 
+
+
+<!-- ##### FUNCTION gtk_plot_canvas_grid_set_visible ##### -->
+<para>
+
+</para>
+
+@canvas: 
+@visible: 
+
+
+<!-- ##### FUNCTION gtk_plot_canvas_grid_set_step ##### -->
+<para>
+
+</para>
+
+@canvas: 
+@step: 
+
+
+<!-- ##### FUNCTION gtk_plot_canvas_grid_set_attributes ##### -->
+<para>
+
+</para>
+
+@canvas: 
+@style: 
+@width: 
+@color: 
+
+
+<!-- ##### FUNCTION gtk_plot_canvas_cancel_action ##### -->
+<para>
+
+</para>
+
+@plot_canvas: 
+
+
+<!-- ##### FUNCTION gtk_plot_canvas_unselect ##### -->
+<para>
+
+</para>
+
+@plot_canvas: 
+
+
+<!-- ##### FUNCTION gtk_plot_canvas_get_active_item ##### -->
+<para>
+
+</para>
+
+@canvas: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_canvas_set_size ##### -->
+<para>
+
+</para>
+
+@canvas: 
+@width: 
+@height: 
+
+
+<!-- ##### FUNCTION gtk_plot_canvas_set_magnification ##### -->
+<para>
+
+</para>
+
+@canvas: 
+@magnification: 
+
+
+<!-- ##### FUNCTION gtk_plot_canvas_set_transparent ##### -->
+<para>
+
+</para>
+
+@canvas: 
+@transparent: 
+
+
+<!-- ##### FUNCTION gtk_plot_canvas_transparent ##### -->
+<para>
+
+</para>
+
+@canvas: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_canvas_set_background ##### -->
+<para>
+
+</para>
+
+@canvas: 
+@bg_color: 
+
+
+<!-- ##### FUNCTION gtk_plot_canvas_get_pixel ##### -->
+<para>
+
+</para>
+
+@canvas: 
+@px: 
+@py: 
+@x: 
+@y: 
+
+
+<!-- ##### FUNCTION gtk_plot_canvas_get_position ##### -->
+<para>
+
+</para>
+
+@plot_canvas: 
+@x: 
+@y: 
+@px: 
+@py: 
+
+
+<!-- ##### FUNCTION gtk_plot_canvas_put_child ##### -->
+<para>
+
+</para>
+
+@canvas: 
+@child: 
+@x1: 
+@y1: 
+@x2: 
+@y2: 
+
+
+<!-- ##### FUNCTION gtk_plot_canvas_remove_child ##### -->
+<para>
+
+</para>
+
+@canvas: 
+@child: 
+
+
+<!-- ##### FUNCTION gtk_plot_canvas_child_move ##### -->
+<para>
+
+</para>
+
+@canvas: 
+@child: 
+@x1: 
+@y1: 
+
+
+<!-- ##### FUNCTION gtk_plot_canvas_child_move_resize ##### -->
+<para>
+
+</para>
+
+@canvas: 
+@child: 
+@x1: 
+@y1: 
+@x2: 
+@y2: 
+
+
+<!-- ##### FUNCTION gtk_plot_canvas_child_set_selection ##### -->
+<para>
+
+</para>
+
+@child: 
+@selection: 
+
+
+<!-- ##### FUNCTION gtk_plot_canvas_child_set_selection_mode ##### -->
+<para>
+
+</para>
+
+@child: 
+@mode: 
+
+
+<!-- ##### FUNCTION gtk_plot_canvas_child_get_position ##### -->
+<para>
+
+</para>
+
+@canvas: 
+@child: 
+@x1: 
+@y1: 
+@x2: 
+@y2: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_canvas_set_line_attributes ##### -->
+<para>
+
+</para>
+
+@canvas: 
+@line: 
+
+

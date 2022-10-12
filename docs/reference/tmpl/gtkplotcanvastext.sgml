@@ -1,0 +1,62 @@
+<!-- ##### SECTION Title ##### -->
+GtkPlotCanvasText
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### STRUCT GtkPlotCanvasText ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### ARG GtkPlotCanvasText:text ##### -->
+<para>
+
+</para>
+
+<!-- ##### FUNCTION gtk_plot_canvas_text_new ##### -->
+<para>
+
+</para>
+
+@font: 
+@height: 
+@angle: 
+@fg: 
+@bg: 
+@transparent: 
+@justification: 
+@real_text: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_canvas_text_set_attributes ##### -->
+<para>
+
+</para>
+
+@text: 
+@font: 
+@height: 
+@angle: 
+@fg: 
+@bg: 
+@transparent: 
+@justification: 
+@real_text: 
+
+

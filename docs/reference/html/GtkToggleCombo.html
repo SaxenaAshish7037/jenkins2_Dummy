@@ -1,0 +1,404 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GtkToggleCombo</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="GtkExtra Reference Manual">
+<link rel="up" href="ch03.html" title="Widgets">
+<link rel="prev" href="GtkSheetColumn.html" title="GtkSheetColumn">
+<link rel="next" href="ch04.html" title="Data Formatter">
+<meta name="generator" content="GTK-Doc V1.11 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="part" href="gtkextra.html" title="Part I. GtkExtra Overview">
+<link rel="part" href="gtkextrabase.html" title="Part II. GtkExtra Widgets and Objects">
+<link rel="chapter" href="ch01.html" title="Object Hierarchy">
+<link rel="chapter" href="ch02.html" title="Widget Gallery">
+<link rel="chapter" href="ch03.html" title="Widgets">
+<link rel="chapter" href="ch04.html" title="Data Formatter">
+<link rel="chapter" href="ch05.html" title="GtkExtra Versioning">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="GtkSheetColumn.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch03.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">GtkExtra Reference Manual</th>
+<td><a accesskey="n" href="ch04.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#GtkToggleCombo.synopsis" class="shortcut">Top</a>
+                 | 
+                <a href="#GtkToggleCombo.description" class="shortcut">Description</a>
+                 | 
+                <a href="#GtkToggleCombo.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                 | 
+                <a href="#GtkToggleCombo.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+                 | 
+                <a href="#GtkToggleCombo.signals" class="shortcut">Signals</a>
+</td></tr>
+</table>
+<div class="refentry" title="GtkToggleCombo">
+<a name="GtkToggleCombo"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GtkToggleCombo.top_of_page"></a>GtkToggleCombo</span></h2>
+<p>GtkToggleCombo — A toggle combo widget for GTK.</p>
+</td>
+<td valign="top" align="right"><img src=""></td>
+</tr></table></div>
+<div class="refsynopsisdiv" title="Synopsis">
+<a name="GtkToggleCombo.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">
+
+#include &lt;gtkextra.h&gt;
+
+                    <a class="link" href="GtkToggleCombo.html#GtkToggleCombo-struct" title="GtkToggleCombo">GtkToggleCombo</a>;
+<a
+href="http://library.gnome.org/devel/gtk3/GtkWidget.html"
+>GtkWidget</a>*          <a class="link" href="GtkToggleCombo.html#gtk-toggle-combo-new" title="gtk_toggle_combo_new ()">gtk_toggle_combo_new</a>                (<a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> nrows,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> ncols);
+void                <a class="link" href="GtkToggleCombo.html#gtk-toggle-combo-construct" title="gtk_toggle_combo_construct ()">gtk_toggle_combo_construct</a>          (<a class="link" href="GtkToggleCombo.html" title="GtkToggleCombo">GtkToggleCombo</a> *toggle_combo,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> nrows,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> ncols);
+<a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                <a class="link" href="GtkToggleCombo.html#gtk-toggle-combo-get-nrows" title="gtk_toggle_combo_get_nrows ()">gtk_toggle_combo_get_nrows</a>          (<a class="link" href="GtkToggleCombo.html" title="GtkToggleCombo">GtkToggleCombo</a> *combo);
+<a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                <a class="link" href="GtkToggleCombo.html#gtk-toggle-combo-get-ncols" title="gtk_toggle_combo_get_ncols ()">gtk_toggle_combo_get_ncols</a>          (<a class="link" href="GtkToggleCombo.html" title="GtkToggleCombo">GtkToggleCombo</a> *combo);
+void                <a class="link" href="GtkToggleCombo.html#gtk-toggle-combo-select" title="gtk_toggle_combo_select ()">gtk_toggle_combo_select</a>             (<a class="link" href="GtkToggleCombo.html" title="GtkToggleCombo">GtkToggleCombo</a> *toggle_combo,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> new_row,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> new_col);
+void                <a class="link" href="GtkToggleCombo.html#gtk-toggle-combo-get-selection" title="gtk_toggle_combo_get_selection ()">gtk_toggle_combo_get_selection</a>      (<a class="link" href="GtkToggleCombo.html" title="GtkToggleCombo">GtkToggleCombo</a> *combo,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> *row,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> *col);
+</pre>
+</div>
+<div class="refsect1" title="Object Hierarchy">
+<a name="GtkToggleCombo.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a
+href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject"
+>GObject</a>
+   +----<a
+href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned"
+>GInitiallyUnowned</a>
+         +----<a
+href="http://library.gnome.org/devel/gtk3/GtkObject.html"
+>GtkObject</a>
+               +----<a
+href="http://library.gnome.org/devel/gtk3/GtkWidget.html"
+>GtkWidget</a>
+                     +----<a
+href="http://library.gnome.org/devel/gtk3/GtkContainer.html"
+>GtkContainer</a>
+                           +----<a
+href="http://library.gnome.org/devel/gtk3/GtkBox.html"
+>GtkBox</a>
+                                 +----<a
+href="http://library.gnome.org/devel/gtk3/GtkHBox.html"
+>GtkHBox</a>
+                                       +----<a class="link" href="GtkComboButton.html" title="GtkComboButton">GtkComboButton</a>
+                                             +----GtkToggleCombo
+</pre>
+</div>
+<div class="refsect1" title="Implemented Interfaces">
+<a name="GtkToggleCombo.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+GtkToggleCombo implements
+ AtkImplementorIface,  <a
+href="http://library.gnome.org/devel/gtk3/GtkBuildable.html"
+>GtkBuildable</a> and  <a
+href="http://library.gnome.org/devel/gtk3/gtk2-Orientable.html#GtkOrientable"
+>GtkOrientable</a>.</p>
+</div>
+<div class="refsect1" title="Signals">
+<a name="GtkToggleCombo.signals"></a><h2>Signals</h2>
+<pre class="synopsis">
+  "<a class="link" href="GtkToggleCombo.html#GtkToggleCombo-changed" title='The "changed" signal'>changed</a>"                                        : Run First
+</pre>
+</div>
+<div class="refsect1" title="Description">
+<a name="GtkToggleCombo.description"></a><h2>Description</h2>
+<p>
+A GtkToggleCombo is a GtkCombo which will remain 'pressed-in' when clicked. 
+Clicking it again will cause the toggle combo to return to it's normal state.
+A toggle combo is created by calling <a class="link" href="GtkToggleCombo.html#gtk-toggle-combo-new" title="gtk_toggle_combo_new ()"><code class="function">gtk_toggle_combo_new()</code></a>.
+The number of rows/columns may be find out by calling <a class="link" href="GtkToggleCombo.html#gtk-toggle-combo-get-nrows" title="gtk_toggle_combo_get_nrows ()"><code class="function">gtk_toggle_combo_get_nrows()</code></a> or <a class="link" href="GtkToggleCombo.html#gtk-toggle-combo-get-ncols" title="gtk_toggle_combo_get_ncols ()"><code class="function">gtk_toggle_combo_get_ncols()</code></a>.
+A combo row may be selected with <a class="link" href="GtkToggleCombo.html#gtk-toggle-combo-select" title="gtk_toggle_combo_select ()"><code class="function">gtk_toggle_combo_select()</code></a>.The current selection is returned by <a class="link" href="GtkToggleCombo.html#gtk-toggle-combo-get-selection" title="gtk_toggle_combo_get_selection ()"><code class="function">gtk_toggle_combo_get_selection()</code></a>.</p>
+<p>
+</p>
+</div>
+<div class="refsect1" title="Details">
+<a name="GtkToggleCombo.details"></a><h2>Details</h2>
+<div class="refsect2" title="GtkToggleCombo">
+<a name="GtkToggleCombo-struct"></a><h3>GtkToggleCombo</h3>
+<pre class="programlisting">typedef struct _GtkToggleCombo GtkToggleCombo;</pre>
+<p>
+The GtkToggleCombo struct contains only private data.
+It should only be accessed through the functions described below.</p>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2" title="gtk_toggle_combo_new ()">
+<a name="gtk-toggle-combo-new"></a><h3>gtk_toggle_combo_new ()</h3>
+<pre class="programlisting"><a
+href="http://library.gnome.org/devel/gtk3/GtkWidget.html"
+>GtkWidget</a>*          gtk_toggle_combo_new                (<a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> nrows,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> ncols);</pre>
+<p>
+Creates a new <a class="link" href="GtkToggleCombo.html" title="GtkToggleCombo"><span class="type">GtkToggleCombo</span></a> widget with <em class="parameter"><code>nrows</code></em> rows and <em class="parameter"><code>ncols</code></em> columns.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>nrows</code></em> :</span></p></td>
+<td> number of rows
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>ncols</code></em> :</span></p></td>
+<td> number of columns
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> the newly-created <a class="link" href="GtkToggleCombo.html" title="GtkToggleCombo"><span class="type">GtkToggleCombo</span></a> widget.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_toggle_combo_construct ()">
+<a name="gtk-toggle-combo-construct"></a><h3>gtk_toggle_combo_construct ()</h3>
+<pre class="programlisting">void                gtk_toggle_combo_construct          (<a class="link" href="GtkToggleCombo.html" title="GtkToggleCombo">GtkToggleCombo</a> *toggle_combo,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> nrows,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> ncols);</pre>
+<p>
+Initializes the <a class="link" href="GtkToggleCombo.html" title="GtkToggleCombo"><span class="type">GtkToggleCombo</span></a> with <em class="parameter"><code>nrows</code></em> rows and <em class="parameter"><code>ncols</code></em> columns.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>toggle_combo</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkToggleCombo.html" title="GtkToggleCombo"><span class="type">GtkToggleCombo</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>nrows</code></em> :</span></p></td>
+<td> number of rows
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>ncols</code></em> :</span></p></td>
+<td> number of columns
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_toggle_combo_get_nrows ()">
+<a name="gtk-toggle-combo-get-nrows"></a><h3>gtk_toggle_combo_get_nrows ()</h3>
+<pre class="programlisting"><a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                gtk_toggle_combo_get_nrows          (<a class="link" href="GtkToggleCombo.html" title="GtkToggleCombo">GtkToggleCombo</a> *combo);</pre>
+<p>
+Get the number of rows in <a class="link" href="GtkToggleCombo.html" title="GtkToggleCombo"><span class="type">GtkToggleCombo</span></a>.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>combo</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkToggleCombo.html" title="GtkToggleCombo"><span class="type">GtkToggleCombo</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> number of rows
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_toggle_combo_get_ncols ()">
+<a name="gtk-toggle-combo-get-ncols"></a><h3>gtk_toggle_combo_get_ncols ()</h3>
+<pre class="programlisting"><a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                gtk_toggle_combo_get_ncols          (<a class="link" href="GtkToggleCombo.html" title="GtkToggleCombo">GtkToggleCombo</a> *combo);</pre>
+<p>
+Get the number of columns in <a class="link" href="GtkToggleCombo.html" title="GtkToggleCombo"><span class="type">GtkToggleCombo</span></a>.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>combo</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkToggleCombo.html" title="GtkToggleCombo"><span class="type">GtkToggleCombo</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> number of columns
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_toggle_combo_select ()">
+<a name="gtk-toggle-combo-select"></a><h3>gtk_toggle_combo_select ()</h3>
+<pre class="programlisting">void                gtk_toggle_combo_select             (<a class="link" href="GtkToggleCombo.html" title="GtkToggleCombo">GtkToggleCombo</a> *toggle_combo,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> new_row,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> new_col);</pre>
+<p>
+Select the cell(row,col) from <a class="link" href="GtkToggleCombo.html" title="GtkToggleCombo"><span class="type">GtkToggleCombo</span></a>.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>toggle_combo</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkToggleCombo.html" title="GtkToggleCombo"><span class="type">GtkToggleCombo</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>new_row</code></em> :</span></p></td>
+<td> number of row
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>new_col</code></em> :</span></p></td>
+<td> number of column
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_toggle_combo_get_selection ()">
+<a name="gtk-toggle-combo-get-selection"></a><h3>gtk_toggle_combo_get_selection ()</h3>
+<pre class="programlisting">void                gtk_toggle_combo_get_selection      (<a class="link" href="GtkToggleCombo.html" title="GtkToggleCombo">GtkToggleCombo</a> *combo,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> *row,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> *col);</pre>
+<p>
+Get the current selection(row,col) in <a class="link" href="GtkToggleCombo.html" title="GtkToggleCombo"><span class="type">GtkToggleCombo</span></a>.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>combo</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkToggleCombo.html" title="GtkToggleCombo"><span class="type">GtkToggleCombo</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>row</code></em> :</span></p></td>
+<td> number of row
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>col</code></em> :</span></p></td>
+<td> number of column
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1" title="Signal Details">
+<a name="GtkToggleCombo.signal-details"></a><h2>Signal Details</h2>
+<div class="refsect2" title='The "changed" signal'>
+<a name="GtkToggleCombo-changed"></a><h3>The <code class="literal">"changed"</code> signal</h3>
+<pre class="programlisting">void                user_function                      (<a class="link" href="GtkToggleCombo.html" title="GtkToggleCombo">GtkToggleCombo</a> *toggle_combo,
+                                                        <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>            row,
+                                                        <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>            col,
+                                                        <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"
+>gpointer</a>        user_data)         : Run First</pre>
+<p>
+Emmited when the <em class="parameter"><code>row</code></em>,<em class="parameter"><code>col</code></em> are selected in <a class="link" href="GtkToggleCombo.html" title="GtkToggleCombo"><span class="type">GtkToggleCombo</span></a></p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>toggle_combo</code></em> :</span></p></td>
+<td> the <a class="link" href="GtkToggleCombo.html" title="GtkToggleCombo"><span class="type">GtkToggleCombo</span></a> object that received the signal
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>row</code></em> :</span></p></td>
+<td> row number
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>col</code></em> :</span></p></td>
+<td> column number
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.11</div>
+</body>
+</html>

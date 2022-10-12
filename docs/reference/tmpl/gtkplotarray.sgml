@@ -1,0 +1,328 @@
+<!-- ##### SECTION Title ##### -->
+GtkPlotArray
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### STRUCT GtkPlotArray ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### ARG GtkPlotArray:array-data ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotArray:description ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotArray:independent ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotArray:label ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotArray:name ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotArray:own-data ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotArray:required ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotArray:scale ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotArray:size ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotArray:type ##### -->
+<para>
+
+</para>
+
+<!-- ##### STRUCT GtkPlotArrayList ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### FUNCTION gtk_plot_array_new ##### -->
+<para>
+
+</para>
+
+@name: 
+@array: 
+@size: 
+@type: 
+@own_data: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_array_set ##### -->
+<para>
+
+</para>
+
+@array: 
+@data_array: 
+@size: 
+@type: 
+
+
+<!-- ##### FUNCTION gtk_plot_array_set_label ##### -->
+<para>
+
+</para>
+
+@array: 
+@label: 
+
+
+<!-- ##### FUNCTION gtk_plot_array_set_description ##### -->
+<para>
+
+</para>
+
+@array: 
+@desc: 
+
+
+<!-- ##### FUNCTION gtk_plot_array_set_scale ##### -->
+<para>
+
+</para>
+
+@array: 
+@scale: 
+
+
+<!-- ##### FUNCTION gtk_plot_array_set_required ##### -->
+<para>
+
+</para>
+
+@array: 
+@required: 
+
+
+<!-- ##### FUNCTION gtk_plot_array_set_independent ##### -->
+<para>
+
+</para>
+
+@array: 
+@independent: 
+
+
+<!-- ##### FUNCTION gtk_plot_array_get_data_type ##### -->
+<para>
+
+</para>
+
+@array: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_array_get_name ##### -->
+<para>
+
+</para>
+
+@array: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_array_get_label ##### -->
+<para>
+
+</para>
+
+@array: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_array_get_description ##### -->
+<para>
+
+</para>
+
+@array: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_array_required ##### -->
+<para>
+
+</para>
+
+@array: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_array_independent ##### -->
+<para>
+
+</para>
+
+@array: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_array_get_scale ##### -->
+<para>
+
+</para>
+
+@array: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_array_get_size ##### -->
+<para>
+
+</para>
+
+@array: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_array_get_float ##### -->
+<para>
+
+</para>
+
+@array: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_array_get_double ##### -->
+<para>
+
+</para>
+
+@array: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_array_get_int ##### -->
+<para>
+
+</para>
+
+@array: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_array_get_bool ##### -->
+<para>
+
+</para>
+
+@array: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_array_get_string ##### -->
+<para>
+
+</para>
+
+@array: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_array_get_pointer ##### -->
+<para>
+
+</para>
+
+@array: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_array_free ##### -->
+<para>
+
+</para>
+
+@array: 
+
+
+<!-- ##### FUNCTION gtk_plot_array_list_new ##### -->
+<para>
+
+</para>
+
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_array_list_add ##### -->
+<para>
+
+</para>
+
+@set: 
+@array: 
+
+
+<!-- ##### FUNCTION gtk_plot_array_list_remove ##### -->
+<para>
+
+</para>
+
+@set: 
+@array: 
+
+
+<!-- ##### FUNCTION gtk_plot_array_list_get ##### -->
+<para>
+
+</para>
+
+@set: 
+@name: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_array_list_clear ##### -->
+<para>
+
+</para>
+
+@set: 
+
+

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE indexdiv PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+<!ENTITY version SYSTEM "version.xml">
+]>
+<!--ENTITY index-Objects-Grouped SYSTEM "objects_grouped.sgml"-->
+<indexdiv>
+<indexdiv><title>G</title>
+<indexentry><primaryie linkends="GtkSheet-entry-focus-in"><link linkend="GtkSheet-entry-focus-in">GtkSheet::entry-focus-in</link></primaryie></indexentry>
+<indexentry><primaryie linkends="GtkSheet-entry-focus-out"><link linkend="GtkSheet-entry-focus-out">GtkSheet::entry-focus-out</link></primaryie></indexentry>
+<indexentry><primaryie linkends="GtkSheet-populate-popup"><link linkend="GtkSheet-populate-popup">GtkSheet::populate-popup</link></primaryie></indexentry>
+</indexdiv>
+</indexdiv>

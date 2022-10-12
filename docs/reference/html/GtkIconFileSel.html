@@ -1,0 +1,342 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GtkIconFileSel</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="GtkExtra Reference Manual">
+<link rel="up" href="ch03.html" title="Widgets">
+<link rel="prev" href="GtkFontCombo.html" title="GtkFontCombo">
+<link rel="next" href="GtkIconList.html" title="GtkIconList">
+<meta name="generator" content="GTK-Doc V1.11 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="part" href="gtkextra.html" title="Part I. GtkExtra Overview">
+<link rel="part" href="gtkextrabase.html" title="Part II. GtkExtra Widgets and Objects">
+<link rel="chapter" href="ch01.html" title="Object Hierarchy">
+<link rel="chapter" href="ch02.html" title="Widget Gallery">
+<link rel="chapter" href="ch03.html" title="Widgets">
+<link rel="chapter" href="ch04.html" title="Data Formatter">
+<link rel="chapter" href="ch05.html" title="GtkExtra Versioning">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="GtkFontCombo.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch03.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">GtkExtra Reference Manual</th>
+<td><a accesskey="n" href="GtkIconList.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#GtkIconFileSel.synopsis" class="shortcut">Top</a>
+                 | 
+                <a href="#GtkIconFileSel.description" class="shortcut">Description</a>
+                 | 
+                <a href="#GtkIconFileSel.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                 | 
+                <a href="#GtkIconFileSel.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+</td></tr>
+</table>
+<div class="refentry" title="GtkIconFileSel">
+<a name="GtkIconFileSel"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GtkIconFileSel.top_of_page"></a>GtkIconFileSel</span></h2>
+<p>GtkIconFileSel — A file selection dialog widget for GTK.</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv" title="Synopsis">
+<a name="GtkIconFileSel.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">
+
+#include &lt;gtkextra.h&gt;
+
+                    <a class="link" href="GtkIconFileSel.html#GtkIconFileSel-struct" title="GtkIconFileSel">GtkIconFileSel</a>;
+<a
+href="http://library.gnome.org/devel/gtk3/GtkWidget.html"
+>GtkWidget</a>*          <a class="link" href="GtkIconFileSel.html#gtk-icon-file-selection-new" title="gtk_icon_file_selection_new ()">gtk_icon_file_selection_new</a>         (const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *title);
+void                <a class="link" href="GtkIconFileSel.html#gtk-icon-file-selection-construct" title="gtk_icon_file_selection_construct ()">gtk_icon_file_selection_construct</a>   (<a class="link" href="GtkIconFileSel.html" title="GtkIconFileSel">GtkIconFileSel</a> *filesel,
+                                                         const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *title);
+void                <a class="link" href="GtkIconFileSel.html#gtk-icon-file-selection-show-tree" title="gtk_icon_file_selection_show_tree ()">gtk_icon_file_selection_show_tree</a>   (<a class="link" href="GtkIconFileSel.html" title="GtkIconFileSel">GtkIconFileSel</a> *filesel,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> show);
+<a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                <a class="link" href="GtkIconFileSel.html#gtk-icon-file-selection-open-dir" title="gtk_icon_file_selection_open_dir ()">gtk_icon_file_selection_open_dir</a>    (<a class="link" href="GtkIconFileSel.html" title="GtkIconFileSel">GtkIconFileSel</a> *filesel,
+                                                         const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *path);
+void                <a class="link" href="GtkIconFileSel.html#gtk-icon-file-selection-show-hidden" title="gtk_icon_file_selection_show_hidden ()">gtk_icon_file_selection_show_hidden</a> (<a class="link" href="GtkIconFileSel.html" title="GtkIconFileSel">GtkIconFileSel</a> *filesel,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> visible);
+void                <a class="link" href="GtkIconFileSel.html#gtk-icon-file-selection-set-filter" title="gtk_icon_file_selection_set_filter ()">gtk_icon_file_selection_set_filter</a>  (<a class="link" href="GtkIconFileSel.html" title="GtkIconFileSel">GtkIconFileSel</a> *filesel,
+                                                         const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *filter);
+const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *       <a class="link" href="GtkIconFileSel.html#gtk-icon-file-selection-get-selection" title="gtk_icon_file_selection_get_selection ()">gtk_icon_file_selection_get_selection</a>
+                                                        (<a class="link" href="GtkIconFileSel.html" title="GtkIconFileSel">GtkIconFileSel</a> *filesel);
+</pre>
+</div>
+<div class="refsect1" title="Object Hierarchy">
+<a name="GtkIconFileSel.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a
+href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject"
+>GObject</a>
+   +----<a
+href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned"
+>GInitiallyUnowned</a>
+         +----<a
+href="http://library.gnome.org/devel/gtk3/GtkObject.html"
+>GtkObject</a>
+               +----<a
+href="http://library.gnome.org/devel/gtk3/GtkWidget.html"
+>GtkWidget</a>
+                     +----<a
+href="http://library.gnome.org/devel/gtk3/GtkContainer.html"
+>GtkContainer</a>
+                           +----<a
+href="http://library.gnome.org/devel/gtk3/GtkBin.html"
+>GtkBin</a>
+                                 +----<a
+href="http://library.gnome.org/devel/gtk3/GtkWindow.html"
+>GtkWindow</a>
+                                       +----GtkIconFileSel
+</pre>
+</div>
+<div class="refsect1" title="Implemented Interfaces">
+<a name="GtkIconFileSel.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+GtkIconFileSel implements
+ AtkImplementorIface and  <a
+href="http://library.gnome.org/devel/gtk3/GtkBuildable.html"
+>GtkBuildable</a>.</p>
+</div>
+<div class="refsect1" title="Description">
+<a name="GtkIconFileSel.description"></a><h2>Description</h2>
+<p>
+It is a nice looking file selection dialog using icons.
+It combines GtkDirTree and GtkFileList to navigate the file system and select files. 
+It has also two entries to select the file and filter.</p>
+<p>
+</p>
+</div>
+<div class="refsect1" title="Details">
+<a name="GtkIconFileSel.details"></a><h2>Details</h2>
+<div class="refsect2" title="GtkIconFileSel">
+<a name="GtkIconFileSel-struct"></a><h3>GtkIconFileSel</h3>
+<pre class="programlisting">typedef struct _GtkIconFileSel GtkIconFileSel;</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2" title="gtk_icon_file_selection_new ()">
+<a name="gtk-icon-file-selection-new"></a><h3>gtk_icon_file_selection_new ()</h3>
+<pre class="programlisting"><a
+href="http://library.gnome.org/devel/gtk3/GtkWidget.html"
+>GtkWidget</a>*          gtk_icon_file_selection_new         (const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *title);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>title</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_icon_file_selection_construct ()">
+<a name="gtk-icon-file-selection-construct"></a><h3>gtk_icon_file_selection_construct ()</h3>
+<pre class="programlisting">void                gtk_icon_file_selection_construct   (<a class="link" href="GtkIconFileSel.html" title="GtkIconFileSel">GtkIconFileSel</a> *filesel,
+                                                         const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *title);</pre>
+<p>
+Sets the window title for <span class="type">GtkIconFileSelection</span> widget.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>filesel</code></em> :</span></p></td>
+<td> the <span class="type">GtkIconFileSelection</span> widget.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>title</code></em> :</span></p></td>
+<td> window title.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_icon_file_selection_show_tree ()">
+<a name="gtk-icon-file-selection-show-tree"></a><h3>gtk_icon_file_selection_show_tree ()</h3>
+<pre class="programlisting">void                gtk_icon_file_selection_show_tree   (<a class="link" href="GtkIconFileSel.html" title="GtkIconFileSel">GtkIconFileSel</a> *filesel,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> show);</pre>
+<p>
+Show icon file selection tree in filesel widget.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>filesel</code></em> :</span></p></td>
+<td> the <span class="type">GtkIconFileSelection</span> widget.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>show</code></em> :</span></p></td>
+<td> TRUE(show) or FALSE(don't show).
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_icon_file_selection_open_dir ()">
+<a name="gtk-icon-file-selection-open-dir"></a><h3>gtk_icon_file_selection_open_dir ()</h3>
+<pre class="programlisting"><a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                gtk_icon_file_selection_open_dir    (<a class="link" href="GtkIconFileSel.html" title="GtkIconFileSel">GtkIconFileSel</a> *filesel,
+                                                         const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *path);</pre>
+<p>
+Show the file from path directory in filesel widget.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>filesel</code></em> :</span></p></td>
+<td> the <span class="type">GtkIconFileSelection</span> widget.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>path</code></em> :</span></p></td>
+<td> directory path.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> TRUE or FALSE depending on success 
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_icon_file_selection_show_hidden ()">
+<a name="gtk-icon-file-selection-show-hidden"></a><h3>gtk_icon_file_selection_show_hidden ()</h3>
+<pre class="programlisting">void                gtk_icon_file_selection_show_hidden (<a class="link" href="GtkIconFileSel.html" title="GtkIconFileSel">GtkIconFileSel</a> *filesel,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> visible);</pre>
+<p>
+Set the visibility of hidden files.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>filesel</code></em> :</span></p></td>
+<td> the <span class="type">GtkIconFileSelection</span> widget.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>visible</code></em> :</span></p></td>
+<td> TRUE(show hidden files) or FALSE(don't show hidden files).
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_icon_file_selection_set_filter ()">
+<a name="gtk-icon-file-selection-set-filter"></a><h3>gtk_icon_file_selection_set_filter ()</h3>
+<pre class="programlisting">void                gtk_icon_file_selection_set_filter  (<a class="link" href="GtkIconFileSel.html" title="GtkIconFileSel">GtkIconFileSel</a> *filesel,
+                                                         const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *filter);</pre>
+<p>
+Set a filter for the files show in filelist.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>filesel</code></em> :</span></p></td>
+<td> the <span class="type">GtkIconFileSelection</span> widget.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>filter</code></em> :</span></p></td>
+<td> filter to be applied on files.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_icon_file_selection_get_selection ()">
+<a name="gtk-icon-file-selection-get-selection"></a><h3>gtk_icon_file_selection_get_selection ()</h3>
+<pre class="programlisting">const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *       gtk_icon_file_selection_get_selection
+                                                        (<a class="link" href="GtkIconFileSel.html" title="GtkIconFileSel">GtkIconFileSel</a> *filesel);</pre>
+<p>
+Gets the current selection applied on <span class="type">GtkIconFileSelection</span>.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>filesel</code></em> :</span></p></td>
+<td> the <span class="type">GtkIconFileSelection</span> widget.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> the current selection.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.11</div>
+</body>
+</html>

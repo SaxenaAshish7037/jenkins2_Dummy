@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+<!ENTITY version SYSTEM "version.xml">
+]>
+<!--ENTITY index-Objects-Grouped SYSTEM "objects_grouped.sgml"-->
+<refentry id="GtkComboButton">
+<refmeta>
+<refentrytitle role="top_of_page" id="GtkComboButton.top_of_page">GtkComboButton</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GTKEXTRA Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>GtkComboButton</refname>
+<refpurpose>A combo button widget for GTK</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="GtkComboButton.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>
+
+#include &lt;gtkextra.h&gt;
+
+                    <link linkend="GtkComboButton-struct">GtkComboButton</link>;
+<link linkend="GtkWidget">GtkWidget</link> *         <link linkend="gtk-combo-button-new">gtk_combo_button_new</link>                (void);
+<link linkend="void">void</link>                <link linkend="gtk-combo-button-hide-popdown-window">gtk_combo_button_hide_popdown_window</link>
+                                                        (<link linkend="GtkComboButton">GtkComboButton</link> *combo_button);
+</synopsis>
+</refsynopsisdiv>
+
+<refsect1 id="GtkComboButton.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+  <link linkend="GObject">GObject</link>
+   +----<link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+         +----<link linkend="GtkObject">GtkObject</link>
+               +----<link linkend="GtkWidget">GtkWidget</link>
+                     +----<link linkend="GtkContainer">GtkContainer</link>
+                           +----<link linkend="GtkBox">GtkBox</link>
+                                 +----<link linkend="GtkHBox">GtkHBox</link>
+                                       +----GtkComboButton
+                                             +----<link linkend="GtkBorderCombo">GtkBorderCombo</link>
+                                             +----<link linkend="GtkColorCombo">GtkColorCombo</link>
+                                             +----<link linkend="GtkToggleCombo">GtkToggleCombo</link>
+</synopsis>
+</refsect1>
+
+
+
+<refsect1 id="GtkComboButton.implemented-interfaces" role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+GtkComboButton implements
+ <link linkend="AtkImplementorIface">AtkImplementorIface</link>,  <link linkend="GtkBuildable">GtkBuildable</link> and  <link linkend="GtkOrientable">GtkOrientable</link>.</para>
+</refsect1>
+
+
+
+
+
+<refsect1 id="GtkComboButton.description" role="desc">
+<title role="desc.title">Description</title>
+<para>
+</para>
+<para>
+</para>
+</refsect1>
+
+<refsect1 id="GtkComboButton.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="GtkComboButton-struct" role="struct">
+<title>GtkComboButton</title>
+<indexterm zone="GtkComboButton-struct"><primary sortas="GtkComboButton">GtkComboButton</primary></indexterm><programlisting>typedef struct _GtkComboButton GtkComboButton;</programlisting>
+<para>
+The GtkComboButton struct contains only private data.
+It should only be accessed through the functions described below.</para>
+<para>
+</para></refsect2>
+<refsect2 id="gtk-combo-button-new" role="function">
+<title>gtk_combo_button_new ()</title>
+<indexterm zone="gtk-combo-button-new"><primary sortas="gtk_combo_button_new">gtk_combo_button_new</primary></indexterm><programlisting><link linkend="GtkWidget">GtkWidget</link> *         gtk_combo_button_new                (void);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-combo-button-hide-popdown-window" role="function">
+<title>gtk_combo_button_hide_popdown_window ()</title>
+<indexterm zone="gtk-combo-button-hide-popdown-window"><primary sortas="gtk_combo_button_hide_popdown_window">gtk_combo_button_hide_popdown_window</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_combo_button_hide_popdown_window
+                                                        (<link linkend="GtkComboButton">GtkComboButton</link> *combo_button);</programlisting>
+<para>
+Hides the popdown window of pressed <link linkend="GtkComboButton"><type>GtkComboButton</type></link>.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>combo_button</parameter>&#160;:</term>
+<listitem><simpara> the <link linkend="GtkComboButton"><type>GtkComboButton</type></link> widget.
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+
+
+
+
+</refentry>

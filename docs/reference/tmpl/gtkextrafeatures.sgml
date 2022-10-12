@@ -1,0 +1,91 @@
+<!-- ##### SECTION Title ##### -->
+GtkExtra Versioning
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### MACRO GTKEXTRA_MAJOR_VERSION ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO GTKEXTRA_MINOR_VERSION ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO GTKEXTRA_MICRO_VERSION ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO GTKEXTRA_CHECK_VERSION ##### -->
+<para>
+
+</para>
+
+@major: 
+@minor: 
+@micro: 
+
+
+<!-- ##### VARIABLE gtkextra_major_version ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### VARIABLE gtkextra_minor_version ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### VARIABLE gtkextra_micro_version ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### VARIABLE gtkextra_binary_age ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### VARIABLE gtkextra_interface_age ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### FUNCTION gtkextra_check_version ##### -->
+<para>
+
+</para>
+
+@required_major: 
+@required_minor: 
+@required_micro: 
+@Returns: 
+
+

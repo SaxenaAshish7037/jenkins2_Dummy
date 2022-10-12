@@ -1,0 +1,217 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GtkExtra Versioning</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="GtkExtra Reference Manual">
+<link rel="up" href="ch05.html" title="GtkExtra Versioning">
+<link rel="prev" href="ch05.html" title="GtkExtra Versioning">
+<meta name="generator" content="GTK-Doc V1.11 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="part" href="gtkextra.html" title="Part I. GtkExtra Overview">
+<link rel="part" href="gtkextrabase.html" title="Part II. GtkExtra Widgets and Objects">
+<link rel="chapter" href="ch01.html" title="Object Hierarchy">
+<link rel="chapter" href="ch02.html" title="Widget Gallery">
+<link rel="chapter" href="ch03.html" title="Widgets">
+<link rel="chapter" href="ch04.html" title="Data Formatter">
+<link rel="chapter" href="ch05.html" title="GtkExtra Versioning">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="ch05.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch05.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">GtkExtra Reference Manual</th>
+<td> </td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#gtkextra-GtkExtra-Versioning.synopsis" class="shortcut">Top</a>
+                 | 
+                <a href="#gtkextra-GtkExtra-Versioning.description" class="shortcut">Description</a>
+</td></tr>
+</table>
+<div class="refentry" title="GtkExtra Versioning">
+<a name="gtkextra-GtkExtra-Versioning"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="gtkextra-GtkExtra-Versioning.top_of_page"></a>GtkExtra Versioning</span></h2>
+<p>GtkExtra Versioning</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv" title="Synopsis">
+<a name="gtkextra-GtkExtra-Versioning.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">
+
+#include &lt;gtkextra.h&gt;
+
+#define             <a class="link" href="gtkextra-GtkExtra-Versioning.html#GTKEXTRA-MAJOR-VERSION--CAPS" title="GTKEXTRA_MAJOR_VERSION">GTKEXTRA_MAJOR_VERSION</a>
+#define             <a class="link" href="gtkextra-GtkExtra-Versioning.html#GTKEXTRA-MINOR-VERSION--CAPS" title="GTKEXTRA_MINOR_VERSION">GTKEXTRA_MINOR_VERSION</a>
+#define             <a class="link" href="gtkextra-GtkExtra-Versioning.html#GTKEXTRA-MICRO-VERSION--CAPS" title="GTKEXTRA_MICRO_VERSION">GTKEXTRA_MICRO_VERSION</a>
+#define             <a class="link" href="gtkextra-GtkExtra-Versioning.html#GTKEXTRA-CHECK-VERSION--CAPS" title="GTKEXTRA_CHECK_VERSION()">GTKEXTRA_CHECK_VERSION</a>              (major,minor,micro)
+extern              const guint <a class="link" href="gtkextra-GtkExtra-Versioning.html#gtkextra-major-version" title="gtkextra_major_version">gtkextra_major_version</a>;
+extern              const guint <a class="link" href="gtkextra-GtkExtra-Versioning.html#gtkextra-minor-version" title="gtkextra_minor_version">gtkextra_minor_version</a>;
+extern              const guint <a class="link" href="gtkextra-GtkExtra-Versioning.html#gtkextra-micro-version" title="gtkextra_micro_version">gtkextra_micro_version</a>;
+extern              const guint <a class="link" href="gtkextra-GtkExtra-Versioning.html#gtkextra-binary-age" title="gtkextra_binary_age">gtkextra_binary_age</a>;
+extern              const guint <a class="link" href="gtkextra-GtkExtra-Versioning.html#gtkextra-interface-age" title="gtkextra_interface_age">gtkextra_interface_age</a>;
+<a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a>*              <a class="link" href="gtkextra-GtkExtra-Versioning.html#gtkextra-check-version" title="gtkextra_check_version ()">gtkextra_check_version</a>              (<a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint"
+>guint</a> required_major,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint"
+>guint</a> required_minor,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint"
+>guint</a> required_micro);
+</pre>
+</div>
+<div class="refsect1" title="Description">
+<a name="gtkextra-GtkExtra-Versioning.description"></a><h2>Description</h2>
+<p>
+</p>
+</div>
+<div class="refsect1" title="Details">
+<a name="gtkextra-GtkExtra-Versioning.details"></a><h2>Details</h2>
+<div class="refsect2" title="GTKEXTRA_MAJOR_VERSION">
+<a name="GTKEXTRA-MAJOR-VERSION--CAPS"></a><h3>GTKEXTRA_MAJOR_VERSION</h3>
+<pre class="programlisting">#define GTKEXTRA_MAJOR_VERSION			(3)
+</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2" title="GTKEXTRA_MINOR_VERSION">
+<a name="GTKEXTRA-MINOR-VERSION--CAPS"></a><h3>GTKEXTRA_MINOR_VERSION</h3>
+<pre class="programlisting">#define GTKEXTRA_MINOR_VERSION			(2)
+</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2" title="GTKEXTRA_MICRO_VERSION">
+<a name="GTKEXTRA-MICRO-VERSION--CAPS"></a><h3>GTKEXTRA_MICRO_VERSION</h3>
+<pre class="programlisting">#define GTKEXTRA_MICRO_VERSION			(0)
+</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2" title="GTKEXTRA_CHECK_VERSION()">
+<a name="GTKEXTRA-CHECK-VERSION--CAPS"></a><h3>GTKEXTRA_CHECK_VERSION()</h3>
+<pre class="programlisting">#define             GTKEXTRA_CHECK_VERSION(major,minor,micro)</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>major</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>minor</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>micro</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtkextra_major_version">
+<a name="gtkextra-major-version"></a><h3>gtkextra_major_version</h3>
+<pre class="programlisting">extern const guint gtkextra_major_version;
+</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2" title="gtkextra_minor_version">
+<a name="gtkextra-minor-version"></a><h3>gtkextra_minor_version</h3>
+<pre class="programlisting">extern const guint gtkextra_minor_version;
+</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2" title="gtkextra_micro_version">
+<a name="gtkextra-micro-version"></a><h3>gtkextra_micro_version</h3>
+<pre class="programlisting">extern const guint gtkextra_micro_version;
+</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2" title="gtkextra_binary_age">
+<a name="gtkextra-binary-age"></a><h3>gtkextra_binary_age</h3>
+<pre class="programlisting">extern const guint gtkextra_binary_age;
+</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2" title="gtkextra_interface_age">
+<a name="gtkextra-interface-age"></a><h3>gtkextra_interface_age</h3>
+<pre class="programlisting">extern const guint gtkextra_interface_age;
+</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2" title="gtkextra_check_version ()">
+<a name="gtkextra-check-version"></a><h3>gtkextra_check_version ()</h3>
+<pre class="programlisting"><a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a>*              gtkextra_check_version              (<a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint"
+>guint</a> required_major,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint"
+>guint</a> required_minor,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint"
+>guint</a> required_micro);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>required_major</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>required_minor</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>required_micro</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.11</div>
+</body>
+</html>

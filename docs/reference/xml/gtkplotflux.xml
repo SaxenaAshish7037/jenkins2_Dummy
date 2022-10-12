@@ -1,0 +1,375 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+<!ENTITY version SYSTEM "version.xml">
+]>
+<!--ENTITY index-Objects-Grouped SYSTEM "objects_grouped.sgml"-->
+<refentry id="GtkPlotFlux">
+<refmeta>
+<refentrytitle role="top_of_page" id="GtkPlotFlux.top_of_page">GtkPlotFlux</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GTKEXTRA Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>GtkPlotFlux</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="GtkPlotFlux.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>
+
+#include &lt;gtkextra.h&gt;
+
+                    <link linkend="GtkPlotFlux-struct">GtkPlotFlux</link>;
+<link linkend="GtkWidget">GtkWidget</link>*          <link linkend="gtk-plot-flux-new">gtk_plot_flux_new</link>                   (void);
+<link linkend="void">void</link>                <link linkend="gtk-plot-flux-set-arrow">gtk_plot_flux_set_arrow</link>             (<link linkend="GtkPlotFlux">GtkPlotFlux</link> *flux,
+                                                         <link linkend="gint">gint</link> arrow_length,
+                                                         <link linkend="gint">gint</link> arrow_width,
+                                                         <link linkend="GtkPlotSymbolStyle">GtkPlotSymbolStyle</link> arrow_style);
+<link linkend="void">void</link>                <link linkend="gtk-plot-flux-get-arrow">gtk_plot_flux_get_arrow</link>             (<link linkend="GtkPlotFlux">GtkPlotFlux</link> *flux,
+                                                         <link linkend="gint">gint</link> *arrow_length,
+                                                         <link linkend="gint">gint</link> *arrow_width,
+                                                         <link linkend="GtkPlotSymbolStyle">GtkPlotSymbolStyle</link> *arrow_style);
+<link linkend="void">void</link>                <link linkend="gtk-plot-flux-center">gtk_plot_flux_center</link>                (<link linkend="GtkPlotFlux">GtkPlotFlux</link> *flux,
+                                                         <link linkend="gboolean">gboolean</link> center);
+<link linkend="gboolean">gboolean</link>            <link linkend="gtk-plot-flux-is-centered">gtk_plot_flux_is_centered</link>           (<link linkend="GtkPlotFlux">GtkPlotFlux</link> *flux);
+<link linkend="void">void</link>                <link linkend="gtk-plot-flux-show-scale">gtk_plot_flux_show_scale</link>            (<link linkend="GtkPlotFlux">GtkPlotFlux</link> *flux,
+                                                         <link linkend="gboolean">gboolean</link> show);
+<link linkend="void">void</link>                <link linkend="gtk-plot-flux-set-scale-max">gtk_plot_flux_set_scale_max</link>         (<link linkend="GtkPlotFlux">GtkPlotFlux</link> *flux,
+                                                         <link linkend="gdouble">gdouble</link> scale_max);
+<link linkend="void">void</link>                <link linkend="gtk-plot-flux-set-size-max">gtk_plot_flux_set_size_max</link>          (<link linkend="GtkPlotFlux">GtkPlotFlux</link> *flux,
+                                                         <link linkend="guint">guint</link> size_max);
+<link linkend="void">void</link>                <link linkend="gtk-plot-flux-set-labels-precision">gtk_plot_flux_set_labels_precision</link>  (<link linkend="GtkPlotFlux">GtkPlotFlux</link> *flux,
+                                                         <link linkend="gint">gint</link> precision);
+<link linkend="void">void</link>                <link linkend="gtk-plot-flux-set-labels-style">gtk_plot_flux_set_labels_style</link>      (<link linkend="GtkPlotFlux">GtkPlotFlux</link> *flux,
+                                                         <link linkend="GtkPlotLabelStyle">GtkPlotLabelStyle</link> style);
+<link linkend="void">void</link>                <link linkend="gtk-plot-flux-set-labels-prefix">gtk_plot_flux_set_labels_prefix</link>     (<link linkend="GtkPlotFlux">GtkPlotFlux</link> *flux,
+                                                         const <link linkend="gchar">gchar</link> *prefix);
+<link linkend="void">void</link>                <link linkend="gtk-plot-flux-set-labels-suffix">gtk_plot_flux_set_labels_suffix</link>     (<link linkend="GtkPlotFlux">GtkPlotFlux</link> *flux,
+                                                         const <link linkend="gchar">gchar</link> *suffix);
+</synopsis>
+</refsynopsisdiv>
+
+<refsect1 id="GtkPlotFlux.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+  <link linkend="GObject">GObject</link>
+   +----<link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+         +----<link linkend="GtkObject">GtkObject</link>
+               +----<link linkend="GtkWidget">GtkWidget</link>
+                     +----<link linkend="GtkPlotData">GtkPlotData</link>
+                           +----GtkPlotFlux
+</synopsis>
+</refsect1>
+
+
+
+<refsect1 id="GtkPlotFlux.implemented-interfaces" role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+GtkPlotFlux implements
+ <link linkend="AtkImplementorIface">AtkImplementorIface</link> and  <link linkend="GtkBuildable">GtkBuildable</link>.</para>
+</refsect1>
+
+
+<refsect1 id="GtkPlotFlux.properties" role="properties">
+<title role="properties.title">Properties</title>
+<synopsis>
+  &quot;<link linkend="GtkPlotFlux--centered">centered</link>&quot;                 <link linkend="gboolean">gboolean</link>              : Read / Write
+  &quot;<link linkend="GtkPlotFlux--labels-precision">labels-precision</link>&quot;         <link linkend="gint">gint</link>                  : Read / Write
+  &quot;<link linkend="GtkPlotFlux--labels-prefix">labels-prefix</link>&quot;            <link linkend="gchar">gchar</link>*                : Read / Write
+  &quot;<link linkend="GtkPlotFlux--labels-style">labels-style</link>&quot;             <link linkend="gint">gint</link>                  : Read / Write
+  &quot;<link linkend="GtkPlotFlux--labels-suffix">labels-suffix</link>&quot;            <link linkend="gchar">gchar</link>*                : Read / Write
+  &quot;<link linkend="GtkPlotFlux--length">length</link>&quot;                   <link linkend="gint">gint</link>                  : Read / Write
+  &quot;<link linkend="GtkPlotFlux--scale-max">scale-max</link>&quot;                <link linkend="gdouble">gdouble</link>               : Read / Write
+  &quot;<link linkend="GtkPlotFlux--show-scale">show-scale</link>&quot;               <link linkend="gboolean">gboolean</link>              : Read / Write
+  &quot;<link linkend="GtkPlotFlux--size-max">size-max</link>&quot;                 <link linkend="gint">gint</link>                  : Read / Write
+  &quot;<link linkend="GtkPlotFlux--style">style</link>&quot;                    <link linkend="gint">gint</link>                  : Read / Write
+  &quot;<link linkend="GtkPlotFlux--width">width</link>&quot;                    <link linkend="gint">gint</link>                  : Read / Write
+</synopsis>
+</refsect1>
+
+
+
+<refsect1 id="GtkPlotFlux.description" role="desc">
+<title role="desc.title">Description</title>
+<para>
+FIXME:: Need long description.</para>
+<para>
+</para>
+</refsect1>
+
+<refsect1 id="GtkPlotFlux.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="GtkPlotFlux-struct" role="struct">
+<title>GtkPlotFlux</title>
+<indexterm zone="GtkPlotFlux-struct"><primary sortas="GtkPlotFlux">GtkPlotFlux</primary></indexterm><programlisting>typedef struct _GtkPlotFlux GtkPlotFlux;</programlisting>
+<para>
+The GtkPlotFlux struct contains only private data.
+It should only be accessed through the functions described below.</para>
+<para>
+</para></refsect2>
+<refsect2 id="gtk-plot-flux-new" role="function">
+<title>gtk_plot_flux_new ()</title>
+<indexterm zone="gtk-plot-flux-new"><primary sortas="gtk_plot_flux_new">gtk_plot_flux_new</primary></indexterm><programlisting><link linkend="GtkWidget">GtkWidget</link>*          gtk_plot_flux_new                   (void);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-flux-set-arrow" role="function">
+<title>gtk_plot_flux_set_arrow ()</title>
+<indexterm zone="gtk-plot-flux-set-arrow"><primary sortas="gtk_plot_flux_set_arrow">gtk_plot_flux_set_arrow</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_flux_set_arrow             (<link linkend="GtkPlotFlux">GtkPlotFlux</link> *flux,
+                                                         <link linkend="gint">gint</link> arrow_length,
+                                                         <link linkend="gint">gint</link> arrow_width,
+                                                         <link linkend="GtkPlotSymbolStyle">GtkPlotSymbolStyle</link> arrow_style);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>flux</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>arrow_length</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>arrow_width</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>arrow_style</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-flux-get-arrow" role="function">
+<title>gtk_plot_flux_get_arrow ()</title>
+<indexterm zone="gtk-plot-flux-get-arrow"><primary sortas="gtk_plot_flux_get_arrow">gtk_plot_flux_get_arrow</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_flux_get_arrow             (<link linkend="GtkPlotFlux">GtkPlotFlux</link> *flux,
+                                                         <link linkend="gint">gint</link> *arrow_length,
+                                                         <link linkend="gint">gint</link> *arrow_width,
+                                                         <link linkend="GtkPlotSymbolStyle">GtkPlotSymbolStyle</link> *arrow_style);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>flux</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>arrow_length</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>arrow_width</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>arrow_style</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-flux-center" role="function">
+<title>gtk_plot_flux_center ()</title>
+<indexterm zone="gtk-plot-flux-center"><primary sortas="gtk_plot_flux_center">gtk_plot_flux_center</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_flux_center                (<link linkend="GtkPlotFlux">GtkPlotFlux</link> *flux,
+                                                         <link linkend="gboolean">gboolean</link> center);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>flux</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>center</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-flux-is-centered" role="function">
+<title>gtk_plot_flux_is_centered ()</title>
+<indexterm zone="gtk-plot-flux-is-centered"><primary sortas="gtk_plot_flux_is_centered">gtk_plot_flux_is_centered</primary></indexterm><programlisting><link linkend="gboolean">gboolean</link>            gtk_plot_flux_is_centered           (<link linkend="GtkPlotFlux">GtkPlotFlux</link> *flux);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>flux</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-flux-show-scale" role="function">
+<title>gtk_plot_flux_show_scale ()</title>
+<indexterm zone="gtk-plot-flux-show-scale"><primary sortas="gtk_plot_flux_show_scale">gtk_plot_flux_show_scale</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_flux_show_scale            (<link linkend="GtkPlotFlux">GtkPlotFlux</link> *flux,
+                                                         <link linkend="gboolean">gboolean</link> show);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>flux</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>show</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-flux-set-scale-max" role="function">
+<title>gtk_plot_flux_set_scale_max ()</title>
+<indexterm zone="gtk-plot-flux-set-scale-max"><primary sortas="gtk_plot_flux_set_scale_max">gtk_plot_flux_set_scale_max</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_flux_set_scale_max         (<link linkend="GtkPlotFlux">GtkPlotFlux</link> *flux,
+                                                         <link linkend="gdouble">gdouble</link> scale_max);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>flux</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>scale_max</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-flux-set-size-max" role="function">
+<title>gtk_plot_flux_set_size_max ()</title>
+<indexterm zone="gtk-plot-flux-set-size-max"><primary sortas="gtk_plot_flux_set_size_max">gtk_plot_flux_set_size_max</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_flux_set_size_max          (<link linkend="GtkPlotFlux">GtkPlotFlux</link> *flux,
+                                                         <link linkend="guint">guint</link> size_max);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>flux</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>size_max</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-flux-set-labels-precision" role="function">
+<title>gtk_plot_flux_set_labels_precision ()</title>
+<indexterm zone="gtk-plot-flux-set-labels-precision"><primary sortas="gtk_plot_flux_set_labels_precision">gtk_plot_flux_set_labels_precision</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_flux_set_labels_precision  (<link linkend="GtkPlotFlux">GtkPlotFlux</link> *flux,
+                                                         <link linkend="gint">gint</link> precision);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>flux</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>precision</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-flux-set-labels-style" role="function">
+<title>gtk_plot_flux_set_labels_style ()</title>
+<indexterm zone="gtk-plot-flux-set-labels-style"><primary sortas="gtk_plot_flux_set_labels_style">gtk_plot_flux_set_labels_style</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_flux_set_labels_style      (<link linkend="GtkPlotFlux">GtkPlotFlux</link> *flux,
+                                                         <link linkend="GtkPlotLabelStyle">GtkPlotLabelStyle</link> style);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>flux</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>style</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-flux-set-labels-prefix" role="function">
+<title>gtk_plot_flux_set_labels_prefix ()</title>
+<indexterm zone="gtk-plot-flux-set-labels-prefix"><primary sortas="gtk_plot_flux_set_labels_prefix">gtk_plot_flux_set_labels_prefix</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_flux_set_labels_prefix     (<link linkend="GtkPlotFlux">GtkPlotFlux</link> *flux,
+                                                         const <link linkend="gchar">gchar</link> *prefix);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>flux</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>prefix</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-flux-set-labels-suffix" role="function">
+<title>gtk_plot_flux_set_labels_suffix ()</title>
+<indexterm zone="gtk-plot-flux-set-labels-suffix"><primary sortas="gtk_plot_flux_set_labels_suffix">gtk_plot_flux_set_labels_suffix</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_flux_set_labels_suffix     (<link linkend="GtkPlotFlux">GtkPlotFlux</link> *flux,
+                                                         const <link linkend="gchar">gchar</link> *suffix);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>flux</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>suffix</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+<refsect1 id="GtkPlotFlux.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GtkPlotFlux--centered" role="property"><title>The <literal>&quot;centered&quot;</literal> property</title>
+<indexterm zone="GtkPlotFlux--centered"><primary sortas="GtkPlotFlux:centered">GtkPlotFlux:centered</primary></indexterm><programlisting>  &quot;centered&quot;                 <link linkend="gboolean">gboolean</link>              : Read / Write</programlisting>
+<para>
+</para>
+<para>
+</para><para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="GtkPlotFlux--labels-precision" role="property"><title>The <literal>&quot;labels-precision&quot;</literal> property</title>
+<indexterm zone="GtkPlotFlux--labels-precision"><primary sortas="GtkPlotFlux:labels-precision">GtkPlotFlux:labels-precision</primary></indexterm><programlisting>  &quot;labels-precision&quot;         <link linkend="gint">gint</link>                  : Read / Write</programlisting>
+<para></para><para>Allowed values: &gt;= 0</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GtkPlotFlux--labels-prefix" role="property"><title>The <literal>&quot;labels-prefix&quot;</literal> property</title>
+<indexterm zone="GtkPlotFlux--labels-prefix"><primary sortas="GtkPlotFlux:labels-prefix">GtkPlotFlux:labels-prefix</primary></indexterm><programlisting>  &quot;labels-prefix&quot;            <link linkend="gchar">gchar</link>*                : Read / Write</programlisting>
+<para></para><para>Default value: NULL</para>
+</refsect2>
+<refsect2 id="GtkPlotFlux--labels-style" role="property"><title>The <literal>&quot;labels-style&quot;</literal> property</title>
+<indexterm zone="GtkPlotFlux--labels-style"><primary sortas="GtkPlotFlux:labels-style">GtkPlotFlux:labels-style</primary></indexterm><programlisting>  &quot;labels-style&quot;             <link linkend="gint">gint</link>                  : Read / Write</programlisting>
+<para></para><para>Allowed values: &gt;= 0</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GtkPlotFlux--labels-suffix" role="property"><title>The <literal>&quot;labels-suffix&quot;</literal> property</title>
+<indexterm zone="GtkPlotFlux--labels-suffix"><primary sortas="GtkPlotFlux:labels-suffix">GtkPlotFlux:labels-suffix</primary></indexterm><programlisting>  &quot;labels-suffix&quot;            <link linkend="gchar">gchar</link>*                : Read / Write</programlisting>
+<para></para><para>Default value: NULL</para>
+</refsect2>
+<refsect2 id="GtkPlotFlux--length" role="property"><title>The <literal>&quot;length&quot;</literal> property</title>
+<indexterm zone="GtkPlotFlux--length"><primary sortas="GtkPlotFlux:length">GtkPlotFlux:length</primary></indexterm><programlisting>  &quot;length&quot;                   <link linkend="gint">gint</link>                  : Read / Write</programlisting>
+<para>
+</para>
+<para>
+</para><para>Allowed values: &gt;= 0</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GtkPlotFlux--scale-max" role="property"><title>The <literal>&quot;scale-max&quot;</literal> property</title>
+<indexterm zone="GtkPlotFlux--scale-max"><primary sortas="GtkPlotFlux:scale-max">GtkPlotFlux:scale-max</primary></indexterm><programlisting>  &quot;scale-max&quot;                <link linkend="gdouble">gdouble</link>               : Read / Write</programlisting>
+<para></para><para>Allowed values: &gt;= 0</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GtkPlotFlux--show-scale" role="property"><title>The <literal>&quot;show-scale&quot;</literal> property</title>
+<indexterm zone="GtkPlotFlux--show-scale"><primary sortas="GtkPlotFlux:show-scale">GtkPlotFlux:show-scale</primary></indexterm><programlisting>  &quot;show-scale&quot;               <link linkend="gboolean">gboolean</link>              : Read / Write</programlisting>
+<para></para><para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="GtkPlotFlux--size-max" role="property"><title>The <literal>&quot;size-max&quot;</literal> property</title>
+<indexterm zone="GtkPlotFlux--size-max"><primary sortas="GtkPlotFlux:size-max">GtkPlotFlux:size-max</primary></indexterm><programlisting>  &quot;size-max&quot;                 <link linkend="gint">gint</link>                  : Read / Write</programlisting>
+<para></para><para>Allowed values: &gt;= 0</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GtkPlotFlux--style" role="property"><title>The <literal>&quot;style&quot;</literal> property</title>
+<indexterm zone="GtkPlotFlux--style"><primary sortas="GtkPlotFlux:style">GtkPlotFlux:style</primary></indexterm><programlisting>  &quot;style&quot;                    <link linkend="gint">gint</link>                  : Read / Write</programlisting>
+<para>
+</para>
+<para>
+</para><para>Allowed values: &gt;= 0</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GtkPlotFlux--width" role="property"><title>The <literal>&quot;width&quot;</literal> property</title>
+<indexterm zone="GtkPlotFlux--width"><primary sortas="GtkPlotFlux:width">GtkPlotFlux:width</primary></indexterm><programlisting>  &quot;width&quot;                    <link linkend="gint">gint</link>                  : Read / Write</programlisting>
+<para>
+</para>
+<para>
+</para><para>Allowed values: &gt;= 0</para>
+<para>Default value: 0</para>
+</refsect2>
+</refsect1>
+
+
+
+
+</refentry>

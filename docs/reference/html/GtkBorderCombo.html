@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GtkBorderCombo</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="GtkExtra Reference Manual">
+<link rel="up" href="ch03.html" title="Widgets">
+<link rel="prev" href="ch03.html" title="Widgets">
+<link rel="next" href="GtkCharSelection.html" title="GtkCharSelection">
+<meta name="generator" content="GTK-Doc V1.11 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="part" href="gtkextra.html" title="Part I. GtkExtra Overview">
+<link rel="part" href="gtkextrabase.html" title="Part II. GtkExtra Widgets and Objects">
+<link rel="chapter" href="ch01.html" title="Object Hierarchy">
+<link rel="chapter" href="ch02.html" title="Widget Gallery">
+<link rel="chapter" href="ch03.html" title="Widgets">
+<link rel="chapter" href="ch04.html" title="Data Formatter">
+<link rel="chapter" href="ch05.html" title="GtkExtra Versioning">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="ch03.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch03.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">GtkExtra Reference Manual</th>
+<td><a accesskey="n" href="GtkCharSelection.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#GtkBorderCombo.synopsis" class="shortcut">Top</a>
+                 | 
+                <a href="#GtkBorderCombo.description" class="shortcut">Description</a>
+                 | 
+                <a href="#GtkBorderCombo.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                 | 
+                <a href="#GtkBorderCombo.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+                 | 
+                <a href="#GtkBorderCombo.signals" class="shortcut">Signals</a>
+</td></tr>
+</table>
+<div class="refentry" title="GtkBorderCombo">
+<a name="GtkBorderCombo"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GtkBorderCombo.top_of_page"></a>GtkBorderCombo</span></h2>
+<p>GtkBorderCombo — A border combo widget</p>
+</td>
+<td valign="top" align="right"><img src="gtkbordercombo.jpg"></td>
+</tr></table></div>
+<div class="refsynopsisdiv" title="Synopsis">
+<a name="GtkBorderCombo.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">
+
+#include &lt;gtkextra.h&gt;
+
+                    <a class="link" href="GtkBorderCombo.html#GtkBorderCombo-struct" title="GtkBorderCombo">GtkBorderCombo</a>;
+<a
+href="http://library.gnome.org/devel/gtk3/GtkWidget.html"
+>GtkWidget</a> *         <a class="link" href="GtkBorderCombo.html#gtk-border-combo-new" title="gtk_border_combo_new ()">gtk_border_combo_new</a>                (void);
+</pre>
+</div>
+<div class="refsect1" title="Object Hierarchy">
+<a name="GtkBorderCombo.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a
+href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject"
+>GObject</a>
+   +----<a
+href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned"
+>GInitiallyUnowned</a>
+         +----<a
+href="http://library.gnome.org/devel/gtk3/GtkObject.html"
+>GtkObject</a>
+               +----<a
+href="http://library.gnome.org/devel/gtk3/GtkWidget.html"
+>GtkWidget</a>
+                     +----<a
+href="http://library.gnome.org/devel/gtk3/GtkContainer.html"
+>GtkContainer</a>
+                           +----<a
+href="http://library.gnome.org/devel/gtk3/GtkBox.html"
+>GtkBox</a>
+                                 +----<a
+href="http://library.gnome.org/devel/gtk3/GtkHBox.html"
+>GtkHBox</a>
+                                       +----<a class="link" href="GtkComboButton.html" title="GtkComboButton">GtkComboButton</a>
+                                             +----GtkBorderCombo
+</pre>
+</div>
+<div class="refsect1" title="Implemented Interfaces">
+<a name="GtkBorderCombo.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+GtkBorderCombo implements
+ AtkImplementorIface,  <a
+href="http://library.gnome.org/devel/gtk3/GtkBuildable.html"
+>GtkBuildable</a> and  <a
+href="http://library.gnome.org/devel/gtk3/gtk2-Orientable.html#GtkOrientable"
+>GtkOrientable</a>.</p>
+</div>
+<div class="refsect1" title="Signals">
+<a name="GtkBorderCombo.signals"></a><h2>Signals</h2>
+<pre class="synopsis">
+  "<a class="link" href="GtkBorderCombo.html#GtkBorderCombo-changed" title='The "changed" signal'>changed</a>"                                        : Run First
+</pre>
+</div>
+<div class="refsect1" title="Description">
+<a name="GtkBorderCombo.description"></a><h2>Description</h2>
+<p>
+It is a <a
+href="http://library.gnome.org/devel/gtk3/GtkComboBox.html"
+><span class="type">GtkComboBox</span></a> subclass with a variety of border styles in the popdown window arranged in a table of togglebuttons.</p>
+<p>
+</p>
+</div>
+<div class="refsect1" title="Details">
+<a name="GtkBorderCombo.details"></a><h2>Details</h2>
+<div class="refsect2" title="GtkBorderCombo">
+<a name="GtkBorderCombo-struct"></a><h3>GtkBorderCombo</h3>
+<pre class="programlisting">typedef struct _GtkBorderCombo GtkBorderCombo;</pre>
+<p>
+The GtkBorderCombo struct contains only private data.
+It should only be accessed through the functions described below.</p>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2" title="gtk_border_combo_new ()">
+<a name="gtk-border-combo-new"></a><h3>gtk_border_combo_new ()</h3>
+<pre class="programlisting"><a
+href="http://library.gnome.org/devel/gtk3/GtkWidget.html"
+>GtkWidget</a> *         gtk_border_combo_new                (void);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1" title="Signal Details">
+<a name="GtkBorderCombo.signal-details"></a><h2>Signal Details</h2>
+<div class="refsect2" title='The "changed" signal'>
+<a name="GtkBorderCombo-changed"></a><h3>The <code class="literal">"changed"</code> signal</h3>
+<pre class="programlisting">void                user_function                      (<a class="link" href="GtkBorderCombo.html" title="GtkBorderCombo">GtkBorderCombo</a> *border_combo,
+                                                        <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>            selection,
+                                                        <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"
+>gpointer</a>        user_data)         : Run First</pre>
+<p>
+Emmited when the GtkBorderCombo's state is changed</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>border_combo</code></em> :</span></p></td>
+<td> the <a class="link" href="GtkBorderCombo.html" title="GtkBorderCombo"><span class="type">GtkBorderCombo</span></a> object that received the signal
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>selection</code></em> :</span></p></td>
+<td> the number of selected item
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.11</div>
+</body>
+</html>

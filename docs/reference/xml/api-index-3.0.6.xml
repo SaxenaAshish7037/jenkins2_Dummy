@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE indexdiv PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+<!ENTITY version SYSTEM "version.xml">
+]>
+<!--ENTITY index-Objects-Grouped SYSTEM "objects_grouped.sgml"-->
+<indexdiv>
+<indexdiv><title>G</title>
+<indexentry><primaryie linkends="GtkDataEntry--max-length-bytes"><link linkend="GtkDataEntry--max-length-bytes">GtkDataEntry:max-length-bytes</link></primaryie></indexentry>
+<indexentry><primaryie linkends="GtkDataTextView--description"><link linkend="GtkDataTextView--description">GtkDataTextView:description</link></primaryie></indexentry>
+<indexentry><primaryie linkends="GtkDataTextView--max-length"><link linkend="GtkDataTextView--max-length">GtkDataTextView:max-length</link></primaryie></indexentry>
+<indexentry><primaryie linkends="GtkDataTextView--max-length-bytes"><link linkend="GtkDataTextView--max-length-bytes">GtkDataTextView:max-length-bytes</link></primaryie></indexentry>
+<indexentry><primaryie linkends="GtkSheetColumn--max-length"><link linkend="GtkSheetColumn--max-length">GtkSheetColumn:max-length</link></primaryie></indexentry>
+<indexentry><primaryie linkends="GtkSheetColumn--max-length-bytes"><link linkend="GtkSheetColumn--max-length-bytes">GtkSheetColumn:max-length-bytes</link></primaryie></indexentry>
+<indexentry><primaryie linkends="GtkSheetColumn--wrap-mode"><link linkend="GtkSheetColumn--wrap-mode">GtkSheetColumn:wrap-mode</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gtk-data-entry-get-max-length-bytes"><link linkend="gtk-data-entry-get-max-length-bytes">gtk_data_entry_get_max_length_bytes</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gtk-data-entry-set-max-length-bytes"><link linkend="gtk-data-entry-set-max-length-bytes">gtk_data_entry_set_max_length_bytes</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gtk-data-text-view-get-description"><link linkend="gtk-data-text-view-get-description">gtk_data_text_view_get_description</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gtk-data-text-view-get-max-length"><link linkend="gtk-data-text-view-get-max-length">gtk_data_text_view_get_max_length</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gtk-data-text-view-get-max-length-bytes"><link linkend="gtk-data-text-view-get-max-length-bytes">gtk_data_text_view_get_max_length_bytes</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gtk-data-text-view-new"><link linkend="gtk-data-text-view-new">gtk_data_text_view_new</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gtk-data-text-view-set-description"><link linkend="gtk-data-text-view-set-description">gtk_data_text_view_set_description</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gtk-data-text-view-set-max-length"><link linkend="gtk-data-text-view-set-max-length">gtk_data_text_view_set_max_length</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gtk-data-text-view-set-max-length-bytes"><link linkend="gtk-data-text-view-set-max-length-bytes">gtk_data_text_view_set_max_length_bytes</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gtk-item-entry-get-max-length-bytes"><link linkend="gtk-item-entry-get-max-length-bytes">gtk_item_entry_get_max_length_bytes</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gtk-item-entry-set-max-length-bytes"><link linkend="gtk-item-entry-set-max-length-bytes">gtk_item_entry_set_max_length_bytes</link></primaryie></indexentry>
+</indexdiv>
+</indexdiv>

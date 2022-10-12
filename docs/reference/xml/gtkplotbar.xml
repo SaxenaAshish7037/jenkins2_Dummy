@@ -1,0 +1,173 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+<!ENTITY version SYSTEM "version.xml">
+]>
+<!--ENTITY index-Objects-Grouped SYSTEM "objects_grouped.sgml"-->
+<refentry id="GtkPlotBar">
+<refmeta>
+<refentrytitle role="top_of_page" id="GtkPlotBar.top_of_page">GtkPlotBar</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GTKEXTRA Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>GtkPlotBar</refname>
+<refpurpose>3d scientific plots widget for GTK.</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="GtkPlotBar.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>
+
+#include &lt;gtkextra.h&gt;
+
+                    <link linkend="GtkPlotBar-struct">GtkPlotBar</link>;
+enum                <link linkend="GtkPlotBarUnits">GtkPlotBarUnits</link>;
+<link linkend="GtkWidget">GtkWidget</link>*          <link linkend="gtk-plot-bar-new">gtk_plot_bar_new</link>                    (<link linkend="GtkOrientation">GtkOrientation</link> orientation);
+<link linkend="void">void</link>                <link linkend="gtk-plot-bar-construct">gtk_plot_bar_construct</link>              (<link linkend="GtkPlotBar">GtkPlotBar</link> *bar,
+                                                         <link linkend="GtkOrientation">GtkOrientation</link> orientation);
+<link linkend="void">void</link>                <link linkend="gtk-plot-bar-set-width">gtk_plot_bar_set_width</link>              (<link linkend="GtkPlotBar">GtkPlotBar</link> *bar,
+                                                         <link linkend="gdouble">gdouble</link> width);
+<link linkend="gdouble">gdouble</link>             <link linkend="gtk-plot-bar-get-width">gtk_plot_bar_get_width</link>              (<link linkend="GtkPlotBar">GtkPlotBar</link> *bar);
+</synopsis>
+</refsynopsisdiv>
+
+<refsect1 id="GtkPlotBar.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+  <link linkend="GObject">GObject</link>
+   +----<link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+         +----<link linkend="GtkObject">GtkObject</link>
+               +----<link linkend="GtkWidget">GtkWidget</link>
+                     +----<link linkend="GtkPlotData">GtkPlotData</link>
+                           +----GtkPlotBar
+</synopsis>
+</refsect1>
+
+
+
+<refsect1 id="GtkPlotBar.implemented-interfaces" role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+GtkPlotBar implements
+ <link linkend="AtkImplementorIface">AtkImplementorIface</link> and  <link linkend="GtkBuildable">GtkBuildable</link>.</para>
+</refsect1>
+
+
+<refsect1 id="GtkPlotBar.properties" role="properties">
+<title role="properties.title">Properties</title>
+<synopsis>
+  &quot;<link linkend="GtkPlotBar--orientation">orientation</link>&quot;              <link linkend="GtkOrientation">GtkOrientation</link>        : Read / Write
+  &quot;<link linkend="GtkPlotBar--width">width</link>&quot;                    <link linkend="gdouble">gdouble</link>               : Read / Write
+</synopsis>
+</refsect1>
+
+
+
+<refsect1 id="GtkPlotBar.description" role="desc">
+<title role="desc.title">Description</title>
+<para>
+FIXME:: Need long description.</para>
+<para>
+</para>
+</refsect1>
+
+<refsect1 id="GtkPlotBar.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="GtkPlotBar-struct" role="struct">
+<title>GtkPlotBar</title>
+<indexterm zone="GtkPlotBar-struct"><primary sortas="GtkPlotBar">GtkPlotBar</primary></indexterm><programlisting>typedef struct _GtkPlotBar GtkPlotBar;</programlisting>
+<para>
+The GtkPlotBar struct contains only private data.
+It should only be accessed through the functions described below.</para>
+<para>
+</para></refsect2>
+<refsect2 id="GtkPlotBarUnits" role="enum">
+<title>enum GtkPlotBarUnits</title>
+<indexterm zone="GtkPlotBarUnits"><primary sortas="GtkPlotBarUnits">GtkPlotBarUnits</primary></indexterm><programlisting>typedef enum
+{
+  GTK_PLOT_BAR_POINTS,
+  GTK_PLOT_BAR_RELATIVE,
+  GTK_PLOT_BAR_ABSOLUTE,
+} GtkPlotBarUnits;
+</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="gtk-plot-bar-new" role="function">
+<title>gtk_plot_bar_new ()</title>
+<indexterm zone="gtk-plot-bar-new"><primary sortas="gtk_plot_bar_new">gtk_plot_bar_new</primary></indexterm><programlisting><link linkend="GtkWidget">GtkWidget</link>*          gtk_plot_bar_new                    (<link linkend="GtkOrientation">GtkOrientation</link> orientation);</programlisting>
+<para>
+Create a new GtkPlotBar widget.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>orientation</parameter>&#160;:</term>
+<listitem><simpara> GTK_ORIENTATION_HORIZONTAL or GTK_ORIENTATION_VERTICAL.
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara> a new GtkWidget.
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-bar-construct" role="function">
+<title>gtk_plot_bar_construct ()</title>
+<indexterm zone="gtk-plot-bar-construct"><primary sortas="gtk_plot_bar_construct">gtk_plot_bar_construct</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_bar_construct              (<link linkend="GtkPlotBar">GtkPlotBar</link> *bar,
+                                                         <link linkend="GtkOrientation">GtkOrientation</link> orientation);</programlisting>
+<para>
+Initializes a <link linkend="GtkPlotBar"><type>GtkPlotBar</type></link> structure.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>bar</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlotBar"><type>GtkPlotBar</type></link> widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>orientation</parameter>&#160;:</term>
+<listitem><simpara> GTK_ORIENTATION_HORIZONTAL or GTK_ORIENTATION_VERTICAL.
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-bar-set-width" role="function">
+<title>gtk_plot_bar_set_width ()</title>
+<indexterm zone="gtk-plot-bar-set-width"><primary sortas="gtk_plot_bar_set_width">gtk_plot_bar_set_width</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_bar_set_width              (<link linkend="GtkPlotBar">GtkPlotBar</link> *bar,
+                                                         <link linkend="gdouble">gdouble</link> width);</programlisting>
+<para>
+Set the width of a GtkPlotBar widget.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>bar</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlotBar"><type>GtkPlotBar</type></link> widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>width</parameter>&#160;:</term>
+<listitem><simpara> widget width.
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-bar-get-width" role="function">
+<title>gtk_plot_bar_get_width ()</title>
+<indexterm zone="gtk-plot-bar-get-width"><primary sortas="gtk_plot_bar_get_width">gtk_plot_bar_get_width</primary></indexterm><programlisting><link linkend="gdouble">gdouble</link>             gtk_plot_bar_get_width              (<link linkend="GtkPlotBar">GtkPlotBar</link> *bar);</programlisting>
+<para>
+Set the width of a GtkPlotBar widget.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>bar</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlotBar"><type>GtkPlotBar</type></link> widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara> widget width.
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+<refsect1 id="GtkPlotBar.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GtkPlotBar--orientation" role="property"><title>The <literal>&quot;orientation&quot;</literal> property</title>
+<indexterm zone="GtkPlotBar--orientation"><primary sortas="GtkPlotBar:orientation">GtkPlotBar:orientation</primary></indexterm><programlisting>  &quot;orientation&quot;              <link linkend="GtkOrientation">GtkOrientation</link>        : Read / Write</programlisting>
+<para>Orientation.</para><para>Default value: GTK_ORIENTATION_HORIZONTAL</para>
+</refsect2>
+<refsect2 id="GtkPlotBar--width" role="property"><title>The <literal>&quot;width&quot;</literal> property</title>
+<indexterm zone="GtkPlotBar--width"><primary sortas="GtkPlotBar:width">GtkPlotBar:width</primary></indexterm><programlisting>  &quot;width&quot;                    <link linkend="gdouble">gdouble</link>               : Read / Write</programlisting>
+<para>Width.</para><para>Allowed values: &gt;= 0</para>
+<para>Default value: 0</para>
+</refsect2>
+</refsect1>
+
+
+
+
+</refentry>

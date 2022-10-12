@@ -1,0 +1,245 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GtkPlotCanvasPlot</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="GtkExtra Reference Manual">
+<link rel="up" href="ch03.html" title="Widgets">
+<link rel="prev" href="GtkPlotCanvasText.html" title="GtkPlotCanvasText">
+<link rel="next" href="GtkPlotData.html" title="GtkPlotData">
+<meta name="generator" content="GTK-Doc V1.11 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="part" href="gtkextra.html" title="Part I. GtkExtra Overview">
+<link rel="part" href="gtkextrabase.html" title="Part II. GtkExtra Widgets and Objects">
+<link rel="chapter" href="ch01.html" title="Object Hierarchy">
+<link rel="chapter" href="ch02.html" title="Widget Gallery">
+<link rel="chapter" href="ch03.html" title="Widgets">
+<link rel="chapter" href="ch04.html" title="Data Formatter">
+<link rel="chapter" href="ch05.html" title="GtkExtra Versioning">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="GtkPlotCanvasText.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch03.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">GtkExtra Reference Manual</th>
+<td><a accesskey="n" href="GtkPlotData.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#GtkPlotCanvasPlot.synopsis" class="shortcut">Top</a>
+                 | 
+                <a href="#GtkPlotCanvasPlot.description" class="shortcut">Description</a>
+                 | 
+                <a href="#GtkPlotCanvasPlot.object-hierarchy" class="shortcut">Object Hierarchy</a>
+</td></tr>
+</table>
+<div class="refentry" title="GtkPlotCanvasPlot">
+<a name="GtkPlotCanvasPlot"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GtkPlotCanvasPlot.top_of_page"></a>GtkPlotCanvasPlot</span></h2>
+<p>GtkPlotCanvasPlot</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv" title="Synopsis">
+<a name="GtkPlotCanvasPlot.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">
+
+#include &lt;gtkextra.h&gt;
+
+                    <a class="link" href="GtkPlotCanvasPlot.html#GtkPlotCanvasPlot-struct" title="GtkPlotCanvasPlot">GtkPlotCanvasPlot</a>;
+enum                <a class="link" href="GtkPlotCanvasPlot.html#GtkPlotCanvasPlotFlags" title="enum GtkPlotCanvasPlotFlags">GtkPlotCanvasPlotFlags</a>;
+enum                <a class="link" href="GtkPlotCanvasPlot.html#GtkPlotCanvasPlotPos" title="enum GtkPlotCanvasPlotPos">GtkPlotCanvasPlotPos</a>;
+<a class="link" href="GtkPlotCanvas.html#GtkPlotCanvasChild">GtkPlotCanvasChild</a> * <a class="link" href="GtkPlotCanvasPlot.html#gtk-plot-canvas-plot-new" title="gtk_plot_canvas_plot_new ()">gtk_plot_canvas_plot_new</a>           (<a class="link" href="GtkPlot.html" title="GtkPlot">GtkPlot</a> *plot);
+<a class="link" href="GtkPlotCanvasPlot.html#GtkPlotCanvasPlotFlags" title="enum GtkPlotCanvasPlotFlags">GtkPlotCanvasPlotFlags</a>  <a class="link" href="GtkPlotCanvasPlot.html#gtk-plot-canvas-plot-flags" title="gtk_plot_canvas_plot_flags ()">gtk_plot_canvas_plot_flags</a>      (<a class="link" href="GtkPlotCanvasPlot.html" title="GtkPlotCanvasPlot">GtkPlotCanvasPlot</a> *plot);
+void                <a class="link" href="GtkPlotCanvasPlot.html#gtk-plot-canvas-plot-set-flags" title="gtk_plot_canvas_plot_set_flags ()">gtk_plot_canvas_plot_set_flags</a>      (<a class="link" href="GtkPlotCanvasPlot.html" title="GtkPlotCanvasPlot">GtkPlotCanvasPlot</a> *plot,
+                                                         <a class="link" href="GtkPlotCanvasPlot.html#GtkPlotCanvasPlotFlags" title="enum GtkPlotCanvasPlotFlags">GtkPlotCanvasPlotFlags</a> flags);
+void                <a class="link" href="GtkPlotCanvasPlot.html#gtk-plot-canvas-plot-unset-flags" title="gtk_plot_canvas_plot_unset_flags ()">gtk_plot_canvas_plot_unset_flags</a>    (<a class="link" href="GtkPlotCanvasPlot.html" title="GtkPlotCanvasPlot">GtkPlotCanvasPlot</a> *plot,
+                                                         <a class="link" href="GtkPlotCanvasPlot.html#GtkPlotCanvasPlotFlags" title="enum GtkPlotCanvasPlotFlags">GtkPlotCanvasPlotFlags</a> flags);
+</pre>
+</div>
+<div class="refsect1" title="Object Hierarchy">
+<a name="GtkPlotCanvasPlot.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a
+href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject"
+>GObject</a>
+   +----<a
+href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned"
+>GInitiallyUnowned</a>
+         +----<a
+href="http://library.gnome.org/devel/gtk3/GtkObject.html"
+>GtkObject</a>
+               +----<a class="link" href="GtkPlotCanvas.html#GtkPlotCanvasChild">GtkPlotCanvasChild</a>
+                     +----GtkPlotCanvasPlot
+</pre>
+</div>
+<div class="refsect1" title="Description">
+<a name="GtkPlotCanvasPlot.description"></a><h2>Description</h2>
+<p>
+A <a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas"><span class="type">GtkPlotCanvas</span></a> object is an interactive container for
+GtkPlots and some graphic primitives that can be used to
+illustrate the plots (see <span class="type">GtkCanvasChild</span>).</p>
+<p>
+</p>
+</div>
+<div class="refsect1" title="Details">
+<a name="GtkPlotCanvasPlot.details"></a><h2>Details</h2>
+<div class="refsect2" title="GtkPlotCanvasPlot">
+<a name="GtkPlotCanvasPlot-struct"></a><h3>GtkPlotCanvasPlot</h3>
+<pre class="programlisting">typedef struct _GtkPlotCanvasPlot GtkPlotCanvasPlot;</pre>
+<p>
+The GtkPlotBar struct contains only private data.
+It should only be accessed through the functions described below.</p>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2" title="enum GtkPlotCanvasPlotFlags">
+<a name="GtkPlotCanvasPlotFlags"></a><h3>enum GtkPlotCanvasPlotFlags</h3>
+<pre class="programlisting">typedef enum
+{
+      GTK_PLOT_CANVAS_PLOT_SELECT_POINT  =       1 &lt;&lt; 0, /* Select point */
+      GTK_PLOT_CANVAS_PLOT_DND_POINT     =       1 &lt;&lt; 1, /* DnD point */
+} GtkPlotCanvasPlotFlags;
+</pre>
+<p>
+Selection and DND mode of <a class="link" href="GtkPlotCanvas.html" title="GtkPlotCanvas"><span class="type">GtkPlotCanvas</span></a></p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><a name="GTK-PLOT-CANVAS-PLOT-SELECT-POINT--CAPS"></a><span class="term"><code class="literal">GTK_PLOT_CANVAS_PLOT_SELECT_POINT</code></span></p></td>
+<td> Select point
+</td>
+</tr>
+<tr>
+<td><p><a name="GTK-PLOT-CANVAS-PLOT-DND-POINT--CAPS"></a><span class="term"><code class="literal">GTK_PLOT_CANVAS_PLOT_DND_POINT</code></span></p></td>
+<td> DnD point
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="enum GtkPlotCanvasPlotPos">
+<a name="GtkPlotCanvasPlotPos"></a><h3>enum GtkPlotCanvasPlotPos</h3>
+<pre class="programlisting">typedef enum
+{
+  GTK_PLOT_CANVAS_PLOT_OUT,
+  GTK_PLOT_CANVAS_PLOT_IN_PLOT,
+  GTK_PLOT_CANVAS_PLOT_IN_LEGENDS,
+  GTK_PLOT_CANVAS_PLOT_IN_TITLE,
+  GTK_PLOT_CANVAS_PLOT_IN_AXIS,
+  GTK_PLOT_CANVAS_PLOT_IN_DATA,
+  GTK_PLOT_CANVAS_PLOT_IN_GRADIENT,
+  GTK_PLOT_CANVAS_PLOT_IN_MARKER,
+} GtkPlotCanvasPlotPos;
+</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_canvas_plot_new ()">
+<a name="gtk-plot-canvas-plot-new"></a><h3>gtk_plot_canvas_plot_new ()</h3>
+<pre class="programlisting"><a class="link" href="GtkPlotCanvas.html#GtkPlotCanvasChild">GtkPlotCanvasChild</a> * gtk_plot_canvas_plot_new           (<a class="link" href="GtkPlot.html" title="GtkPlot">GtkPlot</a> *plot);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>plot</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlot.html" title="GtkPlot"><span class="type">GtkPlot</span></a>.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_canvas_plot_flags ()">
+<a name="gtk-plot-canvas-plot-flags"></a><h3>gtk_plot_canvas_plot_flags ()</h3>
+<pre class="programlisting"><a class="link" href="GtkPlotCanvasPlot.html#GtkPlotCanvasPlotFlags" title="enum GtkPlotCanvasPlotFlags">GtkPlotCanvasPlotFlags</a>  gtk_plot_canvas_plot_flags      (<a class="link" href="GtkPlotCanvasPlot.html" title="GtkPlotCanvasPlot">GtkPlotCanvasPlot</a> *plot);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>plot</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_canvas_plot_set_flags ()">
+<a name="gtk-plot-canvas-plot-set-flags"></a><h3>gtk_plot_canvas_plot_set_flags ()</h3>
+<pre class="programlisting">void                gtk_plot_canvas_plot_set_flags      (<a class="link" href="GtkPlotCanvasPlot.html" title="GtkPlotCanvasPlot">GtkPlotCanvasPlot</a> *plot,
+                                                         <a class="link" href="GtkPlotCanvasPlot.html#GtkPlotCanvasPlotFlags" title="enum GtkPlotCanvasPlotFlags">GtkPlotCanvasPlotFlags</a> flags);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>plot</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>flags</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_canvas_plot_unset_flags ()">
+<a name="gtk-plot-canvas-plot-unset-flags"></a><h3>gtk_plot_canvas_plot_unset_flags ()</h3>
+<pre class="programlisting">void                gtk_plot_canvas_plot_unset_flags    (<a class="link" href="GtkPlotCanvasPlot.html" title="GtkPlotCanvasPlot">GtkPlotCanvasPlot</a> *plot,
+                                                         <a class="link" href="GtkPlotCanvasPlot.html#GtkPlotCanvasPlotFlags" title="enum GtkPlotCanvasPlotFlags">GtkPlotCanvasPlotFlags</a> flags);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>plot</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>flags</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.11</div>
+</body>
+</html>

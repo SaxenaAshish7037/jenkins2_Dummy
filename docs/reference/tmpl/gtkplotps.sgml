@@ -1,0 +1,106 @@
+<!-- ##### SECTION Title ##### -->
+GtkPlotPS
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### STRUCT GtkPlotPS ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### FUNCTION gtk_plot_ps_new ##### -->
+<para>
+
+</para>
+
+@psname: 
+@orientation: 
+@epsflag: 
+@page_size: 
+@scalex: 
+@scaley: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_ps_new_with_size ##### -->
+<para>
+
+</para>
+
+@psname: 
+@orientation: 
+@epsflag: 
+@units: 
+@width: 
+@height: 
+@scalex: 
+@scaley: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_ps_construct ##### -->
+<para>
+
+</para>
+
+@ps: 
+@psname: 
+@orientation: 
+@epsflag: 
+@page_size: 
+@scalex: 
+@scaley: 
+
+
+<!-- ##### FUNCTION gtk_plot_ps_construct_with_size ##### -->
+<para>
+
+</para>
+
+@ps: 
+@psname: 
+@orientation: 
+@epsflag: 
+@units: 
+@width: 
+@height: 
+@scalex: 
+@scaley: 
+
+
+<!-- ##### FUNCTION gtk_plot_ps_set_size ##### -->
+<para>
+
+</para>
+
+@ps: 
+@units: 
+@width: 
+@height: 
+
+
+<!-- ##### FUNCTION gtk_plot_ps_set_scale ##### -->
+<para>
+
+</para>
+
+@ps: 
+@scalex: 
+@scaley: 
+
+

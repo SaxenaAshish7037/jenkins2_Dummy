@@ -1,0 +1,305 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+<!ENTITY version SYSTEM "version.xml">
+]>
+<!--ENTITY index-Objects-Grouped SYSTEM "objects_grouped.sgml"-->
+<refentry id="GtkPlotSegment">
+<refmeta>
+<refentrytitle role="top_of_page" id="GtkPlotSegment.top_of_page">GtkPlotSegment</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GTKEXTRA Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>GtkPlotSegment</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="GtkPlotSegment.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>
+
+#include &lt;gtkextra.h&gt;
+
+                    <link linkend="GtkPlotSegment-struct">GtkPlotSegment</link>;
+enum                <link linkend="GtkPlotArrow">GtkPlotArrow</link>;
+<link linkend="GtkWidget">GtkWidget</link>*          <link linkend="gtk-plot-segment-new">gtk_plot_segment_new</link>                (void);
+<link linkend="void">void</link>                <link linkend="gtk-plot-segment-set-relative">gtk_plot_segment_set_relative</link>       (<link linkend="GtkPlotSegment">GtkPlotSegment</link> *segment,
+                                                         <link linkend="gboolean">gboolean</link> set);
+<link linkend="gboolean">gboolean</link>            <link linkend="gtk-plot-segment-relative">gtk_plot_segment_relative</link>           (<link linkend="GtkPlotSegment">GtkPlotSegment</link> *segment);
+<link linkend="void">void</link>                <link linkend="gtk-plot-segment-set-arrow">gtk_plot_segment_set_arrow</link>          (<link linkend="GtkPlotSegment">GtkPlotSegment</link> *segment,
+                                                         <link linkend="gint">gint</link> arrow_length,
+                                                         <link linkend="gint">gint</link> arrow_width,
+                                                         <link linkend="GtkPlotSymbolStyle">GtkPlotSymbolStyle</link> arrow_style);
+<link linkend="void">void</link>                <link linkend="gtk-plot-segment-get-arrow">gtk_plot_segment_get_arrow</link>          (<link linkend="GtkPlotSegment">GtkPlotSegment</link> *segment,
+                                                         <link linkend="gint">gint</link> *arrow_length,
+                                                         <link linkend="gint">gint</link> *arrow_width,
+                                                         <link linkend="GtkPlotSymbolStyle">GtkPlotSymbolStyle</link> *arrow_style);
+<link linkend="void">void</link>                <link linkend="gtk-plot-segment-set-arrow-mask">gtk_plot_segment_set_arrow_mask</link>     (<link linkend="GtkPlotSegment">GtkPlotSegment</link> *segment,
+                                                         <link linkend="GtkPlotArrow">GtkPlotArrow</link> mask);
+<link linkend="guint">guint</link>               <link linkend="gtk-plot-segment-get-arrow-mask">gtk_plot_segment_get_arrow_mask</link>     (<link linkend="GtkPlotSegment">GtkPlotSegment</link> *segment);
+<link linkend="void">void</link>                <link linkend="gtk-plot-segment-center">gtk_plot_segment_center</link>             (<link linkend="GtkPlotSegment">GtkPlotSegment</link> *segment,
+                                                         <link linkend="gboolean">gboolean</link> center);
+<link linkend="gboolean">gboolean</link>            <link linkend="gtk-plot-segment-is-centered">gtk_plot_segment_is_centered</link>        (<link linkend="GtkPlotSegment">GtkPlotSegment</link> *segment);
+</synopsis>
+</refsynopsisdiv>
+
+<refsect1 id="GtkPlotSegment.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+  <link linkend="GObject">GObject</link>
+   +----<link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+         +----<link linkend="GtkObject">GtkObject</link>
+               +----<link linkend="GtkWidget">GtkWidget</link>
+                     +----<link linkend="GtkPlotData">GtkPlotData</link>
+                           +----GtkPlotSegment
+</synopsis>
+</refsect1>
+
+
+
+<refsect1 id="GtkPlotSegment.implemented-interfaces" role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+GtkPlotSegment implements
+ <link linkend="AtkImplementorIface">AtkImplementorIface</link> and  <link linkend="GtkBuildable">GtkBuildable</link>.</para>
+</refsect1>
+
+
+<refsect1 id="GtkPlotSegment.properties" role="properties">
+<title role="properties.title">Properties</title>
+<synopsis>
+  &quot;<link linkend="GtkPlotSegment--arrow-mask">arrow-mask</link>&quot;               <link linkend="gint">gint</link>                  : Read / Write
+  &quot;<link linkend="GtkPlotSegment--centered">centered</link>&quot;                 <link linkend="gboolean">gboolean</link>              : Read / Write
+  &quot;<link linkend="GtkPlotSegment--length">length</link>&quot;                   <link linkend="gint">gint</link>                  : Read / Write
+  &quot;<link linkend="GtkPlotSegment--relative">relative</link>&quot;                 <link linkend="gboolean">gboolean</link>              : Read / Write
+  &quot;<link linkend="GtkPlotSegment--style">style</link>&quot;                    <link linkend="gint">gint</link>                  : Read / Write
+  &quot;<link linkend="GtkPlotSegment--width">width</link>&quot;                    <link linkend="gint">gint</link>                  : Read / Write
+</synopsis>
+</refsect1>
+
+
+
+<refsect1 id="GtkPlotSegment.description" role="desc">
+<title role="desc.title">Description</title>
+<para>
+FIXME:: need long description</para>
+<para>
+</para>
+</refsect1>
+
+<refsect1 id="GtkPlotSegment.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="GtkPlotSegment-struct" role="struct">
+<title>GtkPlotSegment</title>
+<indexterm zone="GtkPlotSegment-struct"><primary sortas="GtkPlotSegment">GtkPlotSegment</primary></indexterm><programlisting>typedef struct _GtkPlotSegment GtkPlotSegment;</programlisting>
+<para>
+The GtkPlotSegment struct contains only private data.
+It should only be accessed through the functions described below.</para>
+<para>
+</para></refsect2>
+<refsect2 id="GtkPlotArrow" role="enum">
+<title>enum GtkPlotArrow</title>
+<indexterm zone="GtkPlotArrow"><primary sortas="GtkPlotArrow">GtkPlotArrow</primary></indexterm><programlisting>typedef enum
+{
+      GTK_PLOT_ARROW_NONE            = 0,
+      GTK_PLOT_ARROW_ORIGIN          = 1 &lt;&lt; 0,
+      GTK_PLOT_ARROW_END             = 1 &lt;&lt; 1
+} GtkPlotArrow;
+</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="gtk-plot-segment-new" role="function">
+<title>gtk_plot_segment_new ()</title>
+<indexterm zone="gtk-plot-segment-new"><primary sortas="gtk_plot_segment_new">gtk_plot_segment_new</primary></indexterm><programlisting><link linkend="GtkWidget">GtkWidget</link>*          gtk_plot_segment_new                (void);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-segment-set-relative" role="function">
+<title>gtk_plot_segment_set_relative ()</title>
+<indexterm zone="gtk-plot-segment-set-relative"><primary sortas="gtk_plot_segment_set_relative">gtk_plot_segment_set_relative</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_segment_set_relative       (<link linkend="GtkPlotSegment">GtkPlotSegment</link> *segment,
+                                                         <link linkend="gboolean">gboolean</link> set);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>segment</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlotSegment"><type>GtkPlotSegment</type></link> widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>set</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-segment-relative" role="function">
+<title>gtk_plot_segment_relative ()</title>
+<indexterm zone="gtk-plot-segment-relative"><primary sortas="gtk_plot_segment_relative">gtk_plot_segment_relative</primary></indexterm><programlisting><link linkend="gboolean">gboolean</link>            gtk_plot_segment_relative           (<link linkend="GtkPlotSegment">GtkPlotSegment</link> *segment);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>segment</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlotSegment"><type>GtkPlotSegment</type></link> widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-segment-set-arrow" role="function">
+<title>gtk_plot_segment_set_arrow ()</title>
+<indexterm zone="gtk-plot-segment-set-arrow"><primary sortas="gtk_plot_segment_set_arrow">gtk_plot_segment_set_arrow</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_segment_set_arrow          (<link linkend="GtkPlotSegment">GtkPlotSegment</link> *segment,
+                                                         <link linkend="gint">gint</link> arrow_length,
+                                                         <link linkend="gint">gint</link> arrow_width,
+                                                         <link linkend="GtkPlotSymbolStyle">GtkPlotSymbolStyle</link> arrow_style);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>segment</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlotSegment"><type>GtkPlotSegment</type></link> widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>arrow_length</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>arrow_width</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>arrow_style</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-segment-get-arrow" role="function">
+<title>gtk_plot_segment_get_arrow ()</title>
+<indexterm zone="gtk-plot-segment-get-arrow"><primary sortas="gtk_plot_segment_get_arrow">gtk_plot_segment_get_arrow</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_segment_get_arrow          (<link linkend="GtkPlotSegment">GtkPlotSegment</link> *segment,
+                                                         <link linkend="gint">gint</link> *arrow_length,
+                                                         <link linkend="gint">gint</link> *arrow_width,
+                                                         <link linkend="GtkPlotSymbolStyle">GtkPlotSymbolStyle</link> *arrow_style);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>segment</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlotSegment"><type>GtkPlotSegment</type></link> widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>arrow_length</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>arrow_width</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>arrow_style</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-segment-set-arrow-mask" role="function">
+<title>gtk_plot_segment_set_arrow_mask ()</title>
+<indexterm zone="gtk-plot-segment-set-arrow-mask"><primary sortas="gtk_plot_segment_set_arrow_mask">gtk_plot_segment_set_arrow_mask</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_segment_set_arrow_mask     (<link linkend="GtkPlotSegment">GtkPlotSegment</link> *segment,
+                                                         <link linkend="GtkPlotArrow">GtkPlotArrow</link> mask);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>segment</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlotSegment"><type>GtkPlotSegment</type></link> widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>mask</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-segment-get-arrow-mask" role="function">
+<title>gtk_plot_segment_get_arrow_mask ()</title>
+<indexterm zone="gtk-plot-segment-get-arrow-mask"><primary sortas="gtk_plot_segment_get_arrow_mask">gtk_plot_segment_get_arrow_mask</primary></indexterm><programlisting><link linkend="guint">guint</link>               gtk_plot_segment_get_arrow_mask     (<link linkend="GtkPlotSegment">GtkPlotSegment</link> *segment);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>segment</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlotSegment"><type>GtkPlotSegment</type></link> widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-segment-center" role="function">
+<title>gtk_plot_segment_center ()</title>
+<indexterm zone="gtk-plot-segment-center"><primary sortas="gtk_plot_segment_center">gtk_plot_segment_center</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_segment_center             (<link linkend="GtkPlotSegment">GtkPlotSegment</link> *segment,
+                                                         <link linkend="gboolean">gboolean</link> center);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>segment</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlotSegment"><type>GtkPlotSegment</type></link> widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>center</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-segment-is-centered" role="function">
+<title>gtk_plot_segment_is_centered ()</title>
+<indexterm zone="gtk-plot-segment-is-centered"><primary sortas="gtk_plot_segment_is_centered">gtk_plot_segment_is_centered</primary></indexterm><programlisting><link linkend="gboolean">gboolean</link>            gtk_plot_segment_is_centered        (<link linkend="GtkPlotSegment">GtkPlotSegment</link> *segment);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>segment</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlotSegment"><type>GtkPlotSegment</type></link> widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+<refsect1 id="GtkPlotSegment.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GtkPlotSegment--arrow-mask" role="property"><title>The <literal>&quot;arrow-mask&quot;</literal> property</title>
+<indexterm zone="GtkPlotSegment--arrow-mask"><primary sortas="GtkPlotSegment:arrow-mask">GtkPlotSegment:arrow-mask</primary></indexterm><programlisting>  &quot;arrow-mask&quot;               <link linkend="gint">gint</link>                  : Read / Write</programlisting>
+<para></para><para>Allowed values: &gt;= 0</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GtkPlotSegment--centered" role="property"><title>The <literal>&quot;centered&quot;</literal> property</title>
+<indexterm zone="GtkPlotSegment--centered"><primary sortas="GtkPlotSegment:centered">GtkPlotSegment:centered</primary></indexterm><programlisting>  &quot;centered&quot;                 <link linkend="gboolean">gboolean</link>              : Read / Write</programlisting>
+<para>
+</para>
+<para>
+</para><para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="GtkPlotSegment--length" role="property"><title>The <literal>&quot;length&quot;</literal> property</title>
+<indexterm zone="GtkPlotSegment--length"><primary sortas="GtkPlotSegment:length">GtkPlotSegment:length</primary></indexterm><programlisting>  &quot;length&quot;                   <link linkend="gint">gint</link>                  : Read / Write</programlisting>
+<para>
+</para>
+<para>
+</para><para>Allowed values: &gt;= 0</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GtkPlotSegment--relative" role="property"><title>The <literal>&quot;relative&quot;</literal> property</title>
+<indexterm zone="GtkPlotSegment--relative"><primary sortas="GtkPlotSegment:relative">GtkPlotSegment:relative</primary></indexterm><programlisting>  &quot;relative&quot;                 <link linkend="gboolean">gboolean</link>              : Read / Write</programlisting>
+<para>
+</para>
+<para>
+</para><para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="GtkPlotSegment--style" role="property"><title>The <literal>&quot;style&quot;</literal> property</title>
+<indexterm zone="GtkPlotSegment--style"><primary sortas="GtkPlotSegment:style">GtkPlotSegment:style</primary></indexterm><programlisting>  &quot;style&quot;                    <link linkend="gint">gint</link>                  : Read / Write</programlisting>
+<para>
+</para>
+<para>
+</para><para>Allowed values: &gt;= 0</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GtkPlotSegment--width" role="property"><title>The <literal>&quot;width&quot;</literal> property</title>
+<indexterm zone="GtkPlotSegment--width"><primary sortas="GtkPlotSegment:width">GtkPlotSegment:width</primary></indexterm><programlisting>  &quot;width&quot;                    <link linkend="gint">gint</link>                  : Read / Write</programlisting>
+<para>
+</para>
+<para>
+</para><para>Allowed values: &gt;= 0</para>
+<para>Default value: 0</para>
+</refsect2>
+</refsect1>
+
+
+
+
+</refentry>

@@ -1,0 +1,140 @@
+<!-- ##### SECTION Title ##### -->
+GtkPSFont
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### STRUCT GtkPSFont ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### FUNCTION gtk_psfont_init ##### -->
+<para>
+
+</para>
+
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_psfont_unref ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### FUNCTION gtk_psfont_get_by_name ##### -->
+<para>
+
+</para>
+
+@name: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_psfont_get_by_family ##### -->
+<para>
+
+</para>
+
+@family_name: 
+@italic: 
+@bold: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_psfont_get_gdkfont ##### -->
+<para>
+
+</para>
+
+@font: 
+@height: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_psfont_get_font_description ##### -->
+<para>
+
+</para>
+
+@font: 
+@height: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_psfont_get_psfontname ##### -->
+<para>
+
+</para>
+
+@psfont: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_psfont_add_font ##### -->
+<para>
+
+</para>
+
+@fontname: 
+@psname: 
+@family: 
+@pango_description: 
+@italic: 
+@bold: 
+
+
+<!-- ##### FUNCTION gtk_psfont_add_i18n_font ##### -->
+<para>
+
+</para>
+
+@fontname: 
+@psname: 
+@family: 
+@i18n_latinfamily: 
+@pango_description: 
+@italic: 
+@bold: 
+@vertical: 
+
+
+<!-- ##### FUNCTION gtk_psfont_get_families ##### -->
+<para>
+
+</para>
+
+@families: 
+@num_families: 
+
+
+<!-- ##### FUNCTION gtk_psfont_get_char_size ##### -->
+<para>
+
+</para>
+
+@psfont: 
+@font: 
+@latin_font: 
+@wc: 
+@width: 
+@ascent: 
+@descent: 
+
+

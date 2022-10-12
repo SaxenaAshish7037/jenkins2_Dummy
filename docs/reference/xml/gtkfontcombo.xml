@@ -1,0 +1,231 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+<!ENTITY version SYSTEM "version.xml">
+]>
+<!--ENTITY index-Objects-Grouped SYSTEM "objects_grouped.sgml"-->
+<refentry id="GtkFontCombo">
+<refmeta>
+<refentrytitle role="top_of_page" id="GtkFontCombo.top_of_page">GtkFontCombo</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GTKEXTRA Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>GtkFontCombo</refname>
+<refpurpose>A font combo widget for GTK.</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="GtkFontCombo.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>
+
+#include &lt;gtkextra.h&gt;
+
+                    <link linkend="GtkFontCombo-struct">GtkFontCombo</link>;
+<link linkend="GtkWidget">GtkWidget</link> *         <link linkend="gtk-font-combo-new">gtk_font_combo_new</link>                  (void);
+<link linkend="void">void</link>                <link linkend="gtk-font-combo-select">gtk_font_combo_select</link>               (<link linkend="GtkFontCombo">GtkFontCombo</link> *font_combo,
+                                                         const <link linkend="gchar">gchar</link> *family,
+                                                         <link linkend="gboolean">gboolean</link> bold,
+                                                         <link linkend="gboolean">gboolean</link> italic,
+                                                         <link linkend="gint">gint</link> height);
+<link linkend="void">void</link>                <link linkend="gtk-font-combo-select-nth">gtk_font_combo_select_nth</link>           (<link linkend="GtkFontCombo">GtkFontCombo</link> *font_combo,
+                                                         <link linkend="gint">gint</link> n,
+                                                         <link linkend="gboolean">gboolean</link> bold,
+                                                         <link linkend="gboolean">gboolean</link> italic,
+                                                         <link linkend="gint">gint</link> height);
+<link linkend="gint">gint</link>                <link linkend="gtk-font-combo-get-font-height">gtk_font_combo_get_font_height</link>      (<link linkend="GtkFontCombo">GtkFontCombo</link> *font_combo);
+<link linkend="GtkPSFont">GtkPSFont</link> *         <link linkend="gtk-font-combo-get-psfont">gtk_font_combo_get_psfont</link>           (<link linkend="GtkFontCombo">GtkFontCombo</link> *font_combo);
+<link linkend="PangoFontDescription">PangoFontDescription</link> * <link linkend="gtk-font-combo-get-font-description">gtk_font_combo_get_font_description</link>
+                                                        (<link linkend="GtkFontCombo">GtkFontCombo</link> *font_combo);
+<link linkend="GdkFont">GdkFont</link> *           <link linkend="gtk-font-combo-get-gdkfont">gtk_font_combo_get_gdkfont</link>          (<link linkend="GtkFontCombo">GtkFontCombo</link> *font_combo);
+</synopsis>
+</refsynopsisdiv>
+
+<refsect1 id="GtkFontCombo.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+  <link linkend="GObject">GObject</link>
+   +----<link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+         +----<link linkend="GtkObject">GtkObject</link>
+               +----<link linkend="GtkWidget">GtkWidget</link>
+                     +----<link linkend="GtkContainer">GtkContainer</link>
+                           +----<link linkend="GtkToolbar">GtkToolbar</link>
+                                 +----GtkFontCombo
+</synopsis>
+</refsect1>
+
+
+
+<refsect1 id="GtkFontCombo.implemented-interfaces" role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+GtkFontCombo implements
+ <link linkend="AtkImplementorIface">AtkImplementorIface</link>,  <link linkend="GtkBuildable">GtkBuildable</link>,  <link linkend="GtkToolShell">GtkToolShell</link> and  <link linkend="GtkOrientable">GtkOrientable</link>.</para>
+</refsect1>
+
+
+
+<refsect1 id="GtkFontCombo.signals" role="signal_proto">
+<title role="signal_proto.title">Signals</title>
+<synopsis>
+  &quot;<link linkend="GtkFontCombo-changed">changed</link>&quot;                                        : Run Last
+</synopsis>
+</refsect1>
+
+
+<refsect1 id="GtkFontCombo.description" role="desc">
+<title role="desc.title">Description</title>
+<para>
+It is a GtkToolBar subclass with two combos to select among the 35 standard Adobe PostScript fonts with different sizes. 
+It has also two buttons to select bold and italics.
+When you select a new font, it returns the name of the corresponding Postscript font and the equivalent Xfont. 
+This is what we all expect to have on the top of a GUI for a spreadsheet or word processor.</para>
+<para>
+</para>
+</refsect1>
+
+<refsect1 id="GtkFontCombo.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="GtkFontCombo-struct" role="struct">
+<title>GtkFontCombo</title>
+<indexterm zone="GtkFontCombo-struct"><primary sortas="GtkFontCombo">GtkFontCombo</primary></indexterm><programlisting>typedef struct _GtkFontCombo GtkFontCombo;</programlisting>
+<para>
+The GtkFontCombo struct contains only private data.
+It should only be accessed through the functions described below.</para>
+<para>
+</para></refsect2>
+<refsect2 id="gtk-font-combo-new" role="function">
+<title>gtk_font_combo_new ()</title>
+<indexterm zone="gtk-font-combo-new"><primary sortas="gtk_font_combo_new">gtk_font_combo_new</primary></indexterm><programlisting><link linkend="GtkWidget">GtkWidget</link> *         gtk_font_combo_new                  (void);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-font-combo-select" role="function">
+<title>gtk_font_combo_select ()</title>
+<indexterm zone="gtk-font-combo-select"><primary sortas="gtk_font_combo_select">gtk_font_combo_select</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_font_combo_select               (<link linkend="GtkFontCombo">GtkFontCombo</link> *font_combo,
+                                                         const <link linkend="gchar">gchar</link> *family,
+                                                         <link linkend="gboolean">gboolean</link> bold,
+                                                         <link linkend="gboolean">gboolean</link> italic,
+                                                         <link linkend="gint">gint</link> height);</programlisting>
+<para>
+Select from the combo a font which satisfies the arguments.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>font_combo</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkFontCombo"><type>GtkFontCombo</type></link> 
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>family</parameter>&#160;:</term>
+<listitem><simpara> font family
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>bold</parameter>&#160;:</term>
+<listitem><simpara> TRUE or FALSE
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>italic</parameter>&#160;:</term>
+<listitem><simpara> TRUE or FALSE
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>height</parameter>&#160;:</term>
+<listitem><simpara> height of the font
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-font-combo-select-nth" role="function">
+<title>gtk_font_combo_select_nth ()</title>
+<indexterm zone="gtk-font-combo-select-nth"><primary sortas="gtk_font_combo_select_nth">gtk_font_combo_select_nth</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_font_combo_select_nth           (<link linkend="GtkFontCombo">GtkFontCombo</link> *font_combo,
+                                                         <link linkend="gint">gint</link> n,
+                                                         <link linkend="gboolean">gboolean</link> bold,
+                                                         <link linkend="gboolean">gboolean</link> italic,
+                                                         <link linkend="gint">gint</link> height);</programlisting>
+<para>
+Select from the combo the nth font which satisfies the arguments.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>font_combo</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkFontCombo"><type>GtkFontCombo</type></link> 
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>n</parameter>&#160;:</term>
+<listitem><simpara> nth font
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>bold</parameter>&#160;:</term>
+<listitem><simpara> TRUE or FALSE
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>italic</parameter>&#160;:</term>
+<listitem><simpara> TRUE or FALSE
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>height</parameter>&#160;:</term>
+<listitem><simpara> height of the font
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-font-combo-get-font-height" role="function">
+<title>gtk_font_combo_get_font_height ()</title>
+<indexterm zone="gtk-font-combo-get-font-height"><primary sortas="gtk_font_combo_get_font_height">gtk_font_combo_get_font_height</primary></indexterm><programlisting><link linkend="gint">gint</link>                gtk_font_combo_get_font_height      (<link linkend="GtkFontCombo">GtkFontCombo</link> *font_combo);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>font_combo</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-font-combo-get-psfont" role="function">
+<title>gtk_font_combo_get_psfont ()</title>
+<indexterm zone="gtk-font-combo-get-psfont"><primary sortas="gtk_font_combo_get_psfont">gtk_font_combo_get_psfont</primary></indexterm><programlisting><link linkend="GtkPSFont">GtkPSFont</link> *         gtk_font_combo_get_psfont           (<link linkend="GtkFontCombo">GtkFontCombo</link> *font_combo);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>font_combo</parameter>&#160;:</term>
+<listitem><simpara>  the <link linkend="GtkFontCombo"><type>GtkFontCombo</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara> (transfer none) the <link linkend="GtkPSFont"><type>GtkPSFont</type></link>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-font-combo-get-font-description" role="function">
+<title>gtk_font_combo_get_font_description ()</title>
+<indexterm zone="gtk-font-combo-get-font-description"><primary sortas="gtk_font_combo_get_font_description">gtk_font_combo_get_font_description</primary></indexterm><programlisting><link linkend="PangoFontDescription">PangoFontDescription</link> * gtk_font_combo_get_font_description
+                                                        (<link linkend="GtkFontCombo">GtkFontCombo</link> *font_combo);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>font_combo</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-font-combo-get-gdkfont" role="function">
+<title>gtk_font_combo_get_gdkfont ()</title>
+<indexterm zone="gtk-font-combo-get-gdkfont"><primary sortas="gtk_font_combo_get_gdkfont">gtk_font_combo_get_gdkfont</primary></indexterm><programlisting><link linkend="GdkFont">GdkFont</link> *           gtk_font_combo_get_gdkfont          (<link linkend="GtkFontCombo">GtkFontCombo</link> *font_combo);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>font_combo</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+
+<refsect1 id="GtkFontCombo.signal-details" role="signals">
+<title role="signals.title">Signal Details</title>
+<refsect2 id="GtkFontCombo-changed" role="signal"><title>The <literal>&quot;changed&quot;</literal> signal</title>
+<indexterm zone="GtkFontCombo-changed"><primary sortas="GtkFontCombo::changed">GtkFontCombo::changed</primary></indexterm><programlisting><link linkend="void">void</link>                user_function                      (<link linkend="GtkFontCombo">GtkFontCombo</link> *bfont_combo,
+                                                        <link linkend="gpointer">gpointer</link>      user_data)        : Run Last</programlisting>
+<para>
+Emmited whenever a different font is choosed.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>bfont_combo</parameter>&#160;:</term>
+<listitem><simpara> the <link linkend="GtkFontCombo"><type>GtkFontCombo</type></link> object that received the signal.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>user_data</parameter>&#160;:</term>
+<listitem><simpara>user data set when the signal handler was connected.</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+</refsect1>
+
+
+
+</refentry>

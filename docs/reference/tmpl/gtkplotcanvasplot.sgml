@@ -1,0 +1,83 @@
+<!-- ##### SECTION Title ##### -->
+GtkPlotCanvasPlot
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### STRUCT GtkPlotCanvasPlot ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### ENUM GtkPlotCanvasPlotFlags ##### -->
+<para>
+
+</para>
+
+@GTK_PLOT_CANVAS_PLOT_SELECT_POINT: 
+@GTK_PLOT_CANVAS_PLOT_DND_POINT: 
+
+<!-- ##### ENUM GtkPlotCanvasPlotPos ##### -->
+<para>
+
+</para>
+
+@GTK_PLOT_CANVAS_PLOT_OUT: 
+@GTK_PLOT_CANVAS_PLOT_IN_PLOT: 
+@GTK_PLOT_CANVAS_PLOT_IN_LEGENDS: 
+@GTK_PLOT_CANVAS_PLOT_IN_TITLE: 
+@GTK_PLOT_CANVAS_PLOT_IN_AXIS: 
+@GTK_PLOT_CANVAS_PLOT_IN_DATA: 
+@GTK_PLOT_CANVAS_PLOT_IN_GRADIENT: 
+@GTK_PLOT_CANVAS_PLOT_IN_MARKER: 
+
+<!-- ##### FUNCTION gtk_plot_canvas_plot_new ##### -->
+<para>
+
+</para>
+
+@plot: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_canvas_plot_flags ##### -->
+<para>
+
+</para>
+
+@plot: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_canvas_plot_set_flags ##### -->
+<para>
+
+</para>
+
+@plot: 
+@flags: 
+
+
+<!-- ##### FUNCTION gtk_plot_canvas_plot_unset_flags ##### -->
+<para>
+
+</para>
+
+@plot: 
+@flags: 
+
+

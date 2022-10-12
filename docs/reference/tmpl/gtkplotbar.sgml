@@ -1,0 +1,80 @@
+<!-- ##### SECTION Title ##### -->
+GtkPlotBar
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### STRUCT GtkPlotBar ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### ARG GtkPlotBar:orientation ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotBar:width ##### -->
+<para>
+
+</para>
+
+<!-- ##### ENUM GtkPlotBarUnits ##### -->
+<para>
+
+</para>
+
+@GTK_PLOT_BAR_POINTS: 
+@GTK_PLOT_BAR_RELATIVE: 
+@GTK_PLOT_BAR_ABSOLUTE: 
+
+<!-- ##### FUNCTION gtk_plot_bar_new ##### -->
+<para>
+
+</para>
+
+@orientation: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_bar_construct ##### -->
+<para>
+
+</para>
+
+@bar: 
+@orientation: 
+
+
+<!-- ##### FUNCTION gtk_plot_bar_set_width ##### -->
+<para>
+
+</para>
+
+@bar: 
+@width: 
+
+
+<!-- ##### FUNCTION gtk_plot_bar_get_width ##### -->
+<para>
+
+</para>
+
+@bar: 
+@Returns: 
+
+

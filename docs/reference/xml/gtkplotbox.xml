@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+<!ENTITY version SYSTEM "version.xml">
+]>
+<!--ENTITY index-Objects-Grouped SYSTEM "objects_grouped.sgml"-->
+<refentry id="GtkPlotBox">
+<refmeta>
+<refentrytitle role="top_of_page" id="GtkPlotBox.top_of_page">GtkPlotBox</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GTKEXTRA Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>GtkPlotBox</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="GtkPlotBox.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>
+
+#include &lt;gtkextra.h&gt;
+
+                    <link linkend="GtkPlotBox-struct">GtkPlotBox</link>;
+<link linkend="GtkWidget">GtkWidget</link>*          <link linkend="gtk-plot-box-new">gtk_plot_box_new</link>                    (<link linkend="GtkOrientation">GtkOrientation</link> orientation);
+<link linkend="void">void</link>                <link linkend="gtk-plot-box-construct">gtk_plot_box_construct</link>              (<link linkend="GtkPlotBox">GtkPlotBox</link> *box,
+                                                         <link linkend="GtkOrientation">GtkOrientation</link> orientation);
+</synopsis>
+</refsynopsisdiv>
+
+<refsect1 id="GtkPlotBox.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+  <link linkend="GObject">GObject</link>
+   +----<link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+         +----<link linkend="GtkObject">GtkObject</link>
+               +----<link linkend="GtkWidget">GtkWidget</link>
+                     +----<link linkend="GtkPlotData">GtkPlotData</link>
+                           +----GtkPlotBox
+</synopsis>
+</refsect1>
+
+
+
+<refsect1 id="GtkPlotBox.implemented-interfaces" role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+GtkPlotBox implements
+ <link linkend="AtkImplementorIface">AtkImplementorIface</link> and  <link linkend="GtkBuildable">GtkBuildable</link>.</para>
+</refsect1>
+
+
+<refsect1 id="GtkPlotBox.properties" role="properties">
+<title role="properties.title">Properties</title>
+<synopsis>
+  &quot;<link linkend="GtkPlotBox--orientation">orientation</link>&quot;              <link linkend="GtkOrientation">GtkOrientation</link>        : Read / Write
+</synopsis>
+</refsect1>
+
+
+
+<refsect1 id="GtkPlotBox.description" role="desc">
+<title role="desc.title">Description</title>
+<para>
+FIXME:: need long description.</para>
+<para>
+</para>
+</refsect1>
+
+<refsect1 id="GtkPlotBox.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="GtkPlotBox-struct" role="struct">
+<title>GtkPlotBox</title>
+<indexterm zone="GtkPlotBox-struct"><primary sortas="GtkPlotBox">GtkPlotBox</primary></indexterm><programlisting>typedef struct _GtkPlotBox GtkPlotBox;</programlisting>
+<para>
+The GtkPlotBox struct contains only private data.
+It should only be accessed through the functions described below.</para>
+<para>
+</para></refsect2>
+<refsect2 id="gtk-plot-box-new" role="function">
+<title>gtk_plot_box_new ()</title>
+<indexterm zone="gtk-plot-box-new"><primary sortas="gtk_plot_box_new">gtk_plot_box_new</primary></indexterm><programlisting><link linkend="GtkWidget">GtkWidget</link>*          gtk_plot_box_new                    (<link linkend="GtkOrientation">GtkOrientation</link> orientation);</programlisting>
+<para>
+Create a new GtkPlotBox widget.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>orientation</parameter>&#160;:</term>
+<listitem><simpara> GTK_ORIENTATION_HORIZONTAL or GTK_ORIENTATION_VERTICAL.
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara> a new GtkWidget.
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-box-construct" role="function">
+<title>gtk_plot_box_construct ()</title>
+<indexterm zone="gtk-plot-box-construct"><primary sortas="gtk_plot_box_construct">gtk_plot_box_construct</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_box_construct              (<link linkend="GtkPlotBox">GtkPlotBox</link> *box,
+                                                         <link linkend="GtkOrientation">GtkOrientation</link> orientation);</programlisting>
+<para>
+Initializes a <link linkend="GtkPlotBar"><type>GtkPlotBar</type></link> structure.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>box</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlotBox"><type>GtkPlotBox</type></link> widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>orientation</parameter>&#160;:</term>
+<listitem><simpara> GTK_ORIENTATION_HORIZONTAL or GTK_ORIENTATION_VERTICAL.
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+<refsect1 id="GtkPlotBox.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GtkPlotBox--orientation" role="property"><title>The <literal>&quot;orientation&quot;</literal> property</title>
+<indexterm zone="GtkPlotBox--orientation"><primary sortas="GtkPlotBox:orientation">GtkPlotBox:orientation</primary></indexterm><programlisting>  &quot;orientation&quot;              <link linkend="GtkOrientation">GtkOrientation</link>        : Read / Write</programlisting>
+<para>Orientation.</para><para>Default value: GTK_ORIENTATION_HORIZONTAL</para>
+</refsect2>
+</refsect1>
+
+
+
+
+</refentry>

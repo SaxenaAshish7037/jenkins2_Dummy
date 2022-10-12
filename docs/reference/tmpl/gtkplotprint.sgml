@@ -1,0 +1,85 @@
+<!-- ##### SECTION Title ##### -->
+GtkPlotPrint
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### FUNCTION gtk_plot_export_ps ##### -->
+<para>
+
+</para>
+
+@plot: 
+@file_name: 
+@orient: 
+@epsflag: 
+@page_size: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_export_ps_with_size ##### -->
+<para>
+
+</para>
+
+@plot: 
+@file_name: 
+@orient: 
+@epsflag: 
+@units: 
+@width: 
+@height: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_canvas_export_ps ##### -->
+<para>
+
+</para>
+
+@canvas: 
+@file_name: 
+@orient: 
+@epsflag: 
+@page_size: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_canvas_export_ps_with_size ##### -->
+<para>
+
+</para>
+
+@canvas: 
+@file_name: 
+@orient: 
+@epsflag: 
+@units: 
+@width: 
+@height: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_canvas_export_cairo ##### -->
+<para>
+
+</para>
+
+@canvas: 
+@cairo: 
+@Returns: 
+
+

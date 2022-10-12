@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GtkPlotBox</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="GtkExtra Reference Manual">
+<link rel="up" href="ch03.html" title="Widgets">
+<link rel="prev" href="GtkPlotBar.html" title="GtkPlotBar">
+<link rel="next" href="GtkPlotBubble.html" title="GtkPlotBubble">
+<meta name="generator" content="GTK-Doc V1.11 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="part" href="gtkextra.html" title="Part I. GtkExtra Overview">
+<link rel="part" href="gtkextrabase.html" title="Part II. GtkExtra Widgets and Objects">
+<link rel="chapter" href="ch01.html" title="Object Hierarchy">
+<link rel="chapter" href="ch02.html" title="Widget Gallery">
+<link rel="chapter" href="ch03.html" title="Widgets">
+<link rel="chapter" href="ch04.html" title="Data Formatter">
+<link rel="chapter" href="ch05.html" title="GtkExtra Versioning">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="GtkPlotBar.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch03.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">GtkExtra Reference Manual</th>
+<td><a accesskey="n" href="GtkPlotBubble.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#GtkPlotBox.synopsis" class="shortcut">Top</a>
+                 | 
+                <a href="#GtkPlotBox.description" class="shortcut">Description</a>
+                 | 
+                <a href="#GtkPlotBox.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                 | 
+                <a href="#GtkPlotBox.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+                 | 
+                <a href="#GtkPlotBox.properties" class="shortcut">Properties</a>
+</td></tr>
+</table>
+<div class="refentry" title="GtkPlotBox">
+<a name="GtkPlotBox"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GtkPlotBox.top_of_page"></a>GtkPlotBox</span></h2>
+<p>GtkPlotBox</p>
+</td>
+<td valign="top" align="right"><img src=""></td>
+</tr></table></div>
+<div class="refsynopsisdiv" title="Synopsis">
+<a name="GtkPlotBox.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">
+
+#include &lt;gtkextra.h&gt;
+
+                    <a class="link" href="GtkPlotBox.html#GtkPlotBox-struct" title="GtkPlotBox">GtkPlotBox</a>;
+<a
+href="http://library.gnome.org/devel/gtk3/GtkWidget.html"
+>GtkWidget</a>*          <a class="link" href="GtkPlotBox.html#gtk-plot-box-new" title="gtk_plot_box_new ()">gtk_plot_box_new</a>                    (<a
+href="http://library.gnome.org/devel/gtk3/gtk2-Standard-Enumerations.html#GtkOrientation"
+>GtkOrientation</a> orientation);
+void                <a class="link" href="GtkPlotBox.html#gtk-plot-box-construct" title="gtk_plot_box_construct ()">gtk_plot_box_construct</a>              (<a class="link" href="GtkPlotBox.html" title="GtkPlotBox">GtkPlotBox</a> *box,
+                                                         <a
+href="http://library.gnome.org/devel/gtk3/gtk2-Standard-Enumerations.html#GtkOrientation"
+>GtkOrientation</a> orientation);
+</pre>
+</div>
+<div class="refsect1" title="Object Hierarchy">
+<a name="GtkPlotBox.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a
+href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject"
+>GObject</a>
+   +----<a
+href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned"
+>GInitiallyUnowned</a>
+         +----<a
+href="http://library.gnome.org/devel/gtk3/GtkObject.html"
+>GtkObject</a>
+               +----<a
+href="http://library.gnome.org/devel/gtk3/GtkWidget.html"
+>GtkWidget</a>
+                     +----<a class="link" href="GtkPlotData.html" title="GtkPlotData">GtkPlotData</a>
+                           +----GtkPlotBox
+</pre>
+</div>
+<div class="refsect1" title="Implemented Interfaces">
+<a name="GtkPlotBox.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+GtkPlotBox implements
+ AtkImplementorIface and  <a
+href="http://library.gnome.org/devel/gtk3/GtkBuildable.html"
+>GtkBuildable</a>.</p>
+</div>
+<div class="refsect1" title="Properties">
+<a name="GtkPlotBox.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="GtkPlotBox.html#GtkPlotBox--orientation" title='The "orientation" property'>orientation</a>"              <a
+href="http://library.gnome.org/devel/gtk3/gtk2-Standard-Enumerations.html#GtkOrientation"
+>GtkOrientation</a>        : Read / Write
+</pre>
+</div>
+<div class="refsect1" title="Description">
+<a name="GtkPlotBox.description"></a><h2>Description</h2>
+<p>
+FIXME:: need long description.</p>
+<p>
+</p>
+</div>
+<div class="refsect1" title="Details">
+<a name="GtkPlotBox.details"></a><h2>Details</h2>
+<div class="refsect2" title="GtkPlotBox">
+<a name="GtkPlotBox-struct"></a><h3>GtkPlotBox</h3>
+<pre class="programlisting">typedef struct _GtkPlotBox GtkPlotBox;</pre>
+<p>
+The GtkPlotBox struct contains only private data.
+It should only be accessed through the functions described below.</p>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_box_new ()">
+<a name="gtk-plot-box-new"></a><h3>gtk_plot_box_new ()</h3>
+<pre class="programlisting"><a
+href="http://library.gnome.org/devel/gtk3/GtkWidget.html"
+>GtkWidget</a>*          gtk_plot_box_new                    (<a
+href="http://library.gnome.org/devel/gtk3/gtk2-Standard-Enumerations.html#GtkOrientation"
+>GtkOrientation</a> orientation);</pre>
+<p>
+Create a new GtkPlotBox widget.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>orientation</code></em> :</span></p></td>
+<td> GTK_ORIENTATION_HORIZONTAL or GTK_ORIENTATION_VERTICAL.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> a new GtkWidget.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_box_construct ()">
+<a name="gtk-plot-box-construct"></a><h3>gtk_plot_box_construct ()</h3>
+<pre class="programlisting">void                gtk_plot_box_construct              (<a class="link" href="GtkPlotBox.html" title="GtkPlotBox">GtkPlotBox</a> *box,
+                                                         <a
+href="http://library.gnome.org/devel/gtk3/gtk2-Standard-Enumerations.html#GtkOrientation"
+>GtkOrientation</a> orientation);</pre>
+<p>
+Initializes a <a class="link" href="GtkPlotBar.html" title="GtkPlotBar"><span class="type">GtkPlotBar</span></a> structure.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>box</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlotBox.html" title="GtkPlotBox"><span class="type">GtkPlotBox</span></a> widget.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>orientation</code></em> :</span></p></td>
+<td> GTK_ORIENTATION_HORIZONTAL or GTK_ORIENTATION_VERTICAL.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1" title="Property Details">
+<a name="GtkPlotBox.property-details"></a><h2>Property Details</h2>
+<div class="refsect2" title='The "orientation" property'>
+<a name="GtkPlotBox--orientation"></a><h3>The <code class="literal">"orientation"</code> property</h3>
+<pre class="programlisting">  "orientation"              <a
+href="http://library.gnome.org/devel/gtk3/gtk2-Standard-Enumerations.html#GtkOrientation"
+>GtkOrientation</a>        : Read / Write</pre>
+<p>Orientation.</p>
+<p>Default value: GTK_ORIENTATION_HORIZONTAL</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.11</div>
+</body>
+</html>

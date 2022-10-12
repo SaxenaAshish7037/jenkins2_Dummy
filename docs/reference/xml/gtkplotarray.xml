@@ -1,0 +1,521 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+<!ENTITY version SYSTEM "version.xml">
+]>
+<!--ENTITY index-Objects-Grouped SYSTEM "objects_grouped.sgml"-->
+<refentry id="GtkPlotArray">
+<refmeta>
+<refentrytitle role="top_of_page" id="GtkPlotArray.top_of_page">GtkPlotArray</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GTKEXTRA Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>GtkPlotArray</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="GtkPlotArray.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>
+
+#include &lt;gtkextra.h&gt;
+
+                    <link linkend="GtkPlotArray-struct">GtkPlotArray</link>;
+                    <link linkend="GtkPlotArrayList">GtkPlotArrayList</link>;
+<link linkend="GObject">GObject</link>*            <link linkend="gtk-plot-array-new">gtk_plot_array_new</link>                  (const <link linkend="gchar">gchar</link> *name,
+                                                         <link linkend="gpointer">gpointer</link> array,
+                                                         <link linkend="gint">gint</link> size,
+                                                         <link linkend="GType">GType</link> type,
+                                                         <link linkend="gboolean">gboolean</link> own_data);
+<link linkend="void">void</link>                <link linkend="gtk-plot-array-set">gtk_plot_array_set</link>                  (<link linkend="GtkPlotArray">GtkPlotArray</link> *array,
+                                                         <link linkend="gpointer">gpointer</link> data_array,
+                                                         <link linkend="gint">gint</link> size,
+                                                         <link linkend="GType">GType</link> type);
+<link linkend="void">void</link>                <link linkend="gtk-plot-array-set-label">gtk_plot_array_set_label</link>            (<link linkend="GtkPlotArray">GtkPlotArray</link> *array,
+                                                         const <link linkend="gchar">gchar</link> *label);
+<link linkend="void">void</link>                <link linkend="gtk-plot-array-set-description">gtk_plot_array_set_description</link>      (<link linkend="GtkPlotArray">GtkPlotArray</link> *array,
+                                                         const <link linkend="gchar">gchar</link> *desc);
+<link linkend="void">void</link>                <link linkend="gtk-plot-array-set-scale">gtk_plot_array_set_scale</link>            (<link linkend="GtkPlotArray">GtkPlotArray</link> *array,
+                                                         <link linkend="gdouble">gdouble</link> scale);
+<link linkend="void">void</link>                <link linkend="gtk-plot-array-set-required">gtk_plot_array_set_required</link>         (<link linkend="GtkPlotArray">GtkPlotArray</link> *array,
+                                                         <link linkend="gboolean">gboolean</link> required);
+<link linkend="void">void</link>                <link linkend="gtk-plot-array-set-independent">gtk_plot_array_set_independent</link>      (<link linkend="GtkPlotArray">GtkPlotArray</link> *array,
+                                                         <link linkend="gboolean">gboolean</link> independent);
+<link linkend="GType">GType</link>               <link linkend="gtk-plot-array-get-data-type">gtk_plot_array_get_data_type</link>        (<link linkend="GtkPlotArray">GtkPlotArray</link> *array);
+const <link linkend="gchar">gchar</link> *       <link linkend="gtk-plot-array-get-name">gtk_plot_array_get_name</link>             (<link linkend="GtkPlotArray">GtkPlotArray</link> *array);
+const <link linkend="gchar">gchar</link> *       <link linkend="gtk-plot-array-get-label">gtk_plot_array_get_label</link>            (<link linkend="GtkPlotArray">GtkPlotArray</link> *array);
+const <link linkend="gchar">gchar</link> *       <link linkend="gtk-plot-array-get-description">gtk_plot_array_get_description</link>      (<link linkend="GtkPlotArray">GtkPlotArray</link> *array);
+<link linkend="gboolean">gboolean</link>            <link linkend="gtk-plot-array-required">gtk_plot_array_required</link>             (<link linkend="GtkPlotArray">GtkPlotArray</link> *array);
+<link linkend="gboolean">gboolean</link>            <link linkend="gtk-plot-array-independent">gtk_plot_array_independent</link>          (<link linkend="GtkPlotArray">GtkPlotArray</link> *array);
+<link linkend="gdouble">gdouble</link>             <link linkend="gtk-plot-array-get-scale">gtk_plot_array_get_scale</link>            (<link linkend="GtkPlotArray">GtkPlotArray</link> *array);
+<link linkend="gint">gint</link>                <link linkend="gtk-plot-array-get-size">gtk_plot_array_get_size</link>             (<link linkend="GtkPlotArray">GtkPlotArray</link> *array);
+<link linkend="gfloat">gfloat</link>*             <link linkend="gtk-plot-array-get-float">gtk_plot_array_get_float</link>            (<link linkend="GtkPlotArray">GtkPlotArray</link> *array);
+<link linkend="gdouble">gdouble</link>*            <link linkend="gtk-plot-array-get-double">gtk_plot_array_get_double</link>           (<link linkend="GtkPlotArray">GtkPlotArray</link> *array);
+<link linkend="gint">gint</link>*               <link linkend="gtk-plot-array-get-int">gtk_plot_array_get_int</link>              (<link linkend="GtkPlotArray">GtkPlotArray</link> *array);
+<link linkend="gboolean">gboolean</link>*           <link linkend="gtk-plot-array-get-bool">gtk_plot_array_get_bool</link>             (<link linkend="GtkPlotArray">GtkPlotArray</link> *array);
+<link linkend="gchar">gchar</link>**             <link linkend="gtk-plot-array-get-string">gtk_plot_array_get_string</link>           (<link linkend="GtkPlotArray">GtkPlotArray</link> *array);
+<link linkend="gpointer">gpointer</link>*           <link linkend="gtk-plot-array-get-pointer">gtk_plot_array_get_pointer</link>          (<link linkend="GtkPlotArray">GtkPlotArray</link> *array);
+<link linkend="void">void</link>                <link linkend="gtk-plot-array-free">gtk_plot_array_free</link>                 (<link linkend="GtkPlotArray">GtkPlotArray</link> *array);
+<link linkend="GObject">GObject</link>*            <link linkend="gtk-plot-array-list-new">gtk_plot_array_list_new</link>             (void);
+<link linkend="void">void</link>                <link linkend="gtk-plot-array-list-add">gtk_plot_array_list_add</link>             (<link linkend="GtkPlotArrayList">GtkPlotArrayList</link> *set,
+                                                         <link linkend="GtkPlotArray">GtkPlotArray</link> *array);
+<link linkend="void">void</link>                <link linkend="gtk-plot-array-list-remove">gtk_plot_array_list_remove</link>          (<link linkend="GtkPlotArrayList">GtkPlotArrayList</link> *set,
+                                                         <link linkend="GtkPlotArray">GtkPlotArray</link> *array);
+<link linkend="GtkPlotArray">GtkPlotArray</link>*       <link linkend="gtk-plot-array-list-get">gtk_plot_array_list_get</link>             (<link linkend="GtkPlotArrayList">GtkPlotArrayList</link> *set,
+                                                         const <link linkend="gchar">gchar</link> *name);
+<link linkend="void">void</link>                <link linkend="gtk-plot-array-list-clear">gtk_plot_array_list_clear</link>           (<link linkend="GtkPlotArrayList">GtkPlotArrayList</link> *set);
+</synopsis>
+</refsynopsisdiv>
+
+<refsect1 id="GtkPlotArray.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+  <link linkend="GObject">GObject</link>
+   +----GtkPlotArray
+</synopsis>
+</refsect1>
+
+
+
+
+
+<refsect1 id="GtkPlotArray.properties" role="properties">
+<title role="properties.title">Properties</title>
+<synopsis>
+  &quot;<link linkend="GtkPlotArray--array-data">array-data</link>&quot;               <link linkend="gpointer">gpointer</link>              : Read / Write
+  &quot;<link linkend="GtkPlotArray--description">description</link>&quot;              <link linkend="gchar">gchar</link>*                : Read / Write
+  &quot;<link linkend="GtkPlotArray--independent">independent</link>&quot;              <link linkend="gboolean">gboolean</link>              : Read / Write
+  &quot;<link linkend="GtkPlotArray--label">label</link>&quot;                    <link linkend="gchar">gchar</link>*                : Read / Write
+  &quot;<link linkend="GtkPlotArray--name">name</link>&quot;                     <link linkend="gchar">gchar</link>*                : Read / Write
+  &quot;<link linkend="GtkPlotArray--own-data">own-data</link>&quot;                 <link linkend="gboolean">gboolean</link>              : Read / Write
+  &quot;<link linkend="GtkPlotArray--required">required</link>&quot;                 <link linkend="gboolean">gboolean</link>              : Read / Write
+  &quot;<link linkend="GtkPlotArray--scale">scale</link>&quot;                    <link linkend="gdouble">gdouble</link>               : Read / Write
+  &quot;<link linkend="GtkPlotArray--size">size</link>&quot;                     <link linkend="gint">gint</link>                  : Read / Write
+  &quot;<link linkend="GtkPlotArray--type">type</link>&quot;                     <link linkend="gint">gint</link>                  : Read / Write
+</synopsis>
+</refsect1>
+
+
+
+<refsect1 id="GtkPlotArray.description" role="desc">
+<title role="desc.title">Description</title>
+<para>
+</para>
+</refsect1>
+
+<refsect1 id="GtkPlotArray.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="GtkPlotArray-struct" role="struct">
+<title>GtkPlotArray</title>
+<indexterm zone="GtkPlotArray-struct"><primary sortas="GtkPlotArray">GtkPlotArray</primary></indexterm><programlisting>typedef struct _GtkPlotArray GtkPlotArray;</programlisting>
+<para>
+The GtkPlotArray struct contains only private data.
+It should only be accessed through the functions described below.</para>
+<para>
+</para></refsect2>
+<refsect2 id="GtkPlotArrayList" role="struct">
+<title>GtkPlotArrayList</title>
+<indexterm zone="GtkPlotArrayList"><primary sortas="GtkPlotArrayList">GtkPlotArrayList</primary></indexterm><programlisting>typedef struct {
+} GtkPlotArrayList;
+</programlisting>
+<para>
+The GtkPlotArrayList struct contains only private data.
+It should only be accessed through the functions described below.</para>
+<para>
+</para></refsect2>
+<refsect2 id="gtk-plot-array-new" role="function">
+<title>gtk_plot_array_new ()</title>
+<indexterm zone="gtk-plot-array-new"><primary sortas="gtk_plot_array_new">gtk_plot_array_new</primary></indexterm><programlisting><link linkend="GObject">GObject</link>*            gtk_plot_array_new                  (const <link linkend="gchar">gchar</link> *name,
+                                                         <link linkend="gpointer">gpointer</link> array,
+                                                         <link linkend="gint">gint</link> size,
+                                                         <link linkend="GType">GType</link> type,
+                                                         <link linkend="gboolean">gboolean</link> own_data);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>name</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>array</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>size</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>type</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>own_data</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-array-set" role="function">
+<title>gtk_plot_array_set ()</title>
+<indexterm zone="gtk-plot-array-set"><primary sortas="gtk_plot_array_set">gtk_plot_array_set</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_array_set                  (<link linkend="GtkPlotArray">GtkPlotArray</link> *array,
+                                                         <link linkend="gpointer">gpointer</link> data_array,
+                                                         <link linkend="gint">gint</link> size,
+                                                         <link linkend="GType">GType</link> type);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>array</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>data_array</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>size</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>type</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-array-set-label" role="function">
+<title>gtk_plot_array_set_label ()</title>
+<indexterm zone="gtk-plot-array-set-label"><primary sortas="gtk_plot_array_set_label">gtk_plot_array_set_label</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_array_set_label            (<link linkend="GtkPlotArray">GtkPlotArray</link> *array,
+                                                         const <link linkend="gchar">gchar</link> *label);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>array</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>label</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-array-set-description" role="function">
+<title>gtk_plot_array_set_description ()</title>
+<indexterm zone="gtk-plot-array-set-description"><primary sortas="gtk_plot_array_set_description">gtk_plot_array_set_description</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_array_set_description      (<link linkend="GtkPlotArray">GtkPlotArray</link> *array,
+                                                         const <link linkend="gchar">gchar</link> *desc);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>array</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>desc</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-array-set-scale" role="function">
+<title>gtk_plot_array_set_scale ()</title>
+<indexterm zone="gtk-plot-array-set-scale"><primary sortas="gtk_plot_array_set_scale">gtk_plot_array_set_scale</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_array_set_scale            (<link linkend="GtkPlotArray">GtkPlotArray</link> *array,
+                                                         <link linkend="gdouble">gdouble</link> scale);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>array</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>scale</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-array-set-required" role="function">
+<title>gtk_plot_array_set_required ()</title>
+<indexterm zone="gtk-plot-array-set-required"><primary sortas="gtk_plot_array_set_required">gtk_plot_array_set_required</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_array_set_required         (<link linkend="GtkPlotArray">GtkPlotArray</link> *array,
+                                                         <link linkend="gboolean">gboolean</link> required);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>array</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>required</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-array-set-independent" role="function">
+<title>gtk_plot_array_set_independent ()</title>
+<indexterm zone="gtk-plot-array-set-independent"><primary sortas="gtk_plot_array_set_independent">gtk_plot_array_set_independent</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_array_set_independent      (<link linkend="GtkPlotArray">GtkPlotArray</link> *array,
+                                                         <link linkend="gboolean">gboolean</link> independent);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>array</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>independent</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-array-get-data-type" role="function">
+<title>gtk_plot_array_get_data_type ()</title>
+<indexterm zone="gtk-plot-array-get-data-type"><primary sortas="gtk_plot_array_get_data_type">gtk_plot_array_get_data_type</primary></indexterm><programlisting><link linkend="GType">GType</link>               gtk_plot_array_get_data_type        (<link linkend="GtkPlotArray">GtkPlotArray</link> *array);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>array</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-array-get-name" role="function">
+<title>gtk_plot_array_get_name ()</title>
+<indexterm zone="gtk-plot-array-get-name"><primary sortas="gtk_plot_array_get_name">gtk_plot_array_get_name</primary></indexterm><programlisting>const <link linkend="gchar">gchar</link> *       gtk_plot_array_get_name             (<link linkend="GtkPlotArray">GtkPlotArray</link> *array);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>array</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-array-get-label" role="function">
+<title>gtk_plot_array_get_label ()</title>
+<indexterm zone="gtk-plot-array-get-label"><primary sortas="gtk_plot_array_get_label">gtk_plot_array_get_label</primary></indexterm><programlisting>const <link linkend="gchar">gchar</link> *       gtk_plot_array_get_label            (<link linkend="GtkPlotArray">GtkPlotArray</link> *array);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>array</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-array-get-description" role="function">
+<title>gtk_plot_array_get_description ()</title>
+<indexterm zone="gtk-plot-array-get-description"><primary sortas="gtk_plot_array_get_description">gtk_plot_array_get_description</primary></indexterm><programlisting>const <link linkend="gchar">gchar</link> *       gtk_plot_array_get_description      (<link linkend="GtkPlotArray">GtkPlotArray</link> *array);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>array</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-array-required" role="function">
+<title>gtk_plot_array_required ()</title>
+<indexterm zone="gtk-plot-array-required"><primary sortas="gtk_plot_array_required">gtk_plot_array_required</primary></indexterm><programlisting><link linkend="gboolean">gboolean</link>            gtk_plot_array_required             (<link linkend="GtkPlotArray">GtkPlotArray</link> *array);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>array</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-array-independent" role="function">
+<title>gtk_plot_array_independent ()</title>
+<indexterm zone="gtk-plot-array-independent"><primary sortas="gtk_plot_array_independent">gtk_plot_array_independent</primary></indexterm><programlisting><link linkend="gboolean">gboolean</link>            gtk_plot_array_independent          (<link linkend="GtkPlotArray">GtkPlotArray</link> *array);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>array</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-array-get-scale" role="function">
+<title>gtk_plot_array_get_scale ()</title>
+<indexterm zone="gtk-plot-array-get-scale"><primary sortas="gtk_plot_array_get_scale">gtk_plot_array_get_scale</primary></indexterm><programlisting><link linkend="gdouble">gdouble</link>             gtk_plot_array_get_scale            (<link linkend="GtkPlotArray">GtkPlotArray</link> *array);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>array</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-array-get-size" role="function">
+<title>gtk_plot_array_get_size ()</title>
+<indexterm zone="gtk-plot-array-get-size"><primary sortas="gtk_plot_array_get_size">gtk_plot_array_get_size</primary></indexterm><programlisting><link linkend="gint">gint</link>                gtk_plot_array_get_size             (<link linkend="GtkPlotArray">GtkPlotArray</link> *array);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>array</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-array-get-float" role="function">
+<title>gtk_plot_array_get_float ()</title>
+<indexterm zone="gtk-plot-array-get-float"><primary sortas="gtk_plot_array_get_float">gtk_plot_array_get_float</primary></indexterm><programlisting><link linkend="gfloat">gfloat</link>*             gtk_plot_array_get_float            (<link linkend="GtkPlotArray">GtkPlotArray</link> *array);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>array</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-array-get-double" role="function">
+<title>gtk_plot_array_get_double ()</title>
+<indexterm zone="gtk-plot-array-get-double"><primary sortas="gtk_plot_array_get_double">gtk_plot_array_get_double</primary></indexterm><programlisting><link linkend="gdouble">gdouble</link>*            gtk_plot_array_get_double           (<link linkend="GtkPlotArray">GtkPlotArray</link> *array);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>array</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-array-get-int" role="function">
+<title>gtk_plot_array_get_int ()</title>
+<indexterm zone="gtk-plot-array-get-int"><primary sortas="gtk_plot_array_get_int">gtk_plot_array_get_int</primary></indexterm><programlisting><link linkend="gint">gint</link>*               gtk_plot_array_get_int              (<link linkend="GtkPlotArray">GtkPlotArray</link> *array);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>array</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-array-get-bool" role="function">
+<title>gtk_plot_array_get_bool ()</title>
+<indexterm zone="gtk-plot-array-get-bool"><primary sortas="gtk_plot_array_get_bool">gtk_plot_array_get_bool</primary></indexterm><programlisting><link linkend="gboolean">gboolean</link>*           gtk_plot_array_get_bool             (<link linkend="GtkPlotArray">GtkPlotArray</link> *array);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>array</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-array-get-string" role="function">
+<title>gtk_plot_array_get_string ()</title>
+<indexterm zone="gtk-plot-array-get-string"><primary sortas="gtk_plot_array_get_string">gtk_plot_array_get_string</primary></indexterm><programlisting><link linkend="gchar">gchar</link>**             gtk_plot_array_get_string           (<link linkend="GtkPlotArray">GtkPlotArray</link> *array);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>array</parameter>&#160;:</term>
+<listitem><simpara>  the <link linkend="GtkPlotArray"><type>GtkPlotArray</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara> (transfer none) the data string array
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-array-get-pointer" role="function">
+<title>gtk_plot_array_get_pointer ()</title>
+<indexterm zone="gtk-plot-array-get-pointer"><primary sortas="gtk_plot_array_get_pointer">gtk_plot_array_get_pointer</primary></indexterm><programlisting><link linkend="gpointer">gpointer</link>*           gtk_plot_array_get_pointer          (<link linkend="GtkPlotArray">GtkPlotArray</link> *array);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>array</parameter>&#160;:</term>
+<listitem><simpara>  the <link linkend="GtkPlotArray"><type>GtkPlotArray</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara> (transfer none) the data pointer array
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-array-free" role="function">
+<title>gtk_plot_array_free ()</title>
+<indexterm zone="gtk-plot-array-free"><primary sortas="gtk_plot_array_free">gtk_plot_array_free</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_array_free                 (<link linkend="GtkPlotArray">GtkPlotArray</link> *array);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>array</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-array-list-new" role="function">
+<title>gtk_plot_array_list_new ()</title>
+<indexterm zone="gtk-plot-array-list-new"><primary sortas="gtk_plot_array_list_new">gtk_plot_array_list_new</primary></indexterm><programlisting><link linkend="GObject">GObject</link>*            gtk_plot_array_list_new             (void);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-array-list-add" role="function">
+<title>gtk_plot_array_list_add ()</title>
+<indexterm zone="gtk-plot-array-list-add"><primary sortas="gtk_plot_array_list_add">gtk_plot_array_list_add</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_array_list_add             (<link linkend="GtkPlotArrayList">GtkPlotArrayList</link> *set,
+                                                         <link linkend="GtkPlotArray">GtkPlotArray</link> *array);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>set</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>array</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-array-list-remove" role="function">
+<title>gtk_plot_array_list_remove ()</title>
+<indexterm zone="gtk-plot-array-list-remove"><primary sortas="gtk_plot_array_list_remove">gtk_plot_array_list_remove</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_array_list_remove          (<link linkend="GtkPlotArrayList">GtkPlotArrayList</link> *set,
+                                                         <link linkend="GtkPlotArray">GtkPlotArray</link> *array);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>set</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>array</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-array-list-get" role="function">
+<title>gtk_plot_array_list_get ()</title>
+<indexterm zone="gtk-plot-array-list-get"><primary sortas="gtk_plot_array_list_get">gtk_plot_array_list_get</primary></indexterm><programlisting><link linkend="GtkPlotArray">GtkPlotArray</link>*       gtk_plot_array_list_get             (<link linkend="GtkPlotArrayList">GtkPlotArrayList</link> *set,
+                                                         const <link linkend="gchar">gchar</link> *name);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>set</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlotArrayList"><type>GtkPlotArrayList</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>name</parameter>&#160;:</term>
+<listitem><simpara>       the name to be searched for
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara> (transfer none) the named <link linkend="GtkPlotArray"><type>GtkPlotArray</type></link> or NULL
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-array-list-clear" role="function">
+<title>gtk_plot_array_list_clear ()</title>
+<indexterm zone="gtk-plot-array-list-clear"><primary sortas="gtk_plot_array_list_clear">gtk_plot_array_list_clear</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_array_list_clear           (<link linkend="GtkPlotArrayList">GtkPlotArrayList</link> *set);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>set</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+<refsect1 id="GtkPlotArray.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GtkPlotArray--array-data" role="property"><title>The <literal>&quot;array-data&quot;</literal> property</title>
+<indexterm zone="GtkPlotArray--array-data"><primary sortas="GtkPlotArray:array-data">GtkPlotArray:array-data</primary></indexterm><programlisting>  &quot;array-data&quot;               <link linkend="gpointer">gpointer</link>              : Read / Write</programlisting>
+<para>Data.</para></refsect2>
+<refsect2 id="GtkPlotArray--description" role="property"><title>The <literal>&quot;description&quot;</literal> property</title>
+<indexterm zone="GtkPlotArray--description"><primary sortas="GtkPlotArray:description">GtkPlotArray:description</primary></indexterm><programlisting>  &quot;description&quot;              <link linkend="gchar">gchar</link>*                : Read / Write</programlisting>
+<para>Description.</para><para>Default value: NULL</para>
+</refsect2>
+<refsect2 id="GtkPlotArray--independent" role="property"><title>The <literal>&quot;independent&quot;</literal> property</title>
+<indexterm zone="GtkPlotArray--independent"><primary sortas="GtkPlotArray:independent">GtkPlotArray:independent</primary></indexterm><programlisting>  &quot;independent&quot;              <link linkend="gboolean">gboolean</link>              : Read / Write</programlisting>
+<para>Independent.</para><para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="GtkPlotArray--label" role="property"><title>The <literal>&quot;label&quot;</literal> property</title>
+<indexterm zone="GtkPlotArray--label"><primary sortas="GtkPlotArray:label">GtkPlotArray:label</primary></indexterm><programlisting>  &quot;label&quot;                    <link linkend="gchar">gchar</link>*                : Read / Write</programlisting>
+<para>Label.</para><para>Default value: NULL</para>
+</refsect2>
+<refsect2 id="GtkPlotArray--name" role="property"><title>The <literal>&quot;name&quot;</literal> property</title>
+<indexterm zone="GtkPlotArray--name"><primary sortas="GtkPlotArray:name">GtkPlotArray:name</primary></indexterm><programlisting>  &quot;name&quot;                     <link linkend="gchar">gchar</link>*                : Read / Write</programlisting>
+<para>Name.</para><para>Default value: NULL</para>
+</refsect2>
+<refsect2 id="GtkPlotArray--own-data" role="property"><title>The <literal>&quot;own-data&quot;</literal> property</title>
+<indexterm zone="GtkPlotArray--own-data"><primary sortas="GtkPlotArray:own-data">GtkPlotArray:own-data</primary></indexterm><programlisting>  &quot;own-data&quot;                 <link linkend="gboolean">gboolean</link>              : Read / Write</programlisting>
+<para>Specifies if data should be freed when the array is destroyed.</para><para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="GtkPlotArray--required" role="property"><title>The <literal>&quot;required&quot;</literal> property</title>
+<indexterm zone="GtkPlotArray--required"><primary sortas="GtkPlotArray:required">GtkPlotArray:required</primary></indexterm><programlisting>  &quot;required&quot;                 <link linkend="gboolean">gboolean</link>              : Read / Write</programlisting>
+<para>Required.</para><para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="GtkPlotArray--scale" role="property"><title>The <literal>&quot;scale&quot;</literal> property</title>
+<indexterm zone="GtkPlotArray--scale"><primary sortas="GtkPlotArray:scale">GtkPlotArray:scale</primary></indexterm><programlisting>  &quot;scale&quot;                    <link linkend="gdouble">gdouble</link>               : Read / Write</programlisting>
+<para>Scale.</para><para>Allowed values: &gt;= 0</para>
+<para>Default value: 1</para>
+</refsect2>
+<refsect2 id="GtkPlotArray--size" role="property"><title>The <literal>&quot;size&quot;</literal> property</title>
+<indexterm zone="GtkPlotArray--size"><primary sortas="GtkPlotArray:size">GtkPlotArray:size</primary></indexterm><programlisting>  &quot;size&quot;                     <link linkend="gint">gint</link>                  : Read / Write</programlisting>
+<para>Size.</para><para>Allowed values: &gt;= 0</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GtkPlotArray--type" role="property"><title>The <literal>&quot;type&quot;</literal> property</title>
+<indexterm zone="GtkPlotArray--type"><primary sortas="GtkPlotArray:type">GtkPlotArray:type</primary></indexterm><programlisting>  &quot;type&quot;                     <link linkend="gint">gint</link>                  : Read / Write</programlisting>
+<para>Type.</para><para>Allowed values: &gt;= 0</para>
+<para>Default value: 0</para>
+</refsect2>
+</refsect1>
+
+
+
+
+</refentry>

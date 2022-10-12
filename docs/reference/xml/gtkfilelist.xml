@@ -1,0 +1,321 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+<!ENTITY version SYSTEM "version.xml">
+]>
+<!--ENTITY index-Objects-Grouped SYSTEM "objects_grouped.sgml"-->
+<refentry id="GtkFileList">
+<refmeta>
+<refentrytitle role="top_of_page" id="GtkFileList.top_of_page">GtkFileList</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GTKEXTRA Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>GtkFileList</refname>
+<refpurpose>A file list widget fot GTK</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="GtkFileList.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>
+
+#include &lt;gtkextra.h&gt;
+
+                    <link linkend="GtkFileList-struct">GtkFileList</link>;
+                    <link linkend="GtkFileListItem">GtkFileListItem</link>;
+                    <link linkend="GtkFileListType">GtkFileListType</link>;
+<link linkend="GtkWidget">GtkWidget</link>*          <link linkend="gtk-file-list-new">gtk_file_list_new</link>                   (<link linkend="guint">guint</link> icon_width,
+                                                         <link linkend="gint">gint</link> mode,
+                                                         const <link linkend="gchar">gchar</link> *path);
+<link linkend="void">void</link>                <link linkend="gtk-file-list-construct">gtk_file_list_construct</link>             (<link linkend="GtkFileList">GtkFileList</link> *file_list,
+                                                         <link linkend="guint">guint</link> icon_width,
+                                                         <link linkend="gint">gint</link> mode,
+                                                         const <link linkend="gchar">gchar</link> *path);
+<link linkend="void">void</link>                <link linkend="gtk-file-list-set-filter">gtk_file_list_set_filter</link>            (<link linkend="GtkFileList">GtkFileList</link> *file_list,
+                                                         const <link linkend="gchar">gchar</link> *filter);
+<link linkend="gboolean">gboolean</link>            <link linkend="gtk-file-list-open-dir">gtk_file_list_open_dir</link>              (<link linkend="GtkFileList">GtkFileList</link> *file_list,
+                                                         const <link linkend="gchar">gchar</link> *dir_path);
+const <link linkend="gchar">gchar</link>*        <link linkend="gtk-file-list-get-path">gtk_file_list_get_path</link>              (<link linkend="GtkFileList">GtkFileList</link> *file_list);
+const <link linkend="gchar">gchar</link>*        <link linkend="gtk-file-list-get-filename">gtk_file_list_get_filename</link>          (<link linkend="GtkFileList">GtkFileList</link> *file_list);
+<link linkend="gint">gint</link>                <link linkend="gtk-file-list-get-filetype">gtk_file_list_get_filetype</link>          (<link linkend="GtkFileList">GtkFileList</link> *file_list);
+<link linkend="gint">gint</link>                <link linkend="gtk-file-list-add-type">gtk_file_list_add_type</link>              (<link linkend="GtkFileList">GtkFileList</link> *file_list,
+                                                         const <link linkend="gchar">gchar</link> **pixmap_data);
+<link linkend="gint">gint</link>                <link linkend="gtk-file-list-add-type-with-pixmap">gtk_file_list_add_type_with_pixmap</link>  (<link linkend="GtkFileList">GtkFileList</link> *file_list,
+                                                         <link linkend="GdkPixmap">GdkPixmap</link> *pixmap,
+                                                         <link linkend="GdkBitmap">GdkBitmap</link> *mask);
+<link linkend="void">void</link>                <link linkend="gtk-file-list-add-type-filter">gtk_file_list_add_type_filter</link>       (<link linkend="GtkFileList">GtkFileList</link> *file_list,
+                                                         <link linkend="gint">gint</link> type,
+                                                         const <link linkend="gchar">gchar</link> *filter);
+</synopsis>
+</refsynopsisdiv>
+
+<refsect1 id="GtkFileList.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+  <link linkend="GObject">GObject</link>
+   +----<link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+         +----<link linkend="GtkObject">GtkObject</link>
+               +----<link linkend="GtkWidget">GtkWidget</link>
+                     +----<link linkend="GtkContainer">GtkContainer</link>
+                           +----<link linkend="GtkFixed">GtkFixed</link>
+                                 +----<link linkend="GtkIconList">GtkIconList</link>
+                                       +----GtkFileList
+</synopsis>
+</refsect1>
+
+
+
+<refsect1 id="GtkFileList.implemented-interfaces" role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+GtkFileList implements
+ <link linkend="AtkImplementorIface">AtkImplementorIface</link> and  <link linkend="GtkBuildable">GtkBuildable</link>.</para>
+</refsect1>
+
+
+
+
+
+<refsect1 id="GtkFileList.description" role="desc">
+<title role="desc.title">Description</title>
+<para>
+It is a GtkIconList subclass that displays the contents of a given directory using fancy icons for different types of files</para>
+<para>
+</para>
+</refsect1>
+
+<refsect1 id="GtkFileList.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="GtkFileList-struct" role="struct">
+<title>GtkFileList</title>
+<indexterm zone="GtkFileList-struct"><primary sortas="GtkFileList">GtkFileList</primary></indexterm><programlisting>typedef struct _GtkFileList GtkFileList;</programlisting>
+<para>
+The GtkFileList structure contains only private data.
+It should only be accessed through the functions described below.</para>
+<para>
+</para></refsect2>
+<refsect2 id="GtkFileListItem" role="struct">
+<title>GtkFileListItem</title>
+<indexterm zone="GtkFileListItem"><primary sortas="GtkFileListItem">GtkFileListItem</primary></indexterm><programlisting>typedef struct {
+} GtkFileListItem;
+</programlisting>
+<para>
+The GtkFileListItem structure contains only private data.
+It should only be accessed through the functions described below.</para>
+<para>
+</para></refsect2>
+<refsect2 id="GtkFileListType" role="struct">
+<title>GtkFileListType</title>
+<indexterm zone="GtkFileListType"><primary sortas="GtkFileListType">GtkFileListType</primary></indexterm><programlisting>typedef struct {
+} GtkFileListType;
+</programlisting>
+<para>
+The GtkFileListType structure contains only private data.
+It should only be accessed through the functions described below.</para>
+<para>
+</para></refsect2>
+<refsect2 id="gtk-file-list-new" role="function">
+<title>gtk_file_list_new ()</title>
+<indexterm zone="gtk-file-list-new"><primary sortas="gtk_file_list_new">gtk_file_list_new</primary></indexterm><programlisting><link linkend="GtkWidget">GtkWidget</link>*          gtk_file_list_new                   (<link linkend="guint">guint</link> icon_width,
+                                                         <link linkend="gint">gint</link> mode,
+                                                         const <link linkend="gchar">gchar</link> *path);</programlisting>
+<para>
+Create a newfile list widget.
+Remark for the 2nd open file window you must use: gtk_icon_file_selection_show_tree(GTK_ICON_FILESEL(filesel), TRUE);</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>icon_width</parameter>&#160;:</term>
+<listitem><simpara> the width of the icon
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>mode</parameter>&#160;:</term>
+<listitem><simpara>GTK_FILE_LIST_SORT_NAME , GTK_FILE_LIST_SORT_TYPE
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>path</parameter>&#160;:</term>
+<listitem><simpara> the path to the files to be be opened in <link linkend="GtkFileList"><type>GtkFileList</type></link> widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara> the newly-created <link linkend="GtkFileList"><type>GtkFileList</type></link> widget.
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-file-list-construct" role="function">
+<title>gtk_file_list_construct ()</title>
+<indexterm zone="gtk-file-list-construct"><primary sortas="gtk_file_list_construct">gtk_file_list_construct</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_file_list_construct             (<link linkend="GtkFileList">GtkFileList</link> *file_list,
+                                                         <link linkend="guint">guint</link> icon_width,
+                                                         <link linkend="gint">gint</link> mode,
+                                                         const <link linkend="gchar">gchar</link> *path);</programlisting>
+<para>
+Initializes newfile list widget with specified values.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>file_list</parameter>&#160;:</term>
+<listitem><simpara> <link linkend="GtkFileList"><type>GtkFileList</type></link> widget
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>icon_width</parameter>&#160;:</term>
+<listitem><simpara> the width of the icon
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>mode</parameter>&#160;:</term>
+<listitem><simpara>GTK_FILE_LIST_SORT_NAME , GTK_FILE_LIST_SORT_TYPE
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>path</parameter>&#160;:</term>
+<listitem><simpara> the path to the files to be be opened in <link linkend="GtkFileList"><type>GtkFileList</type></link> widget.
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-file-list-set-filter" role="function">
+<title>gtk_file_list_set_filter ()</title>
+<indexterm zone="gtk-file-list-set-filter"><primary sortas="gtk_file_list_set_filter">gtk_file_list_set_filter</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_file_list_set_filter            (<link linkend="GtkFileList">GtkFileList</link> *file_list,
+                                                         const <link linkend="gchar">gchar</link> *filter);</programlisting>
+<para>
+Sets a filter for files displayed in Open window.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>file_list</parameter>&#160;:</term>
+<listitem><simpara> the <link linkend="GtkFileList"><type>GtkFileList</type></link> widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>filter</parameter>&#160;:</term>
+<listitem><simpara> filter applied to files 
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-file-list-open-dir" role="function">
+<title>gtk_file_list_open_dir ()</title>
+<indexterm zone="gtk-file-list-open-dir"><primary sortas="gtk_file_list_open_dir">gtk_file_list_open_dir</primary></indexterm><programlisting><link linkend="gboolean">gboolean</link>            gtk_file_list_open_dir              (<link linkend="GtkFileList">GtkFileList</link> *file_list,
+                                                         const <link linkend="gchar">gchar</link> *dir_path);</programlisting>
+<para>
+Opens the content of specified directory in <link linkend="GtkFileList"><type>GtkFileList</type></link> widget.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>file_list</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkFileList"><type>GtkFileList</type></link> widget
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>dir_path</parameter>&#160;:</term>
+<listitem><simpara> path of directory to be opened in <link linkend="GtkFileList"><type>GtkFileList</type></link> widget
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara> TRUE(succes) or FALSE(failure)
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-file-list-get-path" role="function">
+<title>gtk_file_list_get_path ()</title>
+<indexterm zone="gtk-file-list-get-path"><primary sortas="gtk_file_list_get_path">gtk_file_list_get_path</primary></indexterm><programlisting>const <link linkend="gchar">gchar</link>*        gtk_file_list_get_path              (<link linkend="GtkFileList">GtkFileList</link> *file_list);</programlisting>
+<para>
+Get the path of the files shown in filelist</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>file_list</parameter>&#160;:</term>
+<listitem><simpara> the <link linkend="GtkFileList"><type>GtkFileList</type></link> widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara> the path of files.
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-file-list-get-filename" role="function">
+<title>gtk_file_list_get_filename ()</title>
+<indexterm zone="gtk-file-list-get-filename"><primary sortas="gtk_file_list_get_filename">gtk_file_list_get_filename</primary></indexterm><programlisting>const <link linkend="gchar">gchar</link>*        gtk_file_list_get_filename          (<link linkend="GtkFileList">GtkFileList</link> *file_list);</programlisting>
+<para>
+Get the path of the files shown in filelist</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>file_list</parameter>&#160;:</term>
+<listitem><simpara> the <link linkend="GtkFileList"><type>GtkFileList</type></link> widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara> the filename
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-file-list-get-filetype" role="function">
+<title>gtk_file_list_get_filetype ()</title>
+<indexterm zone="gtk-file-list-get-filetype"><primary sortas="gtk_file_list_get_filetype">gtk_file_list_get_filetype</primary></indexterm><programlisting><link linkend="gint">gint</link>                gtk_file_list_get_filetype          (<link linkend="GtkFileList">GtkFileList</link> *file_list);</programlisting>
+<para>
+Get the <link linkend="GtkFileListType"><type>GtkFileListType</type></link> of selected file in File List.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>file_list</parameter>&#160;:</term>
+<listitem><simpara> the <link linkend="GtkFileList"><type>GtkFileList</type></link> widget.
+      GTK_FILE_LIST_FILE,
+      GTK_FILE_LIST_HTML,
+      GTK_FILE_LIST_TEXT,
+      GTK_FILE_LIST_DOC,
+      GTK_FILE_LIST_PDF,
+      GTK_FILE_LIST_C,
+      GTK_FILE_LIST_CPP,
+      GTK_FILE_LIST_H,
+      GTK_FILE_LIST_F,
+      GTK_FILE_LIST_JAVA,
+      GTK_FILE_LIST_EXEC,
+      GTK_FILE_LIST_IMG,
+      GTK_FILE_LIST_ARCH,
+      GTK_FILE_LIST_PKG,
+      GTK_FILE_LIST_DEB,
+      GTK_FILE_LIST_RPM,
+      GTK_FILE_LIST_CAT,
+      GTK_FILE_LIST_SOUND,
+      GTK_FILE_LIST_MOVIE,
+      GTK_FILE_LIST_CORE)
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara> The <link linkend="GtkFileListType"><type>GtkFileListType</type></link> (   GTK_FILE_LIST_FOLDER,
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-file-list-add-type" role="function">
+<title>gtk_file_list_add_type ()</title>
+<indexterm zone="gtk-file-list-add-type"><primary sortas="gtk_file_list_add_type">gtk_file_list_add_type</primary></indexterm><programlisting><link linkend="gint">gint</link>                gtk_file_list_add_type              (<link linkend="GtkFileList">GtkFileList</link> *file_list,
+                                                         const <link linkend="gchar">gchar</link> **pixmap_data);</programlisting>
+<para>
+Add a new file type in a <link linkend="GtkFileList"><type>GtkFileList</type></link> structure.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>file_list</parameter>&#160;:</term>
+<listitem><simpara> the <link linkend="GtkFileList"><type>GtkFileList</type></link> widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>pixmap_data</parameter>&#160;:</term>
+<listitem><simpara> Pointer to a string containing the XPM data.(last argument of <link linkend="gdk-pixmap-create-from-xpm-d"><function>gdk_pixmap_create_from_xpm_d()</function></link> ).
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara> the identification number given to the added 
+filetype 
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-file-list-add-type-with-pixmap" role="function">
+<title>gtk_file_list_add_type_with_pixmap ()</title>
+<indexterm zone="gtk-file-list-add-type-with-pixmap"><primary sortas="gtk_file_list_add_type_with_pixmap">gtk_file_list_add_type_with_pixmap</primary></indexterm><programlisting><link linkend="gint">gint</link>                gtk_file_list_add_type_with_pixmap  (<link linkend="GtkFileList">GtkFileList</link> *file_list,
+                                                         <link linkend="GdkPixmap">GdkPixmap</link> *pixmap,
+                                                         <link linkend="GdkBitmap">GdkBitmap</link> *mask);</programlisting>
+<para>
+Add a new file type in a <link linkend="GtkFileList"><type>GtkFileList</type></link> structure.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>file_list</parameter>&#160;:</term>
+<listitem><simpara> the <link linkend="GtkFileList"><type>GtkFileList</type></link> widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>pixmap</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GdkPixmap"><type>GdkPixmap</type></link> object.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>mask</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GdkBitmap"><type>GdkBitmap</type></link> mask.
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara> the identification number given to the added 
+filetype 
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-file-list-add-type-filter" role="function">
+<title>gtk_file_list_add_type_filter ()</title>
+<indexterm zone="gtk-file-list-add-type-filter"><primary sortas="gtk_file_list_add_type_filter">gtk_file_list_add_type_filter</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_file_list_add_type_filter       (<link linkend="GtkFileList">GtkFileList</link> *file_list,
+                                                         <link linkend="gint">gint</link> type,
+                                                         const <link linkend="gchar">gchar</link> *filter);</programlisting>
+<para>
+Add a filter for specified file type in a <link linkend="GtkFileList"><type>GtkFileList</type></link> structure.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>file_list</parameter>&#160;:</term>
+<listitem><simpara> the <link linkend="GtkFileList"><type>GtkFileList</type></link> widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>type</parameter>&#160;:</term>
+<listitem><simpara> file type.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>filter</parameter>&#160;:</term>
+<listitem><simpara> filter for specified type.
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+
+
+
+
+</refentry>

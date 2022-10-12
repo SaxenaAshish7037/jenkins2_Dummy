@@ -1,0 +1,1081 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+<!ENTITY version SYSTEM "version.xml">
+]>
+<!--ENTITY index-Objects-Grouped SYSTEM "objects_grouped.sgml"-->
+<refentry id="GtkPlotCanvas">
+<refmeta>
+<refentrytitle role="top_of_page" id="GtkPlotCanvas.top_of_page">GtkPlotCanvas</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GTKEXTRA Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>GtkPlotCanvas</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="GtkPlotCanvas.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+<anchor id="GtkPlotCanvasChild"/>
+<synopsis>
+
+#include &lt;gtkextra.h&gt;
+
+                    <link linkend="GtkPlotCanvas-struct">GtkPlotCanvas</link>;
+enum                <link linkend="GtkPlotCanvasFlags">GtkPlotCanvasFlags</link>;
+enum                <link linkend="GtkPlotCanvasAction">GtkPlotCanvasAction</link>;
+enum                <link linkend="GtkPlotCanvasFlag">GtkPlotCanvasFlag</link>;
+enum                <link linkend="GtkPlotCanvasSelection">GtkPlotCanvasSelection</link>;
+enum                <link linkend="GtkPlotCanvasSelectionMode">GtkPlotCanvasSelectionMode</link>;
+enum                <link linkend="GtkPlotCanvasPos">GtkPlotCanvasPos</link>;
+                    <link linkend="GtkPlotCanvasChild-struct">GtkPlotCanvasChild</link>;
+enum                <link linkend="GtkPlotCanvasChildFlags">GtkPlotCanvasChildFlags</link>;
+<link linkend="GtkWidget">GtkWidget</link>*          <link linkend="gtk-plot-canvas-new">gtk_plot_canvas_new</link>                 (<link linkend="gint">gint</link> width,
+                                                         <link linkend="gint">gint</link> height,
+                                                         <link linkend="gdouble">gdouble</link> magnification);
+<link linkend="void">void</link>                <link linkend="gtk-plot-canvas-construct">gtk_plot_canvas_construct</link>           (<link linkend="GtkPlotCanvas">GtkPlotCanvas</link> *canvas,
+                                                         <link linkend="gint">gint</link> width,
+                                                         <link linkend="gint">gint</link> height,
+                                                         <link linkend="gdouble">gdouble</link> magnification);
+<link linkend="GtkPlotCanvasFlags">GtkPlotCanvasFlags</link>  <link linkend="gtk-plot-canvas-flags">gtk_plot_canvas_flags</link>               (<link linkend="GtkPlotCanvas">GtkPlotCanvas</link> *canvas);
+<link linkend="void">void</link>                <link linkend="gtk-plot-canvas-set-flags">gtk_plot_canvas_set_flags</link>           (<link linkend="GtkPlotCanvas">GtkPlotCanvas</link> *canvas,
+                                                         <link linkend="GtkPlotCanvasFlags">GtkPlotCanvasFlags</link> flags);
+<link linkend="void">void</link>                <link linkend="gtk-plot-canvas-unset-flags">gtk_plot_canvas_unset_flags</link>         (<link linkend="GtkPlotCanvas">GtkPlotCanvas</link> *canvas,
+                                                         <link linkend="GtkPlotCanvasFlags">GtkPlotCanvasFlags</link> flags);
+<link linkend="void">void</link>                <link linkend="gtk-plot-canvas-set-pc">gtk_plot_canvas_set_pc</link>              (<link linkend="GtkPlotCanvas">GtkPlotCanvas</link> *canvas,
+                                                         <link linkend="GtkPlotPC">GtkPlotPC</link> *pc);
+<link linkend="void">void</link>                <link linkend="gtk-plot-canvas-paint">gtk_plot_canvas_paint</link>               (<link linkend="GtkPlotCanvas">GtkPlotCanvas</link> *canvas);
+<link linkend="void">void</link>                <link linkend="gtk-plot-canvas-refresh">gtk_plot_canvas_refresh</link>             (<link linkend="GtkPlotCanvas">GtkPlotCanvas</link> *canvas);
+<link linkend="void">void</link>                <link linkend="gtk-plot-canvas-freeze">gtk_plot_canvas_freeze</link>              (<link linkend="GtkPlotCanvas">GtkPlotCanvas</link> *canvas);
+<link linkend="void">void</link>                <link linkend="gtk-plot-canvas-thaw">gtk_plot_canvas_thaw</link>                (<link linkend="GtkPlotCanvas">GtkPlotCanvas</link> *canvas);
+<link linkend="void">void</link>                <link linkend="gtk-plot-canvas-grid-set-visible">gtk_plot_canvas_grid_set_visible</link>    (<link linkend="GtkPlotCanvas">GtkPlotCanvas</link> *canvas,
+                                                         <link linkend="gboolean">gboolean</link> visible);
+<link linkend="void">void</link>                <link linkend="gtk-plot-canvas-grid-set-step">gtk_plot_canvas_grid_set_step</link>       (<link linkend="GtkPlotCanvas">GtkPlotCanvas</link> *canvas,
+                                                         <link linkend="gdouble">gdouble</link> step);
+<link linkend="void">void</link>                <link linkend="gtk-plot-canvas-grid-set-attributes">gtk_plot_canvas_grid_set_attributes</link> (<link linkend="GtkPlotCanvas">GtkPlotCanvas</link> *canvas,
+                                                         <link linkend="GtkPlotLineStyle">GtkPlotLineStyle</link> style,
+                                                         <link linkend="gint">gint</link> width,
+                                                         const <link linkend="GdkColor">GdkColor</link> *color);
+<link linkend="void">void</link>                <link linkend="gtk-plot-canvas-cancel-action">gtk_plot_canvas_cancel_action</link>       (<link linkend="GtkPlotCanvas">GtkPlotCanvas</link> *plot_canvas);
+<link linkend="void">void</link>                <link linkend="gtk-plot-canvas-unselect">gtk_plot_canvas_unselect</link>            (<link linkend="GtkPlotCanvas">GtkPlotCanvas</link> *plot_canvas);
+<link linkend="GtkPlotCanvasChild">GtkPlotCanvasChild</link> * <link linkend="gtk-plot-canvas-get-active-item">gtk_plot_canvas_get_active_item</link>    (<link linkend="GtkPlotCanvas">GtkPlotCanvas</link> *canvas);
+<link linkend="void">void</link>                <link linkend="gtk-plot-canvas-set-size">gtk_plot_canvas_set_size</link>            (<link linkend="GtkPlotCanvas">GtkPlotCanvas</link> *canvas,
+                                                         <link linkend="gint">gint</link> width,
+                                                         <link linkend="gint">gint</link> height);
+<link linkend="void">void</link>                <link linkend="gtk-plot-canvas-set-magnification">gtk_plot_canvas_set_magnification</link>   (<link linkend="GtkPlotCanvas">GtkPlotCanvas</link> *canvas,
+                                                         <link linkend="gdouble">gdouble</link> magnification);
+<link linkend="void">void</link>                <link linkend="gtk-plot-canvas-set-transparent">gtk_plot_canvas_set_transparent</link>     (<link linkend="GtkPlotCanvas">GtkPlotCanvas</link> *canvas,
+                                                         <link linkend="gboolean">gboolean</link> transparent);
+<link linkend="gboolean">gboolean</link>            <link linkend="gtk-plot-canvas-transparent">gtk_plot_canvas_transparent</link>         (<link linkend="GtkPlotCanvas">GtkPlotCanvas</link> *canvas);
+<link linkend="void">void</link>                <link linkend="gtk-plot-canvas-set-background">gtk_plot_canvas_set_background</link>      (<link linkend="GtkPlotCanvas">GtkPlotCanvas</link> *canvas,
+                                                         const <link linkend="GdkColor">GdkColor</link> *bg_color);
+<link linkend="void">void</link>                <link linkend="gtk-plot-canvas-get-pixel">gtk_plot_canvas_get_pixel</link>           (<link linkend="GtkPlotCanvas">GtkPlotCanvas</link> *canvas,
+                                                         <link linkend="gdouble">gdouble</link> px,
+                                                         <link linkend="gdouble">gdouble</link> py,
+                                                         <link linkend="gint">gint</link> *x,
+                                                         <link linkend="gint">gint</link> *y);
+<link linkend="void">void</link>                <link linkend="gtk-plot-canvas-get-position">gtk_plot_canvas_get_position</link>        (<link linkend="GtkPlotCanvas">GtkPlotCanvas</link> *plot_canvas,
+                                                         <link linkend="gint">gint</link> x,
+                                                         <link linkend="gint">gint</link> y,
+                                                         <link linkend="gdouble">gdouble</link> *px,
+                                                         <link linkend="gdouble">gdouble</link> *py);
+<link linkend="void">void</link>                <link linkend="gtk-plot-canvas-put-child">gtk_plot_canvas_put_child</link>           (<link linkend="GtkPlotCanvas">GtkPlotCanvas</link> *canvas,
+                                                         <link linkend="GtkPlotCanvasChild">GtkPlotCanvasChild</link> *child,
+                                                         <link linkend="gdouble">gdouble</link> x1,
+                                                         <link linkend="gdouble">gdouble</link> y1,
+                                                         <link linkend="gdouble">gdouble</link> x2,
+                                                         <link linkend="gdouble">gdouble</link> y2);
+<link linkend="void">void</link>                <link linkend="gtk-plot-canvas-remove-child">gtk_plot_canvas_remove_child</link>        (<link linkend="GtkPlotCanvas">GtkPlotCanvas</link> *canvas,
+                                                         <link linkend="GtkPlotCanvasChild">GtkPlotCanvasChild</link> *child);
+<link linkend="void">void</link>                <link linkend="gtk-plot-canvas-child-move">gtk_plot_canvas_child_move</link>          (<link linkend="GtkPlotCanvas">GtkPlotCanvas</link> *canvas,
+                                                         <link linkend="GtkPlotCanvasChild">GtkPlotCanvasChild</link> *child,
+                                                         <link linkend="gdouble">gdouble</link> x1,
+                                                         <link linkend="gdouble">gdouble</link> y1);
+<link linkend="void">void</link>                <link linkend="gtk-plot-canvas-child-move-resize">gtk_plot_canvas_child_move_resize</link>   (<link linkend="GtkPlotCanvas">GtkPlotCanvas</link> *canvas,
+                                                         <link linkend="GtkPlotCanvasChild">GtkPlotCanvasChild</link> *child,
+                                                         <link linkend="gdouble">gdouble</link> x1,
+                                                         <link linkend="gdouble">gdouble</link> y1,
+                                                         <link linkend="gdouble">gdouble</link> x2,
+                                                         <link linkend="gdouble">gdouble</link> y2);
+<link linkend="void">void</link>                <link linkend="gtk-plot-canvas-child-set-selection">gtk_plot_canvas_child_set_selection</link> (<link linkend="GtkPlotCanvasChild">GtkPlotCanvasChild</link> *child,
+                                                         <link linkend="GtkPlotCanvasSelection">GtkPlotCanvasSelection</link> selection);
+<link linkend="void">void</link>                <link linkend="gtk-plot-canvas-child-set-selection-mode">gtk_plot_canvas_child_set_selection_mode</link>
+                                                        (<link linkend="GtkPlotCanvasChild">GtkPlotCanvasChild</link> *child,
+                                                         <link linkend="GtkPlotCanvasSelectionMode">GtkPlotCanvasSelectionMode</link> mode);
+<link linkend="gboolean">gboolean</link>            <link linkend="gtk-plot-canvas-child-get-position">gtk_plot_canvas_child_get_position</link>  (<link linkend="GtkPlotCanvas">GtkPlotCanvas</link> *canvas,
+                                                         <link linkend="GtkPlotCanvasChild">GtkPlotCanvasChild</link> *child,
+                                                         <link linkend="double">double</link> *x1,
+                                                         <link linkend="double">double</link> *y1,
+                                                         <link linkend="double">double</link> *x2,
+                                                         <link linkend="double">double</link> *y2);
+<link linkend="void">void</link>                <link linkend="gtk-plot-canvas-set-line-attributes">gtk_plot_canvas_set_line_attributes</link> (<link linkend="GtkPlotCanvas">GtkPlotCanvas</link> *canvas,
+                                                         <link linkend="GtkPlotLine">GtkPlotLine</link> line);
+</synopsis>
+</refsynopsisdiv>
+
+<refsect1 id="GtkPlotCanvas.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+  <link linkend="GObject">GObject</link>
+   +----<link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+         +----<link linkend="GtkObject">GtkObject</link>
+               +----<link linkend="GtkWidget">GtkWidget</link>
+                     +----<link linkend="GtkContainer">GtkContainer</link>
+                           +----<link linkend="GtkFixed">GtkFixed</link>
+                                 +----GtkPlotCanvas
+</synopsis>
+<synopsis>
+  <link linkend="GObject">GObject</link>
+   +----<link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+         +----<link linkend="GtkObject">GtkObject</link>
+               +----GtkPlotCanvasChild
+                     +----<link linkend="GtkPlotCanvasEllipse">GtkPlotCanvasEllipse</link>
+                     +----<link linkend="GtkPlotCanvasPixmap">GtkPlotCanvasPixmap</link>
+                     +----<link linkend="GtkPlotCanvasPlot">GtkPlotCanvasPlot</link>
+                     +----<link linkend="GtkPlotCanvasRectangle">GtkPlotCanvasRectangle</link>
+                     +----<link linkend="GtkPlotCanvasText">GtkPlotCanvasText</link>
+</synopsis>
+</refsect1>
+
+
+
+<refsect1 id="GtkPlotCanvas.implemented-interfaces" role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+GtkPlotCanvas implements
+ <link linkend="AtkImplementorIface">AtkImplementorIface</link> and  <link linkend="GtkBuildable">GtkBuildable</link>.</para>
+</refsect1>
+
+
+<refsect1 id="GtkPlotCanvas.properties" role="properties">
+<title role="properties.title">Properties</title>
+<synopsis>
+  &quot;<link linkend="GtkPlotCanvas--color-bg">color-bg</link>&quot;                 <link linkend="gpointer">gpointer</link>              : Read / Write
+  &quot;<link linkend="GtkPlotCanvas--flags">flags</link>&quot;                    <link linkend="gint">gint</link>                  : Read / Write
+  &quot;<link linkend="GtkPlotCanvas--grid-step">grid-step</link>&quot;                <link linkend="gdouble">gdouble</link>               : Read / Write
+  &quot;<link linkend="GtkPlotCanvas--height">height</link>&quot;                   <link linkend="gint">gint</link>                  : Read / Write
+  &quot;<link linkend="GtkPlotCanvas--line-grid">line-grid</link>&quot;                <link linkend="gpointer">gpointer</link>              : Read / Write
+  &quot;<link linkend="GtkPlotCanvas--magnification">magnification</link>&quot;            <link linkend="gdouble">gdouble</link>               : Read / Write
+  &quot;<link linkend="GtkPlotCanvas--show-grid">show-grid</link>&quot;                <link linkend="gboolean">gboolean</link>              : Read / Write
+  &quot;<link linkend="GtkPlotCanvas--transparent">transparent</link>&quot;              <link linkend="gboolean">gboolean</link>              : Read / Write
+  &quot;<link linkend="GtkPlotCanvas--width">width</link>&quot;                    <link linkend="gint">gint</link>                  : Read / Write
+</synopsis>
+</refsect1>
+
+<refsect1 id="GtkPlotCanvas.signals" role="signal_proto">
+<title role="signal_proto.title">Signals</title>
+<synopsis>
+  &quot;<link linkend="GtkPlotCanvas-add-item">add-item</link>&quot;                                       : Run Last
+  &quot;<link linkend="GtkPlotCanvas-changed">changed</link>&quot;                                        : Run Last
+  &quot;<link linkend="GtkPlotCanvas-delete-item">delete-item</link>&quot;                                    : Run Last
+  &quot;<link linkend="GtkPlotCanvas-move-item">move-item</link>&quot;                                      : Run Last
+  &quot;<link linkend="GtkPlotCanvas-resize-item">resize-item</link>&quot;                                    : Run Last
+  &quot;<link linkend="GtkPlotCanvas-select-item">select-item</link>&quot;                                    : Run Last
+  &quot;<link linkend="GtkPlotCanvas-select-region">select-region</link>&quot;                                  : Run Last
+</synopsis>
+</refsect1>
+
+
+<refsect1 id="GtkPlotCanvas.description" role="desc">
+<title role="desc.title">Description</title>
+<para>
+FIXME:: need long description.</para>
+<para>
+</para>
+</refsect1>
+
+<refsect1 id="GtkPlotCanvas.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="GtkPlotCanvas-struct" role="struct">
+<title>GtkPlotCanvas</title>
+<indexterm zone="GtkPlotCanvas-struct"><primary sortas="GtkPlotCanvas">GtkPlotCanvas</primary></indexterm><programlisting>typedef struct _GtkPlotCanvas GtkPlotCanvas;</programlisting>
+<para>
+The GtkPlotCanvas struct contains only private data.
+It should only be accessed through the functions described below.</para>
+<para>
+</para></refsect2>
+<refsect2 id="GtkPlotCanvasFlags" role="enum">
+<title>enum GtkPlotCanvasFlags</title>
+<indexterm zone="GtkPlotCanvasFlags"><primary sortas="GtkPlotCanvasFlags">GtkPlotCanvasFlags</primary></indexterm><programlisting>typedef enum
+{
+      GTK_PLOT_CANVAS_CAN_SELECT	=	1 &lt;&lt; 0,
+      GTK_PLOT_CANVAS_CAN_SELECT_ITEM	=	1 &lt;&lt; 1,
+      GTK_PLOT_CANVAS_CAN_DND		=	1 &lt;&lt; 2,
+} GtkPlotCanvasFlags;
+</programlisting>
+<para>
+Selection and DND mode of <link linkend="GtkPlotCanvas"><type>GtkPlotCanvas</type></link></para>
+<para>
+</para><variablelist role="enum">
+<varlistentry id="GTK-PLOT-CANVAS-CAN-SELECT--CAPS" role="constant">
+<term><literal>GTK_PLOT_CANVAS_CAN_SELECT</literal></term>
+<listitem><simpara> Select region
+</simpara></listitem>
+</varlistentry>
+<varlistentry id="GTK-PLOT-CANVAS-CAN-SELECT-ITEM--CAPS" role="constant">
+<term><literal>GTK_PLOT_CANVAS_CAN_SELECT_ITEM</literal></term>
+<listitem><simpara> Select items
+</simpara></listitem>
+</varlistentry>
+<varlistentry id="GTK-PLOT-CANVAS-CAN-DND--CAPS" role="constant">
+<term><literal>GTK_PLOT_CANVAS_CAN_DND</literal></term>
+<listitem><simpara> DnD items
+</simpara></listitem>
+</varlistentry>
+</variablelist></refsect2>
+<refsect2 id="GtkPlotCanvasAction" role="enum">
+<title>enum GtkPlotCanvasAction</title>
+<indexterm zone="GtkPlotCanvasAction"><primary sortas="GtkPlotCanvasAction">GtkPlotCanvasAction</primary></indexterm><programlisting>typedef enum
+{
+      GTK_PLOT_CANVAS_ACTION_INACTIVE,
+      GTK_PLOT_CANVAS_ACTION_SELECTION,
+      GTK_PLOT_CANVAS_ACTION_DRAG,
+      GTK_PLOT_CANVAS_ACTION_RESIZE,
+} GtkPlotCanvasAction;
+</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="GtkPlotCanvasFlag" role="enum" condition="deprecated:3.1.6: use #GtkPlotCanvasChildFlags">
+<title>enum GtkPlotCanvasFlag</title>
+<indexterm zone="GtkPlotCanvasFlag" role="deprecated"><primary sortas="GtkPlotCanvasFlag">GtkPlotCanvasFlag</primary></indexterm><programlisting>typedef enum
+{
+      GTK_PLOT_CANVAS_FROZEN            = 0,
+      GTK_PLOT_CANVAS_CAN_MOVE          = 1 &lt;&lt; 0,
+      GTK_PLOT_CANVAS_CAN_RESIZE	= 1 &lt;&lt; 1,
+} GtkPlotCanvasFlag;
+</programlisting>
+<warning><para><literal>GtkPlotCanvasFlag</literal> has been deprecated since version 3.1.6 and should not be used in newly-written code. use <link linkend="GtkPlotCanvasChildFlags"><type>GtkPlotCanvasChildFlags</type></link></para></warning>
+<para>
+Deprecated, Used for GtkPlotCanvasChild. Use 
+<link linkend="GtkPlotCanvasChildFlags"><type>GtkPlotCanvasChildFlags</type></link> instead.</para>
+<para>
+</para><variablelist role="enum">
+<varlistentry id="GTK-PLOT-CANVAS-FROZEN--CAPS" role="constant">
+<term><literal>GTK_PLOT_CANVAS_FROZEN</literal></term>
+<listitem><simpara> Child is frozen
+</simpara></listitem>
+</varlistentry>
+<varlistentry id="GTK-PLOT-CANVAS-CAN-MOVE--CAPS" role="constant">
+<term><literal>GTK_PLOT_CANVAS_CAN_MOVE</literal></term>
+<listitem><simpara> Child can be moved
+</simpara></listitem>
+</varlistentry>
+<varlistentry id="GTK-PLOT-CANVAS-CAN-RESIZE--CAPS" role="constant">
+<term><literal>GTK_PLOT_CANVAS_CAN_RESIZE</literal></term>
+<listitem><simpara> Child can be resized
+</simpara></listitem>
+</varlistentry>
+</variablelist></refsect2>
+<refsect2 id="GtkPlotCanvasSelection" role="enum">
+<title>enum GtkPlotCanvasSelection</title>
+<indexterm zone="GtkPlotCanvasSelection"><primary sortas="GtkPlotCanvasSelection">GtkPlotCanvasSelection</primary></indexterm><programlisting>typedef enum
+{
+      GTK_PLOT_CANVAS_SELECT_NONE,    
+      GTK_PLOT_CANVAS_SELECT_MARKERS,
+      GTK_PLOT_CANVAS_SELECT_TARGET,
+} GtkPlotCanvasSelection;
+</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="GtkPlotCanvasSelectionMode" role="enum">
+<title>enum GtkPlotCanvasSelectionMode</title>
+<indexterm zone="GtkPlotCanvasSelectionMode"><primary sortas="GtkPlotCanvasSelectionMode">GtkPlotCanvasSelectionMode</primary></indexterm><programlisting>typedef enum
+{
+      GTK_PLOT_CANVAS_SELECT_CLICK_1,    
+      GTK_PLOT_CANVAS_SELECT_CLICK_2,
+} GtkPlotCanvasSelectionMode;
+</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="GtkPlotCanvasPos" role="enum">
+<title>enum GtkPlotCanvasPos</title>
+<indexterm zone="GtkPlotCanvasPos"><primary sortas="GtkPlotCanvasPos">GtkPlotCanvasPos</primary></indexterm><programlisting>typedef enum
+{
+      GTK_PLOT_CANVAS_OUT,
+      GTK_PLOT_CANVAS_IN,
+      GTK_PLOT_CANVAS_LEFT,
+      GTK_PLOT_CANVAS_RIGHT,
+      GTK_PLOT_CANVAS_TOP,
+      GTK_PLOT_CANVAS_BOTTOM,
+      GTK_PLOT_CANVAS_TOP_LEFT,
+      GTK_PLOT_CANVAS_TOP_RIGHT,
+      GTK_PLOT_CANVAS_BOTTOM_LEFT,
+      GTK_PLOT_CANVAS_BOTTOM_RIGHT,
+} GtkPlotCanvasPos;
+</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="GtkPlotCanvasChild-struct" role="struct">
+<title>GtkPlotCanvasChild</title>
+<indexterm zone="GtkPlotCanvasChild-struct"><primary sortas="GtkPlotCanvasChild">GtkPlotCanvasChild</primary></indexterm><programlisting>typedef struct _GtkPlotCanvasChild GtkPlotCanvasChild;</programlisting>
+<para>
+The GtkPlotCanvasChild struct contains only private data.
+It should only be accessed through the functions described below.</para>
+<para>
+</para></refsect2>
+<refsect2 id="GtkPlotCanvasChildFlags" role="enum">
+<title>enum GtkPlotCanvasChildFlags</title>
+<indexterm zone="GtkPlotCanvasChildFlags"><primary sortas="GtkPlotCanvasChildFlags">GtkPlotCanvasChildFlags</primary></indexterm><programlisting>typedef enum
+{
+      GTK_PLOT_CANVAS_CHILD_FROZEN            = 0,
+      GTK_PLOT_CANVAS_CHILD_CAN_MOVE          = 1 &lt;&lt; 0,
+      GTK_PLOT_CANVAS_CHILD_CAN_RESIZE	= 1 &lt;&lt; 1,
+} GtkPlotCanvasChildFlags;
+</programlisting>
+<para>
+move/resize-mode of <link linkend="GtkPlotCanvasChild"><type>GtkPlotCanvasChild</type></link></para>
+<para>
+</para><variablelist role="enum">
+<varlistentry id="GTK-PLOT-CANVAS-CHILD-FROZEN--CAPS" role="constant">
+<term><literal>GTK_PLOT_CANVAS_CHILD_FROZEN</literal></term>
+<listitem><simpara> Child is frozen
+</simpara></listitem>
+</varlistentry>
+<varlistentry id="GTK-PLOT-CANVAS-CHILD-CAN-MOVE--CAPS" role="constant">
+<term><literal>GTK_PLOT_CANVAS_CHILD_CAN_MOVE</literal></term>
+<listitem><simpara> Child can be moved
+</simpara></listitem>
+</varlistentry>
+<varlistentry id="GTK-PLOT-CANVAS-CHILD-CAN-RESIZE--CAPS" role="constant">
+<term><literal>GTK_PLOT_CANVAS_CHILD_CAN_RESIZE</literal></term>
+<listitem><simpara> Child can be resized
+</simpara></listitem>
+</varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-canvas-new" role="function">
+<title>gtk_plot_canvas_new ()</title>
+<indexterm zone="gtk-plot-canvas-new"><primary sortas="gtk_plot_canvas_new">gtk_plot_canvas_new</primary></indexterm><programlisting><link linkend="GtkWidget">GtkWidget</link>*          gtk_plot_canvas_new                 (<link linkend="gint">gint</link> width,
+                                                         <link linkend="gint">gint</link> height,
+                                                         <link linkend="gdouble">gdouble</link> magnification);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>width</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>height</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>magnification</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-canvas-construct" role="function">
+<title>gtk_plot_canvas_construct ()</title>
+<indexterm zone="gtk-plot-canvas-construct"><primary sortas="gtk_plot_canvas_construct">gtk_plot_canvas_construct</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_canvas_construct           (<link linkend="GtkPlotCanvas">GtkPlotCanvas</link> *canvas,
+                                                         <link linkend="gint">gint</link> width,
+                                                         <link linkend="gint">gint</link> height,
+                                                         <link linkend="gdouble">gdouble</link> magnification);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>canvas</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlotCanvas"><type>GtkPlotCanvas</type></link>.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>width</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>height</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>magnification</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-canvas-flags" role="function">
+<title>gtk_plot_canvas_flags ()</title>
+<indexterm zone="gtk-plot-canvas-flags"><primary sortas="gtk_plot_canvas_flags">gtk_plot_canvas_flags</primary></indexterm><programlisting><link linkend="GtkPlotCanvasFlags">GtkPlotCanvasFlags</link>  gtk_plot_canvas_flags               (<link linkend="GtkPlotCanvas">GtkPlotCanvas</link> *canvas);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>canvas</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-canvas-set-flags" role="function">
+<title>gtk_plot_canvas_set_flags ()</title>
+<indexterm zone="gtk-plot-canvas-set-flags"><primary sortas="gtk_plot_canvas_set_flags">gtk_plot_canvas_set_flags</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_canvas_set_flags           (<link linkend="GtkPlotCanvas">GtkPlotCanvas</link> *canvas,
+                                                         <link linkend="GtkPlotCanvasFlags">GtkPlotCanvasFlags</link> flags);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>canvas</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>flags</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-canvas-unset-flags" role="function">
+<title>gtk_plot_canvas_unset_flags ()</title>
+<indexterm zone="gtk-plot-canvas-unset-flags"><primary sortas="gtk_plot_canvas_unset_flags">gtk_plot_canvas_unset_flags</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_canvas_unset_flags         (<link linkend="GtkPlotCanvas">GtkPlotCanvas</link> *canvas,
+                                                         <link linkend="GtkPlotCanvasFlags">GtkPlotCanvasFlags</link> flags);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>canvas</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>flags</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-canvas-set-pc" role="function">
+<title>gtk_plot_canvas_set_pc ()</title>
+<indexterm zone="gtk-plot-canvas-set-pc"><primary sortas="gtk_plot_canvas_set_pc">gtk_plot_canvas_set_pc</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_canvas_set_pc              (<link linkend="GtkPlotCanvas">GtkPlotCanvas</link> *canvas,
+                                                         <link linkend="GtkPlotPC">GtkPlotPC</link> *pc);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>canvas</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>pc</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-canvas-paint" role="function">
+<title>gtk_plot_canvas_paint ()</title>
+<indexterm zone="gtk-plot-canvas-paint"><primary sortas="gtk_plot_canvas_paint">gtk_plot_canvas_paint</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_canvas_paint               (<link linkend="GtkPlotCanvas">GtkPlotCanvas</link> *canvas);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>canvas</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlotCanvas"><type>GtkPlotCanvas</type></link>.
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-canvas-refresh" role="function">
+<title>gtk_plot_canvas_refresh ()</title>
+<indexterm zone="gtk-plot-canvas-refresh"><primary sortas="gtk_plot_canvas_refresh">gtk_plot_canvas_refresh</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_canvas_refresh             (<link linkend="GtkPlotCanvas">GtkPlotCanvas</link> *canvas);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>canvas</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlotCanvas"><type>GtkPlotCanvas</type></link>.
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-canvas-freeze" role="function">
+<title>gtk_plot_canvas_freeze ()</title>
+<indexterm zone="gtk-plot-canvas-freeze"><primary sortas="gtk_plot_canvas_freeze">gtk_plot_canvas_freeze</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_canvas_freeze              (<link linkend="GtkPlotCanvas">GtkPlotCanvas</link> *canvas);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>canvas</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlotCanvas"><type>GtkPlotCanvas</type></link>.
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-canvas-thaw" role="function">
+<title>gtk_plot_canvas_thaw ()</title>
+<indexterm zone="gtk-plot-canvas-thaw"><primary sortas="gtk_plot_canvas_thaw">gtk_plot_canvas_thaw</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_canvas_thaw                (<link linkend="GtkPlotCanvas">GtkPlotCanvas</link> *canvas);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>canvas</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlotCanvas"><type>GtkPlotCanvas</type></link>.
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-canvas-grid-set-visible" role="function">
+<title>gtk_plot_canvas_grid_set_visible ()</title>
+<indexterm zone="gtk-plot-canvas-grid-set-visible"><primary sortas="gtk_plot_canvas_grid_set_visible">gtk_plot_canvas_grid_set_visible</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_canvas_grid_set_visible    (<link linkend="GtkPlotCanvas">GtkPlotCanvas</link> *canvas,
+                                                         <link linkend="gboolean">gboolean</link> visible);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>canvas</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlotCanvas"><type>GtkPlotCanvas</type></link>.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>visible</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-canvas-grid-set-step" role="function">
+<title>gtk_plot_canvas_grid_set_step ()</title>
+<indexterm zone="gtk-plot-canvas-grid-set-step"><primary sortas="gtk_plot_canvas_grid_set_step">gtk_plot_canvas_grid_set_step</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_canvas_grid_set_step       (<link linkend="GtkPlotCanvas">GtkPlotCanvas</link> *canvas,
+                                                         <link linkend="gdouble">gdouble</link> step);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>canvas</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlotCanvas"><type>GtkPlotCanvas</type></link>.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>step</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-canvas-grid-set-attributes" role="function">
+<title>gtk_plot_canvas_grid_set_attributes ()</title>
+<indexterm zone="gtk-plot-canvas-grid-set-attributes"><primary sortas="gtk_plot_canvas_grid_set_attributes">gtk_plot_canvas_grid_set_attributes</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_canvas_grid_set_attributes (<link linkend="GtkPlotCanvas">GtkPlotCanvas</link> *canvas,
+                                                         <link linkend="GtkPlotLineStyle">GtkPlotLineStyle</link> style,
+                                                         <link linkend="gint">gint</link> width,
+                                                         const <link linkend="GdkColor">GdkColor</link> *color);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>canvas</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlotCanvas"><type>GtkPlotCanvas</type></link>.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>style</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>width</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>color</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-canvas-cancel-action" role="function">
+<title>gtk_plot_canvas_cancel_action ()</title>
+<indexterm zone="gtk-plot-canvas-cancel-action"><primary sortas="gtk_plot_canvas_cancel_action">gtk_plot_canvas_cancel_action</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_canvas_cancel_action       (<link linkend="GtkPlotCanvas">GtkPlotCanvas</link> *plot_canvas);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>plot_canvas</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlotCanvas"><type>GtkPlotCanvas</type></link>.
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-canvas-unselect" role="function">
+<title>gtk_plot_canvas_unselect ()</title>
+<indexterm zone="gtk-plot-canvas-unselect"><primary sortas="gtk_plot_canvas_unselect">gtk_plot_canvas_unselect</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_canvas_unselect            (<link linkend="GtkPlotCanvas">GtkPlotCanvas</link> *plot_canvas);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>plot_canvas</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlotCanvas"><type>GtkPlotCanvas</type></link>.
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-canvas-get-active-item" role="function">
+<title>gtk_plot_canvas_get_active_item ()</title>
+<indexterm zone="gtk-plot-canvas-get-active-item"><primary sortas="gtk_plot_canvas_get_active_item">gtk_plot_canvas_get_active_item</primary></indexterm><programlisting><link linkend="GtkPlotCanvasChild">GtkPlotCanvasChild</link> * gtk_plot_canvas_get_active_item    (<link linkend="GtkPlotCanvas">GtkPlotCanvas</link> *canvas);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>canvas</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlotCanvas"><type>GtkPlotCanvas</type></link>. 
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara> the active <link linkend="GtkPlotCanvasChild"><type>GtkPlotCanvasChild</type></link>. <acronym>transfer</acronym> none. </simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-canvas-set-size" role="function">
+<title>gtk_plot_canvas_set_size ()</title>
+<indexterm zone="gtk-plot-canvas-set-size"><primary sortas="gtk_plot_canvas_set_size">gtk_plot_canvas_set_size</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_canvas_set_size            (<link linkend="GtkPlotCanvas">GtkPlotCanvas</link> *canvas,
+                                                         <link linkend="gint">gint</link> width,
+                                                         <link linkend="gint">gint</link> height);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>canvas</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>width</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>height</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-canvas-set-magnification" role="function">
+<title>gtk_plot_canvas_set_magnification ()</title>
+<indexterm zone="gtk-plot-canvas-set-magnification"><primary sortas="gtk_plot_canvas_set_magnification">gtk_plot_canvas_set_magnification</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_canvas_set_magnification   (<link linkend="GtkPlotCanvas">GtkPlotCanvas</link> *canvas,
+                                                         <link linkend="gdouble">gdouble</link> magnification);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>canvas</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlotCanvas"><type>GtkPlotCanvas</type></link>.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>magnification</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-canvas-set-transparent" role="function">
+<title>gtk_plot_canvas_set_transparent ()</title>
+<indexterm zone="gtk-plot-canvas-set-transparent"><primary sortas="gtk_plot_canvas_set_transparent">gtk_plot_canvas_set_transparent</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_canvas_set_transparent     (<link linkend="GtkPlotCanvas">GtkPlotCanvas</link> *canvas,
+                                                         <link linkend="gboolean">gboolean</link> transparent);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>canvas</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlotCanvas"><type>GtkPlotCanvas</type></link>.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>transparent</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-canvas-transparent" role="function">
+<title>gtk_plot_canvas_transparent ()</title>
+<indexterm zone="gtk-plot-canvas-transparent"><primary sortas="gtk_plot_canvas_transparent">gtk_plot_canvas_transparent</primary></indexterm><programlisting><link linkend="gboolean">gboolean</link>            gtk_plot_canvas_transparent         (<link linkend="GtkPlotCanvas">GtkPlotCanvas</link> *canvas);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>canvas</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-canvas-set-background" role="function">
+<title>gtk_plot_canvas_set_background ()</title>
+<indexterm zone="gtk-plot-canvas-set-background"><primary sortas="gtk_plot_canvas_set_background">gtk_plot_canvas_set_background</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_canvas_set_background      (<link linkend="GtkPlotCanvas">GtkPlotCanvas</link> *canvas,
+                                                         const <link linkend="GdkColor">GdkColor</link> *bg_color);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>canvas</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlotCanvas"><type>GtkPlotCanvas</type></link>.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>bg_color</parameter>&#160;:</term>
+<listitem><simpara> a GdkColor.
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-canvas-get-pixel" role="function">
+<title>gtk_plot_canvas_get_pixel ()</title>
+<indexterm zone="gtk-plot-canvas-get-pixel"><primary sortas="gtk_plot_canvas_get_pixel">gtk_plot_canvas_get_pixel</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_canvas_get_pixel           (<link linkend="GtkPlotCanvas">GtkPlotCanvas</link> *canvas,
+                                                         <link linkend="gdouble">gdouble</link> px,
+                                                         <link linkend="gdouble">gdouble</link> py,
+                                                         <link linkend="gint">gint</link> *x,
+                                                         <link linkend="gint">gint</link> *y);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>canvas</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlotCanvas"><type>GtkPlotCanvas</type></link>.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>px</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>py</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>x</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>y</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-canvas-get-position" role="function">
+<title>gtk_plot_canvas_get_position ()</title>
+<indexterm zone="gtk-plot-canvas-get-position"><primary sortas="gtk_plot_canvas_get_position">gtk_plot_canvas_get_position</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_canvas_get_position        (<link linkend="GtkPlotCanvas">GtkPlotCanvas</link> *plot_canvas,
+                                                         <link linkend="gint">gint</link> x,
+                                                         <link linkend="gint">gint</link> y,
+                                                         <link linkend="gdouble">gdouble</link> *px,
+                                                         <link linkend="gdouble">gdouble</link> *py);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>plot_canvas</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlotCanvas"><type>GtkPlotCanvas</type></link>.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>x</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>y</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>px</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>py</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-canvas-put-child" role="function">
+<title>gtk_plot_canvas_put_child ()</title>
+<indexterm zone="gtk-plot-canvas-put-child"><primary sortas="gtk_plot_canvas_put_child">gtk_plot_canvas_put_child</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_canvas_put_child           (<link linkend="GtkPlotCanvas">GtkPlotCanvas</link> *canvas,
+                                                         <link linkend="GtkPlotCanvasChild">GtkPlotCanvasChild</link> *child,
+                                                         <link linkend="gdouble">gdouble</link> x1,
+                                                         <link linkend="gdouble">gdouble</link> y1,
+                                                         <link linkend="gdouble">gdouble</link> x2,
+                                                         <link linkend="gdouble">gdouble</link> y2);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>canvas</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlotCanvas"><type>GtkPlotCanvas</type></link>.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>child</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>x1</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>y1</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>x2</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>y2</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-canvas-remove-child" role="function">
+<title>gtk_plot_canvas_remove_child ()</title>
+<indexterm zone="gtk-plot-canvas-remove-child"><primary sortas="gtk_plot_canvas_remove_child">gtk_plot_canvas_remove_child</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_canvas_remove_child        (<link linkend="GtkPlotCanvas">GtkPlotCanvas</link> *canvas,
+                                                         <link linkend="GtkPlotCanvasChild">GtkPlotCanvasChild</link> *child);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>canvas</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlotCanvas"><type>GtkPlotCanvas</type></link>.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>child</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlotCanvasChild"><type>GtkPlotCanvasChild</type></link>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-canvas-child-move" role="function">
+<title>gtk_plot_canvas_child_move ()</title>
+<indexterm zone="gtk-plot-canvas-child-move"><primary sortas="gtk_plot_canvas_child_move">gtk_plot_canvas_child_move</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_canvas_child_move          (<link linkend="GtkPlotCanvas">GtkPlotCanvas</link> *canvas,
+                                                         <link linkend="GtkPlotCanvasChild">GtkPlotCanvasChild</link> *child,
+                                                         <link linkend="gdouble">gdouble</link> x1,
+                                                         <link linkend="gdouble">gdouble</link> y1);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>canvas</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlotCanvas"><type>GtkPlotCanvas</type></link>.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>child</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlotCanvasChild"><type>GtkPlotCanvasChild</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>x1</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>y1</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-canvas-child-move-resize" role="function">
+<title>gtk_plot_canvas_child_move_resize ()</title>
+<indexterm zone="gtk-plot-canvas-child-move-resize"><primary sortas="gtk_plot_canvas_child_move_resize">gtk_plot_canvas_child_move_resize</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_canvas_child_move_resize   (<link linkend="GtkPlotCanvas">GtkPlotCanvas</link> *canvas,
+                                                         <link linkend="GtkPlotCanvasChild">GtkPlotCanvasChild</link> *child,
+                                                         <link linkend="gdouble">gdouble</link> x1,
+                                                         <link linkend="gdouble">gdouble</link> y1,
+                                                         <link linkend="gdouble">gdouble</link> x2,
+                                                         <link linkend="gdouble">gdouble</link> y2);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>canvas</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlotCanvas"><type>GtkPlotCanvas</type></link>.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>child</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>x1</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>y1</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>x2</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>y2</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-canvas-child-set-selection" role="function">
+<title>gtk_plot_canvas_child_set_selection ()</title>
+<indexterm zone="gtk-plot-canvas-child-set-selection"><primary sortas="gtk_plot_canvas_child_set_selection">gtk_plot_canvas_child_set_selection</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_canvas_child_set_selection (<link linkend="GtkPlotCanvasChild">GtkPlotCanvasChild</link> *child,
+                                                         <link linkend="GtkPlotCanvasSelection">GtkPlotCanvasSelection</link> selection);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>child</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>selection</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-canvas-child-set-selection-mode" role="function">
+<title>gtk_plot_canvas_child_set_selection_mode ()</title>
+<indexterm zone="gtk-plot-canvas-child-set-selection-mode"><primary sortas="gtk_plot_canvas_child_set_selection_mode">gtk_plot_canvas_child_set_selection_mode</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_canvas_child_set_selection_mode
+                                                        (<link linkend="GtkPlotCanvasChild">GtkPlotCanvasChild</link> *child,
+                                                         <link linkend="GtkPlotCanvasSelectionMode">GtkPlotCanvasSelectionMode</link> mode);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>child</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlotCanvasChild"><type>GtkPlotCanvasChild</type></link>.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>mode</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-canvas-child-get-position" role="function">
+<title>gtk_plot_canvas_child_get_position ()</title>
+<indexterm zone="gtk-plot-canvas-child-get-position"><primary sortas="gtk_plot_canvas_child_get_position">gtk_plot_canvas_child_get_position</primary></indexterm><programlisting><link linkend="gboolean">gboolean</link>            gtk_plot_canvas_child_get_position  (<link linkend="GtkPlotCanvas">GtkPlotCanvas</link> *canvas,
+                                                         <link linkend="GtkPlotCanvasChild">GtkPlotCanvasChild</link> *child,
+                                                         <link linkend="double">double</link> *x1,
+                                                         <link linkend="double">double</link> *y1,
+                                                         <link linkend="double">double</link> *x2,
+                                                         <link linkend="double">double</link> *y2);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>canvas</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlotCanvas"><type>GtkPlotCanvas</type></link>.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>child</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlotCanvasChild"><type>GtkPlotCanvasChild</type></link>.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>x1</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>y1</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>x2</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>y2</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-canvas-set-line-attributes" role="function">
+<title>gtk_plot_canvas_set_line_attributes ()</title>
+<indexterm zone="gtk-plot-canvas-set-line-attributes"><primary sortas="gtk_plot_canvas_set_line_attributes">gtk_plot_canvas_set_line_attributes</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_canvas_set_line_attributes (<link linkend="GtkPlotCanvas">GtkPlotCanvas</link> *canvas,
+                                                         <link linkend="GtkPlotLine">GtkPlotLine</link> line);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>canvas</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlotCanvas"><type>GtkPlotCanvas</type></link>.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>line</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+<refsect1 id="GtkPlotCanvas.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GtkPlotCanvas--color-bg" role="property"><title>The <literal>&quot;color-bg&quot;</literal> property</title>
+<indexterm zone="GtkPlotCanvas--color-bg"><primary sortas="GtkPlotCanvas:color-bg">GtkPlotCanvas:color-bg</primary></indexterm><programlisting>  &quot;color-bg&quot;                 <link linkend="gpointer">gpointer</link>              : Read / Write</programlisting>
+<para>Background color.</para></refsect2>
+<refsect2 id="GtkPlotCanvas--flags" role="property"><title>The <literal>&quot;flags&quot;</literal> property</title>
+<indexterm zone="GtkPlotCanvas--flags"><primary sortas="GtkPlotCanvas:flags">GtkPlotCanvas:flags</primary></indexterm><programlisting>  &quot;flags&quot;                    <link linkend="gint">gint</link>                  : Read / Write</programlisting>
+<para>
+PlotCanvas flags control selection and DND,
+see <link linkend="GtkPlotCanvasFlags"><type>GtkPlotCanvasFlags</type></link>.</para>
+<para>
+</para><para>Allowed values: &gt;= 0</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GtkPlotCanvas--grid-step" role="property"><title>The <literal>&quot;grid-step&quot;</literal> property</title>
+<indexterm zone="GtkPlotCanvas--grid-step"><primary sortas="GtkPlotCanvas:grid-step">GtkPlotCanvas:grid-step</primary></indexterm><programlisting>  &quot;grid-step&quot;                <link linkend="gdouble">gdouble</link>               : Read / Write</programlisting>
+<para>Distance between grid lines.</para><para>Allowed values: &gt;= 0</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GtkPlotCanvas--height" role="property"><title>The <literal>&quot;height&quot;</literal> property</title>
+<indexterm zone="GtkPlotCanvas--height"><primary sortas="GtkPlotCanvas:height">GtkPlotCanvas:height</primary></indexterm><programlisting>  &quot;height&quot;                   <link linkend="gint">gint</link>                  : Read / Write</programlisting>
+<para>
+PlotCanvas height in pixels.</para>
+<para>
+</para><para>Allowed values: &gt;= 0</para>
+<para>Default value: 1</para>
+</refsect2>
+<refsect2 id="GtkPlotCanvas--line-grid" role="property"><title>The <literal>&quot;line-grid&quot;</literal> property</title>
+<indexterm zone="GtkPlotCanvas--line-grid"><primary sortas="GtkPlotCanvas:line-grid">GtkPlotCanvas:line-grid</primary></indexterm><programlisting>  &quot;line-grid&quot;                <link linkend="gpointer">gpointer</link>              : Read / Write</programlisting>
+<para>Canvas line grid.</para></refsect2>
+<refsect2 id="GtkPlotCanvas--magnification" role="property"><title>The <literal>&quot;magnification&quot;</literal> property</title>
+<indexterm zone="GtkPlotCanvas--magnification"><primary sortas="GtkPlotCanvas:magnification">GtkPlotCanvas:magnification</primary></indexterm><programlisting>  &quot;magnification&quot;            <link linkend="gdouble">gdouble</link>               : Read / Write</programlisting>
+<para>
+PlotCanvas magnification factor</para>
+<para>
+</para><para>Allowed values: &gt;= 0</para>
+<para>Default value: 1</para>
+</refsect2>
+<refsect2 id="GtkPlotCanvas--show-grid" role="property"><title>The <literal>&quot;show-grid&quot;</literal> property</title>
+<indexterm zone="GtkPlotCanvas--show-grid"><primary sortas="GtkPlotCanvas:show-grid">GtkPlotCanvas:show-grid</primary></indexterm><programlisting>  &quot;show-grid&quot;                <link linkend="gboolean">gboolean</link>              : Read / Write</programlisting>
+<para>Show grid.</para><para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="GtkPlotCanvas--transparent" role="property"><title>The <literal>&quot;transparent&quot;</literal> property</title>
+<indexterm zone="GtkPlotCanvas--transparent"><primary sortas="GtkPlotCanvas:transparent">GtkPlotCanvas:transparent</primary></indexterm><programlisting>  &quot;transparent&quot;              <link linkend="gboolean">gboolean</link>              : Read / Write</programlisting>
+<para>
+Canvas transparency</para>
+<para>
+</para><para>Default value: TRUE</para>
+</refsect2>
+<refsect2 id="GtkPlotCanvas--width" role="property"><title>The <literal>&quot;width&quot;</literal> property</title>
+<indexterm zone="GtkPlotCanvas--width"><primary sortas="GtkPlotCanvas:width">GtkPlotCanvas:width</primary></indexterm><programlisting>  &quot;width&quot;                    <link linkend="gint">gint</link>                  : Read / Write</programlisting>
+<para>
+PlotCanvas width in pixels.</para>
+<para>
+</para><para>Allowed values: &gt;= 0</para>
+<para>Default value: 1</para>
+</refsect2>
+</refsect1>
+
+<refsect1 id="GtkPlotCanvas.signal-details" role="signals">
+<title role="signals.title">Signal Details</title>
+<refsect2 id="GtkPlotCanvas-add-item" role="signal"><title>The <literal>&quot;add-item&quot;</literal> signal</title>
+<indexterm zone="GtkPlotCanvas-add-item"><primary sortas="GtkPlotCanvas::add-item">GtkPlotCanvas::add-item</primary></indexterm><programlisting><link linkend="void">void</link>                user_function                      (<link linkend="GtkPlotCanvas">GtkPlotCanvas</link>      *plotcanvas,
+                                                        <link linkend="GtkPlotCanvasChild">GtkPlotCanvasChild</link> *arg1,
+                                                        <link linkend="gpointer">gpointer</link>            user_data)       : Run Last</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>plotcanvas</parameter>&#160;:</term>
+<listitem><simpara>the object which received the signal.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>arg1</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>user_data</parameter>&#160;:</term>
+<listitem><simpara>user data set when the signal handler was connected.</simpara></listitem></varlistentry>
+</variablelist></refsect2><refsect2 id="GtkPlotCanvas-changed" role="signal"><title>The <literal>&quot;changed&quot;</literal> signal</title>
+<indexterm zone="GtkPlotCanvas-changed"><primary sortas="GtkPlotCanvas::changed">GtkPlotCanvas::changed</primary></indexterm><programlisting><link linkend="void">void</link>                user_function                      (<link linkend="GtkPlotCanvas">GtkPlotCanvas</link> *canvas,
+                                                        <link linkend="gpointer">gpointer</link>       user_data)      : Run Last</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>canvas</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>user_data</parameter>&#160;:</term>
+<listitem><simpara>user data set when the signal handler was connected.</simpara></listitem></varlistentry>
+</variablelist></refsect2><refsect2 id="GtkPlotCanvas-delete-item" role="signal"><title>The <literal>&quot;delete-item&quot;</literal> signal</title>
+<indexterm zone="GtkPlotCanvas-delete-item"><primary sortas="GtkPlotCanvas::delete-item">GtkPlotCanvas::delete-item</primary></indexterm><programlisting><link linkend="gboolean">gboolean</link>            user_function                      (<link linkend="GtkPlotCanvas">GtkPlotCanvas</link>      *plotcanvas,
+                                                        <link linkend="GtkPlotCanvasChild">GtkPlotCanvasChild</link> *arg1,
+                                                        <link linkend="gpointer">gpointer</link>            user_data)       : Run Last</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>plotcanvas</parameter>&#160;:</term>
+<listitem><simpara>the object which received the signal.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>arg1</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>user_data</parameter>&#160;:</term>
+<listitem><simpara>user data set when the signal handler was connected.</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2><refsect2 id="GtkPlotCanvas-move-item" role="signal"><title>The <literal>&quot;move-item&quot;</literal> signal</title>
+<indexterm zone="GtkPlotCanvas-move-item"><primary sortas="GtkPlotCanvas::move-item">GtkPlotCanvas::move-item</primary></indexterm><programlisting><link linkend="gboolean">gboolean</link>            user_function                      (<link linkend="GtkPlotCanvas">GtkPlotCanvas</link>      *plotcanvas,
+                                                        <link linkend="GtkPlotCanvasChild">GtkPlotCanvasChild</link> *arg1,
+                                                        <link linkend="gdouble">gdouble</link>             arg2,
+                                                        <link linkend="gdouble">gdouble</link>             arg3,
+                                                        <link linkend="gpointer">gpointer</link>            user_data)       : Run Last</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>plotcanvas</parameter>&#160;:</term>
+<listitem><simpara>the object which received the signal.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>arg1</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>arg2</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>arg3</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>user_data</parameter>&#160;:</term>
+<listitem><simpara>user data set when the signal handler was connected.</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2><refsect2 id="GtkPlotCanvas-resize-item" role="signal"><title>The <literal>&quot;resize-item&quot;</literal> signal</title>
+<indexterm zone="GtkPlotCanvas-resize-item"><primary sortas="GtkPlotCanvas::resize-item">GtkPlotCanvas::resize-item</primary></indexterm><programlisting><link linkend="gboolean">gboolean</link>            user_function                      (<link linkend="GtkPlotCanvas">GtkPlotCanvas</link>      *plotcanvas,
+                                                        <link linkend="GtkPlotCanvasChild">GtkPlotCanvasChild</link> *arg1,
+                                                        <link linkend="gdouble">gdouble</link>             arg2,
+                                                        <link linkend="gdouble">gdouble</link>             arg3,
+                                                        <link linkend="gpointer">gpointer</link>            user_data)       : Run Last</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>plotcanvas</parameter>&#160;:</term>
+<listitem><simpara>the object which received the signal.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>arg1</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>arg2</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>arg3</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>user_data</parameter>&#160;:</term>
+<listitem><simpara>user data set when the signal handler was connected.</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2><refsect2 id="GtkPlotCanvas-select-item" role="signal"><title>The <literal>&quot;select-item&quot;</literal> signal</title>
+<indexterm zone="GtkPlotCanvas-select-item"><primary sortas="GtkPlotCanvas::select-item">GtkPlotCanvas::select-item</primary></indexterm><programlisting><link linkend="gboolean">gboolean</link>            user_function                      (<link linkend="GtkPlotCanvas">GtkPlotCanvas</link>      *plotcanvas,
+                                                        <link linkend="GdkEvent">GdkEvent</link>           *event,
+                                                        <link linkend="GtkPlotCanvasChild">GtkPlotCanvasChild</link> *arg1,
+                                                        <link linkend="gpointer">gpointer</link>            user_data)       : Run Last</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>plotcanvas</parameter>&#160;:</term>
+<listitem><simpara>the object which received the signal.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>event</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>arg1</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>user_data</parameter>&#160;:</term>
+<listitem><simpara>user data set when the signal handler was connected.</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2><refsect2 id="GtkPlotCanvas-select-region" role="signal"><title>The <literal>&quot;select-region&quot;</literal> signal</title>
+<indexterm zone="GtkPlotCanvas-select-region"><primary sortas="GtkPlotCanvas::select-region">GtkPlotCanvas::select-region</primary></indexterm><programlisting><link linkend="void">void</link>                user_function                      (<link linkend="GtkPlotCanvas">GtkPlotCanvas</link> *plotcanvas,
+                                                        <link linkend="gdouble">gdouble</link>        arg1,
+                                                        <link linkend="gdouble">gdouble</link>        arg2,
+                                                        <link linkend="gdouble">gdouble</link>        arg3,
+                                                        <link linkend="gdouble">gdouble</link>        arg4,
+                                                        <link linkend="gpointer">gpointer</link>       user_data)       : Run Last</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>plotcanvas</parameter>&#160;:</term>
+<listitem><simpara>the object which received the signal.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>arg1</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>arg2</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>arg3</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>arg4</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>user_data</parameter>&#160;:</term>
+<listitem><simpara>user data set when the signal handler was connected.</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+</refsect1>
+
+
+
+</refentry>

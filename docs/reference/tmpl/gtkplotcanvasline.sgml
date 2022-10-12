@@ -1,0 +1,69 @@
+<!-- ##### SECTION Title ##### -->
+GtkPlotCanvasLine
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### STRUCT GtkPlotCanvasLine ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### ENUM GtkPlotCanvasArrow ##### -->
+<para>
+
+</para>
+
+@GTK_PLOT_CANVAS_ARROW_NONE: 
+@GTK_PLOT_CANVAS_ARROW_ORIGIN: 
+@GTK_PLOT_CANVAS_ARROW_END: 
+
+<!-- ##### FUNCTION gtk_plot_canvas_line_new ##### -->
+<para>
+
+</para>
+
+@style: 
+@width: 
+@color: 
+@arrow_mask: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_canvas_line_set_attributes ##### -->
+<para>
+
+</para>
+
+@line: 
+@style: 
+@width: 
+@color: 
+
+
+<!-- ##### FUNCTION gtk_plot_canvas_line_set_arrow ##### -->
+<para>
+
+</para>
+
+@line: 
+@style: 
+@width: 
+@length: 
+@mask: 
+
+

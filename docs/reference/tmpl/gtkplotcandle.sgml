@@ -1,0 +1,33 @@
+<!-- ##### SECTION Title ##### -->
+GtkPlotCandle
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### STRUCT GtkPlotCandle ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### FUNCTION gtk_plot_candle_new ##### -->
+<para>
+
+</para>
+
+@Returns: 
+
+

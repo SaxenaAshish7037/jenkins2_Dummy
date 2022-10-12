@@ -1,0 +1,596 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GtkPSFont</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="GtkExtra Reference Manual">
+<link rel="up" href="ch03.html" title="Widgets">
+<link rel="prev" href="GtkPlotSurface.html" title="GtkPlotSurface">
+<link rel="next" href="GtkSheet.html" title="GtkSheet">
+<meta name="generator" content="GTK-Doc V1.11 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="part" href="gtkextra.html" title="Part I. GtkExtra Overview">
+<link rel="part" href="gtkextrabase.html" title="Part II. GtkExtra Widgets and Objects">
+<link rel="chapter" href="ch01.html" title="Object Hierarchy">
+<link rel="chapter" href="ch02.html" title="Widget Gallery">
+<link rel="chapter" href="ch03.html" title="Widgets">
+<link rel="chapter" href="ch04.html" title="Data Formatter">
+<link rel="chapter" href="ch05.html" title="GtkExtra Versioning">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="GtkPlotSurface.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch03.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">GtkExtra Reference Manual</th>
+<td><a accesskey="n" href="GtkSheet.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#gtkextra-GtkPSFont.synopsis" class="shortcut">Top</a>
+                 | 
+                <a href="#gtkextra-GtkPSFont.description" class="shortcut">Description</a>
+</td></tr>
+</table>
+<div class="refentry" title="GtkPSFont">
+<a name="gtkextra-GtkPSFont"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="gtkextra-GtkPSFont.top_of_page"></a>GtkPSFont</span></h2>
+<p>GtkPSFont — PostScript Fonts handling.</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv" title="Synopsis">
+<a name="gtkextra-GtkPSFont.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">
+
+#include &lt;gtkextra.h&gt;
+
+                    <a class="link" href="gtkextra-GtkPSFont.html#GtkPSFont" title="GtkPSFont">GtkPSFont</a>;
+<a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                <a class="link" href="gtkextra-GtkPSFont.html#gtk-psfont-init" title="gtk_psfont_init ()">gtk_psfont_init</a>                     ();
+void                <a class="link" href="gtkextra-GtkPSFont.html#gtk-psfont-unref" title="gtk_psfont_unref ()">gtk_psfont_unref</a>                    ();
+<a class="link" href="gtkextra-GtkPSFont.html#GtkPSFont" title="GtkPSFont">GtkPSFont</a>*          <a class="link" href="gtkextra-GtkPSFont.html#gtk-psfont-get-by-name" title="gtk_psfont_get_by_name ()">gtk_psfont_get_by_name</a>              (const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *name);
+<a class="link" href="gtkextra-GtkPSFont.html#GtkPSFont" title="GtkPSFont">GtkPSFont</a>*          <a class="link" href="gtkextra-GtkPSFont.html#gtk-psfont-get-by-family" title="gtk_psfont_get_by_family ()">gtk_psfont_get_by_family</a>            (const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *family_name,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> italic,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> bold);
+<a
+href="http://library.gnome.org/devel/gdk3/gdk2-Fonts.html#GdkFont"
+>GdkFont</a>*            <a class="link" href="gtkextra-GtkPSFont.html#gtk-psfont-get-gdkfont" title="gtk_psfont_get_gdkfont ()">gtk_psfont_get_gdkfont</a>              (<a class="link" href="gtkextra-GtkPSFont.html#GtkPSFont" title="GtkPSFont">GtkPSFont</a> *font,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> height);
+<a
+href="/opt/casy/gtk/.Linux.2.x86_64/share/gtk-doc/html/pango/pango-Fonts.html#PangoFontDescription"
+>PangoFontDescription</a>* <a class="link" href="gtkextra-GtkPSFont.html#gtk-psfont-get-font-description" title="gtk_psfont_get_font_description ()">gtk_psfont_get_font_description</a>   (<a class="link" href="gtkextra-GtkPSFont.html#GtkPSFont" title="GtkPSFont">GtkPSFont</a> *font,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> height);
+const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *       <a class="link" href="gtkextra-GtkPSFont.html#gtk-psfont-get-psfontname" title="gtk_psfont_get_psfontname ()">gtk_psfont_get_psfontname</a>           (<a class="link" href="gtkextra-GtkPSFont.html#GtkPSFont" title="GtkPSFont">GtkPSFont</a> *psfont);
+void                <a class="link" href="gtkextra-GtkPSFont.html#gtk-psfont-add-font" title="gtk_psfont_add_font ()">gtk_psfont_add_font</a>                 (const char *fontname,
+                                                         const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *psname,
+                                                         const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *family,
+                                                         const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *pango_description,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> italic,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> bold);
+void                <a class="link" href="gtkextra-GtkPSFont.html#gtk-psfont-add-i18n-font" title="gtk_psfont_add_i18n_font ()">gtk_psfont_add_i18n_font</a>            (const char *fontname,
+                                                         const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *psname,
+                                                         const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *family,
+                                                         const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *i18n_latinfamily,
+                                                         const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *pango_description,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> italic,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> bold,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> vertical);
+void                <a class="link" href="gtkextra-GtkPSFont.html#gtk-psfont-get-families" title="gtk_psfont_get_families ()">gtk_psfont_get_families</a>             (<a
+href="https://developer.gnome.org/glib/unstable/glib-Doubly-Linked-Lists.html#GList"
+>GList</a> **families,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> *num_families);
+void                <a class="link" href="gtkextra-GtkPSFont.html#gtk-psfont-get-char-size" title="gtk_psfont_get_char_size ()">gtk_psfont_get_char_size</a>            (<a class="link" href="gtkextra-GtkPSFont.html#GtkPSFont" title="GtkPSFont">GtkPSFont</a> *psfont,
+                                                         <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Fonts.html#GdkFont"
+>GdkFont</a> *font,
+                                                         <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Fonts.html#GdkFont"
+>GdkFont</a> *latin_font,
+                                                         <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Fonts.html#GdkWChar"
+>GdkWChar</a> wc,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> *width,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> *ascent,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> *descent);
+</pre>
+</div>
+<div class="refsect1" title="Description">
+<a name="gtkextra-GtkPSFont.description"></a><h2>Description</h2>
+<p>
+Handles Postscript fonts.</p>
+<p>
+</p>
+</div>
+<div class="refsect1" title="Details">
+<a name="gtkextra-GtkPSFont.details"></a><h2>Details</h2>
+<div class="refsect2" title="GtkPSFont">
+<a name="GtkPSFont"></a><h3>GtkPSFont</h3>
+<pre class="programlisting">typedef struct {
+} GtkPSFont;
+</pre>
+<p>
+The GtkPSFont struct contains only private data.
+It should only be accessed through the functions described below.</p>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2" title="gtk_psfont_init ()">
+<a name="gtk-psfont-init"></a><h3>gtk_psfont_init ()</h3>
+<pre class="programlisting"><a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                gtk_psfont_init                     ();</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_psfont_unref ()">
+<a name="gtk-psfont-unref"></a><h3>gtk_psfont_unref ()</h3>
+<pre class="programlisting">void                gtk_psfont_unref                    ();</pre>
+<p>
+Unref ps fonts.</p>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2" title="gtk_psfont_get_by_name ()">
+<a name="gtk-psfont-get-by-name"></a><h3>gtk_psfont_get_by_name ()</h3>
+<pre class="programlisting"><a class="link" href="gtkextra-GtkPSFont.html#GtkPSFont" title="GtkPSFont">GtkPSFont</a>*          gtk_psfont_get_by_name              (const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *name);</pre>
+<p>
+Get PS Font by font name.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>name</code></em> :</span></p></td>
+<td> font name
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> (transfer none) a <a class="link" href="gtkextra-GtkPSFont.html#GtkPSFont" title="GtkPSFont"><span class="type">GtkPSFont</span></a> pointer.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_psfont_get_by_family ()">
+<a name="gtk-psfont-get-by-family"></a><h3>gtk_psfont_get_by_family ()</h3>
+<pre class="programlisting"><a class="link" href="gtkextra-GtkPSFont.html#GtkPSFont" title="GtkPSFont">GtkPSFont</a>*          gtk_psfont_get_by_family            (const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *family_name,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> italic,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> bold);</pre>
+<p>
+Get <a class="link" href="gtkextra-GtkPSFont.html#GtkPSFont" title="GtkPSFont"><span class="type">GtkPSFont</span></a> by family.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>family_name</code></em> :</span></p></td>
+<td> font name
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>italic</code></em> :</span></p></td>
+<td> TRUE or FALSE
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>bold</code></em> :</span></p></td>
+<td> TRUE or FALSE
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> (transfer none) the <a class="link" href="gtkextra-GtkPSFont.html#GtkPSFont" title="GtkPSFont"><span class="type">GtkPSFont</span></a> 
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_psfont_get_gdkfont ()">
+<a name="gtk-psfont-get-gdkfont"></a><h3>gtk_psfont_get_gdkfont ()</h3>
+<pre class="programlisting"><a
+href="http://library.gnome.org/devel/gdk3/gdk2-Fonts.html#GdkFont"
+>GdkFont</a>*            gtk_psfont_get_gdkfont              (<a class="link" href="gtkextra-GtkPSFont.html#GtkPSFont" title="GtkPSFont">GtkPSFont</a> *font,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> height);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>font</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>height</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_psfont_get_font_description ()">
+<a name="gtk-psfont-get-font-description"></a><h3>gtk_psfont_get_font_description ()</h3>
+<pre class="programlisting"><a
+href="/opt/casy/gtk/.Linux.2.x86_64/share/gtk-doc/html/pango/pango-Fonts.html#PangoFontDescription"
+>PangoFontDescription</a>* gtk_psfont_get_font_description   (<a class="link" href="gtkextra-GtkPSFont.html#GtkPSFont" title="GtkPSFont">GtkPSFont</a> *font,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> height);</pre>
+<p>
+Get a <span class="type">PangoDescriptionFont</span> from PS Font.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>font</code></em> :</span></p></td>
+<td> a <a class="link" href="gtkextra-GtkPSFont.html#GtkPSFont" title="GtkPSFont"><span class="type">GtkPSFont</span></a> 
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>height</code></em> :</span></p></td>
+<td> font height
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> a <a
+href="/opt/casy/gtk/.Linux.2.x86_64/share/gtk-doc/html/pango/pango-Fonts.html#PangoFontDescription"
+><span class="type">PangoFontDescription</span></a> pointer.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_psfont_get_psfontname ()">
+<a name="gtk-psfont-get-psfontname"></a><h3>gtk_psfont_get_psfontname ()</h3>
+<pre class="programlisting">const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *       gtk_psfont_get_psfontname           (<a class="link" href="gtkextra-GtkPSFont.html#GtkPSFont" title="GtkPSFont">GtkPSFont</a> *psfont);</pre>
+<p>
+Get font name from PS Font.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>psfont</code></em> :</span></p></td>
+<td> a <a class="link" href="gtkextra-GtkPSFont.html#GtkPSFont" title="GtkPSFont"><span class="type">GtkPSFont</span></a> 
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> font name. 
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_psfont_add_font ()">
+<a name="gtk-psfont-add-font"></a><h3>gtk_psfont_add_font ()</h3>
+<pre class="programlisting">void                gtk_psfont_add_font                 (const char *fontname,
+                                                         const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *psname,
+                                                         const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *family,
+                                                         const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *pango_description,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> italic,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> bold);</pre>
+<p>
+Add font in user font list.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>fontname</code></em> :</span></p></td>
+<td> font name
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>psname</code></em> :</span></p></td>
+<td> PS font name
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>family</code></em> :</span></p></td>
+<td> font family
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>pango_description</code></em> :</span></p></td>
+<td> font Pango description
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>italic</code></em> :</span></p></td>
+<td> TRUE or FALSE
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>bold</code></em> :</span></p></td>
+<td> TRUE or FALSE
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_psfont_add_i18n_font ()">
+<a name="gtk-psfont-add-i18n-font"></a><h3>gtk_psfont_add_i18n_font ()</h3>
+<pre class="programlisting">void                gtk_psfont_add_i18n_font            (const char *fontname,
+                                                         const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *psname,
+                                                         const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *family,
+                                                         const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *i18n_latinfamily,
+                                                         const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *pango_description,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> italic,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> bold,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> vertical);</pre>
+<p>
+Add international font in user font list.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>fontname</code></em> :</span></p></td>
+<td> font name
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>psname</code></em> :</span></p></td>
+<td> PS font name
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>family</code></em> :</span></p></td>
+<td> font family
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>i18n_latinfamily</code></em> :</span></p></td>
+<td> International font family
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>pango_description</code></em> :</span></p></td>
+<td> font Pango description
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>italic</code></em> :</span></p></td>
+<td> TRUE or FALSE
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>bold</code></em> :</span></p></td>
+<td> TRUE or FALSE
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>vertical</code></em> :</span></p></td>
+<td> TRUE or FALSE
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_psfont_get_families ()">
+<a name="gtk-psfont-get-families"></a><h3>gtk_psfont_get_families ()</h3>
+<pre class="programlisting">void                gtk_psfont_get_families             (<a
+href="https://developer.gnome.org/glib/unstable/glib-Doubly-Linked-Lists.html#GList"
+>GList</a> **families,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> *num_families);</pre>
+<p>
+Get <a class="link" href="gtkextra-GtkPSFont.html#GtkPSFont" title="GtkPSFont"><span class="type">GtkPSFont</span></a> by family.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>families</code></em> :</span></p></td>
+<td>  (element-type gchar*) font families
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>num_families</code></em> :</span></p></td>
+<td> families number
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_psfont_get_char_size ()">
+<a name="gtk-psfont-get-char-size"></a><h3>gtk_psfont_get_char_size ()</h3>
+<pre class="programlisting">void                gtk_psfont_get_char_size            (<a class="link" href="gtkextra-GtkPSFont.html#GtkPSFont" title="GtkPSFont">GtkPSFont</a> *psfont,
+                                                         <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Fonts.html#GdkFont"
+>GdkFont</a> *font,
+                                                         <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Fonts.html#GdkFont"
+>GdkFont</a> *latin_font,
+                                                         <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Fonts.html#GdkWChar"
+>GdkWChar</a> wc,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> *width,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> *ascent,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> *descent);</pre>
+<p>
+Get font character size.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>psfont</code></em> :</span></p></td>
+<td> a <a class="link" href="gtkextra-GtkPSFont.html#GtkPSFont" title="GtkPSFont"><span class="type">GtkPSFont</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>font</code></em> :</span></p></td>
+<td> a <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Fonts.html#GdkFont"
+><span class="type">GdkFont</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>latin_font</code></em> :</span></p></td>
+<td> a <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Fonts.html#GdkFont"
+><span class="type">GdkFont</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>wc</code></em> :</span></p></td>
+<td> a <span class="type">GdkWchar</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>width</code></em> :</span></p></td>
+<td> font width
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>ascent</code></em> :</span></p></td>
+<td> font ascent
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>descent</code></em> :</span></p></td>
+<td> font  descent
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.11</div>
+</body>
+</html>

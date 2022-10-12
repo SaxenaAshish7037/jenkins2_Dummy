@@ -1,0 +1,1022 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GtkPlotArray</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="GtkExtra Reference Manual">
+<link rel="up" href="ch03.html" title="Widgets">
+<link rel="prev" href="GtkPlot3D.html" title="GtkPlot3D">
+<link rel="next" href="GtkPlotBar.html" title="GtkPlotBar">
+<meta name="generator" content="GTK-Doc V1.11 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="part" href="gtkextra.html" title="Part I. GtkExtra Overview">
+<link rel="part" href="gtkextrabase.html" title="Part II. GtkExtra Widgets and Objects">
+<link rel="chapter" href="ch01.html" title="Object Hierarchy">
+<link rel="chapter" href="ch02.html" title="Widget Gallery">
+<link rel="chapter" href="ch03.html" title="Widgets">
+<link rel="chapter" href="ch04.html" title="Data Formatter">
+<link rel="chapter" href="ch05.html" title="GtkExtra Versioning">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="GtkPlot3D.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch03.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">GtkExtra Reference Manual</th>
+<td><a accesskey="n" href="GtkPlotBar.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#GtkPlotArray.synopsis" class="shortcut">Top</a>
+                 | 
+                <a href="#GtkPlotArray.description" class="shortcut">Description</a>
+                 | 
+                <a href="#GtkPlotArray.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                 | 
+                <a href="#GtkPlotArray.properties" class="shortcut">Properties</a>
+</td></tr>
+</table>
+<div class="refentry" title="GtkPlotArray">
+<a name="GtkPlotArray"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GtkPlotArray.top_of_page"></a>GtkPlotArray</span></h2>
+<p>GtkPlotArray</p>
+</td>
+<td valign="top" align="right"><img src=""></td>
+</tr></table></div>
+<div class="refsynopsisdiv" title="Synopsis">
+<a name="GtkPlotArray.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">
+
+#include &lt;gtkextra.h&gt;
+
+                    <a class="link" href="GtkPlotArray.html#GtkPlotArray-struct" title="GtkPlotArray">GtkPlotArray</a>;
+                    <a class="link" href="GtkPlotArray.html#GtkPlotArrayList" title="GtkPlotArrayList">GtkPlotArrayList</a>;
+<a
+href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject"
+>GObject</a>*            <a class="link" href="GtkPlotArray.html#gtk-plot-array-new" title="gtk_plot_array_new ()">gtk_plot_array_new</a>                  (const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *name,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"
+>gpointer</a> array,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> size,
+                                                         <a
+href="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#GType"
+>GType</a> type,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> own_data);
+void                <a class="link" href="GtkPlotArray.html#gtk-plot-array-set" title="gtk_plot_array_set ()">gtk_plot_array_set</a>                  (<a class="link" href="GtkPlotArray.html" title="GtkPlotArray">GtkPlotArray</a> *array,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"
+>gpointer</a> data_array,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> size,
+                                                         <a
+href="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#GType"
+>GType</a> type);
+void                <a class="link" href="GtkPlotArray.html#gtk-plot-array-set-label" title="gtk_plot_array_set_label ()">gtk_plot_array_set_label</a>            (<a class="link" href="GtkPlotArray.html" title="GtkPlotArray">GtkPlotArray</a> *array,
+                                                         const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *label);
+void                <a class="link" href="GtkPlotArray.html#gtk-plot-array-set-description" title="gtk_plot_array_set_description ()">gtk_plot_array_set_description</a>      (<a class="link" href="GtkPlotArray.html" title="GtkPlotArray">GtkPlotArray</a> *array,
+                                                         const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *desc);
+void                <a class="link" href="GtkPlotArray.html#gtk-plot-array-set-scale" title="gtk_plot_array_set_scale ()">gtk_plot_array_set_scale</a>            (<a class="link" href="GtkPlotArray.html" title="GtkPlotArray">GtkPlotArray</a> *array,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> scale);
+void                <a class="link" href="GtkPlotArray.html#gtk-plot-array-set-required" title="gtk_plot_array_set_required ()">gtk_plot_array_set_required</a>         (<a class="link" href="GtkPlotArray.html" title="GtkPlotArray">GtkPlotArray</a> *array,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> required);
+void                <a class="link" href="GtkPlotArray.html#gtk-plot-array-set-independent" title="gtk_plot_array_set_independent ()">gtk_plot_array_set_independent</a>      (<a class="link" href="GtkPlotArray.html" title="GtkPlotArray">GtkPlotArray</a> *array,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> independent);
+<a
+href="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#GType"
+>GType</a>               <a class="link" href="GtkPlotArray.html#gtk-plot-array-get-data-type" title="gtk_plot_array_get_data_type ()">gtk_plot_array_get_data_type</a>        (<a class="link" href="GtkPlotArray.html" title="GtkPlotArray">GtkPlotArray</a> *array);
+const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *       <a class="link" href="GtkPlotArray.html#gtk-plot-array-get-name" title="gtk_plot_array_get_name ()">gtk_plot_array_get_name</a>             (<a class="link" href="GtkPlotArray.html" title="GtkPlotArray">GtkPlotArray</a> *array);
+const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *       <a class="link" href="GtkPlotArray.html#gtk-plot-array-get-label" title="gtk_plot_array_get_label ()">gtk_plot_array_get_label</a>            (<a class="link" href="GtkPlotArray.html" title="GtkPlotArray">GtkPlotArray</a> *array);
+const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *       <a class="link" href="GtkPlotArray.html#gtk-plot-array-get-description" title="gtk_plot_array_get_description ()">gtk_plot_array_get_description</a>      (<a class="link" href="GtkPlotArray.html" title="GtkPlotArray">GtkPlotArray</a> *array);
+<a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>            <a class="link" href="GtkPlotArray.html#gtk-plot-array-required" title="gtk_plot_array_required ()">gtk_plot_array_required</a>             (<a class="link" href="GtkPlotArray.html" title="GtkPlotArray">GtkPlotArray</a> *array);
+<a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>            <a class="link" href="GtkPlotArray.html#gtk-plot-array-independent" title="gtk_plot_array_independent ()">gtk_plot_array_independent</a>          (<a class="link" href="GtkPlotArray.html" title="GtkPlotArray">GtkPlotArray</a> *array);
+<a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a>             <a class="link" href="GtkPlotArray.html#gtk-plot-array-get-scale" title="gtk_plot_array_get_scale ()">gtk_plot_array_get_scale</a>            (<a class="link" href="GtkPlotArray.html" title="GtkPlotArray">GtkPlotArray</a> *array);
+<a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                <a class="link" href="GtkPlotArray.html#gtk-plot-array-get-size" title="gtk_plot_array_get_size ()">gtk_plot_array_get_size</a>             (<a class="link" href="GtkPlotArray.html" title="GtkPlotArray">GtkPlotArray</a> *array);
+<a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gfloat"
+>gfloat</a>*             <a class="link" href="GtkPlotArray.html#gtk-plot-array-get-float" title="gtk_plot_array_get_float ()">gtk_plot_array_get_float</a>            (<a class="link" href="GtkPlotArray.html" title="GtkPlotArray">GtkPlotArray</a> *array);
+<a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a>*            <a class="link" href="GtkPlotArray.html#gtk-plot-array-get-double" title="gtk_plot_array_get_double ()">gtk_plot_array_get_double</a>           (<a class="link" href="GtkPlotArray.html" title="GtkPlotArray">GtkPlotArray</a> *array);
+<a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>*               <a class="link" href="GtkPlotArray.html#gtk-plot-array-get-int" title="gtk_plot_array_get_int ()">gtk_plot_array_get_int</a>              (<a class="link" href="GtkPlotArray.html" title="GtkPlotArray">GtkPlotArray</a> *array);
+<a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>*           <a class="link" href="GtkPlotArray.html#gtk-plot-array-get-bool" title="gtk_plot_array_get_bool ()">gtk_plot_array_get_bool</a>             (<a class="link" href="GtkPlotArray.html" title="GtkPlotArray">GtkPlotArray</a> *array);
+<a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a>**             <a class="link" href="GtkPlotArray.html#gtk-plot-array-get-string" title="gtk_plot_array_get_string ()">gtk_plot_array_get_string</a>           (<a class="link" href="GtkPlotArray.html" title="GtkPlotArray">GtkPlotArray</a> *array);
+<a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"
+>gpointer</a>*           <a class="link" href="GtkPlotArray.html#gtk-plot-array-get-pointer" title="gtk_plot_array_get_pointer ()">gtk_plot_array_get_pointer</a>          (<a class="link" href="GtkPlotArray.html" title="GtkPlotArray">GtkPlotArray</a> *array);
+void                <a class="link" href="GtkPlotArray.html#gtk-plot-array-free" title="gtk_plot_array_free ()">gtk_plot_array_free</a>                 (<a class="link" href="GtkPlotArray.html" title="GtkPlotArray">GtkPlotArray</a> *array);
+<a
+href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject"
+>GObject</a>*            <a class="link" href="GtkPlotArray.html#gtk-plot-array-list-new" title="gtk_plot_array_list_new ()">gtk_plot_array_list_new</a>             (void);
+void                <a class="link" href="GtkPlotArray.html#gtk-plot-array-list-add" title="gtk_plot_array_list_add ()">gtk_plot_array_list_add</a>             (<a class="link" href="GtkPlotArray.html#GtkPlotArrayList" title="GtkPlotArrayList">GtkPlotArrayList</a> *set,
+                                                         <a class="link" href="GtkPlotArray.html" title="GtkPlotArray">GtkPlotArray</a> *array);
+void                <a class="link" href="GtkPlotArray.html#gtk-plot-array-list-remove" title="gtk_plot_array_list_remove ()">gtk_plot_array_list_remove</a>          (<a class="link" href="GtkPlotArray.html#GtkPlotArrayList" title="GtkPlotArrayList">GtkPlotArrayList</a> *set,
+                                                         <a class="link" href="GtkPlotArray.html" title="GtkPlotArray">GtkPlotArray</a> *array);
+<a class="link" href="GtkPlotArray.html" title="GtkPlotArray">GtkPlotArray</a>*       <a class="link" href="GtkPlotArray.html#gtk-plot-array-list-get" title="gtk_plot_array_list_get ()">gtk_plot_array_list_get</a>             (<a class="link" href="GtkPlotArray.html#GtkPlotArrayList" title="GtkPlotArrayList">GtkPlotArrayList</a> *set,
+                                                         const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *name);
+void                <a class="link" href="GtkPlotArray.html#gtk-plot-array-list-clear" title="gtk_plot_array_list_clear ()">gtk_plot_array_list_clear</a>           (<a class="link" href="GtkPlotArray.html#GtkPlotArrayList" title="GtkPlotArrayList">GtkPlotArrayList</a> *set);
+</pre>
+</div>
+<div class="refsect1" title="Object Hierarchy">
+<a name="GtkPlotArray.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a
+href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject"
+>GObject</a>
+   +----GtkPlotArray
+</pre>
+</div>
+<div class="refsect1" title="Properties">
+<a name="GtkPlotArray.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="GtkPlotArray.html#GtkPlotArray--array-data" title='The "array-data" property'>array-data</a>"               <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"
+>gpointer</a>              : Read / Write
+  "<a class="link" href="GtkPlotArray.html#GtkPlotArray--description" title='The "description" property'>description</a>"              <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a>*                : Read / Write
+  "<a class="link" href="GtkPlotArray.html#GtkPlotArray--independent" title='The "independent" property'>independent</a>"              <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write
+  "<a class="link" href="GtkPlotArray.html#GtkPlotArray--label" title='The "label" property'>label</a>"                    <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a>*                : Read / Write
+  "<a class="link" href="GtkPlotArray.html#GtkPlotArray--name" title='The "name" property'>name</a>"                     <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a>*                : Read / Write
+  "<a class="link" href="GtkPlotArray.html#GtkPlotArray--own-data" title='The "own-data" property'>own-data</a>"                 <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write
+  "<a class="link" href="GtkPlotArray.html#GtkPlotArray--required" title='The "required" property'>required</a>"                 <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write
+  "<a class="link" href="GtkPlotArray.html#GtkPlotArray--scale" title='The "scale" property'>scale</a>"                    <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a>               : Read / Write
+  "<a class="link" href="GtkPlotArray.html#GtkPlotArray--size" title='The "size" property'>size</a>"                     <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write
+  "<a class="link" href="GtkPlotArray.html#GtkPlotArray--type" title='The "type" property'>type</a>"                     <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write
+</pre>
+</div>
+<div class="refsect1" title="Description">
+<a name="GtkPlotArray.description"></a><h2>Description</h2>
+<p>
+</p>
+</div>
+<div class="refsect1" title="Details">
+<a name="GtkPlotArray.details"></a><h2>Details</h2>
+<div class="refsect2" title="GtkPlotArray">
+<a name="GtkPlotArray-struct"></a><h3>GtkPlotArray</h3>
+<pre class="programlisting">typedef struct _GtkPlotArray GtkPlotArray;</pre>
+<p>
+The GtkPlotArray struct contains only private data.
+It should only be accessed through the functions described below.</p>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2" title="GtkPlotArrayList">
+<a name="GtkPlotArrayList"></a><h3>GtkPlotArrayList</h3>
+<pre class="programlisting">typedef struct {
+} GtkPlotArrayList;
+</pre>
+<p>
+The GtkPlotArrayList struct contains only private data.
+It should only be accessed through the functions described below.</p>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_array_new ()">
+<a name="gtk-plot-array-new"></a><h3>gtk_plot_array_new ()</h3>
+<pre class="programlisting"><a
+href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject"
+>GObject</a>*            gtk_plot_array_new                  (const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *name,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"
+>gpointer</a> array,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> size,
+                                                         <a
+href="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#GType"
+>GType</a> type,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> own_data);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>name</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>array</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>size</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>type</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>own_data</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_array_set ()">
+<a name="gtk-plot-array-set"></a><h3>gtk_plot_array_set ()</h3>
+<pre class="programlisting">void                gtk_plot_array_set                  (<a class="link" href="GtkPlotArray.html" title="GtkPlotArray">GtkPlotArray</a> *array,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"
+>gpointer</a> data_array,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> size,
+                                                         <a
+href="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#GType"
+>GType</a> type);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>array</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>data_array</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>size</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>type</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_array_set_label ()">
+<a name="gtk-plot-array-set-label"></a><h3>gtk_plot_array_set_label ()</h3>
+<pre class="programlisting">void                gtk_plot_array_set_label            (<a class="link" href="GtkPlotArray.html" title="GtkPlotArray">GtkPlotArray</a> *array,
+                                                         const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *label);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>array</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>label</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_array_set_description ()">
+<a name="gtk-plot-array-set-description"></a><h3>gtk_plot_array_set_description ()</h3>
+<pre class="programlisting">void                gtk_plot_array_set_description      (<a class="link" href="GtkPlotArray.html" title="GtkPlotArray">GtkPlotArray</a> *array,
+                                                         const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *desc);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>array</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>desc</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_array_set_scale ()">
+<a name="gtk-plot-array-set-scale"></a><h3>gtk_plot_array_set_scale ()</h3>
+<pre class="programlisting">void                gtk_plot_array_set_scale            (<a class="link" href="GtkPlotArray.html" title="GtkPlotArray">GtkPlotArray</a> *array,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> scale);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>array</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>scale</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_array_set_required ()">
+<a name="gtk-plot-array-set-required"></a><h3>gtk_plot_array_set_required ()</h3>
+<pre class="programlisting">void                gtk_plot_array_set_required         (<a class="link" href="GtkPlotArray.html" title="GtkPlotArray">GtkPlotArray</a> *array,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> required);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>array</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>required</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_array_set_independent ()">
+<a name="gtk-plot-array-set-independent"></a><h3>gtk_plot_array_set_independent ()</h3>
+<pre class="programlisting">void                gtk_plot_array_set_independent      (<a class="link" href="GtkPlotArray.html" title="GtkPlotArray">GtkPlotArray</a> *array,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> independent);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>array</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>independent</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_array_get_data_type ()">
+<a name="gtk-plot-array-get-data-type"></a><h3>gtk_plot_array_get_data_type ()</h3>
+<pre class="programlisting"><a
+href="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#GType"
+>GType</a>               gtk_plot_array_get_data_type        (<a class="link" href="GtkPlotArray.html" title="GtkPlotArray">GtkPlotArray</a> *array);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>array</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_array_get_name ()">
+<a name="gtk-plot-array-get-name"></a><h3>gtk_plot_array_get_name ()</h3>
+<pre class="programlisting">const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *       gtk_plot_array_get_name             (<a class="link" href="GtkPlotArray.html" title="GtkPlotArray">GtkPlotArray</a> *array);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>array</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_array_get_label ()">
+<a name="gtk-plot-array-get-label"></a><h3>gtk_plot_array_get_label ()</h3>
+<pre class="programlisting">const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *       gtk_plot_array_get_label            (<a class="link" href="GtkPlotArray.html" title="GtkPlotArray">GtkPlotArray</a> *array);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>array</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_array_get_description ()">
+<a name="gtk-plot-array-get-description"></a><h3>gtk_plot_array_get_description ()</h3>
+<pre class="programlisting">const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *       gtk_plot_array_get_description      (<a class="link" href="GtkPlotArray.html" title="GtkPlotArray">GtkPlotArray</a> *array);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>array</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_array_required ()">
+<a name="gtk-plot-array-required"></a><h3>gtk_plot_array_required ()</h3>
+<pre class="programlisting"><a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>            gtk_plot_array_required             (<a class="link" href="GtkPlotArray.html" title="GtkPlotArray">GtkPlotArray</a> *array);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>array</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_array_independent ()">
+<a name="gtk-plot-array-independent"></a><h3>gtk_plot_array_independent ()</h3>
+<pre class="programlisting"><a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>            gtk_plot_array_independent          (<a class="link" href="GtkPlotArray.html" title="GtkPlotArray">GtkPlotArray</a> *array);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>array</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_array_get_scale ()">
+<a name="gtk-plot-array-get-scale"></a><h3>gtk_plot_array_get_scale ()</h3>
+<pre class="programlisting"><a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a>             gtk_plot_array_get_scale            (<a class="link" href="GtkPlotArray.html" title="GtkPlotArray">GtkPlotArray</a> *array);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>array</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_array_get_size ()">
+<a name="gtk-plot-array-get-size"></a><h3>gtk_plot_array_get_size ()</h3>
+<pre class="programlisting"><a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                gtk_plot_array_get_size             (<a class="link" href="GtkPlotArray.html" title="GtkPlotArray">GtkPlotArray</a> *array);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>array</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_array_get_float ()">
+<a name="gtk-plot-array-get-float"></a><h3>gtk_plot_array_get_float ()</h3>
+<pre class="programlisting"><a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gfloat"
+>gfloat</a>*             gtk_plot_array_get_float            (<a class="link" href="GtkPlotArray.html" title="GtkPlotArray">GtkPlotArray</a> *array);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>array</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_array_get_double ()">
+<a name="gtk-plot-array-get-double"></a><h3>gtk_plot_array_get_double ()</h3>
+<pre class="programlisting"><a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a>*            gtk_plot_array_get_double           (<a class="link" href="GtkPlotArray.html" title="GtkPlotArray">GtkPlotArray</a> *array);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>array</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_array_get_int ()">
+<a name="gtk-plot-array-get-int"></a><h3>gtk_plot_array_get_int ()</h3>
+<pre class="programlisting"><a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>*               gtk_plot_array_get_int              (<a class="link" href="GtkPlotArray.html" title="GtkPlotArray">GtkPlotArray</a> *array);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>array</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_array_get_bool ()">
+<a name="gtk-plot-array-get-bool"></a><h3>gtk_plot_array_get_bool ()</h3>
+<pre class="programlisting"><a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>*           gtk_plot_array_get_bool             (<a class="link" href="GtkPlotArray.html" title="GtkPlotArray">GtkPlotArray</a> *array);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>array</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_array_get_string ()">
+<a name="gtk-plot-array-get-string"></a><h3>gtk_plot_array_get_string ()</h3>
+<pre class="programlisting"><a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a>**             gtk_plot_array_get_string           (<a class="link" href="GtkPlotArray.html" title="GtkPlotArray">GtkPlotArray</a> *array);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>array</code></em> :</span></p></td>
+<td>  the <a class="link" href="GtkPlotArray.html" title="GtkPlotArray"><span class="type">GtkPlotArray</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> (transfer none) the data string array
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_array_get_pointer ()">
+<a name="gtk-plot-array-get-pointer"></a><h3>gtk_plot_array_get_pointer ()</h3>
+<pre class="programlisting"><a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"
+>gpointer</a>*           gtk_plot_array_get_pointer          (<a class="link" href="GtkPlotArray.html" title="GtkPlotArray">GtkPlotArray</a> *array);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>array</code></em> :</span></p></td>
+<td>  the <a class="link" href="GtkPlotArray.html" title="GtkPlotArray"><span class="type">GtkPlotArray</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> (transfer none) the data pointer array
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_array_free ()">
+<a name="gtk-plot-array-free"></a><h3>gtk_plot_array_free ()</h3>
+<pre class="programlisting">void                gtk_plot_array_free                 (<a class="link" href="GtkPlotArray.html" title="GtkPlotArray">GtkPlotArray</a> *array);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>array</code></em> :</span></p></td>
+<td>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_array_list_new ()">
+<a name="gtk-plot-array-list-new"></a><h3>gtk_plot_array_list_new ()</h3>
+<pre class="programlisting"><a
+href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject"
+>GObject</a>*            gtk_plot_array_list_new             (void);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_array_list_add ()">
+<a name="gtk-plot-array-list-add"></a><h3>gtk_plot_array_list_add ()</h3>
+<pre class="programlisting">void                gtk_plot_array_list_add             (<a class="link" href="GtkPlotArray.html#GtkPlotArrayList" title="GtkPlotArrayList">GtkPlotArrayList</a> *set,
+                                                         <a class="link" href="GtkPlotArray.html" title="GtkPlotArray">GtkPlotArray</a> *array);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>set</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>array</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_array_list_remove ()">
+<a name="gtk-plot-array-list-remove"></a><h3>gtk_plot_array_list_remove ()</h3>
+<pre class="programlisting">void                gtk_plot_array_list_remove          (<a class="link" href="GtkPlotArray.html#GtkPlotArrayList" title="GtkPlotArrayList">GtkPlotArrayList</a> *set,
+                                                         <a class="link" href="GtkPlotArray.html" title="GtkPlotArray">GtkPlotArray</a> *array);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>set</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>array</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_array_list_get ()">
+<a name="gtk-plot-array-list-get"></a><h3>gtk_plot_array_list_get ()</h3>
+<pre class="programlisting"><a class="link" href="GtkPlotArray.html" title="GtkPlotArray">GtkPlotArray</a>*       gtk_plot_array_list_get             (<a class="link" href="GtkPlotArray.html#GtkPlotArrayList" title="GtkPlotArrayList">GtkPlotArrayList</a> *set,
+                                                         const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *name);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>set</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlotArray.html#GtkPlotArrayList" title="GtkPlotArrayList"><span class="type">GtkPlotArrayList</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>name</code></em> :</span></p></td>
+<td>       the name to be searched for
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> (transfer none) the named <a class="link" href="GtkPlotArray.html" title="GtkPlotArray"><span class="type">GtkPlotArray</span></a> or NULL
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_array_list_clear ()">
+<a name="gtk-plot-array-list-clear"></a><h3>gtk_plot_array_list_clear ()</h3>
+<pre class="programlisting">void                gtk_plot_array_list_clear           (<a class="link" href="GtkPlotArray.html#GtkPlotArrayList" title="GtkPlotArrayList">GtkPlotArrayList</a> *set);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>set</code></em> :</span></p></td>
+<td>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1" title="Property Details">
+<a name="GtkPlotArray.property-details"></a><h2>Property Details</h2>
+<div class="refsect2" title='The "array-data" property'>
+<a name="GtkPlotArray--array-data"></a><h3>The <code class="literal">"array-data"</code> property</h3>
+<pre class="programlisting">  "array-data"               <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"
+>gpointer</a>              : Read / Write</pre>
+<p>Data.</p>
+</div>
+<hr>
+<div class="refsect2" title='The "description" property'>
+<a name="GtkPlotArray--description"></a><h3>The <code class="literal">"description"</code> property</h3>
+<pre class="programlisting">  "description"              <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a>*                : Read / Write</pre>
+<p>Description.</p>
+<p>Default value: NULL</p>
+</div>
+<hr>
+<div class="refsect2" title='The "independent" property'>
+<a name="GtkPlotArray--independent"></a><h3>The <code class="literal">"independent"</code> property</h3>
+<pre class="programlisting">  "independent"              <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write</pre>
+<p>Independent.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2" title='The "label" property'>
+<a name="GtkPlotArray--label"></a><h3>The <code class="literal">"label"</code> property</h3>
+<pre class="programlisting">  "label"                    <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a>*                : Read / Write</pre>
+<p>Label.</p>
+<p>Default value: NULL</p>
+</div>
+<hr>
+<div class="refsect2" title='The "name" property'>
+<a name="GtkPlotArray--name"></a><h3>The <code class="literal">"name"</code> property</h3>
+<pre class="programlisting">  "name"                     <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a>*                : Read / Write</pre>
+<p>Name.</p>
+<p>Default value: NULL</p>
+</div>
+<hr>
+<div class="refsect2" title='The "own-data" property'>
+<a name="GtkPlotArray--own-data"></a><h3>The <code class="literal">"own-data"</code> property</h3>
+<pre class="programlisting">  "own-data"                 <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write</pre>
+<p>Specifies if data should be freed when the array is destroyed.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2" title='The "required" property'>
+<a name="GtkPlotArray--required"></a><h3>The <code class="literal">"required"</code> property</h3>
+<pre class="programlisting">  "required"                 <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write</pre>
+<p>Required.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2" title='The "scale" property'>
+<a name="GtkPlotArray--scale"></a><h3>The <code class="literal">"scale"</code> property</h3>
+<pre class="programlisting">  "scale"                    <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a>               : Read / Write</pre>
+<p>Scale.</p>
+<p>Allowed values: &gt;= 0</p>
+<p>Default value: 1</p>
+</div>
+<hr>
+<div class="refsect2" title='The "size" property'>
+<a name="GtkPlotArray--size"></a><h3>The <code class="literal">"size"</code> property</h3>
+<pre class="programlisting">  "size"                     <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write</pre>
+<p>Size.</p>
+<p>Allowed values: &gt;= 0</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2" title='The "type" property'>
+<a name="GtkPlotArray--type"></a><h3>The <code class="literal">"type"</code> property</h3>
+<pre class="programlisting">  "type"                     <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write</pre>
+<p>Type.</p>
+<p>Allowed values: &gt;= 0</p>
+<p>Default value: 0</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.11</div>
+</body>
+</html>

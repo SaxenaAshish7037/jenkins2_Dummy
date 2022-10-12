@@ -1,0 +1,288 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GtkPlotPixmap</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="GtkExtra Reference Manual">
+<link rel="up" href="ch03.html" title="Widgets">
+<link rel="prev" href="GtkPlotPC.html" title="GtkPlotPC">
+<link rel="next" href="GtkPlotPolar.html" title="GtkPlotPolar">
+<meta name="generator" content="GTK-Doc V1.11 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="part" href="gtkextra.html" title="Part I. GtkExtra Overview">
+<link rel="part" href="gtkextrabase.html" title="Part II. GtkExtra Widgets and Objects">
+<link rel="chapter" href="ch01.html" title="Object Hierarchy">
+<link rel="chapter" href="ch02.html" title="Widget Gallery">
+<link rel="chapter" href="ch03.html" title="Widgets">
+<link rel="chapter" href="ch04.html" title="Data Formatter">
+<link rel="chapter" href="ch05.html" title="GtkExtra Versioning">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="GtkPlotPC.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch03.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">GtkExtra Reference Manual</th>
+<td><a accesskey="n" href="GtkPlotPolar.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#GtkPlotPixmap.synopsis" class="shortcut">Top</a>
+                 | 
+                <a href="#GtkPlotPixmap.description" class="shortcut">Description</a>
+                 | 
+                <a href="#GtkPlotPixmap.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                 | 
+                <a href="#GtkPlotPixmap.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+                 | 
+                <a href="#GtkPlotPixmap.properties" class="shortcut">Properties</a>
+</td></tr>
+</table>
+<div class="refentry" title="GtkPlotPixmap">
+<a name="GtkPlotPixmap"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GtkPlotPixmap.top_of_page"></a>GtkPlotPixmap</span></h2>
+<p>GtkPlotPixmap — Pixmap plots widget.</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv" title="Synopsis">
+<a name="GtkPlotPixmap.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">
+
+#include &lt;gtkextra.h&gt;
+
+                    <a class="link" href="GtkPlotPixmap.html#GtkPlotPixmap-struct" title="GtkPlotPixmap">GtkPlotPixmap</a>;
+<a
+href="http://library.gnome.org/devel/gtk3/GtkWidget.html"
+>GtkWidget</a>*          <a class="link" href="GtkPlotPixmap.html#gtk-plot-pixmap-new" title="gtk_plot_pixmap_new ()">gtk_plot_pixmap_new</a>                 (<a
+href="http://library.gnome.org/devel/gdk3/gdk2-Bitmaps-and-Pixmaps.html#GdkPixmap"
+>GdkPixmap</a> *pixmap,
+                                                         <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Bitmaps-and-Pixmaps.html#GdkBitmap"
+>GdkBitmap</a> *mask);
+void                <a class="link" href="GtkPlotPixmap.html#gtk-plot-pixmap-construct" title="gtk_plot_pixmap_construct ()">gtk_plot_pixmap_construct</a>           (<a class="link" href="GtkPlotPixmap.html" title="GtkPlotPixmap">GtkPlotPixmap</a> *data,
+                                                         <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Bitmaps-and-Pixmaps.html#GdkPixmap"
+>GdkPixmap</a> *pixmap,
+                                                         <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Bitmaps-and-Pixmaps.html#GdkBitmap"
+>GdkBitmap</a> *mask);
+<a
+href="http://library.gnome.org/devel/gdk3/gdk2-Bitmaps-and-Pixmaps.html#GdkPixmap"
+>GdkPixmap</a>*          <a class="link" href="GtkPlotPixmap.html#gtk-plot-pixmap-get-pixmap" title="gtk_plot_pixmap_get_pixmap ()">gtk_plot_pixmap_get_pixmap</a>          (<a class="link" href="GtkPlotPixmap.html" title="GtkPlotPixmap">GtkPlotPixmap</a> *pixmap);
+<a
+href="http://library.gnome.org/devel/gdk3/gdk2-Bitmaps-and-Pixmaps.html#GdkBitmap"
+>GdkBitmap</a>*          <a class="link" href="GtkPlotPixmap.html#gtk-plot-pixmap-get-mask" title="gtk_plot_pixmap_get_mask ()">gtk_plot_pixmap_get_mask</a>            (<a class="link" href="GtkPlotPixmap.html" title="GtkPlotPixmap">GtkPlotPixmap</a> *pixmap);
+</pre>
+</div>
+<div class="refsect1" title="Object Hierarchy">
+<a name="GtkPlotPixmap.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a
+href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject"
+>GObject</a>
+   +----<a
+href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned"
+>GInitiallyUnowned</a>
+         +----<a
+href="http://library.gnome.org/devel/gtk3/GtkObject.html"
+>GtkObject</a>
+               +----<a
+href="http://library.gnome.org/devel/gtk3/GtkWidget.html"
+>GtkWidget</a>
+                     +----<a class="link" href="GtkPlotData.html" title="GtkPlotData">GtkPlotData</a>
+                           +----GtkPlotPixmap
+</pre>
+</div>
+<div class="refsect1" title="Implemented Interfaces">
+<a name="GtkPlotPixmap.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+GtkPlotPixmap implements
+ AtkImplementorIface and  <a
+href="http://library.gnome.org/devel/gtk3/GtkBuildable.html"
+>GtkBuildable</a>.</p>
+</div>
+<div class="refsect1" title="Properties">
+<a name="GtkPlotPixmap.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="GtkPlotPixmap.html#GtkPlotPixmap--mask-bitmap" title='The "mask-bitmap" property'>mask-bitmap</a>"              <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"
+>gpointer</a>              : Read / Write
+  "<a class="link" href="GtkPlotPixmap.html#GtkPlotPixmap--pixmap" title='The "pixmap" property'>pixmap</a>"                   <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"
+>gpointer</a>              : Read / Write
+</pre>
+</div>
+<div class="refsect1" title="Description">
+<a name="GtkPlotPixmap.description"></a><h2>Description</h2>
+<p>
+FIXME:: Need long description.</p>
+<p>
+</p>
+</div>
+<div class="refsect1" title="Details">
+<a name="GtkPlotPixmap.details"></a><h2>Details</h2>
+<div class="refsect2" title="GtkPlotPixmap">
+<a name="GtkPlotPixmap-struct"></a><h3>GtkPlotPixmap</h3>
+<pre class="programlisting">typedef struct _GtkPlotPixmap GtkPlotPixmap;</pre>
+<p>
+The GtkPlotPixmap struct contains only private data.
+It should only be accessed through the functions described below.</p>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_pixmap_new ()">
+<a name="gtk-plot-pixmap-new"></a><h3>gtk_plot_pixmap_new ()</h3>
+<pre class="programlisting"><a
+href="http://library.gnome.org/devel/gtk3/GtkWidget.html"
+>GtkWidget</a>*          gtk_plot_pixmap_new                 (<a
+href="http://library.gnome.org/devel/gdk3/gdk2-Bitmaps-and-Pixmaps.html#GdkPixmap"
+>GdkPixmap</a> *pixmap,
+                                                         <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Bitmaps-and-Pixmaps.html#GdkBitmap"
+>GdkBitmap</a> *mask);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>pixmap</code></em> :</span></p></td>
+<td> a GdkPixmap.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>mask</code></em> :</span></p></td>
+<td> 
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> a new GtkWidget.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_pixmap_construct ()">
+<a name="gtk-plot-pixmap-construct"></a><h3>gtk_plot_pixmap_construct ()</h3>
+<pre class="programlisting">void                gtk_plot_pixmap_construct           (<a class="link" href="GtkPlotPixmap.html" title="GtkPlotPixmap">GtkPlotPixmap</a> *data,
+                                                         <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Bitmaps-and-Pixmaps.html#GdkPixmap"
+>GdkPixmap</a> *pixmap,
+                                                         <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Bitmaps-and-Pixmaps.html#GdkBitmap"
+>GdkBitmap</a> *mask);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>data</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>pixmap</code></em> :</span></p></td>
+<td> a GdkPixmap
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>mask</code></em> :</span></p></td>
+<td> 
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_pixmap_get_pixmap ()">
+<a name="gtk-plot-pixmap-get-pixmap"></a><h3>gtk_plot_pixmap_get_pixmap ()</h3>
+<pre class="programlisting"><a
+href="http://library.gnome.org/devel/gdk3/gdk2-Bitmaps-and-Pixmaps.html#GdkPixmap"
+>GdkPixmap</a>*          gtk_plot_pixmap_get_pixmap          (<a class="link" href="GtkPlotPixmap.html" title="GtkPlotPixmap">GtkPlotPixmap</a> *pixmap);</pre>
+<p>
+Get pixmap from <a class="link" href="GtkPlotPixmap.html" title="GtkPlotPixmap"><span class="type">GtkPlotPixmap</span></a>.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>pixmap</code></em> :</span></p></td>
+<td> a <span class="type">GdkPlotPixmap</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> (transfer none) the <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Bitmaps-and-Pixmaps.html#GdkPixmap"
+><span class="type">GdkPixmap</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_pixmap_get_mask ()">
+<a name="gtk-plot-pixmap-get-mask"></a><h3>gtk_plot_pixmap_get_mask ()</h3>
+<pre class="programlisting"><a
+href="http://library.gnome.org/devel/gdk3/gdk2-Bitmaps-and-Pixmaps.html#GdkBitmap"
+>GdkBitmap</a>*          gtk_plot_pixmap_get_mask            (<a class="link" href="GtkPlotPixmap.html" title="GtkPlotPixmap">GtkPlotPixmap</a> *pixmap);</pre>
+<p>
+Get mask bitmap from <a class="link" href="GtkPlotPixmap.html" title="GtkPlotPixmap"><span class="type">GtkPlotPixmap</span></a>.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>pixmap</code></em> :</span></p></td>
+<td> a <span class="type">GdkPlotPixmap</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> (transfer none) the <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Bitmaps-and-Pixmaps.html#GdkBitmap"
+><span class="type">GdkBitmap</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1" title="Property Details">
+<a name="GtkPlotPixmap.property-details"></a><h2>Property Details</h2>
+<div class="refsect2" title='The "mask-bitmap" property'>
+<a name="GtkPlotPixmap--mask-bitmap"></a><h3>The <code class="literal">"mask-bitmap"</code> property</h3>
+<pre class="programlisting">  "mask-bitmap"              <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"
+>gpointer</a>              : Read / Write</pre>
+<p>Mask.</p>
+</div>
+<hr>
+<div class="refsect2" title='The "pixmap" property'>
+<a name="GtkPlotPixmap--pixmap"></a><h3>The <code class="literal">"pixmap"</code> property</h3>
+<pre class="programlisting">  "pixmap"                   <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"
+>gpointer</a>              : Read / Write</pre>
+<p>Pixmap.</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.11</div>
+</body>
+</html>

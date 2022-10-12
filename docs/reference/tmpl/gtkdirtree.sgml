@@ -1,0 +1,51 @@
+<!-- ##### SECTION Title ##### -->
+GtkDirTree
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### STRUCT GtkDirTree ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### STRUCT GtkDirTreeNode ##### -->
+<para>
+
+</para>
+
+@scanned: 
+@path: 
+
+<!-- ##### FUNCTION gtk_dir_tree_new ##### -->
+<para>
+
+</para>
+
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_dir_tree_open_dir ##### -->
+<para>
+
+</para>
+
+@dir_tree: 
+@path: 
+@Returns: 
+
+

@@ -1,0 +1,517 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GtkPlotSegment</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="GtkExtra Reference Manual">
+<link rel="up" href="ch03.html" title="Widgets">
+<link rel="prev" href="GtkPlotPS.html" title="GtkPlotPS">
+<link rel="next" href="GtkPlotSurface.html" title="GtkPlotSurface">
+<meta name="generator" content="GTK-Doc V1.11 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="part" href="gtkextra.html" title="Part I. GtkExtra Overview">
+<link rel="part" href="gtkextrabase.html" title="Part II. GtkExtra Widgets and Objects">
+<link rel="chapter" href="ch01.html" title="Object Hierarchy">
+<link rel="chapter" href="ch02.html" title="Widget Gallery">
+<link rel="chapter" href="ch03.html" title="Widgets">
+<link rel="chapter" href="ch04.html" title="Data Formatter">
+<link rel="chapter" href="ch05.html" title="GtkExtra Versioning">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="GtkPlotPS.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch03.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">GtkExtra Reference Manual</th>
+<td><a accesskey="n" href="GtkPlotSurface.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#GtkPlotSegment.synopsis" class="shortcut">Top</a>
+                 | 
+                <a href="#GtkPlotSegment.description" class="shortcut">Description</a>
+                 | 
+                <a href="#GtkPlotSegment.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                 | 
+                <a href="#GtkPlotSegment.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+                 | 
+                <a href="#GtkPlotSegment.properties" class="shortcut">Properties</a>
+</td></tr>
+</table>
+<div class="refentry" title="GtkPlotSegment">
+<a name="GtkPlotSegment"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GtkPlotSegment.top_of_page"></a>GtkPlotSegment</span></h2>
+<p>GtkPlotSegment</p>
+</td>
+<td valign="top" align="right"><img src=""></td>
+</tr></table></div>
+<div class="refsynopsisdiv" title="Synopsis">
+<a name="GtkPlotSegment.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">
+
+#include &lt;gtkextra.h&gt;
+
+                    <a class="link" href="GtkPlotSegment.html#GtkPlotSegment-struct" title="GtkPlotSegment">GtkPlotSegment</a>;
+enum                <a class="link" href="GtkPlotSegment.html#GtkPlotArrow" title="enum GtkPlotArrow">GtkPlotArrow</a>;
+<a
+href="http://library.gnome.org/devel/gtk3/GtkWidget.html"
+>GtkWidget</a>*          <a class="link" href="GtkPlotSegment.html#gtk-plot-segment-new" title="gtk_plot_segment_new ()">gtk_plot_segment_new</a>                (void);
+void                <a class="link" href="GtkPlotSegment.html#gtk-plot-segment-set-relative" title="gtk_plot_segment_set_relative ()">gtk_plot_segment_set_relative</a>       (<a class="link" href="GtkPlotSegment.html" title="GtkPlotSegment">GtkPlotSegment</a> *segment,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> set);
+<a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>            <a class="link" href="GtkPlotSegment.html#gtk-plot-segment-relative" title="gtk_plot_segment_relative ()">gtk_plot_segment_relative</a>           (<a class="link" href="GtkPlotSegment.html" title="GtkPlotSegment">GtkPlotSegment</a> *segment);
+void                <a class="link" href="GtkPlotSegment.html#gtk-plot-segment-set-arrow" title="gtk_plot_segment_set_arrow ()">gtk_plot_segment_set_arrow</a>          (<a class="link" href="GtkPlotSegment.html" title="GtkPlotSegment">GtkPlotSegment</a> *segment,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> arrow_length,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> arrow_width,
+                                                         <a class="link" href="GtkPlot.html#GtkPlotSymbolStyle" title="enum GtkPlotSymbolStyle">GtkPlotSymbolStyle</a> arrow_style);
+void                <a class="link" href="GtkPlotSegment.html#gtk-plot-segment-get-arrow" title="gtk_plot_segment_get_arrow ()">gtk_plot_segment_get_arrow</a>          (<a class="link" href="GtkPlotSegment.html" title="GtkPlotSegment">GtkPlotSegment</a> *segment,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> *arrow_length,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> *arrow_width,
+                                                         <a class="link" href="GtkPlot.html#GtkPlotSymbolStyle" title="enum GtkPlotSymbolStyle">GtkPlotSymbolStyle</a> *arrow_style);
+void                <a class="link" href="GtkPlotSegment.html#gtk-plot-segment-set-arrow-mask" title="gtk_plot_segment_set_arrow_mask ()">gtk_plot_segment_set_arrow_mask</a>     (<a class="link" href="GtkPlotSegment.html" title="GtkPlotSegment">GtkPlotSegment</a> *segment,
+                                                         <a class="link" href="GtkPlotSegment.html#GtkPlotArrow" title="enum GtkPlotArrow">GtkPlotArrow</a> mask);
+<a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint"
+>guint</a>               <a class="link" href="GtkPlotSegment.html#gtk-plot-segment-get-arrow-mask" title="gtk_plot_segment_get_arrow_mask ()">gtk_plot_segment_get_arrow_mask</a>     (<a class="link" href="GtkPlotSegment.html" title="GtkPlotSegment">GtkPlotSegment</a> *segment);
+void                <a class="link" href="GtkPlotSegment.html#gtk-plot-segment-center" title="gtk_plot_segment_center ()">gtk_plot_segment_center</a>             (<a class="link" href="GtkPlotSegment.html" title="GtkPlotSegment">GtkPlotSegment</a> *segment,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> center);
+<a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>            <a class="link" href="GtkPlotSegment.html#gtk-plot-segment-is-centered" title="gtk_plot_segment_is_centered ()">gtk_plot_segment_is_centered</a>        (<a class="link" href="GtkPlotSegment.html" title="GtkPlotSegment">GtkPlotSegment</a> *segment);
+</pre>
+</div>
+<div class="refsect1" title="Object Hierarchy">
+<a name="GtkPlotSegment.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a
+href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject"
+>GObject</a>
+   +----<a
+href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned"
+>GInitiallyUnowned</a>
+         +----<a
+href="http://library.gnome.org/devel/gtk3/GtkObject.html"
+>GtkObject</a>
+               +----<a
+href="http://library.gnome.org/devel/gtk3/GtkWidget.html"
+>GtkWidget</a>
+                     +----<a class="link" href="GtkPlotData.html" title="GtkPlotData">GtkPlotData</a>
+                           +----GtkPlotSegment
+</pre>
+</div>
+<div class="refsect1" title="Implemented Interfaces">
+<a name="GtkPlotSegment.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+GtkPlotSegment implements
+ AtkImplementorIface and  <a
+href="http://library.gnome.org/devel/gtk3/GtkBuildable.html"
+>GtkBuildable</a>.</p>
+</div>
+<div class="refsect1" title="Properties">
+<a name="GtkPlotSegment.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="GtkPlotSegment.html#GtkPlotSegment--arrow-mask" title='The "arrow-mask" property'>arrow-mask</a>"               <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write
+  "<a class="link" href="GtkPlotSegment.html#GtkPlotSegment--centered" title='The "centered" property'>centered</a>"                 <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write
+  "<a class="link" href="GtkPlotSegment.html#GtkPlotSegment--length" title='The "length" property'>length</a>"                   <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write
+  "<a class="link" href="GtkPlotSegment.html#GtkPlotSegment--relative" title='The "relative" property'>relative</a>"                 <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write
+  "<a class="link" href="GtkPlotSegment.html#GtkPlotSegment--style" title='The "style" property'>style</a>"                    <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write
+  "<a class="link" href="GtkPlotSegment.html#GtkPlotSegment--width" title='The "width" property'>width</a>"                    <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write
+</pre>
+</div>
+<div class="refsect1" title="Description">
+<a name="GtkPlotSegment.description"></a><h2>Description</h2>
+<p>
+FIXME:: need long description</p>
+<p>
+</p>
+</div>
+<div class="refsect1" title="Details">
+<a name="GtkPlotSegment.details"></a><h2>Details</h2>
+<div class="refsect2" title="GtkPlotSegment">
+<a name="GtkPlotSegment-struct"></a><h3>GtkPlotSegment</h3>
+<pre class="programlisting">typedef struct _GtkPlotSegment GtkPlotSegment;</pre>
+<p>
+The GtkPlotSegment struct contains only private data.
+It should only be accessed through the functions described below.</p>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2" title="enum GtkPlotArrow">
+<a name="GtkPlotArrow"></a><h3>enum GtkPlotArrow</h3>
+<pre class="programlisting">typedef enum
+{
+      GTK_PLOT_ARROW_NONE            = 0,
+      GTK_PLOT_ARROW_ORIGIN          = 1 &lt;&lt; 0,
+      GTK_PLOT_ARROW_END             = 1 &lt;&lt; 1
+} GtkPlotArrow;
+</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_segment_new ()">
+<a name="gtk-plot-segment-new"></a><h3>gtk_plot_segment_new ()</h3>
+<pre class="programlisting"><a
+href="http://library.gnome.org/devel/gtk3/GtkWidget.html"
+>GtkWidget</a>*          gtk_plot_segment_new                (void);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_segment_set_relative ()">
+<a name="gtk-plot-segment-set-relative"></a><h3>gtk_plot_segment_set_relative ()</h3>
+<pre class="programlisting">void                gtk_plot_segment_set_relative       (<a class="link" href="GtkPlotSegment.html" title="GtkPlotSegment">GtkPlotSegment</a> *segment,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> set);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>segment</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlotSegment.html" title="GtkPlotSegment"><span class="type">GtkPlotSegment</span></a> widget.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>set</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_segment_relative ()">
+<a name="gtk-plot-segment-relative"></a><h3>gtk_plot_segment_relative ()</h3>
+<pre class="programlisting"><a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>            gtk_plot_segment_relative           (<a class="link" href="GtkPlotSegment.html" title="GtkPlotSegment">GtkPlotSegment</a> *segment);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>segment</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlotSegment.html" title="GtkPlotSegment"><span class="type">GtkPlotSegment</span></a> widget.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_segment_set_arrow ()">
+<a name="gtk-plot-segment-set-arrow"></a><h3>gtk_plot_segment_set_arrow ()</h3>
+<pre class="programlisting">void                gtk_plot_segment_set_arrow          (<a class="link" href="GtkPlotSegment.html" title="GtkPlotSegment">GtkPlotSegment</a> *segment,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> arrow_length,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> arrow_width,
+                                                         <a class="link" href="GtkPlot.html#GtkPlotSymbolStyle" title="enum GtkPlotSymbolStyle">GtkPlotSymbolStyle</a> arrow_style);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>segment</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlotSegment.html" title="GtkPlotSegment"><span class="type">GtkPlotSegment</span></a> widget.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>arrow_length</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>arrow_width</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>arrow_style</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_segment_get_arrow ()">
+<a name="gtk-plot-segment-get-arrow"></a><h3>gtk_plot_segment_get_arrow ()</h3>
+<pre class="programlisting">void                gtk_plot_segment_get_arrow          (<a class="link" href="GtkPlotSegment.html" title="GtkPlotSegment">GtkPlotSegment</a> *segment,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> *arrow_length,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> *arrow_width,
+                                                         <a class="link" href="GtkPlot.html#GtkPlotSymbolStyle" title="enum GtkPlotSymbolStyle">GtkPlotSymbolStyle</a> *arrow_style);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>segment</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlotSegment.html" title="GtkPlotSegment"><span class="type">GtkPlotSegment</span></a> widget.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>arrow_length</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>arrow_width</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>arrow_style</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_segment_set_arrow_mask ()">
+<a name="gtk-plot-segment-set-arrow-mask"></a><h3>gtk_plot_segment_set_arrow_mask ()</h3>
+<pre class="programlisting">void                gtk_plot_segment_set_arrow_mask     (<a class="link" href="GtkPlotSegment.html" title="GtkPlotSegment">GtkPlotSegment</a> *segment,
+                                                         <a class="link" href="GtkPlotSegment.html#GtkPlotArrow" title="enum GtkPlotArrow">GtkPlotArrow</a> mask);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>segment</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlotSegment.html" title="GtkPlotSegment"><span class="type">GtkPlotSegment</span></a> widget.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>mask</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_segment_get_arrow_mask ()">
+<a name="gtk-plot-segment-get-arrow-mask"></a><h3>gtk_plot_segment_get_arrow_mask ()</h3>
+<pre class="programlisting"><a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint"
+>guint</a>               gtk_plot_segment_get_arrow_mask     (<a class="link" href="GtkPlotSegment.html" title="GtkPlotSegment">GtkPlotSegment</a> *segment);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>segment</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlotSegment.html" title="GtkPlotSegment"><span class="type">GtkPlotSegment</span></a> widget.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_segment_center ()">
+<a name="gtk-plot-segment-center"></a><h3>gtk_plot_segment_center ()</h3>
+<pre class="programlisting">void                gtk_plot_segment_center             (<a class="link" href="GtkPlotSegment.html" title="GtkPlotSegment">GtkPlotSegment</a> *segment,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> center);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>segment</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlotSegment.html" title="GtkPlotSegment"><span class="type">GtkPlotSegment</span></a> widget.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>center</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_segment_is_centered ()">
+<a name="gtk-plot-segment-is-centered"></a><h3>gtk_plot_segment_is_centered ()</h3>
+<pre class="programlisting"><a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>            gtk_plot_segment_is_centered        (<a class="link" href="GtkPlotSegment.html" title="GtkPlotSegment">GtkPlotSegment</a> *segment);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>segment</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlotSegment.html" title="GtkPlotSegment"><span class="type">GtkPlotSegment</span></a> widget.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1" title="Property Details">
+<a name="GtkPlotSegment.property-details"></a><h2>Property Details</h2>
+<div class="refsect2" title='The "arrow-mask" property'>
+<a name="GtkPlotSegment--arrow-mask"></a><h3>The <code class="literal">"arrow-mask"</code> property</h3>
+<pre class="programlisting">  "arrow-mask"               <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write</pre>
+<p></p>
+<p>Allowed values: &gt;= 0</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2" title='The "centered" property'>
+<a name="GtkPlotSegment--centered"></a><h3>The <code class="literal">"centered"</code> property</h3>
+<pre class="programlisting">  "centered"                 <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write</pre>
+<p>
+</p>
+<p>
+</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2" title='The "length" property'>
+<a name="GtkPlotSegment--length"></a><h3>The <code class="literal">"length"</code> property</h3>
+<pre class="programlisting">  "length"                   <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write</pre>
+<p>
+</p>
+<p>
+</p>
+<p>Allowed values: &gt;= 0</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2" title='The "relative" property'>
+<a name="GtkPlotSegment--relative"></a><h3>The <code class="literal">"relative"</code> property</h3>
+<pre class="programlisting">  "relative"                 <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write</pre>
+<p>
+</p>
+<p>
+</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2" title='The "style" property'>
+<a name="GtkPlotSegment--style"></a><h3>The <code class="literal">"style"</code> property</h3>
+<pre class="programlisting">  "style"                    <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write</pre>
+<p>
+</p>
+<p>
+</p>
+<p>Allowed values: &gt;= 0</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2" title='The "width" property'>
+<a name="GtkPlotSegment--width"></a><h3>The <code class="literal">"width"</code> property</h3>
+<pre class="programlisting">  "width"                    <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write</pre>
+<p>
+</p>
+<p>
+</p>
+<p>Allowed values: &gt;= 0</p>
+<p>Default value: 0</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.11</div>
+</body>
+</html>

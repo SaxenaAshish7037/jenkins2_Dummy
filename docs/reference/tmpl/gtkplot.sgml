@@ -1,0 +1,1751 @@
+<!-- ##### SECTION Title ##### -->
+GtkPlot
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### STRUCT GtkPlot ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SIGNAL GtkPlot::add-data ##### -->
+<para>
+
+</para>
+
+@plot: the object which received the signal.
+@arg1: 
+@Returns: 
+
+<!-- ##### SIGNAL GtkPlot::axis-changed ##### -->
+<para>
+
+</para>
+
+@plot: the object which received the signal.
+@arg1: 
+@Returns: 
+
+<!-- ##### SIGNAL GtkPlot::changed ##### -->
+<para>
+
+</para>
+
+@plot: the object which received the signal.
+
+<!-- ##### SIGNAL GtkPlot::moved ##### -->
+<para>
+
+</para>
+
+@plot: the object which received the signal.
+@arg1: 
+@arg2: 
+@Returns: 
+
+<!-- ##### SIGNAL GtkPlot::resized ##### -->
+<para>
+
+</para>
+
+@plot: the object which received the signal.
+@arg1: 
+@arg2: 
+@Returns: 
+
+<!-- ##### SIGNAL GtkPlot::update ##### -->
+<para>
+
+</para>
+
+@plot: the object which received the signal.
+@arg1: 
+
+<!-- ##### ARG GtkPlot:allocation-height ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot:allocation-width ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot:allocation-x ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot:allocation-y ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot:bg-color ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot:bg-pixmap ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot:bottom-align ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot:bottom-axis ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot:clip-data ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot:grids-on-top ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot:height ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot:left-align ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot:left-axis ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot:legends-attr-text ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot:legends-border ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot:legends-border-width ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot:legends-height ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot:legends-line-width ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot:legends-shadow-width ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot:legends-show ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot:legends-transparent ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot:legends-width ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot:legends-x ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot:legends-y ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot:magnification ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot:reflect-x ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot:reflect-y ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot:right-align ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot:right-axis ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot:show-x0 ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot:show-y0 ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot:top-align ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot:top-axis ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot:transparent ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot:use-pixmap ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot:width ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot:x ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot:x0-line ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot:xmax ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot:xmin ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot:xscale ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot:y ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot:y0-line ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot:ymax ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot:ymin ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlot:yscale ##### -->
+<para>
+
+</para>
+
+<!-- ##### STRUCT GtkPlotAxis ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### STRUCT GtkPlotText ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### STRUCT GtkPlotLine ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### STRUCT GtkPlotSymbol ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### STRUCT GtkPlotTick ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### STRUCT GtkPlotTicks ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### STRUCT GtkPlotVector ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### STRUCT GtkPlotMarker ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### USER_FUNCTION GtkPlotFunc ##### -->
+<para>
+
+</para>
+
+@plot: 
+@data: 
+@x: 
+@error: 
+@Returns: 
+
+
+<!-- ##### USER_FUNCTION GtkPlotFunc3D ##### -->
+<para>
+
+</para>
+
+@plot: 
+@data: 
+@x: 
+@y: 
+@error: 
+@Returns: 
+
+
+<!-- ##### USER_FUNCTION GtkPlotIterator ##### -->
+<para>
+
+</para>
+
+@plot: 
+@data: 
+@iter: 
+@x: 
+@y: 
+@z: 
+@a: 
+@dx: 
+@dy: 
+@dz: 
+@da: 
+@label: 
+@error: 
+
+
+<!-- ##### ENUM GtkPlotScale ##### -->
+<para>
+
+</para>
+
+@GTK_PLOT_SCALE_LINEAR: 
+@GTK_PLOT_SCALE_LOG10: 
+
+<!-- ##### ENUM GtkPlotSymbolType ##### -->
+<para>
+
+</para>
+
+@GTK_PLOT_SYMBOL_NONE: 
+@GTK_PLOT_SYMBOL_SQUARE: 
+@GTK_PLOT_SYMBOL_CIRCLE: 
+@GTK_PLOT_SYMBOL_UP_TRIANGLE: 
+@GTK_PLOT_SYMBOL_DOWN_TRIANGLE: 
+@GTK_PLOT_SYMBOL_RIGHT_TRIANGLE: 
+@GTK_PLOT_SYMBOL_LEFT_TRIANGLE: 
+@GTK_PLOT_SYMBOL_DIAMOND: 
+@GTK_PLOT_SYMBOL_PLUS: 
+@GTK_PLOT_SYMBOL_CROSS: 
+@GTK_PLOT_SYMBOL_STAR: 
+@GTK_PLOT_SYMBOL_DOT: 
+@GTK_PLOT_SYMBOL_IMPULSE: 
+
+<!-- ##### ENUM GtkPlotSymbolStyle ##### -->
+<para>
+
+</para>
+
+@GTK_PLOT_SYMBOL_EMPTY: 
+@GTK_PLOT_SYMBOL_FILLED: 
+@GTK_PLOT_SYMBOL_OPAQUE: 
+
+<!-- ##### ENUM GtkPlotBorderStyle ##### -->
+<para>
+
+</para>
+
+@GTK_PLOT_BORDER_NONE: 
+@GTK_PLOT_BORDER_LINE: 
+@GTK_PLOT_BORDER_SHADOW: 
+
+<!-- ##### ENUM GtkPlotLineStyle ##### -->
+<para>
+
+</para>
+
+@GTK_PLOT_LINE_NONE: 
+@GTK_PLOT_LINE_SOLID: 
+@GTK_PLOT_LINE_DOTTED: 
+@GTK_PLOT_LINE_DASHED: 
+@GTK_PLOT_LINE_DOT_DASH: 
+@GTK_PLOT_LINE_DOT_DOT_DASH: 
+@GTK_PLOT_LINE_DOT_DASH_DASH: 
+
+<!-- ##### ENUM GtkPlotConnector ##### -->
+<para>
+
+</para>
+
+@GTK_PLOT_CONNECT_NONE: 
+@GTK_PLOT_CONNECT_STRAIGHT: 
+@GTK_PLOT_CONNECT_SPLINE: 
+@GTK_PLOT_CONNECT_HV_STEP: 
+@GTK_PLOT_CONNECT_VH_STEP: 
+@GTK_PLOT_CONNECT_MIDDLE_STEP: 
+
+<!-- ##### ENUM GtkPlotLabelPos ##### -->
+<para>
+
+</para>
+
+@GTK_PLOT_LABEL_NONE: 
+@GTK_PLOT_LABEL_IN: 
+@GTK_PLOT_LABEL_OUT: 
+
+<!-- ##### ENUM GtkPlotError ##### -->
+<para>
+
+</para>
+
+@GTK_PLOT_ERROR_DIV_ZERO: 
+@GTK_PLOT_ERROR_LOG_NEG: 
+
+<!-- ##### ENUM GtkPlotOrientation ##### -->
+<para>
+
+</para>
+
+@GTK_PLOT_AXIS_X: 
+@GTK_PLOT_AXIS_Y: 
+@GTK_PLOT_AXIS_Z: 
+
+<!-- ##### ENUM GtkPlotAxisPos ##### -->
+<para>
+
+</para>
+
+@GTK_PLOT_AXIS_LEFT: 
+@GTK_PLOT_AXIS_RIGHT: 
+@GTK_PLOT_AXIS_TOP: 
+@GTK_PLOT_AXIS_BOTTOM: 
+
+<!-- ##### ENUM GtkPlotLabelStyle ##### -->
+<para>
+
+</para>
+
+@GTK_PLOT_LABEL_FLOAT: 
+@GTK_PLOT_LABEL_EXP: 
+@GTK_PLOT_LABEL_POW: 
+
+<!-- ##### ENUM GtkPlotTicksPos ##### -->
+<para>
+
+</para>
+
+@GTK_PLOT_TICKS_NONE: 
+@GTK_PLOT_TICKS_IN: 
+@GTK_PLOT_TICKS_OUT: 
+
+<!-- ##### USER_FUNCTION GtkPlotTicksAutoscaleFunc ##### -->
+<para>
+
+</para>
+
+@axis: 
+@xmin: 
+@xmax: 
+@precision: 
+
+
+<!-- ##### USER_FUNCTION GtkPlotTicksInverseFunc ##### -->
+<para>
+
+</para>
+
+@axis: 
+@y: 
+@Returns: 
+
+
+<!-- ##### USER_FUNCTION GtkPlotTicksRecalcFunc ##### -->
+<para>
+
+</para>
+
+@axis: 
+
+
+<!-- ##### USER_FUNCTION GtkPlotTicksTransformFunc ##### -->
+<para>
+
+</para>
+
+@axis: 
+@y: 
+@Returns: 
+
+
+<!-- ##### USER_FUNCTION GtkPlotParseLabelFunc ##### -->
+<para>
+
+</para>
+
+@axis: 
+@val: 
+@precision: 
+@style: 
+@label: 
+
+
+<!-- ##### FUNCTION gtk_plot_new ##### -->
+<para>
+
+</para>
+
+@drawable: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_new_with_size ##### -->
+<para>
+
+</para>
+
+@drawable: 
+@width: 
+@height: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_construct ##### -->
+<para>
+
+</para>
+
+@plot: 
+@drawable: 
+
+
+<!-- ##### FUNCTION gtk_plot_construct_with_size ##### -->
+<para>
+
+</para>
+
+@plot: 
+@drawable: 
+@width: 
+@height: 
+
+
+<!-- ##### FUNCTION gtk_plot_set_drawable ##### -->
+<para>
+
+</para>
+
+@plot: 
+@drawable: 
+
+
+<!-- ##### FUNCTION gtk_plot_get_drawable ##### -->
+<para>
+
+</para>
+
+@plot: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_set_pc ##### -->
+<para>
+
+</para>
+
+@plot: 
+@pc: 
+
+
+<!-- ##### FUNCTION gtk_plot_set_background_pixmap ##### -->
+<para>
+
+</para>
+
+@plot: 
+@pixmap: 
+
+
+<!-- ##### FUNCTION gtk_plot_set_transparent ##### -->
+<para>
+
+</para>
+
+@plot: 
+@transparent: 
+
+
+<!-- ##### FUNCTION gtk_plot_is_transparent ##### -->
+<para>
+
+</para>
+
+@plot: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_get_position ##### -->
+<para>
+
+</para>
+
+@plot: 
+@x: 
+@y: 
+
+
+<!-- ##### FUNCTION gtk_plot_get_size ##### -->
+<para>
+
+</para>
+
+@plot: 
+@width: 
+@height: 
+
+
+<!-- ##### FUNCTION gtk_plot_get_internal_allocation ##### -->
+<para>
+
+</para>
+
+@plot: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_set_background ##### -->
+<para>
+
+</para>
+
+@plot: 
+@bg_color: 
+
+
+<!-- ##### FUNCTION gtk_plot_paint ##### -->
+<para>
+
+</para>
+
+@plot: 
+
+
+<!-- ##### FUNCTION gtk_plot_refresh ##### -->
+<para>
+
+</para>
+
+@plot: 
+@drawing_area: 
+
+
+<!-- ##### FUNCTION gtk_plot_move ##### -->
+<para>
+
+</para>
+
+@plot: 
+@x: 
+@y: 
+
+
+<!-- ##### FUNCTION gtk_plot_resize ##### -->
+<para>
+
+</para>
+
+@plot: 
+@width: 
+@height: 
+
+
+<!-- ##### FUNCTION gtk_plot_set_magnification ##### -->
+<para>
+
+</para>
+
+@plot: 
+@magnification: 
+
+
+<!-- ##### FUNCTION gtk_plot_move_resize ##### -->
+<para>
+
+</para>
+
+@plot: 
+@x: 
+@y: 
+@width: 
+@height: 
+
+
+<!-- ##### FUNCTION gtk_plot_get_pixel ##### -->
+<para>
+
+</para>
+
+@plot: 
+@xx: 
+@yy: 
+@x: 
+@y: 
+
+
+<!-- ##### FUNCTION gtk_plot_get_point ##### -->
+<para>
+
+</para>
+
+@plot: 
+@x: 
+@y: 
+@xx: 
+@yy: 
+
+
+<!-- ##### FUNCTION gtk_plot_clip_data ##### -->
+<para>
+
+</para>
+
+@plot: 
+@clip: 
+
+
+<!-- ##### FUNCTION gtk_plot_set_xrange ##### -->
+<para>
+
+</para>
+
+@plot: 
+@xmin: 
+@xmax: 
+
+
+<!-- ##### FUNCTION gtk_plot_set_yrange ##### -->
+<para>
+
+</para>
+
+@plot: 
+@ymin: 
+@ymax: 
+
+
+<!-- ##### FUNCTION gtk_plot_set_range ##### -->
+<para>
+
+</para>
+
+@plot: 
+@xmin: 
+@xmax: 
+@ymin: 
+@ymax: 
+
+
+<!-- ##### FUNCTION gtk_plot_autoscale ##### -->
+<para>
+
+</para>
+
+@plot: 
+
+
+<!-- ##### FUNCTION gtk_plot_get_xrange ##### -->
+<para>
+
+</para>
+
+@plot: 
+@xmin: 
+@xmax: 
+
+
+<!-- ##### FUNCTION gtk_plot_get_yrange ##### -->
+<para>
+
+</para>
+
+@plot: 
+@ymin: 
+@ymax: 
+
+
+<!-- ##### FUNCTION gtk_plot_set_xscale ##### -->
+<para>
+
+</para>
+
+@plot: 
+@scale_type: 
+
+
+<!-- ##### FUNCTION gtk_plot_set_yscale ##### -->
+<para>
+
+</para>
+
+@plot: 
+@scale_type: 
+
+
+<!-- ##### FUNCTION gtk_plot_get_xscale ##### -->
+<para>
+
+</para>
+
+@plot: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_get_yscale ##### -->
+<para>
+
+</para>
+
+@plot: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_reflect_x ##### -->
+<para>
+
+</para>
+
+@plot: 
+@reflect: 
+
+
+<!-- ##### FUNCTION gtk_plot_reflect_y ##### -->
+<para>
+
+</para>
+
+@plot: 
+@reflect: 
+
+
+<!-- ##### FUNCTION gtk_plot_is_x_reflected ##### -->
+<para>
+
+</para>
+
+@plot: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_is_y_reflected ##### -->
+<para>
+
+</para>
+
+@plot: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_put_text ##### -->
+<para>
+
+</para>
+
+@plot: 
+@x: 
+@y: 
+@font: 
+@height: 
+@angle: 
+@fg: 
+@bg: 
+@transparent: 
+@justification: 
+@text: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_remove_text ##### -->
+<para>
+
+</para>
+
+@plot: 
+@text: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_text_get_size ##### -->
+<para>
+
+</para>
+
+@text: 
+@angle: 
+@text_font: 
+@text_height: 
+@width: 
+@height: 
+@ascent: 
+@descent: 
+
+
+<!-- ##### FUNCTION gtk_plot_text_get_area ##### -->
+<para>
+
+</para>
+
+@text: 
+@angle: 
+@just: 
+@font_name: 
+@font_size: 
+@x: 
+@y: 
+@width: 
+@height: 
+
+
+<!-- ##### FUNCTION gtk_plot_text_set_attributes ##### -->
+<para>
+
+</para>
+
+@text_attr: 
+@font: 
+@height: 
+@angle: 
+@fg: 
+@bg: 
+@transparent: 
+@justification: 
+@text: 
+
+
+<!-- ##### FUNCTION gtk_plot_text_set_border ##### -->
+<para>
+
+</para>
+
+@text: 
+@border: 
+@border_space: 
+@border_width: 
+@shadow_width: 
+
+
+<!-- ##### FUNCTION gtk_plot_draw_line ##### -->
+<para>
+
+</para>
+
+@plot: 
+@line: 
+@x1: 
+@y1: 
+@x2: 
+@y2: 
+
+
+<!-- ##### FUNCTION gtk_plot_draw_text ##### -->
+<para>
+
+</para>
+
+@plot: 
+@text: 
+
+
+<!-- ##### FUNCTION gtk_plot_set_ticks ##### -->
+<para>
+
+</para>
+
+@plot: 
+@orientation: 
+@major_step: 
+@nminor: 
+
+
+<!-- ##### FUNCTION gtk_plot_set_major_ticks ##### -->
+<para>
+
+</para>
+
+@plot: 
+@orientation: 
+@major_step: 
+
+
+<!-- ##### FUNCTION gtk_plot_set_minor_ticks ##### -->
+<para>
+
+</para>
+
+@plot: 
+@orientation: 
+@nminor: 
+
+
+<!-- ##### FUNCTION gtk_plot_set_ticks_limits ##### -->
+<para>
+
+</para>
+
+@plot: 
+@orientation: 
+@begin: 
+@end: 
+
+
+<!-- ##### FUNCTION gtk_plot_unset_ticks_limits ##### -->
+<para>
+
+</para>
+
+@plot: 
+@orientation: 
+
+
+<!-- ##### FUNCTION gtk_plot_set_break ##### -->
+<para>
+
+</para>
+
+@plot: 
+@orientation: 
+@min: 
+@max: 
+@step_after: 
+@nminor_after: 
+@scale_after: 
+@pos: 
+
+
+<!-- ##### FUNCTION gtk_plot_remove_break ##### -->
+<para>
+
+</para>
+
+@plot: 
+@orientation: 
+
+
+<!-- ##### FUNCTION gtk_plot_axis_new ##### -->
+<para>
+
+</para>
+
+@orientation: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_axis_construct ##### -->
+<para>
+
+</para>
+
+@axis: 
+@orientation: 
+
+
+<!-- ##### FUNCTION gtk_plot_get_axis ##### -->
+<para>
+
+</para>
+
+@plot: 
+@axis: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_axis_set_visible ##### -->
+<para>
+
+</para>
+
+@axis: 
+@visible: 
+
+
+<!-- ##### FUNCTION gtk_plot_axis_visible ##### -->
+<para>
+
+</para>
+
+@axis: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_axis_set_title ##### -->
+<para>
+
+</para>
+
+@axis: 
+@title: 
+
+
+<!-- ##### FUNCTION gtk_plot_axis_show_title ##### -->
+<para>
+
+</para>
+
+@axis: 
+
+
+<!-- ##### FUNCTION gtk_plot_axis_hide_title ##### -->
+<para>
+
+</para>
+
+@axis: 
+
+
+<!-- ##### FUNCTION gtk_plot_axis_move_title ##### -->
+<para>
+
+</para>
+
+@axis: 
+@angle: 
+@x: 
+@y: 
+
+
+<!-- ##### FUNCTION gtk_plot_axis_justify_title ##### -->
+<para>
+
+</para>
+
+@axis: 
+@justification: 
+
+
+<!-- ##### FUNCTION gtk_plot_axis_set_attributes ##### -->
+<para>
+
+</para>
+
+@axis: 
+@width: 
+@color: 
+
+
+<!-- ##### FUNCTION gtk_plot_axis_get_attributes ##### -->
+<para>
+
+</para>
+
+@axis: 
+@width: 
+@color: 
+
+
+<!-- ##### FUNCTION gtk_plot_axis_set_ticks ##### -->
+<para>
+
+</para>
+
+@axis: 
+@major_step: 
+@nminor: 
+
+
+<!-- ##### FUNCTION gtk_plot_axis_set_major_ticks ##### -->
+<para>
+
+</para>
+
+@axis: 
+@major_step: 
+
+
+<!-- ##### FUNCTION gtk_plot_axis_set_minor_ticks ##### -->
+<para>
+
+</para>
+
+@axis: 
+@nminor: 
+
+
+<!-- ##### FUNCTION gtk_plot_axis_set_ticks_length ##### -->
+<para>
+
+</para>
+
+@axis: 
+@length: 
+
+
+<!-- ##### FUNCTION gtk_plot_axis_set_ticks_width ##### -->
+<para>
+
+</para>
+
+@axis: 
+@width: 
+
+
+<!-- ##### FUNCTION gtk_plot_axis_show_ticks ##### -->
+<para>
+
+</para>
+
+@axis: 
+@major_mask: 
+@minor_mask: 
+
+
+<!-- ##### FUNCTION gtk_plot_axis_set_ticks_limits ##### -->
+<para>
+
+</para>
+
+@axis: 
+@begin: 
+@end: 
+
+
+<!-- ##### FUNCTION gtk_plot_axis_unset_ticks_limits ##### -->
+<para>
+
+</para>
+
+@axis: 
+
+
+<!-- ##### FUNCTION gtk_plot_axis_set_tick_labels ##### -->
+<para>
+
+</para>
+
+@axis: 
+@array: 
+
+
+<!-- ##### FUNCTION gtk_plot_axis_set_break ##### -->
+<para>
+
+</para>
+
+@axis: 
+@min: 
+@max: 
+@step_after: 
+@nminor_after: 
+@scale_after: 
+@pos: 
+
+
+<!-- ##### FUNCTION gtk_plot_axis_remove_break ##### -->
+<para>
+
+</para>
+
+@axis: 
+
+
+<!-- ##### FUNCTION gtk_plot_axis_show_labels ##### -->
+<para>
+
+</para>
+
+@axis: 
+@labels_mask: 
+
+
+<!-- ##### FUNCTION gtk_plot_axis_title_set_attributes ##### -->
+<para>
+
+</para>
+
+@axis: 
+@font: 
+@height: 
+@angle: 
+@fg: 
+@bg: 
+@transparent: 
+@justification: 
+
+
+<!-- ##### FUNCTION gtk_plot_axis_set_labels_attributes ##### -->
+<para>
+
+</para>
+
+@axis: 
+@font: 
+@height: 
+@angle: 
+@fg: 
+@bg: 
+@transparent: 
+@justification: 
+
+
+<!-- ##### MACRO gtk_plot_axis_set_labels_numbers ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### FUNCTION gtk_plot_axis_set_labels_style ##### -->
+<para>
+
+</para>
+
+@axis: 
+@style: 
+@precision: 
+
+
+<!-- ##### FUNCTION gtk_plot_axis_set_labels_offset ##### -->
+<para>
+
+</para>
+
+@axis: 
+@offset: 
+
+
+<!-- ##### FUNCTION gtk_plot_axis_get_labels_offset ##### -->
+<para>
+
+</para>
+
+@axis: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_axis_use_custom_tick_labels ##### -->
+<para>
+
+</para>
+
+@axis: 
+@use: 
+
+
+<!-- ##### FUNCTION gtk_plot_axis_set_labels_suffix ##### -->
+<para>
+
+</para>
+
+@axis: 
+@text: 
+
+
+<!-- ##### FUNCTION gtk_plot_axis_set_labels_prefix ##### -->
+<para>
+
+</para>
+
+@axis: 
+@text: 
+
+
+<!-- ##### FUNCTION gtk_plot_axis_get_labels_suffix ##### -->
+<para>
+
+</para>
+
+@axis: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_axis_get_labels_prefix ##### -->
+<para>
+
+</para>
+
+@axis: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_axis_ticks_recalc ##### -->
+<para>
+
+</para>
+
+@axis: 
+
+
+<!-- ##### FUNCTION gtk_plot_axis_ticks_autoscale ##### -->
+<para>
+
+</para>
+
+@axis: 
+@xmin: 
+@xmax: 
+@precision: 
+
+
+<!-- ##### FUNCTION gtk_plot_axis_ticks_transform ##### -->
+<para>
+
+</para>
+
+@axis: 
+@y: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_axis_ticks_inverse ##### -->
+<para>
+
+</para>
+
+@axis: 
+@x: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_axis_parse_label ##### -->
+<para>
+
+</para>
+
+@axis: 
+@val: 
+@precision: 
+@style: 
+@label: 
+
+
+<!-- ##### FUNCTION gtk_plot_x0_set_visible ##### -->
+<para>
+
+</para>
+
+@plot: 
+@visible: 
+
+
+<!-- ##### FUNCTION gtk_plot_x0_visible ##### -->
+<para>
+
+</para>
+
+@plot: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_y0_set_visible ##### -->
+<para>
+
+</para>
+
+@plot: 
+@visible: 
+
+
+<!-- ##### FUNCTION gtk_plot_y0_visible ##### -->
+<para>
+
+</para>
+
+@plot: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_grids_set_on_top ##### -->
+<para>
+
+</para>
+
+@plot: 
+@on_top: 
+
+
+<!-- ##### FUNCTION gtk_plot_grids_on_top ##### -->
+<para>
+
+</para>
+
+@plot: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_grids_set_visible ##### -->
+<para>
+
+</para>
+
+@plot: 
+@vmajor: 
+@vminor: 
+@hmajor: 
+@hminor: 
+
+
+<!-- ##### FUNCTION gtk_plot_grids_visible ##### -->
+<para>
+
+</para>
+
+@plot: 
+@vmajor: 
+@vminor: 
+@hmajor: 
+@hminor: 
+
+
+<!-- ##### FUNCTION gtk_plot_y0line_set_attributes ##### -->
+<para>
+
+</para>
+
+@plot: 
+@line_style: 
+@width: 
+@color: 
+
+
+<!-- ##### FUNCTION gtk_plot_x0line_set_attributes ##### -->
+<para>
+
+</para>
+
+@plot: 
+@line_style: 
+@width: 
+@color: 
+
+
+<!-- ##### FUNCTION gtk_plot_major_vgrid_set_attributes ##### -->
+<para>
+
+</para>
+
+@plot: 
+@style: 
+@width: 
+@color: 
+
+
+<!-- ##### FUNCTION gtk_plot_minor_vgrid_set_attributes ##### -->
+<para>
+
+</para>
+
+@plot: 
+@line_style: 
+@width: 
+@color: 
+
+
+<!-- ##### FUNCTION gtk_plot_major_hgrid_set_attributes ##### -->
+<para>
+
+</para>
+
+@plot: 
+@line_style: 
+@width: 
+@color: 
+
+
+<!-- ##### FUNCTION gtk_plot_minor_hgrid_set_attributes ##### -->
+<para>
+
+</para>
+
+@plot: 
+@line_style: 
+@width: 
+@color: 
+
+
+<!-- ##### FUNCTION gtk_plot_show_legends ##### -->
+<para>
+
+</para>
+
+@plot: 
+
+
+<!-- ##### FUNCTION gtk_plot_hide_legends ##### -->
+<para>
+
+</para>
+
+@plot: 
+
+
+<!-- ##### FUNCTION gtk_plot_set_legends_border ##### -->
+<para>
+
+</para>
+
+@plot: 
+@legends_border: 
+@shadow_width: 
+
+
+<!-- ##### FUNCTION gtk_plot_legends_move ##### -->
+<para>
+
+</para>
+
+@plot: 
+@x: 
+@y: 
+
+
+<!-- ##### FUNCTION gtk_plot_legends_get_position ##### -->
+<para>
+
+</para>
+
+@plot: 
+@x: 
+@y: 
+
+
+<!-- ##### FUNCTION gtk_plot_legends_get_allocation ##### -->
+<para>
+
+</para>
+
+@plot: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_legends_set_attributes ##### -->
+<para>
+
+</para>
+
+@plot: 
+@font: 
+@height: 
+@foreground: 
+@background: 
+
+
+<!-- ##### FUNCTION gtk_plot_set_line_attributes ##### -->
+<para>
+
+</para>
+
+@plot: 
+@line: 
+
+
+<!-- ##### FUNCTION gtk_plot_add_data ##### -->
+<para>
+
+</para>
+
+@plot: 
+@data: 
+
+
+<!-- ##### FUNCTION gtk_plot_remove_data ##### -->
+<para>
+
+</para>
+
+@plot: 
+@dataset: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_add_function ##### -->
+<para>
+
+</para>
+
+@plot: 
+@function: 
+@Returns: 
+
+

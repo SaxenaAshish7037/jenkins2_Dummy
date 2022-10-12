@@ -1,0 +1,569 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GtkFileList</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="GtkExtra Reference Manual">
+<link rel="up" href="ch03.html" title="Widgets">
+<link rel="prev" href="GtkDirTree.html" title="GtkDirTree">
+<link rel="next" href="GtkFontCombo.html" title="GtkFontCombo">
+<meta name="generator" content="GTK-Doc V1.11 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="part" href="gtkextra.html" title="Part I. GtkExtra Overview">
+<link rel="part" href="gtkextrabase.html" title="Part II. GtkExtra Widgets and Objects">
+<link rel="chapter" href="ch01.html" title="Object Hierarchy">
+<link rel="chapter" href="ch02.html" title="Widget Gallery">
+<link rel="chapter" href="ch03.html" title="Widgets">
+<link rel="chapter" href="ch04.html" title="Data Formatter">
+<link rel="chapter" href="ch05.html" title="GtkExtra Versioning">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="GtkDirTree.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch03.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">GtkExtra Reference Manual</th>
+<td><a accesskey="n" href="GtkFontCombo.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#GtkFileList.synopsis" class="shortcut">Top</a>
+                 | 
+                <a href="#GtkFileList.description" class="shortcut">Description</a>
+                 | 
+                <a href="#GtkFileList.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                 | 
+                <a href="#GtkFileList.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+</td></tr>
+</table>
+<div class="refentry" title="GtkFileList">
+<a name="GtkFileList"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GtkFileList.top_of_page"></a>GtkFileList</span></h2>
+<p>GtkFileList — A file list widget fot GTK</p>
+</td>
+<td valign="top" align="right"><img src="gtkfilelist.jpg"></td>
+</tr></table></div>
+<div class="refsynopsisdiv" title="Synopsis">
+<a name="GtkFileList.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">
+
+#include &lt;gtkextra.h&gt;
+
+                    <a class="link" href="GtkFileList.html#GtkFileList-struct" title="GtkFileList">GtkFileList</a>;
+                    <a class="link" href="GtkFileList.html#GtkFileListItem" title="GtkFileListItem">GtkFileListItem</a>;
+                    <a class="link" href="GtkFileList.html#GtkFileListType" title="GtkFileListType">GtkFileListType</a>;
+<a
+href="http://library.gnome.org/devel/gtk3/GtkWidget.html"
+>GtkWidget</a>*          <a class="link" href="GtkFileList.html#gtk-file-list-new" title="gtk_file_list_new ()">gtk_file_list_new</a>                   (<a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint"
+>guint</a> icon_width,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> mode,
+                                                         const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *path);
+void                <a class="link" href="GtkFileList.html#gtk-file-list-construct" title="gtk_file_list_construct ()">gtk_file_list_construct</a>             (<a class="link" href="GtkFileList.html" title="GtkFileList">GtkFileList</a> *file_list,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint"
+>guint</a> icon_width,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> mode,
+                                                         const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *path);
+void                <a class="link" href="GtkFileList.html#gtk-file-list-set-filter" title="gtk_file_list_set_filter ()">gtk_file_list_set_filter</a>            (<a class="link" href="GtkFileList.html" title="GtkFileList">GtkFileList</a> *file_list,
+                                                         const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *filter);
+<a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>            <a class="link" href="GtkFileList.html#gtk-file-list-open-dir" title="gtk_file_list_open_dir ()">gtk_file_list_open_dir</a>              (<a class="link" href="GtkFileList.html" title="GtkFileList">GtkFileList</a> *file_list,
+                                                         const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *dir_path);
+const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a>*        <a class="link" href="GtkFileList.html#gtk-file-list-get-path" title="gtk_file_list_get_path ()">gtk_file_list_get_path</a>              (<a class="link" href="GtkFileList.html" title="GtkFileList">GtkFileList</a> *file_list);
+const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a>*        <a class="link" href="GtkFileList.html#gtk-file-list-get-filename" title="gtk_file_list_get_filename ()">gtk_file_list_get_filename</a>          (<a class="link" href="GtkFileList.html" title="GtkFileList">GtkFileList</a> *file_list);
+<a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                <a class="link" href="GtkFileList.html#gtk-file-list-get-filetype" title="gtk_file_list_get_filetype ()">gtk_file_list_get_filetype</a>          (<a class="link" href="GtkFileList.html" title="GtkFileList">GtkFileList</a> *file_list);
+<a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                <a class="link" href="GtkFileList.html#gtk-file-list-add-type" title="gtk_file_list_add_type ()">gtk_file_list_add_type</a>              (<a class="link" href="GtkFileList.html" title="GtkFileList">GtkFileList</a> *file_list,
+                                                         const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> **pixmap_data);
+<a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                <a class="link" href="GtkFileList.html#gtk-file-list-add-type-with-pixmap" title="gtk_file_list_add_type_with_pixmap ()">gtk_file_list_add_type_with_pixmap</a>  (<a class="link" href="GtkFileList.html" title="GtkFileList">GtkFileList</a> *file_list,
+                                                         <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Bitmaps-and-Pixmaps.html#GdkPixmap"
+>GdkPixmap</a> *pixmap,
+                                                         <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Bitmaps-and-Pixmaps.html#GdkBitmap"
+>GdkBitmap</a> *mask);
+void                <a class="link" href="GtkFileList.html#gtk-file-list-add-type-filter" title="gtk_file_list_add_type_filter ()">gtk_file_list_add_type_filter</a>       (<a class="link" href="GtkFileList.html" title="GtkFileList">GtkFileList</a> *file_list,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> type,
+                                                         const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *filter);
+</pre>
+</div>
+<div class="refsect1" title="Object Hierarchy">
+<a name="GtkFileList.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a
+href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject"
+>GObject</a>
+   +----<a
+href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned"
+>GInitiallyUnowned</a>
+         +----<a
+href="http://library.gnome.org/devel/gtk3/GtkObject.html"
+>GtkObject</a>
+               +----<a
+href="http://library.gnome.org/devel/gtk3/GtkWidget.html"
+>GtkWidget</a>
+                     +----<a
+href="http://library.gnome.org/devel/gtk3/GtkContainer.html"
+>GtkContainer</a>
+                           +----<a
+href="http://library.gnome.org/devel/gtk3/GtkFixed.html"
+>GtkFixed</a>
+                                 +----<a class="link" href="GtkIconList.html" title="GtkIconList">GtkIconList</a>
+                                       +----GtkFileList
+</pre>
+</div>
+<div class="refsect1" title="Implemented Interfaces">
+<a name="GtkFileList.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+GtkFileList implements
+ AtkImplementorIface and  <a
+href="http://library.gnome.org/devel/gtk3/GtkBuildable.html"
+>GtkBuildable</a>.</p>
+</div>
+<div class="refsect1" title="Description">
+<a name="GtkFileList.description"></a><h2>Description</h2>
+<p>
+It is a GtkIconList subclass that displays the contents of a given directory using fancy icons for different types of files</p>
+<p>
+</p>
+</div>
+<div class="refsect1" title="Details">
+<a name="GtkFileList.details"></a><h2>Details</h2>
+<div class="refsect2" title="GtkFileList">
+<a name="GtkFileList-struct"></a><h3>GtkFileList</h3>
+<pre class="programlisting">typedef struct _GtkFileList GtkFileList;</pre>
+<p>
+The GtkFileList structure contains only private data.
+It should only be accessed through the functions described below.</p>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2" title="GtkFileListItem">
+<a name="GtkFileListItem"></a><h3>GtkFileListItem</h3>
+<pre class="programlisting">typedef struct {
+} GtkFileListItem;
+</pre>
+<p>
+The GtkFileListItem structure contains only private data.
+It should only be accessed through the functions described below.</p>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2" title="GtkFileListType">
+<a name="GtkFileListType"></a><h3>GtkFileListType</h3>
+<pre class="programlisting">typedef struct {
+} GtkFileListType;
+</pre>
+<p>
+The GtkFileListType structure contains only private data.
+It should only be accessed through the functions described below.</p>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2" title="gtk_file_list_new ()">
+<a name="gtk-file-list-new"></a><h3>gtk_file_list_new ()</h3>
+<pre class="programlisting"><a
+href="http://library.gnome.org/devel/gtk3/GtkWidget.html"
+>GtkWidget</a>*          gtk_file_list_new                   (<a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint"
+>guint</a> icon_width,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> mode,
+                                                         const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *path);</pre>
+<p>
+Create a newfile list widget.
+Remark for the 2nd open file window you must use: gtk_icon_file_selection_show_tree(GTK_ICON_FILESEL(filesel), TRUE);</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>icon_width</code></em> :</span></p></td>
+<td> the width of the icon
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>mode</code></em> :</span></p></td>
+<td>GTK_FILE_LIST_SORT_NAME , GTK_FILE_LIST_SORT_TYPE
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>path</code></em> :</span></p></td>
+<td> the path to the files to be be opened in <a class="link" href="GtkFileList.html" title="GtkFileList"><span class="type">GtkFileList</span></a> widget.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> the newly-created <a class="link" href="GtkFileList.html" title="GtkFileList"><span class="type">GtkFileList</span></a> widget.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_file_list_construct ()">
+<a name="gtk-file-list-construct"></a><h3>gtk_file_list_construct ()</h3>
+<pre class="programlisting">void                gtk_file_list_construct             (<a class="link" href="GtkFileList.html" title="GtkFileList">GtkFileList</a> *file_list,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint"
+>guint</a> icon_width,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> mode,
+                                                         const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *path);</pre>
+<p>
+Initializes newfile list widget with specified values.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>file_list</code></em> :</span></p></td>
+<td> <a class="link" href="GtkFileList.html" title="GtkFileList"><span class="type">GtkFileList</span></a> widget
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>icon_width</code></em> :</span></p></td>
+<td> the width of the icon
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>mode</code></em> :</span></p></td>
+<td>GTK_FILE_LIST_SORT_NAME , GTK_FILE_LIST_SORT_TYPE
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>path</code></em> :</span></p></td>
+<td> the path to the files to be be opened in <a class="link" href="GtkFileList.html" title="GtkFileList"><span class="type">GtkFileList</span></a> widget.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_file_list_set_filter ()">
+<a name="gtk-file-list-set-filter"></a><h3>gtk_file_list_set_filter ()</h3>
+<pre class="programlisting">void                gtk_file_list_set_filter            (<a class="link" href="GtkFileList.html" title="GtkFileList">GtkFileList</a> *file_list,
+                                                         const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *filter);</pre>
+<p>
+Sets a filter for files displayed in Open window.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>file_list</code></em> :</span></p></td>
+<td> the <a class="link" href="GtkFileList.html" title="GtkFileList"><span class="type">GtkFileList</span></a> widget.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>filter</code></em> :</span></p></td>
+<td> filter applied to files 
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_file_list_open_dir ()">
+<a name="gtk-file-list-open-dir"></a><h3>gtk_file_list_open_dir ()</h3>
+<pre class="programlisting"><a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>            gtk_file_list_open_dir              (<a class="link" href="GtkFileList.html" title="GtkFileList">GtkFileList</a> *file_list,
+                                                         const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *dir_path);</pre>
+<p>
+Opens the content of specified directory in <a class="link" href="GtkFileList.html" title="GtkFileList"><span class="type">GtkFileList</span></a> widget.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>file_list</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkFileList.html" title="GtkFileList"><span class="type">GtkFileList</span></a> widget
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>dir_path</code></em> :</span></p></td>
+<td> path of directory to be opened in <a class="link" href="GtkFileList.html" title="GtkFileList"><span class="type">GtkFileList</span></a> widget
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> TRUE(succes) or FALSE(failure)
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_file_list_get_path ()">
+<a name="gtk-file-list-get-path"></a><h3>gtk_file_list_get_path ()</h3>
+<pre class="programlisting">const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a>*        gtk_file_list_get_path              (<a class="link" href="GtkFileList.html" title="GtkFileList">GtkFileList</a> *file_list);</pre>
+<p>
+Get the path of the files shown in filelist</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>file_list</code></em> :</span></p></td>
+<td> the <a class="link" href="GtkFileList.html" title="GtkFileList"><span class="type">GtkFileList</span></a> widget.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> the path of files.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_file_list_get_filename ()">
+<a name="gtk-file-list-get-filename"></a><h3>gtk_file_list_get_filename ()</h3>
+<pre class="programlisting">const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a>*        gtk_file_list_get_filename          (<a class="link" href="GtkFileList.html" title="GtkFileList">GtkFileList</a> *file_list);</pre>
+<p>
+Get the path of the files shown in filelist</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>file_list</code></em> :</span></p></td>
+<td> the <a class="link" href="GtkFileList.html" title="GtkFileList"><span class="type">GtkFileList</span></a> widget.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> the filename
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_file_list_get_filetype ()">
+<a name="gtk-file-list-get-filetype"></a><h3>gtk_file_list_get_filetype ()</h3>
+<pre class="programlisting"><a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                gtk_file_list_get_filetype          (<a class="link" href="GtkFileList.html" title="GtkFileList">GtkFileList</a> *file_list);</pre>
+<p>
+Get the <a class="link" href="GtkFileList.html#GtkFileListType" title="GtkFileListType"><span class="type">GtkFileListType</span></a> of selected file in File List.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>file_list</code></em> :</span></p></td>
+<td> the <a class="link" href="GtkFileList.html" title="GtkFileList"><span class="type">GtkFileList</span></a> widget.
+      GTK_FILE_LIST_FILE,
+      GTK_FILE_LIST_HTML,
+      GTK_FILE_LIST_TEXT,
+      GTK_FILE_LIST_DOC,
+      GTK_FILE_LIST_PDF,
+      GTK_FILE_LIST_C,
+      GTK_FILE_LIST_CPP,
+      GTK_FILE_LIST_H,
+      GTK_FILE_LIST_F,
+      GTK_FILE_LIST_JAVA,
+      GTK_FILE_LIST_EXEC,
+      GTK_FILE_LIST_IMG,
+      GTK_FILE_LIST_ARCH,
+      GTK_FILE_LIST_PKG,
+      GTK_FILE_LIST_DEB,
+      GTK_FILE_LIST_RPM,
+      GTK_FILE_LIST_CAT,
+      GTK_FILE_LIST_SOUND,
+      GTK_FILE_LIST_MOVIE,
+      GTK_FILE_LIST_CORE)
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> The <a class="link" href="GtkFileList.html#GtkFileListType" title="GtkFileListType"><span class="type">GtkFileListType</span></a> (   GTK_FILE_LIST_FOLDER,
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_file_list_add_type ()">
+<a name="gtk-file-list-add-type"></a><h3>gtk_file_list_add_type ()</h3>
+<pre class="programlisting"><a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                gtk_file_list_add_type              (<a class="link" href="GtkFileList.html" title="GtkFileList">GtkFileList</a> *file_list,
+                                                         const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> **pixmap_data);</pre>
+<p>
+Add a new file type in a <a class="link" href="GtkFileList.html" title="GtkFileList"><span class="type">GtkFileList</span></a> structure.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>file_list</code></em> :</span></p></td>
+<td> the <a class="link" href="GtkFileList.html" title="GtkFileList"><span class="type">GtkFileList</span></a> widget.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>pixmap_data</code></em> :</span></p></td>
+<td> Pointer to a string containing the XPM data.(last argument of <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Bitmaps-and-Pixmaps.html#gdk-pixmap-create-from-xpm-d"
+><code class="function">gdk_pixmap_create_from_xpm_d()</code></a> ).
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> the identification number given to the added 
+filetype 
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_file_list_add_type_with_pixmap ()">
+<a name="gtk-file-list-add-type-with-pixmap"></a><h3>gtk_file_list_add_type_with_pixmap ()</h3>
+<pre class="programlisting"><a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                gtk_file_list_add_type_with_pixmap  (<a class="link" href="GtkFileList.html" title="GtkFileList">GtkFileList</a> *file_list,
+                                                         <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Bitmaps-and-Pixmaps.html#GdkPixmap"
+>GdkPixmap</a> *pixmap,
+                                                         <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Bitmaps-and-Pixmaps.html#GdkBitmap"
+>GdkBitmap</a> *mask);</pre>
+<p>
+Add a new file type in a <a class="link" href="GtkFileList.html" title="GtkFileList"><span class="type">GtkFileList</span></a> structure.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>file_list</code></em> :</span></p></td>
+<td> the <a class="link" href="GtkFileList.html" title="GtkFileList"><span class="type">GtkFileList</span></a> widget.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>pixmap</code></em> :</span></p></td>
+<td> a <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Bitmaps-and-Pixmaps.html#GdkPixmap"
+><span class="type">GdkPixmap</span></a> object.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>mask</code></em> :</span></p></td>
+<td> a <a
+href="http://library.gnome.org/devel/gdk3/gdk2-Bitmaps-and-Pixmaps.html#GdkBitmap"
+><span class="type">GdkBitmap</span></a> mask.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> the identification number given to the added 
+filetype 
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_file_list_add_type_filter ()">
+<a name="gtk-file-list-add-type-filter"></a><h3>gtk_file_list_add_type_filter ()</h3>
+<pre class="programlisting">void                gtk_file_list_add_type_filter       (<a class="link" href="GtkFileList.html" title="GtkFileList">GtkFileList</a> *file_list,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> type,
+                                                         const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *filter);</pre>
+<p>
+Add a filter for specified file type in a <a class="link" href="GtkFileList.html" title="GtkFileList"><span class="type">GtkFileList</span></a> structure.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>file_list</code></em> :</span></p></td>
+<td> the <a class="link" href="GtkFileList.html" title="GtkFileList"><span class="type">GtkFileList</span></a> widget.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>type</code></em> :</span></p></td>
+<td> file type.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>filter</code></em> :</span></p></td>
+<td> filter for specified type.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.11</div>
+</body>
+</html>

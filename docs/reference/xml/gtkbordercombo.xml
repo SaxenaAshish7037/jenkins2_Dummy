@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+<!ENTITY version SYSTEM "version.xml">
+]>
+<!--ENTITY index-Objects-Grouped SYSTEM "objects_grouped.sgml"-->
+<refentry id="GtkBorderCombo">
+<refmeta>
+<refentrytitle role="top_of_page" id="GtkBorderCombo.top_of_page">GtkBorderCombo</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GTKEXTRA Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>GtkBorderCombo</refname>
+<refpurpose>A border combo widget</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="GtkBorderCombo.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>
+
+#include &lt;gtkextra.h&gt;
+
+                    <link linkend="GtkBorderCombo-struct">GtkBorderCombo</link>;
+<link linkend="GtkWidget">GtkWidget</link> *         <link linkend="gtk-border-combo-new">gtk_border_combo_new</link>                (void);
+</synopsis>
+</refsynopsisdiv>
+
+<refsect1 id="GtkBorderCombo.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+  <link linkend="GObject">GObject</link>
+   +----<link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+         +----<link linkend="GtkObject">GtkObject</link>
+               +----<link linkend="GtkWidget">GtkWidget</link>
+                     +----<link linkend="GtkContainer">GtkContainer</link>
+                           +----<link linkend="GtkBox">GtkBox</link>
+                                 +----<link linkend="GtkHBox">GtkHBox</link>
+                                       +----<link linkend="GtkComboButton">GtkComboButton</link>
+                                             +----GtkBorderCombo
+</synopsis>
+</refsect1>
+
+
+
+<refsect1 id="GtkBorderCombo.implemented-interfaces" role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+GtkBorderCombo implements
+ <link linkend="AtkImplementorIface">AtkImplementorIface</link>,  <link linkend="GtkBuildable">GtkBuildable</link> and  <link linkend="GtkOrientable">GtkOrientable</link>.</para>
+</refsect1>
+
+
+
+<refsect1 id="GtkBorderCombo.signals" role="signal_proto">
+<title role="signal_proto.title">Signals</title>
+<synopsis>
+  &quot;<link linkend="GtkBorderCombo-changed">changed</link>&quot;                                        : Run First
+</synopsis>
+</refsect1>
+
+
+<refsect1 id="GtkBorderCombo.description" role="desc">
+<title role="desc.title">Description</title>
+<para>
+It is a <link linkend="GtkComboBox"><type>GtkComboBox</type></link> subclass with a variety of border styles in the popdown window arranged in a table of togglebuttons.</para>
+<para>
+</para>
+</refsect1>
+
+<refsect1 id="GtkBorderCombo.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="GtkBorderCombo-struct" role="struct">
+<title>GtkBorderCombo</title>
+<indexterm zone="GtkBorderCombo-struct"><primary sortas="GtkBorderCombo">GtkBorderCombo</primary></indexterm><programlisting>typedef struct _GtkBorderCombo GtkBorderCombo;</programlisting>
+<para>
+The GtkBorderCombo struct contains only private data.
+It should only be accessed through the functions described below.</para>
+<para>
+</para></refsect2>
+<refsect2 id="gtk-border-combo-new" role="function">
+<title>gtk_border_combo_new ()</title>
+<indexterm zone="gtk-border-combo-new"><primary sortas="gtk_border_combo_new">gtk_border_combo_new</primary></indexterm><programlisting><link linkend="GtkWidget">GtkWidget</link> *         gtk_border_combo_new                (void);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+
+<refsect1 id="GtkBorderCombo.signal-details" role="signals">
+<title role="signals.title">Signal Details</title>
+<refsect2 id="GtkBorderCombo-changed" role="signal"><title>The <literal>&quot;changed&quot;</literal> signal</title>
+<indexterm zone="GtkBorderCombo-changed"><primary sortas="GtkBorderCombo::changed">GtkBorderCombo::changed</primary></indexterm><programlisting><link linkend="void">void</link>                user_function                      (<link linkend="GtkBorderCombo">GtkBorderCombo</link> *border_combo,
+                                                        <link linkend="gint">gint</link>            selection,
+                                                        <link linkend="gpointer">gpointer</link>        user_data)         : Run First</programlisting>
+<para>
+Emmited when the GtkBorderCombo's state is changed</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>border_combo</parameter>&#160;:</term>
+<listitem><simpara> the <link linkend="GtkBorderCombo"><type>GtkBorderCombo</type></link> object that received the signal
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>selection</parameter>&#160;:</term>
+<listitem><simpara> the number of selected item
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>user_data</parameter>&#160;:</term>
+<listitem><simpara>user data set when the signal handler was connected.</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+</refsect1>
+
+
+
+</refentry>

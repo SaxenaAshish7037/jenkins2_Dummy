@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+<!ENTITY version SYSTEM "version.xml">
+]>
+<!--ENTITY index-Objects-Grouped SYSTEM "objects_grouped.sgml"-->
+<refentry id="GtkDirTree">
+<refmeta>
+<refentrytitle role="top_of_page" id="GtkDirTree.top_of_page">GtkDirTree</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GTKEXTRA Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>GtkDirTree</refname>
+<refpurpose>A directory tree widget for GTK.</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="GtkDirTree.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>
+
+#include &lt;gtkextra.h&gt;
+
+                    <link linkend="GtkDirTree-struct">GtkDirTree</link>;
+                    <link linkend="GtkDirTreeNode">GtkDirTreeNode</link>;
+<link linkend="GtkWidget">GtkWidget</link>*          <link linkend="gtk-dir-tree-new">gtk_dir_tree_new</link>                    (void);
+<link linkend="gint">gint</link>                <link linkend="gtk-dir-tree-open-dir">gtk_dir_tree_open_dir</link>               (<link linkend="GtkDirTree">GtkDirTree</link> *dir_tree,
+                                                         const <link linkend="gchar">gchar</link> *path);
+</synopsis>
+</refsynopsisdiv>
+
+<refsect1 id="GtkDirTree.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+  <link linkend="GObject">GObject</link>
+   +----<link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+         +----<link linkend="GtkObject">GtkObject</link>
+               +----<link linkend="GtkWidget">GtkWidget</link>
+                     +----<link linkend="GtkContainer">GtkContainer</link>
+                           +----<link linkend="GtkCList">GtkCList</link>
+                                 +----<link linkend="GtkCTree">GtkCTree</link>
+                                       +----GtkDirTree
+</synopsis>
+</refsect1>
+
+
+
+<refsect1 id="GtkDirTree.implemented-interfaces" role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+GtkDirTree implements
+ <link linkend="AtkImplementorIface">AtkImplementorIface</link> and  <link linkend="GtkBuildable">GtkBuildable</link>.</para>
+</refsect1>
+
+
+
+
+
+<refsect1 id="GtkDirTree.description" role="desc">
+<title role="desc.title">Description</title>
+<para>
+It is a GtkCTree subclass that allows you to navigate the file-system.</para>
+<para>
+</para>
+</refsect1>
+
+<refsect1 id="GtkDirTree.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="GtkDirTree-struct" role="struct">
+<title>GtkDirTree</title>
+<indexterm zone="GtkDirTree-struct"><primary sortas="GtkDirTree">GtkDirTree</primary></indexterm><programlisting>typedef struct _GtkDirTree GtkDirTree;</programlisting>
+<para>
+The GtkDirTree struct contains only private data.
+It should only be accessed through the functions described below.</para>
+<para>
+</para></refsect2>
+<refsect2 id="GtkDirTreeNode" role="struct">
+<title>GtkDirTreeNode</title>
+<indexterm zone="GtkDirTreeNode"><primary sortas="GtkDirTreeNode">GtkDirTreeNode</primary></indexterm><programlisting>typedef struct {
+  gboolean scanned;
+  gchar *path;
+} GtkDirTreeNode;
+</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="gtk-dir-tree-new" role="function">
+<title>gtk_dir_tree_new ()</title>
+<indexterm zone="gtk-dir-tree-new"><primary sortas="gtk_dir_tree_new">gtk_dir_tree_new</primary></indexterm><programlisting><link linkend="GtkWidget">GtkWidget</link>*          gtk_dir_tree_new                    (void);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-dir-tree-open-dir" role="function">
+<title>gtk_dir_tree_open_dir ()</title>
+<indexterm zone="gtk-dir-tree-open-dir"><primary sortas="gtk_dir_tree_open_dir">gtk_dir_tree_open_dir</primary></indexterm><programlisting><link linkend="gint">gint</link>                gtk_dir_tree_open_dir               (<link linkend="GtkDirTree">GtkDirTree</link> *dir_tree,
+                                                         const <link linkend="gchar">gchar</link> *path);</programlisting>
+<para>
+Open files from directory path in dir_tree widget.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>dir_tree</parameter>&#160;:</term>
+<listitem><simpara> <link linkend="GtkDirTree"><type>GtkDirTree</type></link> widget.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>path</parameter>&#160;:</term>
+<listitem><simpara> <link linkend="gchar"><type>gchar</type></link> path to the dir to be opened.
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara> TRUE(succes) or FALSE(failure).
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+
+
+
+
+</refentry>

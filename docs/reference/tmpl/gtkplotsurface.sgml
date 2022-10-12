@@ -1,0 +1,491 @@
+<!-- ##### SECTION Title ##### -->
+GtkPlotSurface
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### STRUCT GtkPlotSurface ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### ARG GtkPlotSurface:ambient ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotSurface:mesh-color ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotSurface:mesh-style ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotSurface:mesh-width ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotSurface:nx ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotSurface:ny ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotSurface:show-grid ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotSurface:show-mesh ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotSurface:transparent ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotSurface:use-amplitud ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotSurface:use-height ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotSurface:vector-light ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotSurface:xstep ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotSurface:ystep ##### -->
+<para>
+
+</para>
+
+<!-- ##### STRUCT GtkPlotPolygon ##### -->
+<para>
+
+</para>
+
+@t: 
+@xyz: 
+@p: 
+@n: 
+@level: 
+@cut_level: 
+@sublevel: 
+
+<!-- ##### FUNCTION gtk_plot_surface_new ##### -->
+<para>
+
+</para>
+
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_surface_new_function ##### -->
+<para>
+
+</para>
+
+@function: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_surface_construct_function ##### -->
+<para>
+
+</para>
+
+@surface: 
+@function: 
+
+
+<!-- ##### FUNCTION gtk_plot_surface_set_color ##### -->
+<para>
+
+</para>
+
+@data: 
+@color: 
+
+
+<!-- ##### FUNCTION gtk_plot_surface_set_shadow ##### -->
+<para>
+
+</para>
+
+@data: 
+@color: 
+
+
+<!-- ##### FUNCTION gtk_plot_surface_set_grid_foreground ##### -->
+<para>
+
+</para>
+
+@data: 
+@foreground: 
+
+
+<!-- ##### FUNCTION gtk_plot_surface_set_grid_background ##### -->
+<para>
+
+</para>
+
+@data: 
+@background: 
+
+
+<!-- ##### FUNCTION gtk_plot_surface_set_grid_visible ##### -->
+<para>
+
+</para>
+
+@data: 
+@visible: 
+
+
+<!-- ##### FUNCTION gtk_plot_surface_get_grid_visible ##### -->
+<para>
+
+</para>
+
+@data: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_surface_set_mesh_visible ##### -->
+<para>
+
+</para>
+
+@data: 
+@visible: 
+
+
+<!-- ##### FUNCTION gtk_plot_surface_get_mesh_visible ##### -->
+<para>
+
+</para>
+
+@data: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_surface_set_light ##### -->
+<para>
+
+</para>
+
+@data: 
+@x: 
+@y: 
+@z: 
+
+
+<!-- ##### FUNCTION gtk_plot_surface_set_ambient ##### -->
+<para>
+
+</para>
+
+@data: 
+@ambient: 
+
+
+<!-- ##### FUNCTION gtk_plot_surface_use_height_gradient ##### -->
+<para>
+
+</para>
+
+@data: 
+@use_gradient: 
+
+
+<!-- ##### FUNCTION gtk_plot_surface_use_amplitud ##### -->
+<para>
+
+</para>
+
+@data: 
+@use_amplitud: 
+
+
+<!-- ##### FUNCTION gtk_plot_surface_set_transparent ##### -->
+<para>
+
+</para>
+
+@data: 
+@transparent: 
+
+
+<!-- ##### FUNCTION gtk_plot_surface_set_points ##### -->
+<para>
+
+</para>
+
+@data: 
+@x: 
+@y: 
+@z: 
+@dx: 
+@dy: 
+@dz: 
+@nx: 
+@ny: 
+
+
+<!-- ##### FUNCTION gtk_plot_surface_get_points ##### -->
+<para>
+
+</para>
+
+@data: 
+@x: 
+@y: 
+@z: 
+@dx: 
+@dy: 
+@dz: 
+@nx: 
+@ny: 
+
+
+<!-- ##### FUNCTION gtk_plot_surface_set_x ##### -->
+<para>
+
+</para>
+
+@data: 
+@x: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_surface_set_y ##### -->
+<para>
+
+</para>
+
+@data: 
+@y: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_surface_set_z ##### -->
+<para>
+
+</para>
+
+@data: 
+@z: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_surface_set_dx ##### -->
+<para>
+
+</para>
+
+@data: 
+@dx: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_surface_set_dy ##### -->
+<para>
+
+</para>
+
+@data: 
+@dy: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_surface_set_dz ##### -->
+<para>
+
+</para>
+
+@data: 
+@dz: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_surface_get_x ##### -->
+<para>
+
+</para>
+
+@dataset: 
+@nx: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_surface_get_y ##### -->
+<para>
+
+</para>
+
+@dataset: 
+@ny: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_surface_get_z ##### -->
+<para>
+
+</para>
+
+@dataset: 
+@nx: 
+@ny: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_surface_get_dx ##### -->
+<para>
+
+</para>
+
+@dataset: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_surface_get_dy ##### -->
+<para>
+
+</para>
+
+@dataset: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_surface_get_dz ##### -->
+<para>
+
+</para>
+
+@dataset: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_surface_set_nx ##### -->
+<para>
+
+</para>
+
+@dataset: 
+@nx: 
+
+
+<!-- ##### FUNCTION gtk_plot_surface_set_ny ##### -->
+<para>
+
+</para>
+
+@dataset: 
+@ny: 
+
+
+<!-- ##### FUNCTION gtk_plot_surface_get_nx ##### -->
+<para>
+
+</para>
+
+@dataset: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_surface_get_ny ##### -->
+<para>
+
+</para>
+
+@dataset: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_surface_set_xstep ##### -->
+<para>
+
+</para>
+
+@dataset: 
+@xstep: 
+
+
+<!-- ##### FUNCTION gtk_plot_surface_set_ystep ##### -->
+<para>
+
+</para>
+
+@dataset: 
+@ystep: 
+
+
+<!-- ##### FUNCTION gtk_plot_surface_get_xstep ##### -->
+<para>
+
+</para>
+
+@dataset: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_surface_get_ystep ##### -->
+<para>
+
+</para>
+
+@dataset: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_surface_build_mesh ##### -->
+<para>
+
+</para>
+
+@surface: 
+
+
+<!-- ##### FUNCTION gtk_plot_surface_recalc_nodes ##### -->
+<para>
+
+</para>
+
+@surface: 
+
+

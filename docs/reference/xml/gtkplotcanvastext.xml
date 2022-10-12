@@ -1,0 +1,186 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+<!ENTITY version SYSTEM "version.xml">
+]>
+<!--ENTITY index-Objects-Grouped SYSTEM "objects_grouped.sgml"-->
+<refentry id="GtkPlotCanvasText">
+<refmeta>
+<refentrytitle role="top_of_page" id="GtkPlotCanvasText.top_of_page">GtkPlotCanvasText</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GTKEXTRA Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>GtkPlotCanvasText</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="GtkPlotCanvasText.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>
+
+#include &lt;gtkextra.h&gt;
+
+                    <link linkend="GtkPlotCanvasText-struct">GtkPlotCanvasText</link>;
+<link linkend="GtkPlotCanvasChild">GtkPlotCanvasChild</link> * <link linkend="gtk-plot-canvas-text-new">gtk_plot_canvas_text_new</link>           (const <link linkend="gchar">gchar</link> *font,
+                                                         <link linkend="gint">gint</link> height,
+                                                         <link linkend="gint">gint</link> angle,
+                                                         const <link linkend="GdkColor">GdkColor</link> *fg,
+                                                         const <link linkend="GdkColor">GdkColor</link> *bg,
+                                                         <link linkend="gboolean">gboolean</link> transparent,
+                                                         <link linkend="GtkJustification">GtkJustification</link> justification,
+                                                         const <link linkend="gchar">gchar</link> *real_text);
+<link linkend="void">void</link>                <link linkend="gtk-plot-canvas-text-set-attributes">gtk_plot_canvas_text_set_attributes</link> (<link linkend="GtkPlotCanvasText">GtkPlotCanvasText</link> *text,
+                                                         const <link linkend="gchar">gchar</link> *font,
+                                                         <link linkend="gint">gint</link> height,
+                                                         <link linkend="gint">gint</link> angle,
+                                                         const <link linkend="GdkColor">GdkColor</link> *fg,
+                                                         const <link linkend="GdkColor">GdkColor</link> *bg,
+                                                         <link linkend="gboolean">gboolean</link> transparent,
+                                                         <link linkend="GtkJustification">GtkJustification</link> justification,
+                                                         const <link linkend="gchar">gchar</link> *real_text);
+</synopsis>
+</refsynopsisdiv>
+
+<refsect1 id="GtkPlotCanvasText.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+  <link linkend="GObject">GObject</link>
+   +----<link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+         +----<link linkend="GtkObject">GtkObject</link>
+               +----<link linkend="GtkPlotCanvasChild">GtkPlotCanvasChild</link>
+                     +----GtkPlotCanvasText
+</synopsis>
+</refsect1>
+
+
+
+
+
+<refsect1 id="GtkPlotCanvasText.properties" role="properties">
+<title role="properties.title">Properties</title>
+<synopsis>
+  &quot;<link linkend="GtkPlotCanvasText--text">text</link>&quot;                     <link linkend="gpointer">gpointer</link>              : Read / Write
+</synopsis>
+</refsect1>
+
+
+
+<refsect1 id="GtkPlotCanvasText.description" role="desc">
+<title role="desc.title">Description</title>
+<para>
+FIXME:: need long description</para>
+<para>
+</para>
+</refsect1>
+
+<refsect1 id="GtkPlotCanvasText.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="GtkPlotCanvasText-struct" role="struct">
+<title>GtkPlotCanvasText</title>
+<indexterm zone="GtkPlotCanvasText-struct"><primary sortas="GtkPlotCanvasText">GtkPlotCanvasText</primary></indexterm><programlisting>typedef struct _GtkPlotCanvasText GtkPlotCanvasText;</programlisting>
+<para>
+The GtkPlotCanvasText struct contains only private data.
+It should only be accessed through the functions described below.</para>
+<para>
+</para></refsect2>
+<refsect2 id="gtk-plot-canvas-text-new" role="function">
+<title>gtk_plot_canvas_text_new ()</title>
+<indexterm zone="gtk-plot-canvas-text-new"><primary sortas="gtk_plot_canvas_text_new">gtk_plot_canvas_text_new</primary></indexterm><programlisting><link linkend="GtkPlotCanvasChild">GtkPlotCanvasChild</link> * gtk_plot_canvas_text_new           (const <link linkend="gchar">gchar</link> *font,
+                                                         <link linkend="gint">gint</link> height,
+                                                         <link linkend="gint">gint</link> angle,
+                                                         const <link linkend="GdkColor">GdkColor</link> *fg,
+                                                         const <link linkend="GdkColor">GdkColor</link> *bg,
+                                                         <link linkend="gboolean">gboolean</link> transparent,
+                                                         <link linkend="GtkJustification">GtkJustification</link> justification,
+                                                         const <link linkend="gchar">gchar</link> *real_text);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>font</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>height</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>angle</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>fg</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>bg</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>transparent</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>justification</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>real_text</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-canvas-text-set-attributes" role="function">
+<title>gtk_plot_canvas_text_set_attributes ()</title>
+<indexterm zone="gtk-plot-canvas-text-set-attributes"><primary sortas="gtk_plot_canvas_text_set_attributes">gtk_plot_canvas_text_set_attributes</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_canvas_text_set_attributes (<link linkend="GtkPlotCanvasText">GtkPlotCanvasText</link> *text,
+                                                         const <link linkend="gchar">gchar</link> *font,
+                                                         <link linkend="gint">gint</link> height,
+                                                         <link linkend="gint">gint</link> angle,
+                                                         const <link linkend="GdkColor">GdkColor</link> *fg,
+                                                         const <link linkend="GdkColor">GdkColor</link> *bg,
+                                                         <link linkend="gboolean">gboolean</link> transparent,
+                                                         <link linkend="GtkJustification">GtkJustification</link> justification,
+                                                         const <link linkend="gchar">gchar</link> *real_text);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>text</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlotCanvasText"><type>GtkPlotCanvasText</type></link>.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>font</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>height</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>angle</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>fg</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>bg</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>transparent</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>justification</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>real_text</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+<refsect1 id="GtkPlotCanvasText.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GtkPlotCanvasText--text" role="property"><title>The <literal>&quot;text&quot;</literal> property</title>
+<indexterm zone="GtkPlotCanvasText--text"><primary sortas="GtkPlotCanvasText:text">GtkPlotCanvasText:text</primary></indexterm><programlisting>  &quot;text&quot;                     <link linkend="gpointer">gpointer</link>              : Read / Write</programlisting>
+<para>Text Attributes.</para></refsect2>
+</refsect1>
+
+
+
+
+</refentry>

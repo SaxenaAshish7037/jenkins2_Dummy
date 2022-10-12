@@ -1,0 +1,660 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GtkPlotFlux</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="GtkExtra Reference Manual">
+<link rel="up" href="ch03.html" title="Widgets">
+<link rel="prev" href="gtkextra-GtkPlotDTriangle.html" title="GtkPlotDTriangle">
+<link rel="next" href="GtkPlotGdk.html" title="GtkPlotGdk">
+<meta name="generator" content="GTK-Doc V1.11 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="part" href="gtkextra.html" title="Part I. GtkExtra Overview">
+<link rel="part" href="gtkextrabase.html" title="Part II. GtkExtra Widgets and Objects">
+<link rel="chapter" href="ch01.html" title="Object Hierarchy">
+<link rel="chapter" href="ch02.html" title="Widget Gallery">
+<link rel="chapter" href="ch03.html" title="Widgets">
+<link rel="chapter" href="ch04.html" title="Data Formatter">
+<link rel="chapter" href="ch05.html" title="GtkExtra Versioning">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="gtkextra-GtkPlotDTriangle.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch03.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">GtkExtra Reference Manual</th>
+<td><a accesskey="n" href="GtkPlotGdk.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#GtkPlotFlux.synopsis" class="shortcut">Top</a>
+                 | 
+                <a href="#GtkPlotFlux.description" class="shortcut">Description</a>
+                 | 
+                <a href="#GtkPlotFlux.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                 | 
+                <a href="#GtkPlotFlux.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+                 | 
+                <a href="#GtkPlotFlux.properties" class="shortcut">Properties</a>
+</td></tr>
+</table>
+<div class="refentry" title="GtkPlotFlux">
+<a name="GtkPlotFlux"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GtkPlotFlux.top_of_page"></a>GtkPlotFlux</span></h2>
+<p>GtkPlotFlux</p>
+</td>
+<td valign="top" align="right"><img src=""></td>
+</tr></table></div>
+<div class="refsynopsisdiv" title="Synopsis">
+<a name="GtkPlotFlux.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">
+
+#include &lt;gtkextra.h&gt;
+
+                    <a class="link" href="GtkPlotFlux.html#GtkPlotFlux-struct" title="GtkPlotFlux">GtkPlotFlux</a>;
+<a
+href="http://library.gnome.org/devel/gtk3/GtkWidget.html"
+>GtkWidget</a>*          <a class="link" href="GtkPlotFlux.html#gtk-plot-flux-new" title="gtk_plot_flux_new ()">gtk_plot_flux_new</a>                   (void);
+void                <a class="link" href="GtkPlotFlux.html#gtk-plot-flux-set-arrow" title="gtk_plot_flux_set_arrow ()">gtk_plot_flux_set_arrow</a>             (<a class="link" href="GtkPlotFlux.html" title="GtkPlotFlux">GtkPlotFlux</a> *flux,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> arrow_length,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> arrow_width,
+                                                         <a class="link" href="GtkPlot.html#GtkPlotSymbolStyle" title="enum GtkPlotSymbolStyle">GtkPlotSymbolStyle</a> arrow_style);
+void                <a class="link" href="GtkPlotFlux.html#gtk-plot-flux-get-arrow" title="gtk_plot_flux_get_arrow ()">gtk_plot_flux_get_arrow</a>             (<a class="link" href="GtkPlotFlux.html" title="GtkPlotFlux">GtkPlotFlux</a> *flux,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> *arrow_length,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> *arrow_width,
+                                                         <a class="link" href="GtkPlot.html#GtkPlotSymbolStyle" title="enum GtkPlotSymbolStyle">GtkPlotSymbolStyle</a> *arrow_style);
+void                <a class="link" href="GtkPlotFlux.html#gtk-plot-flux-center" title="gtk_plot_flux_center ()">gtk_plot_flux_center</a>                (<a class="link" href="GtkPlotFlux.html" title="GtkPlotFlux">GtkPlotFlux</a> *flux,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> center);
+<a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>            <a class="link" href="GtkPlotFlux.html#gtk-plot-flux-is-centered" title="gtk_plot_flux_is_centered ()">gtk_plot_flux_is_centered</a>           (<a class="link" href="GtkPlotFlux.html" title="GtkPlotFlux">GtkPlotFlux</a> *flux);
+void                <a class="link" href="GtkPlotFlux.html#gtk-plot-flux-show-scale" title="gtk_plot_flux_show_scale ()">gtk_plot_flux_show_scale</a>            (<a class="link" href="GtkPlotFlux.html" title="GtkPlotFlux">GtkPlotFlux</a> *flux,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> show);
+void                <a class="link" href="GtkPlotFlux.html#gtk-plot-flux-set-scale-max" title="gtk_plot_flux_set_scale_max ()">gtk_plot_flux_set_scale_max</a>         (<a class="link" href="GtkPlotFlux.html" title="GtkPlotFlux">GtkPlotFlux</a> *flux,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> scale_max);
+void                <a class="link" href="GtkPlotFlux.html#gtk-plot-flux-set-size-max" title="gtk_plot_flux_set_size_max ()">gtk_plot_flux_set_size_max</a>          (<a class="link" href="GtkPlotFlux.html" title="GtkPlotFlux">GtkPlotFlux</a> *flux,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint"
+>guint</a> size_max);
+void                <a class="link" href="GtkPlotFlux.html#gtk-plot-flux-set-labels-precision" title="gtk_plot_flux_set_labels_precision ()">gtk_plot_flux_set_labels_precision</a>  (<a class="link" href="GtkPlotFlux.html" title="GtkPlotFlux">GtkPlotFlux</a> *flux,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> precision);
+void                <a class="link" href="GtkPlotFlux.html#gtk-plot-flux-set-labels-style" title="gtk_plot_flux_set_labels_style ()">gtk_plot_flux_set_labels_style</a>      (<a class="link" href="GtkPlotFlux.html" title="GtkPlotFlux">GtkPlotFlux</a> *flux,
+                                                         <a class="link" href="GtkPlot.html#GtkPlotLabelStyle" title="enum GtkPlotLabelStyle">GtkPlotLabelStyle</a> style);
+void                <a class="link" href="GtkPlotFlux.html#gtk-plot-flux-set-labels-prefix" title="gtk_plot_flux_set_labels_prefix ()">gtk_plot_flux_set_labels_prefix</a>     (<a class="link" href="GtkPlotFlux.html" title="GtkPlotFlux">GtkPlotFlux</a> *flux,
+                                                         const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *prefix);
+void                <a class="link" href="GtkPlotFlux.html#gtk-plot-flux-set-labels-suffix" title="gtk_plot_flux_set_labels_suffix ()">gtk_plot_flux_set_labels_suffix</a>     (<a class="link" href="GtkPlotFlux.html" title="GtkPlotFlux">GtkPlotFlux</a> *flux,
+                                                         const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *suffix);
+</pre>
+</div>
+<div class="refsect1" title="Object Hierarchy">
+<a name="GtkPlotFlux.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a
+href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject"
+>GObject</a>
+   +----<a
+href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned"
+>GInitiallyUnowned</a>
+         +----<a
+href="http://library.gnome.org/devel/gtk3/GtkObject.html"
+>GtkObject</a>
+               +----<a
+href="http://library.gnome.org/devel/gtk3/GtkWidget.html"
+>GtkWidget</a>
+                     +----<a class="link" href="GtkPlotData.html" title="GtkPlotData">GtkPlotData</a>
+                           +----GtkPlotFlux
+</pre>
+</div>
+<div class="refsect1" title="Implemented Interfaces">
+<a name="GtkPlotFlux.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+GtkPlotFlux implements
+ AtkImplementorIface and  <a
+href="http://library.gnome.org/devel/gtk3/GtkBuildable.html"
+>GtkBuildable</a>.</p>
+</div>
+<div class="refsect1" title="Properties">
+<a name="GtkPlotFlux.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="GtkPlotFlux.html#GtkPlotFlux--centered" title='The "centered" property'>centered</a>"                 <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write
+  "<a class="link" href="GtkPlotFlux.html#GtkPlotFlux--labels-precision" title='The "labels-precision" property'>labels-precision</a>"         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write
+  "<a class="link" href="GtkPlotFlux.html#GtkPlotFlux--labels-prefix" title='The "labels-prefix" property'>labels-prefix</a>"            <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a>*                : Read / Write
+  "<a class="link" href="GtkPlotFlux.html#GtkPlotFlux--labels-style" title='The "labels-style" property'>labels-style</a>"             <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write
+  "<a class="link" href="GtkPlotFlux.html#GtkPlotFlux--labels-suffix" title='The "labels-suffix" property'>labels-suffix</a>"            <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a>*                : Read / Write
+  "<a class="link" href="GtkPlotFlux.html#GtkPlotFlux--length" title='The "length" property'>length</a>"                   <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write
+  "<a class="link" href="GtkPlotFlux.html#GtkPlotFlux--scale-max" title='The "scale-max" property'>scale-max</a>"                <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a>               : Read / Write
+  "<a class="link" href="GtkPlotFlux.html#GtkPlotFlux--show-scale" title='The "show-scale" property'>show-scale</a>"               <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write
+  "<a class="link" href="GtkPlotFlux.html#GtkPlotFlux--size-max" title='The "size-max" property'>size-max</a>"                 <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write
+  "<a class="link" href="GtkPlotFlux.html#GtkPlotFlux--style" title='The "style" property'>style</a>"                    <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write
+  "<a class="link" href="GtkPlotFlux.html#GtkPlotFlux--width" title='The "width" property'>width</a>"                    <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write
+</pre>
+</div>
+<div class="refsect1" title="Description">
+<a name="GtkPlotFlux.description"></a><h2>Description</h2>
+<p>
+FIXME:: Need long description.</p>
+<p>
+</p>
+</div>
+<div class="refsect1" title="Details">
+<a name="GtkPlotFlux.details"></a><h2>Details</h2>
+<div class="refsect2" title="GtkPlotFlux">
+<a name="GtkPlotFlux-struct"></a><h3>GtkPlotFlux</h3>
+<pre class="programlisting">typedef struct _GtkPlotFlux GtkPlotFlux;</pre>
+<p>
+The GtkPlotFlux struct contains only private data.
+It should only be accessed through the functions described below.</p>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_flux_new ()">
+<a name="gtk-plot-flux-new"></a><h3>gtk_plot_flux_new ()</h3>
+<pre class="programlisting"><a
+href="http://library.gnome.org/devel/gtk3/GtkWidget.html"
+>GtkWidget</a>*          gtk_plot_flux_new                   (void);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_flux_set_arrow ()">
+<a name="gtk-plot-flux-set-arrow"></a><h3>gtk_plot_flux_set_arrow ()</h3>
+<pre class="programlisting">void                gtk_plot_flux_set_arrow             (<a class="link" href="GtkPlotFlux.html" title="GtkPlotFlux">GtkPlotFlux</a> *flux,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> arrow_length,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> arrow_width,
+                                                         <a class="link" href="GtkPlot.html#GtkPlotSymbolStyle" title="enum GtkPlotSymbolStyle">GtkPlotSymbolStyle</a> arrow_style);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>flux</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>arrow_length</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>arrow_width</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>arrow_style</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_flux_get_arrow ()">
+<a name="gtk-plot-flux-get-arrow"></a><h3>gtk_plot_flux_get_arrow ()</h3>
+<pre class="programlisting">void                gtk_plot_flux_get_arrow             (<a class="link" href="GtkPlotFlux.html" title="GtkPlotFlux">GtkPlotFlux</a> *flux,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> *arrow_length,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> *arrow_width,
+                                                         <a class="link" href="GtkPlot.html#GtkPlotSymbolStyle" title="enum GtkPlotSymbolStyle">GtkPlotSymbolStyle</a> *arrow_style);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>flux</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>arrow_length</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>arrow_width</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>arrow_style</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_flux_center ()">
+<a name="gtk-plot-flux-center"></a><h3>gtk_plot_flux_center ()</h3>
+<pre class="programlisting">void                gtk_plot_flux_center                (<a class="link" href="GtkPlotFlux.html" title="GtkPlotFlux">GtkPlotFlux</a> *flux,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> center);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>flux</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>center</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_flux_is_centered ()">
+<a name="gtk-plot-flux-is-centered"></a><h3>gtk_plot_flux_is_centered ()</h3>
+<pre class="programlisting"><a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>            gtk_plot_flux_is_centered           (<a class="link" href="GtkPlotFlux.html" title="GtkPlotFlux">GtkPlotFlux</a> *flux);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>flux</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_flux_show_scale ()">
+<a name="gtk-plot-flux-show-scale"></a><h3>gtk_plot_flux_show_scale ()</h3>
+<pre class="programlisting">void                gtk_plot_flux_show_scale            (<a class="link" href="GtkPlotFlux.html" title="GtkPlotFlux">GtkPlotFlux</a> *flux,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> show);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>flux</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>show</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_flux_set_scale_max ()">
+<a name="gtk-plot-flux-set-scale-max"></a><h3>gtk_plot_flux_set_scale_max ()</h3>
+<pre class="programlisting">void                gtk_plot_flux_set_scale_max         (<a class="link" href="GtkPlotFlux.html" title="GtkPlotFlux">GtkPlotFlux</a> *flux,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> scale_max);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>flux</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>scale_max</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_flux_set_size_max ()">
+<a name="gtk-plot-flux-set-size-max"></a><h3>gtk_plot_flux_set_size_max ()</h3>
+<pre class="programlisting">void                gtk_plot_flux_set_size_max          (<a class="link" href="GtkPlotFlux.html" title="GtkPlotFlux">GtkPlotFlux</a> *flux,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint"
+>guint</a> size_max);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>flux</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>size_max</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_flux_set_labels_precision ()">
+<a name="gtk-plot-flux-set-labels-precision"></a><h3>gtk_plot_flux_set_labels_precision ()</h3>
+<pre class="programlisting">void                gtk_plot_flux_set_labels_precision  (<a class="link" href="GtkPlotFlux.html" title="GtkPlotFlux">GtkPlotFlux</a> *flux,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> precision);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>flux</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>precision</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_flux_set_labels_style ()">
+<a name="gtk-plot-flux-set-labels-style"></a><h3>gtk_plot_flux_set_labels_style ()</h3>
+<pre class="programlisting">void                gtk_plot_flux_set_labels_style      (<a class="link" href="GtkPlotFlux.html" title="GtkPlotFlux">GtkPlotFlux</a> *flux,
+                                                         <a class="link" href="GtkPlot.html#GtkPlotLabelStyle" title="enum GtkPlotLabelStyle">GtkPlotLabelStyle</a> style);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>flux</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>style</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_flux_set_labels_prefix ()">
+<a name="gtk-plot-flux-set-labels-prefix"></a><h3>gtk_plot_flux_set_labels_prefix ()</h3>
+<pre class="programlisting">void                gtk_plot_flux_set_labels_prefix     (<a class="link" href="GtkPlotFlux.html" title="GtkPlotFlux">GtkPlotFlux</a> *flux,
+                                                         const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *prefix);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>flux</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>prefix</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_flux_set_labels_suffix ()">
+<a name="gtk-plot-flux-set-labels-suffix"></a><h3>gtk_plot_flux_set_labels_suffix ()</h3>
+<pre class="programlisting">void                gtk_plot_flux_set_labels_suffix     (<a class="link" href="GtkPlotFlux.html" title="GtkPlotFlux">GtkPlotFlux</a> *flux,
+                                                         const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *suffix);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>flux</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>suffix</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1" title="Property Details">
+<a name="GtkPlotFlux.property-details"></a><h2>Property Details</h2>
+<div class="refsect2" title='The "centered" property'>
+<a name="GtkPlotFlux--centered"></a><h3>The <code class="literal">"centered"</code> property</h3>
+<pre class="programlisting">  "centered"                 <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write</pre>
+<p>
+</p>
+<p>
+</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2" title='The "labels-precision" property'>
+<a name="GtkPlotFlux--labels-precision"></a><h3>The <code class="literal">"labels-precision"</code> property</h3>
+<pre class="programlisting">  "labels-precision"         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write</pre>
+<p></p>
+<p>Allowed values: &gt;= 0</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2" title='The "labels-prefix" property'>
+<a name="GtkPlotFlux--labels-prefix"></a><h3>The <code class="literal">"labels-prefix"</code> property</h3>
+<pre class="programlisting">  "labels-prefix"            <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a>*                : Read / Write</pre>
+<p></p>
+<p>Default value: NULL</p>
+</div>
+<hr>
+<div class="refsect2" title='The "labels-style" property'>
+<a name="GtkPlotFlux--labels-style"></a><h3>The <code class="literal">"labels-style"</code> property</h3>
+<pre class="programlisting">  "labels-style"             <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write</pre>
+<p></p>
+<p>Allowed values: &gt;= 0</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2" title='The "labels-suffix" property'>
+<a name="GtkPlotFlux--labels-suffix"></a><h3>The <code class="literal">"labels-suffix"</code> property</h3>
+<pre class="programlisting">  "labels-suffix"            <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a>*                : Read / Write</pre>
+<p></p>
+<p>Default value: NULL</p>
+</div>
+<hr>
+<div class="refsect2" title='The "length" property'>
+<a name="GtkPlotFlux--length"></a><h3>The <code class="literal">"length"</code> property</h3>
+<pre class="programlisting">  "length"                   <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write</pre>
+<p>
+</p>
+<p>
+</p>
+<p>Allowed values: &gt;= 0</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2" title='The "scale-max" property'>
+<a name="GtkPlotFlux--scale-max"></a><h3>The <code class="literal">"scale-max"</code> property</h3>
+<pre class="programlisting">  "scale-max"                <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a>               : Read / Write</pre>
+<p></p>
+<p>Allowed values: &gt;= 0</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2" title='The "show-scale" property'>
+<a name="GtkPlotFlux--show-scale"></a><h3>The <code class="literal">"show-scale"</code> property</h3>
+<pre class="programlisting">  "show-scale"               <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write</pre>
+<p></p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2" title='The "size-max" property'>
+<a name="GtkPlotFlux--size-max"></a><h3>The <code class="literal">"size-max"</code> property</h3>
+<pre class="programlisting">  "size-max"                 <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write</pre>
+<p></p>
+<p>Allowed values: &gt;= 0</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2" title='The "style" property'>
+<a name="GtkPlotFlux--style"></a><h3>The <code class="literal">"style"</code> property</h3>
+<pre class="programlisting">  "style"                    <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write</pre>
+<p>
+</p>
+<p>
+</p>
+<p>Allowed values: &gt;= 0</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2" title='The "width" property'>
+<a name="GtkPlotFlux--width"></a><h3>The <code class="literal">"width"</code> property</h3>
+<pre class="programlisting">  "width"                    <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write</pre>
+<p>
+</p>
+<p>
+</p>
+<p>Allowed values: &gt;= 0</p>
+<p>Default value: 0</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.11</div>
+</body>
+</html>

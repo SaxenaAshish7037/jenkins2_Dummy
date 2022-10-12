@@ -1,0 +1,365 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GtkPlotDT</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="GtkExtra Reference Manual">
+<link rel="up" href="ch03.html" title="Widgets">
+<link rel="prev" href="GtkPlotData.html" title="GtkPlotData">
+<link rel="next" href="gtkextra-GtkPlotDTriangle.html" title="GtkPlotDTriangle">
+<meta name="generator" content="GTK-Doc V1.11 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="part" href="gtkextra.html" title="Part I. GtkExtra Overview">
+<link rel="part" href="gtkextrabase.html" title="Part II. GtkExtra Widgets and Objects">
+<link rel="chapter" href="ch01.html" title="Object Hierarchy">
+<link rel="chapter" href="ch02.html" title="Widget Gallery">
+<link rel="chapter" href="ch03.html" title="Widgets">
+<link rel="chapter" href="ch04.html" title="Data Formatter">
+<link rel="chapter" href="ch05.html" title="GtkExtra Versioning">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="GtkPlotData.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch03.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">GtkExtra Reference Manual</th>
+<td><a accesskey="n" href="gtkextra-GtkPlotDTriangle.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#GtkPlotDT.synopsis" class="shortcut">Top</a>
+                 | 
+                <a href="#GtkPlotDT.description" class="shortcut">Description</a>
+                 | 
+                <a href="#GtkPlotDT.object-hierarchy" class="shortcut">Object Hierarchy</a>
+</td></tr>
+</table>
+<div class="refentry" title="GtkPlotDT">
+<a name="GtkPlotDT"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GtkPlotDT.top_of_page"></a>GtkPlotDT</span></h2>
+<p>GtkPlotDT</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv" title="Synopsis">
+<a name="GtkPlotDT.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">
+
+#include &lt;gtkextra.h&gt;
+
+                    <a class="link" href="GtkPlotDT.html#GtkPlotDT-struct" title="GtkPlotDT">GtkPlotDT</a>;
+                    <a class="link" href="GtkPlotDT.html#GtkPlotDTnode" title="GtkPlotDTnode">GtkPlotDTnode</a>;
+                    <a class="link" href="GtkPlotDT.html#GtkPlotDTsegment" title="GtkPlotDTsegment">GtkPlotDTsegment</a>;
+                    <a class="link" href="GtkPlotDT.html#GtkPlotDTtriangle" title="GtkPlotDTtriangle">GtkPlotDTtriangle</a>;
+<a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                (<a class="link" href="GtkPlotDT.html#GtkPlotDTprogressbarFunc" title="GtkPlotDTprogressbarFunc ()">*GtkPlotDTprogressbarFunc</a>)         (double progress);
+<a
+href="http://library.gnome.org/devel/gtk3/GtkObject.html"
+>GtkObject</a>*          <a class="link" href="GtkPlotDT.html#gtk-plot-dt-new" title="gtk_plot_dt_new ()">gtk_plot_dt_new</a>                     (<a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> num);
+void                <a class="link" href="GtkPlotDT.html#gtk-plot-dt-set-quadrilateral" title="gtk_plot_dt_set_quadrilateral ()">gtk_plot_dt_set_quadrilateral</a>       (<a class="link" href="GtkPlotDT.html" title="GtkPlotDT">GtkPlotDT</a> *dt,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> set);
+void                <a class="link" href="GtkPlotDT.html#gtk-plot-dt-set-subsampling" title="gtk_plot_dt_set_subsampling ()">gtk_plot_dt_set_subsampling</a>         (<a class="link" href="GtkPlotDT.html" title="GtkPlotDT">GtkPlotDT</a> *dt,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> set);
+<a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>            <a class="link" href="GtkPlotDT.html#gtk-plot-dt-add-node" title="gtk_plot_dt_add_node ()">gtk_plot_dt_add_node</a>                (<a class="link" href="GtkPlotDT.html" title="GtkPlotDT">GtkPlotDT</a> *data,
+                                                         <a class="link" href="GtkPlotDT.html#GtkPlotDTnode" title="GtkPlotDTnode">GtkPlotDTnode</a> node);
+<a class="link" href="GtkPlotDT.html#GtkPlotDTnode" title="GtkPlotDTnode">GtkPlotDTnode</a> *     <a class="link" href="GtkPlotDT.html#gtk-plot-dt-get-node" title="gtk_plot_dt_get_node ()">gtk_plot_dt_get_node</a>                (<a class="link" href="GtkPlotDT.html" title="GtkPlotDT">GtkPlotDT</a> *data,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> idx);
+<a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>            <a class="link" href="GtkPlotDT.html#gtk-plot-dt-triangulate" title="gtk_plot_dt_triangulate ()">gtk_plot_dt_triangulate</a>             (<a class="link" href="GtkPlotDT.html" title="GtkPlotDT">GtkPlotDT</a> *data);
+void                <a class="link" href="GtkPlotDT.html#gtk-plot-dt-clear" title="gtk_plot_dt_clear ()">gtk_plot_dt_clear</a>                   (<a class="link" href="GtkPlotDT.html" title="GtkPlotDT">GtkPlotDT</a> *data);
+</pre>
+</div>
+<div class="refsect1" title="Object Hierarchy">
+<a name="GtkPlotDT.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a
+href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject"
+>GObject</a>
+   +----<a
+href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned"
+>GInitiallyUnowned</a>
+         +----<a
+href="http://library.gnome.org/devel/gtk3/GtkObject.html"
+>GtkObject</a>
+               +----GtkPlotDT
+</pre>
+</div>
+<div class="refsect1" title="Description">
+<a name="GtkPlotDT.description"></a><h2>Description</h2>
+<p>
+FIXME:: Need long description.</p>
+<p>
+</p>
+</div>
+<div class="refsect1" title="Details">
+<a name="GtkPlotDT.details"></a><h2>Details</h2>
+<div class="refsect2" title="GtkPlotDT">
+<a name="GtkPlotDT-struct"></a><h3>GtkPlotDT</h3>
+<pre class="programlisting">typedef struct _GtkPlotDT GtkPlotDT;</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2" title="GtkPlotDTnode">
+<a name="GtkPlotDTnode"></a><h3>GtkPlotDTnode</h3>
+<pre class="programlisting">typedef struct {
+} GtkPlotDTnode;
+</pre>
+<p>
+The GtkPlotDTnode struct contains only private data.
+It should only be accessed through the functions described below.</p>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2" title="GtkPlotDTsegment">
+<a name="GtkPlotDTsegment"></a><h3>GtkPlotDTsegment</h3>
+<pre class="programlisting">typedef struct _GtkPlotDTsegment GtkPlotDTsegment;</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2" title="GtkPlotDTtriangle">
+<a name="GtkPlotDTtriangle"></a><h3>GtkPlotDTtriangle</h3>
+<pre class="programlisting">typedef struct {
+} GtkPlotDTtriangle;
+</pre>
+<p>
+The GtkPlotDTtriangle struct contains only private data.
+It should only be accessed through the functions described below.</p>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2" title="GtkPlotDTprogressbarFunc ()">
+<a name="GtkPlotDTprogressbarFunc"></a><h3>GtkPlotDTprogressbarFunc ()</h3>
+<pre class="programlisting"><a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                (*GtkPlotDTprogressbarFunc)         (double progress);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>progress</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_dt_new ()">
+<a name="gtk-plot-dt-new"></a><h3>gtk_plot_dt_new ()</h3>
+<pre class="programlisting"><a
+href="http://library.gnome.org/devel/gtk3/GtkObject.html"
+>GtkObject</a>*          gtk_plot_dt_new                     (<a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> num);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>num</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_dt_set_quadrilateral ()">
+<a name="gtk-plot-dt-set-quadrilateral"></a><h3>gtk_plot_dt_set_quadrilateral ()</h3>
+<pre class="programlisting">void                gtk_plot_dt_set_quadrilateral       (<a class="link" href="GtkPlotDT.html" title="GtkPlotDT">GtkPlotDT</a> *dt,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> set);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>dt</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>set</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_dt_set_subsampling ()">
+<a name="gtk-plot-dt-set-subsampling"></a><h3>gtk_plot_dt_set_subsampling ()</h3>
+<pre class="programlisting">void                gtk_plot_dt_set_subsampling         (<a class="link" href="GtkPlotDT.html" title="GtkPlotDT">GtkPlotDT</a> *dt,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> set);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>dt</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>set</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_dt_add_node ()">
+<a name="gtk-plot-dt-add-node"></a><h3>gtk_plot_dt_add_node ()</h3>
+<pre class="programlisting"><a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>            gtk_plot_dt_add_node                (<a class="link" href="GtkPlotDT.html" title="GtkPlotDT">GtkPlotDT</a> *data,
+                                                         <a class="link" href="GtkPlotDT.html#GtkPlotDTnode" title="GtkPlotDTnode">GtkPlotDTnode</a> node);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>data</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>node</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_dt_get_node ()">
+<a name="gtk-plot-dt-get-node"></a><h3>gtk_plot_dt_get_node ()</h3>
+<pre class="programlisting"><a class="link" href="GtkPlotDT.html#GtkPlotDTnode" title="GtkPlotDTnode">GtkPlotDTnode</a> *     gtk_plot_dt_get_node                (<a class="link" href="GtkPlotDT.html" title="GtkPlotDT">GtkPlotDT</a> *data,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> idx);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>data</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>idx</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> (transfer none) the <a class="link" href="GtkPlotDT.html#GtkPlotDTnode" title="GtkPlotDTnode"><span class="type">GtkPlotDTnode</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_dt_triangulate ()">
+<a name="gtk-plot-dt-triangulate"></a><h3>gtk_plot_dt_triangulate ()</h3>
+<pre class="programlisting"><a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>            gtk_plot_dt_triangulate             (<a class="link" href="GtkPlotDT.html" title="GtkPlotDT">GtkPlotDT</a> *data);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>data</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_dt_clear ()">
+<a name="gtk-plot-dt-clear"></a><h3>gtk_plot_dt_clear ()</h3>
+<pre class="programlisting">void                gtk_plot_dt_clear                   (<a class="link" href="GtkPlotDT.html" title="GtkPlotDT">GtkPlotDT</a> *data);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>data</code></em> :</span></p></td>
+<td>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.11</div>
+</body>
+</html>

@@ -1,0 +1,936 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+<!ENTITY version SYSTEM "version.xml">
+]>
+<!--ENTITY index-Objects-Grouped SYSTEM "objects_grouped.sgml"-->
+<refentry id="GtkPlotSurface">
+<refmeta>
+<refentrytitle role="top_of_page" id="GtkPlotSurface.top_of_page">GtkPlotSurface</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GTKEXTRA Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>GtkPlotSurface</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="GtkPlotSurface.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>
+
+#include &lt;gtkextra.h&gt;
+
+                    <link linkend="GtkPlotSurface-struct">GtkPlotSurface</link>;
+                    <link linkend="GtkPlotPolygon">GtkPlotPolygon</link>;
+<link linkend="GtkWidget">GtkWidget</link>*          <link linkend="gtk-plot-surface-new">gtk_plot_surface_new</link>                (void);
+<link linkend="GtkWidget">GtkWidget</link>*          <link linkend="gtk-plot-surface-new-function">gtk_plot_surface_new_function</link>       (<link linkend="GtkPlotFunc3D">GtkPlotFunc3D</link> function);
+<link linkend="void">void</link>                <link linkend="gtk-plot-surface-construct-function">gtk_plot_surface_construct_function</link> (<link linkend="GtkPlotSurface">GtkPlotSurface</link> *surface,
+                                                         <link linkend="GtkPlotFunc3D">GtkPlotFunc3D</link> function);
+<link linkend="void">void</link>                <link linkend="gtk-plot-surface-set-color">gtk_plot_surface_set_color</link>          (<link linkend="GtkPlotSurface">GtkPlotSurface</link> *data,
+                                                         <link linkend="GdkColor">GdkColor</link> *color);
+<link linkend="void">void</link>                <link linkend="gtk-plot-surface-set-shadow">gtk_plot_surface_set_shadow</link>         (<link linkend="GtkPlotSurface">GtkPlotSurface</link> *data,
+                                                         <link linkend="GdkColor">GdkColor</link> *color);
+<link linkend="void">void</link>                <link linkend="gtk-plot-surface-set-grid-foreground">gtk_plot_surface_set_grid_foreground</link>
+                                                        (<link linkend="GtkPlotSurface">GtkPlotSurface</link> *data,
+                                                         <link linkend="GdkColor">GdkColor</link> *foreground);
+<link linkend="void">void</link>                <link linkend="gtk-plot-surface-set-grid-background">gtk_plot_surface_set_grid_background</link>
+                                                        (<link linkend="GtkPlotSurface">GtkPlotSurface</link> *data,
+                                                         <link linkend="GdkColor">GdkColor</link> *background);
+<link linkend="void">void</link>                <link linkend="gtk-plot-surface-set-grid-visible">gtk_plot_surface_set_grid_visible</link>   (<link linkend="GtkPlotSurface">GtkPlotSurface</link> *data,
+                                                         <link linkend="gboolean">gboolean</link> visible);
+<link linkend="gboolean">gboolean</link>            <link linkend="gtk-plot-surface-get-grid-visible">gtk_plot_surface_get_grid_visible</link>   (<link linkend="GtkPlotSurface">GtkPlotSurface</link> *data);
+<link linkend="void">void</link>                <link linkend="gtk-plot-surface-set-mesh-visible">gtk_plot_surface_set_mesh_visible</link>   (<link linkend="GtkPlotSurface">GtkPlotSurface</link> *data,
+                                                         <link linkend="gboolean">gboolean</link> visible);
+<link linkend="gboolean">gboolean</link>            <link linkend="gtk-plot-surface-get-mesh-visible">gtk_plot_surface_get_mesh_visible</link>   (<link linkend="GtkPlotSurface">GtkPlotSurface</link> *data);
+<link linkend="void">void</link>                <link linkend="gtk-plot-surface-set-light">gtk_plot_surface_set_light</link>          (<link linkend="GtkPlotSurface">GtkPlotSurface</link> *data,
+                                                         <link linkend="gdouble">gdouble</link> x,
+                                                         <link linkend="gdouble">gdouble</link> y,
+                                                         <link linkend="gdouble">gdouble</link> z);
+<link linkend="void">void</link>                <link linkend="gtk-plot-surface-set-ambient">gtk_plot_surface_set_ambient</link>        (<link linkend="GtkPlotSurface">GtkPlotSurface</link> *data,
+                                                         <link linkend="gdouble">gdouble</link> ambient);
+<link linkend="void">void</link>                <link linkend="gtk-plot-surface-use-height-gradient">gtk_plot_surface_use_height_gradient</link>
+                                                        (<link linkend="GtkPlotSurface">GtkPlotSurface</link> *data,
+                                                         <link linkend="gboolean">gboolean</link> use_gradient);
+<link linkend="void">void</link>                <link linkend="gtk-plot-surface-use-amplitud">gtk_plot_surface_use_amplitud</link>       (<link linkend="GtkPlotSurface">GtkPlotSurface</link> *data,
+                                                         <link linkend="gboolean">gboolean</link> use_amplitud);
+<link linkend="void">void</link>                <link linkend="gtk-plot-surface-set-transparent">gtk_plot_surface_set_transparent</link>    (<link linkend="GtkPlotSurface">GtkPlotSurface</link> *data,
+                                                         <link linkend="gboolean">gboolean</link> transparent);
+<link linkend="void">void</link>                <link linkend="gtk-plot-surface-set-points">gtk_plot_surface_set_points</link>         (<link linkend="GtkPlotSurface">GtkPlotSurface</link> *data,
+                                                         <link linkend="gdouble">gdouble</link> *x,
+                                                         <link linkend="gdouble">gdouble</link> *y,
+                                                         <link linkend="gdouble">gdouble</link> *z,
+                                                         <link linkend="gdouble">gdouble</link> *dx,
+                                                         <link linkend="gdouble">gdouble</link> *dy,
+                                                         <link linkend="gdouble">gdouble</link> *dz,
+                                                         <link linkend="gint">gint</link> nx,
+                                                         <link linkend="gint">gint</link> ny);
+<link linkend="void">void</link>                <link linkend="gtk-plot-surface-get-points">gtk_plot_surface_get_points</link>         (<link linkend="GtkPlotSurface">GtkPlotSurface</link> *data,
+                                                         <link linkend="gdouble">gdouble</link> **x,
+                                                         <link linkend="gdouble">gdouble</link> **y,
+                                                         <link linkend="gdouble">gdouble</link> **z,
+                                                         <link linkend="gdouble">gdouble</link> **dx,
+                                                         <link linkend="gdouble">gdouble</link> **dy,
+                                                         <link linkend="gdouble">gdouble</link> **dz,
+                                                         <link linkend="gint">gint</link> *nx,
+                                                         <link linkend="gint">gint</link> *ny);
+<link linkend="GtkPlotArray">GtkPlotArray</link> *      <link linkend="gtk-plot-surface-set-x">gtk_plot_surface_set_x</link>              (<link linkend="GtkPlotSurface">GtkPlotSurface</link> *data,
+                                                         <link linkend="gdouble">gdouble</link> *x);
+<link linkend="GtkPlotArray">GtkPlotArray</link> *      <link linkend="gtk-plot-surface-set-y">gtk_plot_surface_set_y</link>              (<link linkend="GtkPlotSurface">GtkPlotSurface</link> *data,
+                                                         <link linkend="gdouble">gdouble</link> *y);
+<link linkend="GtkPlotArray">GtkPlotArray</link> *      <link linkend="gtk-plot-surface-set-z">gtk_plot_surface_set_z</link>              (<link linkend="GtkPlotSurface">GtkPlotSurface</link> *data,
+                                                         <link linkend="gdouble">gdouble</link> *z);
+<link linkend="GtkPlotArray">GtkPlotArray</link> *      <link linkend="gtk-plot-surface-set-dx">gtk_plot_surface_set_dx</link>             (<link linkend="GtkPlotSurface">GtkPlotSurface</link> *data,
+                                                         <link linkend="gdouble">gdouble</link> *dx);
+<link linkend="GtkPlotArray">GtkPlotArray</link> *      <link linkend="gtk-plot-surface-set-dy">gtk_plot_surface_set_dy</link>             (<link linkend="GtkPlotSurface">GtkPlotSurface</link> *data,
+                                                         <link linkend="gdouble">gdouble</link> *dy);
+<link linkend="GtkPlotArray">GtkPlotArray</link> *      <link linkend="gtk-plot-surface-set-dz">gtk_plot_surface_set_dz</link>             (<link linkend="GtkPlotSurface">GtkPlotSurface</link> *data,
+                                                         <link linkend="gdouble">gdouble</link> *dz);
+<link linkend="gdouble">gdouble</link> *           <link linkend="gtk-plot-surface-get-x">gtk_plot_surface_get_x</link>              (<link linkend="GtkPlotSurface">GtkPlotSurface</link> *dataset,
+                                                         <link linkend="gint">gint</link> *nx);
+<link linkend="gdouble">gdouble</link> *           <link linkend="gtk-plot-surface-get-y">gtk_plot_surface_get_y</link>              (<link linkend="GtkPlotSurface">GtkPlotSurface</link> *dataset,
+                                                         <link linkend="gint">gint</link> *ny);
+<link linkend="gdouble">gdouble</link> *           <link linkend="gtk-plot-surface-get-z">gtk_plot_surface_get_z</link>              (<link linkend="GtkPlotSurface">GtkPlotSurface</link> *dataset,
+                                                         <link linkend="gint">gint</link> *nx,
+                                                         <link linkend="gint">gint</link> *ny);
+<link linkend="gdouble">gdouble</link> *           <link linkend="gtk-plot-surface-get-dx">gtk_plot_surface_get_dx</link>             (<link linkend="GtkPlotSurface">GtkPlotSurface</link> *dataset);
+<link linkend="gdouble">gdouble</link> *           <link linkend="gtk-plot-surface-get-dy">gtk_plot_surface_get_dy</link>             (<link linkend="GtkPlotSurface">GtkPlotSurface</link> *dataset);
+<link linkend="gdouble">gdouble</link> *           <link linkend="gtk-plot-surface-get-dz">gtk_plot_surface_get_dz</link>             (<link linkend="GtkPlotSurface">GtkPlotSurface</link> *dataset);
+<link linkend="void">void</link>                <link linkend="gtk-plot-surface-set-nx">gtk_plot_surface_set_nx</link>             (<link linkend="GtkPlotSurface">GtkPlotSurface</link> *dataset,
+                                                         <link linkend="gint">gint</link> nx);
+<link linkend="void">void</link>                <link linkend="gtk-plot-surface-set-ny">gtk_plot_surface_set_ny</link>             (<link linkend="GtkPlotSurface">GtkPlotSurface</link> *dataset,
+                                                         <link linkend="gint">gint</link> ny);
+<link linkend="gint">gint</link>                <link linkend="gtk-plot-surface-get-nx">gtk_plot_surface_get_nx</link>             (<link linkend="GtkPlotSurface">GtkPlotSurface</link> *dataset);
+<link linkend="gint">gint</link>                <link linkend="gtk-plot-surface-get-ny">gtk_plot_surface_get_ny</link>             (<link linkend="GtkPlotSurface">GtkPlotSurface</link> *dataset);
+<link linkend="void">void</link>                <link linkend="gtk-plot-surface-set-xstep">gtk_plot_surface_set_xstep</link>          (<link linkend="GtkPlotSurface">GtkPlotSurface</link> *dataset,
+                                                         <link linkend="gdouble">gdouble</link> xstep);
+<link linkend="void">void</link>                <link linkend="gtk-plot-surface-set-ystep">gtk_plot_surface_set_ystep</link>          (<link linkend="GtkPlotSurface">GtkPlotSurface</link> *dataset,
+                                                         <link linkend="gdouble">gdouble</link> ystep);
+<link linkend="gdouble">gdouble</link>             <link linkend="gtk-plot-surface-get-xstep">gtk_plot_surface_get_xstep</link>          (<link linkend="GtkPlotSurface">GtkPlotSurface</link> *dataset);
+<link linkend="gdouble">gdouble</link>             <link linkend="gtk-plot-surface-get-ystep">gtk_plot_surface_get_ystep</link>          (<link linkend="GtkPlotSurface">GtkPlotSurface</link> *dataset);
+<link linkend="void">void</link>                <link linkend="gtk-plot-surface-build-mesh">gtk_plot_surface_build_mesh</link>         (<link linkend="GtkPlotSurface">GtkPlotSurface</link> *surface);
+<link linkend="void">void</link>                <link linkend="gtk-plot-surface-recalc-nodes">gtk_plot_surface_recalc_nodes</link>       (<link linkend="GtkPlotSurface">GtkPlotSurface</link> *surface);
+</synopsis>
+</refsynopsisdiv>
+
+<refsect1 id="GtkPlotSurface.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+  <link linkend="GObject">GObject</link>
+   +----<link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+         +----<link linkend="GtkObject">GtkObject</link>
+               +----<link linkend="GtkWidget">GtkWidget</link>
+                     +----<link linkend="GtkPlotData">GtkPlotData</link>
+                           +----GtkPlotSurface
+                                 +----<link linkend="GtkPlotCSurface">GtkPlotCSurface</link>
+</synopsis>
+</refsect1>
+
+
+
+<refsect1 id="GtkPlotSurface.implemented-interfaces" role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+GtkPlotSurface implements
+ <link linkend="AtkImplementorIface">AtkImplementorIface</link> and  <link linkend="GtkBuildable">GtkBuildable</link>.</para>
+</refsect1>
+
+
+<refsect1 id="GtkPlotSurface.properties" role="properties">
+<title role="properties.title">Properties</title>
+<synopsis>
+  &quot;<link linkend="GtkPlotSurface--ambient">ambient</link>&quot;                  <link linkend="gdouble">gdouble</link>               : Read / Write
+  &quot;<link linkend="GtkPlotSurface--mesh-color">mesh-color</link>&quot;               <link linkend="gpointer">gpointer</link>              : Read / Write
+  &quot;<link linkend="GtkPlotSurface--mesh-style">mesh-style</link>&quot;               <link linkend="gint">gint</link>                  : Read / Write
+  &quot;<link linkend="GtkPlotSurface--mesh-width">mesh-width</link>&quot;               <link linkend="gdouble">gdouble</link>               : Read / Write
+  &quot;<link linkend="GtkPlotSurface--nx">nx</link>&quot;                       <link linkend="gint">gint</link>                  : Read / Write
+  &quot;<link linkend="GtkPlotSurface--ny">ny</link>&quot;                       <link linkend="gint">gint</link>                  : Read / Write
+  &quot;<link linkend="GtkPlotSurface--show-grid">show-grid</link>&quot;                <link linkend="gboolean">gboolean</link>              : Read / Write
+  &quot;<link linkend="GtkPlotSurface--show-mesh">show-mesh</link>&quot;                <link linkend="gboolean">gboolean</link>              : Read / Write
+  &quot;<link linkend="GtkPlotSurface--transparent">transparent</link>&quot;              <link linkend="gboolean">gboolean</link>              : Read / Write
+  &quot;<link linkend="GtkPlotSurface--use-amplitud">use-amplitud</link>&quot;             <link linkend="gboolean">gboolean</link>              : Read / Write
+  &quot;<link linkend="GtkPlotSurface--use-height">use-height</link>&quot;               <link linkend="gboolean">gboolean</link>              : Read / Write
+  &quot;<link linkend="GtkPlotSurface--vector-light">vector-light</link>&quot;             <link linkend="gpointer">gpointer</link>              : Read / Write
+  &quot;<link linkend="GtkPlotSurface--xstep">xstep</link>&quot;                    <link linkend="gdouble">gdouble</link>               : Read / Write
+  &quot;<link linkend="GtkPlotSurface--ystep">ystep</link>&quot;                    <link linkend="gdouble">gdouble</link>               : Read / Write
+</synopsis>
+</refsect1>
+
+
+
+<refsect1 id="GtkPlotSurface.description" role="desc">
+<title role="desc.title">Description</title>
+<para>
+FIXME:: need long description</para>
+<para>
+</para>
+</refsect1>
+
+<refsect1 id="GtkPlotSurface.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="GtkPlotSurface-struct" role="struct">
+<title>GtkPlotSurface</title>
+<indexterm zone="GtkPlotSurface-struct"><primary sortas="GtkPlotSurface">GtkPlotSurface</primary></indexterm><programlisting>typedef struct _GtkPlotSurface GtkPlotSurface;</programlisting>
+<para>
+The GtkPlotSurface struct contains only private data.
+It should only be accessed through the functions described below.</para>
+<para>
+</para></refsect2>
+<refsect2 id="GtkPlotPolygon" role="struct">
+<title>GtkPlotPolygon</title>
+<indexterm zone="GtkPlotPolygon"><primary sortas="GtkPlotPolygon">GtkPlotPolygon</primary></indexterm><programlisting>typedef struct {
+  GtkPlotDTtriangle *t;  		/* parent triangle */
+  GtkPlotVector xyz[4]; 		/* points */
+  GtkPlotVector p[4];			/* pixels */
+  gint n;				/* number of points */
+  gdouble level;
+  gboolean cut_level;	
+  gboolean sublevel;
+} GtkPlotPolygon;
+</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="gtk-plot-surface-new" role="function">
+<title>gtk_plot_surface_new ()</title>
+<indexterm zone="gtk-plot-surface-new"><primary sortas="gtk_plot_surface_new">gtk_plot_surface_new</primary></indexterm><programlisting><link linkend="GtkWidget">GtkWidget</link>*          gtk_plot_surface_new                (void);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-surface-new-function" role="function">
+<title>gtk_plot_surface_new_function ()</title>
+<indexterm zone="gtk-plot-surface-new-function"><primary sortas="gtk_plot_surface_new_function">gtk_plot_surface_new_function</primary></indexterm><programlisting><link linkend="GtkWidget">GtkWidget</link>*          gtk_plot_surface_new_function       (<link linkend="GtkPlotFunc3D">GtkPlotFunc3D</link> function);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>function</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlotFunc3D"><type>GtkPlotFunc3D</type></link>. <acronym>scope</acronym> async. </simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara> (transfer full) the constructed <link linkend="GtkWidget"><type>GtkWidget</type></link> 
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-surface-construct-function" role="function">
+<title>gtk_plot_surface_construct_function ()</title>
+<indexterm zone="gtk-plot-surface-construct-function"><primary sortas="gtk_plot_surface_construct_function">gtk_plot_surface_construct_function</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_surface_construct_function (<link linkend="GtkPlotSurface">GtkPlotSurface</link> *surface,
+                                                         <link linkend="GtkPlotFunc3D">GtkPlotFunc3D</link> function);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>surface</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>function</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlotFunc3D"><type>GtkPlotFunc3D</type></link>. <acronym>scope</acronym> async. </simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-surface-set-color" role="function">
+<title>gtk_plot_surface_set_color ()</title>
+<indexterm zone="gtk-plot-surface-set-color"><primary sortas="gtk_plot_surface_set_color">gtk_plot_surface_set_color</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_surface_set_color          (<link linkend="GtkPlotSurface">GtkPlotSurface</link> *data,
+                                                         <link linkend="GdkColor">GdkColor</link> *color);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>data</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>color</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-surface-set-shadow" role="function">
+<title>gtk_plot_surface_set_shadow ()</title>
+<indexterm zone="gtk-plot-surface-set-shadow"><primary sortas="gtk_plot_surface_set_shadow">gtk_plot_surface_set_shadow</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_surface_set_shadow         (<link linkend="GtkPlotSurface">GtkPlotSurface</link> *data,
+                                                         <link linkend="GdkColor">GdkColor</link> *color);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>data</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>color</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-surface-set-grid-foreground" role="function">
+<title>gtk_plot_surface_set_grid_foreground ()</title>
+<indexterm zone="gtk-plot-surface-set-grid-foreground"><primary sortas="gtk_plot_surface_set_grid_foreground">gtk_plot_surface_set_grid_foreground</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_surface_set_grid_foreground
+                                                        (<link linkend="GtkPlotSurface">GtkPlotSurface</link> *data,
+                                                         <link linkend="GdkColor">GdkColor</link> *foreground);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>data</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>foreground</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-surface-set-grid-background" role="function">
+<title>gtk_plot_surface_set_grid_background ()</title>
+<indexterm zone="gtk-plot-surface-set-grid-background"><primary sortas="gtk_plot_surface_set_grid_background">gtk_plot_surface_set_grid_background</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_surface_set_grid_background
+                                                        (<link linkend="GtkPlotSurface">GtkPlotSurface</link> *data,
+                                                         <link linkend="GdkColor">GdkColor</link> *background);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>data</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>background</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-surface-set-grid-visible" role="function">
+<title>gtk_plot_surface_set_grid_visible ()</title>
+<indexterm zone="gtk-plot-surface-set-grid-visible"><primary sortas="gtk_plot_surface_set_grid_visible">gtk_plot_surface_set_grid_visible</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_surface_set_grid_visible   (<link linkend="GtkPlotSurface">GtkPlotSurface</link> *data,
+                                                         <link linkend="gboolean">gboolean</link> visible);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>data</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>visible</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-surface-get-grid-visible" role="function">
+<title>gtk_plot_surface_get_grid_visible ()</title>
+<indexterm zone="gtk-plot-surface-get-grid-visible"><primary sortas="gtk_plot_surface_get_grid_visible">gtk_plot_surface_get_grid_visible</primary></indexterm><programlisting><link linkend="gboolean">gboolean</link>            gtk_plot_surface_get_grid_visible   (<link linkend="GtkPlotSurface">GtkPlotSurface</link> *data);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>data</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-surface-set-mesh-visible" role="function">
+<title>gtk_plot_surface_set_mesh_visible ()</title>
+<indexterm zone="gtk-plot-surface-set-mesh-visible"><primary sortas="gtk_plot_surface_set_mesh_visible">gtk_plot_surface_set_mesh_visible</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_surface_set_mesh_visible   (<link linkend="GtkPlotSurface">GtkPlotSurface</link> *data,
+                                                         <link linkend="gboolean">gboolean</link> visible);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>data</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>visible</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-surface-get-mesh-visible" role="function">
+<title>gtk_plot_surface_get_mesh_visible ()</title>
+<indexterm zone="gtk-plot-surface-get-mesh-visible"><primary sortas="gtk_plot_surface_get_mesh_visible">gtk_plot_surface_get_mesh_visible</primary></indexterm><programlisting><link linkend="gboolean">gboolean</link>            gtk_plot_surface_get_mesh_visible   (<link linkend="GtkPlotSurface">GtkPlotSurface</link> *data);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>data</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-surface-set-light" role="function">
+<title>gtk_plot_surface_set_light ()</title>
+<indexterm zone="gtk-plot-surface-set-light"><primary sortas="gtk_plot_surface_set_light">gtk_plot_surface_set_light</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_surface_set_light          (<link linkend="GtkPlotSurface">GtkPlotSurface</link> *data,
+                                                         <link linkend="gdouble">gdouble</link> x,
+                                                         <link linkend="gdouble">gdouble</link> y,
+                                                         <link linkend="gdouble">gdouble</link> z);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>data</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>x</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>y</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>z</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-surface-set-ambient" role="function">
+<title>gtk_plot_surface_set_ambient ()</title>
+<indexterm zone="gtk-plot-surface-set-ambient"><primary sortas="gtk_plot_surface_set_ambient">gtk_plot_surface_set_ambient</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_surface_set_ambient        (<link linkend="GtkPlotSurface">GtkPlotSurface</link> *data,
+                                                         <link linkend="gdouble">gdouble</link> ambient);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>data</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>ambient</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-surface-use-height-gradient" role="function">
+<title>gtk_plot_surface_use_height_gradient ()</title>
+<indexterm zone="gtk-plot-surface-use-height-gradient"><primary sortas="gtk_plot_surface_use_height_gradient">gtk_plot_surface_use_height_gradient</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_surface_use_height_gradient
+                                                        (<link linkend="GtkPlotSurface">GtkPlotSurface</link> *data,
+                                                         <link linkend="gboolean">gboolean</link> use_gradient);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>data</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>use_gradient</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-surface-use-amplitud" role="function">
+<title>gtk_plot_surface_use_amplitud ()</title>
+<indexterm zone="gtk-plot-surface-use-amplitud"><primary sortas="gtk_plot_surface_use_amplitud">gtk_plot_surface_use_amplitud</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_surface_use_amplitud       (<link linkend="GtkPlotSurface">GtkPlotSurface</link> *data,
+                                                         <link linkend="gboolean">gboolean</link> use_amplitud);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>data</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>use_amplitud</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-surface-set-transparent" role="function">
+<title>gtk_plot_surface_set_transparent ()</title>
+<indexterm zone="gtk-plot-surface-set-transparent"><primary sortas="gtk_plot_surface_set_transparent">gtk_plot_surface_set_transparent</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_surface_set_transparent    (<link linkend="GtkPlotSurface">GtkPlotSurface</link> *data,
+                                                         <link linkend="gboolean">gboolean</link> transparent);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>data</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>transparent</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-surface-set-points" role="function">
+<title>gtk_plot_surface_set_points ()</title>
+<indexterm zone="gtk-plot-surface-set-points"><primary sortas="gtk_plot_surface_set_points">gtk_plot_surface_set_points</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_surface_set_points         (<link linkend="GtkPlotSurface">GtkPlotSurface</link> *data,
+                                                         <link linkend="gdouble">gdouble</link> *x,
+                                                         <link linkend="gdouble">gdouble</link> *y,
+                                                         <link linkend="gdouble">gdouble</link> *z,
+                                                         <link linkend="gdouble">gdouble</link> *dx,
+                                                         <link linkend="gdouble">gdouble</link> *dy,
+                                                         <link linkend="gdouble">gdouble</link> *dz,
+                                                         <link linkend="gint">gint</link> nx,
+                                                         <link linkend="gint">gint</link> ny);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>data</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>x</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>y</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>z</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>dx</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>dy</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>dz</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>nx</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>ny</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-surface-get-points" role="function">
+<title>gtk_plot_surface_get_points ()</title>
+<indexterm zone="gtk-plot-surface-get-points"><primary sortas="gtk_plot_surface_get_points">gtk_plot_surface_get_points</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_surface_get_points         (<link linkend="GtkPlotSurface">GtkPlotSurface</link> *data,
+                                                         <link linkend="gdouble">gdouble</link> **x,
+                                                         <link linkend="gdouble">gdouble</link> **y,
+                                                         <link linkend="gdouble">gdouble</link> **z,
+                                                         <link linkend="gdouble">gdouble</link> **dx,
+                                                         <link linkend="gdouble">gdouble</link> **dy,
+                                                         <link linkend="gdouble">gdouble</link> **dz,
+                                                         <link linkend="gint">gint</link> *nx,
+                                                         <link linkend="gint">gint</link> *ny);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>data</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>x</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>y</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>z</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>dx</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>dy</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>dz</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>nx</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>ny</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-surface-set-x" role="function">
+<title>gtk_plot_surface_set_x ()</title>
+<indexterm zone="gtk-plot-surface-set-x"><primary sortas="gtk_plot_surface_set_x">gtk_plot_surface_set_x</primary></indexterm><programlisting><link linkend="GtkPlotArray">GtkPlotArray</link> *      gtk_plot_surface_set_x              (<link linkend="GtkPlotSurface">GtkPlotSurface</link> *data,
+                                                         <link linkend="gdouble">gdouble</link> *x);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>data</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>x</parameter>&#160;:</term>
+<listitem><simpara> the value to be set
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara> (transfer none)  the affected <link linkend="GtkPlotArray"><type>GtkPlotArray</type></link>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-surface-set-y" role="function">
+<title>gtk_plot_surface_set_y ()</title>
+<indexterm zone="gtk-plot-surface-set-y"><primary sortas="gtk_plot_surface_set_y">gtk_plot_surface_set_y</primary></indexterm><programlisting><link linkend="GtkPlotArray">GtkPlotArray</link> *      gtk_plot_surface_set_y              (<link linkend="GtkPlotSurface">GtkPlotSurface</link> *data,
+                                                         <link linkend="gdouble">gdouble</link> *y);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>data</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>y</parameter>&#160;:</term>
+<listitem><simpara> the value to be set 
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara> (transfer none)  the affected <link linkend="GtkPlotArray"><type>GtkPlotArray</type></link>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-surface-set-z" role="function">
+<title>gtk_plot_surface_set_z ()</title>
+<indexterm zone="gtk-plot-surface-set-z"><primary sortas="gtk_plot_surface_set_z">gtk_plot_surface_set_z</primary></indexterm><programlisting><link linkend="GtkPlotArray">GtkPlotArray</link> *      gtk_plot_surface_set_z              (<link linkend="GtkPlotSurface">GtkPlotSurface</link> *data,
+                                                         <link linkend="gdouble">gdouble</link> *z);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>data</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>z</parameter>&#160;:</term>
+<listitem><simpara> the value to be set 
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara> (transfer none)  the affected <link linkend="GtkPlotArray"><type>GtkPlotArray</type></link>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-surface-set-dx" role="function">
+<title>gtk_plot_surface_set_dx ()</title>
+<indexterm zone="gtk-plot-surface-set-dx"><primary sortas="gtk_plot_surface_set_dx">gtk_plot_surface_set_dx</primary></indexterm><programlisting><link linkend="GtkPlotArray">GtkPlotArray</link> *      gtk_plot_surface_set_dx             (<link linkend="GtkPlotSurface">GtkPlotSurface</link> *data,
+                                                         <link linkend="gdouble">gdouble</link> *dx);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>data</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>dx</parameter>&#160;:</term>
+<listitem><simpara> the value to be set 
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara> (transfer none)  the affected <link linkend="GtkPlotArray"><type>GtkPlotArray</type></link>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-surface-set-dy" role="function">
+<title>gtk_plot_surface_set_dy ()</title>
+<indexterm zone="gtk-plot-surface-set-dy"><primary sortas="gtk_plot_surface_set_dy">gtk_plot_surface_set_dy</primary></indexterm><programlisting><link linkend="GtkPlotArray">GtkPlotArray</link> *      gtk_plot_surface_set_dy             (<link linkend="GtkPlotSurface">GtkPlotSurface</link> *data,
+                                                         <link linkend="gdouble">gdouble</link> *dy);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>data</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>dy</parameter>&#160;:</term>
+<listitem><simpara> the value to be set 
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara> (transfer none)  the affected <link linkend="GtkPlotArray"><type>GtkPlotArray</type></link>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-surface-set-dz" role="function">
+<title>gtk_plot_surface_set_dz ()</title>
+<indexterm zone="gtk-plot-surface-set-dz"><primary sortas="gtk_plot_surface_set_dz">gtk_plot_surface_set_dz</primary></indexterm><programlisting><link linkend="GtkPlotArray">GtkPlotArray</link> *      gtk_plot_surface_set_dz             (<link linkend="GtkPlotSurface">GtkPlotSurface</link> *data,
+                                                         <link linkend="gdouble">gdouble</link> *dz);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>data</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>dz</parameter>&#160;:</term>
+<listitem><simpara> the value to be set 
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara> (transfer none)  the affected <link linkend="GtkPlotArray"><type>GtkPlotArray</type></link>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-surface-get-x" role="function">
+<title>gtk_plot_surface_get_x ()</title>
+<indexterm zone="gtk-plot-surface-get-x"><primary sortas="gtk_plot_surface_get_x">gtk_plot_surface_get_x</primary></indexterm><programlisting><link linkend="gdouble">gdouble</link> *           gtk_plot_surface_get_x              (<link linkend="GtkPlotSurface">GtkPlotSurface</link> *dataset,
+                                                         <link linkend="gint">gint</link> *nx);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>dataset</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>nx</parameter>&#160;:</term>
+<listitem><simpara> the value to be set 
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-surface-get-y" role="function">
+<title>gtk_plot_surface_get_y ()</title>
+<indexterm zone="gtk-plot-surface-get-y"><primary sortas="gtk_plot_surface_get_y">gtk_plot_surface_get_y</primary></indexterm><programlisting><link linkend="gdouble">gdouble</link> *           gtk_plot_surface_get_y              (<link linkend="GtkPlotSurface">GtkPlotSurface</link> *dataset,
+                                                         <link linkend="gint">gint</link> *ny);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>dataset</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>ny</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-surface-get-z" role="function">
+<title>gtk_plot_surface_get_z ()</title>
+<indexterm zone="gtk-plot-surface-get-z"><primary sortas="gtk_plot_surface_get_z">gtk_plot_surface_get_z</primary></indexterm><programlisting><link linkend="gdouble">gdouble</link> *           gtk_plot_surface_get_z              (<link linkend="GtkPlotSurface">GtkPlotSurface</link> *dataset,
+                                                         <link linkend="gint">gint</link> *nx,
+                                                         <link linkend="gint">gint</link> *ny);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>dataset</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>nx</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>ny</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-surface-get-dx" role="function">
+<title>gtk_plot_surface_get_dx ()</title>
+<indexterm zone="gtk-plot-surface-get-dx"><primary sortas="gtk_plot_surface_get_dx">gtk_plot_surface_get_dx</primary></indexterm><programlisting><link linkend="gdouble">gdouble</link> *           gtk_plot_surface_get_dx             (<link linkend="GtkPlotSurface">GtkPlotSurface</link> *dataset);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>dataset</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-surface-get-dy" role="function">
+<title>gtk_plot_surface_get_dy ()</title>
+<indexterm zone="gtk-plot-surface-get-dy"><primary sortas="gtk_plot_surface_get_dy">gtk_plot_surface_get_dy</primary></indexterm><programlisting><link linkend="gdouble">gdouble</link> *           gtk_plot_surface_get_dy             (<link linkend="GtkPlotSurface">GtkPlotSurface</link> *dataset);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>dataset</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-surface-get-dz" role="function">
+<title>gtk_plot_surface_get_dz ()</title>
+<indexterm zone="gtk-plot-surface-get-dz"><primary sortas="gtk_plot_surface_get_dz">gtk_plot_surface_get_dz</primary></indexterm><programlisting><link linkend="gdouble">gdouble</link> *           gtk_plot_surface_get_dz             (<link linkend="GtkPlotSurface">GtkPlotSurface</link> *dataset);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>dataset</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-surface-set-nx" role="function">
+<title>gtk_plot_surface_set_nx ()</title>
+<indexterm zone="gtk-plot-surface-set-nx"><primary sortas="gtk_plot_surface_set_nx">gtk_plot_surface_set_nx</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_surface_set_nx             (<link linkend="GtkPlotSurface">GtkPlotSurface</link> *dataset,
+                                                         <link linkend="gint">gint</link> nx);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>dataset</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>nx</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-surface-set-ny" role="function">
+<title>gtk_plot_surface_set_ny ()</title>
+<indexterm zone="gtk-plot-surface-set-ny"><primary sortas="gtk_plot_surface_set_ny">gtk_plot_surface_set_ny</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_surface_set_ny             (<link linkend="GtkPlotSurface">GtkPlotSurface</link> *dataset,
+                                                         <link linkend="gint">gint</link> ny);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>dataset</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>ny</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-surface-get-nx" role="function">
+<title>gtk_plot_surface_get_nx ()</title>
+<indexterm zone="gtk-plot-surface-get-nx"><primary sortas="gtk_plot_surface_get_nx">gtk_plot_surface_get_nx</primary></indexterm><programlisting><link linkend="gint">gint</link>                gtk_plot_surface_get_nx             (<link linkend="GtkPlotSurface">GtkPlotSurface</link> *dataset);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>dataset</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-surface-get-ny" role="function">
+<title>gtk_plot_surface_get_ny ()</title>
+<indexterm zone="gtk-plot-surface-get-ny"><primary sortas="gtk_plot_surface_get_ny">gtk_plot_surface_get_ny</primary></indexterm><programlisting><link linkend="gint">gint</link>                gtk_plot_surface_get_ny             (<link linkend="GtkPlotSurface">GtkPlotSurface</link> *dataset);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>dataset</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-surface-set-xstep" role="function">
+<title>gtk_plot_surface_set_xstep ()</title>
+<indexterm zone="gtk-plot-surface-set-xstep"><primary sortas="gtk_plot_surface_set_xstep">gtk_plot_surface_set_xstep</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_surface_set_xstep          (<link linkend="GtkPlotSurface">GtkPlotSurface</link> *dataset,
+                                                         <link linkend="gdouble">gdouble</link> xstep);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>dataset</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>xstep</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-surface-set-ystep" role="function">
+<title>gtk_plot_surface_set_ystep ()</title>
+<indexterm zone="gtk-plot-surface-set-ystep"><primary sortas="gtk_plot_surface_set_ystep">gtk_plot_surface_set_ystep</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_surface_set_ystep          (<link linkend="GtkPlotSurface">GtkPlotSurface</link> *dataset,
+                                                         <link linkend="gdouble">gdouble</link> ystep);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>dataset</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>ystep</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-surface-get-xstep" role="function">
+<title>gtk_plot_surface_get_xstep ()</title>
+<indexterm zone="gtk-plot-surface-get-xstep"><primary sortas="gtk_plot_surface_get_xstep">gtk_plot_surface_get_xstep</primary></indexterm><programlisting><link linkend="gdouble">gdouble</link>             gtk_plot_surface_get_xstep          (<link linkend="GtkPlotSurface">GtkPlotSurface</link> *dataset);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>dataset</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-surface-get-ystep" role="function">
+<title>gtk_plot_surface_get_ystep ()</title>
+<indexterm zone="gtk-plot-surface-get-ystep"><primary sortas="gtk_plot_surface_get_ystep">gtk_plot_surface_get_ystep</primary></indexterm><programlisting><link linkend="gdouble">gdouble</link>             gtk_plot_surface_get_ystep          (<link linkend="GtkPlotSurface">GtkPlotSurface</link> *dataset);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>dataset</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-surface-build-mesh" role="function">
+<title>gtk_plot_surface_build_mesh ()</title>
+<indexterm zone="gtk-plot-surface-build-mesh"><primary sortas="gtk_plot_surface_build_mesh">gtk_plot_surface_build_mesh</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_surface_build_mesh         (<link linkend="GtkPlotSurface">GtkPlotSurface</link> *surface);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>surface</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-surface-recalc-nodes" role="function">
+<title>gtk_plot_surface_recalc_nodes ()</title>
+<indexterm zone="gtk-plot-surface-recalc-nodes"><primary sortas="gtk_plot_surface_recalc_nodes">gtk_plot_surface_recalc_nodes</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_surface_recalc_nodes       (<link linkend="GtkPlotSurface">GtkPlotSurface</link> *surface);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>surface</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+<refsect1 id="GtkPlotSurface.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GtkPlotSurface--ambient" role="property"><title>The <literal>&quot;ambient&quot;</literal> property</title>
+<indexterm zone="GtkPlotSurface--ambient"><primary sortas="GtkPlotSurface:ambient">GtkPlotSurface:ambient</primary></indexterm><programlisting>  &quot;ambient&quot;                  <link linkend="gdouble">gdouble</link>               : Read / Write</programlisting>
+<para>
+</para>
+<para>
+</para><para>Allowed values: &gt;= 0</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GtkPlotSurface--mesh-color" role="property"><title>The <literal>&quot;mesh-color&quot;</literal> property</title>
+<indexterm zone="GtkPlotSurface--mesh-color"><primary sortas="GtkPlotSurface:mesh-color">GtkPlotSurface:mesh-color</primary></indexterm><programlisting>  &quot;mesh-color&quot;               <link linkend="gpointer">gpointer</link>              : Read / Write</programlisting>
+<para></para></refsect2>
+<refsect2 id="GtkPlotSurface--mesh-style" role="property"><title>The <literal>&quot;mesh-style&quot;</literal> property</title>
+<indexterm zone="GtkPlotSurface--mesh-style"><primary sortas="GtkPlotSurface:mesh-style">GtkPlotSurface:mesh-style</primary></indexterm><programlisting>  &quot;mesh-style&quot;               <link linkend="gint">gint</link>                  : Read / Write</programlisting>
+<para></para><para>Allowed values: &gt;= 0</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GtkPlotSurface--mesh-width" role="property"><title>The <literal>&quot;mesh-width&quot;</literal> property</title>
+<indexterm zone="GtkPlotSurface--mesh-width"><primary sortas="GtkPlotSurface:mesh-width">GtkPlotSurface:mesh-width</primary></indexterm><programlisting>  &quot;mesh-width&quot;               <link linkend="gdouble">gdouble</link>               : Read / Write</programlisting>
+<para></para><para>Allowed values: &gt;= 0</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GtkPlotSurface--nx" role="property"><title>The <literal>&quot;nx&quot;</literal> property</title>
+<indexterm zone="GtkPlotSurface--nx"><primary sortas="GtkPlotSurface:nx">GtkPlotSurface:nx</primary></indexterm><programlisting>  &quot;nx&quot;                       <link linkend="gint">gint</link>                  : Read / Write</programlisting>
+<para>
+</para>
+<para>
+</para><para>Allowed values: &gt;= 0</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GtkPlotSurface--ny" role="property"><title>The <literal>&quot;ny&quot;</literal> property</title>
+<indexterm zone="GtkPlotSurface--ny"><primary sortas="GtkPlotSurface:ny">GtkPlotSurface:ny</primary></indexterm><programlisting>  &quot;ny&quot;                       <link linkend="gint">gint</link>                  : Read / Write</programlisting>
+<para>
+</para>
+<para>
+</para><para>Allowed values: &gt;= 0</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GtkPlotSurface--show-grid" role="property"><title>The <literal>&quot;show-grid&quot;</literal> property</title>
+<indexterm zone="GtkPlotSurface--show-grid"><primary sortas="GtkPlotSurface:show-grid">GtkPlotSurface:show-grid</primary></indexterm><programlisting>  &quot;show-grid&quot;                <link linkend="gboolean">gboolean</link>              : Read / Write</programlisting>
+<para></para><para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="GtkPlotSurface--show-mesh" role="property"><title>The <literal>&quot;show-mesh&quot;</literal> property</title>
+<indexterm zone="GtkPlotSurface--show-mesh"><primary sortas="GtkPlotSurface:show-mesh">GtkPlotSurface:show-mesh</primary></indexterm><programlisting>  &quot;show-mesh&quot;                <link linkend="gboolean">gboolean</link>              : Read / Write</programlisting>
+<para></para><para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="GtkPlotSurface--transparent" role="property"><title>The <literal>&quot;transparent&quot;</literal> property</title>
+<indexterm zone="GtkPlotSurface--transparent"><primary sortas="GtkPlotSurface:transparent">GtkPlotSurface:transparent</primary></indexterm><programlisting>  &quot;transparent&quot;              <link linkend="gboolean">gboolean</link>              : Read / Write</programlisting>
+<para>
+</para>
+<para>
+</para><para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="GtkPlotSurface--use-amplitud" role="property"><title>The <literal>&quot;use-amplitud&quot;</literal> property</title>
+<indexterm zone="GtkPlotSurface--use-amplitud"><primary sortas="GtkPlotSurface:use-amplitud">GtkPlotSurface:use-amplitud</primary></indexterm><programlisting>  &quot;use-amplitud&quot;             <link linkend="gboolean">gboolean</link>              : Read / Write</programlisting>
+<para></para><para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="GtkPlotSurface--use-height" role="property"><title>The <literal>&quot;use-height&quot;</literal> property</title>
+<indexterm zone="GtkPlotSurface--use-height"><primary sortas="GtkPlotSurface:use-height">GtkPlotSurface:use-height</primary></indexterm><programlisting>  &quot;use-height&quot;               <link linkend="gboolean">gboolean</link>              : Read / Write</programlisting>
+<para></para><para>Default value: TRUE</para>
+</refsect2>
+<refsect2 id="GtkPlotSurface--vector-light" role="property"><title>The <literal>&quot;vector-light&quot;</literal> property</title>
+<indexterm zone="GtkPlotSurface--vector-light"><primary sortas="GtkPlotSurface:vector-light">GtkPlotSurface:vector-light</primary></indexterm><programlisting>  &quot;vector-light&quot;             <link linkend="gpointer">gpointer</link>              : Read / Write</programlisting>
+<para></para></refsect2>
+<refsect2 id="GtkPlotSurface--xstep" role="property"><title>The <literal>&quot;xstep&quot;</literal> property</title>
+<indexterm zone="GtkPlotSurface--xstep"><primary sortas="GtkPlotSurface:xstep">GtkPlotSurface:xstep</primary></indexterm><programlisting>  &quot;xstep&quot;                    <link linkend="gdouble">gdouble</link>               : Read / Write</programlisting>
+<para>
+</para>
+<para>
+</para><para>Allowed values: &gt;= 0</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GtkPlotSurface--ystep" role="property"><title>The <literal>&quot;ystep&quot;</literal> property</title>
+<indexterm zone="GtkPlotSurface--ystep"><primary sortas="GtkPlotSurface:ystep">GtkPlotSurface:ystep</primary></indexterm><programlisting>  &quot;ystep&quot;                    <link linkend="gdouble">gdouble</link>               : Read / Write</programlisting>
+<para>
+</para>
+<para>
+</para><para>Allowed values: &gt;= 0</para>
+<para>Default value: 0</para>
+</refsect2>
+</refsect1>
+
+
+
+
+</refentry>

@@ -1,0 +1,219 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+<!ENTITY version SYSTEM "version.xml">
+]>
+<!--ENTITY index-Objects-Grouped SYSTEM "objects_grouped.sgml"-->
+<refentry id="GtkPlotDT">
+<refmeta>
+<refentrytitle role="top_of_page" id="GtkPlotDT.top_of_page">GtkPlotDT</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GTKEXTRA Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>GtkPlotDT</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="GtkPlotDT.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>
+
+#include &lt;gtkextra.h&gt;
+
+                    <link linkend="GtkPlotDT-struct">GtkPlotDT</link>;
+                    <link linkend="GtkPlotDTnode">GtkPlotDTnode</link>;
+                    <link linkend="GtkPlotDTsegment">GtkPlotDTsegment</link>;
+                    <link linkend="GtkPlotDTtriangle">GtkPlotDTtriangle</link>;
+<link linkend="gint">gint</link>                (<link linkend="GtkPlotDTprogressbarFunc">*GtkPlotDTprogressbarFunc</link>)         (<link linkend="double">double</link> progress);
+<link linkend="GtkObject">GtkObject</link>*          <link linkend="gtk-plot-dt-new">gtk_plot_dt_new</link>                     (<link linkend="gint">gint</link> num);
+<link linkend="void">void</link>                <link linkend="gtk-plot-dt-set-quadrilateral">gtk_plot_dt_set_quadrilateral</link>       (<link linkend="GtkPlotDT">GtkPlotDT</link> *dt,
+                                                         <link linkend="gboolean">gboolean</link> set);
+<link linkend="void">void</link>                <link linkend="gtk-plot-dt-set-subsampling">gtk_plot_dt_set_subsampling</link>         (<link linkend="GtkPlotDT">GtkPlotDT</link> *dt,
+                                                         <link linkend="gboolean">gboolean</link> set);
+<link linkend="gboolean">gboolean</link>            <link linkend="gtk-plot-dt-add-node">gtk_plot_dt_add_node</link>                (<link linkend="GtkPlotDT">GtkPlotDT</link> *data,
+                                                         <link linkend="GtkPlotDTnode">GtkPlotDTnode</link> node);
+<link linkend="GtkPlotDTnode">GtkPlotDTnode</link> *     <link linkend="gtk-plot-dt-get-node">gtk_plot_dt_get_node</link>                (<link linkend="GtkPlotDT">GtkPlotDT</link> *data,
+                                                         <link linkend="gint">gint</link> idx);
+<link linkend="gboolean">gboolean</link>            <link linkend="gtk-plot-dt-triangulate">gtk_plot_dt_triangulate</link>             (<link linkend="GtkPlotDT">GtkPlotDT</link> *data);
+<link linkend="void">void</link>                <link linkend="gtk-plot-dt-clear">gtk_plot_dt_clear</link>                   (<link linkend="GtkPlotDT">GtkPlotDT</link> *data);
+</synopsis>
+</refsynopsisdiv>
+
+<refsect1 id="GtkPlotDT.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+  <link linkend="GObject">GObject</link>
+   +----<link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+         +----<link linkend="GtkObject">GtkObject</link>
+               +----GtkPlotDT
+</synopsis>
+</refsect1>
+
+
+
+
+
+
+
+
+<refsect1 id="GtkPlotDT.description" role="desc">
+<title role="desc.title">Description</title>
+<para>
+FIXME:: Need long description.</para>
+<para>
+</para>
+</refsect1>
+
+<refsect1 id="GtkPlotDT.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="GtkPlotDT-struct" role="struct">
+<title>GtkPlotDT</title>
+<indexterm zone="GtkPlotDT-struct"><primary sortas="GtkPlotDT">GtkPlotDT</primary></indexterm><programlisting>typedef struct _GtkPlotDT GtkPlotDT;</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="GtkPlotDTnode" role="struct">
+<title>GtkPlotDTnode</title>
+<indexterm zone="GtkPlotDTnode"><primary sortas="GtkPlotDTnode">GtkPlotDTnode</primary></indexterm><programlisting>typedef struct {
+} GtkPlotDTnode;
+</programlisting>
+<para>
+The GtkPlotDTnode struct contains only private data.
+It should only be accessed through the functions described below.</para>
+<para>
+</para></refsect2>
+<refsect2 id="GtkPlotDTsegment" role="struct">
+<title>GtkPlotDTsegment</title>
+<indexterm zone="GtkPlotDTsegment"><primary sortas="GtkPlotDTsegment">GtkPlotDTsegment</primary></indexterm><programlisting>typedef struct _GtkPlotDTsegment GtkPlotDTsegment;</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="GtkPlotDTtriangle" role="struct">
+<title>GtkPlotDTtriangle</title>
+<indexterm zone="GtkPlotDTtriangle"><primary sortas="GtkPlotDTtriangle">GtkPlotDTtriangle</primary></indexterm><programlisting>typedef struct {
+} GtkPlotDTtriangle;
+</programlisting>
+<para>
+The GtkPlotDTtriangle struct contains only private data.
+It should only be accessed through the functions described below.</para>
+<para>
+</para></refsect2>
+<refsect2 id="GtkPlotDTprogressbarFunc" role="function">
+<title>GtkPlotDTprogressbarFunc ()</title>
+<indexterm zone="GtkPlotDTprogressbarFunc"><primary sortas="GtkPlotDTprogressbarFunc">GtkPlotDTprogressbarFunc</primary></indexterm><programlisting><link linkend="gint">gint</link>                (*GtkPlotDTprogressbarFunc)         (<link linkend="double">double</link> progress);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>progress</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-dt-new" role="function">
+<title>gtk_plot_dt_new ()</title>
+<indexterm zone="gtk-plot-dt-new"><primary sortas="gtk_plot_dt_new">gtk_plot_dt_new</primary></indexterm><programlisting><link linkend="GtkObject">GtkObject</link>*          gtk_plot_dt_new                     (<link linkend="gint">gint</link> num);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>num</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-dt-set-quadrilateral" role="function">
+<title>gtk_plot_dt_set_quadrilateral ()</title>
+<indexterm zone="gtk-plot-dt-set-quadrilateral"><primary sortas="gtk_plot_dt_set_quadrilateral">gtk_plot_dt_set_quadrilateral</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_dt_set_quadrilateral       (<link linkend="GtkPlotDT">GtkPlotDT</link> *dt,
+                                                         <link linkend="gboolean">gboolean</link> set);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>dt</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>set</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-dt-set-subsampling" role="function">
+<title>gtk_plot_dt_set_subsampling ()</title>
+<indexterm zone="gtk-plot-dt-set-subsampling"><primary sortas="gtk_plot_dt_set_subsampling">gtk_plot_dt_set_subsampling</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_dt_set_subsampling         (<link linkend="GtkPlotDT">GtkPlotDT</link> *dt,
+                                                         <link linkend="gboolean">gboolean</link> set);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>dt</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>set</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-dt-add-node" role="function">
+<title>gtk_plot_dt_add_node ()</title>
+<indexterm zone="gtk-plot-dt-add-node"><primary sortas="gtk_plot_dt_add_node">gtk_plot_dt_add_node</primary></indexterm><programlisting><link linkend="gboolean">gboolean</link>            gtk_plot_dt_add_node                (<link linkend="GtkPlotDT">GtkPlotDT</link> *data,
+                                                         <link linkend="GtkPlotDTnode">GtkPlotDTnode</link> node);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>data</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>node</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-dt-get-node" role="function">
+<title>gtk_plot_dt_get_node ()</title>
+<indexterm zone="gtk-plot-dt-get-node"><primary sortas="gtk_plot_dt_get_node">gtk_plot_dt_get_node</primary></indexterm><programlisting><link linkend="GtkPlotDTnode">GtkPlotDTnode</link> *     gtk_plot_dt_get_node                (<link linkend="GtkPlotDT">GtkPlotDT</link> *data,
+                                                         <link linkend="gint">gint</link> idx);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>data</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>idx</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara> (transfer none) the <link linkend="GtkPlotDTnode"><type>GtkPlotDTnode</type></link>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-dt-triangulate" role="function">
+<title>gtk_plot_dt_triangulate ()</title>
+<indexterm zone="gtk-plot-dt-triangulate"><primary sortas="gtk_plot_dt_triangulate">gtk_plot_dt_triangulate</primary></indexterm><programlisting><link linkend="gboolean">gboolean</link>            gtk_plot_dt_triangulate             (<link linkend="GtkPlotDT">GtkPlotDT</link> *data);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>data</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-dt-clear" role="function">
+<title>gtk_plot_dt_clear ()</title>
+<indexterm zone="gtk-plot-dt-clear"><primary sortas="gtk_plot_dt_clear">gtk_plot_dt_clear</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_dt_clear                   (<link linkend="GtkPlotDT">GtkPlotDT</link> *data);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>data</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+
+
+
+
+</refentry>

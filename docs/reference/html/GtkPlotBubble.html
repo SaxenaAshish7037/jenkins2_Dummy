@@ -1,0 +1,441 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GtkPlotBubble</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="GtkExtra Reference Manual">
+<link rel="up" href="ch03.html" title="Widgets">
+<link rel="prev" href="GtkPlotBox.html" title="GtkPlotBox">
+<link rel="next" href="GtkPlotCairo.html" title="GtkPlotCairo">
+<meta name="generator" content="GTK-Doc V1.11 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="part" href="gtkextra.html" title="Part I. GtkExtra Overview">
+<link rel="part" href="gtkextrabase.html" title="Part II. GtkExtra Widgets and Objects">
+<link rel="chapter" href="ch01.html" title="Object Hierarchy">
+<link rel="chapter" href="ch02.html" title="Widget Gallery">
+<link rel="chapter" href="ch03.html" title="Widgets">
+<link rel="chapter" href="ch04.html" title="Data Formatter">
+<link rel="chapter" href="ch05.html" title="GtkExtra Versioning">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="GtkPlotBox.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch03.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">GtkExtra Reference Manual</th>
+<td><a accesskey="n" href="GtkPlotCairo.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#GtkPlotBubble.synopsis" class="shortcut">Top</a>
+                 | 
+                <a href="#GtkPlotBubble.description" class="shortcut">Description</a>
+                 | 
+                <a href="#GtkPlotBubble.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                 | 
+                <a href="#GtkPlotBubble.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+                 | 
+                <a href="#GtkPlotBubble.properties" class="shortcut">Properties</a>
+</td></tr>
+</table>
+<div class="refentry" title="GtkPlotBubble">
+<a name="GtkPlotBubble"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GtkPlotBubble.top_of_page"></a>GtkPlotBubble</span></h2>
+<p>GtkPlotBubble</p>
+</td>
+<td valign="top" align="right"><img src=""></td>
+</tr></table></div>
+<div class="refsynopsisdiv" title="Synopsis">
+<a name="GtkPlotBubble.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">
+
+#include &lt;gtkextra.h&gt;
+
+                    <a class="link" href="GtkPlotBubble.html#GtkPlotBubble-struct" title="GtkPlotBubble">GtkPlotBubble</a>;
+<a
+href="http://library.gnome.org/devel/gtk3/GtkWidget.html"
+>GtkWidget</a>*          <a class="link" href="GtkPlotBubble.html#gtk-plot-bubble-new" title="gtk_plot_bubble_new ()">gtk_plot_bubble_new</a>                 (void);
+void                <a class="link" href="GtkPlotBubble.html#gtk-plot-bubble-show-scale" title="gtk_plot_bubble_show_scale ()">gtk_plot_bubble_show_scale</a>          (<a class="link" href="GtkPlotBubble.html" title="GtkPlotBubble">GtkPlotBubble</a> *bubble,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> show);
+void                <a class="link" href="GtkPlotBubble.html#gtk-plot-bubble-set-scale-max" title="gtk_plot_bubble_set_scale_max ()">gtk_plot_bubble_set_scale_max</a>       (<a class="link" href="GtkPlotBubble.html" title="GtkPlotBubble">GtkPlotBubble</a> *bubble,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> scale_max);
+void                <a class="link" href="GtkPlotBubble.html#gtk-plot-bubble-set-size-max" title="gtk_plot_bubble_set_size_max ()">gtk_plot_bubble_set_size_max</a>        (<a class="link" href="GtkPlotBubble.html" title="GtkPlotBubble">GtkPlotBubble</a> *bubble,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint"
+>guint</a> size_max);
+void                <a class="link" href="GtkPlotBubble.html#gtk-plot-bubble-set-labels-precision" title="gtk_plot_bubble_set_labels_precision ()">gtk_plot_bubble_set_labels_precision</a>
+                                                        (<a class="link" href="GtkPlotBubble.html" title="GtkPlotBubble">GtkPlotBubble</a> *bubble,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> precision);
+void                <a class="link" href="GtkPlotBubble.html#gtk-plot-bubble-set-labels-style" title="gtk_plot_bubble_set_labels_style ()">gtk_plot_bubble_set_labels_style</a>    (<a class="link" href="GtkPlotBubble.html" title="GtkPlotBubble">GtkPlotBubble</a> *bubble,
+                                                         <a class="link" href="GtkPlot.html#GtkPlotLabelStyle" title="enum GtkPlotLabelStyle">GtkPlotLabelStyle</a> style);
+void                <a class="link" href="GtkPlotBubble.html#gtk-plot-bubble-set-labels-prefix" title="gtk_plot_bubble_set_labels_prefix ()">gtk_plot_bubble_set_labels_prefix</a>   (<a class="link" href="GtkPlotBubble.html" title="GtkPlotBubble">GtkPlotBubble</a> *bubble,
+                                                         const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *prefix);
+void                <a class="link" href="GtkPlotBubble.html#gtk-plot-bubble-set-labels-suffix" title="gtk_plot_bubble_set_labels_suffix ()">gtk_plot_bubble_set_labels_suffix</a>   (<a class="link" href="GtkPlotBubble.html" title="GtkPlotBubble">GtkPlotBubble</a> *bubble,
+                                                         const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *suffix);
+</pre>
+</div>
+<div class="refsect1" title="Object Hierarchy">
+<a name="GtkPlotBubble.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a
+href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject"
+>GObject</a>
+   +----<a
+href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned"
+>GInitiallyUnowned</a>
+         +----<a
+href="http://library.gnome.org/devel/gtk3/GtkObject.html"
+>GtkObject</a>
+               +----<a
+href="http://library.gnome.org/devel/gtk3/GtkWidget.html"
+>GtkWidget</a>
+                     +----<a class="link" href="GtkPlotData.html" title="GtkPlotData">GtkPlotData</a>
+                           +----GtkPlotBubble
+</pre>
+</div>
+<div class="refsect1" title="Implemented Interfaces">
+<a name="GtkPlotBubble.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+GtkPlotBubble implements
+ AtkImplementorIface and  <a
+href="http://library.gnome.org/devel/gtk3/GtkBuildable.html"
+>GtkBuildable</a>.</p>
+</div>
+<div class="refsect1" title="Properties">
+<a name="GtkPlotBubble.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="GtkPlotBubble.html#GtkPlotBubble--labels-precision" title='The "labels-precision" property'>labels-precision</a>"         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write
+  "<a class="link" href="GtkPlotBubble.html#GtkPlotBubble--labels-prefix" title='The "labels-prefix" property'>labels-prefix</a>"            <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a>*                : Read / Write
+  "<a class="link" href="GtkPlotBubble.html#GtkPlotBubble--labels-style" title='The "labels-style" property'>labels-style</a>"             <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write
+  "<a class="link" href="GtkPlotBubble.html#GtkPlotBubble--labels-suffix" title='The "labels-suffix" property'>labels-suffix</a>"            <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a>*                : Read / Write
+  "<a class="link" href="GtkPlotBubble.html#GtkPlotBubble--scale-max" title='The "scale-max" property'>scale-max</a>"                <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a>               : Read / Write
+  "<a class="link" href="GtkPlotBubble.html#GtkPlotBubble--show-scale" title='The "show-scale" property'>show-scale</a>"               <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write
+  "<a class="link" href="GtkPlotBubble.html#GtkPlotBubble--size-max" title='The "size-max" property'>size-max</a>"                 <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write
+</pre>
+</div>
+<div class="refsect1" title="Description">
+<a name="GtkPlotBubble.description"></a><h2>Description</h2>
+<p>
+FIXME:: Need long description.</p>
+<p>
+</p>
+</div>
+<div class="refsect1" title="Details">
+<a name="GtkPlotBubble.details"></a><h2>Details</h2>
+<div class="refsect2" title="GtkPlotBubble">
+<a name="GtkPlotBubble-struct"></a><h3>GtkPlotBubble</h3>
+<pre class="programlisting">typedef struct _GtkPlotBubble GtkPlotBubble;</pre>
+<p>
+The GtkPlotBubble struct contains only private data.
+It should only be accessed through the functions described below.</p>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_bubble_new ()">
+<a name="gtk-plot-bubble-new"></a><h3>gtk_plot_bubble_new ()</h3>
+<pre class="programlisting"><a
+href="http://library.gnome.org/devel/gtk3/GtkWidget.html"
+>GtkWidget</a>*          gtk_plot_bubble_new                 (void);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_bubble_show_scale ()">
+<a name="gtk-plot-bubble-show-scale"></a><h3>gtk_plot_bubble_show_scale ()</h3>
+<pre class="programlisting">void                gtk_plot_bubble_show_scale          (<a class="link" href="GtkPlotBubble.html" title="GtkPlotBubble">GtkPlotBubble</a> *bubble,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> show);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>bubble</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlotBubble.html" title="GtkPlotBubble"><span class="type">GtkPlotBubble</span></a>.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>show</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_bubble_set_scale_max ()">
+<a name="gtk-plot-bubble-set-scale-max"></a><h3>gtk_plot_bubble_set_scale_max ()</h3>
+<pre class="programlisting">void                gtk_plot_bubble_set_scale_max       (<a class="link" href="GtkPlotBubble.html" title="GtkPlotBubble">GtkPlotBubble</a> *bubble,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a> scale_max);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>bubble</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlotBubble.html" title="GtkPlotBubble"><span class="type">GtkPlotBubble</span></a>.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>scale_max</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_bubble_set_size_max ()">
+<a name="gtk-plot-bubble-set-size-max"></a><h3>gtk_plot_bubble_set_size_max ()</h3>
+<pre class="programlisting">void                gtk_plot_bubble_set_size_max        (<a class="link" href="GtkPlotBubble.html" title="GtkPlotBubble">GtkPlotBubble</a> *bubble,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint"
+>guint</a> size_max);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>bubble</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlotBubble.html" title="GtkPlotBubble"><span class="type">GtkPlotBubble</span></a>.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>size_max</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_bubble_set_labels_precision ()">
+<a name="gtk-plot-bubble-set-labels-precision"></a><h3>gtk_plot_bubble_set_labels_precision ()</h3>
+<pre class="programlisting">void                gtk_plot_bubble_set_labels_precision
+                                                        (<a class="link" href="GtkPlotBubble.html" title="GtkPlotBubble">GtkPlotBubble</a> *bubble,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> precision);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>bubble</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlotBubble.html" title="GtkPlotBubble"><span class="type">GtkPlotBubble</span></a>.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>precision</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_bubble_set_labels_style ()">
+<a name="gtk-plot-bubble-set-labels-style"></a><h3>gtk_plot_bubble_set_labels_style ()</h3>
+<pre class="programlisting">void                gtk_plot_bubble_set_labels_style    (<a class="link" href="GtkPlotBubble.html" title="GtkPlotBubble">GtkPlotBubble</a> *bubble,
+                                                         <a class="link" href="GtkPlot.html#GtkPlotLabelStyle" title="enum GtkPlotLabelStyle">GtkPlotLabelStyle</a> style);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>bubble</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlotBubble.html" title="GtkPlotBubble"><span class="type">GtkPlotBubble</span></a>.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>style</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_bubble_set_labels_prefix ()">
+<a name="gtk-plot-bubble-set-labels-prefix"></a><h3>gtk_plot_bubble_set_labels_prefix ()</h3>
+<pre class="programlisting">void                gtk_plot_bubble_set_labels_prefix   (<a class="link" href="GtkPlotBubble.html" title="GtkPlotBubble">GtkPlotBubble</a> *bubble,
+                                                         const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *prefix);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>bubble</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlotBubble.html" title="GtkPlotBubble"><span class="type">GtkPlotBubble</span></a>.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>prefix</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_bubble_set_labels_suffix ()">
+<a name="gtk-plot-bubble-set-labels-suffix"></a><h3>gtk_plot_bubble_set_labels_suffix ()</h3>
+<pre class="programlisting">void                gtk_plot_bubble_set_labels_suffix   (<a class="link" href="GtkPlotBubble.html" title="GtkPlotBubble">GtkPlotBubble</a> *bubble,
+                                                         const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *suffix);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>bubble</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlotBubble.html" title="GtkPlotBubble"><span class="type">GtkPlotBubble</span></a>.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>suffix</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1" title="Property Details">
+<a name="GtkPlotBubble.property-details"></a><h2>Property Details</h2>
+<div class="refsect2" title='The "labels-precision" property'>
+<a name="GtkPlotBubble--labels-precision"></a><h3>The <code class="literal">"labels-precision"</code> property</h3>
+<pre class="programlisting">  "labels-precision"         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write</pre>
+<p>Labels Precision.</p>
+<p>Allowed values: &gt;= 0</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2" title='The "labels-prefix" property'>
+<a name="GtkPlotBubble--labels-prefix"></a><h3>The <code class="literal">"labels-prefix"</code> property</h3>
+<pre class="programlisting">  "labels-prefix"            <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a>*                : Read / Write</pre>
+<p>Labels Prefix.</p>
+<p>Default value: NULL</p>
+</div>
+<hr>
+<div class="refsect2" title='The "labels-style" property'>
+<a name="GtkPlotBubble--labels-style"></a><h3>The <code class="literal">"labels-style"</code> property</h3>
+<pre class="programlisting">  "labels-style"             <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write</pre>
+<p>Labels Style.</p>
+<p>Allowed values: &gt;= 0</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2" title='The "labels-suffix" property'>
+<a name="GtkPlotBubble--labels-suffix"></a><h3>The <code class="literal">"labels-suffix"</code> property</h3>
+<pre class="programlisting">  "labels-suffix"            <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a>*                : Read / Write</pre>
+<p>Labels Suffix.</p>
+<p>Default value: NULL</p>
+</div>
+<hr>
+<div class="refsect2" title='The "scale-max" property'>
+<a name="GtkPlotBubble--scale-max"></a><h3>The <code class="literal">"scale-max"</code> property</h3>
+<pre class="programlisting">  "scale-max"                <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"
+>gdouble</a>               : Read / Write</pre>
+<p>Scale Max.</p>
+<p>Allowed values: &gt;= 0</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2" title='The "show-scale" property'>
+<a name="GtkPlotBubble--show-scale"></a><h3>The <code class="literal">"show-scale"</code> property</h3>
+<pre class="programlisting">  "show-scale"               <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write</pre>
+<p>Show scale in gradient legend.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2" title='The "size-max" property'>
+<a name="GtkPlotBubble--size-max"></a><h3>The <code class="literal">"size-max"</code> property</h3>
+<pre class="programlisting">  "size-max"                 <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write</pre>
+<p>Size Max.</p>
+<p>Allowed values: &gt;= 0</p>
+<p>Default value: 0</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.11</div>
+</body>
+</html>

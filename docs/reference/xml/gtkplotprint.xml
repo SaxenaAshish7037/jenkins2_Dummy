@@ -1,0 +1,229 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+<!ENTITY version SYSTEM "version.xml">
+]>
+<!--ENTITY index-Objects-Grouped SYSTEM "objects_grouped.sgml"-->
+<refentry id="gtkextra-GtkPlotPrint">
+<refmeta>
+<refentrytitle role="top_of_page" id="gtkextra-GtkPlotPrint.top_of_page">GtkPlotPrint</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GTKEXTRA Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>GtkPlotPrint</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="gtkextra-GtkPlotPrint.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>
+
+#include &lt;gtkextra.h&gt;
+
+<link linkend="gboolean">gboolean</link>            <link linkend="gtk-plot-export-ps">gtk_plot_export_ps</link>                  (<link linkend="GtkPlot">GtkPlot</link> *plot,
+                                                         <link linkend="char">char</link> *file_name,
+                                                         <link linkend="GtkPlotPageOrientation">GtkPlotPageOrientation</link> orient,
+                                                         <link linkend="gboolean">gboolean</link> epsflag,
+                                                         <link linkend="GtkPlotPageSize">GtkPlotPageSize</link> page_size);
+<link linkend="gboolean">gboolean</link>            <link linkend="gtk-plot-export-ps-with-size">gtk_plot_export_ps_with_size</link>        (<link linkend="GtkPlot">GtkPlot</link> *plot,
+                                                         <link linkend="char">char</link> *file_name,
+                                                         <link linkend="GtkPlotPageOrientation">GtkPlotPageOrientation</link> orient,
+                                                         <link linkend="gboolean">gboolean</link> epsflag,
+                                                         <link linkend="GtkPlotUnits">GtkPlotUnits</link> units,
+                                                         <link linkend="gint">gint</link> width,
+                                                         <link linkend="gint">gint</link> height);
+<link linkend="gboolean">gboolean</link>            <link linkend="gtk-plot-canvas-export-ps">gtk_plot_canvas_export_ps</link>           (<link linkend="GtkPlotCanvas">GtkPlotCanvas</link> *canvas,
+                                                         <link linkend="char">char</link> *file_name,
+                                                         <link linkend="GtkPlotPageOrientation">GtkPlotPageOrientation</link> orient,
+                                                         <link linkend="gboolean">gboolean</link> epsflag,
+                                                         <link linkend="GtkPlotPageSize">GtkPlotPageSize</link> page_size);
+<link linkend="gboolean">gboolean</link>            <link linkend="gtk-plot-canvas-export-ps-with-size">gtk_plot_canvas_export_ps_with_size</link> (<link linkend="GtkPlotCanvas">GtkPlotCanvas</link> *canvas,
+                                                         <link linkend="char">char</link> *file_name,
+                                                         <link linkend="GtkPlotPageOrientation">GtkPlotPageOrientation</link> orient,
+                                                         <link linkend="gboolean">gboolean</link> epsflag,
+                                                         <link linkend="GtkPlotUnits">GtkPlotUnits</link> units,
+                                                         <link linkend="gint">gint</link> width,
+                                                         <link linkend="gint">gint</link> height);
+<link linkend="gboolean">gboolean</link>            <link linkend="gtk-plot-canvas-export-cairo">gtk_plot_canvas_export_cairo</link>        (<link linkend="GtkPlotCanvas">GtkPlotCanvas</link> *canvas,
+                                                         <link linkend="cairo-t">cairo_t</link> *cairo);
+</synopsis>
+</refsynopsisdiv>
+
+
+
+
+
+
+
+
+
+<refsect1 id="gtkextra-GtkPlotPrint.description" role="desc">
+<title role="desc.title">Description</title>
+<para>
+FIXME:: Need long description.</para>
+<para>
+</para>
+</refsect1>
+
+<refsect1 id="gtkextra-GtkPlotPrint.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="gtk-plot-export-ps" role="function">
+<title>gtk_plot_export_ps ()</title>
+<indexterm zone="gtk-plot-export-ps"><primary sortas="gtk_plot_export_ps">gtk_plot_export_ps</primary></indexterm><programlisting><link linkend="gboolean">gboolean</link>            gtk_plot_export_ps                  (<link linkend="GtkPlot">GtkPlot</link> *plot,
+                                                         <link linkend="char">char</link> *file_name,
+                                                         <link linkend="GtkPlotPageOrientation">GtkPlotPageOrientation</link> orient,
+                                                         <link linkend="gboolean">gboolean</link> epsflag,
+                                                         <link linkend="GtkPlotPageSize">GtkPlotPageSize</link> page_size);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>plot</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlot"><type>GtkPlot</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>file_name</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>orient</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>epsflag</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>page_size</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara> 
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-export-ps-with-size" role="function">
+<title>gtk_plot_export_ps_with_size ()</title>
+<indexterm zone="gtk-plot-export-ps-with-size"><primary sortas="gtk_plot_export_ps_with_size">gtk_plot_export_ps_with_size</primary></indexterm><programlisting><link linkend="gboolean">gboolean</link>            gtk_plot_export_ps_with_size        (<link linkend="GtkPlot">GtkPlot</link> *plot,
+                                                         <link linkend="char">char</link> *file_name,
+                                                         <link linkend="GtkPlotPageOrientation">GtkPlotPageOrientation</link> orient,
+                                                         <link linkend="gboolean">gboolean</link> epsflag,
+                                                         <link linkend="GtkPlotUnits">GtkPlotUnits</link> units,
+                                                         <link linkend="gint">gint</link> width,
+                                                         <link linkend="gint">gint</link> height);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>plot</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlot"><type>GtkPlot</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>file_name</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>orient</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>epsflag</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>units</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>width</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>height</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara> 
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-canvas-export-ps" role="function">
+<title>gtk_plot_canvas_export_ps ()</title>
+<indexterm zone="gtk-plot-canvas-export-ps"><primary sortas="gtk_plot_canvas_export_ps">gtk_plot_canvas_export_ps</primary></indexterm><programlisting><link linkend="gboolean">gboolean</link>            gtk_plot_canvas_export_ps           (<link linkend="GtkPlotCanvas">GtkPlotCanvas</link> *canvas,
+                                                         <link linkend="char">char</link> *file_name,
+                                                         <link linkend="GtkPlotPageOrientation">GtkPlotPageOrientation</link> orient,
+                                                         <link linkend="gboolean">gboolean</link> epsflag,
+                                                         <link linkend="GtkPlotPageSize">GtkPlotPageSize</link> page_size);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>canvas</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlotCanvas"><type>GtkPlotCanvas</type></link> .
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>file_name</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>orient</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>epsflag</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>page_size</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara> 
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-canvas-export-ps-with-size" role="function">
+<title>gtk_plot_canvas_export_ps_with_size ()</title>
+<indexterm zone="gtk-plot-canvas-export-ps-with-size"><primary sortas="gtk_plot_canvas_export_ps_with_size">gtk_plot_canvas_export_ps_with_size</primary></indexterm><programlisting><link linkend="gboolean">gboolean</link>            gtk_plot_canvas_export_ps_with_size (<link linkend="GtkPlotCanvas">GtkPlotCanvas</link> *canvas,
+                                                         <link linkend="char">char</link> *file_name,
+                                                         <link linkend="GtkPlotPageOrientation">GtkPlotPageOrientation</link> orient,
+                                                         <link linkend="gboolean">gboolean</link> epsflag,
+                                                         <link linkend="GtkPlotUnits">GtkPlotUnits</link> units,
+                                                         <link linkend="gint">gint</link> width,
+                                                         <link linkend="gint">gint</link> height);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>canvas</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlotCanvas"><type>GtkPlotCanvas</type></link> .
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>file_name</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>orient</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>epsflag</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>units</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>width</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>height</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara> 
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-canvas-export-cairo" role="function">
+<title>gtk_plot_canvas_export_cairo ()</title>
+<indexterm zone="gtk-plot-canvas-export-cairo"><primary sortas="gtk_plot_canvas_export_cairo">gtk_plot_canvas_export_cairo</primary></indexterm><programlisting><link linkend="gboolean">gboolean</link>            gtk_plot_canvas_export_cairo        (<link linkend="GtkPlotCanvas">GtkPlotCanvas</link> *canvas,
+                                                         <link linkend="cairo-t">cairo_t</link> *cairo);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>canvas</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlotCanvas"><type>GtkPlotCanvas</type></link> .
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>cairo</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara> 
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+
+
+
+
+</refentry>

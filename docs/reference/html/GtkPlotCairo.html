@@ -1,0 +1,235 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GtkPlotCairo</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="GtkExtra Reference Manual">
+<link rel="up" href="ch03.html" title="Widgets">
+<link rel="prev" href="GtkPlotBubble.html" title="GtkPlotBubble">
+<link rel="next" href="GtkPlotCandle.html" title="GtkPlotCandle">
+<meta name="generator" content="GTK-Doc V1.11 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="part" href="gtkextra.html" title="Part I. GtkExtra Overview">
+<link rel="part" href="gtkextrabase.html" title="Part II. GtkExtra Widgets and Objects">
+<link rel="chapter" href="ch01.html" title="Object Hierarchy">
+<link rel="chapter" href="ch02.html" title="Widget Gallery">
+<link rel="chapter" href="ch03.html" title="Widgets">
+<link rel="chapter" href="ch04.html" title="Data Formatter">
+<link rel="chapter" href="ch05.html" title="GtkExtra Versioning">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="GtkPlotBubble.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch03.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">GtkExtra Reference Manual</th>
+<td><a accesskey="n" href="GtkPlotCandle.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#GtkPlotCairo.synopsis" class="shortcut">Top</a>
+                 | 
+                <a href="#GtkPlotCairo.description" class="shortcut">Description</a>
+                 | 
+                <a href="#GtkPlotCairo.object-hierarchy" class="shortcut">Object Hierarchy</a>
+</td></tr>
+</table>
+<div class="refentry" title="GtkPlotCairo">
+<a name="GtkPlotCairo"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GtkPlotCairo.top_of_page"></a>GtkPlotCairo</span></h2>
+<p>GtkPlotCairo — Cairo drawing backend.</p>
+</td>
+<td valign="top" align="right"><img src=""></td>
+</tr></table></div>
+<div class="refsynopsisdiv" title="Synopsis">
+<a name="GtkPlotCairo.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">
+
+#include &lt;gtkextra.h&gt;
+
+                    <a class="link" href="GtkPlotCairo.html#GtkPlotCairo-struct" title="GtkPlotCairo">GtkPlotCairo</a>;
+<a
+href="http://library.gnome.org/devel/gtk3/GtkObject.html"
+>GtkObject</a> *         <a class="link" href="GtkPlotCairo.html#gtk-plot-cairo-new" title="gtk_plot_cairo_new ()">gtk_plot_cairo_new</a>                  (<a
+href="/opt/casy/gtk/.Linux.2.x86_64/share/gtk-doc/html/cairo/cairo-cairo-t.html#cairo-t"
+>cairo_t</a> *cairo);
+<a
+href="http://library.gnome.org/devel/gtk3/GtkObject.html"
+>GtkObject</a> *         <a class="link" href="GtkPlotCairo.html#gtk-plot-cairo-new-with-drawable" title="gtk_plot_cairo_new_with_drawable ()">gtk_plot_cairo_new_with_drawable</a>    (<a
+href="http://library.gnome.org/devel/gdk3/gdk2-Drawing-Primitives.html#GdkDrawable"
+>GdkDrawable</a> *drawable);
+void                <a class="link" href="GtkPlotCairo.html#gtk-plot-cairo-construct" title="gtk_plot_cairo_construct ()">gtk_plot_cairo_construct</a>            (<a class="link" href="GtkPlotCairo.html" title="GtkPlotCairo">GtkPlotCairo</a> *pc,
+                                                         <a
+href="/opt/casy/gtk/.Linux.2.x86_64/share/gtk-doc/html/cairo/cairo-cairo-t.html#cairo-t"
+>cairo_t</a> *cairo,
+                                                         <a
+href="/opt/casy/gtk/.Linux.2.x86_64/share/gtk-doc/html/pango/pango-Text-Processing.html#PangoContext"
+>PangoContext</a> *context);
+void                <a class="link" href="GtkPlotCairo.html#gtk-plot-cairo-set-cairo" title="gtk_plot_cairo_set_cairo ()">gtk_plot_cairo_set_cairo</a>            (<a class="link" href="GtkPlotCairo.html" title="GtkPlotCairo">GtkPlotCairo</a> *pc,
+                                                         <a
+href="/opt/casy/gtk/.Linux.2.x86_64/share/gtk-doc/html/cairo/cairo-cairo-t.html#cairo-t"
+>cairo_t</a> *cairo);
+</pre>
+</div>
+<div class="refsect1" title="Object Hierarchy">
+<a name="GtkPlotCairo.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a
+href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject"
+>GObject</a>
+   +----<a
+href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned"
+>GInitiallyUnowned</a>
+         +----<a
+href="http://library.gnome.org/devel/gtk3/GtkObject.html"
+>GtkObject</a>
+               +----<a class="link" href="GtkPlotPC.html" title="GtkPlotPC">GtkPlotPC</a>
+                     +----GtkPlotCairo
+</pre>
+</div>
+<div class="refsect1" title="Description">
+<a name="GtkPlotCairo.description"></a><h2>Description</h2>
+<p>
+Subclass of <a class="link" href="GtkPlotPC.html" title="GtkPlotPC"><span class="type">GtkPlotPC</span></a> used for screen drawing.</p>
+<p>
+</p>
+</div>
+<div class="refsect1" title="Details">
+<a name="GtkPlotCairo.details"></a><h2>Details</h2>
+<div class="refsect2" title="GtkPlotCairo">
+<a name="GtkPlotCairo-struct"></a><h3>GtkPlotCairo</h3>
+<pre class="programlisting">typedef struct _GtkPlotCairo GtkPlotCairo;</pre>
+<p>
+The GtkPlotCairo struct contains only private data.
+It should only be accessed through the functions described below.</p>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_cairo_new ()">
+<a name="gtk-plot-cairo-new"></a><h3>gtk_plot_cairo_new ()</h3>
+<pre class="programlisting"><a
+href="http://library.gnome.org/devel/gtk3/GtkObject.html"
+>GtkObject</a> *         gtk_plot_cairo_new                  (<a
+href="/opt/casy/gtk/.Linux.2.x86_64/share/gtk-doc/html/cairo/cairo-cairo-t.html#cairo-t"
+>cairo_t</a> *cairo);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>cairo</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_cairo_new_with_drawable ()">
+<a name="gtk-plot-cairo-new-with-drawable"></a><h3>gtk_plot_cairo_new_with_drawable ()</h3>
+<pre class="programlisting"><a
+href="http://library.gnome.org/devel/gtk3/GtkObject.html"
+>GtkObject</a> *         gtk_plot_cairo_new_with_drawable    (<a
+href="http://library.gnome.org/devel/gdk3/gdk2-Drawing-Primitives.html#GdkDrawable"
+>GdkDrawable</a> *drawable);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>drawable</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_cairo_construct ()">
+<a name="gtk-plot-cairo-construct"></a><h3>gtk_plot_cairo_construct ()</h3>
+<pre class="programlisting">void                gtk_plot_cairo_construct            (<a class="link" href="GtkPlotCairo.html" title="GtkPlotCairo">GtkPlotCairo</a> *pc,
+                                                         <a
+href="/opt/casy/gtk/.Linux.2.x86_64/share/gtk-doc/html/cairo/cairo-cairo-t.html#cairo-t"
+>cairo_t</a> *cairo,
+                                                         <a
+href="/opt/casy/gtk/.Linux.2.x86_64/share/gtk-doc/html/pango/pango-Text-Processing.html#PangoContext"
+>PangoContext</a> *context);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>pc</code></em> :</span></p></td>
+<td> A <a class="link" href="GtkPlotCairo.html" title="GtkPlotCairo"><span class="type">GtkPlotCairo</span></a>.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>cairo</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>context</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_plot_cairo_set_cairo ()">
+<a name="gtk-plot-cairo-set-cairo"></a><h3>gtk_plot_cairo_set_cairo ()</h3>
+<pre class="programlisting">void                gtk_plot_cairo_set_cairo            (<a class="link" href="GtkPlotCairo.html" title="GtkPlotCairo">GtkPlotCairo</a> *pc,
+                                                         <a
+href="/opt/casy/gtk/.Linux.2.x86_64/share/gtk-doc/html/cairo/cairo-cairo-t.html#cairo-t"
+>cairo_t</a> *cairo);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>pc</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkPlotCairo.html" title="GtkPlotCairo"><span class="type">GtkPlotCairo</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>cairo</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.11</div>
+</body>
+</html>

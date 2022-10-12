@@ -1,0 +1,100 @@
+<!-- ##### SECTION Title ##### -->
+GtkFontCombo
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### STRUCT GtkFontCombo ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SIGNAL GtkFontCombo::changed ##### -->
+<para>
+
+</para>
+
+@fontcombo: the object which received the signal.
+
+<!-- ##### FUNCTION gtk_font_combo_new ##### -->
+<para>
+
+</para>
+
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_font_combo_select ##### -->
+<para>
+
+</para>
+
+@font_combo: 
+@family: 
+@bold: 
+@italic: 
+@height: 
+
+
+<!-- ##### FUNCTION gtk_font_combo_select_nth ##### -->
+<para>
+
+</para>
+
+@font_combo: 
+@n: 
+@bold: 
+@italic: 
+@height: 
+
+
+<!-- ##### FUNCTION gtk_font_combo_get_font_height ##### -->
+<para>
+
+</para>
+
+@font_combo: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_font_combo_get_psfont ##### -->
+<para>
+
+</para>
+
+@font_combo: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_font_combo_get_font_description ##### -->
+<para>
+
+</para>
+
+@font_combo: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_font_combo_get_gdkfont ##### -->
+<para>
+
+</para>
+
+@font_combo: 
+@Returns: 
+
+

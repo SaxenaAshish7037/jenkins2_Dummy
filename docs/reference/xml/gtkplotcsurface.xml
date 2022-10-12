@@ -1,0 +1,370 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+<!ENTITY version SYSTEM "version.xml">
+]>
+<!--ENTITY index-Objects-Grouped SYSTEM "objects_grouped.sgml"-->
+<refentry id="GtkPlotCSurface">
+<refmeta>
+<refentrytitle role="top_of_page" id="GtkPlotCSurface.top_of_page">GtkPlotCSurface</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GTKEXTRA Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>GtkPlotCSurface</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="GtkPlotCSurface.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>
+
+#include &lt;gtkextra.h&gt;
+
+                    <link linkend="GtkPlotCSurface-struct">GtkPlotCSurface</link>;
+enum                <link linkend="GtkPlotProjection">GtkPlotProjection</link>;
+<link linkend="GtkWidget">GtkWidget</link>*          <link linkend="gtk-plot-csurface-new">gtk_plot_csurface_new</link>               (void);
+<link linkend="GtkWidget">GtkWidget</link>*          <link linkend="gtk-plot-csurface-new-function">gtk_plot_csurface_new_function</link>      (<link linkend="GtkPlotFunc3D">GtkPlotFunc3D</link> function);
+<link linkend="void">void</link>                <link linkend="gtk-plot-csurface-construct-function">gtk_plot_csurface_construct_function</link>
+                                                        (<link linkend="GtkPlotCSurface">GtkPlotCSurface</link> *csurface,
+                                                         <link linkend="GtkPlotFunc3D">GtkPlotFunc3D</link> function);
+<link linkend="void">void</link>                <link linkend="gtk-plot-csurface-set-lines-visible">gtk_plot_csurface_set_lines_visible</link> (<link linkend="GtkPlotCSurface">GtkPlotCSurface</link> *csurface,
+                                                         <link linkend="gboolean">gboolean</link> visible);
+<link linkend="gboolean">gboolean</link>            <link linkend="gtk-plot-csurface-get-lines-visible">gtk_plot_csurface_get_lines_visible</link> (<link linkend="GtkPlotCSurface">GtkPlotCSurface</link> *csurface);
+<link linkend="void">void</link>                <link linkend="gtk-plot-csurface-set-projection">gtk_plot_csurface_set_projection</link>    (<link linkend="GtkPlotCSurface">GtkPlotCSurface</link> *csurface,
+                                                         <link linkend="GtkPlotProjection">GtkPlotProjection</link> proj);
+<link linkend="GtkPlotProjection">GtkPlotProjection</link>   <link linkend="gtk-plot-csurface-projection">gtk_plot_csurface_projection</link>        (<link linkend="GtkPlotCSurface">GtkPlotCSurface</link> *csurface);
+<link linkend="void">void</link>                <link linkend="gtk-plot-csurface-set-levels-attributes">gtk_plot_csurface_set_levels_attributes</link>
+                                                        (<link linkend="GtkPlotCSurface">GtkPlotCSurface</link> *dataset,
+                                                         <link linkend="GtkPlotLineStyle">GtkPlotLineStyle</link> style,
+                                                         <link linkend="gfloat">gfloat</link> width,
+                                                         const <link linkend="GdkColor">GdkColor</link> *color);
+<link linkend="void">void</link>                <link linkend="gtk-plot-csurface-set-sublevels-attributes">gtk_plot_csurface_set_sublevels_attributes</link>
+                                                        (<link linkend="GtkPlotCSurface">GtkPlotCSurface</link> *dataset,
+                                                         <link linkend="GtkPlotLineStyle">GtkPlotLineStyle</link> style,
+                                                         <link linkend="gfloat">gfloat</link> width,
+                                                         const <link linkend="GdkColor">GdkColor</link> *color);
+<link linkend="void">void</link>                <link linkend="gtk-plot-csurface-get-levels-attributes">gtk_plot_csurface_get_levels_attributes</link>
+                                                        (<link linkend="GtkPlotCSurface">GtkPlotCSurface</link> *dataset,
+                                                         <link linkend="GtkPlotLineStyle">GtkPlotLineStyle</link> *style,
+                                                         <link linkend="gfloat">gfloat</link> *width,
+                                                         <link linkend="GdkColor">GdkColor</link> *color);
+<link linkend="void">void</link>                <link linkend="gtk-plot-csurface-get-sublevels-attributes">gtk_plot_csurface_get_sublevels_attributes</link>
+                                                        (<link linkend="GtkPlotCSurface">GtkPlotCSurface</link> *dataset,
+                                                         <link linkend="GtkPlotLineStyle">GtkPlotLineStyle</link> *style,
+                                                         <link linkend="gfloat">gfloat</link> *width,
+                                                         <link linkend="GdkColor">GdkColor</link> *color);
+</synopsis>
+</refsynopsisdiv>
+
+<refsect1 id="GtkPlotCSurface.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+  <link linkend="GObject">GObject</link>
+   +----<link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+         +----<link linkend="GtkObject">GtkObject</link>
+               +----<link linkend="GtkWidget">GtkWidget</link>
+                     +----<link linkend="GtkPlotData">GtkPlotData</link>
+                           +----<link linkend="GtkPlotSurface">GtkPlotSurface</link>
+                                 +----GtkPlotCSurface
+</synopsis>
+</refsect1>
+
+
+
+<refsect1 id="GtkPlotCSurface.implemented-interfaces" role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+GtkPlotCSurface implements
+ <link linkend="AtkImplementorIface">AtkImplementorIface</link> and  <link linkend="GtkBuildable">GtkBuildable</link>.</para>
+</refsect1>
+
+
+<refsect1 id="GtkPlotCSurface.properties" role="properties">
+<title role="properties.title">Properties</title>
+<synopsis>
+  &quot;<link linkend="GtkPlotCSurface--levels-color">levels-color</link>&quot;             <link linkend="gpointer">gpointer</link>              : Read / Write
+  &quot;<link linkend="GtkPlotCSurface--levels-style">levels-style</link>&quot;             <link linkend="gint">gint</link>                  : Read / Write
+  &quot;<link linkend="GtkPlotCSurface--levels-width">levels-width</link>&quot;             <link linkend="gdouble">gdouble</link>               : Read / Write
+  &quot;<link linkend="GtkPlotCSurface--lines-visible">lines-visible</link>&quot;            <link linkend="gint">gint</link>                  : Read / Write
+  &quot;<link linkend="GtkPlotCSurface--projection">projection</link>&quot;               <link linkend="gint">gint</link>                  : Read / Write
+  &quot;<link linkend="GtkPlotCSurface--sublevels-color">sublevels-color</link>&quot;          <link linkend="gpointer">gpointer</link>              : Read / Write
+  &quot;<link linkend="GtkPlotCSurface--sublevels-style">sublevels-style</link>&quot;          <link linkend="gint">gint</link>                  : Read / Write
+  &quot;<link linkend="GtkPlotCSurface--sublevels-width">sublevels-width</link>&quot;          <link linkend="gdouble">gdouble</link>               : Read / Write
+</synopsis>
+</refsect1>
+
+
+
+<refsect1 id="GtkPlotCSurface.description" role="desc">
+<title role="desc.title">Description</title>
+<para>
+FIXME:: need long description</para>
+<para>
+</para>
+</refsect1>
+
+<refsect1 id="GtkPlotCSurface.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="GtkPlotCSurface-struct" role="struct">
+<title>GtkPlotCSurface</title>
+<indexterm zone="GtkPlotCSurface-struct"><primary sortas="GtkPlotCSurface">GtkPlotCSurface</primary></indexterm><programlisting>typedef struct _GtkPlotCSurface GtkPlotCSurface;</programlisting>
+<para>
+The GtkPlotCSurface struct contains only private data.
+It should only be accessed through the functions described below.</para>
+<para>
+</para></refsect2>
+<refsect2 id="GtkPlotProjection" role="enum">
+<title>enum GtkPlotProjection</title>
+<indexterm zone="GtkPlotProjection"><primary sortas="GtkPlotProjection">GtkPlotProjection</primary></indexterm><programlisting>typedef enum
+{
+  GTK_PLOT_PROJECT_NONE,  /* draw surface with no projections */
+  GTK_PLOT_PROJECT_EMPTY, /* draw empty contours -- lines only.
+                             Notice that the style of the lines is given by
+                             levels/sublevels_line. You should set to 
+                             GTK_PLOT_LINE_NONE if you don't want the lines
+                             drawn */
+  GTK_PLOT_PROJECT_FULL,  /* draw filled contours */
+} GtkPlotProjection;      
+</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="gtk-plot-csurface-new" role="function">
+<title>gtk_plot_csurface_new ()</title>
+<indexterm zone="gtk-plot-csurface-new"><primary sortas="gtk_plot_csurface_new">gtk_plot_csurface_new</primary></indexterm><programlisting><link linkend="GtkWidget">GtkWidget</link>*          gtk_plot_csurface_new               (void);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-csurface-new-function" role="function">
+<title>gtk_plot_csurface_new_function ()</title>
+<indexterm zone="gtk-plot-csurface-new-function"><primary sortas="gtk_plot_csurface_new_function">gtk_plot_csurface_new_function</primary></indexterm><programlisting><link linkend="GtkWidget">GtkWidget</link>*          gtk_plot_csurface_new_function      (<link linkend="GtkPlotFunc3D">GtkPlotFunc3D</link> function);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>function</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlotFunc3D"><type>GtkPlotFunc3D</type></link>. <acronym>scope</acronym> async. </simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-csurface-construct-function" role="function">
+<title>gtk_plot_csurface_construct_function ()</title>
+<indexterm zone="gtk-plot-csurface-construct-function"><primary sortas="gtk_plot_csurface_construct_function">gtk_plot_csurface_construct_function</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_csurface_construct_function
+                                                        (<link linkend="GtkPlotCSurface">GtkPlotCSurface</link> *csurface,
+                                                         <link linkend="GtkPlotFunc3D">GtkPlotFunc3D</link> function);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>csurface</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>function</parameter>&#160;:</term>
+<listitem><simpara> a  <link linkend="GtkPlotFunc3D"><type>GtkPlotFunc3D</type></link>. <acronym>scope</acronym> async. </simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-csurface-set-lines-visible" role="function">
+<title>gtk_plot_csurface_set_lines_visible ()</title>
+<indexterm zone="gtk-plot-csurface-set-lines-visible"><primary sortas="gtk_plot_csurface_set_lines_visible">gtk_plot_csurface_set_lines_visible</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_csurface_set_lines_visible (<link linkend="GtkPlotCSurface">GtkPlotCSurface</link> *csurface,
+                                                         <link linkend="gboolean">gboolean</link> visible);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>csurface</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlotCSurface"><type>GtkPlotCSurface</type></link>/
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>visible</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-csurface-get-lines-visible" role="function">
+<title>gtk_plot_csurface_get_lines_visible ()</title>
+<indexterm zone="gtk-plot-csurface-get-lines-visible"><primary sortas="gtk_plot_csurface_get_lines_visible">gtk_plot_csurface_get_lines_visible</primary></indexterm><programlisting><link linkend="gboolean">gboolean</link>            gtk_plot_csurface_get_lines_visible (<link linkend="GtkPlotCSurface">GtkPlotCSurface</link> *csurface);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>csurface</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlotCSurface"><type>GtkPlotCSurface</type></link>.
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-csurface-set-projection" role="function">
+<title>gtk_plot_csurface_set_projection ()</title>
+<indexterm zone="gtk-plot-csurface-set-projection"><primary sortas="gtk_plot_csurface_set_projection">gtk_plot_csurface_set_projection</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_csurface_set_projection    (<link linkend="GtkPlotCSurface">GtkPlotCSurface</link> *csurface,
+                                                         <link linkend="GtkPlotProjection">GtkPlotProjection</link> proj);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>csurface</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlotCSurface"><type>GtkPlotCSurface</type></link>.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>proj</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-csurface-projection" role="function">
+<title>gtk_plot_csurface_projection ()</title>
+<indexterm zone="gtk-plot-csurface-projection"><primary sortas="gtk_plot_csurface_projection">gtk_plot_csurface_projection</primary></indexterm><programlisting><link linkend="GtkPlotProjection">GtkPlotProjection</link>   gtk_plot_csurface_projection        (<link linkend="GtkPlotCSurface">GtkPlotCSurface</link> *csurface);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>csurface</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlotCSurface"><type>GtkPlotCSurface</type></link>.
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-csurface-set-levels-attributes" role="function">
+<title>gtk_plot_csurface_set_levels_attributes ()</title>
+<indexterm zone="gtk-plot-csurface-set-levels-attributes"><primary sortas="gtk_plot_csurface_set_levels_attributes">gtk_plot_csurface_set_levels_attributes</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_csurface_set_levels_attributes
+                                                        (<link linkend="GtkPlotCSurface">GtkPlotCSurface</link> *dataset,
+                                                         <link linkend="GtkPlotLineStyle">GtkPlotLineStyle</link> style,
+                                                         <link linkend="gfloat">gfloat</link> width,
+                                                         const <link linkend="GdkColor">GdkColor</link> *color);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>dataset</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlotCSurface"><type>GtkPlotCSurface</type></link>.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>style</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>width</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>color</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-csurface-set-sublevels-attributes" role="function">
+<title>gtk_plot_csurface_set_sublevels_attributes ()</title>
+<indexterm zone="gtk-plot-csurface-set-sublevels-attributes"><primary sortas="gtk_plot_csurface_set_sublevels_attributes">gtk_plot_csurface_set_sublevels_attributes</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_csurface_set_sublevels_attributes
+                                                        (<link linkend="GtkPlotCSurface">GtkPlotCSurface</link> *dataset,
+                                                         <link linkend="GtkPlotLineStyle">GtkPlotLineStyle</link> style,
+                                                         <link linkend="gfloat">gfloat</link> width,
+                                                         const <link linkend="GdkColor">GdkColor</link> *color);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>dataset</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlotCSurface"><type>GtkPlotCSurface</type></link>.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>style</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>width</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>color</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-csurface-get-levels-attributes" role="function">
+<title>gtk_plot_csurface_get_levels_attributes ()</title>
+<indexterm zone="gtk-plot-csurface-get-levels-attributes"><primary sortas="gtk_plot_csurface_get_levels_attributes">gtk_plot_csurface_get_levels_attributes</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_csurface_get_levels_attributes
+                                                        (<link linkend="GtkPlotCSurface">GtkPlotCSurface</link> *dataset,
+                                                         <link linkend="GtkPlotLineStyle">GtkPlotLineStyle</link> *style,
+                                                         <link linkend="gfloat">gfloat</link> *width,
+                                                         <link linkend="GdkColor">GdkColor</link> *color);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>dataset</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlotCSurface"><type>GtkPlotCSurface</type></link>.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>style</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>width</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>color</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-csurface-get-sublevels-attributes" role="function">
+<title>gtk_plot_csurface_get_sublevels_attributes ()</title>
+<indexterm zone="gtk-plot-csurface-get-sublevels-attributes"><primary sortas="gtk_plot_csurface_get_sublevels_attributes">gtk_plot_csurface_get_sublevels_attributes</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_csurface_get_sublevels_attributes
+                                                        (<link linkend="GtkPlotCSurface">GtkPlotCSurface</link> *dataset,
+                                                         <link linkend="GtkPlotLineStyle">GtkPlotLineStyle</link> *style,
+                                                         <link linkend="gfloat">gfloat</link> *width,
+                                                         <link linkend="GdkColor">GdkColor</link> *color);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>dataset</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlotCSurface"><type>GtkPlotCSurface</type></link>.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>style</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>width</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>color</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+<refsect1 id="GtkPlotCSurface.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GtkPlotCSurface--levels-color" role="property"><title>The <literal>&quot;levels-color&quot;</literal> property</title>
+<indexterm zone="GtkPlotCSurface--levels-color"><primary sortas="GtkPlotCSurface:levels-color">GtkPlotCSurface:levels-color</primary></indexterm><programlisting>  &quot;levels-color&quot;             <link linkend="gpointer">gpointer</link>              : Read / Write</programlisting>
+<para></para></refsect2>
+<refsect2 id="GtkPlotCSurface--levels-style" role="property"><title>The <literal>&quot;levels-style&quot;</literal> property</title>
+<indexterm zone="GtkPlotCSurface--levels-style"><primary sortas="GtkPlotCSurface:levels-style">GtkPlotCSurface:levels-style</primary></indexterm><programlisting>  &quot;levels-style&quot;             <link linkend="gint">gint</link>                  : Read / Write</programlisting>
+<para></para><para>Allowed values: &gt;= 0</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GtkPlotCSurface--levels-width" role="property"><title>The <literal>&quot;levels-width&quot;</literal> property</title>
+<indexterm zone="GtkPlotCSurface--levels-width"><primary sortas="GtkPlotCSurface:levels-width">GtkPlotCSurface:levels-width</primary></indexterm><programlisting>  &quot;levels-width&quot;             <link linkend="gdouble">gdouble</link>               : Read / Write</programlisting>
+<para></para><para>Allowed values: &gt;= 0</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GtkPlotCSurface--lines-visible" role="property"><title>The <literal>&quot;lines-visible&quot;</literal> property</title>
+<indexterm zone="GtkPlotCSurface--lines-visible"><primary sortas="GtkPlotCSurface:lines-visible">GtkPlotCSurface:lines-visible</primary></indexterm><programlisting>  &quot;lines-visible&quot;            <link linkend="gint">gint</link>                  : Read / Write</programlisting>
+<para></para><para>Allowed values: &gt;= 0</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GtkPlotCSurface--projection" role="property"><title>The <literal>&quot;projection&quot;</literal> property</title>
+<indexterm zone="GtkPlotCSurface--projection"><primary sortas="GtkPlotCSurface:projection">GtkPlotCSurface:projection</primary></indexterm><programlisting>  &quot;projection&quot;               <link linkend="gint">gint</link>                  : Read / Write</programlisting>
+<para>
+</para>
+<para>
+</para><para>Allowed values: &gt;= 0</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GtkPlotCSurface--sublevels-color" role="property"><title>The <literal>&quot;sublevels-color&quot;</literal> property</title>
+<indexterm zone="GtkPlotCSurface--sublevels-color"><primary sortas="GtkPlotCSurface:sublevels-color">GtkPlotCSurface:sublevels-color</primary></indexterm><programlisting>  &quot;sublevels-color&quot;          <link linkend="gpointer">gpointer</link>              : Read / Write</programlisting>
+<para></para></refsect2>
+<refsect2 id="GtkPlotCSurface--sublevels-style" role="property"><title>The <literal>&quot;sublevels-style&quot;</literal> property</title>
+<indexterm zone="GtkPlotCSurface--sublevels-style"><primary sortas="GtkPlotCSurface:sublevels-style">GtkPlotCSurface:sublevels-style</primary></indexterm><programlisting>  &quot;sublevels-style&quot;          <link linkend="gint">gint</link>                  : Read / Write</programlisting>
+<para></para><para>Allowed values: &gt;= 0</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GtkPlotCSurface--sublevels-width" role="property"><title>The <literal>&quot;sublevels-width&quot;</literal> property</title>
+<indexterm zone="GtkPlotCSurface--sublevels-width"><primary sortas="GtkPlotCSurface:sublevels-width">GtkPlotCSurface:sublevels-width</primary></indexterm><programlisting>  &quot;sublevels-width&quot;          <link linkend="gdouble">gdouble</link>               : Read / Write</programlisting>
+<para></para><para>Allowed values: &gt;= 0</para>
+<para>Default value: 0</para>
+</refsect2>
+</refsect1>
+
+
+
+
+</refentry>

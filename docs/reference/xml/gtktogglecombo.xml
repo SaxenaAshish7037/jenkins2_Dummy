@@ -1,0 +1,230 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+<!ENTITY version SYSTEM "version.xml">
+]>
+<!--ENTITY index-Objects-Grouped SYSTEM "objects_grouped.sgml"-->
+<refentry id="GtkToggleCombo">
+<refmeta>
+<refentrytitle role="top_of_page" id="GtkToggleCombo.top_of_page">GtkToggleCombo</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GTKEXTRA Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>GtkToggleCombo</refname>
+<refpurpose>A toggle combo widget for GTK.</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="GtkToggleCombo.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>
+
+#include &lt;gtkextra.h&gt;
+
+                    <link linkend="GtkToggleCombo-struct">GtkToggleCombo</link>;
+<link linkend="GtkWidget">GtkWidget</link>*          <link linkend="gtk-toggle-combo-new">gtk_toggle_combo_new</link>                (<link linkend="gint">gint</link> nrows,
+                                                         <link linkend="gint">gint</link> ncols);
+<link linkend="void">void</link>                <link linkend="gtk-toggle-combo-construct">gtk_toggle_combo_construct</link>          (<link linkend="GtkToggleCombo">GtkToggleCombo</link> *toggle_combo,
+                                                         <link linkend="gint">gint</link> nrows,
+                                                         <link linkend="gint">gint</link> ncols);
+<link linkend="gint">gint</link>                <link linkend="gtk-toggle-combo-get-nrows">gtk_toggle_combo_get_nrows</link>          (<link linkend="GtkToggleCombo">GtkToggleCombo</link> *combo);
+<link linkend="gint">gint</link>                <link linkend="gtk-toggle-combo-get-ncols">gtk_toggle_combo_get_ncols</link>          (<link linkend="GtkToggleCombo">GtkToggleCombo</link> *combo);
+<link linkend="void">void</link>                <link linkend="gtk-toggle-combo-select">gtk_toggle_combo_select</link>             (<link linkend="GtkToggleCombo">GtkToggleCombo</link> *toggle_combo,
+                                                         <link linkend="gint">gint</link> new_row,
+                                                         <link linkend="gint">gint</link> new_col);
+<link linkend="void">void</link>                <link linkend="gtk-toggle-combo-get-selection">gtk_toggle_combo_get_selection</link>      (<link linkend="GtkToggleCombo">GtkToggleCombo</link> *combo,
+                                                         <link linkend="gint">gint</link> *row,
+                                                         <link linkend="gint">gint</link> *col);
+</synopsis>
+</refsynopsisdiv>
+
+<refsect1 id="GtkToggleCombo.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+  <link linkend="GObject">GObject</link>
+   +----<link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+         +----<link linkend="GtkObject">GtkObject</link>
+               +----<link linkend="GtkWidget">GtkWidget</link>
+                     +----<link linkend="GtkContainer">GtkContainer</link>
+                           +----<link linkend="GtkBox">GtkBox</link>
+                                 +----<link linkend="GtkHBox">GtkHBox</link>
+                                       +----<link linkend="GtkComboButton">GtkComboButton</link>
+                                             +----GtkToggleCombo
+</synopsis>
+</refsect1>
+
+
+
+<refsect1 id="GtkToggleCombo.implemented-interfaces" role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+GtkToggleCombo implements
+ <link linkend="AtkImplementorIface">AtkImplementorIface</link>,  <link linkend="GtkBuildable">GtkBuildable</link> and  <link linkend="GtkOrientable">GtkOrientable</link>.</para>
+</refsect1>
+
+
+
+<refsect1 id="GtkToggleCombo.signals" role="signal_proto">
+<title role="signal_proto.title">Signals</title>
+<synopsis>
+  &quot;<link linkend="GtkToggleCombo-changed">changed</link>&quot;                                        : Run First
+</synopsis>
+</refsect1>
+
+
+<refsect1 id="GtkToggleCombo.description" role="desc">
+<title role="desc.title">Description</title>
+<para>
+A GtkToggleCombo is a GtkCombo which will remain 'pressed-in' when clicked. 
+Clicking it again will cause the toggle combo to return to it's normal state.
+A toggle combo is created by calling <link linkend="gtk-toggle-combo-new"><function>gtk_toggle_combo_new()</function></link>.
+The number of rows/columns may be find out by calling <link linkend="gtk-toggle-combo-get-nrows"><function>gtk_toggle_combo_get_nrows()</function></link> or <link linkend="gtk-toggle-combo-get-ncols"><function>gtk_toggle_combo_get_ncols()</function></link>.
+A combo row may be selected with <link linkend="gtk-toggle-combo-select"><function>gtk_toggle_combo_select()</function></link>.The current selection is returned by <link linkend="gtk-toggle-combo-get-selection"><function>gtk_toggle_combo_get_selection()</function></link>.</para>
+<para>
+</para>
+</refsect1>
+
+<refsect1 id="GtkToggleCombo.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="GtkToggleCombo-struct" role="struct">
+<title>GtkToggleCombo</title>
+<indexterm zone="GtkToggleCombo-struct"><primary sortas="GtkToggleCombo">GtkToggleCombo</primary></indexterm><programlisting>typedef struct _GtkToggleCombo GtkToggleCombo;</programlisting>
+<para>
+The GtkToggleCombo struct contains only private data.
+It should only be accessed through the functions described below.</para>
+<para>
+</para></refsect2>
+<refsect2 id="gtk-toggle-combo-new" role="function">
+<title>gtk_toggle_combo_new ()</title>
+<indexterm zone="gtk-toggle-combo-new"><primary sortas="gtk_toggle_combo_new">gtk_toggle_combo_new</primary></indexterm><programlisting><link linkend="GtkWidget">GtkWidget</link>*          gtk_toggle_combo_new                (<link linkend="gint">gint</link> nrows,
+                                                         <link linkend="gint">gint</link> ncols);</programlisting>
+<para>
+Creates a new <link linkend="GtkToggleCombo"><type>GtkToggleCombo</type></link> widget with <parameter>nrows</parameter> rows and <parameter>ncols</parameter> columns.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>nrows</parameter>&#160;:</term>
+<listitem><simpara> number of rows
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>ncols</parameter>&#160;:</term>
+<listitem><simpara> number of columns
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara> the newly-created <link linkend="GtkToggleCombo"><type>GtkToggleCombo</type></link> widget.
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-toggle-combo-construct" role="function">
+<title>gtk_toggle_combo_construct ()</title>
+<indexterm zone="gtk-toggle-combo-construct"><primary sortas="gtk_toggle_combo_construct">gtk_toggle_combo_construct</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_toggle_combo_construct          (<link linkend="GtkToggleCombo">GtkToggleCombo</link> *toggle_combo,
+                                                         <link linkend="gint">gint</link> nrows,
+                                                         <link linkend="gint">gint</link> ncols);</programlisting>
+<para>
+Initializes the <link linkend="GtkToggleCombo"><type>GtkToggleCombo</type></link> with <parameter>nrows</parameter> rows and <parameter>ncols</parameter> columns.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>toggle_combo</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkToggleCombo"><type>GtkToggleCombo</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>nrows</parameter>&#160;:</term>
+<listitem><simpara> number of rows
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>ncols</parameter>&#160;:</term>
+<listitem><simpara> number of columns
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-toggle-combo-get-nrows" role="function">
+<title>gtk_toggle_combo_get_nrows ()</title>
+<indexterm zone="gtk-toggle-combo-get-nrows"><primary sortas="gtk_toggle_combo_get_nrows">gtk_toggle_combo_get_nrows</primary></indexterm><programlisting><link linkend="gint">gint</link>                gtk_toggle_combo_get_nrows          (<link linkend="GtkToggleCombo">GtkToggleCombo</link> *combo);</programlisting>
+<para>
+Get the number of rows in <link linkend="GtkToggleCombo"><type>GtkToggleCombo</type></link>.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>combo</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkToggleCombo"><type>GtkToggleCombo</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara> number of rows
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-toggle-combo-get-ncols" role="function">
+<title>gtk_toggle_combo_get_ncols ()</title>
+<indexterm zone="gtk-toggle-combo-get-ncols"><primary sortas="gtk_toggle_combo_get_ncols">gtk_toggle_combo_get_ncols</primary></indexterm><programlisting><link linkend="gint">gint</link>                gtk_toggle_combo_get_ncols          (<link linkend="GtkToggleCombo">GtkToggleCombo</link> *combo);</programlisting>
+<para>
+Get the number of columns in <link linkend="GtkToggleCombo"><type>GtkToggleCombo</type></link>.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>combo</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkToggleCombo"><type>GtkToggleCombo</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara> number of columns
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-toggle-combo-select" role="function">
+<title>gtk_toggle_combo_select ()</title>
+<indexterm zone="gtk-toggle-combo-select"><primary sortas="gtk_toggle_combo_select">gtk_toggle_combo_select</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_toggle_combo_select             (<link linkend="GtkToggleCombo">GtkToggleCombo</link> *toggle_combo,
+                                                         <link linkend="gint">gint</link> new_row,
+                                                         <link linkend="gint">gint</link> new_col);</programlisting>
+<para>
+Select the cell(row,col) from <link linkend="GtkToggleCombo"><type>GtkToggleCombo</type></link>.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>toggle_combo</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkToggleCombo"><type>GtkToggleCombo</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>new_row</parameter>&#160;:</term>
+<listitem><simpara> number of row
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>new_col</parameter>&#160;:</term>
+<listitem><simpara> number of column
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-toggle-combo-get-selection" role="function">
+<title>gtk_toggle_combo_get_selection ()</title>
+<indexterm zone="gtk-toggle-combo-get-selection"><primary sortas="gtk_toggle_combo_get_selection">gtk_toggle_combo_get_selection</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_toggle_combo_get_selection      (<link linkend="GtkToggleCombo">GtkToggleCombo</link> *combo,
+                                                         <link linkend="gint">gint</link> *row,
+                                                         <link linkend="gint">gint</link> *col);</programlisting>
+<para>
+Get the current selection(row,col) in <link linkend="GtkToggleCombo"><type>GtkToggleCombo</type></link>.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>combo</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkToggleCombo"><type>GtkToggleCombo</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>row</parameter>&#160;:</term>
+<listitem><simpara> number of row
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>col</parameter>&#160;:</term>
+<listitem><simpara> number of column
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+
+<refsect1 id="GtkToggleCombo.signal-details" role="signals">
+<title role="signals.title">Signal Details</title>
+<refsect2 id="GtkToggleCombo-changed" role="signal"><title>The <literal>&quot;changed&quot;</literal> signal</title>
+<indexterm zone="GtkToggleCombo-changed"><primary sortas="GtkToggleCombo::changed">GtkToggleCombo::changed</primary></indexterm><programlisting><link linkend="void">void</link>                user_function                      (<link linkend="GtkToggleCombo">GtkToggleCombo</link> *toggle_combo,
+                                                        <link linkend="gint">gint</link>            row,
+                                                        <link linkend="gint">gint</link>            col,
+                                                        <link linkend="gpointer">gpointer</link>        user_data)         : Run First</programlisting>
+<para>
+Emmited when the <parameter>row</parameter>,<parameter>col</parameter> are selected in <link linkend="GtkToggleCombo"><type>GtkToggleCombo</type></link></para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>toggle_combo</parameter>&#160;:</term>
+<listitem><simpara> the <link linkend="GtkToggleCombo"><type>GtkToggleCombo</type></link> object that received the signal
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>row</parameter>&#160;:</term>
+<listitem><simpara> row number
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>col</parameter>&#160;:</term>
+<listitem><simpara> column number
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>user_data</parameter>&#160;:</term>
+<listitem><simpara>user data set when the signal handler was connected.</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+</refsect1>
+
+
+
+</refentry>

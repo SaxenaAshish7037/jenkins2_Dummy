@@ -1,0 +1,140 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+<!ENTITY version SYSTEM "version.xml">
+]>
+<!--ENTITY index-Objects-Grouped SYSTEM "objects_grouped.sgml"-->
+<refentry id="GtkPlotCairo">
+<refmeta>
+<refentrytitle role="top_of_page" id="GtkPlotCairo.top_of_page">GtkPlotCairo</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GTKEXTRA Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>GtkPlotCairo</refname>
+<refpurpose>Cairo drawing backend.</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="GtkPlotCairo.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>
+
+#include &lt;gtkextra.h&gt;
+
+                    <link linkend="GtkPlotCairo-struct">GtkPlotCairo</link>;
+<link linkend="GtkObject">GtkObject</link> *         <link linkend="gtk-plot-cairo-new">gtk_plot_cairo_new</link>                  (<link linkend="cairo-t">cairo_t</link> *cairo);
+<link linkend="GtkObject">GtkObject</link> *         <link linkend="gtk-plot-cairo-new-with-drawable">gtk_plot_cairo_new_with_drawable</link>    (<link linkend="GdkDrawable">GdkDrawable</link> *drawable);
+<link linkend="void">void</link>                <link linkend="gtk-plot-cairo-construct">gtk_plot_cairo_construct</link>            (<link linkend="GtkPlotCairo">GtkPlotCairo</link> *pc,
+                                                         <link linkend="cairo-t">cairo_t</link> *cairo,
+                                                         <link linkend="PangoContext">PangoContext</link> *context);
+<link linkend="void">void</link>                <link linkend="gtk-plot-cairo-set-cairo">gtk_plot_cairo_set_cairo</link>            (<link linkend="GtkPlotCairo">GtkPlotCairo</link> *pc,
+                                                         <link linkend="cairo-t">cairo_t</link> *cairo);
+</synopsis>
+</refsynopsisdiv>
+
+<refsect1 id="GtkPlotCairo.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+  <link linkend="GObject">GObject</link>
+   +----<link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+         +----<link linkend="GtkObject">GtkObject</link>
+               +----<link linkend="GtkPlotPC">GtkPlotPC</link>
+                     +----GtkPlotCairo
+</synopsis>
+</refsect1>
+
+
+
+
+
+
+
+
+<refsect1 id="GtkPlotCairo.description" role="desc">
+<title role="desc.title">Description</title>
+<para>
+Subclass of <link linkend="GtkPlotPC"><type>GtkPlotPC</type></link> used for screen drawing.</para>
+<para>
+</para>
+</refsect1>
+
+<refsect1 id="GtkPlotCairo.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="GtkPlotCairo-struct" role="struct">
+<title>GtkPlotCairo</title>
+<indexterm zone="GtkPlotCairo-struct"><primary sortas="GtkPlotCairo">GtkPlotCairo</primary></indexterm><programlisting>typedef struct _GtkPlotCairo GtkPlotCairo;</programlisting>
+<para>
+The GtkPlotCairo struct contains only private data.
+It should only be accessed through the functions described below.</para>
+<para>
+</para></refsect2>
+<refsect2 id="gtk-plot-cairo-new" role="function">
+<title>gtk_plot_cairo_new ()</title>
+<indexterm zone="gtk-plot-cairo-new"><primary sortas="gtk_plot_cairo_new">gtk_plot_cairo_new</primary></indexterm><programlisting><link linkend="GtkObject">GtkObject</link> *         gtk_plot_cairo_new                  (<link linkend="cairo-t">cairo_t</link> *cairo);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>cairo</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-cairo-new-with-drawable" role="function">
+<title>gtk_plot_cairo_new_with_drawable ()</title>
+<indexterm zone="gtk-plot-cairo-new-with-drawable"><primary sortas="gtk_plot_cairo_new_with_drawable">gtk_plot_cairo_new_with_drawable</primary></indexterm><programlisting><link linkend="GtkObject">GtkObject</link> *         gtk_plot_cairo_new_with_drawable    (<link linkend="GdkDrawable">GdkDrawable</link> *drawable);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>drawable</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-cairo-construct" role="function">
+<title>gtk_plot_cairo_construct ()</title>
+<indexterm zone="gtk-plot-cairo-construct"><primary sortas="gtk_plot_cairo_construct">gtk_plot_cairo_construct</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_cairo_construct            (<link linkend="GtkPlotCairo">GtkPlotCairo</link> *pc,
+                                                         <link linkend="cairo-t">cairo_t</link> *cairo,
+                                                         <link linkend="PangoContext">PangoContext</link> *context);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>pc</parameter>&#160;:</term>
+<listitem><simpara> A <link linkend="GtkPlotCairo"><type>GtkPlotCairo</type></link>.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>cairo</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>context</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtk-plot-cairo-set-cairo" role="function">
+<title>gtk_plot_cairo_set_cairo ()</title>
+<indexterm zone="gtk-plot-cairo-set-cairo"><primary sortas="gtk_plot_cairo_set_cairo">gtk_plot_cairo_set_cairo</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_plot_cairo_set_cairo            (<link linkend="GtkPlotCairo">GtkPlotCairo</link> *pc,
+                                                         <link linkend="cairo-t">cairo_t</link> *cairo);</programlisting>
+<para>
+</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>pc</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkPlotCairo"><type>GtkPlotCairo</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>cairo</parameter>&#160;:</term>
+<listitem><simpara>
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+
+
+
+
+</refentry>

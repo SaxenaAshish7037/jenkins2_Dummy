@@ -1,0 +1,52 @@
+<!-- ##### SECTION Title ##### -->
+GtkPlotGdk
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### STRUCT GtkPlotGdk ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### FUNCTION gtk_plot_gdk_new ##### -->
+<para>
+
+</para>
+
+@widget: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_gdk_construct ##### -->
+<para>
+
+</para>
+
+@pc: 
+@widget: 
+
+
+<!-- ##### FUNCTION gtk_plot_gdk_set_drawable ##### -->
+<para>
+
+</para>
+
+@gdk: 
+@drawable: 
+
+

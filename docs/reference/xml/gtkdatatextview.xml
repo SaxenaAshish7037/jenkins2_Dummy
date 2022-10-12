@@ -1,0 +1,280 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+<!ENTITY version SYSTEM "version.xml">
+]>
+<!--ENTITY index-Objects-Grouped SYSTEM "objects_grouped.sgml"-->
+<refentry id="GtkDataTextView">
+<refmeta>
+<refentrytitle role="top_of_page" id="GtkDataTextView.top_of_page">GtkDataTextView</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GTKEXTRA Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>GtkDataTextView</refname>
+<refpurpose>a data textview widget, based on 
+     	     GtkTextView</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="GtkDataTextView.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>
+
+#include &lt;gtkextra.h&gt;
+
+                    <link linkend="GtkDataTextView-struct">GtkDataTextView</link>;
+<link linkend="GtkDataTextView">GtkDataTextView</link> *   <link linkend="gtk-data-text-view-new">gtk_data_text_view_new</link>              (void);
+const <link linkend="gchar">gchar</link> *       <link linkend="gtk-data-text-view-get-description">gtk_data_text_view_get_description</link>  (<link linkend="GtkDataTextView">GtkDataTextView</link> *data_text_view);
+<link linkend="gint">gint</link>                <link linkend="gtk-data-text-view-get-max-length">gtk_data_text_view_get_max_length</link>   (<link linkend="GtkDataTextView">GtkDataTextView</link> *data_text_view);
+<link linkend="gint">gint</link>                <link linkend="gtk-data-text-view-get-max-length-bytes">gtk_data_text_view_get_max_length_bytes</link>
+                                                        (<link linkend="GtkDataTextView">GtkDataTextView</link> *data_text_view);
+<link linkend="void">void</link>                <link linkend="gtk-data-text-view-set-description">gtk_data_text_view_set_description</link>  (<link linkend="GtkDataTextView">GtkDataTextView</link> *data_text_view,
+                                                         const <link linkend="gchar">gchar</link> *description);
+<link linkend="void">void</link>                <link linkend="gtk-data-text-view-set-max-length">gtk_data_text_view_set_max_length</link>   (<link linkend="GtkDataTextView">GtkDataTextView</link> *data_text_view,
+                                                         <link linkend="gint">gint</link> max_length);
+<link linkend="void">void</link>                <link linkend="gtk-data-text-view-set-max-length-bytes">gtk_data_text_view_set_max_length_bytes</link>
+                                                        (<link linkend="GtkDataTextView">GtkDataTextView</link> *data_text_view,
+                                                         <link linkend="gint">gint</link> max_length_bytes);
+</synopsis>
+</refsynopsisdiv>
+
+<refsect1 id="GtkDataTextView.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+  <link linkend="GObject">GObject</link>
+   +----<link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+         +----<link linkend="GtkObject">GtkObject</link>
+               +----<link linkend="GtkWidget">GtkWidget</link>
+                     +----<link linkend="GtkContainer">GtkContainer</link>
+                           +----<link linkend="GtkTextView">GtkTextView</link>
+                                 +----GtkDataTextView
+</synopsis>
+</refsect1>
+
+
+
+<refsect1 id="GtkDataTextView.implemented-interfaces" role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+GtkDataTextView implements
+ <link linkend="AtkImplementorIface">AtkImplementorIface</link> and  <link linkend="GtkBuildable">GtkBuildable</link>.</para>
+</refsect1>
+
+
+<refsect1 id="GtkDataTextView.properties" role="properties">
+<title role="properties.title">Properties</title>
+<synopsis>
+  &quot;<link linkend="GtkDataTextView--description">description</link>&quot;              <link linkend="gchar">gchar</link>*                : Read / Write
+  &quot;<link linkend="GtkDataTextView--max-length">max-length</link>&quot;               <link linkend="gint">gint</link>                  : Read / Write
+  &quot;<link linkend="GtkDataTextView--max-length-bytes">max-length-bytes</link>&quot;         <link linkend="gint">gint</link>                  : Read / Write
+</synopsis>
+</refsect1>
+
+
+
+<refsect1 id="GtkDataTextView.description" role="desc">
+<title role="desc.title">Description</title>
+<para>
+GtkDataTextView provides additional properties: 
+</para>
+<para>
+- <link linkend="GtkDataTextView--description"><type>"description"</type></link> - no functionality, a place for 
+  private information that cannot be put anywhere else
+</para>
+<para>
+- <link linkend="GtkDataTextView--max-length"><type>"max-length"</type></link> - set the maximum character 
+  length for the contents of the widget.
+</para>
+<para>
+- <link linkend="GtkDataTextView--max-length-bytes"><type>"max-length-bytes"</type></link> - set the maximum byte 
+  length for the contents of the widget.
+</para>
+<para>
+The main reason for this widget is to provide a length limit 
+for text contents, required by SQL database systems. There 
+is always a limit, no matter what you do. 
+ 
+Some database systems may handle character length of UTF-8 
+strings correctly, others may not. Choose the appropriate 
+limit for your system, characters or bytes.
+ 
+Note that setting a byte length limit &gt; 0 on a datatextview 
+may slow down text insertions. The  byte length limit is 
+imposed upon <link linkend="gtk-text-buffer-get-text"><function>gtk_text_buffer_get_text()</function></link> including invisible 
+content. See <link linkend="gtk-text-buffer-get-text"><function>gtk_text_buffer_get_text()</function></link> for details.</para>
+<para>
+</para>
+</refsect1>
+
+<refsect1 id="GtkDataTextView.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="GtkDataTextView-struct" role="struct">
+<title>GtkDataTextView</title>
+<indexterm zone="GtkDataTextView-struct"><primary sortas="GtkDataTextView">GtkDataTextView</primary></indexterm><programlisting>typedef struct _GtkDataTextView GtkDataTextView;</programlisting>
+<para>
+The GtkDataTextView struct contains only private data. It should
+only be accessed through the functions described below.</para>
+<para>
+</para></refsect2>
+<refsect2 id="gtk-data-text-view-new" role="function" condition="since:3.0.6">
+<title>gtk_data_text_view_new ()</title>
+<indexterm zone="gtk-data-text-view-new" role="3.0.6"><primary sortas="gtk_data_text_view_new">gtk_data_text_view_new</primary></indexterm><programlisting><link linkend="GtkDataTextView">GtkDataTextView</link> *   gtk_data_text_view_new              (void);</programlisting>
+<para>
+Creates a new GtkDataTextView Widget.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara> the new GtkDataTextView Widget 
+
+</simpara></listitem></varlistentry>
+</variablelist><para role="since">Since 3.0.6</para></refsect2>
+<refsect2 id="gtk-data-text-view-get-description" role="function" condition="since:3.0.6">
+<title>gtk_data_text_view_get_description ()</title>
+<indexterm zone="gtk-data-text-view-get-description" role="3.0.6"><primary sortas="gtk_data_text_view_get_description">gtk_data_text_view_get_description</primary></indexterm><programlisting>const <link linkend="gchar">gchar</link> *       gtk_data_text_view_get_description  (<link linkend="GtkDataTextView">GtkDataTextView</link> *data_text_view);</programlisting>
+<para>
+Retrieves the <link linkend="GtkDataTextView"><type>GtkDataTextView</type></link> description.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>data_text_view</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkDataTextView"><type>GtkDataTextView</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara> a pointer to the contents of the widget as a
+     string. This string points to internally allocated
+     storage in the widget and must not be freed, modified or
+     stored.
+ 
+</simpara></listitem></varlistentry>
+</variablelist><para role="since">Since 3.0.6</para></refsect2>
+<refsect2 id="gtk-data-text-view-get-max-length" role="function" condition="since:3.0.6">
+<title>gtk_data_text_view_get_max_length ()</title>
+<indexterm zone="gtk-data-text-view-get-max-length" role="3.0.6"><primary sortas="gtk_data_text_view_get_max_length">gtk_data_text_view_get_max_length</primary></indexterm><programlisting><link linkend="gint">gint</link>                gtk_data_text_view_get_max_length   (<link linkend="GtkDataTextView">GtkDataTextView</link> *data_text_view);</programlisting>
+<para>
+Retrieves the maximum character length for the contents of  
+<link linkend="GtkDataTextView"><type>GtkDataTextView</type></link>.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>data_text_view</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkDataTextView"><type>GtkDataTextView</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara> maximum byte length or 0. 
+ 
+</simpara></listitem></varlistentry>
+</variablelist><para role="since">Since 3.0.6</para></refsect2>
+<refsect2 id="gtk-data-text-view-get-max-length-bytes" role="function" condition="since:3.0.6">
+<title>gtk_data_text_view_get_max_length_bytes ()</title>
+<indexterm zone="gtk-data-text-view-get-max-length-bytes" role="3.0.6"><primary sortas="gtk_data_text_view_get_max_length_bytes">gtk_data_text_view_get_max_length_bytes</primary></indexterm><programlisting><link linkend="gint">gint</link>                gtk_data_text_view_get_max_length_bytes
+                                                        (<link linkend="GtkDataTextView">GtkDataTextView</link> *data_text_view);</programlisting>
+<para>
+Retrieves the maximum byte length for the contents of  
+<link linkend="GtkDataTextView"><type>GtkDataTextView</type></link> data_format.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>data_text_view</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkDataTextView"><type>GtkDataTextView</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara> maximum byte length or 0. 
+ 
+</simpara></listitem></varlistentry>
+</variablelist><para role="since">Since 3.0.6</para></refsect2>
+<refsect2 id="gtk-data-text-view-set-description" role="function" condition="since:3.0.6">
+<title>gtk_data_text_view_set_description ()</title>
+<indexterm zone="gtk-data-text-view-set-description" role="3.0.6"><primary sortas="gtk_data_text_view_set_description">gtk_data_text_view_set_description</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_data_text_view_set_description  (<link linkend="GtkDataTextView">GtkDataTextView</link> *data_text_view,
+                                                         const <link linkend="gchar">gchar</link> *description);</programlisting>
+<para>
+Sets the GtkDataTextView description.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>data_text_view</parameter>&#160;:</term>
+<listitem><simpara>  a <link linkend="GtkDataTextView"><type>GtkDataTextView</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>description</parameter>&#160;:</term>
+<listitem><simpara>  the description or NULL 
+</simpara></listitem></varlistentry>
+</variablelist><para role="since">Since 3.0.6</para></refsect2>
+<refsect2 id="gtk-data-text-view-set-max-length" role="function" condition="since:3.0.6">
+<title>gtk_data_text_view_set_max_length ()</title>
+<indexterm zone="gtk-data-text-view-set-max-length" role="3.0.6"><primary sortas="gtk_data_text_view_set_max_length">gtk_data_text_view_set_max_length</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_data_text_view_set_max_length   (<link linkend="GtkDataTextView">GtkDataTextView</link> *data_text_view,
+                                                         <link linkend="gint">gint</link> max_length);</programlisting>
+<para>
+Sets the maximum character length for the contents of the 
+<link linkend="GtkDataTextView"><type>GtkDataTextView</type></link>. Existing content will not be truncted.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>data_text_view</parameter>&#160;:</term>
+<listitem><simpara>  a <link linkend="GtkDataTextView"><type>GtkDataTextView</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>max_length</parameter>&#160;:</term>
+<listitem><simpara>  maximum character length or 0
+</simpara></listitem></varlistentry>
+</variablelist><para role="since">Since 3.0.6</para></refsect2>
+<refsect2 id="gtk-data-text-view-set-max-length-bytes" role="function" condition="since:3.0.6">
+<title>gtk_data_text_view_set_max_length_bytes ()</title>
+<indexterm zone="gtk-data-text-view-set-max-length-bytes" role="3.0.6"><primary sortas="gtk_data_text_view_set_max_length_bytes">gtk_data_text_view_set_max_length_bytes</primary></indexterm><programlisting><link linkend="void">void</link>                gtk_data_text_view_set_max_length_bytes
+                                                        (<link linkend="GtkDataTextView">GtkDataTextView</link> *data_text_view,
+                                                         <link linkend="gint">gint</link> max_length_bytes);</programlisting>
+<para>
+Sets the maximum byte length for the contents of the 
+GtkDataTextView. Existing content will not be truncted.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>data_text_view</parameter>&#160;:</term>
+<listitem><simpara>  a <link linkend="GtkDataTextView"><type>GtkDataTextView</type></link>
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>max_length_bytes</parameter>&#160;:</term>
+<listitem><simpara>  maximum byte length or 0
+</simpara></listitem></varlistentry>
+</variablelist><para role="since">Since 3.0.6</para></refsect2>
+
+</refsect1>
+<refsect1 id="GtkDataTextView.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GtkDataTextView--description" role="property"><title>The <literal>&quot;description&quot;</literal> property</title>
+<indexterm zone="GtkDataTextView--description" role="3.0.6"><primary sortas="GtkDataTextView:description">GtkDataTextView:description</primary></indexterm><programlisting>  &quot;description&quot;              <link linkend="gchar">gchar</link>*                : Read / Write</programlisting>
+<para>
+Description of the GtkDataTextView, no functionality, a place
+for private information that cannot be put anywhere else.</para>
+<para>
+</para><para>Default value: ""</para>
+<para>Since 3.0.6</para>
+</refsect2>
+<refsect2 id="GtkDataTextView--max-length" role="property"><title>The <literal>&quot;max-length&quot;</literal> property</title>
+<indexterm zone="GtkDataTextView--max-length" role="3.0.6"><primary sortas="GtkDataTextView:max-length">GtkDataTextView:max-length</primary></indexterm><programlisting>  &quot;max-length&quot;               <link linkend="gint">gint</link>                  : Read / Write</programlisting>
+<para>
+Set the maximum length in characters for the GtkDataTextView.
+For details see <link linkend="gtk-data-text-view-set-max-length"><type>gtk_data_text_view_set_max_length</type></link>. 
+</para>
+<para>
+Sometimes, systems cannot handle UTF-8 string length
+correctly, to overcome this problem, you can use the maximum 
+string length in bytes. When setting both limits, max-length 
+ and max-length-bytes, both must be fulfilled.</para>
+<para>
+</para><para>Allowed values: [0,1073741823]</para>
+<para>Default value: 0</para>
+<para>Since 3.0.6</para>
+</refsect2>
+<refsect2 id="GtkDataTextView--max-length-bytes" role="property"><title>The <literal>&quot;max-length-bytes&quot;</literal> property</title>
+<indexterm zone="GtkDataTextView--max-length-bytes" role="3.0.6"><primary sortas="GtkDataTextView:max-length-bytes">GtkDataTextView:max-length-bytes</primary></indexterm><programlisting>  &quot;max-length-bytes&quot;         <link linkend="gint">gint</link>                  : Read / Write</programlisting>
+<para>
+Set the maximum length in bytes for the GtkDataTextView. For 
+details see <link linkend="gtk-data-text-view-set-max-length-bytes"><type>gtk_data_text_view_set_max_length_bytes</type></link>. 
+</para>
+<para>
+Sometimes, systems cannot handle UTF-8 string length
+correctly, to overcome this problem, you can use the maximum 
+string length in bytes. When setting both limits, max-length 
+ and max-length-bytes, both must be fulfilled.</para>
+<para>
+</para><para>Allowed values: [0,1073741823]</para>
+<para>Default value: 0</para>
+<para>Since 3.0.6</para>
+</refsect2>
+
+</refsect1>
+
+
+
+
+</refentry>

@@ -1,0 +1,78 @@
+<!-- ##### SECTION Title ##### -->
+GtkPlotCanvasRectangle
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### STRUCT GtkPlotCanvasRectangle ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### ARG GtkPlotCanvasRectangle:border ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotCanvasRectangle:color-bg ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotCanvasRectangle:filled ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotCanvasRectangle:line ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotCanvasRectangle:shadow-width ##### -->
+<para>
+
+</para>
+
+<!-- ##### FUNCTION gtk_plot_canvas_rectangle_new ##### -->
+<para>
+
+</para>
+
+@style: 
+@width: 
+@fg: 
+@bg: 
+@border: 
+@fill: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_canvas_rectangle_set_attributes ##### -->
+<para>
+
+</para>
+
+@rectangle: 
+@style: 
+@width: 
+@fg: 
+@bg: 
+@border: 
+@fill: 
+
+

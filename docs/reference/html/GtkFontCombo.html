@@ -1,0 +1,413 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GtkFontCombo</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="GtkExtra Reference Manual">
+<link rel="up" href="ch03.html" title="Widgets">
+<link rel="prev" href="GtkFileList.html" title="GtkFileList">
+<link rel="next" href="GtkIconFileSel.html" title="GtkIconFileSel">
+<meta name="generator" content="GTK-Doc V1.11 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="part" href="gtkextra.html" title="Part I. GtkExtra Overview">
+<link rel="part" href="gtkextrabase.html" title="Part II. GtkExtra Widgets and Objects">
+<link rel="chapter" href="ch01.html" title="Object Hierarchy">
+<link rel="chapter" href="ch02.html" title="Widget Gallery">
+<link rel="chapter" href="ch03.html" title="Widgets">
+<link rel="chapter" href="ch04.html" title="Data Formatter">
+<link rel="chapter" href="ch05.html" title="GtkExtra Versioning">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="GtkFileList.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch03.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">GtkExtra Reference Manual</th>
+<td><a accesskey="n" href="GtkIconFileSel.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#GtkFontCombo.synopsis" class="shortcut">Top</a>
+                 | 
+                <a href="#GtkFontCombo.description" class="shortcut">Description</a>
+                 | 
+                <a href="#GtkFontCombo.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                 | 
+                <a href="#GtkFontCombo.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+                 | 
+                <a href="#GtkFontCombo.signals" class="shortcut">Signals</a>
+</td></tr>
+</table>
+<div class="refentry" title="GtkFontCombo">
+<a name="GtkFontCombo"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GtkFontCombo.top_of_page"></a>GtkFontCombo</span></h2>
+<p>GtkFontCombo — A font combo widget for GTK.</p>
+</td>
+<td valign="top" align="right"><img src=""></td>
+</tr></table></div>
+<div class="refsynopsisdiv" title="Synopsis">
+<a name="GtkFontCombo.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">
+
+#include &lt;gtkextra.h&gt;
+
+                    <a class="link" href="GtkFontCombo.html#GtkFontCombo-struct" title="GtkFontCombo">GtkFontCombo</a>;
+<a
+href="http://library.gnome.org/devel/gtk3/GtkWidget.html"
+>GtkWidget</a> *         <a class="link" href="GtkFontCombo.html#gtk-font-combo-new" title="gtk_font_combo_new ()">gtk_font_combo_new</a>                  (void);
+void                <a class="link" href="GtkFontCombo.html#gtk-font-combo-select" title="gtk_font_combo_select ()">gtk_font_combo_select</a>               (<a class="link" href="GtkFontCombo.html" title="GtkFontCombo">GtkFontCombo</a> *font_combo,
+                                                         const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *family,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> bold,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> italic,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> height);
+void                <a class="link" href="GtkFontCombo.html#gtk-font-combo-select-nth" title="gtk_font_combo_select_nth ()">gtk_font_combo_select_nth</a>           (<a class="link" href="GtkFontCombo.html" title="GtkFontCombo">GtkFontCombo</a> *font_combo,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> n,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> bold,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> italic,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> height);
+<a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                <a class="link" href="GtkFontCombo.html#gtk-font-combo-get-font-height" title="gtk_font_combo_get_font_height ()">gtk_font_combo_get_font_height</a>      (<a class="link" href="GtkFontCombo.html" title="GtkFontCombo">GtkFontCombo</a> *font_combo);
+<a class="link" href="gtkextra-GtkPSFont.html#GtkPSFont" title="GtkPSFont">GtkPSFont</a> *         <a class="link" href="GtkFontCombo.html#gtk-font-combo-get-psfont" title="gtk_font_combo_get_psfont ()">gtk_font_combo_get_psfont</a>           (<a class="link" href="GtkFontCombo.html" title="GtkFontCombo">GtkFontCombo</a> *font_combo);
+<a
+href="/opt/casy/gtk/.Linux.2.x86_64/share/gtk-doc/html/pango/pango-Fonts.html#PangoFontDescription"
+>PangoFontDescription</a> * <a class="link" href="GtkFontCombo.html#gtk-font-combo-get-font-description" title="gtk_font_combo_get_font_description ()">gtk_font_combo_get_font_description</a>
+                                                        (<a class="link" href="GtkFontCombo.html" title="GtkFontCombo">GtkFontCombo</a> *font_combo);
+<a
+href="http://library.gnome.org/devel/gdk3/gdk2-Fonts.html#GdkFont"
+>GdkFont</a> *           <a class="link" href="GtkFontCombo.html#gtk-font-combo-get-gdkfont" title="gtk_font_combo_get_gdkfont ()">gtk_font_combo_get_gdkfont</a>          (<a class="link" href="GtkFontCombo.html" title="GtkFontCombo">GtkFontCombo</a> *font_combo);
+</pre>
+</div>
+<div class="refsect1" title="Object Hierarchy">
+<a name="GtkFontCombo.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a
+href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject"
+>GObject</a>
+   +----<a
+href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned"
+>GInitiallyUnowned</a>
+         +----<a
+href="http://library.gnome.org/devel/gtk3/GtkObject.html"
+>GtkObject</a>
+               +----<a
+href="http://library.gnome.org/devel/gtk3/GtkWidget.html"
+>GtkWidget</a>
+                     +----<a
+href="http://library.gnome.org/devel/gtk3/GtkContainer.html"
+>GtkContainer</a>
+                           +----<a
+href="http://library.gnome.org/devel/gtk3/GtkToolbar.html"
+>GtkToolbar</a>
+                                 +----GtkFontCombo
+</pre>
+</div>
+<div class="refsect1" title="Implemented Interfaces">
+<a name="GtkFontCombo.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+GtkFontCombo implements
+ AtkImplementorIface,  <a
+href="http://library.gnome.org/devel/gtk3/GtkBuildable.html"
+>GtkBuildable</a>,  <a
+href="http://library.gnome.org/devel/gtk3/GtkToolShell.html"
+>GtkToolShell</a> and  <a
+href="http://library.gnome.org/devel/gtk3/gtk2-Orientable.html#GtkOrientable"
+>GtkOrientable</a>.</p>
+</div>
+<div class="refsect1" title="Signals">
+<a name="GtkFontCombo.signals"></a><h2>Signals</h2>
+<pre class="synopsis">
+  "<a class="link" href="GtkFontCombo.html#GtkFontCombo-changed" title='The "changed" signal'>changed</a>"                                        : Run Last
+</pre>
+</div>
+<div class="refsect1" title="Description">
+<a name="GtkFontCombo.description"></a><h2>Description</h2>
+<p>
+It is a GtkToolBar subclass with two combos to select among the 35 standard Adobe PostScript fonts with different sizes. 
+It has also two buttons to select bold and italics.
+When you select a new font, it returns the name of the corresponding Postscript font and the equivalent Xfont. 
+This is what we all expect to have on the top of a GUI for a spreadsheet or word processor.</p>
+<p>
+</p>
+</div>
+<div class="refsect1" title="Details">
+<a name="GtkFontCombo.details"></a><h2>Details</h2>
+<div class="refsect2" title="GtkFontCombo">
+<a name="GtkFontCombo-struct"></a><h3>GtkFontCombo</h3>
+<pre class="programlisting">typedef struct _GtkFontCombo GtkFontCombo;</pre>
+<p>
+The GtkFontCombo struct contains only private data.
+It should only be accessed through the functions described below.</p>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2" title="gtk_font_combo_new ()">
+<a name="gtk-font-combo-new"></a><h3>gtk_font_combo_new ()</h3>
+<pre class="programlisting"><a
+href="http://library.gnome.org/devel/gtk3/GtkWidget.html"
+>GtkWidget</a> *         gtk_font_combo_new                  (void);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_font_combo_select ()">
+<a name="gtk-font-combo-select"></a><h3>gtk_font_combo_select ()</h3>
+<pre class="programlisting">void                gtk_font_combo_select               (<a class="link" href="GtkFontCombo.html" title="GtkFontCombo">GtkFontCombo</a> *font_combo,
+                                                         const <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"
+>gchar</a> *family,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> bold,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> italic,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> height);</pre>
+<p>
+Select from the combo a font which satisfies the arguments.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>font_combo</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkFontCombo.html" title="GtkFontCombo"><span class="type">GtkFontCombo</span></a> 
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>family</code></em> :</span></p></td>
+<td> font family
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>bold</code></em> :</span></p></td>
+<td> TRUE or FALSE
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>italic</code></em> :</span></p></td>
+<td> TRUE or FALSE
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>height</code></em> :</span></p></td>
+<td> height of the font
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_font_combo_select_nth ()">
+<a name="gtk-font-combo-select-nth"></a><h3>gtk_font_combo_select_nth ()</h3>
+<pre class="programlisting">void                gtk_font_combo_select_nth           (<a class="link" href="GtkFontCombo.html" title="GtkFontCombo">GtkFontCombo</a> *font_combo,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> n,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> bold,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"
+>gboolean</a> italic,
+                                                         <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a> height);</pre>
+<p>
+Select from the combo the nth font which satisfies the arguments.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>font_combo</code></em> :</span></p></td>
+<td> a <a class="link" href="GtkFontCombo.html" title="GtkFontCombo"><span class="type">GtkFontCombo</span></a> 
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>n</code></em> :</span></p></td>
+<td> nth font
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>bold</code></em> :</span></p></td>
+<td> TRUE or FALSE
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>italic</code></em> :</span></p></td>
+<td> TRUE or FALSE
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>height</code></em> :</span></p></td>
+<td> height of the font
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_font_combo_get_font_height ()">
+<a name="gtk-font-combo-get-font-height"></a><h3>gtk_font_combo_get_font_height ()</h3>
+<pre class="programlisting"><a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"
+>gint</a>                gtk_font_combo_get_font_height      (<a class="link" href="GtkFontCombo.html" title="GtkFontCombo">GtkFontCombo</a> *font_combo);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>font_combo</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_font_combo_get_psfont ()">
+<a name="gtk-font-combo-get-psfont"></a><h3>gtk_font_combo_get_psfont ()</h3>
+<pre class="programlisting"><a class="link" href="gtkextra-GtkPSFont.html#GtkPSFont" title="GtkPSFont">GtkPSFont</a> *         gtk_font_combo_get_psfont           (<a class="link" href="GtkFontCombo.html" title="GtkFontCombo">GtkFontCombo</a> *font_combo);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>font_combo</code></em> :</span></p></td>
+<td>  the <a class="link" href="GtkFontCombo.html" title="GtkFontCombo"><span class="type">GtkFontCombo</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> (transfer none) the <a class="link" href="gtkextra-GtkPSFont.html#GtkPSFont" title="GtkPSFont"><span class="type">GtkPSFont</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_font_combo_get_font_description ()">
+<a name="gtk-font-combo-get-font-description"></a><h3>gtk_font_combo_get_font_description ()</h3>
+<pre class="programlisting"><a
+href="/opt/casy/gtk/.Linux.2.x86_64/share/gtk-doc/html/pango/pango-Fonts.html#PangoFontDescription"
+>PangoFontDescription</a> * gtk_font_combo_get_font_description
+                                                        (<a class="link" href="GtkFontCombo.html" title="GtkFontCombo">GtkFontCombo</a> *font_combo);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>font_combo</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="gtk_font_combo_get_gdkfont ()">
+<a name="gtk-font-combo-get-gdkfont"></a><h3>gtk_font_combo_get_gdkfont ()</h3>
+<pre class="programlisting"><a
+href="http://library.gnome.org/devel/gdk3/gdk2-Fonts.html#GdkFont"
+>GdkFont</a> *           gtk_font_combo_get_gdkfont          (<a class="link" href="GtkFontCombo.html" title="GtkFontCombo">GtkFontCombo</a> *font_combo);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>font_combo</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1" title="Signal Details">
+<a name="GtkFontCombo.signal-details"></a><h2>Signal Details</h2>
+<div class="refsect2" title='The "changed" signal'>
+<a name="GtkFontCombo-changed"></a><h3>The <code class="literal">"changed"</code> signal</h3>
+<pre class="programlisting">void                user_function                      (<a class="link" href="GtkFontCombo.html" title="GtkFontCombo">GtkFontCombo</a> *bfont_combo,
+                                                        <a
+href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"
+>gpointer</a>      user_data)        : Run Last</pre>
+<p>
+Emmited whenever a different font is choosed.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>bfont_combo</code></em> :</span></p></td>
+<td> the <a class="link" href="GtkFontCombo.html" title="GtkFontCombo"><span class="type">GtkFontCombo</span></a> object that received the signal.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.11</div>
+</body>
+</html>

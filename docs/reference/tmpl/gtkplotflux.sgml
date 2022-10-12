@@ -1,0 +1,191 @@
+<!-- ##### SECTION Title ##### -->
+GtkPlotFlux
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### STRUCT GtkPlotFlux ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### ARG GtkPlotFlux:centered ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotFlux:labels-precision ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotFlux:labels-prefix ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotFlux:labels-style ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotFlux:labels-suffix ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotFlux:length ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotFlux:scale-max ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotFlux:show-scale ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotFlux:size-max ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotFlux:style ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GtkPlotFlux:width ##### -->
+<para>
+
+</para>
+
+<!-- ##### FUNCTION gtk_plot_flux_new ##### -->
+<para>
+
+</para>
+
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_flux_set_arrow ##### -->
+<para>
+
+</para>
+
+@flux: 
+@arrow_length: 
+@arrow_width: 
+@arrow_style: 
+
+
+<!-- ##### FUNCTION gtk_plot_flux_get_arrow ##### -->
+<para>
+
+</para>
+
+@flux: 
+@arrow_length: 
+@arrow_width: 
+@arrow_style: 
+
+
+<!-- ##### FUNCTION gtk_plot_flux_center ##### -->
+<para>
+
+</para>
+
+@flux: 
+@center: 
+
+
+<!-- ##### FUNCTION gtk_plot_flux_is_centered ##### -->
+<para>
+
+</para>
+
+@flux: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_plot_flux_show_scale ##### -->
+<para>
+
+</para>
+
+@flux: 
+@show: 
+
+
+<!-- ##### FUNCTION gtk_plot_flux_set_scale_max ##### -->
+<para>
+
+</para>
+
+@flux: 
+@scale_max: 
+
+
+<!-- ##### FUNCTION gtk_plot_flux_set_size_max ##### -->
+<para>
+
+</para>
+
+@flux: 
+@size_max: 
+
+
+<!-- ##### FUNCTION gtk_plot_flux_set_labels_precision ##### -->
+<para>
+
+</para>
+
+@flux: 
+@precision: 
+
+
+<!-- ##### FUNCTION gtk_plot_flux_set_labels_style ##### -->
+<para>
+
+</para>
+
+@flux: 
+@style: 
+
+
+<!-- ##### FUNCTION gtk_plot_flux_set_labels_prefix ##### -->
+<para>
+
+</para>
+
+@flux: 
+@prefix: 
+
+
+<!-- ##### FUNCTION gtk_plot_flux_set_labels_suffix ##### -->
+<para>
+
+</para>
+
+@flux: 
+@suffix: 
+
+

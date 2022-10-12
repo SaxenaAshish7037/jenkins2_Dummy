@@ -1,0 +1,487 @@
+<!-- ##### SECTION Title ##### -->
+GtkIconList
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### STRUCT GtkIconList ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SIGNAL GtkIconList::activate-icon ##### -->
+<para>
+
+</para>
+
+@iconlist: the object which received the signal.
+@arg1: 
+@Returns: 
+
+<!-- ##### SIGNAL GtkIconList::click-event ##### -->
+<para>
+
+</para>
+
+@iconlist: the object which received the signal.
+@event: 
+
+<!-- ##### SIGNAL GtkIconList::deactivate-icon ##### -->
+<para>
+
+</para>
+
+@iconlist: the object which received the signal.
+@arg1: 
+@Returns: 
+
+<!-- ##### SIGNAL GtkIconList::select-icon ##### -->
+<para>
+
+</para>
+
+@iconlist: the object which received the signal.
+@arg1: 
+@event: 
+@Returns: 
+
+<!-- ##### SIGNAL GtkIconList::text-changed ##### -->
+<para>
+
+</para>
+
+@iconlist: the object which received the signal.
+@arg1: 
+@arg2: 
+@Returns: 
+
+<!-- ##### SIGNAL GtkIconList::unselect-icon ##### -->
+<para>
+
+</para>
+
+@iconlist: the object which received the signal.
+@arg1: 
+@event: 
+
+<!-- ##### ENUM GtkIconListMode ##### -->
+<para>
+
+</para>
+
+@GTK_ICON_LIST_ICON: 
+@GTK_ICON_LIST_TEXT_RIGHT: 
+@GTK_ICON_LIST_TEXT_BELOW: 
+
+<!-- ##### STRUCT GtkIconListItem ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### FUNCTION gtk_icon_list_new ##### -->
+<para>
+
+</para>
+
+@icon_width: 
+@mode: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_icon_list_construct ##### -->
+<para>
+
+</para>
+
+@iconlist: 
+@icon_width: 
+@mode: 
+
+
+<!-- ##### FUNCTION gtk_icon_list_set_mode ##### -->
+<para>
+
+</para>
+
+@iconlist: 
+@mode: 
+
+
+<!-- ##### FUNCTION gtk_icon_list_get_mode ##### -->
+<para>
+
+</para>
+
+@iconlist: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_icon_list_set_editable ##### -->
+<para>
+
+</para>
+
+@iconlist: 
+@editable: 
+
+
+<!-- ##### FUNCTION gtk_icon_list_is_editable ##### -->
+<para>
+
+</para>
+
+@iconlist: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_icon_list_set_row_spacing ##### -->
+<para>
+
+</para>
+
+@iconlist: 
+@spacing: 
+
+
+<!-- ##### FUNCTION gtk_icon_list_get_row_spacing ##### -->
+<para>
+
+</para>
+
+@iconlist: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_icon_list_set_col_spacing ##### -->
+<para>
+
+</para>
+
+@iconlist: 
+@spacing: 
+
+
+<!-- ##### FUNCTION gtk_icon_list_get_col_spacing ##### -->
+<para>
+
+</para>
+
+@iconlist: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_icon_list_set_text_space ##### -->
+<para>
+
+</para>
+
+@iconlist: 
+@text_space: 
+
+
+<!-- ##### FUNCTION gtk_icon_list_get_text_space ##### -->
+<para>
+
+</para>
+
+@iconlist: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_icon_list_set_icon_border ##### -->
+<para>
+
+</para>
+
+@iconlist: 
+@border: 
+
+
+<!-- ##### FUNCTION gtk_icon_list_get_icon_border ##### -->
+<para>
+
+</para>
+
+@iconlist: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_icon_list_set_icon_width ##### -->
+<para>
+
+</para>
+
+@iconlist: 
+@width: 
+
+
+<!-- ##### FUNCTION gtk_icon_list_get_icon_width ##### -->
+<para>
+
+</para>
+
+@iconlist: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_icon_list_freeze ##### -->
+<para>
+
+</para>
+
+@iconlist: 
+
+
+<!-- ##### FUNCTION gtk_icon_list_thaw ##### -->
+<para>
+
+</para>
+
+@iconlist: 
+
+
+<!-- ##### FUNCTION gtk_icon_list_set_background ##### -->
+<para>
+
+</para>
+
+@iconlist: 
+@color: 
+
+
+<!-- ##### FUNCTION gtk_icon_list_add_from_pixmap ##### -->
+<para>
+
+</para>
+
+@icon_list: 
+@pixmap: 
+@bitmap_mask: 
+@label: 
+@link: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_icon_list_add_from_data ##### -->
+<para>
+
+</para>
+
+@iconlist: 
+@data: 
+@label: 
+@link: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_icon_list_add ##### -->
+<para>
+
+</para>
+
+@iconlist: 
+@pixmap_file: 
+@label: 
+@link: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_icon_list_get_nth ##### -->
+<para>
+
+</para>
+
+@iconlist: 
+@n: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_icon_list_get_index ##### -->
+<para>
+
+</para>
+
+@iconlist: 
+@item: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_icon_list_remove ##### -->
+<para>
+
+</para>
+
+@iconlist: 
+@item: 
+
+
+<!-- ##### FUNCTION gtk_icon_list_set_active_icon ##### -->
+<para>
+
+</para>
+
+@iconlist: 
+@icon: 
+
+
+<!-- ##### FUNCTION gtk_icon_list_remove_nth ##### -->
+<para>
+
+</para>
+
+@iconlist: 
+@n: 
+
+
+<!-- ##### FUNCTION gtk_icon_list_update ##### -->
+<para>
+
+</para>
+
+@iconlist: 
+
+
+<!-- ##### FUNCTION gtk_icon_list_clear ##### -->
+<para>
+
+</para>
+
+@iconlist: 
+
+
+<!-- ##### FUNCTION gtk_icon_list_link ##### -->
+<para>
+
+</para>
+
+@item: 
+@data: 
+
+
+<!-- ##### FUNCTION gtk_icon_list_get_link ##### -->
+<para>
+
+</para>
+
+@item: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_icon_list_get_icon_from_link ##### -->
+<para>
+
+</para>
+
+@iconlist: 
+@data: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_icon_list_get_icon_at ##### -->
+<para>
+
+</para>
+
+@iconlist: 
+@x: 
+@y: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_icon_list_get_active_icon ##### -->
+<para>
+
+</para>
+
+@iconlist: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_icon_list_get_entry ##### -->
+<para>
+
+</para>
+
+@item: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_icon_list_get_pixmap ##### -->
+<para>
+
+</para>
+
+@item: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_icon_list_set_pixmap ##### -->
+<para>
+
+</para>
+
+@item: 
+@pixmap: 
+@bitmap_mask: 
+
+
+<!-- ##### FUNCTION gtk_icon_list_set_label ##### -->
+<para>
+
+</para>
+
+@iconlist: 
+@item: 
+@label: 
+
+
+<!-- ##### FUNCTION gtk_icon_list_set_selection_mode ##### -->
+<para>
+
+</para>
+
+@iconlist: 
+@mode: 
+
+
+<!-- ##### FUNCTION gtk_icon_list_select_icon ##### -->
+<para>
+
+</para>
+
+@iconlist: 
+@item: 
+
+
+<!-- ##### FUNCTION gtk_icon_list_unselect_icon ##### -->
+<para>
+
+</para>
+
+@iconlist: 
+@item: 
+
+
+<!-- ##### FUNCTION gtk_icon_list_unselect_all ##### -->
+<para>
+
+</para>
+
+@iconlist: 
+
+
